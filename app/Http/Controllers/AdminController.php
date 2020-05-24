@@ -151,7 +151,12 @@ class AdminController extends Controller
             }else if(preg_match("/^([0-9]+)$/", $postID)){
 
                 $postData = DB::select("SELECT * FROM Blog where PostId =?", [$postID]);
-
+                $userData = UserController::getUserData(session('username'));
+                if($userData[0]->Law_Post == 1){
+                    if($postData[0]->UserID != session('username')){
+                        return redirect('/');
+                    }
+                }
                 //判斷使用者權限，是否可以編輯不屬於自己的文章
 
             }else{
