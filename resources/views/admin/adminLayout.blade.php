@@ -55,7 +55,7 @@
                         通用設定
                     </p>
                     <ul class="menu-list">
-                        <li><a href="/admin" class="is-active">首頁面板</a></li>
+                        <li><a href="/admin">首頁面板</a></li>
                         <li><a href="/admin/webInfo">網站資訊</a></li>
                         <li><a href="/admin/files">檔案庫</a></li>
                     </ul>

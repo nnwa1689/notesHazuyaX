@@ -126,7 +126,7 @@ class AdminController extends Controller
                 exit();
             }
             $filename = $uniName;
-            $fileURL = "/" . $des;
+            $fileURL = $des;
             date_default_timezone_set('Asia/Taipei');
             $fileUploadDate = date("Y-m-d");
             $filecap = $fileinfo['size'];
@@ -172,8 +172,16 @@ class AdminController extends Controller
 
     public function showEditPostList($pageNumber = 1)
     {
-        $listData = PostController::getAllPost($pageNumber);
-        $postNum = ceil(PostController::getAllPostNum()[0]->num/10);
+        $userData = UserController::getUserData(session('username'));
+        if($userData[0]->Law_Post == 1){
+            $start = ($pageNumber - 1) * 10;
+            $listData = DB::select("SELECT * FROM Blog WHERE UserID=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", [session('username'), $start]);
+            $postNum = ceil(DB::select("SELECT count(PostId) as num FROM Blog WHERE UserID=?", [session('username')])[0]->num/10);
+        }else if($userData[0]->Law_Post == 2){
+            $listData = PostController::getAllPost($pageNumber);
+            $postNum = ceil(PostController::getAllPostNum()[0]->num/10);
+        }
+
         //判斷使用者權限，是否可以編輯他人的文章
         return view('admin/posts', ['username'=>session()->get('username'), 'listData'=>$listData, 'postNum'=>$postNum, 'nowpageNumber'=>$pageNumber]);
     }
@@ -182,6 +190,11 @@ class AdminController extends Controller
     {
         if(UserController::checkLoginStatus()){
             DB::connection('mysql');
+            if($userData[0]->Law_Post == 1){
+                if(!(DB::select("SELECT * FROM Blog WHERE PostId=?", [$postID])[0]->UserID==session('username'))){
+                    return redirect('/');
+                }
+            }
             DB::update('UPDATE Blog SET Competence = ?,PostTittle = ?, PostDate = ?, PostContant = ?, Classes = ?, Reply = ?, ClassId = ?, CoverImage = ? WHERE `Blog`.`PostId` = ?', [$_POST['competance'], $_POST['postTitle'], $_POST['date'], $_POST['cont'], PostController::getCategoryName($_POST['Classes']), $_POST['reply'], $_POST['Classes'], $_POST['CoverImage'], $postID]);
             return redirect('/admin/editPost/'.$postID);
         }else{

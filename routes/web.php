@@ -52,59 +52,59 @@ Route::get('logout', 'UserController@logout');
 
 /*後台首頁*/
 Route::get('admin', 'AdminController@showAdminIndex');
-Route::get('admin/webInfo', 'AdminController@showAdminWebInfo');
-Route::post('admin/updateWebInfo','AdminController@updateWebInfo');
+Route::get('admin/webInfo', 'AdminController@showAdminWebInfo')->middleware('userAuth:webInfo');
+Route::post('admin/updateWebInfo','AdminController@updateWebInfo')->middleware('userAuth:webInfo');
 
 /*Files*/
-Route::get('admin/files/{pageNumber?}', 'AdminController@showAdminFiles') -> where('pageNumber', '[0-9]+');;
-Route::post('admin/deleteFiles','AdminController@deleteFiles');
-Route::get('admin/uploadFiles','AdminController@showUploadFiles');
-Route::post('admin/uploadFiles','AdminController@uploadFiles');
+Route::get('admin/files/{pageNumber?}', 'AdminController@showAdminFiles') -> where('pageNumber', '[0-9]+')->middleware('userAuth:files');
+Route::post('admin/deleteFiles','AdminController@deleteFiles')->middleware('userAuth:files');
+Route::get('admin/uploadFiles','AdminController@showUploadFiles')->middleware('userAuth:files');
+Route::post('admin/uploadFiles','AdminController@uploadFiles')->middleware('userAuth:files');
 
 /*文章相關*/
 
-Route::post('admin/updatePost/{postID}', 'AdminController@updatePost')->where('postID', '[0-9]+');
+Route::post('admin/updatePost/{postID}', 'AdminController@updatePost')->where('postID', '[0-9]+')->middleware('userAuth:post');
 
-Route::post('admin/delPost', 'AdminController@deletePost');
+Route::post('admin/delPost', 'AdminController@deletePost')->middleware('userAuth:post');
 
-Route::post('admin/newPost', 'AdminController@newPost');
+Route::post('admin/newPost', 'AdminController@newPost')->middleware('userAuth:post');
 
-Route::get('admin/editPost/{postID?}', 'AdminController@showEditPost')->where('postID', '[0-9A-Za-z]+');
+Route::get('admin/editPost/{postID?}', 'AdminController@showEditPost')->where('postID', '[0-9A-Za-z]+')->middleware('userAuth:post');
 
-Route::get('admin/editPost/p/{pageNumber}', 'AdminController@showEditPostList')->where('pageNumber', '[0-9]+');
+Route::get('admin/editPost/p/{pageNumber}', 'AdminController@showEditPostList')->where('pageNumber', '[0-9]+')->middleware('userAuth:post');
 
 //分類
-Route::get('admin/editCategory', 'AdminController@showAdminCategory');
-Route::post('admin/updateCategory', 'AdminController@updateCategory');
+Route::get('admin/editCategory', 'AdminController@showAdminCategory')->middleware('userAuth:category');
+Route::post('admin/updateCategory', 'AdminController@updateCategory')->middleware('userAuth:category');
 
 /*公告相關*/
 
-Route::post('admin/updateNews/{postID}', 'AdminController@updateNews')->where('postID', '[0-9]+');
+Route::post('admin/updateNews/{postID}', 'AdminController@updateNews')->where('postID', '[0-9]+')->middleware('userAuth:news');
 
-Route::post('admin/delNews', 'AdminController@deleteNews');
+Route::post('admin/delNews', 'AdminController@deleteNews')->middleware('userAuth:news');
 
-Route::post('admin/newNews', 'AdminController@newNews');
+Route::post('admin/newNews', 'AdminController@newNews')->middleware('userAuth:news');
 
-Route::get('admin/editNews/{postID?}', 'AdminController@showEditNews')->where('postID', '[0-9A-Za-z]+');
+Route::get('admin/editNews/{postID?}', 'AdminController@showEditNews')->where('postID', '[0-9A-Za-z]+')->middleware('userAuth:news');
 
-Route::get('admin/editNews/p/{pageNumber}', 'AdminController@showEditNewsList')->where('pageNumber', '[0-9]+');
+Route::get('admin/editNews/p/{pageNumber}', 'AdminController@showEditNewsList')->where('pageNumber', '[0-9]+')->middleware('userAuth:news');
 
 /*使用者*/
-Route::get('admin/editAccount/{username?}', 'AdminController@showEditAccount')->where('username', '[0-9A-Za-z]+');
-Route::post('admin/updateAccount/{username}', 'AdminController@updateAccount')->where('username', '[0-9A-Za-z]+');
-Route::post('admin/addAccount', 'AdminController@addAccount');
-Route::post('admin/deleteAccount', 'AdminController@deleteAccount');
+Route::get('admin/editAccount/{username?}', 'AdminController@showEditAccount')->where('username', '[0-9A-Za-z]+')->middleware('userAuth:account');
+Route::post('admin/updateAccount/{username}', 'AdminController@updateAccount')->where('username', '[0-9A-Za-z]+')->middleware('userAuth:account');
+Route::post('admin/addAccount', 'AdminController@addAccount')->middleware('userAuth:account');
+Route::post('admin/deleteAccount', 'AdminController@deleteAccount')->middleware('userAuth:account');
 
 /*頁面*/
-Route::get('admin/editPage/{pageID?}', 'AdminController@showEditPage')->where('pageID', '[0-9A-Za-z]+');
-Route::post('admin/updatePage/{pageID}', 'AdminController@updatePage')->where('pageID', '[0-9A-Za-z]+');
-Route::post('admin/newPage', 'AdminController@newPage');
-Route::post('admin/deletePage', 'AdminController@deletePage');
+Route::get('admin/editPage/{pageID?}', 'AdminController@showEditPage')->where('pageID', '[0-9A-Za-z]+')->middleware('userAuth:page');
+Route::post('admin/updatePage/{pageID}', 'AdminController@updatePage')->where('pageID', '[0-9A-Za-z]+')->middleware('userAuth:page');
+Route::post('admin/newPage', 'AdminController@newPage')->middleware('userAuth:page');
+Route::post('admin/deletePage', 'AdminController@deletePage')->middleware('userAuth:page');
 
 /*導航*/
 
-Route::get('admin/editNav/{type?}', 'AdminController@showEditNav');
-Route::post('admin/updateNav/{type}', 'AdminController@updateNav');
+Route::get('admin/editNav/{type?}', 'AdminController@showEditNav')->middleware('userAuth:nav');
+Route::post('admin/updateNav/{type}', 'AdminController@updateNav')->middleware('userAuth:nav');
 
 
 

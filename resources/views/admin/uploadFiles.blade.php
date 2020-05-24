@@ -36,7 +36,7 @@
     @else
     <div class="notification is-primary is-light">
         <p>檔案上傳成功!</p>
-        <p><a href="{{$data}}">{{$data}}</a></p>
+        <p><a href="/{{$data}}">{{$data}}</a></p>
     </div>
     <a href="/admin/uploadFiles"><button style="width: 100%;" class="button is-link">繼續上傳</button></a>
     @endif
