@@ -152,6 +152,8 @@ class AdminController extends Controller
 
                 $postData = DB::select("SELECT * FROM Blog where PostId =?", [$postID]);
 
+                //判斷使用者權限，是否可以編輯不屬於自己的文章
+
             }else{
 
                 return redirect('/admin/editPost/p/1');
@@ -172,6 +174,7 @@ class AdminController extends Controller
     {
         $listData = PostController::getAllPost($pageNumber);
         $postNum = ceil(PostController::getAllPostNum()[0]->num/10);
+        //判斷使用者權限，是否可以編輯他人的文章
         return view('admin/posts', ['username'=>session()->get('username'), 'listData'=>$listData, 'postNum'=>$postNum, 'nowpageNumber'=>$pageNumber]);
     }
 
