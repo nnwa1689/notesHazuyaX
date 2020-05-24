@@ -12,6 +12,16 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/admin.css')}}">
     <link rel="stylesheet" href="/css/fontawesome-all.css">
     <script src="/js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function() {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+            });
+    });
+    </script>
 </head>
 
 <body>
@@ -50,7 +60,7 @@
     <div class="container">
         <div class="columns">
             <div class="column is-3 ">
-                <aside class="menu is-hidden-mobile">
+                <aside class="menu is-hidden-mobile" id="leftNav">
                     <p class="menu-label">
                         通用設定
                     </p>

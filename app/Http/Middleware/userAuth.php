@@ -74,6 +74,14 @@ class userAuth
                     return redirect('/');
                 }
 
+            }else if($page=="webInfo"){
+
+                if($userData[0]->Law_WebInfo == 1){
+                    return $next($request);
+                }else{
+                    return redirect('/');
+                }
+
             }else{
                 return redirect('/');
             }

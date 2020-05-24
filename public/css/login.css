@@ -1,10 +1,15 @@
 @font-face {
-    font-family: 'NotoSansTC-Regular';
+    font-family: 'TaipeiSansTCBeta-Regular';
     font-style: normal;
-    src: url(/fonts/NotoSansTC-Regular.otf);
-  }
+    src: url(/fonts/TaipeiSansTCBeta-Regular.ttf);
+}
+#recaptcha{
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+}
 html,body {
-  font-family: 'NotoSansTC-Regular';
+  font-family: 'TaipeiSansTCBeta-Regular';
   font-size: 14px;
   font-weight: 300;
 }

@@ -34,12 +34,6 @@
 }
 
 @font-face {
-  font-family: 'TaipeiSansTCBeta-Regular';
-  font-style: normal;
-  src: url(/fonts/TaipeiSansTCBeta-Regular.otf);
-}
-
-@font-face {
     font-family: 'TaipeiSansTCBeta-Regular';
     font-style: normal;
     src: url(/fonts/TaipeiSansTCBeta-Regular.ttf);

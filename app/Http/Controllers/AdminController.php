@@ -126,7 +126,7 @@ class AdminController extends Controller
                 exit();
             }
             $filename = $uniName;
-            $fileURL = $des;
+            $fileURL = '/'.$des;
             date_default_timezone_set('Asia/Taipei');
             $fileUploadDate = date("Y-m-d");
             $filecap = $fileinfo['size'];
