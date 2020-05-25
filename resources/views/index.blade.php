@@ -19,7 +19,7 @@
             <div class="column">
 
                 <p class="title is-4"><a href="{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}">{{$post->PostTittle}}</a></p>
-                <p class="subtitle">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 350, $end='......')) }}</p>
+                <p class="subtitle">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 300, $end='......')) }}</p>
                 <nav class="level">
                     <div class="level-left">
                         <div class="level-item">

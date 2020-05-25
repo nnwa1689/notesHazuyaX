@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="{{$webData['webConfig'][2]->tittle}}">
     <meta name="keywords" content="{{$webData['webConfig'][1]->tittle}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title'){{$webData['webConfig'][0]->tittle}}</title>
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/bulma.css">
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
@@ -32,9 +33,7 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v6.0"></script>
 </head>
 <body>
-<div class="navbar-menu" id="navMenu">
-  <!-- navbar-start, navbar-end... -->
-</div>
+
     <nav class="navbar has-shadow is-white" role="navigation" aria-label="main navigation">
         <div class="container is-fulid">
             <div class="navbar-brand">
@@ -74,12 +73,12 @@
                             </figure>
                             </a>
                             <div class="navbar-dropdown">
-                                <a href="/admin" class="navbar-item">創作中心</a>
-                                <a href="/admin/editPost/new" class="navbar-item">寫新文章</a>
-                                <a href="/admin/editNews/new" class="navbar-item">發新公告</a>
-                                <a  href="/admin/mySetting"class="navbar-item">個人設定</a>
+                                <a href="/admin" class="navbar-item"><i class="fas fa-cogs"></i>&nbsp創作中心</a>
+                                <a href="/admin/editPost/new" class="navbar-item"><i class="fas fa-pen"></i>&nbsp寫新文章</a>
+                                <a href="/admin/editNews/new" class="navbar-item"><i class="fas fa-newspaper"></i>&nbsp發新公告</a>
+                                <a  href="/admin/mySetting"class="navbar-item"><i class="fas fa-user-cog"></i>&nbsp個人設定</a>
                                 <hr class="navbar-divider">
-                                <a href="/logout" class="navbar-item">登出</a>
+                                <a href="/logout" class="navbar-item"><i class="fas fa-sign-out-alt"></i>&nbsp登出</a>
                             </div>
                     </div>
                     @endif
@@ -109,7 +108,7 @@
             @section('sideBar')
             @show
             <div class="box">
-                <p class="title is-4">最新公告</p>
+                <p class="title is-5"><i class="fas fa-newspaper"></i>最新公告</p>
                 @foreach($webData['homePost'] as $hp)
                 <a href="{{$webData['webConfig'][13]->tittle}}whatsnews/{{$hp->PostId}}">{{$hp->PostDate}}<br>{{$hp->PostTittle}}</a>
                 <hr>
@@ -117,7 +116,7 @@
                 <button onclick="location.href='{{$webData['webConfig'][13]->tittle}}whatsnews'" class="button is-link is-fullwidth">更多公告</button>
             </div>
             <div class="box">
-                <p class="title is-4">文章分類</p>
+                <p class="title is-5"><i class="fas fa-tags"></i>文章分類</p>
                     <div class="field is-grouped is-grouped-multiline">
                         @foreach($webData['allCategory'] as $category)
                         <div class="control">
