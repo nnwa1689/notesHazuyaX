@@ -11,7 +11,7 @@
     <div class="box">
         <div class="columns">
             <div class="column is-one-quarter" style="font-size: 200px; color: #DEF1FF; text-align: center;";>
-            @if(isset($post->CoverImage))
+            @if(isset($post->CoverImage) && !empty($post->CoverImage))
                 <img style="" src="{{$post->CoverImage}}">
             @else
                 <i class="far fa-image"></i>

@@ -18,7 +18,7 @@
 <br>
 <form class="field has-addons" action="/search/q" method="get">
 <div class="control is-expanded">
-    @if(isset($_GET['search-text']))
+    @if(isset($_GET['search-text']) && empty($_GET['search-text']))
     <input class="input" type="text" name="search-text" placeholder="{{$_GET['search-text']}}" value="{{$_GET['search-text']}}">
     @else
     <input class="input" type="text" name="search-text" placeholder="Search......">
@@ -35,7 +35,7 @@
     <div class="box">
         <div class="columns">
             <div class="column is-one-quarter" style="font-size: 200px; color: #DEF1FF;";>
-            @if(isset($post->CoverImage))
+            @if(isset($post->CoverImage) && !empty($post->CoverImage))
                 <img style="" src="{{$post->CoverImage}}">
             @else
                 <i class="far fa-image"></i>

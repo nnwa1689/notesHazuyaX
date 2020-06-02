@@ -7,7 +7,7 @@
 @endsection
 @section('content')
 @parent
-    <div class="box" style="width: 1000px;">
+    <div class="box">
     @foreach($data as $hp)
     <p><a href="{{$webData['webConfig'][13]->tittle}}whatsnews/{{$hp->PostId}}">{{$hp->PostDate}} &nbsp {{$hp->PostTittle}}</a></p>
     <hr>

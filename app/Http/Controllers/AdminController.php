@@ -195,6 +195,7 @@ class AdminController extends Controller
     {
         if(UserController::checkLoginStatus()){
             DB::connection('mysql');
+            $userData = UserController::getUserData(session('username'));
             if($userData[0]->Law_Post == 1){
                 if(!(DB::select("SELECT * FROM Blog WHERE PostId=?", [$postID])[0]->UserID==session('username'))){
                     return redirect('/');

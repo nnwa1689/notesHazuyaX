@@ -8,7 +8,7 @@
 @endsection
 @section('content')
 @parent
-    <div class="box content" style="width: 1000px;">
+    <div class="box content">
     <h2 class="title is-4">{{$data[0]->PostTittle}}</h2>
     <i class="fas fa-clock"></i>{{$data[0]->PostDate}}
     <hr>

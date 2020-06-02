@@ -8,8 +8,8 @@
     <title>@yield('title'){{$webData['webConfig'][0]->tittle}}</title>
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/bulma.css">
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
-    <link rel="icon" href="{{asset('favicon.png')}}" type="image/png">
-    <a>{{$webData['webConfig'][4]->tittle}}</a>
+    <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
+    <a>{!! $webData['webConfig'][4]->tittle !!}</a>
     <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
     <div id="topbottom" href="#top"><i class="fas fa-chevron-up"></i></div>
         <script>
@@ -30,7 +30,7 @@
             });
         </script>
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v6.0"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v7.0"></script>
 </head>
 <body>
 
@@ -127,6 +127,13 @@
                         @endforeach
                     </div>
             </div>
+            <div class="box">
+                <p class="title is-5"><i class="fab fa-facebook"></i>粉絲專頁</p>
+                    <div class="field is-grouped is-grouped-multiline">
+                    <div class="fb-page" data-href="https://www.facebook.com/noteshazuya" data-tabs="timeline" data-width="250" data-height="500" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/noteshazuya" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/noteshazuya">NotesHazuya －筆記長也</a></blockquote></div>
+                    </div>
+            </div>
+
             </div>
 
         </div>

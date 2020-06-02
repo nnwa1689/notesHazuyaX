@@ -7,8 +7,8 @@
 @endsection
 @section('content')
 @parent
-    <div class="box" style="width: 1000px;">
-    @if(isset($userData[0]->PersonBackground))
+    <div class="box">
+    @if(isset($userData[0]->PersonBackground)&& !empty($userData[0]->PersonBackground))
     <section class="hero is-link" style="background-image: url({{$webData['webConfig'][13]->tittle}}{{$userData[0]->PersonBackground}}); background-size: cover;">
     @else
     <section class="hero is-link">
@@ -47,7 +47,7 @@
     <div class="box" style="width: 1000px;">
         <div class="columns">
             <div class="column is-one-quarter" style="font-size: 200px; color: #DEF1FF;";>
-            @if(isset($post->CoverImage))
+            @if(isset($post->CoverImage) && !empty($post->CoverImage))
                 <img style="" src="{{$post->CoverImage}}">
             @else
                 <i class="far fa-image"></i>

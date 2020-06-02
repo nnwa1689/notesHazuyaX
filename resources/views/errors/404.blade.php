@@ -7,8 +7,9 @@
     <title>@yield('title'){{$webData['webConfig'][0]->tittle}}</title>
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/bulma.css">
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{asset('favicon.png')}}" type="image/png">
-    <a>{{$webData['webConfig'][4]->tittle}}</a>
+    <a>{!! $webData['webConfig'][4]->tittle !!}</a>
     <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
 </head>
 <body>

@@ -1,10 +1,17 @@
 @font-face {
-    font-family: 'TaipeiSansTCBeta-Regular';
+    font-family: 'NotoSansTC-Regular';
     font-style: normal;
-    src: url(/fonts/TaipeiSansTCBeta-Regular.ttf);
+    src: url(/fonts/NotoSansTC-Regular.otf);
+    unicode-range: U+4E00-9FFF;
+  }
+@font-face {
+    font-family: 'NotoSansTC-Regular';
+    font-style: normal;
+    src: url(/fonts/Roboto-Regular.ttf);
+    unicode-range: U+00-024F;
   }
 html, body {
-  font-family: "TaipeiSansTCBeta-Regular";
+  font-family: NotoSansTC-Regular;
   font-size: 16px;
   line-height: 1.5;
   height: 100%;

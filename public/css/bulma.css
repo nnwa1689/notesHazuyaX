@@ -39,6 +39,19 @@
     src: url(/fonts/TaipeiSansTCBeta-Regular.ttf);
   }
 
+  @font-face {
+    font-family: 'NotoSansTC-Regular';
+    font-style: normal;
+    src: url(/fonts/NotoSansTC-Regular.otf);
+    unicode-range: U+4E00-9FFF;
+  }
+@font-face {
+    font-family: 'NotoSansTC-Regular';
+    font-style: normal;
+    src: url(/fonts/Roboto-Regular.ttf);
+    unicode-range: U+00-024F;
+  }
+
 /***********/
 
 .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
@@ -372,7 +385,7 @@ button,
 input,
 select,
 textarea {
-  font-family: TaipeiSansTCBeta-Regular;
+  font-family: NotoSansTC-Regular;
 }
 
 code,

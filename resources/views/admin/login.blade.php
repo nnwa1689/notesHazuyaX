@@ -20,7 +20,9 @@
                 <div class="column is-4 is-offset-4">
 
                     <div class="box">
-                    <img src="{{ asset('logo.png') }}">
+                    <a href="{{$webData['webConfig'][13]->tittle}}">
+                        <img src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                    </a>
                     <hr>
                         <form action="login" method="post">
                         @if(isset($error))
@@ -29,16 +31,22 @@
                         </div>
                         @endif
                             <div class="field">
-                                <div class="control">
+                                <div class="control has-icons-left">
                                     <input name="username" class="input is-large" type="text" placeholder="帳號" autofocus="">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-user"></i>
+                                    </span>
                                 </div>
                             </div>
 
                             <br>
 
                             <div class="field">
-                                <div class="control">
+                                <div class="control has-icons-left">
                                     <input name="password" class="input is-large" type="password" placeholder="密碼">
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-unlock"></i>
+                                    </span>
                                 </div>
                             </div>
                             <br>
