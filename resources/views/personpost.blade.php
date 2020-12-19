@@ -44,7 +44,7 @@
     </div>
     <div class="container">
 @foreach($allPosts as $post)
-    <div class="box" style="width: 1000px;">
+    <div class="box">
         <div class="columns">
             <div class="column is-one-quarter" style="font-size: 200px; color: #DEF1FF;";>
             @if(isset($post->CoverImage) && !empty($post->CoverImage))
@@ -82,7 +82,7 @@
         </div>
     </div>
     @endforeach
-    <div class="box" style="width: 1000px;">
+    <div class="box">
         <nav class="pagination is-centered" role="navigation" aria-label="pagination">
             <ul class="pagination-list">
                 @for($i = 1;$i <= $postNum; $i++)
@@ -96,7 +96,4 @@
         </nav>
     </div>
 </div>
-@endsection
-@section('sideBar')
-    @parent
 @endsection

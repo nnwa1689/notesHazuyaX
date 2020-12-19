@@ -17,6 +17,3 @@
     </p>
     </div>
 @endsection
-@section('sideBar')
-    @parent
-@endsection

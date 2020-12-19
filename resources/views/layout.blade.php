@@ -100,14 +100,35 @@
 
       <div class="container">
         <div class="columns">
-            <div class="column is-9">
+            <div class="column">
                 @section('content')
                 @show
             </div>
+        </div>
+      </div>
+</body>
+<footer class="footer">
+    <div class="container is-fulid">
+        <div class="columns">
+            <div class="column is-one-third">
+                <p class="title is-5"><i class="fab fa-facebook"></i>粉絲專頁</p>
+                <div class="field is-grouped is-grouped-multiline">
+                    <div class="fb-page" data-href="https://www.facebook.com/noteshazuya" data-tabs="timeline" data-width="350" data-height="240" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/noteshazuya" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/noteshazuya">NotesHazuya －筆記長也</a></blockquote></div>
+                </div>
+            </div>
             <div class="column">
-            @section('sideBar')
-            @show
-            <div class="box">
+                <p class="title is-5"><i class="fas fa-tags"></i>文章分類</p>
+                <div class="field is-grouped is-grouped-multiline">
+                    @foreach($webData['allCategory'] as $category)
+                    <div class="control">
+                        <div class="tags has-addons">
+                            <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="column">
                 <p class="title is-5"><i class="fas fa-newspaper"></i>最新公告</p>
                 @foreach($webData['homePost'] as $hp)
                 <a href="{{$webData['webConfig'][13]->tittle}}whatsnews/{{$hp->PostId}}">{{$hp->PostDate}}<br>{{$hp->PostTittle}}</a>
@@ -115,44 +136,22 @@
                 @endforeach
                 <button onclick="location.href='{{$webData['webConfig'][13]->tittle}}whatsnews'" class="button is-link is-fullwidth">更多公告</button>
             </div>
-            <div class="box">
-                <p class="title is-5"><i class="fas fa-tags"></i>文章分類</p>
-                    <div class="field is-grouped is-grouped-multiline">
-                        @foreach($webData['allCategory'] as $category)
-                        <div class="control">
-                            <div class="tags has-addons">
-                                <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-            </div>
-            <div class="box">
-                <p class="title is-5"><i class="fab fa-facebook"></i>粉絲專頁</p>
-                    <div class="field is-grouped is-grouped-multiline">
-                    <div class="fb-page" data-href="https://www.facebook.com/noteshazuya" data-tabs="timeline" data-width="250" data-height="500" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/noteshazuya" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/noteshazuya">NotesHazuya －筆記長也</a></blockquote></div>
-                    </div>
-            </div>
-
-            </div>
-
         </div>
-      </div>
-</body>
-<footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-        @foreach($webData['allButtonNav'] as $bn)
-        @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
-        <a href="{{$bn->URL}}">{{$bn->NavigateName}}</a>&nbsp;&nbsp;
-        @else
-        <a href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>&nbsp;&nbsp;
-        @endif
-        @endforeach
-      </p>
-      <p>
-          {!!$webData['webConfig'][3]->tittle!!}
-      </p>
+        <br>
+        <div class="content has-text-centered">
+        <p>
+            @foreach($webData['allButtonNav'] as $bn)
+            @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
+            <a href="{{$bn->URL}}">{{$bn->NavigateName}}</a>&nbsp;&nbsp;
+            @else
+            <a href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>&nbsp;&nbsp;
+            @endif
+            @endforeach
+        </p>
+        <p>
+            {!!$webData['webConfig'][3]->tittle!!}
+        </p>
+        </div>
     </div>
   </footer>
 </html>
