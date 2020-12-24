@@ -41,16 +41,63 @@
             </div>
             <div id="navMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item">
-            您好，{{$username}}
-          </a>
-          <a class="navbar-item" href="/admin/mySetting">
-            個人化設定
-          </a>
-                    <a class="navbar-item" href="/logout">
-            登出
-          </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">通用</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/admin">首頁面板</a>
+                            <a class="navbar-item" href="/admin/webInfo">網站資訊</a>
+                            <a class="navbar-item" href="/admin/files">媒體庫</a>
+                        </div>
+                    </div>
 
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">文章</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/admin/editPost/new">新增文章</a>
+                            <a class="navbar-item" href="/admin/editPost/p/1">管理文章</a>
+                            <a class="navbar-item" href="/admin/editCategory">分類管理</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">公告</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/admin/editNews/new">發布公告</a>
+                            <a class="navbar-item" href="/admin/editNews">管理公告</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">頁面</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/admin/editPage/new">發布頁面</a>
+                            <a class="navbar-item" href="/admin/editPage">管理頁面</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">導航</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/admin/editNav/top">頁首導航</a>
+                            <a class="navbar-item" href="/admin/editNav/btn">底部導航</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">帳號</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/admin/editAccount/new">新增帳號</a>
+                            <a class="navbar-item" href="/admin/editAccount">管理帳號</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">{{$username}}</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/admin/mySetting">個人設定</a>
+                            <a class="navbar-item" href="/logout">登出</a>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -59,56 +106,7 @@
     <!-- END NAV -->
     <div class="container">
         <div class="columns">
-            <div class="column is-3 ">
-                <aside class="menu is-hidden-mobile" id="leftNav">
-                    <p class="menu-label">
-                        通用設定
-                    </p>
-                    <ul class="menu-list">
-                        <li><a href="/admin">首頁面板</a></li>
-                        <li><a href="/admin/webInfo">網站資訊</a></li>
-                        <li><a href="/admin/files">檔案庫</a></li>
-                    </ul>
-
-                    <p class="menu-label">
-                        文章
-                    </p>
-                    <ul class="menu-list">
-                        <li><a href="/admin/editPost/new">新增文章</a></li>
-                        <li><a href="/admin/editPost">編輯／刪除文章</a></li>
-                        <li><a href="/admin/editCategory">文章分類管理</a></li>
-                    </ul>
-                    <p class="menu-label">
-                        公告
-                    </p>
-                    <ul class="menu-list">
-                        <li><a href="/admin/editNews/new">新增公告</a></li>
-                        <li><a href="/admin/editNews">編輯／刪除公告</a></li>
-                    </ul>
-                    <p class="menu-label">
-                        帳號
-                    </p>
-                    <ul class="menu-list">
-                        <li><a href="/admin/editAccount/new">新增帳號</a></li>
-                        <li><a href="/admin/editAccount">編輯／刪除帳號</a></li>
-                    </ul>
-                    <p class="menu-label">
-                        頁面
-                    </p>
-                    <ul class="menu-list">
-                        <li><a href="/admin/editPage/new">新增頁面</a></li>
-                        <li><a href="/admin/editPage">編輯／刪除頁面</a></li>
-                    </ul>
-                    <p class="menu-label">
-                        導航列
-                    </p>
-                    <ul class="menu-list">
-                        <li><a href="/admin/editNav/top">頂部導航</a></li>
-                        <li><a href="/admin/editNav/btn">底部導航</a></li>
-                    </ul>
-                </aside>
-            </div>
-            <div class="column is-9">
+            <div class="column is-full">
             @section('content')
             @show
             </div>
