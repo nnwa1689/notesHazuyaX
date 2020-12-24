@@ -34,10 +34,31 @@
                 <div class="field-body">
                     <div class="field">
                         <p class="control is-expanded has-icons-left">
-                            <input class="input" type="text" name="date" value="{{isset($postData[0]->PostDate) ? $postData[0]->PostDate : $postData['date']}}">
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-calendar-alt"></i>
-                            </span>
+                            <!--Date Selector-->
+                            <link rel="stylesheet" href="{{asset('css/bulma-calendar.min.css')}}">
+                            <script src="/js/bulma-calendar.min.js"></script>
+                            <input class="input" id="date" type="date" name="date" value="{{isset($postData[0]->PostDate) ? $postData[0]->PostDate : $postData['date']}}">
+                            <script>
+                                // Initialize all input of type date
+                                var calendars = bulmaCalendar.attach('[type="date"]', {dateFormat: 'YYYY-MM-DD', color:'link', displayMode: 'dialog'});
+
+                                // Loop on each calendar initialized
+                                for(var i = 0; i < calendars.length; i++) {
+                                    // Add listener to select event
+                                    calendars[i].on('select', date => {
+                                        console.log(date);
+                                    });
+                                }
+                                // To access to bulmaCalendar instance of an element
+                                var element = document.querySelector('#date');
+                                if (element) {
+                                    // bulmaCalendar instance is available as element.bulmaCalendar
+                                    element.bulmaCalendar.on('select', function(datepicker) {
+                                        console.log(datepicker.data.value());
+                                    });
+                                }
+                            </script>
+                            <!--Date End-->
                         </p>
                     </div>
                 </div>
