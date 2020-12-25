@@ -17,17 +17,18 @@
     </script>
 
         <div class="box">
-                <button class="button is-link is-outlined" onclick="doCategory()">套用操作</button>
+
             <form id="categoryForm" method="post" action="/admin/updateCategory">
-                        <div class="select">
-                                <select name="action">
-                                <option value="new">新增</option>
-                                <option value="update">更新</option>
-                                <option value="delete">刪除</option>
-                                <option value="setShow">顯示分類</option>
-                                <option value="setHide">隱藏分類</option>
-                            </select>
+                <div class="select">
+                    <select name="action">
+                        <option value="new">新增</option>
+                        <option value="update">更新</option>
+                        <option value="delete">刪除</option>
+                        <option value="setShow">顯示分類</option>
+                        <option value="setHide">隱藏分類</option>
+                    </select>
                 </div>
+                <button type="button" class="button is-link is-outlined" onclick="doCategory()">套用操作</button>
             <table class="table is-striped is-fullwidth">
                 <thead>
                     <th><input name="all" type="checkbox" onclick="check_all(this,'classid[]')" value=""></th>

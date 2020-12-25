@@ -7,7 +7,6 @@
             <div class="control">
                 <input class="input is-large" type="text" name="postTitle" value="{{isset($postData[0]->PostTittle) ? $postData[0]->PostTittle : '' }}">
             </div>
-            <p><i class="fas fa-user"></i> : {{isset($postData[0]->User) ? $postData[0]->User : $postData['autor']}}</p>
             <hr>
             <!--Text Editor-->
             <script src="/js/tinymce/tinymce.min.js"></script>
