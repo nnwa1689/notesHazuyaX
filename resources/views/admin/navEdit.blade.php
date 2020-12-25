@@ -17,7 +17,7 @@
     </script>
 
         <div class="box">
-                <button class="button is-link is-outlined" onclick="doNav()">套用操作</button>
+
             <form id="navForm" method="post" action="/admin/updateNav/{{$type}}">
                         <div class="select">
                                 <select name="action">
@@ -26,6 +26,7 @@
                                 <option value="delete">刪除</option>
                             </select>
                 </div>
+                <button class="button is-link is-outlined" type="button" onclick="doNav()">套用操作</button>
             <table class="table is-striped is-fullwidth">
                 <thead>
                     <th><input name="all" type="checkbox" onclick="check_all(this,'navid[]')" value=""></th>

@@ -7,14 +7,14 @@
 @endsection
 @section('content')
 @parent
-    <div class="box content">
     <section class="hero is-link">
-  <div class="hero-body">
-    <div class="container" style="text-align: center;">
-      <h1 class="title">{{$data[0]->PageName}}</h1>
-    </div>
-  </div>
-</section>
+        <div class="hero-body">
+            <div class="container" style="text-align: center;">
+                <h1 class="title">{{$data[0]->PageName}}</h1>
+            </div>
+        </div>
+    </section>
+    <div class="box content">
     <p>
         {!! $data[0]->PageContant !!}
     </p>

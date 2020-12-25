@@ -7,15 +7,14 @@
 @endsection
 @section('content')
 @parent
-    <div class="box content">
-    <section class="hero is-link">
+<section class="hero is-link">
   <div class="hero-body">
     <div class="container" style="text-align: center;">
       <h1 class="title">搜尋文章</h1>
     </div>
   </div>
 </section>
-<br>
+<div class="box content">
 <form class="field has-addons" action="/search/q" method="get">
 <div class="control is-expanded">
     @if(isset($_GET['search-text']) && empty($_GET['search-text']))

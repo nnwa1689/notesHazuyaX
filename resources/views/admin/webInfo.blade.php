@@ -5,22 +5,22 @@
     <div class="box">
     <div class="field">
     <form method="post" action="/admin/updateWebInfo">
-    <label class="label">網站名稱</label>
+    <label class="label"><i class="fas fa-blog"></i>網站名稱</label>
   <div class="control">
     <input name="webName" class="input" type="text" value="{{$data[0]->tittle}}">
   </div>
   <br>
-  <label class="label">網站網址</label>
+  <label class="label"><i class="fas fa-link"></i>網站網址</label>
   <div class="control">
     <input name="URL" class="input" type="text" value="{{$data[13]->tittle}}">
   </div>
   <br>
-  <label class="label">LOGO</label>
+  <label class="label"><i class="far fa-image"></i>LOGO</label>
   <div class="control">
     <input name="Logo" class="input" type="text" value="{{$data[5]->tittle}}">
   </div>
   <br>
-  <label class="label">KeyWords</label>
+  <label class="label"><i class="fas fa-map-pin"></i>KeyWords</label>
   <div class="control">
     <input name="keyWords" class="input"" type="text" value="{{$data[1]->tittle}}">
   </div>

@@ -11,14 +11,16 @@
 @parent
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">
     <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
+    <div class="box">
+        <div class="columns">
+            <div class="column is-9"><h2 class="title is-4">{{$postData[0]->PostTittle}}</h2></div>
+                <div class="column" style="text-align:right;"><i class="fas fa-clock"></i>{{$postData[0]->PostDate}} &nbsp;
+                    <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a>
+                </div>
+        </div>
+    </div>
     <div class="box content">
-        <h2 class="title is-4">{{$postData[0]->PostTittle}}</h2>
-        <i class="fas fa-clock"></i>{{$postData[0]->PostDate}} &nbsp;
-        <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a>
-        <hr>
-        <p>
-            {!! $postData[0]->PostContant !!}
-        </p>
+        {!! $postData[0]->PostContant !!}
     </div>
     <div class="box">
         <div class="columns">
@@ -81,14 +83,14 @@
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 var disqus_config = function () {
-this.page.url = '{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}';  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = '{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = '{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 (function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://noteshazuya.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
+    var d = document, s = d.createElement('script');
+    s.src = 'https://noteshazuya.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
