@@ -7,7 +7,7 @@
 @endsection
 @section('content')
 @parent
-    <div class="box">
+
     @if(isset($userData[0]->PersonBackground)&& !empty($userData[0]->PersonBackground))
     <section class="hero is-link" style="background-image: url({{$webData['webConfig'][13]->tittle}}{{$userData[0]->PersonBackground}}); background-size: cover;">
     @else
@@ -41,7 +41,6 @@
   </ul>
 </div>
 </section>
-    </div>
     <div class="container">
 @foreach($allPosts as $post)
     <div class="box">

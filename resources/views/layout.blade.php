@@ -1,5 +1,6 @@
 <html lang="zh-TW">
 <head>
+    {!! $webData['webConfig'][4]->tittle !!}
     <a id="top"></a>
     <meta charset="UTF-8">
     <meta name="description" content="{{$webData['webConfig'][2]->tittle}}">
@@ -9,7 +10,6 @@
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/bulma.css">
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
     <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
-    <a>{!! $webData['webConfig'][4]->tittle !!}</a>
     <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
     <div id="topbottom" href="#top"><i class="fas fa-chevron-up"></i></div>
         <script>

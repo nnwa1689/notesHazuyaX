@@ -7,7 +7,7 @@
 @endsection
 @section('content')
 @parent
-    <div class="box">
+
     @if(isset($userData[0]->PersonBackground)&& !empty($userData[0]->PersonBackground))
     <section class="hero is-link" style="background-image: url({{$webData['webConfig'][13]->tittle}}{{$userData[0]->PersonBackground}}); background-size: cover;">
     @else
@@ -16,9 +16,9 @@
   <div class="hero-body">
     <div class="container" style="text-align: center;">
     <figure class="image is-128x128" style="margin-left: auto; margin-right: auto;">
-  <img class="is-rounded" src="/{{$userData[0]->Avatar}}">
-</figure>
-<br>
+        <img class="is-rounded" src="/{{$userData[0]->Avatar}}">
+    </figure>
+        <br>
       <h1 class="title">{{$userData[0]->Yourname}}</h1>
       <hr>
       <a class="subtitle">{{$userData[0]->Signature}}</a>
@@ -41,8 +41,9 @@
   </ul>
 </div>
 </section>
-<div class="container content">
-<p>{!! $userData[0]->IntroductionSelf !!}</p>
-</div>
+<div class="box">
+    <div class="container content">
+        <p>{!! $userData[0]->IntroductionSelf !!}</p>
+    </div>
     </div>
 @endsection

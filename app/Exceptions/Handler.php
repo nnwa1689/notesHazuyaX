@@ -56,6 +56,9 @@ class Handler extends ExceptionHandler
             if ($exception->getStatusCode() == 404) {
                 $webData = WebController::webInit();
                 return response()->view('errors.' . '404', ['webData' => $webData ], 404);
+            }elseif ($exception->getStatusCode() == 500) {
+                $webData = WebController::webInit();
+                return response()->view('errors.' . '500', ['webData' => $webData ], 500);
             }
         }
 
