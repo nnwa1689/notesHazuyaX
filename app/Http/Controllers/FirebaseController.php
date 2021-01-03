@@ -22,7 +22,7 @@ class FirebaseController extends Controller
         $firebase = (new Factory)->withServiceAccount(__DIR__.'/noteshazuya-firebase-adminsdk-1mfho-a35bb268db.json')
         ->withDatabaseUri('https://noteshazuya-default-rtdb.firebaseio.com/posts')
         ->createDatabase();
-        return $firebase -> getReference('posts') -> orderByKey() -> getvalue();
+        return $firebase -> getReference('posts') -> orderByChild('datemark') -> getvalue();
     }
 
     public static function newData()
@@ -35,7 +35,8 @@ class FirebaseController extends Controller
             'userID' => session()->get('username'),
             'date'=> Carbon::now()->setTimezone("Asia/Taipei")->toDateTimeString(),
             'content' => $_POST['content'],
-            'avatar' => UserController::getUserData(session()->get('username'))[0]->Avatar
+            'avatar' => UserController::getUserData(session()->get('username'))[0]->Avatar,
+            'datemark'=> Carbon::now()->timestamp
         ]);
         return redirect('/admin#mb');
     }

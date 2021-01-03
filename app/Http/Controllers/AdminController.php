@@ -12,9 +12,14 @@ class AdminController extends Controller
     public function showAdminIndex()
     {
         if(UserController::checkLoginStatus()){
-            $mbData = FirebaseController::getDataBaseData();
-            if(!empty($mbData)){
-                rsort($mbData);
+            $originMbData = FirebaseController::getDataBaseData();
+            $mbData = array();
+            if(!empty($originMbData)){
+                $i = 0;
+                foreach($originMbData as $key=>$value){
+                    $mbData[$i] = array_pop($originMbData);
+                    $i++;
+                }
             }
             $selfUserData = UserController::getUserData(session()->get('username'));
             return view('admin/adminHome', ['username'=>session()->get('username'), 'selfUserData'=>$selfUserData, 'mbData'=>$mbData]);
