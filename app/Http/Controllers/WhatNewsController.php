@@ -13,13 +13,13 @@ class WhatNewsController extends Controller
     public static function getAllHomePost()
     {
         DB::connection('mysql');
-        return DB::select("SELECT * FROM HomePost WHERE Competence=? ORDER BY PostDate DESC", ['public']);
+        return DB::select("SELECT * FROM HomePost WHERE Competence=? ORDER BY PostId DESC", ['public']);
     }
 
     public static function getFiveHomePost()
     {
         DB::connection('mysql');
-        return DB::select("SELECT * FROM HomePost WHERE Competence=? ORDER BY PostDate DESC LIMIT 0, 2", ['public']);
+        return DB::select("SELECT * FROM HomePost WHERE Competence=? ORDER BY PostId DESC LIMIT 0, 2", ['public']);
     }
 
     public function getOnePost($postID)

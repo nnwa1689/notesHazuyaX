@@ -13,7 +13,15 @@
     <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
     <div class="box">
         <div class="columns">
-            <div class="column is-9"><h2 class="title is-4">{{$postData[0]->PostTittle}}</h2></div>
+            <div class="column is-9"><h2 class="title is-4">{{$postData[0]->PostTittle}}</h2>
+                @if($webData['userData'] == 0)
+
+                @else
+                    <div class="buttons">
+                        <button class="button is-link is-outlined" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i>&nbsp;編輯文章</button>
+                    </div>
+                @endif
+            </div>
                 <div class="column" style="text-align:right;"><i class="fas fa-clock"></i>{{$postData[0]->PostDate}} &nbsp;
                     <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a>
                 </div>
