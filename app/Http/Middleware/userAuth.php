@@ -82,6 +82,8 @@ class userAuth
                     return redirect('/');
                 }
 
+            }else if($page=="mb"){
+                return $next($request);
             }else{
                 return redirect('/');
             }

@@ -54,6 +54,8 @@ Route::get('logout', 'UserController@logout');
 Route::get('admin', 'AdminController@showAdminIndex');
 Route::get('admin/webInfo', 'AdminController@showAdminWebInfo')->middleware('userAuth:webInfo');
 Route::post('admin/updateWebInfo','AdminController@updateWebInfo')->middleware('userAuth:webInfo');
+/*後台留言板*/
+Route::post('admin/updatemb','FirebaseController@newData')->middleware('userAuth:mb');
 
 /*Files*/
 Route::get('admin/files/{pageNumber?}', 'AdminController@showAdminFiles') -> where('pageNumber', '[0-9]+')->middleware('userAuth:files');
