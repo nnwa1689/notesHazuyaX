@@ -20,8 +20,9 @@ class SearchController extends Controller
     {
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
-        $resultData = DB::select("SELECT * FROM Blog WHERE (PostTittle LIKE ? OR PostContant LIKE ?) AND (Competence=? OR Blog.Competence=?) ORDER BY PostId DESC", ['%'.$q->input()["search-text"].'%', '%'.$q->input()["search-text"].'%', 'public', 'protect']);
-        return view('search', ['webData'=> $this->webData, 'data'=>$resultData]);
+        $q = "'%".htmlspecialchars($q->input()["search-text"])."%'";
+        $resultData = DB::table(DB::raw("(SELECT * FROM Blog WHERE (PostTittle LIKE ".$q." OR PostContant LIKE ".$q.") AND (Competence='public') ORDER BY PostId DESC) as search"))->paginate(10);
+        return view('search', ['webData'=> $this->webData, 'data'=>$resultData, 'q'=>$q]);
         }
 
 }

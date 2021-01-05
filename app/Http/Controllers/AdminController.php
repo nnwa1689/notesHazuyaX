@@ -194,11 +194,11 @@ class AdminController extends Controller
             $postNum = ceil(DB::select("SELECT count(PostId) as num FROM Blog WHERE UserID=?", [session('username')])[0]->num/10);
         }else if($userData[0]->Law_Post == 2){
             $listData = PostController::getAllPost($pageNumber);
-            $postNum = ceil(PostController::getAllPostNum()[0]->num/10);
+            //$postNum = ceil(PostController::getAllPostNum()[0]->num/10);
         }
 
         //判斷使用者權限，是否可以編輯他人的文章
-        return view('admin/posts', ['username'=>session()->get('username'), 'listData'=>$listData, 'postNum'=>$postNum, 'nowpageNumber'=>$pageNumber]);
+        return view('admin/posts', ['username'=>session()->get('username'), 'listData'=>$listData, 'nowpageNumber'=>$pageNumber]);
     }
 
     public function updatePost($postID)

@@ -15,15 +15,16 @@ class PostController extends Controller
 
     public static function getAllPublicPost($pageNumber){
         DB::connection('mysql');
-        $start = ($pageNumber - 1) * 10;
-        $data = DB::select("SELECT * FROM Blog WHERE Blog.Competence=? OR Blog.Competence=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$start]);
+        //$start = ($pageNumber - 1) * 10;
+        $data = DB::table(DB::raw("(SELECT * FROM Blog WHERE Competence='public' ORDER BY PostDate DESC) as Post"))->paginate(10);
+        //$data = DB::select("SELECT * FROM Blog WHERE Blog.Competence=? OR Blog.Competence=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$start]);
         return $data;
     }
 
     public static function getAllPost($pageNumber){
         DB::connection('mysql');
-        $start = ($pageNumber - 1) * 10;
-        $data = DB::select("SELECT * FROM Blog ORDER BY Blog.PostDate DESC LIMIT ?, 10", [$start]);
+        //$start = ($pageNumber - 1) * 10;
+        $data = DB::table(DB::raw("(SELECT * FROM Blog ORDER BY PostDate DESC) as Post"))->paginate(10);
         return $data;
     }
 
@@ -66,18 +67,15 @@ class PostController extends Controller
     {
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
-        if(!preg_match("/^([0-9]+)$/", $pageNumber) || $pageNumber < 0 || !isset($pageNumber))
-            $pageNumber=1;
-        $start = ($pageNumber - 1) * 10;
-        $data = DB::select("SELECT * FROM Blog WHERE (Blog.Competence=? OR Blog.Competence=?) AND ClassId=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect', $classID, $start]);
+        $classID = htmlspecialchars($classID);
+        $data = DB::table(DB::raw("(SELECT * FROM Blog WHERE Competence='public' AND ClassId=".$classID." ORDER BY Blog.PostDate DESC) as Categorypost"))->paginate(10);
         $categorydata = DB::select("SELECT * FROM BClasses WHERE ClassId=?", [$classID]);
         if(count($categorydata) <= 0){
             abort(404);
             return;
         }
         $title=$categorydata[0]->ClassName.' - ';
-        $postnum = ceil(($this->getCategoryPostNum($classID)[0]->num)/10);
-        return view("category", ['webData' => $this->webData,'allPosts'=>$data, 'nowpageNumber'=>$pageNumber, 'postNum' => $postnum, 'title'=>$title, 'categorydata' => $categorydata]);
+        return view("category", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>$title, 'categorydata' => $categorydata]);
     }
 
     public function getOnePost($postID)

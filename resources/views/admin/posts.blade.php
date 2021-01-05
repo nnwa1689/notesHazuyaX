@@ -51,17 +51,7 @@
     </div>
     <br>
     <div class="box">
-    <nav class="pagination" role="navigation" aria-label="pagination">
-  <ul class="pagination-list">
-        @for($i=1;$i<=$postNum;$i++)
-        @if($nowpageNumber==$i)
-            <li><a class="pagination-link is-current">{{$i}}</a>
-        @else
-            <li><a href="/admin/editPost/p/{{$i}}" class="pagination-link">{{$i}}</a></li>
-        @endif
-    @endfor
-  </ul>
-</nav>
+        {{ $listData->links('vendor.pagination.default') }}
     </div>
 
 @endsection

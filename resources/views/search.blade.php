@@ -15,7 +15,8 @@
   </div>
 </section>
 <div class="box content">
-<form class="field has-addons" action="/search/q" method="get">
+<form id="searchForm" class="field has-addons" action="/search/q" method="get">
+<input class="input" type="hidden" id="page" name="page" value="1">
 <div class="control is-expanded">
     @if(isset($_GET['search-text']) && !empty($_GET['search-text']))
     <input class="input" type="text" name="search-text" value="{{$_GET['search-text']}}">
@@ -29,7 +30,7 @@
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
 </from>
     </div>
-@if(isset($data[0]))
+@if(!empty($data))
 @foreach($data as $post)
     <div class="box">
         <div class="columns">
@@ -69,10 +70,14 @@
         </div>
     </div>
     @endforeach
+    <br>
+    <div class="box">
+        {{ $data->links('vendor.pagination.pagSearch') }}
+    </div>
 @elseif(!isset($_GET['search-text']) || $_GET['search-text']=='')
 @else
 <div class="box">
-<p>找不到相關結果</p>
+    <p>找不到相關結果</p>
 </div>
 @endif
 @endsection

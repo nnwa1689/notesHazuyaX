@@ -47,16 +47,6 @@
     </div>
     @endforeach
     <div class="box">
-        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-            <ul class="pagination-list">
-                @for($i = 1;$i <= $postNum; $i++)
-                @if($nowpageNumber==$i)
-                <li><a class="pagination-link is-current">{{$i}}</a></li>
-                @else
-                <li><a class="pagination-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$categorydata[0]->ClassId}}/p/{{$i}}">{{$i}}</a></li>
-                @endif
-                @endfor
-            </ul>
-        </nav>
+        {{ $allPosts->links('vendor.pagination.default') }}
     </div>
     @endsection
