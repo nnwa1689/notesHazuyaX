@@ -27,11 +27,11 @@ class UserController extends Controller
     public function getUserPagePost($userID, $pageNumber){
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
+        $userID = htmlspecialchars($userID);
         $userData = UserController::getUserData($userID);
-        $postnum = ceil((DB::select("SELECT COUNT(UserID) as num FROM Blog WHERE (Blog.Competence=? OR Blog.Competence=?) AND UserID=? ORDER BY Blog.PostDate DESC", ['public', 'protect', $userID])[0]->num)/10);
-        $start = ($pageNumber - 1) * 10;
-        $userPostData = DB::select("SELECT * FROM Blog WHERE (Blog.Competence=? OR Blog.Competence=?) AND UserID=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$userID, $start]);
-        return view('personpost',['userData' => $userData, 'webData'=> $this->webData, 'allPosts'=> $userPostData, 'postNum'=>$postnum, 'nowpageNumber'=>$pageNumber]);
+        $userPostData = DB::table(DB::raw("(SELECT * FROM Blog WHERE (Competence='public') AND UserID='".$userID."' ORDER BY PostDate DESC) as Post"))->paginate(10);
+        # $userPostData = DB::select("SELECT * FROM Blog WHERE (Blog.Competence=?) AND UserID=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$userID, $start]);
+        return view('personpost',['userData' => $userData, 'webData'=> $this->webData, 'allPosts'=> $userPostData]);
     }
 
     public function loginPage()
