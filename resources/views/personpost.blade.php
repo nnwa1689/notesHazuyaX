@@ -45,7 +45,7 @@
 @foreach($allPosts as $post)
     <div class="box">
         <div class="columns">
-            <div class="column is-one-quarter" style="font-size: 200px; color: #DEF1FF;";>
+            <div class="column is-one-quarter" style="font-size: 150px; color: #DEF1FF;";>
             @if(isset($post->CoverImage) && !empty($post->CoverImage))
                 <img style="" src="{{$post->CoverImage}}">
             @else
@@ -55,7 +55,7 @@
             <div class="column">
 
                 <p class="title is-4"><a href="{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}">{{$post->PostTittle}}</a></p>
-                <p class="subtitle">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 350, $end='......')) }}</p>
+                <p class="subtitle">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 200, $end='......')) }}</p>
                 <nav class="level">
                     <div class="level-left">
                         <div class="level-item">

@@ -16,6 +16,7 @@ class FirebaseController extends Controller
 
     }
 
+
     public static function getDataBaseData()
     {
 

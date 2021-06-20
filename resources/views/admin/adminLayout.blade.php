@@ -115,7 +115,7 @@
     <footer class="footer">
     <div class="content has-text-centered">
       <p>
-          2020 HiHazuya X!
+          2021 HiHazuya X!
       </p>
     </div>
   </footer>
