@@ -29,6 +29,7 @@
         </div>
     </section>
     <div class="container content">
+        <!--
         <div id="mb" class="box" style="overflow:scroll; height:700px;">
             @if(!empty($mbData))
                 @foreach($mbData as $key=>$value)
@@ -76,5 +77,6 @@
                 </div>
             </article>
         </div>
+        -->
     </div>
 @endsection
