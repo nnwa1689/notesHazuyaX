@@ -7,8 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## notesHazuya重構版本
+## notesHazuya 重寫版本
 本次版本以Laravel重構改善前後端分離問題，並且導入現在最熱門的PHP MVC框架，未來多人開發以及網站成長後都有助於後續維護。原舊版本將停止更新。
+
+## LabHazuya
+Labhazuya 是放置作品的地方，本專案屬於其中一部分。
 
 ## About Laravel
 
