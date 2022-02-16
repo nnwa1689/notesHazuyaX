@@ -49,8 +49,7 @@ class UserController extends Controller
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
         include_once('ReCaptcha/src/autoload.php');
-        $siteKey = '6LfDakIUAAAAAB2htHJvZLPkjlTFr5reRyZJpdLJ';
-        $secret = '6LfDakIUAAAAADshIbvvpDgb2k8bXGzGXkekLgbN';
+        include_once('ReCaptchaToken.php');
         // 語言 https://developers.google.com/recaptcha/docs/language
         $lang = 'zh-TW';
         // 初始化變數為空值
