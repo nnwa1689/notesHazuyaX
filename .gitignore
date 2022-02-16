@@ -12,6 +12,6 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-./app/Http/Controllers/noteshazuya-firebase-adminsdk-1mfho-a35bb268db.json
-./app/Http/Controllers/FirebaseController.php
-./app/Http/Controllers/ReCaptchaToken.php
+/app/Http/Controllers/noteshazuya-firebase-adminsdk-1mfho-a35bb268db.json
+/app/Http/Controllers/FirebaseController.php
+/app/Http/Controllers/ReCaptchaToken.php
