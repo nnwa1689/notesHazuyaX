@@ -51,7 +51,7 @@
                             </div>
                             <br>
                             <div id="recaptcha">
-                                <div class="g-recaptcha" data-sitekey="6LfDakIUAAAAAB2htHJvZLPkjlTFr5reRyZJpdLJ"></div>
+                                <div class="g-recaptcha" data-sitekey="{{ $siteKey }}"></div>
                             </div>
                             <br>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">

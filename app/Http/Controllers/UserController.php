@@ -40,7 +40,7 @@ class UserController extends Controller
         if(UserController::checkLoginStatus()){
             return redirect('/admin');
         }else{
-            return view('admin.login', ['webData'=> $this->webData]);
+            return view('admin.login', ['webData'=> $this->webData, 'siteKey' => env('SITE_KEY', '')]);
         }
     }
 
@@ -49,8 +49,9 @@ class UserController extends Controller
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
         include_once('ReCaptcha/src/autoload.php');
-        include_once('ReCaptchaToken.php');
         // 語言 https://developers.google.com/recaptcha/docs/language
+        $sitekey = env('SITE_KEY', '');
+        $secret = env('SECRET', '');
         $lang = 'zh-TW';
         // 初始化變數為空值
         $resp = '';
@@ -70,10 +71,10 @@ class UserController extends Controller
                 DB::update("update admin set LastDate= ?, LastIPdata = ? where username = ?", [$lastDate, $ipData, $userData[0]->username]);
                 return redirect('/admin');
             }else{
-                return view('admin.login', ['webData'=> $this->webData, 'error'=> '密碼錯誤']);
+                return view('admin.login', ['webData'=> $this->webData, 'error'=> '密碼錯誤', 'siteKey' => env('SITE_KEY', '')]);
             }
         }else{
-            return view('admin.login', ['webData'=> $this->webData, 'error'=> '請勾選我不是機器人！', 'lang'=>$lang]);
+            return view('admin.login', ['webData'=> $this->webData, 'error'=> '請勾選我不是機器人！', 'lang'=>$lang, 'siteKey' => env('SITE_KEY', '')]);
         }
         return 0;
     }
