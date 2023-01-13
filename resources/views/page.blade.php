@@ -9,7 +9,7 @@
 @parent
     <section class="hero is-link">
         <div class="hero-body">
-            <div class="container" style="text-align: center;">
+            <div class="container has-text-centered">
                 <h1 class="title">{{$data[0]->PageName}}</h1>
             </div>
         </div>

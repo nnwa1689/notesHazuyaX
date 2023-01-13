@@ -11,21 +11,15 @@
 @parent
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">
     <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
-    <div class="box">
-        <div class="columns">
-            <div class="column is-9"><h2 class="title is-4">{{$postData[0]->PostTittle}}</h2>
-                @if($webData['userData'] == 0)
-
-                @else
-                    <div class="buttons">
-                        <button class="button is-link is-outlined" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i>&nbsp;編輯文章</button>
-                    </div>
-                @endif
-            </div>
-                <div class="column" style="text-align:right;"><i class="fas fa-clock"></i>{{$postData[0]->PostDate}} &nbsp;
-                    <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a>
-                </div>
-        </div>
+    <div class="block">
+        <p class="title is-3">{{$postData[0]->PostTittle}}
+            @if($webData['userData'] !== 0)
+                <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i>&nbsp;編輯文章</button>
+            @endif
+        </p>
+            <p><i class="fas fa-clock"></i>{{$postData[0]->PostDate}} &nbsp;
+                <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a>
+            </p>
     </div>
     <div class="box content">
         {!! $postData[0]->PostContant !!}
@@ -46,7 +40,9 @@
             @if(isset($leftPost[0]))
             <a href='{{$leftPost[0]->PostId}}'>
                 <button class="button is-link is-outlined is-medium is-fullwidth">
-                    <i class="fas fa-angle-left" aria-hidden="true"></i>&nbsp;{{$leftPost[0]->PostTittle}}</button>
+                    <p><i class="fas fa-angle-left" aria-hidden="true"></i></p>
+                    <p style="overflow: hidden; white-space: nowrap;text-overflow: ellipsis;">&nbsp;{{$leftPost[0]->PostTittle}}</p>
+                </button>
             </a>
             @endif
             </div>
@@ -55,7 +51,7 @@
             <div class="column is-half">
             <a href='{{$rightPost[0]->PostId}}'>
                 <button class="button is-link is-outlined is-medium is-fullwidth">
-                {{$rightPost[0]->PostTittle}}&nbsp;<i class="fas fa-angle-right" aria-hidden="true"></i></button>
+                <p style="overflow: hidden; white-space: nowrap;text-overflow: ellipsis;">{{$rightPost[0]->PostTittle}}</p>&nbsp;<i class="fas fa-angle-right" aria-hidden="true"></i></button>
             </a>
             </div>
             @endif
@@ -106,12 +102,12 @@
 <div class="box">
     <p class="title is-5"><i class="fas fa-user-alt"></i>關於作者</p>
     <div class="columns">
-        <div class="column">
+        <div class="column has-text-centered">
             <figure class="image is-128x128" style="margin-left: auto; margin-right: auto;">
                 <img class="is-rounded" src="/{{$autorData[0]->Avatar}}">
             </figure>
             <br>
-            <a class="title is-5" href="/person/{{$autorData[0]->username}}">{{$autorData[0]->Yourname}}</a>
+            <a class="title has-text-centered is-5" href="/person/{{$autorData[0]->username}}">{{$autorData[0]->Yourname}}</a>
             <br><br>
             <p>
                 {{$autorData[0]->Signature}}

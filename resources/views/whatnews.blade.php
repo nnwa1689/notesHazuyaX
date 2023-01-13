@@ -8,11 +8,9 @@
 @endsection
 @section('content')
 @parent
-    <div class="box">
-        <div class="columns">
-            <div class="column is-9"><h2 class="title is-4">{{$data[0]->PostTittle}}</h2></div>
-                <div class="column" style="text-align:right;"><i class="fas fa-clock"></i>{{$data[0]->PostDate}}</div>
-        </div>
+    <div class="block">
+            <p class="title is-3">{{$data[0]->PostTittle}}</p>
+            <span><i class="fas fa-clock"></i>{{$data[0]->PostDate}}</span>
     </div>
     <div class="box content">
         {!! $data[0]->PostContant !!}

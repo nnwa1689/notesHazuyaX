@@ -34,7 +34,7 @@
 </head>
 <body>
 
-    <nav class="navbar has-shadow is-white" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-white" role="navigation" aria-label="main navigation">
         <div class="container is-fulid">
             <div class="navbar-brand">
             <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle}}">
@@ -108,10 +108,17 @@
                 @section('sidebar')
                 @show
                 <div class="box">
-                    <p class="title is-5"><i class="fab fa-facebook"></i>粉絲專頁</p>
+                    <p class="title is-5"><i class="fab fa-facebook"></i>社群媒體</p>
+                    <a href="https://www.facebook.com/noteshazuya/" target="_blank">
+                        <button class="button is-facebook is-medium is-outlined is-fullwidth">
+                            <i class="fab fa-facebook"></i> &nbsp;Facebook
+                        </button>
+                    </a>
+                    <!--
                     <div class="field is-grouped is-grouped-multiline">
-                        <div class="fb-page" data-href="https://www.facebook.com/noteshazuya" data-tabs="timeline" data-width="220" data-height="450" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/noteshazuya" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/noteshazuya">NotesHazuya －筆記長也</a></blockquote></div>
+                        <div class="fb-page" data-href="https://www.facebook.com/noteshazuya" data-tabs="timeline" data-width="220" data-height="70" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/noteshazuya" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/noteshazuya">NotesHazuya －筆記長也</a></blockquote></div>
                     </div>
+                    -->
                 </div>
                 <div class="box">
                     <p class="title is-5"><i class="fas fa-tags"></i>文章分類</p>
@@ -119,7 +126,7 @@
                         @foreach($webData['allCategory'] as $category)
                         <div class="control">
                             <div class="tags">
-                                <a class="tag is-link is-medium" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
+                                <a class="tag is-link is-small" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
                             </div>
                         </div>
                         @endforeach
@@ -162,9 +169,7 @@
             @endif
             @endforeach
         </p>
-        <p>
-            {!!$webData['webConfig'][3]->tittle!!}
-        </p>
+        {!!$webData['webConfig'][3]->tittle!!}
         </div>
     </div>
   </footer>
