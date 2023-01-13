@@ -13,17 +13,16 @@
     @else
     <section class="hero is-link">
     @endif
-  <div class="hero-body">
-    <div class="container" style="text-align: center;">
-    <figure class="image is-128x128" style="margin-left: auto; margin-right: auto;">
-  <img class="is-rounded" src="/{{$userData[0]->Avatar}}">
-</figure>
-<br>
-      <h1 class="title">{{$userData[0]->Yourname}}</h1>
-      <hr>
-      <a class="subtitle">{{$userData[0]->Signature}}</a>
+    <div class="hero-body">
+        <div class="container">
+        <figure class="image" style="margin-left: auto; margin-right: auto; width:256px; height:256px;">
+            <img class="is-rounded" src="/{{$userData[0]->Avatar}}">
+        </figure>
+            <br>
+        <h1 class="title has-text-centered">{{$userData[0]->Yourname}}</h1>
+        <a class="subtitle has-text-left">{{$userData[0]->Signature}}</a>
+        </div>
     </div>
-  </div>
   <div class="tabs is-centered is-boxed">
   <ul>
     <li>

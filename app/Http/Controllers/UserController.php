@@ -17,11 +17,24 @@ class UserController extends Controller
         return $data;
     }
 
+    public static function getAllActionUserData(){
+        DB::connection('mysql');
+        $data = DB::select("SELECT * FROM admin WHERE Law_Post != ?", [0]);
+        return $data;
+    }
+
     public function getUserPage($userID){
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
         $userData = UserController::getUserData($userID);
         return view('person',['userData' => $userData, 'webData'=> $this->webData]);
+    }
+
+    public function getAllAuthorPage(){
+        $this -> webData = WebController::webInit();
+        DB::connection('mysql');
+        $userData = UserController::getAllActionUserData();
+        return view('author',['userData' => $userData, 'webData'=> $this->webData]);
     }
 
     public function getUserPagePost($userID, $pageNumber){

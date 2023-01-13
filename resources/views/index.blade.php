@@ -17,7 +17,6 @@
             @endif
             </div>
             <div class="column">
-
                 <p class="title is-4"><a href="{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}">{{$post->PostTittle}}</a></p>
                 <p class="subtitle">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 200, $end='......')) }}</p>
                 <nav class="level">
@@ -38,7 +37,6 @@
                                 <button class="button is-link is-outlined" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}';">繼續閱讀</button>
                             </div>
                         </div>
-
                     </div>
                 </nav>
             </div>

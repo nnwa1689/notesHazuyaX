@@ -14,15 +14,17 @@
     <div class="block">
         <p class="title is-3">{{$postData[0]->PostTittle}}
             @if($webData['userData'] !== 0)
-                <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i>&nbsp;編輯文章</button>
+                <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i>&nbsp;編輯</button>
             @endif
         </p>
-            <p><i class="fas fa-clock"></i>{{$postData[0]->PostDate}} &nbsp;
-                <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a>
-            </p>
+        <p><i class="fas fa-clock"></i>{{$postData[0]->PostDate}} &nbsp;
+            <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a>
+        </p>
     </div>
-    <div class="box content">
+    <div class="box">
+        <div class="content">
         {!! $postData[0]->PostContant !!}
+        </div>
     </div>
     <div class="box">
         <div class="buttons has-addons is-centered">
@@ -109,7 +111,7 @@
             <br>
             <a class="title has-text-centered is-5" href="/person/{{$autorData[0]->username}}">{{$autorData[0]->Yourname}}</a>
             <br><br>
-            <p>
+            <p class="has-text-left">
                 {{$autorData[0]->Signature}}
             </p>
             <hr>

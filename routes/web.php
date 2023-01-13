@@ -27,6 +27,9 @@ Route::get('/category/{classID}/p/{pageNumber}', 'PostController@getallCategoryp
 //page
 Route::get('/page/{pageID}','PageController@getPage')->where('pageID', '[0-9A-Za-z]+')->name('page/'.'{pageID}');
 
+//AllAuthorPage
+Route::get('/authors','UserController@getAllAuthorPage')->name('authors');
+
 //whatnews
 Route::get('/whatsnews/{postID}','WhatNewsController@getOnePost')->where('pageID', '[0-9]+');
 Route::get('/whatsnews','WhatNewsController@getHomePost');
@@ -66,13 +69,9 @@ Route::post('admin/uploadFiles','AdminController@uploadFiles')->middleware('user
 /*文章相關*/
 
 Route::post('admin/updatePost/{postID}', 'AdminController@updatePost')->where('postID', '[0-9]+')->middleware('userAuth:post');
-
 Route::post('admin/delPost', 'AdminController@deletePost')->middleware('userAuth:post');
-
 Route::post('admin/newPost', 'AdminController@newPost')->middleware('userAuth:post');
-
 Route::get('admin/editPost/{postID?}', 'AdminController@showEditPost')->where('postID', '[0-9A-Za-z]+')->middleware('userAuth:post');
-
 Route::get('admin/editPost/p/{pageNumber}', 'AdminController@showEditPostList')->where('pageNumber', '[0-9]+')->middleware('userAuth:post');
 
 //分類
@@ -82,13 +81,9 @@ Route::post('admin/updateCategory', 'AdminController@updateCategory')->middlewar
 /*公告相關*/
 
 Route::post('admin/updateNews/{postID}', 'AdminController@updateNews')->where('postID', '[0-9]+')->middleware('userAuth:news');
-
 Route::post('admin/delNews', 'AdminController@deleteNews')->middleware('userAuth:news');
-
 Route::post('admin/newNews', 'AdminController@newNews')->middleware('userAuth:news');
-
 Route::get('admin/editNews/{postID?}', 'AdminController@showEditNews')->where('postID', '[0-9A-Za-z]+')->middleware('userAuth:news');
-
 Route::get('admin/editNews/p/{pageNumber}', 'AdminController@showEditNewsList')->where('pageNumber', '[0-9]+')->middleware('userAuth:news');
 
 /*使用者*/
@@ -104,7 +99,6 @@ Route::post('admin/newPage', 'AdminController@newPage')->middleware('userAuth:pa
 Route::post('admin/deletePage', 'AdminController@deletePage')->middleware('userAuth:page');
 
 /*導航*/
-
 Route::get('admin/editNav/{type?}', 'AdminController@showEditNav')->middleware('userAuth:nav');
 Route::post('admin/updateNav/{type}', 'AdminController@updateNav')->middleware('userAuth:nav');
 

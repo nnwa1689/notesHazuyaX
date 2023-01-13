@@ -63,6 +63,16 @@
                     @endif
                     @endforeach
 
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">>_關於</a>
+                            <div class="navbar-dropdown">
+                                <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item">>_關於我們</a>
+                                <hr class="navbar-divider">
+                                <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">>_作者介紹</a>
+                            </div>
+                        </div>
+                    </div>
+
                     @if($webData['userData'] == 0)
                         <a class="navbar-item" href="/login"><i class="fas fa-user-alt"></i>登入</a>
                     @else
@@ -108,12 +118,30 @@
                 @section('sidebar')
                 @show
                 <div class="box">
-                    <p class="title is-5"><i class="fab fa-facebook"></i>社群媒體</p>
-                    <a href="https://www.facebook.com/noteshazuya/" target="_blank">
-                        <button class="button is-facebook is-medium is-outlined is-fullwidth">
-                            <i class="fab fa-facebook"></i> &nbsp;Facebook
-                        </button>
-                    </a>
+                    <p class="title is-5"><i class="fas fa-user-plus"></i>社群媒體</p>
+                    <div class="rows">
+                        <div class="column is-full">
+                            <a href="https://www.facebook.com/noteshazuya/" target="_blank">
+                                <button class="button is-facebook is-outlined is-fullwidth">
+                                    <i class="fab fa-facebook"></i> &nbsp;Facebook
+                                </button>
+                            </a>
+                        </div>
+                        <div class="column is-full">
+                            <a href="https://" target="_blank">
+                                <button class="button is-applepodcast is-outlined is-fullwidth">
+                                    <i class="fab fa-apple"></i>&nbsp;Apple Podcasts
+                                </button>
+                            </a>
+                        </div>
+                        <div class="column is-full">
+                            <a href="https://" target="_blank">
+                                <button class="button is-link is-outlined is-fullwidth">
+                                    <i class="fab fa-google"></i>&nbsp;Google Podcasts
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                     <!--
                     <div class="field is-grouped is-grouped-multiline">
                         <div class="fb-page" data-href="https://www.facebook.com/noteshazuya" data-tabs="timeline" data-width="220" data-height="70" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/noteshazuya" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/noteshazuya">NotesHazuya －筆記長也</a></blockquote></div>
@@ -159,18 +187,51 @@
 </body>
 <footer class="footer">
     <div class="container is-fulid">
-        <div class="content has-text-centered">
-        <p>
-            @foreach($webData['allButtonNav'] as $bn)
-            @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
-            <a href="{{$bn->URL}}">{{$bn->NavigateName}}</a>&nbsp;&nbsp;
-            @else
-            <a href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>&nbsp;&nbsp;
-            @endif
-            @endforeach
-        </p>
-        {!!$webData['webConfig'][3]->tittle!!}
-        </div>
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <style>
+                    @font-face {
+                        font-family: 'Lexend-Regular';
+                        font-style: normal;
+                        src: url(https://www.notes-hz.com/fonts/Lexend-Regular.ttf);
+                        unicode-range: U+00-024F;
+                    }
+                    span{
+                        margin-right: -4;
+                    }
+                    </style>
+                    <a style="min-width: 130px;" href="https://lab.notes-hz.com/">
+                        <span style="font-size: 24px; color: #028ff3; font-weight: bold; font-family:Lexend-Regular;">Lab</span>
+                        <span style="font-size: 24px; color: #FD3E49; font-weight: bold; font-family:Lexend-Regular;">H</span>
+                        <span style="font-size: 24px; color: #FF8738; font-weight: bold; font-family:Lexend-Regular;">a</span>
+                        <span style="font-size: 24px; color: #FFA900; font-weight: bold; font-family:Lexend-Regular;">z</span>
+                        <span style="font-size: 24px; color: #00A752; font-weight: bold; font-family:Lexend-Regular;">u</span>
+                        <span style="font-size: 24px; color: #007BEE; font-weight: bold; font-family:Lexend-Regular;">y</span>
+                        <span style="font-size: 24px; color: #9B49DF; font-weight: bold; font-family:Lexend-Regular;">a</span>
+                    </a>
+                </div>
+            </div>
+            <div class="level-right">
+                <div class="level-item">
+                    <div class="rows text-has-right has-text-centered-mobile">
+                        <div style="margin-right: -20px;" class="column">
+                        @foreach($webData['allButtonNav'] as $bn)
+                        @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
+                        <a style="margin-right: 10px;" href="{{$bn->URL}}">{{$bn->NavigateName}}</a>
+                        @else
+                        <a style="margin-right: 10px;" href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>
+                        @endif
+                        @endforeach
+                        </div>
+                        <p class="has-text-right has-text-centered-mobile">
+                            {!!$webData['webConfig'][3]->tittle!!}
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
     </div>
   </footer>
 </html>

@@ -84,10 +84,10 @@
                     </div>
 
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"><i class="fas fa-user-alt"></i>&nbsp;帳號</a>
+                        <a class="navbar-link"><i class="fas fa-user-alt"></i>&nbsp;作者</a>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="/admin/editAccount/new"><i class="fas fa-user-plus"></i>&nbsp;新增帳號</a>
-                            <a class="navbar-item" href="/admin/editAccount"><i class="far fa-user"></i>&nbsp;管理帳號</a>
+                            <a class="navbar-item" href="/admin/editAccount/new"><i class="fas fa-user-plus"></i>&nbsp;新增作者</a>
+                            <a class="navbar-item" href="/admin/editAccount"><i class="far fa-user"></i>&nbsp;管理作者</a>
                         </div>
                     </div>
 
