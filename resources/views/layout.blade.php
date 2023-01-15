@@ -35,19 +35,18 @@
 <body>
 
     <nav class="navbar is-white" role="navigation" aria-label="main navigation">
-        <div class="container is-fulid">
+        <div class="container is-fulid" style="padding: 0 0.75rem 0 0.75rem;">
             <div class="navbar-brand">
-            <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle}}">
-                <img src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
-            </a>
-            <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            </a>
+                <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle}}">
+                    <img src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                </a>
+                <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                </a>
             </div>
-
-            <div id="MainNavbar" class="navbar-menu">
+            <div id="MainNavbar" class="navbar-menu" style="padding: 0 0.75rem 0 0;">
                 <div class="navbar-start">
                 </div>
                 <div class="navbar-end">
@@ -62,17 +61,15 @@
                     @endif
                     @endif
                     @endforeach
-
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">>_關於</a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">關於</a>
                             <div class="navbar-dropdown">
-                                <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item">>_關於我們</a>
+                                <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item">關於我們</a>
                                 <hr class="navbar-divider">
-                                <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">>_作者介紹</a>
+                                <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">作者介紹</a>
                             </div>
                         </div>
                     </div>
-
                     @if($webData['userData'] == 0)
                         <a class="navbar-item" href="/login"><i class="fas fa-user-alt"></i>登入</a>
                     @else
@@ -97,17 +94,14 @@
             </div>
         </div>
       </nav>
-      <div class="container is-fulid">
-
+      <div class="container is-fulid" style="padding:0 0.75rem; 0 0">
         <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul>
             @section('breadcrumb')
             @show
             </ul>
           </nav>
-
       </div>
-
       <div class="container">
         <div class="columns">
             <div class="column is-9">
@@ -186,7 +180,7 @@
       </div>
 </body>
 <footer class="footer">
-    <div class="container is-fulid">
+    <div class="container is-fulid" style="padding: 0 0.75rem 0 0.75rem">
         <nav class="level">
             <div class="level-left">
                 <div class="level-item">
@@ -211,6 +205,7 @@
                         <span style="font-size: 24px; color: #9B49DF; font-weight: bold; font-family:Lexend-Regular;">a</span>
                     </a>
                 </div>
+                <div class="level-item"><p class="subtitle is-6">❤️</p></div>
             </div>
             <div class="level-right">
                 <div class="level-item">
@@ -229,7 +224,6 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </nav>
     </div>
