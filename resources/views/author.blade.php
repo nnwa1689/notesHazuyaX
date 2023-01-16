@@ -25,7 +25,7 @@
                 <p class="title is-size-4 has-text-centered-mobile" style="color: #0083f5">{{$User->Yourname}}</p>
                 <p class="subtitle">{{ $User->Signature }}</p>
                 <div class="buttons">
-                    <button class="button is-link is-outlined" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}';">瞭解更多</button>
+                    <button class="button is-link is-light" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}';">瞭解更多</button>
                 </div>
             </div>
         </div>

@@ -54,6 +54,24 @@
 
   /***********/
 
+  .limit3rows {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .is-post {
+    transition: box-shadow 0.3s;
+    box-shadow: none;
+  }
+
+  .is-post:hover {
+    transition: box-shadow 0.3s;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
   .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
   .pagination-next,
   .pagination-link,
@@ -1916,12 +1934,14 @@
   }
 
   .button.is-light {
+    transition: background-color 0.3s;
     background-color: whitesmoke;
     border-color: transparent;
     color: rgba(0, 0, 0, 0.7);
   }
 
   .button.is-light:hover, .button.is-light.is-hovered {
+    transition: background-color 0.3s;
     background-color: #eeeeee;
     border-color: transparent;
     color: rgba(0, 0, 0, 0.7);
@@ -5650,7 +5670,7 @@
   }
 
   .breadcrumb li.is-active a {
-    color: #363636;
+    color: #003366;
     cursor: default;
     pointer-events: none;
   }

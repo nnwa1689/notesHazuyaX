@@ -94,7 +94,7 @@
             </div>
         </div>
       </nav>
-      <div class="container is-fulid" style="padding:0 0.75rem; 0 0">
+      <div class="container is-fulid" style="padding:0 0.75rem; 0 0.75rem">
         <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul>
             @section('breadcrumb')

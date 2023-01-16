@@ -18,16 +18,12 @@
             @endif
             </div>
             <div class="column">
-
                 <p class="title is-4"><a href="{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}">{{$post->PostTittle}}</a></p>
-                <p class="subtitle">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 200, $end='......')) }}</p>
+                <p class="subtitle limit3rows" style="margin-bottom: 0.75rem">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 400, $end='......')) }}</p>
                 <nav class="level">
                     <div class="level-left">
                         <div class="level-item">
                             <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$post->ClassId}}">{{$post->Classes}}</a>
-                        </div>
-                        <div class="level-item">
-                            <a href="{{$webData['webConfig'][13]->tittle}}person/{{$post->UserID}}"><i class="fas fa-user"></i>{{$post->User}}</a>
                         </div>
                         <div class="level-item">
                             <i class="fas fa-clock"></i>{{$post->PostDate}}
@@ -35,11 +31,15 @@
                     </div>
                     <div class="level-right">
                         <div class="level-item">
-                            <div class="buttons">
-                                <button class="button is-link is-outlined" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}';">繼續閱讀</button>
-                            </div>
+                            <a href="{{$webData['webConfig'][13]->tittle}}person/{{$post->UserID}}">
+                                <figure class="image is-48x48" style="margin-right: 0.75rem;">
+                                    <img class="is-rounded" src="/{{$post->Avatar}}">
+                                </figure>
+                            </a>
+                            <a class="subtitle is-6" href="{{$webData['webConfig'][13]->tittle}}person/{{$post->UserID}}">
+                                {{$post->User}}
+                            </a>
                         </div>
-
                     </div>
                 </nav>
             </div>

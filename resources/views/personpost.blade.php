@@ -20,7 +20,7 @@
         </figure>
             <br>
         <h1 class="title has-text-centered">{{$userData[0]->Yourname}}</h1>
-        <a class="subtitle has-text-left">{{$userData[0]->Signature}}</a>
+        <p class="subtitle has-text-left">{{$userData[0]->Signature}}</p>
         </div>
     </div>
   <div class="tabs is-centered is-boxed">
@@ -34,7 +34,7 @@
     <li class="is-active">
       <a>
         <span class="icon is-small"><i class="fas fa-list-alt"></i></span>
-        <span>我的文章</span>
+        <span>作者文章</span>
       </a>
     </li>
   </ul>
@@ -54,26 +54,17 @@
             <div class="column">
 
                 <p class="title is-4"><a href="{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}">{{$post->PostTittle}}</a></p>
-                <p class="subtitle">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 200, $end='......')) }}</p>
+                <p class="subtitle limit3rows">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 400, $end='......')) }}</p>
                 <nav class="level">
                     <div class="level-left">
                         <div class="level-item">
                             <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$post->ClassId}}">{{$post->Classes}}</a>
                         </div>
                         <div class="level-item">
-                            <a href="{{$webData['webConfig'][13]->tittle}}person/{{$post->UserID}}"><i class="fas fa-user"></i>{{$post->User}}</a>
-                        </div>
-                        <div class="level-item">
                             <i class="fas fa-clock"></i>{{$post->PostDate}}
                         </div>
                     </div>
                     <div class="level-right">
-                        <div class="level-item">
-                            <div class="buttons">
-                                <button class="button is-link is-outlined" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}';">繼續閱讀</button>
-                            </div>
-                        </div>
-
                     </div>
                 </nav>
             </div>

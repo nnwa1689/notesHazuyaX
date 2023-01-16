@@ -20,7 +20,7 @@
     </figure>
         <br>
       <h1 class="title has-text-centered">{{$userData[0]->Yourname}}</h1>
-      <a class="subtitle has-text-left">{{$userData[0]->Signature}}</a>
+      <p class="subtitle has-text-left">{{$userData[0]->Signature}}</p>
     </div>
   </div>
   <div class="tabs is-centered is-boxed">
