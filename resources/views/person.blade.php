@@ -3,7 +3,8 @@
 @section('breadcrumb')
     @parent
     <li><a href="{{$webData['webConfig'][13]->tittle}}"><i class="fas fa-home"></i>首頁</a></li>
-    <li class="is-active"><a href="#" aria-current="page">{{$userData[0]->Yourname}}的個人檔案</a></li>
+    <li><a href="{{$webData['webConfig'][13]->tittle}}authors" aria-current="page">作者介紹</a></li>
+    <li class="is-active"><a href="#" aria-current="page">{{$userData[0]->Yourname}}</a></li>
 @endsection
 @section('content')
 @parent
@@ -34,7 +35,7 @@
     <li>
       <a href="{{$webData['webConfig'][13]->tittle}}person/{{$userData[0]->username}}/post/p/1">
         <span class="icon is-small"><i class="fas fa-list-alt"></i></span>
-        <span>我的文章</span>
+        <span>作者文章</span>
       </a>
     </li>
   </ul>

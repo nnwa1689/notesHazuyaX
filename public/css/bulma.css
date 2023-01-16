@@ -63,13 +63,14 @@
   }
 
   .is-post {
-    transition: box-shadow 0.3s;
-    box-shadow: none;
+    transition: transform 0.3s;
+    transform: scale(1.0);
   }
 
   .is-post:hover {
-    transition: box-shadow 0.3s;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    transform: scale(1.03);
+    cursor: pointer;
   }
 
   .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,

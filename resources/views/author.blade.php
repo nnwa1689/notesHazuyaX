@@ -14,7 +14,7 @@
     </div>
     </section>
     @foreach($userData as $User)
-    <div class="box" style="align-items: center;">
+    <div class="box is-post" style="align-items: center;" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}';">
         <div class="columns">
             <div class="column is-one-third">
             <figure class="image" style="margin:0 auto 0 auto; width:256px; height:256px;">
@@ -22,10 +22,10 @@
             </figure>
             </div>
             <div class="column" style="padding: 30px; align-items: center; justify-content: flex-start; display:grid;">
-                <p class="title is-size-4 has-text-centered-mobile" style="color: #0083f5">{{$User->Yourname}}</p>
-                <p class="subtitle">{{ $User->Signature }}</p>
+                <p class="title is-size-4 has-text-centered-mobile">{{$User->Yourname}}</p>
+                <p class="subtitle limit3rows">{{ $User->Signature }}</p>
                 <div class="buttons">
-                    <button class="button is-link is-light" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}';">瞭解更多</button>
+                    <button class="button is-light" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}';">瞭解更多</button>
                 </div>
             </div>
         </div>

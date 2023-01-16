@@ -16,7 +16,7 @@ class PostController extends Controller
     public static function getAllPublicPost($pageNumber){
         DB::connection('mysql');
         //$start = ($pageNumber - 1) * 10;
-        $data = DB::table(DB::raw("(SELECT * FROM Blog WHERE Competence='public' ORDER BY PostDate DESC) as Post"))->paginate(10);
+        $data = DB::table(DB::raw("(SELECT * FROM Blog LEFT JOIN admin ON Blog.UserID = admin.username WHERE Blog.Competence='public' ORDER BY Blog.PostDate DESC) as Post"))->paginate(10);
         //$data = DB::select("SELECT * FROM Blog WHERE Blog.Competence=? OR Blog.Competence=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$start]);
         return $data;
     }
@@ -68,7 +68,7 @@ class PostController extends Controller
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
         $classID = htmlspecialchars($classID);
-        $data = DB::table(DB::raw("(SELECT * FROM Blog WHERE Competence='public' AND ClassId=".$classID." ORDER BY Blog.PostDate DESC) as Categorypost"))->paginate(10);
+        $data = DB::table(DB::raw("(SELECT * FROM Blog LEFT JOIN admin ON Blog.UserID = admin.username WHERE Blog.Competence='public' AND Blog.ClassId=".$classID." ORDER BY Blog.PostDate DESC) as Categorypost"))->paginate(10);
         $categorydata = DB::select("SELECT * FROM BClasses WHERE ClassId=?", [$classID]);
         if(count($categorydata) <= 0){
             abort(404);

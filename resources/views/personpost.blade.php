@@ -3,11 +3,11 @@
 @section('breadcrumb')
     @parent
     <li><a href="{{$webData['webConfig'][13]->tittle}}"><i class="fas fa-home"></i>首頁</a></li>
-    <li class="is-active"><a href="#" aria-current="page">{{$userData[0]->Yourname}}的個人檔案</a></li>
+    <li><a href="{{$webData['webConfig'][13]->tittle}}authors" aria-current="page">作者介紹</a></li>
+    <li class="is-active"><a href="#" aria-current="page">{{$userData[0]->Yourname}}</a></li>
 @endsection
 @section('content')
 @parent
-
     @if(isset($userData[0]->PersonBackground)&& !empty($userData[0]->PersonBackground))
     <section class="hero is-link" style="background-image: url({{$webData['webConfig'][13]->tittle}}{{$userData[0]->PersonBackground}}); background-size: cover;">
     @else
@@ -42,7 +42,7 @@
 </section>
     <div class="container">
 @foreach($allPosts as $post)
-    <div class="box">
+    <div class="box is-post" onclick="window.location.href='{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}'">
         <div class="columns">
             <div class="column is-one-quarter" style="font-size: 150px; color: #DEF1FF;";>
             @if(isset($post->CoverImage) && !empty($post->CoverImage))
@@ -52,8 +52,7 @@
             @endif
             </div>
             <div class="column">
-
-                <p class="title is-4"><a href="{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}">{{$post->PostTittle}}</a></p>
+                <p class="title is-4">{{$post->PostTittle}}</p>
                 <p class="subtitle limit3rows">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 400, $end='......')) }}</p>
                 <nav class="level">
                     <div class="level-left">

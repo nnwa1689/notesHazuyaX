@@ -213,9 +213,9 @@
                         <div style="margin-right: -20px;" class="column">
                         @foreach($webData['allButtonNav'] as $bn)
                         @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
-                        <a style="margin-right: 10px;" href="{{$bn->URL}}">{{$bn->NavigateName}}</a>
+                        <a class="has-text-weight-bold" style="margin-right: 10px;" href="{{$bn->URL}}">{{$bn->NavigateName}}</a>
                         @else
-                        <a style="margin-right: 10px;" href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>
+                        <a class="has-text-weight-bold" style="margin-right: 10px;" href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>
                         @endif
                         @endforeach
                         </div>

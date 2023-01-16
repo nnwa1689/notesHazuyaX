@@ -7,7 +7,7 @@
 @endsection
 @section('content')
     @foreach($allPosts as $post)
-    <div class="box is-post">
+    <div class="box is-post" onclick="window.location.href='{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}'">
         <div class="columns">
             <div class="column is-one-quarter" style="font-size: 150px; color: #DEF1FF; text-align: center;";>
             @if(isset($post->CoverImage) && !empty($post->CoverImage))
@@ -17,7 +17,7 @@
             @endif
             </div>
             <div class="column">
-                <p class="title is-4"><a href="{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}">{{$post->PostTittle}}</a></p>
+                <p class="title is-4">{{$post->PostTittle}}</p>
                 <p class="subtitle limit3rows" style="margin-bottom: 0.75rem">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 400, $end='......')) }}</p>
                 <nav class="level">
                     <div class="level-left">
