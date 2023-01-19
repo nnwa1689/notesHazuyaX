@@ -11,7 +11,7 @@
         <div class="columns">
             <div class="column is-one-quarter" style="font-size: 150px; color: #DEF1FF; text-align: center;";>
             @if(isset($post->CoverImage) && !empty($post->CoverImage))
-                <img style="" src="{{$post->CoverImage}}">
+                <img class="post-cover" src="{{$post->CoverImage}}">
             @else
                 <i class="far fa-image"></i>
             @endif
@@ -25,7 +25,10 @@
                             <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$post->ClassId}}">{{$post->Classes}}</a>
                         </div>
                         <div class="level-item">
-                            <i class="fas fa-clock"></i>{{$post->PostDate}}
+                            <i class="fas fa-calendar-alt"></i>&nbsp;{{$post->PostDate}}
+                        </div>
+                        <div class="level-item">
+                            <i class="fas fa-clock"></i>&nbsp;{{$post->ReadTime}}分鐘
                         </div>
                     </div>
                     <div class="level-right">

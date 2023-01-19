@@ -62,12 +62,11 @@
                     @endif
                     @endforeach
                     <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">關於</a>
-                            <div class="navbar-dropdown">
-                                <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item">關於我們</a>
-                                <hr class="navbar-divider">
-                                <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">作者介紹</a>
-                            </div>
+                        <a class="navbar-link">關於</a>
+                        <div class="navbar-dropdown">
+                            <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item">關於我們</a>
+                            <hr class="navbar-divider">
+                            <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">作者介紹</a>
                         </div>
                     </div>
                     @if($webData['userData'] == 0)
@@ -118,6 +117,13 @@
                             <a href="https://www.facebook.com/noteshazuya/" target="_blank">
                                 <button class="button is-facebook is-outlined is-fullwidth">
                                     <i class="fab fa-facebook"></i> &nbsp;Facebook
+                                </button>
+                            </a>
+                        </div>
+                        <div class="column is-full">
+                            <a href="https://twitter.com/notes_hz" target="_blank">
+                                <button class="button is-twitter is-outlined is-fullwidth">
+                                    <i class="fab fa-twitter"></i>&nbsp;Twitter
                                 </button>
                             </a>
                         </div>
@@ -195,7 +201,7 @@
                         margin-right: -4;
                     }
                     </style>
-                    <a style="min-width: 130px;" href="https://lab.notes-hz.com/">
+                    <a style="min-width: 130px;">
                         <span style="font-size: 24px; color: #028ff3; font-weight: bold; font-family:Lexend-Regular;">Lab</span>
                         <span style="font-size: 24px; color: #FD3E49; font-weight: bold; font-family:Lexend-Regular;">H</span>
                         <span style="font-size: 24px; color: #FF8738; font-weight: bold; font-family:Lexend-Regular;">a</span>
@@ -213,9 +219,9 @@
                         <div style="margin-right: -20px;" class="column">
                         @foreach($webData['allButtonNav'] as $bn)
                         @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
-                        <a class="has-text-weight-bold" style="margin-right: 10px;" href="{{$bn->URL}}">{{$bn->NavigateName}}</a>
+                        <a class="has-text-weight-medium" style="margin-right: 10px;" href="{{$bn->URL}}">{{$bn->NavigateName}}</a>
                         @else
-                        <a class="has-text-weight-bold" style="margin-right: 10px;" href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>
+                        <a class="has-text-weight-medium" style="margin-right: 10px;" href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>
                         @endif
                         @endforeach
                         </div>

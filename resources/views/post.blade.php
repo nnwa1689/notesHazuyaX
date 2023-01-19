@@ -3,8 +3,8 @@
 @section('breadcrumb')
     @parent
     <li><a href="{{$webData['webConfig'][13]->tittle}}"><i class="fas fa-home"></i>首頁</a></li>
-    <li><a href="{{$webData['webConfig'][13]->tittle}}/post">所有文章</a></li>
-    <li><a href="{{$webData['webConfig'][13]->tittle}}/category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a></li>
+    <li><a href="{{$webData['webConfig'][13]->tittle}}post">所有文章</a></li>
+    <li><a href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a></li>
     <li class="is-active"><a href="#" aria-current="page">{{$postData[0]->PostTittle}}</a></li>
 @endsection
 @section('content')
@@ -17,9 +17,23 @@
                 <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i>&nbsp;編輯</button>
             @endif
         </p>
-        <p><i class="fas fa-clock"></i>{{$postData[0]->PostDate}} &nbsp;
-            <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a>
-        </p>
+        <div class="block">
+            <nav class="level is-mobile">
+                <div class="level-left">
+                    <div class="level-item">
+                        <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Classes}}</a>&nbsp;
+                    </div>
+                    <div class="level-item">
+                        <i class="fas fa-calendar-alt"></i>&nbsp;{{$postData[0]->PostDate}}
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="level-item">
+                        <i class="fas fa-clock"></i>&nbsp;閱讀時間：{{$postData[0]->ReadTime}}分鐘
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
     <div class="box">
         <div class="content">

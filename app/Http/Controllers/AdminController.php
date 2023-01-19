@@ -213,7 +213,7 @@ class AdminController extends Controller
                     return redirect('/');
                 }
             }
-            DB::update('UPDATE Blog SET Competence = ?,PostTittle = ?, PostDate = ?, PostContant = ?, Classes = ?, Reply = ?, ClassId = ?, CoverImage = ? WHERE `Blog`.`PostId` = ?', [$_POST['competance'], $_POST['postTitle'], $_POST['date'], $_POST['cont'], PostController::getCategoryName($_POST['Classes']), $_POST['reply'], $_POST['Classes'], $_POST['CoverImage'], $postID]);
+            DB::update('UPDATE Blog SET Competence = ?,PostTittle = ?, PostDate = ?, PostContant = ?, Classes = ?, Reply = ?, ClassId = ?, ReadTime = ?, CoverImage = ? WHERE `Blog`.`PostId` = ?', [$_POST['competance'], $_POST['postTitle'], $_POST['date'], $_POST['cont'], PostController::getCategoryName($_POST['Classes']), $_POST['reply'], $_POST['Classes'], $_POST['ReadTime'], $_POST['CoverImage'], $postID]);
             return redirect('/admin/editPost/'.$postID);
         }else{
             return redirect('login');
@@ -225,7 +225,7 @@ class AdminController extends Controller
     {
         if(UserController::checkLoginStatus()){
             DB::connection('mysql');
-            DB::insert("INSERT INTO Blog (Competence, PostTittle, PostDate, PostContant, Classes, User, Reply, UserID, ClassId, CoverImage) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )", [$_POST['competance'], $_POST['postTitle'], $_POST['date'], $_POST['cont'], PostController::getCategoryName($_POST['Classes']),  UserController::getUserData(session('username'))[0]->Yourname,$_POST['reply'], session('username'), $_POST['Classes'], $_POST['CoverImage']]);
+            DB::insert("INSERT INTO Blog (Competence, PostTittle, PostDate, PostContant, Classes, User, Reply, UserID, ClassId, ReadTime, CoverImage) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )", [$_POST['competance'], $_POST['postTitle'], $_POST['date'], $_POST['cont'], PostController::getCategoryName($_POST['Classes']),  UserController::getUserData(session('username'))[0]->Yourname,$_POST['reply'], session('username'), $_POST['Classes'], $_POST['ReadTime'], $_POST['CoverImage']]);
             return redirect('/admin/editPost');
         }else{
             return redirect('login');

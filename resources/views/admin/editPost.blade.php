@@ -132,6 +132,23 @@
                     </div>
                 </div>
 
+                <div class="field-label is-normal">
+                    <label class="label"></label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" name="ReadTime" maxlength="3" value="{{isset($postData[0]->ReadTime) ? $postData[0]->ReadTime : 0 }}">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-clock"></i>
+                            </span>
+                            <span class="icon is-right">
+                                <span>分</span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
             <div class="field">
@@ -149,7 +166,7 @@
             </div>
 
             <div class="control">
-                <button style="width: 100%" class="button is-link is-outlined" type="submit">發表／編輯文章</button>
+                <button style="width: 100%" class="button is-link is-outlined is-large" type="submit">發表／編輯文章</button>
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
         </form>

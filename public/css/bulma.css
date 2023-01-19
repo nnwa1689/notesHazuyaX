@@ -73,6 +73,10 @@
     cursor: pointer;
   }
 
+  .post-cover {
+    border-radius: 10px;
+  }
+
   .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
   .pagination-next,
   .pagination-link,
@@ -7452,10 +7456,8 @@
     }
     .navbar-dropdown {
       background-color: white;
-      border-bottom-left-radius: 6px;
-      border-bottom-right-radius: 6px;
-      border-top: 2px solid #dbdbdb;
-      box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
       display: none;
       font-size: 0.875rem;
       left: 0;
