@@ -10971,6 +10971,20 @@
       color: #fff;
     }
 
+    .button.is-instagram {
+        transition: background-color 0.3s;
+        background-color: #fff;
+        border-color: #833AB4;
+        color: #833AB4;
+      }
+
+    .button.is-instagram:hover, .button.is-link.is-hovered {
+        transition: background-color 0.3s;
+        background-color: #833AB4;
+        border-color: transparent;
+        color: #fff;
+      }
+
   .button.is-twitter {
       transition: background-color 0.3s;
       background-color: #fff;

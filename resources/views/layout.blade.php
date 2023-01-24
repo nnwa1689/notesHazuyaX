@@ -121,6 +121,13 @@
                             </a>
                         </div>
                         <div class="column is-full">
+                            <a href="https://www.instagram.com/noteshz/" target="_blank">
+                                <button class="button is-instagram is-fullwidth">
+                                    <i class="fab fa-instagram-square"></i>&nbsp;Instagram
+                                </button>
+                            </a>
+                        </div>
+                        <div class="column is-full">
                             <a href="https://twitter.com/notes_hz" target="_blank">
                                 <button class="button is-twitter is-outlined is-fullwidth">
                                     <i class="fab fa-twitter"></i>&nbsp;Twitter
