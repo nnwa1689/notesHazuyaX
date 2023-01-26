@@ -113,41 +113,51 @@
                 <div class="box">
                     <p class="title is-5"><i class="fas fa-user-plus"></i>社群媒體</p>
                     <div class="rows">
+                        @if(strlen($webData['webConfig'][20]->tittle) > 0)
                         <div class="column is-full">
-                            <a href="https://www.facebook.com/noteshazuya/" target="_blank">
+                            <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
                                 <button class="button is-facebook is-outlined is-fullwidth">
                                     <i class="fab fa-facebook"></i> &nbsp;Facebook
                                 </button>
                             </a>
                         </div>
+                        @endif
+                        @if(strlen($webData['webConfig'][21]->tittle) > 0)
                         <div class="column is-full">
-                            <a href="https://www.instagram.com/noteshz/" target="_blank">
+                            <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
                                 <button class="button is-instagram is-fullwidth">
                                     <i class="fab fa-instagram-square"></i>&nbsp;Instagram
                                 </button>
                             </a>
                         </div>
+                        @endif
+                        @if(strlen($webData['webConfig'][22]->tittle) > 0)
                         <div class="column is-full">
-                            <a href="https://twitter.com/notes_hz" target="_blank">
+                            <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
                                 <button class="button is-twitter is-outlined is-fullwidth">
                                     <i class="fab fa-twitter"></i>&nbsp;Twitter
                                 </button>
                             </a>
                         </div>
+                        @endif
+                        @if(strlen($webData['webConfig'][23]->tittle) > 0)
                         <div class="column is-full">
-                            <a href="https://" target="_blank">
+                            <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
                                 <button class="button is-applepodcast is-outlined is-fullwidth">
                                     <i class="fab fa-apple"></i>&nbsp;Apple Podcasts
                                 </button>
                             </a>
                         </div>
+                        @endif
+                        @if(strlen($webData['webConfig'][24]->tittle) > 0)
                         <div class="column is-full">
-                            <a href="https://" target="_blank">
+                            <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
                                 <button class="button is-link is-outlined is-fullwidth">
                                     <i class="fab fa-google"></i>&nbsp;Google Podcasts
                                 </button>
                             </a>
                         </div>
+                        @endif
                     </div>
                     <!--
                     <div class="field is-grouped is-grouped-multiline">

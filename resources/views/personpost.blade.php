@@ -40,38 +40,22 @@
   </ul>
 </div>
 </section>
-    <div class="container">
-@foreach($allPosts as $post)
-    <div class="box is-post" onclick="window.location.href='{{$webData['webConfig'][13]->tittle}}post/{{$post->PostId}}'">
-        <div class="columns">
-            <div class="column is-one-quarter" style="font-size: 150px; color: #DEF1FF;";>
-            @if(isset($post->CoverImage) && !empty($post->CoverImage))
-                <img class="post-cover" src="{{$post->CoverImage}}">
-            @else
-                <i class="far fa-image"></i>
-            @endif
-            </div>
-            <div class="column">
-                <p class="title is-4">{{$post->PostTittle}}</p>
-                <p class="subtitle limit3rows">{{ strip_tags(\Illuminate\Support\Str::limit($post->PostContant, 400, $end='......')) }}</p>
-                <nav class="level">
-                    <div class="level-left">
-                        <div class="level-item">
-                            <a class="tag is-link" href="{{$webData['webConfig'][13]->tittle}}category/{{$post->ClassId}}">{{$post->Classes}}</a>
-                        </div>
-                        <div class="level-item">
-                            <i class="fas fa-calendar-alt"></i>&nbsp;{{$post->PostDate}}
-                        </div>
-                        <div class="level-item">
-                            <i class="fas fa-clock"></i>&nbsp;{{$post->ReadTime}}分鐘
-                        </div>
-                    </div>
-                    <div class="level-right">
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
+<div class="container">
+    @foreach($allPosts as $post)
+    @component('compoments.postitem',
+        ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
+        'CoverImage' => $post->CoverImage,
+        'PostTittle' => $post->PostTittle,
+        'PostContant' => $post->PostContant,
+        'Category' => $post->Classes,
+        'CategoryUrl' => $webData['webConfig'][13]->tittle."category/".$post->ClassId,
+        'PostDate' => $post->PostDate,
+        'ReadTime' => $post->ReadTime,
+        'Author' => '',
+        'AuthorAvatarUrl' => '',
+        'AuthorUrl' => ''
+        ])
+    @endcomponent
     @endforeach
     <div class="box">
         {{ $allPosts->links('vendor.pagination.default') }}

@@ -29,7 +29,7 @@
                 </div>
                 <div class="level-right">
                     <div class="level-item">
-                        <i class="fas fa-clock"></i>&nbsp;閱讀時間：{{$postData[0]->ReadTime}}分鐘
+                        <i class="fas fa-clock"></i>&nbsp;{{$postData[0]->ReadTime}}分鐘
                     </div>
                 </div>
             </nav>
