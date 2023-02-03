@@ -42,7 +42,7 @@ class UserController extends Controller
         DB::connection('mysql');
         $userID = htmlspecialchars($userID);
         $userData = UserController::getUserData($userID);
-        $userPostData = DB::table(DB::raw("(SELECT * FROM Blog WHERE (Competence='public') AND UserID='".$userID."' ORDER BY PostDate DESC) as Post"))->paginate(10);
+        $userPostData = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName FROM Blog JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE (Competence='public') AND UserID='".$userID."' ORDER BY PostDate DESC) as Post"))->paginate(10);
         # $userPostData = DB::select("SELECT * FROM Blog WHERE (Blog.Competence=?) AND UserID=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$userID, $start]);
         return view('personpost',['userData' => $userData, 'webData'=> $this->webData, 'allPosts'=> $userPostData]);
     }

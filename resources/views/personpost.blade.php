@@ -47,7 +47,7 @@
         'CoverImage' => $post->CoverImage,
         'PostTittle' => $post->PostTittle,
         'PostContant' => $post->PostContant,
-        'Category' => $post->Classes,
+        'Category' => $post->ClassName,
         'CategoryUrl' => $webData['webConfig'][13]->tittle."category/".$post->ClassId,
         'PostDate' => $post->PostDate,
         'ReadTime' => $post->ReadTime,

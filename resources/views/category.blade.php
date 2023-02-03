@@ -4,7 +4,7 @@
     @parent
     <li><a href="{{$webData['webConfig'][13]->tittle}}"><i class="fas fa-home"></i>首頁</a></li>
     <li><a href="{{$webData['webConfig'][13]->tittle}}/post">所有文章</a></li>
-    <li class="is-active"><a href="#" aria-current="page">{{$categorydata[0]->ClassName}}</a></li>
+    <li class="is-active"><a href="#" aria-current="page">{{$allPosts[0]->ClassName}}</a></li>
 @endsection
 @section('content')
     @foreach($allPosts as $post)
@@ -13,11 +13,11 @@
             'CoverImage' => $post->CoverImage,
             'PostTittle' => $post->PostTittle,
             'PostContant' => $post->PostContant,
-            'Category' => $post->Classes,
+            'Category' => $post->ClassName,
             'CategoryUrl' => $webData['webConfig'][13]->tittle."category/".$post->ClassId,
             'PostDate' => $post->PostDate,
             'ReadTime' => $post->ReadTime,
-            'Author' => $post->User,
+            'Author' => $post->Yourname,
             'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$post->Avatar,
             'AuthorUrl' => $webData['webConfig'][13]->tittle."person/".$post->UserID
             ])

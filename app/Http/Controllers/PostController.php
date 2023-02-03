@@ -16,7 +16,7 @@ class PostController extends Controller
     public static function getAllPublicPost($pageNumber){
         DB::connection('mysql');
         //$start = ($pageNumber - 1) * 10;
-        $data = DB::table(DB::raw("(SELECT * FROM Blog LEFT JOIN admin ON Blog.UserID = admin.username WHERE Blog.Competence='public' ORDER BY Blog.PostDate DESC) as Post"))->paginate(10);
+        $data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' ORDER BY Blog.PostDate DESC) as Post"))->paginate(10);
         //$data = DB::select("SELECT * FROM Blog WHERE Blog.Competence=? OR Blog.Competence=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$start]);
         return $data;
     }
@@ -68,21 +68,20 @@ class PostController extends Controller
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
         $classID = htmlspecialchars($classID);
-        $data = DB::table(DB::raw("(SELECT * FROM Blog LEFT JOIN admin ON Blog.UserID = admin.username WHERE Blog.Competence='public' AND Blog.ClassId=".$classID." ORDER BY Blog.PostDate DESC) as Categorypost"))->paginate(10);
-        $categorydata = DB::select("SELECT * FROM BClasses WHERE ClassId=?", [$classID]);
-        if(count($categorydata) <= 0){
+        $data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog LEFT JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' AND Blog.ClassId=".$classID." ORDER BY Blog.PostDate DESC) as Categorypost"))->paginate(10);
+        if(count($data) <= 0){
             abort(404);
             return;
         }
-        $title=$categorydata[0]->ClassName.' - ';
-        return view("category", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>$title, 'categorydata' => $categorydata]);
+        $title=$data[0]->ClassName.' - ';
+        return view("category", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>$title]);
     }
 
     public function getOnePost($postID)
     {
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
-        $data = DB::select("SELECT * FROM Blog WHERE (Blog.Competence=? OR Blog.Competence=?) AND PostId=?", ['public', 'protect', $postID]);
+        $data = DB::select("SELECT * FROM Blog join BClasses on Blog.ClassId = BClasses.ClassId WHERE (Blog.Competence=? OR Blog.Competence=?) AND PostId=? ", ['public', 'protect', $postID]);
         if(count($data) <= 0){
             abort(404);
             return;

@@ -37,11 +37,11 @@
             'CoverImage' => $post->CoverImage,
             'PostTittle' => $post->PostTittle,
             'PostContant' => $post->PostContant,
-            'Category' => $post->Classes,
+            'Category' => $post->ClassName,
             'CategoryUrl' => $webData['webConfig'][13]->tittle."category/".$post->ClassId,
             'PostDate' => $post->PostDate,
             'ReadTime' => $post->ReadTime,
-            'Author' => $post->User,
+            'Author' => $post->Yourname,
             'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$post->Avatar,
             'AuthorUrl' => $webData['webConfig'][13]->tittle."person/".$post->UserID
             ])
