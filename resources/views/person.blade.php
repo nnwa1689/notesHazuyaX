@@ -8,39 +8,17 @@
 @endsection
 @section('content')
 @parent
-
-    @if(isset($userData[0]->PersonBackground)&& !empty($userData[0]->PersonBackground))
-    <section class="hero is-link" style="background-image: url({{$webData['webConfig'][13]->tittle}}{{$userData[0]->PersonBackground}}); background-size: cover;">
-    @else
-    <section class="hero is-link">
-    @endif
-  <div class="hero-body">
-    <div class="container">
-    <figure class="image" style="margin-left: auto; margin-right: auto; width:256px; height:256px;">
-        <img class="is-rounded" src="/{{$userData[0]->Avatar}}">
-    </figure>
-        <br>
-      <h1 class="title has-text-centered">{{$userData[0]->Yourname}}</h1>
-      <p class="subtitle has-text-left">{{$userData[0]->Signature}}</p>
-    </div>
-  </div>
-  <div class="tabs is-centered is-boxed">
-  <ul>
-    <li class="is-active">
-      <a>
-        <span class="icon is-small"><i class="fas fa-info"></i></span>
-        <span>作者簡介</span>
-      </a>
-    </li>
-    <li>
-      <a href="{{$webData['webConfig'][13]->tittle}}person/{{$userData[0]->username}}/post/p/1">
-        <span class="icon is-small"><i class="fas fa-list-alt"></i></span>
-        <span>作者文章</span>
-      </a>
-    </li>
-  </ul>
-</div>
-</section>
+@component('compoments.authorHeader',
+    ['PersonBackground' => $userData[0]->PersonBackground,
+    'PersonBackgroundUrl' => $webData['webConfig'][13]->tittle.$userData[0]->PersonBackground,
+    'Signature' => $userData[0]->Signature,
+    'AuthorIntroUrl' => $webData['webConfig'][13]->tittle.'person/'.$userData[0]->username,
+    'AuthorPostUrl' => $webData['webConfig'][13]->tittle.'person/'.$userData[0]->username.'/post/p/1',
+    'PageType' => 'Intro',
+    'Author' => $userData[0]->Yourname,
+    'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$userData[0]->Avatar,
+    ])
+@endcomponent
 <div class="box">
     <div class="container content">
         <p>{!! $userData[0]->IntroductionSelf !!}</p>

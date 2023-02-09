@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="navbar-end">
-                    <a class="navbar-item{{ (($webData['webConfig'][13]->tittle.$Nav->URL)==URL::current()) ? ' is-active' : '' }}" href="{{$webData['webConfig'][13]->tittle.'search'}}">
+                    <a class="navbar-item{{ (($webData['webConfig'][13]->tittle.'search') == URL::current()) ? ' is-active' : '' }}" href="{{$webData['webConfig'][13]->tittle.'search'}}">
                         <i class="fas fa-search"></i>
                     </a>
                     @if($webData['userData'] == 0)
