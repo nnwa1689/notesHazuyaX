@@ -29,11 +29,8 @@
                 });
             });
         </script>
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v7.0"></script>
 </head>
 <body>
-
     <nav class="navbar is-white" role="navigation" aria-label="main navigation">
         <div class="container is-fulid" style="padding: 0 0.75rem 0 0.75rem;">
             <div class="navbar-brand">
@@ -48,29 +45,38 @@
             </div>
             <div id="MainNavbar" class="navbar-menu" style="padding: 0 0.75rem 0 0;">
                 <div class="navbar-start">
-                </div>
-                <div class="navbar-end">
                     @foreach($webData['allNav'] as $Nav)
-                    @if(($webData['webConfig'][13]->tittle.$Nav->URL)==URL::current())
-                    <a class="navbar-item is-active">{{$Nav->NavigateName}}</a>
-                    @else
-                    @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
-                    <a class="navbar-item" href="{{$Nav->URL}}">{{$Nav->NavigateName}}</a>
-                    @else
-                    <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle.$Nav->URL}}">{{$Nav->NavigateName}}</a>
-                    @endif
-                    @endif
+                        @if(($webData['webConfig'][13]->tittle.$Nav->URL)==URL::current())
+                            <a class="navbar-item is-active">{{$Nav->NavigateName}}</a>
+                        @else
+                            @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
+                            <a class="navbar-item" href="{{$Nav->URL}}">{{$Nav->NavigateName}}</a>
+                            @else
+                            <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle.$Nav->URL}}">{{$Nav->NavigateName}}</a>
+                            @endif
+                        @endif
                     @endforeach
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">關於</a>
                         <div class="navbar-dropdown">
                             <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item">關於我們</a>
-                            <hr class="navbar-divider">
+
                             <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">作者介紹</a>
                         </div>
                     </div>
+                </div>
+                <div class="navbar-end">
+                    <a class="navbar-item{{ (($webData['webConfig'][13]->tittle.$Nav->URL)==URL::current()) ? ' is-active' : '' }}" href="{{$webData['webConfig'][13]->tittle.'search'}}">
+                        <i class="fas fa-search"></i>
+                    </a>
                     @if($webData['userData'] == 0)
-                        <a class="navbar-item" href="/login"><i class="fas fa-user-alt"></i>登入</a>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link"><i class="fas fa-user-alt"></i></a>
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item" href="/login">登入</a>
+                            </div>
+                        </div>
+
                     @else
                     <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link">
@@ -207,26 +213,7 @@
         <nav class="level">
             <div class="level-left">
                 <div class="level-item">
-                    <style>
-                    @font-face {
-                        font-family: 'Lexend-Regular';
-                        font-style: normal;
-                        src: url(https://www.notes-hz.com/fonts/Lexend-Regular.ttf);
-                        unicode-range: U+00-024F;
-                    }
-                    span{
-                        margin-right: -4;
-                    }
-                    </style>
-                    <a style="min-width: 130px;">
-                        <span style="font-size: 24px; color: #028ff3; font-weight: bold; font-family:Lexend-Regular;">Lab</span>
-                        <span style="font-size: 24px; color: #FD3E49; font-weight: bold; font-family:Lexend-Regular;">H</span>
-                        <span style="font-size: 24px; color: #FF8738; font-weight: bold; font-family:Lexend-Regular;">a</span>
-                        <span style="font-size: 24px; color: #FFA900; font-weight: bold; font-family:Lexend-Regular;">z</span>
-                        <span style="font-size: 24px; color: #00A752; font-weight: bold; font-family:Lexend-Regular;">u</span>
-                        <span style="font-size: 24px; color: #007BEE; font-weight: bold; font-family:Lexend-Regular;">y</span>
-                        <span style="font-size: 24px; color: #9B49DF; font-weight: bold; font-family:Lexend-Regular;">a</span>
-                    </a>
+                    <img width="200" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                 </div>
                 <div class="level-item"><p class="subtitle is-6">❤️</p></div>
             </div>
