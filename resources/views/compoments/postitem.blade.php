@@ -2,14 +2,14 @@
     <div class="columns">
         <div class="column is-one-quarter" style="font-size: 150px; color: #DEF1FF; text-align: center;";>
         @if(isset($CoverImage) && !empty($CoverImage))
-            <img class="post-cover" src="{{$CoverImage}}">
+            <img class="post-cover post-cover-desktop" src="{{$CoverImage}}">
         @else
             <i class="far fa-image"></i>
         @endif
         </div>
         <div class="column">
             <p class="title is-4">{{$PostTittle}}</p>
-            <p class="subtitle limit3rows" style="margin-bottom: 0.75rem">{{ strip_tags(\Illuminate\Support\Str::limit($PostContant, 400, $end='......')) }}</p>
+            <p class="subtitle limit3rows" style="margin-bottom: 0.75rem">{{ strip_tags($PostContant) }}</p>
             <nav class="level">
                 <div class="level-left">
                     <div class="level-item">

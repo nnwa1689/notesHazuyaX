@@ -77,6 +77,22 @@
     text-overflow: ellipsis;
   }
 
+  .limit1rows {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .limit4rows {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .is-post {
     transition: transform 0.3s;
     transform: scale(1.0);
@@ -674,6 +690,9 @@
     .is-size-7-desktop {
       font-size: 0.75rem !important;
     }
+    .post-cover-desktop {
+        height: 150px;
+      }
   }
 
   @media screen and (min-width: 1216px) {
@@ -3088,7 +3107,7 @@
 
   @media screen and (min-width: 1408px) {
     .container {
-      max-width: 1152px;
+      max-width: 1209px;
     }
   }
 
