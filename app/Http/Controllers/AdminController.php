@@ -134,7 +134,7 @@ class AdminController extends Controller
                 exit();
             }
             if (!move_uploaded_file($fileinfo['tmp_name'], $des)) {
-                printmsg("error", "檔案從暫存區移動至資料夾失敗");
+                print("檔案從暫存區移動至資料夾失敗");
                 exit();
             }
             $filename = $uniName;

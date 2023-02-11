@@ -17,19 +17,19 @@
                 tinymce.init({
                     language: 'zh_TW',
                     selector: 'textarea',
-                    height: '300',
-                    plugins: [
-                        "advlist autolink lists link image charmap print preview hr anchor codesample",
-                        "searchreplace wordcount visualblocks visualchars code fullscreen",
-                        "insertdatetime media nonbreaking save table contextmenu directionality",
-                        "emoticons template paste textcolor colorpicker textpattern imagetools",
-                    ],
-                    toolbar1: "insertfile undo redo | formatselect fontselect fontsizeselect | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table hr pagebreak blockquote codesample",
-                    toolbar2: "bold italic underline strikethrough subscript superscript | forecolor backcolor charmap emoticons | link unlink image media | cut copy paste | insertdatetime fullscreen code",
-                    menubar: false,
+                    plugins:
+                        'advlist autolink lists link image charmap print preview hr anchor codesample searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking save table contextmenu directionality emoticons template paste textcolor colorpicker textpattern imagetools quickbars'
+                    ,
+                    height: '500',
+                    toolbar: 'undo redo | styles | bold italic | link image codesample | code fullscreen',
+                    contextmenu: 'undo redo | inserttable | cell row column deletetable | help',
+                    menubar: true,
                     image_advtab: true,
                     relative_urls: false,
                     convert_urls: false,
+                    //automatic_uploads: true,
+                    //image_uploadtab: true,
+                    //images_upload_handler: example_image_upload_handler,
                 });
             </script>
             <textarea name="cont" id="cont" cols="139" rows="30" value="">{{isset($pageData[0]->PageContant) ? $pageData[0]->PageContant : ''}}</textarea>

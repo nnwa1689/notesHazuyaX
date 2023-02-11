@@ -11,22 +11,64 @@
             <!--Text Editor-->
             <script src="/js/tinymce/tinymce.min.js"></script>
             <script>
+                const example_image_upload_handler = (blobInfo, progress) => new Promise((resolve, reject) => {
+                    const xhr = new XMLHttpRequest();
+                    console.log(blobInfo);
+                    xhr.withCredentials = false;
+                    xhr.open('POST', '/admin/uploadFiles');
+
+                    xhr.upload.onprogress = (e) => {
+                        progress(e.loaded / e.total * 100);
+                    };
+
+                    xhr.onload = () => {
+                        if (xhr.status === 403) {
+                        reject({ message: 'HTTP Error: ' + xhr.status, remove: true });
+                        return;
+                        }
+
+                        if (xhr.status < 200 || xhr.status >= 300) {
+                        reject('HTTP Error: ' + xhr.status);
+                        return;
+                        }
+
+                        const json = JSON.parse(xhr.responseText);
+
+                        if (!json || typeof json.location != 'string') {
+                        reject('Invalid JSON: ' + xhr.responseText);
+                        return;
+                        }
+
+                        resolve(json.location);
+                    };
+
+                    xhr.onerror = () => {
+                        reject('Image upload failed due to a XHR Transport error. Code: ' + xhr.status);
+                    };
+
+                    const formData = new FormData();
+                    formData.append('myFile', blobInfo.blob(), blobInfo.filename());
+                    console.log(formData);
+
+                    xhr.send(formData);
+                });
+
                 tinymce.init({
                     language: 'zh_TW',
                     selector: 'textarea',
-                    height: '300',
-                    plugins: [
-                        "advlist autolink lists link image charmap print preview hr anchor codesample",
-                        "searchreplace wordcount visualblocks visualchars code fullscreen",
-                        "insertdatetime media nonbreaking save table contextmenu directionality",
-                        "emoticons template paste textcolor colorpicker textpattern imagetools",
-                    ],
-                    toolbar1: "insertfile undo redo | formatselect fontselect fontsizeselect | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table hr pagebreak blockquote codesample",
-                    toolbar2: "bold italic underline strikethrough subscript superscript | forecolor backcolor charmap emoticons | link unlink image media | cut copy paste | insertdatetime fullscreen code",
-                    menubar: false,
+                    plugins:
+                        'advlist autolink lists link image charmap print preview hr anchor codesample searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking save table contextmenu directionality emoticons template paste textcolor colorpicker textpattern imagetools quickbars'
+                    ,
+                    height: '500',
+                    toolbar: 'undo redo | styles | bold italic | link image codesample | code fullscreen',
+                    contextmenu: 'undo redo | inserttable | cell row column deletetable | help',
+                    menubar: true,
                     image_advtab: true,
                     relative_urls: false,
                     convert_urls: false,
+                    //automatic_uploads: true,
+                    //image_uploadtab: true,
+                    //images_upload_handler: example_image_upload_handler,
                 });
             </script>
             <textarea name="cont" id="cont" cols="139" rows="30" value="">{{isset($postData[0]->PostContant) ? $postData[0]->PostContant : ''}}</textarea>
