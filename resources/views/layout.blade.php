@@ -99,7 +99,7 @@
             </div>
         </div>
       </nav>
-      <div class="container is-fulid" style="padding:0 0.75rem; 0 0.75rem">
+      <div class="container" style="padding:0 0.75rem; 0 0.75rem">
         <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul>
             @section('breadcrumb')
@@ -176,8 +176,8 @@
                     <div class="field is-grouped is-grouped-multiline">
                         @foreach($webData['allCategory'] as $category)
                         <div class="control">
-                            <div class="tags">
-                                <a class="tag is-link is-small" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
+                            <div class="tags are-medium">
+                                <a class="tag is-link is-rounded is-light" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
                             </div>
                         </div>
                         @endforeach
@@ -186,10 +186,10 @@
                 <div class="box">
                     <p class="title is-5"><i class="fas fa-newspaper"></i>最新公告</p>
                     @foreach($webData['homePost'] as $hp)
-                    <a href="{{$webData['webConfig'][13]->tittle}}whatsnews/{{$hp->PostId}}">{{$hp->PostDate}}<br>{{$hp->PostTittle}}</a>
+                    <a href="{{$webData['webConfig'][13]->tittle}}whatsnews/{{$hp->PostId}}">{{$hp->PostDate}}&nbsp;{{$hp->PostTittle}}</a>
                     <hr>
                     @endforeach
-                    <button onclick="location.href='{{$webData['webConfig'][13]->tittle}}whatsnews'" class="button is-link is-fullwidth">更多公告</button>
+                    <button onclick="location.href='{{$webData['webConfig'][13]->tittle}}whatsnews'" class="button is-link is-outlined is-fullwidth">更多公告</button>
                 </div>
                 <div class="box">
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

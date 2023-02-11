@@ -13,7 +13,7 @@
             <nav class="level">
                 <div class="level-left">
                     <div class="level-item">
-                        <a class="tag is-link" href="{{$CategoryUrl}}">{{$Category}}</a>
+                        <a class="tag is-link is-rounded is-light is-medium" href="{{$CategoryUrl}}">{{$Category}}</a>
                     </div>
                     <div class="level-item">
                         <i class="fas fa-calendar-alt"></i>&nbsp;{{$PostDate}}
