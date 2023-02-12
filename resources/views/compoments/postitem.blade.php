@@ -1,16 +1,16 @@
 <div class="box is-post" onclick="window.location.href='{{ $url }}'">
     <div class="columns">
-        <div class="column is-one-quarter" style="font-size: 150px; color: #DEF1FF; text-align: center;";>
+        <div class="column is-one-quarter" style="text-align: center;";>
         @if(isset($CoverImage) && !empty($CoverImage))
             <img class="post-cover post-cover-desktop" src="{{$CoverImage}}">
         @else
-            <i class="far fa-image"></i>
+            <img class="post-cover post-cover-desktop" src="/images/NotesHZ_ICON_2023.png">
         @endif
         </div>
         <div class="column">
-            <p class="title is-4">{{$PostTittle}}</p>
-            <p class="subtitle limit3rows" style="margin-bottom: 0.75rem">{{ strip_tags($PostContant) }}</p>
-            <nav class="level">
+            <p class="is-size-4 has-text-weight-bold">{{$PostTittle}}</p>
+            <p class="is-size-5 limit1rows">{{ strip_tags($PostContant) }}</p>
+            <nav class="level mt-2">
                 <div class="level-left">
                     <div class="level-item">
                         <a class="tag is-link is-rounded is-light is-medium" href="{{$CategoryUrl}}">{{$Category}}</a>

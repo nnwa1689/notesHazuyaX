@@ -76,23 +76,22 @@
                                 <a class="navbar-item" href="/login">登入</a>
                             </div>
                         </div>
-
                     @else
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            <figure class="image is-48x48" style="margin-left: auto; margin-right: auto;">
-                                <img class="is-rounded" src="/{{$webData['userData'][0]->Avatar}}">
-                            </figure>
-                            </a>
-                            <div class="navbar-dropdown">
-                                <a href="/admin" class="navbar-item"><i class="fas fa-cogs"></i>&nbsp創作中心</a>
-                                <a href="/admin/editPost/new" class="navbar-item"><i class="fas fa-pen"></i>&nbsp寫新文章</a>
-                                <a href="/admin/editNews/new" class="navbar-item"><i class="fas fa-newspaper"></i>&nbsp發新公告</a>
-                                <a  href="/admin/mySetting"class="navbar-item"><i class="fas fa-user-cog"></i>&nbsp個人設定</a>
-                                <hr class="navbar-divider">
-                                <a href="/logout" class="navbar-item"><i class="fas fa-sign-out-alt"></i>&nbsp登出</a>
-                            </div>
-                    </div>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                <figure class="image is-48x48" style="margin-left: auto; margin-right: auto;">
+                                    <img class="is-rounded" src="/{{$webData['userData'][0]->Avatar}}">
+                                </figure>
+                                </a>
+                                <div class="navbar-dropdown">
+                                    <a href="/admin" class="navbar-item"><i class="fas fa-cogs"></i>&nbsp創作中心</a>
+                                    <a href="/admin/editPost/new" class="navbar-item"><i class="fas fa-pen"></i>&nbsp寫新文章</a>
+                                    <a href="/admin/editNews/new" class="navbar-item"><i class="fas fa-newspaper"></i>&nbsp發新公告</a>
+                                    <a  href="/admin/mySetting"class="navbar-item"><i class="fas fa-user-cog"></i>&nbsp個人設定</a>
+                                    <hr class="navbar-divider">
+                                    <a href="/logout" class="navbar-item"><i class="fas fa-sign-out-alt"></i>&nbsp登出</a>
+                                </div>
+                        </div>
                     @endif
                 </div>
             </div>
@@ -171,22 +170,20 @@
                     </div>
                     -->
                 </div>
-                <div class="box">
+                <div class="box pb-5">
                     <p class="title is-5"><i class="fas fa-tags"></i>文章分類</p>
                     <div class="field is-grouped is-grouped-multiline">
-                        @foreach($webData['allCategory'] as $category)
-                        <div class="control">
                             <div class="tags are-medium">
-                                <a class="tag is-link is-rounded is-light" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
+                            @foreach($webData['allCategory'] as $category)
+                            <a class="tag is-link is-rounded is-light" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
+                            @endforeach
                             </div>
-                        </div>
-                        @endforeach
                     </div>
                 </div>
                 <div class="box">
                     <p class="title is-5"><i class="fas fa-newspaper"></i>最新公告</p>
                     @foreach($webData['homePost'] as $hp)
-                    <a href="{{$webData['webConfig'][13]->tittle}}whatsnews/{{$hp->PostId}}">{{$hp->PostDate}}&nbsp;{{$hp->PostTittle}}</a>
+                    <a href="{{$webData['webConfig'][13]->tittle}}whatsnews/{{$hp->PostId}}">{{$hp->PostDate}}<br/>{{$hp->PostTittle}}</a>
                     <hr>
                     @endforeach
                     <button onclick="location.href='{{$webData['webConfig'][13]->tittle}}whatsnews'" class="button is-link is-outlined is-fullwidth">更多公告</button>
@@ -209,7 +206,7 @@
       </div>
 </body>
 <footer class="footer">
-    <div class="container is-fulid" style="padding: 0 0.75rem 0 0.75rem">
+    <div class="container" style="padding: 0 0.75rem 0 0.75rem">
         <nav class="level">
             <div class="level-left">
                 <div class="level-item">
