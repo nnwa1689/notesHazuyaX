@@ -32,9 +32,9 @@
 </head>
 <body>
     <nav class="navbar is-white" role="navigation" aria-label="main navigation">
-        <div class="container is-fulid" style="padding: 0 0.75rem 0 0.75rem;">
+        <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle}}">
+                <a class="navbar-item" style="padding: 1rem 1.5rem;" href="{{$webData['webConfig'][13]->tittle}}">
                     <img src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                 </a>
                 <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -43,7 +43,7 @@
                 <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div id="MainNavbar" class="navbar-menu" style="padding: 0 0.75rem 0 0;">
+            <div id="MainNavbar" class="navbar-menu" style="padding: 0 1.5rem 0 0;">
                 <div class="navbar-start">
                     @foreach($webData['allNav'] as $Nav)
                         @if(($webData['webConfig'][13]->tittle.$Nav->URL)==URL::current())
@@ -71,14 +71,14 @@
                     </a>
                     @if($webData['userData'] == 0)
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link"><i class="fas fa-user-alt"></i></a>
+                            <a class="navbar-link" style="margin-right: -1.125rem;"><i class="fas fa-user-alt"></i></a>
                             <div class="navbar-dropdown">
                                 <a class="navbar-item" href="/login">登入</a>
                             </div>
                         </div>
                     @else
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">
+                            <a class="navbar-link" style="margin-right: -1.125rem;">
                                 <figure class="image is-48x48" style="margin-left: auto; margin-right: auto;">
                                     <img class="is-rounded" src="/{{$webData['userData'][0]->Avatar}}">
                                 </figure>

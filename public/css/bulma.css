@@ -3595,7 +3595,7 @@
 
   @media screen and (min-width: 1408px) {
     .container {
-      max-width: 1344px;
+      max-width: 1200px;
     }
   }
 
@@ -7007,7 +7007,6 @@
     background-color: none;
     color: #0a0a0a;
     font-size: 18px;
-    max-height: 85px;
   }
 
   .navbar.is-white .navbar-brand > .navbar-item,
