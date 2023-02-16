@@ -101,6 +101,20 @@
     text-overflow: ellipsis;
   }
 
+  .is-homeBanner {
+    transition: transform 0.3s;
+    transform: scale(1.0);
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .is-homeBanner:hover {
+    transition: transform 0.3s;
+    transform: scale(1.03);
+    cursor: pointer;
+    padding: 0;
+  }
+
   .is-post {
     transition: transform 0.3s;
     transform: scale(1.0);
@@ -478,7 +492,7 @@
 
   a:hover {
     transition: color 0.3s;
-    color: #363636;
+    color: #003366;
   }
 
   /*
@@ -6189,7 +6203,7 @@
   }
 
   .breadcrumb a:hover {
-    color: #363636;
+    color: #003366;
   }
 
   .breadcrumb li {

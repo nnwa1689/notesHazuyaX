@@ -13,10 +13,26 @@ class PostController extends Controller
 {
     private $webData;
 
+    //取得首頁
+    public function getHomePage(){
+        $this -> webData = WebController::webInit();
+        $data = PostController::getTopPublicPost($this->webData['webConfig'][7]->tittle);
+        return view("index", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>""]);
+    }
+
     public static function getAllPublicPost($pageNumber){
         DB::connection('mysql');
         //$start = ($pageNumber - 1) * 10;
         $data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' ORDER BY Blog.PostDate DESC) as Post"))->paginate(10);
+        //$data = DB::select("SELECT * FROM Blog WHERE Blog.Competence=? OR Blog.Competence=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$start]);
+        return $data;
+    }
+
+    //取得最新四篇文章
+    public static function getTopPublicPost($limit = 5){
+        DB::connection('mysql');
+        //$start = ($pageNumber - 1) * 10;
+        $data = DB::select("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' ORDER BY Blog.PostDate DESC limit ?)", [$limit]);
         //$data = DB::select("SELECT * FROM Blog WHERE Blog.Competence=? OR Blog.Competence=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$start]);
         return $data;
     }
@@ -28,18 +44,16 @@ class PostController extends Controller
         return $data;
     }
 
-    //帶有pagenum參數
+    //所有文章頁面－帶有pagenum參數
     public function getPostList($pageNumber = null){
         $this -> webData = WebController::webInit();
         if(!preg_match("/^([0-9]+)$/", $pageNumber) || $pageNumber < 0 || !isset($pageNumber)){
             $pageNumber=1;
-            $title = '';
-        }else{
-            $title='文章 - ';
         }
+        $title='所有文章 - ';
         $data = PostController::getAllPublicPost($pageNumber);
         $postnum = ceil(($this->getAllPublicPostNum()[0]->num)/10);
-        return view("index", ['webData' => $this->webData,'allPosts'=>$data, 'nowpageNumber'=>$pageNumber, 'postNum' => $postnum, 'title'=>$title]);
+        return view("postindex", ['webData' => $this->webData,'allPosts'=>$data, 'nowpageNumber'=>$pageNumber, 'postNum' => $postnum, 'title'=>$title]);
     }
 
     public static function getallCategory()

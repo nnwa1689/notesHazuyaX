@@ -2,10 +2,19 @@
 @section('title', $title)
 @section('breadcrumb')
     @parent
-    <li><a href="{{$webData['webConfig'][13]->tittle}}"><i class="fas fa-home"></i>首頁</a></li>
-    <li class="is-active"><a href="#" aria-current="page">所有文章</a></li>
+    <li class="is-active"><a href="#"><i class="fas fa-home"></i>首頁</a></li>
 @endsection
 @section('content')
+    @if($webData['webConfig'][26]->tittle !== "")
+    <div class="is-homeBanner">
+        <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][25]->tittle}}"><img class="post-cover" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][26]->tittle}}"></a>
+    </div>
+    @endif
+    @if($webData['webConfig'][28]->tittle !== "")
+    <div class="is-homeBanner">
+        <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][27]->tittle}}"><img class="post-cover" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][28]->tittle}}"></a>
+    </div>
+    @endif
     @foreach($allPosts as $post)
         @component('compoments.postitem',
             ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
@@ -22,7 +31,7 @@
             ])
         @endcomponent
     @endforeach
-    <div class="box">
-        {{ $allPosts->links('vendor.pagination.default') }}
+    <div class="is-homeBanner">
+        <button style="min-height: 162px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}post'" class="button is-link is-dark is-fullwidth is-large">所有文章&nbsp;<i class="fas fa-arrow-right"></i></button>
     </div>
-    @endsection
+@endsection

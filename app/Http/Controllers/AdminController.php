@@ -54,11 +54,16 @@ class AdminController extends Controller
               DB::update('update web set tittle = ? where ID = 2', [$_POST['descripition']]);
               DB::update('update web set tittle = ? where ID = 4', [$_POST['header']]);
               DB::update('update web set tittle = ? where ID = 3', [$_POST['footer']]);
+              DB::update('update web set tittle = ? where ID = 7', [$_POST['HomePostNum']]);
               DB::update('update web set tittle = ? where ID = 20', [$_POST['FB']]);
               DB::update('update web set tittle = ? where ID = 21', [$_POST['IG']]);
               DB::update('update web set tittle = ? where ID = 22', [$_POST['TWITTER']]);
               DB::update('update web set tittle = ? where ID = 23', [$_POST['APPLEPODCAST']]);
               DB::update('update web set tittle = ? where ID = 24', [$_POST['GOOGLEPODCAST']]);
+              DB::update('update web set tittle = ? where ID = 25', [$_POST['HomeAds1Url']]);
+              DB::update('update web set tittle = ? where ID = 26', [$_POST['Home1AdsImg']]);
+              DB::update('update web set tittle = ? where ID = 27', [$_POST['Home2AdsUrl']]);
+              DB::update('update web set tittle = ? where ID = 28', [$_POST['Home2AdsImg']]);
             }catch(Exception $e){
                 echo 'error';
                 exit();
