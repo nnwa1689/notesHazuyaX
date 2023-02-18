@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title')Hazuya創作中心</title>
+    <title>@yield('title')筆記長也創作中心</title>
 
     <!-- Bulma Version 0.8.x-->
     <link rel="stylesheet" href="{{asset('css/bulma.css')}}" />
@@ -28,10 +28,10 @@
 
     <!-- START NAV -->
     <nav class="navbar is-white">
-        <div class="container">
+        <div class="container" style="padding: 0rem 0.5rem">
             <div class="navbar-brand">
                 <a class="navbar-item brand-text" href="/">
-                <img src="{{asset('/images/AppIcon-HazuyaX.png')}}" width="64px" height="64px">
+                <img src="{{asset('/images/NotesHZ_ICON_2023.png')}}" width="64px" height="64px">
         </a>
                 <div class="navbar-burger burger" data-target="navMenu">
                     <span></span>
@@ -90,16 +90,16 @@
                             <a class="navbar-item" href="/admin/editAccount"><i class="far fa-user"></i>&nbsp;管理作者</a>
                         </div>
                     </div>
-
+                </div>
+                <div class="navbar-end">
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"><i class="fas fa-user-circle"></i>&nbsp;{{$username}}</a>
+                        <a class="navbar-link"><i class="fas fa-user-circle"></i></a>
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="/admin/mySetting"><i class="fas fa-user-circle"></i>&nbsp;個人設定</a>
                             <a class="navbar-item" href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp;登出</a>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </nav>
@@ -113,11 +113,14 @@
         </div>
     </div>
     <footer class="footer">
-    <div class="content has-text-centered">
-      <p>
-          2021 HiHazuya X!
-      </p>
-    </div>
+        <div class="content has-text-centered">
+            <p>
+            2023 HiHazuyaXCMS
+            </p>
+            <p class="subtitle is-6">
+                Version:V230218.22
+            </p>
+        </div>
   </footer>
 </body>
 

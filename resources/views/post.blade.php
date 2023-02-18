@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="box">
-        <div class="content">
+        <div class="content line-numbers">
         {!! $postData[0]->PostContant !!}
         </div>
     </div>
