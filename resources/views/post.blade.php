@@ -88,7 +88,7 @@
     <div class="columns">
         <div class="column has-text-centered">
             <figure class="image is-1by1" style="margin-left: auto; margin-right: auto;">
-                <img class="is-rounded" src="/{{$autorData[0]->Avatar}}">
+                <img class="is-rounded" src="{{$autorData[0]->Avatar}}">
             </figure>
             <br>
             <a class="title has-text-centered is-5" href="/person/{{$autorData[0]->username}}">{{$autorData[0]->Yourname}}</a>

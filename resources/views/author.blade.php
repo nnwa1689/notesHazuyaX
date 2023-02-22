@@ -19,7 +19,7 @@
             <div class="column is-one-third">
                 <div style="margin:0 auto 0 auto; width:200px; height:200px;">
                     <figure class="image is-1by1">
-                        <img class="is-rounded" src="/{{$User->Avatar}}">
+                        <img class="is-rounded" src="{{$User->Avatar}}">
                     </figure>
                 </div>
             </div>

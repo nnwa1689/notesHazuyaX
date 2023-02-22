@@ -13,7 +13,7 @@
         <div class="box">
             <div class="image is-128x128" style="margin-left: auto; margin-right: auto;">
                 <figure class="image is-1by1">
-                    <img class="is-rounded" src="/{{$userData[0]->Avatar}}">
+                    <img class="is-rounded" src="{{$userData[0]->Avatar}}">
                 </figure>
             </div>
             <hr>
