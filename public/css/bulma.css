@@ -2195,6 +2195,13 @@
     white-space: nowrap;
   }
 
+  .button.is-multiline {
+    min-height: 2.25em;
+    white-space: unset;
+    height: auto;
+    flex-direction: column;
+  }
+
   .button strong {
     color: inherit;
   }
@@ -11459,7 +11466,8 @@
 
   .footer {
     background-color: none;
-    padding: 3rem 1.5rem 6rem;
+    padding-top: 1rem;
+    padding-bottom: 2.25rem;
   }
 
   .footer a{
@@ -11482,14 +11490,14 @@
       padding: 10px 15px 10px 15px;
       font-size: 25px;
       transition: background 0.3s;
-      background: rgba(35, 40, 45, 0.60);
+      background: #003366;
       color: #FAFCFD;
       cursor: pointer;
       z-index: 1000;
   }
   #topbottom:hover{
       transition: background 0.3s;
-      background: rgba(35, 40, 45, 1);
+      background: #3D73FF;
 
   }
 

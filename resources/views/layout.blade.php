@@ -201,38 +201,31 @@
                         (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
                 </div>
+                <footer class="footer">
+                    <div class="container">
+                        <p class="has-text-centered">
+                            <img width="200" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                        </p>
+                        <p class="has-text-centered">
+                            <div class="rows has-text-centered has-text-centered-mobile">
+                                <div class="column">
+                                @foreach($webData['allButtonNav'] as $bn)
+                                @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
+                                <a class="has-text-weight-medium" style="margin-right: 5px;" href="{{$bn->URL}}">{{$bn->NavigateName}}</a>
+                                @else
+                                <a class="has-text-weight-medium" style="margin-right: 5px;" href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>
+                                @endif
+                                @endforeach
+                                </div>
+                                <p class="thas-text-centered">
+                                    {!!$webData['webConfig'][3]->tittle!!}
+                                </p>
+                            </div>
+                        </p>
+                    </div>
+                </footer>
             </div>
         </div>
       </div>
-</body>
-<footer class="footer">
-    <div class="container" style="padding: 0 0.75rem 0 0.75rem">
-        <nav class="level">
-            <div class="level-left">
-                <div class="level-item">
-                    <img width="200" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
-                </div>
-                <div class="level-item"><p class="subtitle is-6">❤️</p></div>
-            </div>
-            <div class="level-right">
-                <div class="level-item">
-                    <div class="rows text-has-right has-text-centered-mobile">
-                        <div style="margin-right: -20px;" class="column">
-                        @foreach($webData['allButtonNav'] as $bn)
-                        @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
-                        <a class="has-text-weight-medium" style="margin-right: 10px;" href="{{$bn->URL}}">{{$bn->NavigateName}}</a>
-                        @else
-                        <a class="has-text-weight-medium" style="margin-right: 10px;" href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>
-                        @endif
-                        @endforeach
-                        </div>
-                        <p class="has-text-right has-text-centered-mobile">
-                            {!!$webData['webConfig'][3]->tittle!!}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </div>
-  </footer>
+    </body>
 </html>
