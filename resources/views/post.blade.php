@@ -87,7 +87,7 @@
     <p class="title is-5"><i class="fas fa-user-alt"></i>關於作者</p>
     <div class="columns">
         <div class="column has-text-centered">
-            <figure class="image is-128x128" style="margin-left: auto; margin-right: auto;">
+            <figure class="image is-1by1" style="margin-left: auto; margin-right: auto;">
                 <img class="is-rounded" src="/{{$autorData[0]->Avatar}}">
             </figure>
             <br>

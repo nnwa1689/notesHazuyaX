@@ -17,16 +17,15 @@
     <div class="box is-post" style="align-items: center;" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}';">
         <div class="columns">
             <div class="column is-one-third">
-            <figure class="image" style="margin:0 auto 0 auto; width:240px; height:240px;">
-                <img class="is-rounded" src="/{{$User->Avatar}}">
-            </figure>
+                <div style="margin:0 auto 0 auto; width:200px; height:200px;">
+                    <figure class="image is-1by1">
+                        <img class="is-rounded" src="/{{$User->Avatar}}">
+                    </figure>
+                </div>
             </div>
             <div class="column" style="padding: 30px; align-items: center; justify-content: flex-start; display:grid;">
                 <p class="title is-size-4 has-text-centered-mobile">{{$User->Yourname}}</p>
                 <p class="subtitle limit4rows">{{ $User->Signature }}</p>
-                <div class="buttons">
-                    <button class="button is-light" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}';">瞭解更多</button>
-                </div>
             </div>
         </div>
     </div>

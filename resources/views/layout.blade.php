@@ -79,7 +79,7 @@
                     @else
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a class="navbar-link" style="margin-right: -1.125rem;">
-                                <figure class="image is-48x48" style="margin-left: auto; margin-right: auto;">
+                                <figure class="image is-48x48 is-1by1" style="margin-left: auto; margin-right: auto;">
                                     <img class="is-rounded" src="/{{$webData['userData'][0]->Avatar}}">
                                 </figure>
                                 </a>

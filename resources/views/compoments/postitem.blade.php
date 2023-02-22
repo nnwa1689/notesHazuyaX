@@ -26,9 +26,11 @@
                 <div class="level-right">
                     <div class="level-item">
                         <a href="{{$AuthorUrl}}">
-                            <figure class="image is-48x48" style="margin-right: 0.75rem;">
-                                <img class="is-rounded" src="{{$AuthorAvatarUrl}}">
-                            </figure>
+                            <div class="image is-48x48" style="margin-right: 0.75rem;">
+                                <figure class="image is-1by1">
+                                    <img class="is-rounded" src="{{$AuthorAvatarUrl}}">
+                                </figure>
+                            </div>
                         </a>
                         <a class="subtitle is-6" href="{{$AuthorUrl}}">
                             {{$Author}}

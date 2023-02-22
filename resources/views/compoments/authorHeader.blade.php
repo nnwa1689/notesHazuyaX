@@ -7,9 +7,11 @@
     <div class="container">
         <div class="columns">
             <div class="column is-two-fifths">
-                <figure class="image" style="margin-left: auto; margin-right: auto; width:200px; height:200px;">
-                    <img class="is-rounded" src="{{$AuthorAvatarUrl}}">
-                </figure>
+                <div style="margin-left: auto; margin-right: auto; width:200px; height:200px;">
+                    <figure class="image is-1by1">
+                        <img class="is-rounded" src="{{$AuthorAvatarUrl}}">
+                    </figure>
+                </div>
             </div>
             <div class="column">
                 <h1 class="title has-text-centered-mobile">{{$Author}}</h1>
