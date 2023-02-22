@@ -481,7 +481,7 @@
 
   a {
     transition: color 0.3s;
-    color: #007BEE;
+    color: #003366;
     cursor: pointer;
     text-decoration: none;
   }
@@ -492,7 +492,7 @@
 
   a:hover {
     transition: color 0.3s;
-    color: #003366;
+    color: #007BEE;
   }
 
   /*

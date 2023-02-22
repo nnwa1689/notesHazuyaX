@@ -15,8 +15,9 @@
         </div>
     </section>
     <div class="box content">
-    <p>
-        {!! $data[0]->PageContant !!}
-    </p>
+        <p>
+            {!! $data[0]->PageContant !!}
+        </p>
     </div>
+    <p></p>
 @endsection

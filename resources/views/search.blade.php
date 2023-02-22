@@ -51,6 +51,7 @@
     <div class="box">
         {{ $data->links('vendor.pagination.pagSearch') }}
     </div>
+    <p></p>
 @else
 <div class="box">
     <p class="has-text-centered is-size-4">找不到相關結果</p>

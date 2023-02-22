@@ -25,4 +25,5 @@
     <div class="box">
         {{ $allPosts->links('vendor.pagination.default') }}
     </div>
-    @endsection
+    <p></p>
+@endsection
