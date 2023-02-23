@@ -113,7 +113,7 @@
             <script>
                 tinymce.init({
                     language: 'zh_TW',
-                    selector: 'textarea',
+                    selector: '#IntroductionSelf',
                     content_css: "/css/editerContent.css",
                     plugins:
                         'advlist autolink lists link image charmap preview hr anchor codesample searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking save table contextmenu directionality emoticons template paste textcolor colorpicker textpattern imagetools'
