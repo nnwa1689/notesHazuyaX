@@ -17,28 +17,6 @@
   }
 
   /*SELF FONTS*/
-
-  @font-face {
-    font-family: WorkSans-Medium;
-    src: url(/fonts/WorkSans-Medium.otf);
-  }
-
-  @font-face {
-    font-family: WorkSans-Regular;
-    src: url(/fonts/WorkSans-Regular.otf);
-  }
-
-  @font-face {
-    font-family: WorkSans-Light;
-    src: url(/fonts/WorkSans-Light.otf);
-  }
-
-  @font-face {
-      font-family: 'TaipeiSansTCBeta-Regular';
-      font-style: normal;
-      src: url(/fonts/TaipeiSansTCBeta-Regular.ttf);
-    }
-
     @font-face {
       font-family: 'NotoSansTC-Medium';
       font-style: normal;
@@ -49,22 +27,22 @@
     @font-face {
         font-family: 'NotoSansTC-Medium';
         font-style: normal;
-        src: url(/fonts/NotoSansTC-Medium.otf);
+        src: url(/fonts/RedHatText-Medium.ttf);
+        unicode-range: U+00-024F;
+      }
+
+    @font-face {
+        font-family: 'NotoSansTC-Regular';
+        font-style: normal;
+        src: url(/fonts/NotoSansTC-Regular.otf);
         unicode-range: U+4E00-9FFF;
     }
 
     @font-face {
-        font-family: 'NotoSansTC-Medium';
+        font-family: 'NotoSansTC-Regular';
         font-style: normal;
         src: url(/fonts/RedHatText-Regular.ttf);
         unicode-range: U+00-024F;
-    }
-
-  @font-face {
-      font-family: 'NotoSansTC-Medium';
-      font-style: normal;
-      src: url(/fonts/RedHatText-Medium.ttf);
-      unicode-range: U+00-024F;
     }
 
   /***********/
@@ -11483,12 +11461,13 @@
   /*gotop*/
   #topbottom{
       position: fixed;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      right: 0px;
-      bottom: 100px;
+      border-radius: 60px;
+      right: 24px;
+      width: 60px;
+      height: 60px;
+      bottom: 95px;
       padding: 10px 15px 10px 15px;
-      font-size: 25px;
+      font-size: 36px;
       transition: background 0.3s;
       background: #003366;
       color: #FAFCFD;

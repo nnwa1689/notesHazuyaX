@@ -17,13 +17,16 @@
                 tinymce.init({
                     language: 'zh_TW',
                     selector: 'textarea',
+                    content_css: "/css/editerContent.css",
                     plugins:
-                        'advlist autolink lists link image charmap print preview hr anchor codesample searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking save table contextmenu directionality emoticons template paste textcolor colorpicker textpattern imagetools quickbars'
+                        'advlist autolink lists link image charmap preview hr anchor codesample searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking save table contextmenu directionality emoticons template paste textcolor colorpicker textpattern imagetools'
                     ,
                     height: '500',
-                    toolbar: 'undo redo | styles | bold italic | link image codesample | code fullscreen',
-                    contextmenu: 'undo redo | inserttable | cell row column deletetable | help',
-                    menubar: true,
+                    //toolbar: 'undo redo | styles | bold italic  | link image codesample | code fullscreen',
+                    toolbar1: "undo redo | styles | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | table hr pagebreak blockquote codesample",
+                    toolbar2: "bold italic underline strikethrough subscript superscript | forecolor backcolor charmap emoticons | link unlink image media | insertdatetime fullscreen code",
+                    contextmenu: 'undo redo | inserttable | cell row column deletetable',
+                    menubar: false,
                     image_advtab: true,
                     relative_urls: false,
                     convert_urls: false,
