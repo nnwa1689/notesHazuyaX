@@ -7974,7 +7974,6 @@
     }
     .navbar-start {
       justify-content: center;
-      margin-right: auto;
       margin-left: auto;
     }
 
@@ -10952,7 +10951,23 @@
     color: #fff;
   }
 
+  .hero.is-link.is-light {
+    background-color: #eef3fc;
+    color: #2160c4;
+  }
 
+  .hero.is-link.is-light .title {
+    color: #2160c4;
+  }
+
+  .hero.is-link.is-light .subtitle{
+    color: #2160c4;
+  }
+
+  .hero.is-link.is-dark {
+    background-color: #003366;
+    color: #fff;
+  }
 
   .hero.is-link .title {
     color: #fff;

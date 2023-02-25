@@ -20,7 +20,7 @@
         </div>
     </div>
 </div>
-<div class="tabs is-centered is-boxed">
+<div class="tabs is-centered is-medium is-boxed">
   <ul>
     <li class="{{ ($PageType == 'Intro') ? 'is-active' : '' }}">
       <a href="{{$AuthorIntroUrl}}">
