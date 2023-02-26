@@ -175,7 +175,7 @@
                     <div class="field is-grouped is-grouped-multiline">
                             <div class="tags are-medium">
                             @foreach($webData['allCategory'] as $category)
-                            <a class="tag is-link is-rounded is-light" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
+                            <a class="tag button is-tag is-link is-light" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
                             @endforeach
                             </div>
                     </div>

@@ -29,7 +29,7 @@
                 </div>
                 <div class="level-right">
                     <div class="level-item">
-                        <a class="tag is-link is-rounded is-light is-medium" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>&nbsp;
+                        <a class="tag button is-medium is-link is-light" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>&nbsp;
                     </div>
                 </div>
             </nav>

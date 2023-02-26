@@ -25,7 +25,7 @@
             @endif
         </div>
         <div class="control">
-            <button class="button is-link" type="submit" placeholder="search"><i class="fas fa-search"></i>搜尋</button>
+            <button class="button is-link is-outlined" type="submit" placeholder="search"><i class="fas fa-search"></i>搜尋</button>
         </div>
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
     </from>
@@ -54,7 +54,7 @@
     <p></p>
 @else
 <div class="box">
-    <p class="has-text-centered is-size-4">找不到相關結果</p>
+    <p class="has-text-centered is-size-4">尚無相關結果</p>
 </div>
 @endif
 @endsection

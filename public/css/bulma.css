@@ -7746,7 +7746,7 @@
     color: #003366;
     display: block;
     line-height: 1.5;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 1rem;
     position: relative;
   }
 
@@ -7973,10 +7973,8 @@
       flex-shrink: 0;
     }
     .navbar-start {
-      justify-content: center;
-      margin-left: auto;
+      padding-left: 1rem;
     }
-
     .navbar-end {
       justify-content: flex-end;
       margin-left: auto;
@@ -8505,8 +8503,7 @@
     align-items: center;
     border-bottom-color: #dbdbdb;
     border-bottom-style: solid;
-    border-bottom-width: 1px;
-    color: #4a4a4a;
+    border-bottom-width: 2px;
     display: flex;
     justify-content: center;
     margin-bottom: -1px;
@@ -8515,8 +8512,8 @@
   }
 
   .tabs a:hover {
-    border-bottom-color: #363636;
-    color: #363636;
+    border-bottom-color: #007BEE;
+    color: #007BEE;
   }
 
   .tabs li {

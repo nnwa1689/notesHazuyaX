@@ -20,12 +20,13 @@
         </div>
     </div>
 </div>
-<div class="tabs is-centered is-medium is-boxed">
+</section>
+<div class="tabs is-centered is-medium is-fullwidth">
   <ul>
     <li class="{{ ($PageType == 'Intro') ? 'is-active' : '' }}">
       <a href="{{$AuthorIntroUrl}}">
         <span class="icon is-small"><i class="fas fa-info"></i></span>
-        <span>作者簡介</span>
+        <span>作者介紹</span>
       </a>
     </li>
     <li class="{{ ($PageType == 'Post') ? 'is-active' : '' }}">
@@ -36,4 +37,3 @@
     </li>
   </ul>
 </div>
-</section>
