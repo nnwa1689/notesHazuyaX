@@ -35,22 +35,25 @@
                     <th>順次</th>
                     <th>分類名稱</th>
                     <th>隱藏／顯示</th>
+                    <th>編輯介紹</th>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td><i class="fas fa-plus-circle"></i></td>
+                        <td><input name="newOrder" type="text" class="input" value=""></td>
+                        <td><input name="newName" type="text" class="input" value=""></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                     @foreach($allCategory as $value)
                         <tr>
                             <td><input name="classid[]" type="checkbox" value="{{$value->ClassId}}"></td>
                             <td>  <input name="order[{{$value->ClassId}}]" class="input" type="text" value="{{$value->OrderID}}"></td>
                             <td>  <input name="ClassName[{{$value->ClassId}}]" class="input" type="text" value="{{$value->ClassName}}"></td>
                             <td>{{$value->SorH}}</td>
+                            <td><a class="button is-link is-outlined" href="editCategoryDetail/{{ $value -> ClassId }}"><i class="far fa-edit"></i></a></td>
                         </tr>
                     @endforeach
-                    <tr>
-                        <td><i class="fas fa-plus-circle"></i></td>
-                        <td><input name="newOrder" type="text" class="input" value=""></td>
-                        <td><input name="newName" type="text" class="input" value=""></td>
-                        <td></td>
-                    </tr>
                 </tbody>
             </table>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">

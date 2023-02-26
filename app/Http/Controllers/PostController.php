@@ -77,18 +77,42 @@ class PostController extends Controller
         return $data;
     }
 
+    public static function getCategoryDetail($classID)
+    {
+        DB::connection('mysql');
+        $data = DB::select("SELECT * FROM BClasses WHERE ClassId = ? ORDER BY OrderID ASC", [$classID]);
+        return $data;
+    }
+
+    public static function getCategoryPublicPostCount($classID)
+    {
+        DB::connection('mysql');
+        $data = DB::select("SELECT COUNT(PostId) as count FROM Blog WHERE ClassId = ? AND Competence = 'public'", [$classID]);
+        return $data[0] -> count;
+    }
+
     public function getallCategorypost($classID, $pageNumber = null)
     {
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
-        $classID = htmlspecialchars($classID);
-        $data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog LEFT JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' AND Blog.ClassId=".$classID." ORDER BY Blog.PostDate DESC) as Categorypost"))->paginate(10);
-        if(count($data) <= 0){
+        $data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, BClasses.Short_Intro, admin.Yourname, admin.Avatar FROM Blog LEFT JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' AND Blog.ClassId=".$classID." ORDER BY Blog.PostDate DESC) as Categorypost"))->paginate(10);
+        $countPost = PostController::getCategoryPublicPostCount($classID);
+        if($countPost  <= 0){
             abort(404);
             return;
         }
         $title=$data[0]->ClassName.' - ';
-        return view("category", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>$title]);
+        return view("category", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>$title, 'count' => $countPost]);
+    }
+
+    public function getCategoryDetailPage($classID)
+    {
+        $this -> webData = WebController::webInit();
+        DB::connection('mysql');
+        $data = DB::select("SELECT * FROM BClasses WHERE ClassId = ? ORDER BY OrderID ASC", [$classID]);
+        $countPost = PostController::getCategoryPublicPostCount($classID);
+        $title=$data[0]->ClassName.' - ';
+        return view("categoryIntro", ['webData' => $this->webData, 'detail'=>$data, 'title'=>$title, 'count' => $countPost]);
     }
 
     public function getOnePost($postID)

@@ -263,6 +263,19 @@ class AdminController extends Controller
 
     }
 
+    public function CategoryDetailEdit($classId = null)
+    {
+        $categoryData = PostController::getCategoryDetail($classId);
+        return view('admin/editCategoryDetail', ['username'=>session()->get('username'), 'categoryData'=>$categoryData]);
+    }
+
+    public function UpdateCategoryDetail($classId = null)
+    {
+        DB::connection('mysql');
+        DB::update("UPDATE BClasses SET ClassName = ?, Short_Intro = ?, Long_Intro = ?  WHERE ClassId = ?", [$_POST['ClassName'], $_POST['shortIntro'], $_POST['longIntro'], $classId]);
+        return redirect('/admin/editCategoryDetail/'.$classId);
+    }
+
     public function showAdminCategory()
     {
         if(UserController::checkLoginStatus()){

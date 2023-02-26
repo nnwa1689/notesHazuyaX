@@ -21,8 +21,8 @@ Route::get('/post/p/{pageNumber}', 'PostController@getPostList')->where('pageNum
 Route::get('/post/{postID}', 'PostController@getOnePost')->where('postID', '[0-9]+')->name('post');
 
 //category
-Route::get('/category/{classID}', 'PostController@getallCategorypost')->where('classID', '[0-9]+')->name('{classID}');
-Route::get('/category/{classID}/p/{pageNumber}', 'PostController@getallCategorypost')->where('classID', '[0-9]+')->where('pageNumber', '[0-9]+');
+Route::get('/category/{classID}/all', 'PostController@getallCategorypost')->where('classID', '[0-9]+')->name('{classID}');
+Route::get('/category/{classID}/', 'PostController@getCategoryDetailPage')->where('classID', '[0-9]+');
 
 //page
 Route::get('/page/{pageID}','PageController@getPage')->where('pageID', '[0-9A-Za-z]+')->name('page/'.'{pageID}');
@@ -77,6 +77,8 @@ Route::get('admin/editPost/p/{pageNumber}', 'AdminController@showEditPostList')-
 //分類
 Route::get('admin/editCategory', 'AdminController@showAdminCategory')->middleware('userAuth:category');
 Route::post('admin/updateCategory', 'AdminController@updateCategory')->middleware('userAuth:category');
+Route::get('admin/editCategoryDetail/{classId}', 'AdminController@CategoryDetailEdit')->middleware('userAuth:category');
+Route::post('admin/updateCategoryDetail/{classId}', 'AdminController@UpdateCategoryDetail')->middleware('userAuth:category');
 
 /*公告相關*/
 

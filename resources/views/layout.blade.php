@@ -171,7 +171,7 @@
                     -->
                 </div>
                 <div class="box pb-6">
-                    <p class="title is-5"><i class="fas fa-tags"></i>文章分類</p>
+                    <p class="title is-5"><i class="fas fa-tags"></i>文章系列．分類</p>
                     <div class="field is-grouped is-grouped-multiline">
                             <div class="tags are-medium">
                             @foreach($webData['allCategory'] as $category)

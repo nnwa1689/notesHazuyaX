@@ -55,7 +55,7 @@
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="/admin/editPost/new"><i class="fas fa-plus-circle"></i>&nbsp;新增文章</a>
                             <a class="navbar-item" href="/admin/editPost/p/1"><i class="fas fa-tools"></i>&nbsp;管理文章</a>
-                            <a class="navbar-item" href="/admin/editCategory"><i class="fas fa-folder"></i>&nbsp;分類管理</a>
+                            <a class="navbar-item" href="/admin/editCategory"><i class="fas fa-folder"></i>&nbsp;分類／系列管理</a>
                         </div>
                     </div>
 
@@ -118,7 +118,7 @@
             2023 HiHazuyaXCMS
             </p>
             <p class="subtitle is-6">
-                Version:V230218.22
+                Version:V230226.21
             </p>
         </div>
   </footer>

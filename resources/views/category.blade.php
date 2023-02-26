@@ -7,13 +7,39 @@
     <li class="is-active"><a href="#" aria-current="page">{{$allPosts[0]->ClassName}}</a></li>
 @endsection
 @section('content')
-    <section class="hero is-link">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title">{{$allPosts[0]->ClassName}}</h1>
-            </div>
+    <div class="container mt-1 mb-5">
+        <div class="block">
+            <nav class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <p class="title has-text-left is-3">{{$allPosts[0]->ClassName}}</p>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="level-item">
+                        <p class="is-size-6"><i class="fas fa-book"></i>&nbsp;共 {{ $count }} 篇文章閱讀</p>
+                    </div>
+                </div>
+            </nav>
+            <p class="subtitle has-text-left is-5">{{$allPosts[0]->Short_Intro}}</p>
         </div>
-    </section>
+    </div>
+    <div class="tabs is-centered is-medium is-fullwidth">
+        <ul>
+            <li>
+            <a href="/category/{{ $allPosts[0]->ClassId }}">
+                <span class="icon is-small"><i class="fas fa-info"></i></span>
+                <span>系列／分類介紹</span>
+            </a>
+            </li>
+            <li class="is-active">
+            <a>
+                <span class="icon is-small"><i class="fas fa-list-alt"></i></span>
+                <span>文章列表</span>
+            </a>
+            </li>
+        </ul>
+    </div>
     @foreach($allPosts as $post)
         @component('compoments.postitem',
                 ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
