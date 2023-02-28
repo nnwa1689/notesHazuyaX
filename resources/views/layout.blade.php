@@ -1,6 +1,7 @@
 <html lang="zh-TW">
 <head>
     {!! $webData['webConfig'][4]->tittle !!}
+    <!--TOP BUTTON-->
     <a id="top"></a>
     <meta charset="UTF-8">
     <meta name="description" content="{{$webData['webConfig'][2]->tittle}}">
@@ -14,7 +15,7 @@
     <div id="topbottom" href="#top"><i class="fas fa-chevron-up"></i></div>
         <script>
             console.log("%c不要看啦，人家會害羞>__<", "color: blue; font-size: 30px;");
-
+            //TOP BUTTON FUNCTION
             $("#topbottom").click(function () {
                 $("html,body").animate({scrollTop: 0}, "slow");
                 return false;
@@ -108,7 +109,7 @@
       </div>
       <div class="container">
         <div class="columns">
-            <div class="column is-9">
+            <div class="column is-9 mb-3">
                 @section('content')
                 @show
             </div>
@@ -171,11 +172,11 @@
                     -->
                 </div>
                 <div class="box pb-6">
-                    <p class="title is-5"><i class="fas fa-tags"></i>文章系列．分類</p>
+                    <p class="title is-5"><i class="fas fa-tags"></i>系列．分類</p>
                     <div class="field is-grouped is-grouped-multiline">
                             <div class="tags are-medium">
                             @foreach($webData['allCategory'] as $category)
-                            <a class="tag button is-tag is-link is-light" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
+                            <a class="tag button is-primary is-outlined" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
                             @endforeach
                             </div>
                     </div>
@@ -217,7 +218,7 @@
                                 @endif
                                 @endforeach
                                 </div>
-                                <p class="thas-text-centered">
+                                <p class="has-text-centered">
                                     {!!$webData['webConfig'][3]->tittle!!}
                                 </p>
                             </div>

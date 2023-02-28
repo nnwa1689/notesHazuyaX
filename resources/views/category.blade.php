@@ -9,7 +9,7 @@
 @section('content')
     <div class="container mt-1 mb-5">
         <div class="block">
-            <nav class="level">
+            <nav class="level mb-3">
                 <div class="level-left">
                     <div class="level-item">
                         <p class="title has-text-left is-3">{{$allPosts[0]->ClassName}}</p>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </nav>
-            <p class="subtitle has-text-left is-5">{{$allPosts[0]->Short_Intro}}</p>
+            <p class="subtitle has-text-left has-text-centered-mobile is-5">{{$allPosts[0]->Short_Intro}}</p>
         </div>
     </div>
     <div class="tabs is-centered is-medium is-fullwidth">
@@ -29,13 +29,13 @@
             <li>
             <a href="/category/{{ $allPosts[0]->ClassId }}">
                 <span class="icon is-small"><i class="fas fa-info"></i></span>
-                <span>系列／分類介紹</span>
+                <span>介紹</span>
             </a>
             </li>
             <li class="is-active">
             <a>
                 <span class="icon is-small"><i class="fas fa-list-alt"></i></span>
-                <span>文章列表</span>
+                <span>列表</span>
             </a>
             </li>
         </ul>

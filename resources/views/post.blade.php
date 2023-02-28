@@ -11,8 +11,8 @@
 @parent
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">
     <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
-    <div class="block">
-        <p class="title is-3">{{$postData[0]->PostTittle}}
+    <div class="block mb-3">
+        <p class="title is-3 mb-2">{{$postData[0]->PostTittle}}
             @if($webData['userData'] !== 0)
                 <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i>&nbsp;編輯</button>
             @endif
@@ -29,7 +29,7 @@
                 </div>
                 <div class="level-right">
                     <div class="level-item">
-                        <a class="tag button is-medium is-link is-light" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>&nbsp;
+                        <a class="tag button is-medium is-primary is-outlined" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>&nbsp;
                     </div>
                 </div>
             </nav>
@@ -118,7 +118,7 @@
     <div class="column">
     @if(isset($leftPost[0]))
     <a href='{{$leftPost[0]->PostId}}'>
-        <button class="button is-multiline is-link is-light is-fullwidth">
+        <button class="button is-multiline is-link is-outlined is-fullwidth">
             <p><i class="fas fa-angle-left" aria-hidden="true"></i>&nbsp;上一篇</p>
             <p class="limit2rows has-text-left">{{$leftPost[0]->PostTittle}}</p>
         </button>
@@ -128,7 +128,7 @@
     @if(isset($rightPost[0]))
     <div class="column is-full">
         <a href='{{$rightPost[0]->PostId}}'>
-            <button class="button is-multiline is-link is-light is-fullwidth">
+            <button class="button is-multiline is-link is-outlined is-fullwidth">
                 <p>下一篇&nbsp;<i class="fas fa-angle-right" aria-hidden="true"></i></p>
                 <p class="limit2rows has-text-left">{{$rightPost[0]->PostTittle}}</p>
             </button>

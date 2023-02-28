@@ -19,9 +19,9 @@
     'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$userData[0]->Avatar,
     ])
 @endcomponent
-<div class="box">
+
     <div class="container content">
         <p>{!! $userData[0]->IntroductionSelf !!}</p>
     </div>
-    </div>
+
 @endsection
