@@ -31,11 +31,11 @@
             });
         </script>
 </head>
-<body>
-    <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+<body class="has-navbar-fixed-top" >
+    <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" style="padding: 1rem 1.5rem;" href="{{$webData['webConfig'][13]->tittle}}">
+                <a class="navbar-item" style="padding: 0.75rem 1.5rem;" href="{{$webData['webConfig'][13]->tittle}}">
                     <img src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                 </a>
                 <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -205,7 +205,7 @@
                 <footer class="footer">
                     <div class="container">
                         <p class="has-text-centered">
-                            <img width="200" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                            <img style="max-width 200px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                         </p>
                         <p class="has-text-centered">
                             <div class="rows has-text-centered has-text-centered-mobile">

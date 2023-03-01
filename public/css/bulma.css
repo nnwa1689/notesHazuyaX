@@ -2691,7 +2691,7 @@
   }
 
   .button.is-primary:focus:not(:active), .button.is-primary.is-focused:not(:active) {
-    box-shadow: 0 0 0 0.125em rgba(0, 209, 178, 0.25);
+    box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
   }
 
   .button.is-primary:active, .button.is-primary.is-active {
@@ -7640,10 +7640,12 @@
   }
 
   .navbar.is-fixed-bottom, .navbar.is-fixed-top {
+    background-color: #f2f2f2;
     left: 0;
     position: fixed;
     right: 0;
     z-index: 30;
+    min-height: 5rem;
   }
 
   .navbar.is-fixed-bottom {
@@ -7660,7 +7662,7 @@
 
   html.has-navbar-fixed-top,
   body.has-navbar-fixed-top {
-    padding-top: 3.25rem;
+    padding-top: 5.5rem;
   }
 
   html.has-navbar-fixed-bottom,
