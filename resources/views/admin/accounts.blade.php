@@ -38,8 +38,8 @@
                         @endif
                         <td>{{$value->username}}</td>
                         <td>
-                            <figure class="image is-24x24"">
-                                <img class="is-rounded" src="/{{$value->Avatar}}">
+                            <figure class="image is-24x24">
+                                <img class="is-rounded" src="{{$value->Avatar}}">
                             </figure>
                             <a href="/admin/editAccount/{{$value->username}}">{{$value->Yourname}}</a>
                         </td>
