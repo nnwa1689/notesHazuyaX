@@ -32,7 +32,7 @@
         @endcomponent
     @endforeach
     <div class="is-homeBanner">
-        <button style="min-height: 200px; border-radius: 10px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}post'" class="button is-white is-fullwidth is-large">
+        <button style="min-height: 200px; border-radius: 12px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}post'" class="button is-white is-fullwidth is-large">
             <div class="columns">
                 <div class="column">
                     <p class="subtitle is-5">馬上學更多</p>

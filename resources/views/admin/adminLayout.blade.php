@@ -47,6 +47,7 @@
                             <a class="navbar-item" href="/admin"><i class="fas fa-home"></i>&nbsp;首頁面板</a>
                             <a class="navbar-item" href="/admin/webInfo"><i class="fas fa-info-circle"></i>&nbsp;網站資訊</a>
                             <a class="navbar-item" href="/admin/files"><i class="fas fa-images"></i>&nbsp;媒體庫</a>
+                            <a class="navbar-item" href="/admin/uploadFiles"><i class="fas fa-upload"></i>&nbsp;媒體上傳</a>
                         </div>
                     </div>
 
@@ -118,7 +119,7 @@
             2023 HiHazuyaXCMS
             </p>
             <p class="subtitle is-6">
-                Version:V230226.21
+                Version:V230302.21
             </p>
         </div>
   </footer>

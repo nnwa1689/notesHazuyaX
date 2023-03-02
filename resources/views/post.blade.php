@@ -18,7 +18,7 @@
             @endif
         </p>
         <div class="block">
-            <nav class="level is-mobile">
+            <nav class="level">
                 <div class="level-left">
                     <div class="level-item">
                         <i class="fas fa-calendar-alt"></i>&nbsp;{{$postData[0]->PostDate}}

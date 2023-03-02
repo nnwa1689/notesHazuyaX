@@ -36,7 +36,7 @@
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" style="padding: 0.75rem 1.5rem;" href="{{$webData['webConfig'][13]->tittle}}">
-                    <img src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                    <img style="max-height: 50px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                 </a>
                 <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -205,7 +205,7 @@
                 <footer class="footer">
                     <div class="container">
                         <p class="has-text-centered">
-                            <img style="max-width 200px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                            <img width="190" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                         </p>
                         <p class="has-text-centered">
                             <div class="rows has-text-centered has-text-centered-mobile">
