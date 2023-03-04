@@ -82,6 +82,14 @@ class userAuth
                     return redirect('/');
                 }
 
+            }else if($page=="Works"){
+
+                if($userData[0]->Law_Works == 1){
+                    return $next($request);
+                }else{
+                    return redirect('/');
+                }
+
             }else if($page=="mb"){
                 return $next($request);
             }else{

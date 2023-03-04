@@ -77,6 +77,32 @@
 
             <div class="field is-horizontal">
                 <div class="field-label is-medium">
+                    <label class="label">Linked</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                    <div class="control">
+                        <input class="input is-medium" type="text" name="Url_Linked" value="{{$userData[0]->Url_Linked}}">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label is-medium">
+                    <label class="label">GitHub</label>
+                </div>
+                <div class="field-body">
+                    <div class="field">
+                    <div class="control">
+                        <input class="input is-medium" type="text" name="Url_GitHub" value="{{$userData[0]->Url_GitHub}}">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <div class="field-label is-medium">
                     <label class="label">個人簽章</label>
                 </div>
                 <div class="field-body">

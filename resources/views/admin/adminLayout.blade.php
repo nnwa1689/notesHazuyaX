@@ -85,12 +85,21 @@
                     </div>
 
                     <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link"><i class="fas fa-shapes"></i>&nbsp;作品集</a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="/admin/works/new"><i class="fas fa-plus-square"></i>&nbsp;新增作品</a>
+                            <a class="navbar-item" href="/admin/works"><i class="fas fa-shapes"></i>&nbsp;管理作品</a>
+                        </div>
+                    </div>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
                         <a class="navbar-link"><i class="fas fa-user-alt"></i>&nbsp;作者</a>
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="/admin/editAccount/new"><i class="fas fa-user-plus"></i>&nbsp;新增作者</a>
                             <a class="navbar-item" href="/admin/editAccount"><i class="far fa-user"></i>&nbsp;管理作者</a>
                         </div>
                     </div>
+
                 </div>
                 <div class="navbar-end">
                     <div class="navbar-item has-dropdown is-hoverable">
@@ -119,7 +128,7 @@
             2023 HiHazuyaXCMS
             </p>
             <p class="subtitle is-6">
-                Version:V230302.21
+                Version:V230305.03
             </p>
         </div>
   </footer>

@@ -43,6 +43,11 @@ Route::get('person/{userID}/post/p/{pageNumber}', 'UserController@getUserPagePos
 Route::get('search', 'SearchController@searchPage');
 Route::get('search/q', 'SearchController@search');
 
+//Works
+Route::get('works/{WorksPID}', 'WorksController@GetWorksDetailPage')->where('WorksPID', '[0-9A-Za-z]+');
+Route::get('works', 'WorksController@GetAllWorksPage');
+
+
 
 /*後台路由admin*/
 /*登入登出 */
@@ -67,7 +72,6 @@ Route::get('admin/uploadFiles','AdminController@showUploadFiles')->middleware('u
 Route::post('admin/uploadFiles','AdminController@uploadFiles')->middleware('userAuth:files');
 
 /*文章相關*/
-
 Route::post('admin/updatePost/{postID}', 'AdminController@updatePost')->where('postID', '[0-9]+')->middleware('userAuth:post');
 Route::post('admin/delPost', 'AdminController@deletePost')->middleware('userAuth:post');
 Route::post('admin/newPost', 'AdminController@newPost')->middleware('userAuth:post');
@@ -81,7 +85,6 @@ Route::get('admin/editCategoryDetail/{classId}', 'AdminController@CategoryDetail
 Route::post('admin/updateCategoryDetail/{classId}', 'AdminController@UpdateCategoryDetail')->middleware('userAuth:category');
 
 /*公告相關*/
-
 Route::post('admin/updateNews/{postID}', 'AdminController@updateNews')->where('postID', '[0-9]+')->middleware('userAuth:news');
 Route::post('admin/delNews', 'AdminController@deleteNews')->middleware('userAuth:news');
 Route::post('admin/newNews', 'AdminController@newNews')->middleware('userAuth:news');
@@ -104,11 +107,14 @@ Route::post('admin/deletePage', 'AdminController@deletePage')->middleware('userA
 Route::get('admin/editNav/{type?}', 'AdminController@showEditNav')->middleware('userAuth:nav');
 Route::post('admin/updateNav/{type}', 'AdminController@updateNav')->middleware('userAuth:nav');
 
-
-
 /*個人化設定*/
 Route::get('admin/mySetting', 'AdminController@showMysettingPage');
 Route::post('admin/updateMySetting', 'AdminController@updateMysetting');
 
+/* Works 作品集 */
+Route::get('admin/works', 'AdminController@GetAllWorksListSetPage')->middleware('userAuth:Works');
+Route::get('admin/works/{WorksPID}', 'AdminController@GetWorksDetailSetPage')->middleware('userAuth:Works');;
+Route::post('admin/updateWorksDetail/{WorksPID}', 'AdminController@SetWorksDetailReturnPage')->middleware('userAuth:Works');;
+Route::post('admin/deleteWorks', 'AdminController@DeleteWorks')->middleware('userAuth:Works');;
 
 //Auth::routes();

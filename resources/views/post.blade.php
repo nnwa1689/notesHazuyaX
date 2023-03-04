@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">
     <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
     <div class="block mb-3">
-        <p class="title is-3 mb-2">{{$postData[0]->PostTittle}}
+        <p class="title has-text-centered-mobile is-3 mb-2">{{$postData[0]->PostTittle}}
             @if($webData['userData'] !== 0)
                 <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i>&nbsp;編輯</button>
             @endif
@@ -100,6 +100,13 @@
             <div class="buttons has-addons is-centered">
                 <button class="button is-link is-inverted" onclick="window.location.href='mailto:{{$autorData[0]->Email}}'"><i class="far fa-envelope-open"></i></button>
                 <button class="button is-link is-inverted" onclick="window.location.href='/person/{{$autorData[0]->username}}/post/p/1'"><i class="fas fa-file"></i></button>
+                @if(isset($autorData[0]->Url_Linked) && $autorData[0]->Url_Linked !== "")
+                <a href="{{$autorData[0]->Url_Linked}}" target="_blank" class="button is-link is-inverted"><i class="fab fa-linkedin"></i></a>
+                @endif
+                @if(isset($autorData[0]->Url_GitHub) && $autorData[0]->Url_GitHub !== "")
+                <a href="{{$autorData[0]->Url_GitHub}}" target="_blank" class="button is-link is-inverted"><i class="fab fa-github"></i></a>
+                @endif
+
             </div>
         </div>
     </div>

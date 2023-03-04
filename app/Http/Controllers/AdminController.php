@@ -466,7 +466,7 @@ class AdminController extends Controller
             if(count(UserController::getUserData($_POST['username'])) > 0){
                 return redirect('/admin/editAccount');
             }else{
-                DB::insert("INSERT INTO admin (username,pw,Email,Yourname,IntroductionSelf,Position, Law_WebInfo, Law_Files, Law_Post, Law_Category, Law_News, Law_Users, Law_Page, Law_Nav) VALUES (?, ?, ?, ?, '這個人太懶了，還沒有新增自介！', 'on', ?, ?, ?, ?, ?, ?, ?, ?)", [$_POST['username'], password_hash($_POST['pw'], PASSWORD_DEFAULT), $_POST['Email'], $_POST['Yourname'], $_POST['Law_webInfo'], $_POST['Law_files'], $_POST['Law_post'], $_POST['Law_Category'], $_POST['Law_News'], $_POST['Law_Account'], $_POST['Law_Page'], $_POST['Law_Nav']]);
+                DB::insert("INSERT INTO admin (username,pw,Email,Yourname,IntroductionSelf,Position, Law_WebInfo, Law_Files, Law_Post, Law_Category, Law_News, Law_Users, Law_Page, Law_Nav, Law_Works) VALUES (?, ?, ?, ?, '這個人太懶了，還沒有新增自介！', 'on', ?, ?, ?, ?, ?, ?, ?, ?)", [$_POST['username'], password_hash($_POST['pw'], PASSWORD_DEFAULT), $_POST['Email'], $_POST['Yourname'], $_POST['Law_webInfo'], $_POST['Law_files'], $_POST['Law_post'], $_POST['Law_Category'], $_POST['Law_News'], $_POST['Law_Account'], $_POST['Law_Page'], $_POST['Law_Nav'], $_POST['Law_Works']]);
                 return redirect('/admin/editAccount');
             }
 
@@ -479,7 +479,7 @@ class AdminController extends Controller
     {
         if(UserController::checkLoginStatus()){
             DB::connection('mysql');
-            DB::update("update admin set Law_WebInfo=?, Law_Files=?, Law_Post=?, Law_Category=?, Law_News=?, Law_Users=?, Law_Page=?, Law_Nav=? where username=?", [$_POST['Law_webInfo'], $_POST['Law_files'], $_POST['Law_post'], $_POST['Law_Category'], $_POST['Law_News'], $_POST['Law_Account'], $_POST['Law_Page'], $_POST['Law_Nav'], $username]);
+            DB::update("update admin set Law_WebInfo = ?, Law_Files = ?, Law_Post = ?, Law_Category = ?, Law_News = ?, Law_Users = ?, Law_Page = ?, Law_Nav = ?, Law_Works = ? where username = ?", [$_POST['Law_webInfo'], $_POST['Law_files'], $_POST['Law_post'], $_POST['Law_Category'], $_POST['Law_News'], $_POST['Law_Account'], $_POST['Law_Page'], $_POST['Law_Nav'], $_POST['Law_Works'], $username]);
             return redirect('/admin/editAccount');
         }else{
             return redirect('login');
@@ -655,31 +655,134 @@ class AdminController extends Controller
             if(password_verify($_POST['oldPw'], $userData[0]->pw)){
                 if(!empty($_POST['newPw'])){
                     if($_POST['newPw'] == $_POST['reNewPw']){
-
-                        DB::update('update admin set pw=?, Email=?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ password_hash($_POST['newPw'], PASSWORD_DEFAULT), $_POST['Email'], $_POST['Yourname'], $_POST['avatar'], $_POST['IntroductionSelf'], $_POST['PersonBackground'], $_POST['Signature'], session('username') ]);
-
+                        DB::update('update admin set pw=?, Email=?, Url_Linked = ?, Url_GitHub = ?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ password_hash($_POST['newPw'], PASSWORD_DEFAULT), $_POST['Email'], $_POST['Url_Linked'], $_POST['Url_GitHub'], $_POST['Yourname'], $_POST['avatar'], $_POST['IntroductionSelf'], $_POST['PersonBackground'], $_POST['Signature'], session('username') ]);
                     }else{
-
                         $msg = "新密碼不正確！";
                         return view('admin/mySetting', ['username'=>session()->get('username'), 'userData' => $userData, 'msg'=>$msg]);
-
                     }
                 }else{
-
-                    DB::update('update admin set Email=?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ $_POST['Email'], $_POST['Yourname'], $_POST['avatar'], $_POST['IntroductionSelf'], $_POST['PersonBackground'], $_POST['Signature'], session('username') ]);
-
+                    DB::update('update admin set Email=?, Url_Linked = ?, Url_GitHub = ?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ $_POST['Email'], $_POST['Url_Linked'], $_POST['Url_GitHub'], $_POST['Yourname'], $_POST['avatar'], $_POST['IntroductionSelf'], $_POST['PersonBackground'], $_POST['Signature'], session('username') ]);
                 }
 
             }else{
                 $msg = "舊密碼錯誤！";
                 return view('admin/mySetting', ['username'=>session()->get('username'), 'userData' => $userData, 'msg'=>$msg]);
             }
-
             return redirect('/admin/mySetting');
-
         }else{
             return redirect('login');
         }
     }
+
+    /* Works */
+    public function GetAllWorksListSetPage()
+    {
+        DB::connection('mysql');
+        $Works = DB::select(('select PID, WorksID, WorksName from Works'));
+        return view('admin/works', ['username'=>session()->get('username'), 'Works' => $Works]);
+    }
+
+    public function GetWorksDetailSetPage($WorksPID = null)
+    {
+        DB::connection('mysql');
+        if ($WorksPID == "new"){
+            return view('admin/editWorksDetail', ['username'=>session()->get('username')]);
+        } else if ( isset($WorksPID) ){
+            $WorkDetail = DB::select(
+                ('select Works.PID, Works.OrderID, Works.WorksID, Works.WorksName, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.PID = ?'), [$WorksPID]);
+            return view('admin/editWorksDetail', ['username'=>session()->get('username'), 'WorkDetail' => $WorkDetail]);
+        } else {
+            return redirect('/admin');
+        }
+    }
+
+    public function SetWorksDetailReturnPage($WorksPID = null)
+    {
+        DB::connection('mysql');
+        if ($WorksPID == "new"){
+            DB::transaction(function()
+            {
+                $NextPID = DB::select("SHOW TABLE STATUS LIKE 'Works'")[0] -> Auto_increment;
+                DB::insert(
+                    "INSERT INTO Works (WorksID, WorksName, Customer, Intro, CoverImage, Url, OrderID) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                      [$_POST['WorksID'],
+                      $_POST['WorksName'],
+                      $_POST['Customer'],
+                      $_POST['Intro'],
+                      $_POST['CoverImage'],
+                      $_POST['Url'],
+                      $_POST['OrderID']
+                      ]
+                    );
+                for ($i = 1; $i < 6; $i++){
+                    DB::insert(
+                        "INSERT INTO WorksStaff (WorksPID, StaffName, StaffTitle, StaffImage, StaffUrl) VALUE (?, ?, ?, ?, ?)",
+                    [
+                        $NextPID,
+                        $_POST['staff'.$i.'_name'],
+                        $_POST['staff'.$i.'_title'],
+                        $_POST['staff'.$i.'_Image'],
+                        $_POST['staff'.$i.'_Url']
+                    ]);
+                }
+            });
+            return redirect('/admin/works');
+        } else if (isset($WorksPID)) {
+            DB::transaction(function() use ($WorksPID)
+            {
+                DB::update(
+                    "update Works set WorksID = ?, WorksName = ?, Customer = ?, Intro = ?, CoverImage = ?, Url = ?, OrderID = ? where Works.PID = ?",
+                      [$_POST['WorksID'],
+                      $_POST['WorksName'],
+                      $_POST['Customer'],
+                      $_POST['Intro'],
+                      $_POST['CoverImage'],
+                      $_POST['Url'],
+                      $_POST['OrderID'],
+                      $WorksPID
+                      ]
+                    );
+                for ($i = 1; $i < 6; $i++){
+                    DB::update(
+                        "update WorksStaff set StaffName = ?, StaffTitle = ?, StaffImage = ?, StaffUrl = ? where PID = ?",
+                    [
+                        $_POST['staff'.$i.'_name'],
+                        $_POST['staff'.$i.'_title'],
+                        $_POST['staff'.$i.'_Image'],
+                        $_POST['staff'.$i.'_Url'],
+                        $_POST['staff'.$i.'_StaffPID']
+                    ]
+                );
+                }
+            });
+            return redirect('/admin/works/'.$WorksPID);
+        } else {
+            return redirect('/admin');
+        }
+        $Works = DB::select(('select PID, WorksID, WorksName from Works'));
+        return view('admin/works', ['username'=>session()->get('username'), 'Works' => $Works]);
+    }
+
+    public function DeleteWorks()
+    {
+
+        DB::connection('mysql');
+        $delWorksPID = (isset($_POST['WorksID']) ? $_POST['WorksID'] : '');
+        if($delWorksPID == ''){
+
+        }else{
+            foreach($delWorksPID as $value){
+                DB::transaction(function() use ($value)
+                {
+                    DB::delete("DELETE FROM Works WHERE PID = ?", [$value]);
+                    DB::delete("DELETE FROM WorksStaff WHERE WorksPID = ?", [$value]);
+                });
+            }
+
+        }
+        return redirect('/admin/works');
+
+    }
+
 
 }

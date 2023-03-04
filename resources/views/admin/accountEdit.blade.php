@@ -146,6 +146,19 @@
             </div>
         </div>
         <br>
+        <label class="label">允許新增／編輯／刪除作品集</label>
+        <div class="control">
+            <div class="select">
+                <select name="Law_Works" id="Law_Works">
+                    <option value="1">允許</option>
+                    <option value="0">不允許</option>
+                </select>
+                <script>
+                    $('#Law_Works option[value={{isset($userData[0]->Law_Works) ? $userData[0]->Law_Works : ''}}]').attr('selected', 'selected');//自動取得目前設定值
+                </script>
+            </div>
+        </div>
+        <br>
   <br>
   <div class="control">
     <button style="width: 100%" class="button is-link is-outlined" type="submit">確認</button>
