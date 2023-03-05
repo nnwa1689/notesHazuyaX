@@ -15,6 +15,7 @@
                     </div>
                 </div>
                 <div class="level-right">
+                    <p class="subtitle has-text-link has-text-right has-text-centered-mobile is-3">Works</p>
                 </div>
             </nav>
             <p class="subtitle has-text-left has-text-centered-mobile is-5">午後的歡笑之中，大家突然回憶起了這段時間小夥伴們一起經歷了什麼！</p>
@@ -27,16 +28,8 @@
             <a class="worksImage" href="works/{{$item -> WorksID}}">
                 <img class="image" src="{{$item -> CoverImage}}">
             </a>
-            <div class="subtitle is-5 m-0" href="works/{{$item -> WorksID}}">{{$item -> WorksName}}</div>
-            <div class="subtitle is-6 mt-2" href="works/{{$item -> WorksID}}">{{$item -> Customer}}</div>
-        </div>
-        <div onclick="window.location.href='works/{{$item -> WorksID}}'" class="is-WorksItem is-flex-direction-row">
-            <a class="worksImage" href="works/{{$item -> WorksID}}">
-                <img class="image" src="{{$item -> CoverImage}}">
-            </a>
-            <a class="subtitle is-5" href="works/{{$item -> WorksID}}">{{$item -> WorksName}}</a>
-            <br/>
-            <a class="subtitle is-6" href="works/{{$item -> WorksID}}">{{$item -> Customer}}</a>
+            <div class="subtitle is-5 m-0">{{$item -> WorksName}}</div>
+            <div class="subtitle is-6 mt-2">{{$item -> Customer}}</div>
         </div>
     @endforeach
     </div>
