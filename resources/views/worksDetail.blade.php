@@ -12,13 +12,23 @@
             <nav class="level mb-3">
                 <div class="level-left">
                     <div class="level-item">
-                        <p class="title has-text-left is-3">{{$WorkDetail[0]->WorksName}}</p>
+                        <p class="title has-text-left has-text-centered-mobile is-3">{{$WorkDetail[0]->WorksName}}</p>
                     </div>
                 </div>
                 <div class="level-right">
+                    <p class="title has-text-left has-text-centered-mobile is-5">{{$WorkDetail[0]->Customer}}</p>
                 </div>
             </nav>
-            <p class="subtitle has-text-left has-text-centered-mobile is-5">{{$WorkDetail[0]->Customer}}</p>
+            <nav class="level m-0">
+                <div class="column is-multiple level-left pl-0">
+                    <div class="level-item">
+                        <p class="subtitle has-text-left has-text-centered-mobile is-5">{{$WorkDetail[0]->ShortIntro}}</p>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <a href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-outlined is-medium is-fullwidth">看看作品&nbsp;<i class="fas fa-arrow-right"></i></a>
+                </div>
+            </nav>
         </div>
     </div>
     <hr/>
@@ -30,9 +40,6 @@
 
 @section('sidebar')
 @parent
-<div class="box">
-    <a href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-outlined is-fullwidth is-medium">前往網站</a>
-</div>
 <div class="box">
     @foreach($WorkDetail as $value)
     @if($value -> StaffName !== "")

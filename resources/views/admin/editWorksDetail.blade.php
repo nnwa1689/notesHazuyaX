@@ -17,6 +17,10 @@
                 <input class="input is-medium" type="text" name="WorksName" value="{{ isset($WorkDetail[0] -> WorksName) ? $WorkDetail[0] -> WorksName : '' }}">
             </div>
             <div class="control">
+                <label class="subtitle is-5">作品簡述</label>
+                <input class="input is-medium" type="text" name="ShortIntro" value="{{ isset($WorkDetail[0] -> ShortIntro) ? $WorkDetail[0] -> ShortIntro : '' }}">
+            </div>
+            <div class="control">
                 <label class="subtitle is-5">客戶名稱</label>
                 <input class="input is-medium" type="text" name="Customer" value="{{ isset($WorkDetail[0] -> Customer) ? $WorkDetail[0] -> Customer : '' }}">
             </div>

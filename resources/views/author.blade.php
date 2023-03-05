@@ -6,13 +6,22 @@
     <li class="is-active"><a href="#" aria-current="page">作者介紹</a></li>
 @endsection
 @section('content')
-    <section class="hero is-link">
-    <div class="hero-body">
-        <div class="container" style="text-align: center;">
-        <h1 class="title">作者介紹</h1>
+    <div class="container mt-1 mb-5">
+        <div class="block">
+            <nav class="level mb-3">
+                <div class="level-left">
+                    <div class="level-item">
+                        <p class="title has-text-left is-3">作者介紹</p>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <p class="subtitle has-text-link has-text-right has-text-centered-mobile is-3">Author</p>
+                </div>
+            </nav>
+            <p class="subtitle has-text-left has-text-centered-mobile is-5">感到孤單的時候，總是能在這裡找到屬於自己的地方</p>
         </div>
     </div>
-    </section>
+    <hr/>
     @foreach($userData as $User)
     <div class="box is-post" style="align-items: center;" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}';">
         <div class="columns">

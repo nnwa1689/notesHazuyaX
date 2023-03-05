@@ -689,7 +689,7 @@ class AdminController extends Controller
             return view('admin/editWorksDetail', ['username'=>session()->get('username')]);
         } else if ( isset($WorksPID) ){
             $WorkDetail = DB::select(
-                ('select Works.PID, Works.OrderID, Works.WorksID, Works.WorksName, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.PID = ?'), [$WorksPID]);
+                ('select Works.PID, Works.OrderID, Works.WorksID, Works.WorksName, Works.ShortIntro, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.PID = ?'), [$WorksPID]);
             return view('admin/editWorksDetail', ['username'=>session()->get('username'), 'WorkDetail' => $WorkDetail]);
         } else {
             return redirect('/admin');
@@ -704,14 +704,15 @@ class AdminController extends Controller
             {
                 $NextPID = DB::select("SHOW TABLE STATUS LIKE 'Works'")[0] -> Auto_increment;
                 DB::insert(
-                    "INSERT INTO Works (WorksID, WorksName, Customer, Intro, CoverImage, Url, OrderID) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                    "INSERT INTO Works (WorksID, WorksName, Customer, Intro, CoverImage, Url, OrderID, ShortIntro) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                       [$_POST['WorksID'],
                       $_POST['WorksName'],
                       $_POST['Customer'],
                       $_POST['Intro'],
                       $_POST['CoverImage'],
                       $_POST['Url'],
-                      $_POST['OrderID']
+                      $_POST['OrderID'],
+                      $_POST['ShortIntro']
                       ]
                     );
                 for ($i = 1; $i < 6; $i++){
@@ -731,7 +732,7 @@ class AdminController extends Controller
             DB::transaction(function() use ($WorksPID)
             {
                 DB::update(
-                    "update Works set WorksID = ?, WorksName = ?, Customer = ?, Intro = ?, CoverImage = ?, Url = ?, OrderID = ? where Works.PID = ?",
+                    "update Works set WorksID = ?, WorksName = ?, Customer = ?, Intro = ?, CoverImage = ?, Url = ?, OrderID = ?, ShortIntro = ? where Works.PID = ?",
                       [$_POST['WorksID'],
                       $_POST['WorksName'],
                       $_POST['Customer'],
@@ -739,6 +740,7 @@ class AdminController extends Controller
                       $_POST['CoverImage'],
                       $_POST['Url'],
                       $_POST['OrderID'],
+                      $_POST['ShortIntro'],
                       $WorksPID
                       ]
                     );

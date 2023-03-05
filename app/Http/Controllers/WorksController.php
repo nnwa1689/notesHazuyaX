@@ -15,7 +15,7 @@ class WorksController extends Controller
         $this -> webData = WebController::webInit();
         DB::connection('mysql');
         $WorkDetail = DB::select(
-            ('select Works.PID, Works.WorksID, Works.WorksName, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.WorksID = ?'), [$WorksID]);
+            ('select Works.PID, Works.WorksID, Works.WorksName, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, Works.ShortIntro, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.WorksID = ?'), [$WorksID]);
         if(count($WorkDetail) <= 0){
             abort(404);
             return;
