@@ -21,7 +21,7 @@
             </nav>
             <nav class="level m-0">
                 <div class="column is-multiple level-left pl-0">
-                    <div class="level-item">
+                    <div class="level-left">
                         <p class="subtitle has-text-left has-text-centered-mobile is-5">{{$WorkDetail[0]->ShortIntro}}</p>
                     </div>
                 </div>

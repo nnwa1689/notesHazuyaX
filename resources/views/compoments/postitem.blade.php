@@ -2,9 +2,9 @@
     <div class="columns">
         <div class="column is-one-quarter" style="text-align: center;";>
         @if(isset($CoverImage) && !empty($CoverImage))
-            <img class="post-cover post-cover-desktop" src="{{$CoverImage}}">
+            <img alt="{{$PostTittle}}" class="post-cover post-cover-desktop" src="{{$CoverImage}}">
         @else
-            <img class="post-cover post-cover-desktop" src="/images/NotesHZ_ICON_2023.png">
+            <img alt="{{$PostTittle}}" class="post-cover post-cover-desktop" src="/images/NotesHZ_ICON_2023.png">
         @endif
         </div>
         <div class="column">
@@ -28,7 +28,7 @@
                         <a href="{{$AuthorUrl}}">
                             <div class="image is-48x48" style="margin-right: 0.75rem;">
                                 <figure class="image is-1by1">
-                                    <img class="is-rounded" src="{{$AuthorAvatarUrl}}">
+                                    <img alt="{{$Author}}" class="is-rounded" src="{{$AuthorAvatarUrl}}">
                                 </figure>
                             </div>
                         </a>

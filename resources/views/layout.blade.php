@@ -1,42 +1,42 @@
+<!doctype html>
 <html lang="zh-TW">
 <head>
-    {!! $webData['webConfig'][4]->tittle !!}
-    <!--TOP BUTTON-->
-    <a id="top"></a>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{$webData['webConfig'][2]->tittle}}">
     <meta name="keywords" content="{{$webData['webConfig'][1]->tittle}}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title'){{$webData['webConfig'][0]->tittle}}</title>
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/bulma.css">
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
     <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
     <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
+    <!--TOP BUTTON-->
     <div id="topbottom" href="#top"><i class="fas fa-chevron-up"></i></div>
-        <script>
-            console.log("%c不要看啦，人家會害羞>__<", "color: blue; font-size: 30px;");
-            //TOP BUTTON FUNCTION
-            $("#topbottom").click(function () {
-                $("html,body").animate({scrollTop: 0}, "slow");
-                return false;
-            });
+    <script>
+        console.log("%c不要看啦，人家會害羞>__<", "color: blue; font-size: 30px;");
+        //TOP BUTTON FUNCTION
+        $("#topbottom").click(function () {
+            $("html,body").animate({scrollTop: 0}, "slow");
+            return false;
+        });
 
-            $(document).ready(function() {
-                // Check for click events on the navbar burger icon
-                $(".navbar-burger").click(function() {
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    $(".navbar-burger").toggleClass("is-active");
-                    $(".navbar-menu").toggleClass("is-active");
-                });
+        $(document).ready(function() {
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function() {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
             });
-        </script>
+        });
+    </script>
+    {!! $webData['webConfig'][4]->tittle !!}
 </head>
 <body class="has-navbar-fixed-top" >
     <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
                 <a class="navbar-item" style="padding: 0.75rem 1.5rem;" href="{{$webData['webConfig'][13]->tittle}}">
-                    <img style="max-height: 50px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                    <img alt="logo" style="max-height: 50px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                 </a>
                 <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -58,10 +58,9 @@
                         @endif
                     @endforeach
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">關於</a>
+                        <a class="navbar-link" href="{{$webData['webConfig'][13]->tittle.'page/about'}}">關於</a>
                         <div class="navbar-dropdown">
                             <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item">關於我們</a>
-
                             <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">作者介紹</a>
                         </div>
                     </div>
@@ -72,7 +71,7 @@
                     </a>
                     @if($webData['userData'] == 0)
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" style="margin-right: -1.125rem;"><i class="fas fa-user-alt"></i></a>
+                            <a class="navbar-link" href="#" style="margin-right: -1.125rem;"><i class="fas fa-user-alt"></i></a>
                             <div class="navbar-dropdown">
                                 <a class="navbar-item" href="/login">登入</a>
                             </div>
@@ -81,7 +80,7 @@
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a class="navbar-link" style="margin-right: -1.125rem;">
                                 <figure class="image is-48x48 is-1by1" style="margin-left: auto; margin-right: auto;">
-                                    <img class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
+                                    <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
                                 </figure>
                                 </a>
                                 <div class="navbar-dropdown">
@@ -99,8 +98,8 @@
             </div>
         </div>
       </nav>
-      <div class="container" style="padding:0 0.75rem; 0 0.75rem">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
+      <div class="container mt-2 mb-2" style="padding:0 0.75rem; 0 0.75rem">
+        <nav class="breadcrumb is-hidden-mobile" aria-label="breadcrumbs">
             <ul>
             @section('breadcrumb')
             @show
@@ -117,7 +116,7 @@
                 @section('sidebar')
                 @show
                 <div class="box">
-                    <p class="title is-5"><i class="fas fa-user-plus"></i>社群媒體</p>
+                    <p class="title is-5"><i class="fas fa-user-plus"></i>找我們</p>
                     <div class="rows">
                         @if(strlen($webData['webConfig'][20]->tittle) > 0)
                         <div class="column is-full">
@@ -172,7 +171,7 @@
                     -->
                 </div>
                 <div class="box pb-6">
-                    <p class="title is-5"><i class="fas fa-tags"></i>系列．分類</p>
+                    <p class="title is-5"><i class="fas fa-tags"></i>找文章</p>
                     <div class="field is-grouped is-grouped-multiline">
                             <div class="tags are-medium">
                             @foreach($webData['allCategory'] as $category)
@@ -182,7 +181,7 @@
                     </div>
                 </div>
                 <div class="box">
-                    <p class="title is-5"><i class="fas fa-newspaper"></i>最新公告</p>
+                    <p class="title is-5"><i class="fas fa-newspaper"></i>找公告</p>
                     @foreach($webData['homePost'] as $hp)
                     <a href="{{$webData['webConfig'][13]->tittle}}whatsnews/{{$hp->PostId}}">{{$hp->PostDate}}<br/>{{$hp->PostTittle}}</a>
                     <hr>
@@ -205,7 +204,7 @@
                 <footer class="footer">
                     <div class="container">
                         <p class="has-text-centered">
-                            <img width="190" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                            <img alt="footerLogo" width="190" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                         </p>
                         <p class="has-text-centered">
                             <div class="rows has-text-centered has-text-centered-mobile">

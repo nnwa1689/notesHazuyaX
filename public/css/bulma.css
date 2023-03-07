@@ -22,6 +22,7 @@
       font-style: normal;
       src: url(/fonts/NotoSansTC-Medium.otf);
       unicode-range: U+4E00-9FFF;
+      font-display: swap;
     }
 
     @font-face {
@@ -29,6 +30,7 @@
         font-style: normal;
         src: url(/fonts/RedHatText-Medium.ttf);
         unicode-range: U+00-024F;
+        font-display: swap;
       }
 
     @font-face {
@@ -36,6 +38,7 @@
         font-style: normal;
         src: url(/fonts/NotoSansTC-Regular.otf);
         unicode-range: U+4E00-9FFF;
+        font-display: swap;
     }
 
     @font-face {
@@ -43,6 +46,7 @@
         font-style: normal;
         src: url(/fonts/RedHatText-Regular.ttf);
         unicode-range: U+00-024F;
+        font-display: swap;
     }
 
   /***********/
@@ -94,36 +98,66 @@
   }
 
   .is-WorksItem img {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 100%;
-    height: 300px;
-    border-radius: 10px;
+    height: 350px;
+    border-radius: 20px;
     object-fit: cover;
     transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
-    margin-bottom: 0.75rem;
+  }
+
+  .works-image-tag {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.0);
+    position: absolute;
+    background-color: #FFFFFF !important;
+    border-width: 0px !important;
+    border-style: solid;
+    bottom: 4.25rem;
+    left: 1.25rem;
+    margin-bottom: -4.75rem;
+  }
+
+  .works-image-tag-customer {
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    transform: scale(1.0);
+    position: absolute;
+    background-color: #003366 !important;
+    color: #FFFFFF !important;
+    border-width: 0px !important;
+    border-style: solid;
+    top: 2.5rem;
+    left: 1.25rem;
+    margin-bottom: -4.75rem;
   }
 
   .is-WorksItem:hover img {
-    transition: all 0.5s ease-in-out;
-    transform: scale(0.95);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
     cursor: pointer;
-    margin-bottom: 0rem;
   }
 
-
   .is-WorksItem:hover {
-    transition: all 0.5s ease-in-out;
-    outline-offset: -10px;
-    outline-color: #003366;
-    outline-style: solid;
-    outline-width: 10px;
     cursor: pointer;
+  }
+
+  .is-WorksItem:hover .works-image-tag  {
+    transition: all 0.3s linear;
+    background-color: #003366 !important;
+    color: #FFFFFF !important;
+  }
+
+  .is-WorksItem:hover .works-image-tag-customer  {
+    transition: all 0.3s linear;
+    background-color: #FFFFFF !important;
+    color: #003366 !important;
   }
 
   .is-WorksItem {
-    transition: border-width 0.5s linear;
-    border-width: 0px;
-    padding: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    text-align: left;
   }
 
   @media screen and (min-width: 1408px) {
@@ -141,10 +175,7 @@
   @media screen and (min-width: 1023px) {
     .is-WorksItem {
         width: 50%;
-        transition: transform 0.3s;
-        transform: scale(1.0);
-        padding: 1rem;
-      }
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -8017,11 +8048,10 @@
       transform: rotate(135deg) translate(0.25em, -0.25em);
     }
     .navbar-item.has-dropdown-up .navbar-dropdown {
-      border-bottom: 2px solid #dbdbdb;
+      border: 2px solid #003366;
       border-radius: 6px 6px 0 0;
-      border-top: none;
       bottom: 100%;
-      box-shadow: 0 -8px 8px rgba(10, 10, 10, 0.1);
+      /*box-shadow: 0 -8px 8px rgba(10, 10, 10, 0.1);*/
       top: auto;
     }
     .navbar-item.is-active .navbar-dropdown, .navbar-item.is-hoverable:focus .navbar-dropdown, .navbar-item.is-hoverable:focus-within .navbar-dropdown, .navbar-item.is-hoverable:hover .navbar-dropdown {
@@ -11542,7 +11572,7 @@
       width: 60px;
       height: 60px;
       bottom: 95px;
-      padding: 10px 15px 10px 15px;
+      padding: 5px 15px 10px 15px;
       font-size: 36px;
       transition: background 0.3s;
       background: #003366;

@@ -26,10 +26,14 @@
     @foreach($WorksList as $item)
         <div onclick="window.location.href='works/{{$item -> WorksID}}'" class="is-WorksItem is-flex-direction-row">
             <a class="worksImage" href="works/{{$item -> WorksID}}">
+                <a class="button works-image-tag-customer is-primary is-outlined is-rounded is-small">
+                    <span>{{$item -> Customer}}</span>
+                </a>
                 <img class="image" src="{{$item -> CoverImage}}">
+                <a class="button works-image-tag is-primary is-outlined is-rounded is-medium">
+                    <span>{{$item -> WorksName}}</span>
+                </a>
             </a>
-            <div class="subtitle is-5 m-0">{{$item -> WorksName}}</div>
-            <div class="subtitle is-6 mt-2">{{$item -> Customer}}</div>
         </div>
     @endforeach
     </div>
