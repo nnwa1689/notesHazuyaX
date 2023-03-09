@@ -87,7 +87,6 @@
     transition: transform 0.3s;
     transform: scale(1.0);
     padding: 0;
-    margin-bottom: 1.5rem;
   }
 
   .is-homeBanner:hover {
@@ -100,8 +99,7 @@
   .is-WorksItem img {
     transition: all 0.3s ease-in-out;
     width: 100%;
-    height: 350px;
-    border-radius: 20px;
+    height: 100%;
     object-fit: cover;
     transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
   }
@@ -116,6 +114,11 @@
     bottom: 4.25rem;
     left: 1.25rem;
     margin-bottom: -4.75rem;
+  }
+
+  .works-image-tag:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
   }
 
   .works-image-tag-customer {
@@ -134,7 +137,7 @@
 
   .is-WorksItem:hover img {
     transition: all 0.3s ease-in-out;
-    transform: scale(1.05);
+    transform: scale(1.10);
     cursor: pointer;
   }
 
@@ -155,33 +158,73 @@
   }
 
   .is-WorksItem {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    text-align: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  .is-works-button {
+    transition: all 0.3s ;
+    transform: scale(1.0);
+    height: 200px !important;
+    width: 200px !important;
+    border-width: 2px !important;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font-size: 18pt !important;
+  }
+
+  .is-works-button:hover {
+    transition: all 0.3s ;
+    transform: scale(1.10);
+    border-width: 5px !important;
+    border-color: #FFFFFF !important;
+    border-width: 10px;
   }
 
   @media screen and (min-width: 1408px) {
     .is-WorksItem {
-        width: 50%;
-      }
+        width: calc(50% - 2rem);
+    }
+
+    .is-post-index {
+        width: calc(33.333% - 1.5rem);
+    }
   }
 
   @media screen and (max-width: 1024px) {
     .is-WorksItem {
-        width: 50%;
-      }
+        width: calc(50% - 2rem);
+    }
+
+    .is-post-index {
+        width: calc(33.333% - 1.5rem);
+    }
   }
 
   @media screen and (min-width: 1023px) {
     .is-WorksItem {
-        width: 50%;
+        width: calc(50% - 2rem);
+    }
+
+    .is-post-index {
+        width: calc(33.333% - 1.5rem);
     }
   }
 
   @media screen and (max-width: 768px) {
     .is-WorksItem {
-        width: 100%;
-      }
+        width: calc(100% - 2rem);
+    }
+
+    .is-post-index {
+        width: calc(100% - 1.5rem);
+    }
   }
 
 
@@ -196,8 +239,22 @@
     cursor: pointer;
   }
 
+  .is-post-index {
+    margin: 0.75rem;
+    transition: transform 0.3s;
+    transform: scale(1.0);
+  }
+
+
+  .is-post-index:hover {
+    transition: transform 0.3s;
+    transform: scale(1.03);
+    cursor: pointer;
+  }
+
   .post-cover {
-    border-radius: 10px;
+    border-radius: 15px;
+    object-fit:cover;
   }
 
   .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
@@ -547,6 +604,10 @@
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
+  }
+
+  html {
+    background-color: #f2f2f2;
   }
 
   a {
@@ -1264,6 +1325,10 @@
     }
     .post-cover-desktop {
         height: 120px;
+      }
+
+    .post-cover-index-desktop {
+        height: 200px;
       }
   }
 
@@ -3766,7 +3831,9 @@
     padding: 1.25em 1.5em;
   }
 
-
+  .content img{
+    border-radius: 15px;;
+  }
 
   .content ol {
     list-style-position: outside;
@@ -11549,7 +11616,7 @@
   }
 
   .footer {
-    background-color: none;
+    background-color: transparent;
     padding-top: 1rem;
     padding-bottom: 2.25rem;
   }
@@ -11588,7 +11655,7 @@
 
   .button.is-applepodcast {
     transition: background-color 0.3s;
-    background-color: #fff;
+    background-color: transparent;
     border-color: #B150E2;
     color: #B150E2;
   }
@@ -11602,7 +11669,7 @@
 
   .button.is-facebook {
       transition: background-color 0.3s;
-      background-color: #fff;
+      background-color: transparent;
       border-color: #4267b2;
       color: #4267b2;
     }
@@ -11616,7 +11683,7 @@
 
     .button.is-instagram {
         transition: background-color 0.3s;
-        background-color: #fff;
+        background-color: transparent;
         border-color: #833AB4;
         color: #833AB4;
       }
@@ -11630,7 +11697,7 @@
 
   .button.is-twitter {
       transition: background-color 0.3s;
-      background-color: #fff;
+      background-color: transparent;
       border-color: #1da1f2;
       color: #1da1f2;
     }
@@ -11644,7 +11711,7 @@
 
     .button.is-tumblr {
       transition: background-color 0.3s;
-      background-color: #fff;
+      background-color: transparent;
       border-color: #35465d;
       color: #35465d;
     }
@@ -11658,7 +11725,7 @@
 
     .button.is-plurk {
       transition: background-color 0.3s;
-      background-color: #fff;
+      background-color: transparent;
       border-color: #cf682f;
       color: #cf682f;
     }

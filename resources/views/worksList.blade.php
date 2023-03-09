@@ -22,19 +22,14 @@
         </div>
     </div>
     <hr/>
-    <div class="columns is-multiline is-mobile has-text-centered">
+    <div class="columns is-multiline is-mobile" style="margin-left: -1rem; margin-right: -1rem;">
     @foreach($WorksList as $item)
-        <div onclick="window.location.href='works/{{$item -> WorksID}}'" class="is-WorksItem is-flex-direction-row">
-            <a class="worksImage" href="works/{{$item -> WorksID}}">
-                <a class="button works-image-tag-customer is-primary is-outlined is-rounded is-small">
-                    <span>{{$item -> Customer}}</span>
-                </a>
-                <img class="image" src="{{$item -> CoverImage}}">
-                <a class="button works-image-tag is-primary is-outlined is-rounded is-medium">
-                    <span>{{$item -> WorksName}}</span>
-                </a>
-            </a>
-        </div>
+    <div onclick="window.location.href='works/{{$item -> WorksID}}'" class="is-WorksItem is-flex-direction-row">
+        <img class="image" src="{{$item -> CoverImage}}">
+        <a class="button works-image-tag is-primary is-outlined is-rounded is-medium">
+            <span>{{$item -> WorksName}}</span>
+        </a>
+    </div>
     @endforeach
     </div>
     <p></p>

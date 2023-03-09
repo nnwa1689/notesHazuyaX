@@ -20,45 +20,44 @@
                 </div>
             </nav>
             <nav class="level m-0">
-                <div class="column is-multiple level-left pl-0">
-                    <div class="level-left">
+                <div class="level-left">
+                    <a href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded is-fullwidth">查看網站<br/><i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="column is-multiple level-right pl-5">
+                    <div class="level-right">
                         <p class="subtitle has-text-left has-text-centered-mobile is-5">{{$WorkDetail[0]->ShortIntro}}</p>
                     </div>
-                </div>
-                <div class="level-right">
-                    <a href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-outlined is-medium is-fullwidth">看看作品&nbsp;<i class="fas fa-arrow-right"></i></a>
                 </div>
             </nav>
         </div>
     </div>
     <hr/>
-    <div class="content">
-        {!! $WorkDetail[0] -> Intro !!}
+    <div class="columns is-gapless">
+        <div class="column mt-2 mr-4">
+            @foreach($WorkDetail as $value)
+            @if($value -> StaffName !== "")
+            <article class="media">
+                <figure class="media-left">
+                    <p class="image is-48x48">
+                    <img class="is-rounded" src="{{$value -> StaffImage}}">
+                    </p>
+                </figure>
+                <div class="media-content">
+                    <p>
+                        <a class="has-text-weight-bold is-size-6 m-0" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
+                        <p class="is-size-6 m-0">{{ $value -> StaffTitle }}</p>
+                    </p>
+                </div>
+            </article>
+            @endif
+            @endforeach
+        </div>
+        <div class="column is-9">
+            <div class="content">
+                {!! $WorkDetail[0] -> Intro !!}
+            </div>
+        </div>
     </div>
+
     <p></p>
 @endsection
-
-@section('sidebar')
-@parent
-<div class="box">
-    @foreach($WorkDetail as $value)
-    @if($value -> StaffName !== "")
-    <article class="media">
-        <figure class="media-left">
-            <p class="image is-48x48">
-            <img class="is-rounded" src="{{$value -> StaffImage}}">
-            </p>
-        </figure>
-        <div class="media-content">
-            <p>
-                <a class="has-text-weight-bold is-size-6 m-0" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
-                <p class="is-size-6 m-0">{{ $value -> StaffTitle }}</p>
-            </p>
-        </div>
-    </article>
-    @endif
-    @endforeach
-</div>
-
-@endsection
-

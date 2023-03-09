@@ -98,7 +98,7 @@
             </div>
         </div>
       </nav>
-      <div class="container mt-2 mb-2" style="padding:0 0.75rem; 0 0.75rem">
+      <div class="container mt-2 mb-0" style="padding:0 0.75rem; 0 0.75rem">
         <nav class="breadcrumb is-hidden-mobile" aria-label="breadcrumbs">
             <ul>
             @section('breadcrumb')
@@ -106,126 +106,99 @@
             </ul>
           </nav>
       </div>
-      <div class="container">
-        <div class="columns">
-            <div class="column is-9 mb-3">
+
+      <div class="container mt-0">
+            <div class="block ml-3 mr-3">
                 @section('content')
                 @show
             </div>
-            <div class="column is-3">
-                @section('sidebar')
-                @show
-                <div class="box">
-                    <p class="title is-5"><i class="fas fa-user-plus"></i>找我們</p>
-                    <div class="rows">
-                        @if(strlen($webData['webConfig'][20]->tittle) > 0)
-                        <div class="column is-full">
-                            <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
-                                <button class="button is-facebook is-outlined is-fullwidth">
-                                    <i class="fab fa-facebook"></i> &nbsp;Facebook
-                                </button>
-                            </a>
-                        </div>
-                        @endif
-                        @if(strlen($webData['webConfig'][21]->tittle) > 0)
-                        <div class="column is-full">
-                            <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
-                                <button class="button is-instagram is-fullwidth">
-                                    <i class="fab fa-instagram-square"></i>&nbsp;Instagram
-                                </button>
-                            </a>
-                        </div>
-                        @endif
-                        @if(strlen($webData['webConfig'][22]->tittle) > 0)
-                        <div class="column is-full">
-                            <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
-                                <button class="button is-twitter is-outlined is-fullwidth">
-                                    <i class="fab fa-twitter"></i>&nbsp;Twitter
-                                </button>
-                            </a>
-                        </div>
-                        @endif
-                        @if(strlen($webData['webConfig'][23]->tittle) > 0)
-                        <div class="column is-full">
-                            <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
-                                <button class="button is-applepodcast is-outlined is-fullwidth">
-                                    <i class="fab fa-apple"></i>&nbsp;Apple Podcasts
-                                </button>
-                            </a>
-                        </div>
-                        @endif
-                        @if(strlen($webData['webConfig'][24]->tittle) > 0)
-                        <div class="column is-full">
-                            <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
-                                <button class="button is-link is-outlined is-fullwidth">
-                                    <i class="fab fa-google"></i>&nbsp;Google Podcasts
-                                </button>
-                            </a>
-                        </div>
-                        @endif
-                    </div>
-                    <!--
-                    <div class="field is-grouped is-grouped-multiline">
-                        <div class="fb-page" data-href="https://www.facebook.com/noteshazuya" data-tabs="timeline" data-width="220" data-height="70" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/noteshazuya" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/noteshazuya">NotesHazuya －筆記長也</a></blockquote></div>
-                    </div>
-                    -->
-                </div>
-                <div class="box pb-6">
-                    <p class="title is-5"><i class="fas fa-tags"></i>找文章</p>
-                    <div class="field is-grouped is-grouped-multiline">
-                            <div class="tags are-medium">
-                            @foreach($webData['allCategory'] as $category)
-                            <a class="tag button is-primary is-outlined" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
-                            @endforeach
+            <footer class="footer">
+                <div class="columns is-gapless is-vcentered">
+                    <div class="column is-4">
+                        <div class="rows">
+                            @if(strlen($webData['webConfig'][22]->tittle) > 0)
+                            <div class="column">
+                                <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
+                                    <button class="button is-twitter is-outlined is-large is-rounded">
+                                        <i class="fab fa-twitter mr-1"></i>Twitter
+                                    </button>
+                                </a>
                             </div>
+                            @endif
+                            @if(strlen($webData['webConfig'][21]->tittle) > 0)
+                            <div class="column">
+                                <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
+                                    <button class="button is-instagram is-large is-rounded">
+                                        <i class="fab fa-instagram-square mr-1"></i>Instagram
+                                    </button>
+                                </a>
+                            </div>
+                            @endif
+                            @if(strlen($webData['webConfig'][20]->tittle) > 0)
+                            <div class="column">
+                                <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
+                                    <button class="button is-facebook is-outlined is-large is-rounded">
+                                        <i class="fab fa-facebook mr-1"></i>Facebook
+                                    </button>
+                                </a>
+                            </div>
+                            @endif
+                            @if(strlen($webData['webConfig'][23]->tittle) > 0)
+                            <div class="column">
+                                <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
+                                    <button class="button is-applepodcast is-outlined is-large is-rounded">
+                                        <i class="fab fa-apple mr-1"></i>Apple Podcast
+                                    </button>
+                                </a>
+                            </div>
+                            @endif
+                            @if(strlen($webData['webConfig'][24]->tittle) > 0)
+                            <div class="column">
+                                <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
+                                    <button class="button is-link is-outlined is-large is-rounded">
+                                        <i class="fab fa-google mr-1"></i>Google Podcast
+                                    </button>
+                                </a>
+                            </div>
+                            @endif
+                        </div>
                     </div>
-                </div>
-                <div class="box">
-                    <p class="title is-5"><i class="fas fa-newspaper"></i>找公告</p>
-                    @foreach($webData['homePost'] as $hp)
-                    <a href="{{$webData['webConfig'][13]->tittle}}whatsnews/{{$hp->PostId}}">{{$hp->PostDate}}<br/>{{$hp->PostTittle}}</a>
-                    <hr>
-                    @endforeach
-                    <button onclick="location.href='{{$webData['webConfig'][13]->tittle}}whatsnews'" class="button is-link is-outlined is-fullwidth">更多公告</button>
-                </div>
-                <div class="box">
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- 側邊欄廣告 -->
-                    <ins class="adsbygoogle"
-                        style="display:block"
-                        data-ad-client="ca-pub-3826338280068687"
-                        data-ad-slot="8823619760"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
-                <footer class="footer">
-                    <div class="container">
+
+
+                    <div class="column is-4">
                         <p class="has-text-centered">
-                            <img alt="footerLogo" width="190" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                            <img alt="footerLogo" width="320" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                         </p>
                         <p class="has-text-centered">
                             <div class="rows has-text-centered has-text-centered-mobile">
-                                <div class="column">
-                                @foreach($webData['allButtonNav'] as $bn)
-                                @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
-                                <a class="has-text-weight-medium" style="margin-right: 5px;" href="{{$bn->URL}}">{{$bn->NavigateName}}</a>
-                                @else
-                                <a class="has-text-weight-medium" style="margin-right: 5px;" href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">{{$bn->NavigateName}}</a>
-                                @endif
-                                @endforeach
-                                </div>
                                 <p class="has-text-centered">
                                     {!!$webData['webConfig'][3]->tittle!!}
                                 </p>
                             </div>
                         </p>
                     </div>
-                </footer>
-            </div>
+
+                    <div class="column is-4">
+                        @foreach($webData['allButtonNav'] as $bn)
+                        <div class="column has-text-right">
+                        @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
+                        <a href="{{$bn->URL}}" target="_blank">
+                            <button class="button is-primary is-outlined is-large is-rounded">
+                            {{$bn->NavigateName}}
+                            </button>
+                        </a>
+                        @else
+                        <a href="{{$webData['webConfig'][13]->tittle.$bn->URL}}" target="_blank">
+                            <button class="button is-primary is-outlined is-large is-rounded">
+                            {{$bn->NavigateName}}
+                            </button>
+                        </a>
+                        @endif
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </footer>
         </div>
-      </div>
     </body>
 </html>
