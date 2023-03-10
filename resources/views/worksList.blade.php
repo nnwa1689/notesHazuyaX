@@ -22,19 +22,27 @@
         </div>
     </div>
     <hr/>
-    <div class="columns is-multiline is-mobile" style="margin-left: -1rem; margin-right: -1rem;">
+    <div class="columns is-multiline is-mobile" style="margin-left: -1rem; margin-right: -1rem; align-items: end;">
+    @php($i = 1)
     @foreach($WorksList as $item)
-    <div onclick="window.location.href='works/{{$item -> WorksID}}'" class="is-WorksItem is-flex-direction-row">
+    <div onclick="window.location.href='works/{{$item -> WorksID}}'" class="is-WorksItem {{ ($i == 2) || $i == 3 ? 'is-works-item-min' : 'is-works-item-large' }}">
         <img class="image" src="{{$item -> CoverImage}}">
         <a class="button works-image-tag is-primary is-outlined is-rounded is-medium">
             <span>{{$item -> WorksName}}</span>
         </a>
     </div>
+    @if($i == 0)
+    @php($i++)
+    @elseif($i == 1)
+    @php($i++)
+    @elseif($i == 2)
+    @php($i++)
+    @elseif($i == 3)
+    @php($i = $i - 3)
+    @endif
     @endforeach
     </div>
-    <p></p>
 @endsection
-
 @section('sidebar')
 @parent
 @endsection

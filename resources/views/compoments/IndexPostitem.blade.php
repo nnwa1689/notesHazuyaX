@@ -1,14 +1,26 @@
 <div class="box is-post-index" onclick="window.location.href='{{ $url }}'">
-        <div class="" style="text-align: center;";>
+        <div class="post-cover-index-container" style="text-align: center;";>
         @if(isset($CoverImage) && !empty($CoverImage))
-            <img alt="{{$PostTittle}}" class="post-cover post-cover-index-desktop" src="{{$CoverImage}}">
+            <img alt="{{$PostTittle}}" class="post-cover-index" src="{{$CoverImage}}">
         @else
-            <img alt="{{$PostTittle}}" class="post-cover post-cover-index-desktop" src="/images/NotesHZ_ICON_2023.png">
+            <img alt="{{$PostTittle}}" class="post-cover-index" src="/images/NotesHZ_ICON_2023.png">
         @endif
         </div>
-        <div class="">
-            <p class="is-size-4 has-text-weight-bold">{{$PostTittle}}</p>
-            <p class="is-size-5 limit1rows">{{ strip_tags(Str::limit($PostContant, 100)) }}</p>
+        <div class="m-4">
+            <p class="is-size-4 has-text-weight-bold limit2rows">{{$PostTittle}}</p>
+            <!--<p class="is-size-5 limit2rows">{{ strip_tags(Str::limit($PostContant, 100)) }}</p>-->
+            <nav class="level mt-2">
+                <div class="level-left">
+                    <div class="level-item">
+                        <i class="fas fa-calendar-alt"></i>&nbsp;{{$PostDate}}
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="level-item">
+                        <i class="fas fa-clock"></i>&nbsp;{{$ReadTime}}分鐘
+                    </div>
+                </div>
+            </nav>
             <nav class="level mt-2">
                 <div class="level-left">
                     <div class="level-item">
