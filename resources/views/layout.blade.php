@@ -100,7 +100,7 @@
             </div>
         </nav>
 
-        <main id="scroll-zone" style="perspective: 1px;">
+        <main id="scroll-zone" style="perspective: 1px; min-height: 1000px;">
             <div class="container mt-2" style="padding:0 0.75rem; 0 0.75rem" data-scroll-speed="2">
                 <nav class="breadcrumb is-hidden-mobile" aria-label="breadcrumbs">
                     <ul>
