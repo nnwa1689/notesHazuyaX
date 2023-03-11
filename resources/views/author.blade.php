@@ -22,21 +22,18 @@
         </div>
     </div>
     <hr/>
-    @foreach($userData as $User)
-    <div class="box is-post" style="align-items: center;" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}';">
-        <div class="columns">
-            <div class="column is-one-third">
-                <div style="margin:0 auto 0 auto; width:200px; height:200px;">
-                    <figure class="image is-1by1">
-                        <img class="is-rounded" src="{{$User->Avatar}}">
-                    </figure>
-                </div>
+    <div style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-0 is-justify-content-center">
+        @foreach($userData as $User)
+        <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="box is-author-item mr-5 ml-5" onclick="window.location.href='{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}'">
+            <div class="is-author-item-container">
+                <img alt="{{$User->Yourname}}" class="post-cover-index" src="{{$User->Avatar}}">
             </div>
-            <div class="column" style="padding: 30px; align-items: center; justify-content: flex-start; display:grid;">
-                <p class="title is-size-4 has-text-centered-mobile">{{$User->Yourname}}</p>
-                <p class="subtitle limit4rows">{{ $User->Signature }}</p>
+            <div class="m-4">
+                <p class="is-size-4 has-text-weight-bold limit2rows">{{$User->Yourname}}</p>
+                <hr/>
+                <p class="subtitle limit6rows">{{ $User->Signature }}</p>
             </div>
         </div>
+        @endforeach
     </div>
-    @endforeach
     @endsection

@@ -1,32 +1,24 @@
 @extends('layout')
 @section('title', $title)
 @section('breadcrumb')
-    @parent
-    <li><a href="{{$webData['webConfig'][13]->tittle}}"><i class="fas fa-home"></i>首頁</a></li>
-    <li><a href="{{$webData['webConfig'][13]->tittle}}works">作品一覽</a></li>
-    <li class="is-active"><a href="#" aria-current="page">{{$WorkDetail[0]->WorksName}}</a></li>
+@parent
+<li><a href="{{$webData['webConfig'][13]->tittle}}"><i class="fas fa-home"></i>首頁</a></li>
+<li><a href="{{$webData['webConfig'][13]->tittle}}works">作品一覽</a></li>
+<li class="is-active"><a href="#" aria-current="page">{{$WorkDetail[0]->WorksName}}</a></li>
 @endsection
 @section('content')
     <div class="container mt-1 mb-5">
         <div class="block">
-            <nav class="level mb-3">
-                <div class="level-left">
-                    <div class="level-item">
-                        <p class="title has-text-left has-text-centered-mobile is-3">{{$WorkDetail[0]->WorksName}}</p>
-                    </div>
-                </div>
-                <div class="level-right">
-                    <p class="title has-text-left has-text-centered-mobile is-5">{{$WorkDetail[0]->Customer}}</p>
-                </div>
-            </nav>
+            <p class="title has-text-left has-text-centered-mobile is-3">{{$WorkDetail[0]->WorksName}}</p>
             <nav class="level m-0">
-                <div class="level-left">
-                    <a href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded is-fullwidth">查看網站<br/><i class="fas fa-arrow-right"></i></a>
+                <div class="column is-multiple is-gapless level-left pl-0 pr-5">
+                    <p class="title has-text-left has-text-centered-mobile is-5 mb-6">{{$WorkDetail[0]->Customer}}</p>
+                    <p class="subtitle has-text-left has-text-centered-mobile is-5">{{$WorkDetail[0]->ShortIntro}}</p>
                 </div>
-                <div class="column is-multiple level-right pl-5">
-                    <div class="level-right">
-                        <p class="subtitle has-text-left has-text-centered-mobile is-5">{{$WorkDetail[0]->ShortIntro}}</p>
-                    </div>
+                <div class="level-right has-tex-right has-text-centered-mobile">
+                    <a data-scroll data-scroll-speed="2" data-scroll-delay="1.5" href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded">
+                        查看網站<br/><i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </nav>
         </div>

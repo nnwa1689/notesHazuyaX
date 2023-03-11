@@ -11,7 +11,6 @@
 @parent
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">
     <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
-
     <div class="block mb-2">
         <nav class="level mb-2">
             <div class="level-left">
@@ -25,14 +24,16 @@
             </div>
             <div class="level-right">
                 <div class="level-item">
+                    <a class="tag button is-medium is-primary is-outlined" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>&nbsp;
+                    <!--
                     <div class="buttons has-addons is-centered">
-                        <!--<button class="button is-link is-outlined is-medium"><div class="fb-like" data-href="{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div></button> -->
+                        <button class="button is-link is-outlined is-medium"><div class="fb-like" data-href="{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div></button>
                         <button class="button is-facebook is-outlined" onclick="window.open('https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&u={{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}&display=popup&ref=plugin&src=share_button','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fab fa-facebook-square"></i></button>
                         <button class="button is-twitter  is-outlined" onclick="window.open('https://twitter.com/intent/tweet?original_referer={{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}&text={{$postData[0]->PostTittle}}&tw_p=tweetbutton&url={{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fab fa-twitter-square"></i></button>
                         <button class="button is-plurk is-outlined" onclick="window.open('https://www.plurk.com/?qualifier=shares&status={{$postData[0]->PostTittle}}{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fab fa-product-hunt"></i></button>
                         <button class="button is-tumblr is-outlined" onclick="window.open('https://www.tumblr.com/widgets/share/tool/preview?shareSource=legacy&canonicalUrl=&url={{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}&posttype=link&title={{$postData[0]->PostTittle}}&caption=&content={{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fab fa-tumblr"></i></button>
                         <button class="button is-link is-outlined" onclick="window.location.href='mailto:?subject={{$postData[0]->PostTittle}}&body={{$postData[0]->PostTittle}}{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}'"><i class="fas fa-at"></i></button>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </nav>
@@ -40,16 +41,13 @@
         <div class="block mt-0 mb-4">
             <nav class="level">
                 <div class="level-left">
-                    <div class="level-item">
-                        <i class="fas fa-calendar-alt"></i>&nbsp;{{$postData[0]->PostDate}}
-                    </div>
                 </div>
                 <div class="level-right">
                     <div class="level-item">
                         <i class="fas fa-clock"></i>&nbsp;{{$postData[0]->ReadTime}}分鐘
                     </div>
                     <div class="level-item">
-                        <a class="tag button is-medium is-primary is-outlined" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>&nbsp;
+                        <i class="fas fa-calendar-alt"></i>&nbsp;{{$postData[0]->PostDate}}
                     </div>
                 </div>
             </nav>
@@ -62,7 +60,7 @@
             </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
             <div class="columns p-3">
                 <div class="column is-3">
                     <div class="image is-128x128" style="margin-right:auto; margin-left:auto;">
@@ -93,43 +91,45 @@
             </div>
         </div>
 
-        <div class="box">
-            <div class="columns">
-                <div class="column is-6">
-                @if(isset($leftPost[0]))
-                <a href='{{$leftPost[0]->PostId}}'>
-                    <button class="button is-multiline is-link is-outlined is-medium is-fullwidth">
-                        <p><i class="fas fa-angle-left" aria-hidden="true"></i>&nbsp;上一篇</p>
-                        <p class="limit2rows has-text-left">{{$leftPost[0]->PostTittle}}</p>
-                    </button>
-                </a>
-                @endif
-                </div>
-                @if(isset($rightPost[0]))
-                <div class="column is-6">
-                    <a href='{{$rightPost[0]->PostId}}'>
-                        <button class="button is-multiline is-link is-outlined is-medium is-fullwidth">
-                            <p>下一篇&nbsp;<i class="fas fa-angle-right" aria-hidden="true"></i></p>
-                            <p class="limit2rows has-text-left">{{$rightPost[0]->PostTittle}}</p>
-                        </button>
-                    </a>
-                </div>
-                @endif
+        <div class="columns is-multiline is-gapless" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+            <!--
+            <div class="column is-12">
+            @if(isset($leftPost[0]))
+            <div class="is-homeBanner">
+                <button style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$leftPost[0]->PostId}}'" class="button is-white is-fullwidth is-large">
+                    <div class="columns">
+                        <div class="column">
+                            <p class="title is-4">
+                                <i class="fas fa-angle-left ml-1" aria-hidden="true"></i>上一篇
+                            </p>
+                            <p class="title is-4 limit1rows">
+                                {{$leftPost[0]->PostTittle}}
+                            </p>
+                        </div>
+                    </div>
+                </button>
             </div>
-        </div>
-
-        <div class="box">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- 側邊欄廣告 -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-3826338280068687"
-                data-ad-slot="8823619760"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            @endif
+            </div>
+            -->
+            @if(isset($rightPost[0]))
+            <div class="column is-12">
+                <div class="is-homeBanner">
+                    <button style="min-height: 130px; border-radius: 15px;" onclick="location.href='{{$rightPost[0]->PostId}}'" class="button is-white is-fullwidth is-large pt-3 pb-3">
+                        <div class="columns">
+                            <div class="column">
+                                <p class="subtitle is-3 mb-4">
+                                    下一篇<i class="fas fa-angle-right ml-1" aria-hidden="true"></i>
+                                </p>
+                                <p class="subtitle is-3">
+                                    {{$rightPost[0]->PostTittle}}
+                                </p>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            @endif
         </div>
 
         @if($postData[0]->Reply=="Yes")
@@ -153,7 +153,21 @@
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
         @endif
-            <script type="application/ld+json">
+
+        <div class="box" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- 側邊欄廣告 -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-3826338280068687"
+                data-ad-slot="8823619760"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        <script type="application/ld+json">
             {
                 "@context": "http://schema.org",
                 "@type": "Article",
@@ -166,8 +180,7 @@
                 "publisher" : {
                 "@type" : "Organization",
                 "name" : "{{$webData['webConfig'][0]->tittle}}",
-                "logo" : "{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}"
+                "logo" : "{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}"}
             }
-            }
-            </script>
+        </script>
 @endsection

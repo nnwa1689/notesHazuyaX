@@ -20,7 +20,7 @@
     ])
 @endcomponent
 
-    <div class="container content">
+    <div class="container content" style="min-height: 300px;">
         <p>{!! $userData[0]->IntroductionSelf !!}</p>
     </div>
 
