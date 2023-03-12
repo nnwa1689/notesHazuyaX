@@ -28,7 +28,7 @@
         <div class="column mt-2 mr-4">
             @foreach($WorkDetail as $value)
             @if($value -> StaffName !== "")
-            <article class="media">
+            <article class="media mb-4">
                 <figure class="media-left">
                     <p class="image is-48x48">
                     <img class="is-rounded" src="{{$value -> StaffImage}}">

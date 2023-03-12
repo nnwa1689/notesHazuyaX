@@ -222,12 +222,6 @@
                         smooth: true,
                         lerp: 0.2,
                         repeat: true,
-                        mobile: {
-                            smooth: true
-                        },
-                        tablet: {
-                            smooth: true
-                        }
                     }
                 );
                 new ResizeObserver(

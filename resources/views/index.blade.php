@@ -61,7 +61,7 @@
             </div>
         </button>
     </div>
-    <div class="columns is-multiline is-mobile" style="margin-left: -1rem; margin-right: -1rem; align-items: end;">
+    <div class="columns is-multiline is-mobile is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem; align-items: end;">
         @php($i = 1)
         @foreach($worksData as $item)
         <div data-scroll data-scroll-speed="3" data-scroll-delay="1.5" onclick="window.location.href='works/{{$item -> WorksID}}'" class="is-WorksItem {{ ($i == 2) || $i == 3 ? 'is-works-item-min' : 'is-works-item-large' }}">

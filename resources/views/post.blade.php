@@ -115,17 +115,13 @@
             @if(isset($rightPost[0]))
             <div class="column is-12">
                 <div class="is-homeBanner">
-                    <button style="min-height: 130px; border-radius: 15px;" onclick="location.href='{{$rightPost[0]->PostId}}'" class="button is-white is-fullwidth is-large pt-3 pb-3">
-                        <div class="columns">
-                            <div class="column">
-                                <p class="subtitle is-3 mb-4">
-                                    下一篇<i class="fas fa-angle-right ml-1" aria-hidden="true"></i>
-                                </p>
-                                <p class="subtitle is-3">
-                                    {{$rightPost[0]->PostTittle}}
-                                </p>
-                            </div>
-                        </div>
+                    <button style="min-height: 130px; border-radius: 15px;" onclick="location.href='{{$rightPost[0]->PostId}}'" class="button is-white is-fullwidth is-multiline is-large pt-3 pb-3">
+                        <p class="subtitle is-4 mb-4">
+                            下一篇<i class="fas fa-angle-right ml-1" aria-hidden="true"></i>
+                        </p>
+                        <p class="subtitle is-4 limit1rows">
+                            {{$rightPost[0]->PostTittle}}
+                        </p>
                     </button>
                 </div>
             </div>

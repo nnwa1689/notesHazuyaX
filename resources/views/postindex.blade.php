@@ -18,7 +18,7 @@
                 <p class="subtitle has-text-link has-text-right has-text-centered-mobile is-3">Blog/Post</p>
             </div>
         </nav>
-        <p class="subtitle has-text-left has-text-centered-mobile is-5">夜深人靜，該來記錄一下我的嘔心瀝血惹</p>
+        <p class="subtitle has-text-left has-text-centered-mobile is-5">這裡，紀錄與收藏著小夥伴們的各種經驗與過程！</p>
     </div>
 </div>
 <hr/>
