@@ -15,12 +15,13 @@
         <!--<div id="topbottom" href="#top"><i class="fas fa-chevron-up"></i></div>-->
         <script>
             console.log("%c不要看啦，人家會害羞>__<", "color: blue; font-size: 30px;");
-            //TOP BUTTON FUNCTION
+
+            /*TOP BUTTON FUNCTION
             $("#topbottom").click(function () {
                 $("html,body").animate({scrollTop: 0}, "slow");
                 return false;
-            });
-            /*
+            });*/
+
             $(document).ready(function() {
                 // Check for click events on the navbar burger icon
                 $(".navbar-burger").click(function() {
@@ -28,7 +29,7 @@
                     $(".navbar-burger").toggleClass("is-active");
                     $(".navbar-menu").toggleClass("is-active");
                 });
-            });*/
+            });
         </script>
         {!! $webData['webConfig'][4]->tittle !!}
     </head>
@@ -39,14 +40,17 @@
                     <a class="navbar-item" style="padding: 0.75rem 1.5rem;" href="{{$webData['webConfig'][13]->tittle}}">
                         <img alt="logo" style="max-height: 50px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                     </a>
+                    <!--MibileNavbar-->
                     <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     </a>
+                    <!-----END ----->
                 </div>
                 <div id="MainNavbar" class="navbar-menu" style="padding: 0 1.5rem 0 0;">
                     <div class="navbar-start">
+                    <!--Dynamic System Gen-->
                         @foreach($webData['allNav'] as $Nav)
                             @if(($webData['webConfig'][13]->tittle.$Nav->URL)==URL::current())
                                 <a class="navbar-item is-active">{{$Nav->NavigateName}}</a>
@@ -58,6 +62,8 @@
                                 @endif
                             @endif
                         @endforeach
+                    <!--Dynamic END-->
+                    <!-- Flex -->
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a class="navbar-link" href="{{$webData['webConfig'][13]->tittle.'page/about'}}">關於</a>
                             <div class="navbar-dropdown">
@@ -65,6 +71,7 @@
                                 <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">作者介紹</a>
                             </div>
                         </div>
+                    <!-- END -->
                     </div>
                     <div class="navbar-end">
                         <a class="navbar-item{{ (($webData['webConfig'][13]->tittle.'search') == URL::current()) ? ' is-active' : '' }}" href="{{$webData['webConfig'][13]->tittle.'search'}}">
@@ -99,8 +106,9 @@
                 </div>
             </div>
         </nav>
-
+        <!-- Main -->
         <main id="scroll-zone" style="perspective: 1px; min-height: 1000px;">
+            <!-- Breadcrumb -->
             <div class="container mt-2" style="padding:0 0.75rem; 0 0.75rem" data-scroll-speed="2">
                 <nav class="breadcrumb is-hidden-mobile" aria-label="breadcrumbs">
                     <ul>
@@ -109,7 +117,7 @@
                     </ul>
                 </nav>
             </div>
-
+            <!-- END -->
             <div class="container mt-0">
                 <div class="block ml-3 mr-3">
                     @section('content')
@@ -204,6 +212,7 @@
                 </footer>
             </div>
         </main>
+        <!--Locomotive Scroll -->
         <script src="/js/locomotive-scroll.min.js"></script>
         <script>
             (function () {
@@ -213,6 +222,12 @@
                         smooth: true,
                         lerp: 0.2,
                         repeat: true,
+                        mobile: {
+                            smooth: true
+                        },
+                        tablet: {
+                            smooth: true
+                        }
                     }
                 );
                 new ResizeObserver(
@@ -220,5 +235,6 @@
             })();
 
         </script>
+        <!--Locomotive Scroll END-->
     </body>
 </html>

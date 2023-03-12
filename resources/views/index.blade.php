@@ -30,8 +30,7 @@
             </div>
         </div>
     </div>
-    <hr/>
-    <div style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-2">
+    <div data-scroll data-scroll-speed="1" data-scroll-delay="1.5" style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-2">
         @foreach($allPosts as $post)
             @component('compoments.IndexPostitem',
                 ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
@@ -50,7 +49,6 @@
         @endforeach
         <span></span>
     </div>
-
     <div class="is-homeBanner">
         <button style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}post'" class="button is-white is-fullwidth is-large">
             <div class="columns">
@@ -63,4 +61,37 @@
             </div>
         </button>
     </div>
+    <div class="columns is-multiline is-mobile" style="margin-left: -1rem; margin-right: -1rem; align-items: end;">
+        @php($i = 1)
+        @foreach($worksData as $item)
+        <div data-scroll data-scroll-speed="3" data-scroll-delay="1.5" onclick="window.location.href='works/{{$item -> WorksID}}'" class="is-WorksItem {{ ($i == 2) || $i == 3 ? 'is-works-item-min' : 'is-works-item-large' }}">
+            <img class="image" src="{{$item -> CoverImage}}">
+            <a class="button works-image-tag is-primary is-outlined is-rounded is-medium">
+                <span>{{$item -> WorksName}}</span>
+            </a>
+        </div>
+        @if($i == 0)
+        @php($i++)
+        @elseif($i == 1)
+        @php($i++)
+        @elseif($i == 2)
+        @php($i++)
+        @elseif($i == 3)
+        @php($i = $i - 3)
+        @endif
+        @endforeach
+    </div>
+    <div class="is-homeBanner">
+        <button style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}works'" class="button is-white is-fullwidth is-large">
+            <div class="columns">
+                <div class="column">
+                    <p class="title is-3">
+                        更多作品
+                        <i class="fas fa-arrow-right ml-1"></i>
+                    </p>
+                </div>
+            </div>
+        </button>
+    </div>
+
 @endsection

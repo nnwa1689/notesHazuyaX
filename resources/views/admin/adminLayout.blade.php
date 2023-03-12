@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title')筆記長也創作中心</title>
-
     <!-- Bulma Version 0.8.x-->
     <link rel="stylesheet" href="{{asset('css/bulma.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('css/admin.css')}}">
@@ -24,10 +23,9 @@
     </script>
 </head>
 
-<body>
-
+<body class="has-navbar-fixed-top">
     <!-- START NAV -->
-    <nav class="navbar is-white">
+    <nav class="navbar is-white is-fixed-top">
         <div class="container" style="padding: 0rem 0.5rem">
             <div class="navbar-brand">
                 <a class="navbar-item brand-text" href="/">
@@ -125,10 +123,10 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-            2023 HiHazuyaXCMS
+            2023 Hi,HazuyaX#CMS
             </p>
             <p class="subtitle is-6">
-                Version:V230305.03
+                Version:V230312.10
             </p>
         </div>
   </footer>

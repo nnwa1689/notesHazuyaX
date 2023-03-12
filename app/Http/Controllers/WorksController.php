@@ -37,4 +37,12 @@ class WorksController extends Controller
         $title = "作品一覽 - ";
         return view('worksList',['WorksList'=>$WorksList, 'webData'=>$this->webData, 'title' => $title]);
     }
+
+    public static function GetTopTwoWorksList()
+    {
+        DB::connection('mysql');
+        $WorksList = DB::select(
+            ('select * from Works order by OrderID asc limit 2'));
+        return $WorksList;
+    }
 }

@@ -17,7 +17,8 @@ class PostController extends Controller
     public function getHomePage(){
         $this -> webData = WebController::webInit();
         $data = PostController::getTopPublicPost($this->webData['webConfig'][7]->tittle);
-        return view("index", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>""]);
+        $worksData = WorksController::GetTopTwoWorksList();
+        return view("index", ['webData' => $this->webData,'allPosts'=>$data, 'worksData' => $worksData, 'title'=>""]);
     }
 
     public static function getAllPublicPost($pageNumber){

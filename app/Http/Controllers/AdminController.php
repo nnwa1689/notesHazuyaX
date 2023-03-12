@@ -79,9 +79,10 @@ class AdminController extends Controller
         if(UserController::checkLoginStatus()){
             DB::connection('mysql');
             $start = ($pageNumber - 1) * 10;
-            $data = DB::select("SELECT * FROM media ORDER BY media.UploadDate DESC LIMIT ?, 10", [$start]);
-            $filesnum = ceil((DB::select("SELECT COUNT(ID) as num FROM media ORDER BY media.UploadDate DESC")[0]->num)/10);
-            return view('admin/files', ['username'=>session()->get('username'), 'data'=>$data, 'filesnum'=>$filesnum, 'nowpageNumber'=> $pageNumber]);
+            //$data = DB::select("SELECT * FROM media ORDER BY media.UploadDate DESC LIMIT ?, 12", [$start]);
+            $data = DB::table(DB::raw("(SELECT * FROM media ORDER BY media.UploadDate DESC) as files")) -> paginate(12);;
+            //$filesnum = ceil((DB::select("SELECT COUNT(ID) as num FROM media ORDER BY media.UploadDate DESC")[0]->num)/10);
+            return view('admin/files', ['username'=>session()->get('username'), 'data'=>$data, 'nowpageNumber'=> $pageNumber]);
         }else{
             return redirect('login');
         }

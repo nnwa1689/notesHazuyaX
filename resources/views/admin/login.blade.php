@@ -18,12 +18,10 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
-
-                    <div class="box">
                     <a href="{{$webData['webConfig'][13]->tittle}}">
-                        <img src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                        <img width="128" height="128" src="{{$webData['webConfig'][13]->tittle}}images/NotesHZ_ICON_2023.png">
                     </a>
-                    <hr>
+                    <div class="box">
                         <form action="login" method="post">
                         @if(isset($error))
                         <div class="notification is-danger">
@@ -55,11 +53,10 @@
                             </div>
                             <br>
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <button class="button is-outlined is-link is-large is-fullwidth">登入<i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                            <button class="button is-outlined is-primary is-large is-fullwidth">登入<i class="fa fa-sign-in" aria-hidden="true"></i></button>
                         </form>
                     </div>
-                    <p class="has-text-grey">
-                    </p>
+
                 </div>
             </div>
         </div>
