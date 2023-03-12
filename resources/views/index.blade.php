@@ -49,7 +49,7 @@
         @endforeach
         <span></span>
     </div>
-    <div class="is-homeBanner">
+    <div class="is-homeBanner mb-6 mt-6">
         <button style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}post'" class="button is-white is-fullwidth is-large">
             <div class="columns">
                 <div class="column">
@@ -81,7 +81,7 @@
         @endif
         @endforeach
     </div>
-    <div class="is-homeBanner">
+    <div class="is-homeBanner mt-6">
         <button style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}works'" class="button is-white is-fullwidth is-large">
             <div class="columns">
                 <div class="column">

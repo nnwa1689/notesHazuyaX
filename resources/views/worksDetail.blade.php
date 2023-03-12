@@ -15,8 +15,8 @@
                     <p class="title has-text-left has-text-centered-mobile is-5 mb-6">{{$WorkDetail[0]->Customer}}</p>
                     <p class="subtitle has-text-left has-text-centered-mobile is-5">{{$WorkDetail[0]->ShortIntro}}</p>
                 </div>
-                <div class="level-right has-tex-right has-text-centered-mobile">
-                    <a data-scroll data-scroll-speed="2" data-scroll-delay="1.5" href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded">
+                <div class="level-right has-text-right has-text-centered-mobile">
+                    <a data-scroll data-scroll-speed="5" data-scroll-delay="1.5" href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded mr-0">
                         查看網站<br/><i class="fas fa-arrow-right"></i>
                     </a>
                 </div>

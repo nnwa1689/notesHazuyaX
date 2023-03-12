@@ -7,7 +7,7 @@
 @endsection
 @section('content')
 @parent
-    <section class="hero is-link">
+    <section class="hero is-link mt-6">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title">{{$data[0]->PageName}}</h1>
@@ -15,9 +15,7 @@
         </div>
     </section>
     <div class="box content">
-        <p>
-            {!! $data[0]->PageContant !!}
-        </p>
+        {!! $data[0]->PageContant !!}
     </div>
     <p></p>
 @endsection
