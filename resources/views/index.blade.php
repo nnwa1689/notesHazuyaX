@@ -9,12 +9,12 @@
         <div class="column is-9">
             @if($webData['webConfig'][26]->tittle !== "")
             <div class="is-homeBanner mb-2">
-                <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][25]->tittle}}"><img alt="{{$webData['webConfig'][25]->tittle}}" class="post-cover" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][26]->tittle}}"></a>
+                <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][25]->tittle}}"><img alt="{{$webData['webConfig'][25]->tittle}}" class="is-homeBanner" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][26]->tittle}}"></a>
             </div>
             @endif
             @if($webData['webConfig'][28]->tittle !== "")
             <div class="is-homeBanner mb-2">
-                <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][27]->tittle}}"><img alt="{{$webData['webConfig'][27]->tittle}}" class="post-cover" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][28]->tittle}}"></a>
+                <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][27]->tittle}}"><img alt="{{$webData['webConfig'][27]->tittle}}" class="is-homeBanner" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][28]->tittle}}"></a>
             </div>
             @endif
         </div>

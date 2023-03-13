@@ -8,11 +8,11 @@
 @endsection
 @section('content')
 @parent
-    <div class="block">
-            <p class="title is-3">{{$data[0]->PostTittle}}</p>
-            <span><i class="fas fa-clock"></i>{{$data[0]->PostDate}}</span>
-    </div>
-    <div class="box content">
-        {!! $data[0]->PostContant !!}
-    </div>
+<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
+    <p class="is-size-3">{{$data[0]->PostTittle}}</p>
+    <span><i class="fas fa-clock"></i>{{$data[0]->PostDate}}</span>
+</div>
+<div class="box content">
+    {!! $data[0]->PostContant !!}
+</div>
 @endsection

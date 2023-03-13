@@ -7,28 +7,19 @@
 <li class="is-active"><a href="#" aria-current="page">{{$WorkDetail[0]->WorksName}}</a></li>
 @endsection
 @section('content')
-    <div class="container mt-1 mb-5">
-        <div class="block">
-            <p class="title has-text-left has-text-centered-mobile is-3">{{$WorkDetail[0]->WorksName}}</p>
-            <nav class="level m-0">
-                <div class="column is-multiple is-gapless level-left pl-0 pr-5">
-                    <p class="title has-text-left has-text-centered-mobile is-5 mb-6">{{$WorkDetail[0]->Customer}}</p>
-                    <p class="subtitle has-text-left has-text-centered-mobile is-5">{{$WorkDetail[0]->ShortIntro}}</p>
-                </div>
-                <div class="level-right has-text-right has-text-centered-mobile">
-                    <a data-scroll data-scroll-speed="5" data-scroll-delay="1.5" href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded mr-0">
-                        查看網站<br/><i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <hr/>
+<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
+    <p class="is-size-3">{{$WorkDetail[0]->WorksName}}</p>
+    <p class="is-size-5">{{$WorkDetail[0]->Customer}}</p>
+    <p class="is-size-5">{{$WorkDetail[0]->ShortIntro}}</p>
+</div>
     <div class="columns is-gapless">
-        <div class="column mt-2 mr-4">
+        <div class="column mt-2 mr-4 has-text-centered-mobile">
+            <a data-scroll data-scroll-speed="3" data-scroll-delay="1.5" href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded mr-0 mb-6">
+                查看網站<br/><i class="fas fa-arrow-right"></i>
+            </a>
             @foreach($WorkDetail as $value)
             @if($value -> StaffName !== "")
-            <article class="media mb-4">
+            <article class="media mb-3">
                 <figure class="media-left">
                     <p class="image is-48x48">
                     <img class="is-rounded" src="{{$value -> StaffImage}}">

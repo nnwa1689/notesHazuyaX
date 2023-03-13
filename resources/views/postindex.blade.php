@@ -6,22 +6,10 @@
     <li class="is-active"><a href="#" aria-current="page">所有文章</a></li>
 @endsection
 @section('content')
-<div class="container mt-1 mb-5">
-    <div class="block">
-        <nav class="level mb-3">
-            <div class="level-left">
-                <div class="level-item">
-                    <p class="title has-text-left is-3">所有文章</p>
-                </div>
-            </div>
-            <div class="level-right">
-                <p class="subtitle has-text-link has-text-right has-text-centered-mobile is-3">Blog/Post</p>
-            </div>
-        </nav>
-        <p class="subtitle has-text-left has-text-centered-mobile is-5">這裡，紀錄與收藏著小夥伴們的各種經驗與過程！</p>
-    </div>
+<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
+    <p class="is-size-3">所有文章<span class="has-text-link pl-2">Blog/Post</span></p>
+    <p class="is-size-5">這裡，紀錄與收藏著小夥伴們的各種經驗與過程！</p>
 </div>
-<hr/>
 <div class="box pb-6">
     <p class="title is-5"><i class="fas fa-tags mr-1"></i>找分類｜系列文章</p>
     <div class="field is-grouped is-grouped-multiline">

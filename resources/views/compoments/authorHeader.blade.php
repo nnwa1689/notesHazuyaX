@@ -1,25 +1,21 @@
 @if(isset($PersonBackground)&& !empty($PersonBackground))
-<section class="hero is-link" style="background-image: url({{$PersonBackgroundUrl}}); background-size: cover;">
+<section data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="hero is-primary mt-6 mb-4" style="background-image: url({{$PersonBackgroundUrl}}); background-size: cover;">
 @else
-<section class="hero is-link">
+<section data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="hero is-primary mt-6 mb-4">
 @endif
-<div class="hero-body">
-    <div class="container">
-        <div class="columns">
-            <div class="column is-two-fifths">
-                <div style="margin-left: auto; margin-right: auto; width:200px; height:200px;">
-                    <figure class="image is-1by1">
-                        <img class="is-rounded" src="{{$AuthorAvatarUrl}}">
-                    </figure>
+    <div class="hero-body is-author-hero">
+        <div class="columns is-multiline is-gapless">
+            <div class="column is-two-fifths p-0">
+                <div class="is-author-cover-container">
+                        <img src="{{$AuthorAvatarUrl}}">
                 </div>
             </div>
-            <div class="column">
+            <div class="column m-6">
                 <h1 class="title has-text-centered-mobile">{{$Author}}</h1>
                 <p class="subtitle has-text-left">{{$Signature}}</p>
             </div>
         </div>
     </div>
-</div>
 </section>
 <div class="tabs is-centered is-medium is-fullwidth">
   <ul>

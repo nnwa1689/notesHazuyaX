@@ -7,7 +7,7 @@
         @endif
         </div>
         <div class="m-4">
-            <p class="is-size-4 has-text-weight-bold limit2rows">{{$PostTittle}}</p>
+            <p class="is-size-4 limit2rows" style="height: 72px;">{{$PostTittle}}</p>
             <!--<p class="is-size-5 limit2rows">{{ strip_tags(Str::limit($PostContant, 100)) }}</p>-->
             <nav class="level mt-2">
                 <div class="level-left">

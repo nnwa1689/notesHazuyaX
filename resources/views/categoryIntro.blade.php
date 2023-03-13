@@ -7,41 +7,29 @@
     <li class="is-active"><a href="#" aria-current="page">{{$detail[0]->ClassName}}</a></li>
 @endsection
 @section('content')
-    <div class="container mt-1 mb-5">
-        <div class="block">
-            <nav class="level mb-3">
-                <div class="level-left">
-                    <div class="level-item">
-                        <p class="title has-text-left is-3">{{$detail[0]->ClassName}}</p>
-                    </div>
-                </div>
-                <div class="level-right">
-                    <div class="level-item">
-                        <p class="is-size-6"><i class="fas fa-book"></i>&nbsp;共 {{ $count }} 篇文章閱讀</p>
-                    </div>
-                </div>
-            </nav>
-            <p class="subtitle has-text-left has-text-centered-mobile is-5">{{$detail[0]->Short_Intro}}</p>
-        </div>
-    </div>
-    <div class="tabs is-centered is-medium is-fullwidth">
-        <ul>
-            <li class="is-active">
-            <a>
-                <span class="icon is-small"><i class="fas fa-info"></i></span>
-                <span>介紹</span>
-            </a>
-            </li>
-            <li>
-            <a href="/category/{{ $detail[0]-> ClassId }}/all">
-                <span class="icon is-small"><i class="fas fa-list-alt"></i></span>
-                <span>列表</span>
-            </a>
-            </li>
-        </ul>
-    </div>
-    <div class="content">
-        {!! $detail[0] -> Long_Intro !!}
-    </div>
-    <p></p>
+<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
+    <p class="is-size-3">{{$detail[0]->ClassName}}</p>
+    <p class="is-size-6"><i class="fas fa-book"></i>&nbsp;共 {{ $count }} 篇文章閱讀</p>
+    <p class="is-size-5">{{$detail[0]->Short_Intro}}</p>
+</div>
+<div class="tabs is-centered is-medium is-fullwidth">
+    <ul>
+        <li>
+        <a href="/category/{{ $detail[0]-> ClassId }}/">
+            <span class="icon is-small"><i class="fas fa-list-alt"></i></span>
+            <span>文章列表</span>
+        </a>
+        </li>
+        <li class="is-active">
+        <a>
+            <span class="icon is-small"><i class="fas fa-info"></i></span>
+            <span>系列介紹</span>
+        </a>
+        </li>
+    </ul>
+</div>
+<div class="content">
+    {!! $detail[0] -> Long_Intro !!}
+</div>
+<p></p>
 @endsection

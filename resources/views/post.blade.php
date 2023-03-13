@@ -11,7 +11,7 @@
 @parent
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">
     <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
-    <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-0 mt-6">
+    <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
         <a class="tag button is-medium is-primary is-outlined" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>
         <p class="is-size-2 mb-2">{{$postData[0]->PostTittle}}
             @if($webData['userData'] !== 0)

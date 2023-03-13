@@ -21,8 +21,8 @@ Route::get('/post/p/{pageNumber}', 'PostController@getPostList')->where('pageNum
 Route::get('/post/{postID}', 'PostController@getOnePost')->where('postID', '[0-9]+')->name('post');
 
 //category
-Route::get('/category/{classID}/all', 'PostController@getallCategorypost')->where('classID', '[0-9]+')->name('{classID}');
-Route::get('/category/{classID}/', 'PostController@getCategoryDetailPage')->where('classID', '[0-9]+');
+Route::get('/category/{classID}/', 'PostController@getallCategorypost')->where('classID', '[0-9]+')->name('{classID}');
+Route::get('/category/{classID}/intro', 'PostController@getCategoryDetailPage')->where('classID', '[0-9]+');
 
 //page
 Route::get('/page/{pageID}','PageController@getPage')->where('pageID', '[0-9A-Za-z]+')->name('page/'.'{pageID}');
@@ -48,14 +48,11 @@ Route::get('works/{WorksPID}', 'WorksController@GetWorksDetailPage')->where('Wor
 Route::get('works', 'WorksController@GetAllWorksPage');
 
 
-
 /*後台路由admin*/
 /*登入登出 */
 /*基本上設計一個錯誤與成功的view */
 Route::get('login', 'UserController@loginPage');
-
 Route::post('login', 'UserController@login');
-
 Route::get('logout', 'UserController@logout');
 
 /*後台首頁*/

@@ -1,13 +1,15 @@
-<div class="box is-post" onclick="window.location.href='{{ $url }}'">
+<div class="box is-post mb-6 mt-6" onclick="window.location.href='{{ $url }}'">
     <div class="columns">
-        <div class="column is-one-quarter" style="text-align: center;";>
-        @if(isset($CoverImage) && !empty($CoverImage))
-            <img alt="{{$PostTittle}}" class="post-cover post-cover-desktop" src="{{$CoverImage}}">
-        @else
-            <img alt="{{$PostTittle}}" class="post-cover post-cover-desktop" src="/images/NotesHZ_ICON_2023.png">
-        @endif
+        <div class="column is-one-quarter p-0">
+            <div class="post-cover-container">
+                @if(isset($CoverImage) && !empty($CoverImage))
+                <img alt="{{$PostTittle}}" class="post-cover" src="{{$CoverImage}}">
+                @else
+                <img alt="{{$PostTittle}}" class="post-cover" src="/images/NotesHZ_ICON_2023.png">
+                @endif
+            </div>
         </div>
-        <div class="column">
+        <div class="column p-4">
             <p class="is-size-4 has-text-weight-bold">{{$PostTittle}}</p>
             <p class="is-size-5 limit1rows">{{ strip_tags(Str::limit($PostContant, 100)) }}</p>
             <nav class="level mt-2">

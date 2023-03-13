@@ -7,13 +7,9 @@
 @endsection
 @section('content')
 @parent
-<section class="hero is-link">
-  <div class="hero-body">
-    <div class="container" style="text-align: center;">
-      <h1 class="title">搜尋文章</h1>
-    </div>
-  </div>
-</section>
+<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
+    <p class="is-size-3">搜尋文章</p>
+</div>
 <div class="box content">
     <form id="searchForm" class="field has-addons" action="/search/q" method="get">
         <input class="input" type="hidden" id="page" name="page" value="1">
@@ -53,7 +49,7 @@
     </div>
     <p></p>
 @else
-<div class="box">
+<div class="box" style="min-height: 300px;">
     <p class="has-text-centered is-size-4">尚無相關結果</p>
 </div>
 @endif
