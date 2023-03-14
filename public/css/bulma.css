@@ -217,6 +217,7 @@
     cursor: pointer;
     transition: all 0.3s ;
     background-color: #f9f9f9;
+    box-shadow: 0px 5px 10px rgba(50,75,100,0.15);
   }
 
   .is-author-item:hover .post-cover-index {
@@ -253,6 +254,7 @@
     cursor: pointer;
     transition: all 0.3s ;
     background-color: #f9f9f9;
+    box-shadow: 0px 5px 10px rgba(50,75,100,0.15);
   }
 
   .is-post-index:hover .post-cover-index {
@@ -280,6 +282,7 @@
     transition: all 0.3s;
     background-color: #f9f9f9;
     cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(50,75,100,0.15);
   }
 
   .post-cover-container {
