@@ -28,7 +28,7 @@
         </li>
     </ul>
 </div>
-<div class="content">
+<div class="container is-max-desktop content">
     {!! $detail[0] -> Long_Intro !!}
 </div>
 <p></p>

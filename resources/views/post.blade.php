@@ -62,133 +62,131 @@
         </div>
         -->
     </div>
-
-        <div class="box">
-            <div class="content line-numbers">
-            {!! $postData[0]->PostContant !!}
-            </div>
+    <div class="container is-max-desktop mb-6">
+        <div class="content line-numbers">
+        {!! $postData[0]->PostContant !!}
         </div>
-
-        <div class="box p-0" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
-            <div class="columns is-gapless">
-                <div class="column is-3">
-                    <div class="is-post-author-container" style="margin-right:auto; margin-left:auto;">
-                        <figure class="image is-1by1" style="margin-left: auto; margin-right: auto;">
-                            <img src="{{$autorData[0]->Avatar}}">
-                        </figure>
-                    </div>
+    </div>
+    <div class="box p-0" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+        <div class="columns is-gapless">
+            <div class="column is-3">
+                <div class="is-post-author-container" style="margin-right:auto; margin-left:auto;">
+                    <figure class="image is-1by1" style="margin-left: auto; margin-right: auto;">
+                        <img src="{{$autorData[0]->Avatar}}">
+                    </figure>
                 </div>
-                <div class="column is-9 has-text-left p-5">
-                    <div class="block p-5 has-text-centered-mobile">
-                        <a class="is-size-3" href="/person/{{$autorData[0]->username}}">{{$autorData[0]->Yourname}}</a>
-                        <br>
-                        <p class="has-text-left limit4rows">
-                            {{$autorData[0]->Signature}}
-                        </p>
-                        <hr>
-                        <div class="buttons has-addons is-centered">
-                            <button class="button is-primary is-inverted is-medium" onclick="window.location.href='mailto:{{$autorData[0]->Email}}'"><i class="far fa-envelope-open"></i></button>
-                            <button class="button is-primary is-inverted is-medium" onclick="window.location.href='/person/{{$autorData[0]->username}}/post/p/1'"><i class="fas fa-file"></i></button>
-                            @if(isset($autorData[0]->Url_Linked) && $autorData[0]->Url_Linked !== "")
-                            <a href="{{$autorData[0]->Url_Linked}}" target="_blank" class="button is-primary is-inverted is-medium"><i class="fab fa-linkedin"></i></a>
-                            @endif
-                            @if(isset($autorData[0]->Url_GitHub) && $autorData[0]->Url_GitHub !== "")
-                            <a href="{{$autorData[0]->Url_GitHub}}" target="_blank" class="button is-primary is-inverted is-medium"><i class="fab fa-github"></i></a>
-                            @endif
-
-                        </div>
+            </div>
+            <div class="column is-9 has-text-left p-5">
+                <div class="block p-5 has-text-centered-mobile">
+                    <a class="is-size-3" href="/person/{{$autorData[0]->username}}">{{$autorData[0]->Yourname}}</a>
+                    <br>
+                    <p class="has-text-left limit4rows">
+                        {{$autorData[0]->Signature}}
+                    </p>
+                    <hr>
+                    <div class="buttons has-addons is-centered">
+                        <button class="button is-primary is-inverted is-medium" onclick="window.location.href='mailto:{{$autorData[0]->Email}}'"><i class="far fa-envelope-open"></i></button>
+                        <button class="button is-primary is-inverted is-medium" onclick="window.location.href='/person/{{$autorData[0]->username}}/post/p/1'"><i class="fas fa-file"></i></button>
+                        @if(isset($autorData[0]->Url_Linked) && $autorData[0]->Url_Linked !== "")
+                        <a href="{{$autorData[0]->Url_Linked}}" target="_blank" class="button is-primary is-inverted is-medium"><i class="fab fa-linkedin"></i></a>
+                        @endif
+                        @if(isset($autorData[0]->Url_GitHub) && $autorData[0]->Url_GitHub !== "")
+                        <a href="{{$autorData[0]->Url_GitHub}}" target="_blank" class="button is-primary is-inverted is-medium"><i class="fab fa-github"></i></a>
+                        @endif
 
                     </div>
+
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="columns is-multiline is-gapless" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
-            <!--
-            <div class="column is-12">
-            @if(isset($leftPost[0]))
-            <div class="is-homeBanner">
-                <button style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$leftPost[0]->PostId}}'" class="button is-white is-fullwidth is-large">
-                    <div class="columns">
-                        <div class="column">
-                            <p class="title is-4">
-                                <i class="fas fa-angle-left ml-1" aria-hidden="true"></i>上一篇
-                            </p>
-                            <p class="title is-4 limit1rows">
-                                {{$leftPost[0]->PostTittle}}
-                            </p>
-                        </div>
+    <div class="columns is-multiline is-gapless" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+        <!--
+        <div class="column is-12">
+        @if(isset($leftPost[0]))
+        <div class="is-homeBanner">
+            <button style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$leftPost[0]->PostId}}'" class="button is-white is-fullwidth is-large">
+                <div class="columns">
+                    <div class="column">
+                        <p class="title is-4">
+                            <i class="fas fa-angle-left ml-1" aria-hidden="true"></i>上一篇
+                        </p>
+                        <p class="title is-4 limit1rows">
+                            {{$leftPost[0]->PostTittle}}
+                        </p>
                     </div>
-                </button>
-            </div>
-            @endif
-            </div>
-            -->
-            @if(isset($rightPost[0]))
-            <div class="column is-12">
-                <div class="is-homeBanner">
-                    <button style="min-height: 130px; border-radius: 15px;" onclick="location.href='{{$rightPost[0]->PostId}}'" class="button is-white is-fullwidth is-multiline is-large pt-3 pb-3">
-                        <p class="subtitle is-4 mb-4">
-                            下一篇<i class="fas fa-angle-right ml-1" aria-hidden="true"></i>
-                        </p>
-                        <p class="subtitle is-4 limit1rows">
-                            {{$rightPost[0]->PostTittle}}
-                        </p>
-                    </button>
                 </div>
-            </div>
-            @endif
-        </div>
-
-        @if($postData[0]->Reply=="Yes")
-        <div class="box">
-            <div id="disqus_thread"></div>
-            <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-            var disqus_config = function () {
-                this.page.url = '{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}';  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = '{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://noteshazuya.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </button>
         </div>
         @endif
-
-        <div class="box" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- 側邊欄廣告 -->
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-3826338280068687"
-                data-ad-slot="8823619760"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
         </div>
-        <script type="application/ld+json">
-            {
-                "@context": "http://schema.org",
-                "@type": "Article",
-                "name" : "{{$postData[0]->PostTittle}}",
-                "author" : "{{$autorData[0]->Yourname}}",
-                "datePublished" : "{{$postData[0]->PostDate}}",
-                "image" : "null",
-                "articleBody" : "{{ $postData[0]->PostContant }}",
-                "headline": "{{$postData[0]->PostTittle}}",
-                "publisher" : {
-                "@type" : "Organization",
-                "name" : "{{$webData['webConfig'][0]->tittle}}",
-                "logo" : "{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}"}
-            }
+        -->
+        @if(isset($rightPost[0]))
+        <div class="column is-12">
+            <div class="is-homeBanner">
+                <button style="min-height: 130px; border-radius: 15px;" onclick="location.href='{{$rightPost[0]->PostId}}'" class="button is-white is-fullwidth is-multiline is-large pt-3 pb-3">
+                    <p class="subtitle is-4 mb-4">
+                        下一篇<i class="fas fa-angle-right ml-1" aria-hidden="true"></i>
+                    </p>
+                    <p class="subtitle is-4 limit1rows">
+                        {{$rightPost[0]->PostTittle}}
+                    </p>
+                </button>
+            </div>
+        </div>
+        @endif
+    </div>
+
+    @if($postData[0]->Reply=="Yes")
+    <div class="box">
+        <div id="disqus_thread"></div>
+        <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        var disqus_config = function () {
+            this.page.url = '{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '{{$webData['webConfig'][13]->tittle}}post/{{$postData[0]->PostId}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://noteshazuya.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
         </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    @endif
+
+    <div class="box" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- 側邊欄廣告 -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-3826338280068687"
+            data-ad-slot="8823619760"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Article",
+            "name" : "{{$postData[0]->PostTittle}}",
+            "author" : "{{$autorData[0]->Yourname}}",
+            "datePublished" : "{{$postData[0]->PostDate}}",
+            "image" : "null",
+            "articleBody" : "{{ $postData[0]->PostContant }}",
+            "headline": "{{$postData[0]->PostTittle}}",
+            "publisher" : {
+            "@type" : "Organization",
+            "name" : "{{$webData['webConfig'][0]->tittle}}",
+            "logo" : "{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}"}
+        }
+    </script>
 @endsection

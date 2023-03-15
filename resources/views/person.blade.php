@@ -19,9 +19,7 @@
     'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$userData[0]->Avatar,
     ])
 @endcomponent
-
-    <div class="container content" style="min-height: 300px;">
+    <div class="container is-max-desktop content" style="min-height: 300px;">
         <p>{!! $userData[0]->IntroductionSelf !!}</p>
     </div>
-
 @endsection
