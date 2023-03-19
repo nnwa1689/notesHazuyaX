@@ -10,8 +10,8 @@
             </div>
         </div>
         <div class="column p-4">
-            <p class="has-text-weight-semibold is-size-4">{{$PostTittle}}</p>
-            <p class="is-size-5 limit1rows">{{ strip_tags(Str::limit($PostContant, 100)) }}</p>
+            <p class="title is-4 mt-3 mb-3">{{$PostTittle}}</p>
+            <p class="is-size-5 limit2rows">{{ strip_tags(Str::limit($PostContant, 200)) }}</p>
             <nav class="level mt-2">
                 <div class="level-left">
                     <div class="level-item">

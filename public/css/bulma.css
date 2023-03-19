@@ -305,7 +305,6 @@
 
   .is-author-cover-container {
     overflow: hidden;
-    height: 340px;
     border-radius: 15px 0px 0px 15px;
   }
 
@@ -345,7 +344,7 @@
     }
 
     .post-cover-container {
-        height: 154px;
+        height: 200px;
     }
 
   }
@@ -370,7 +369,7 @@
     }
 
     .post-cover-container {
-        height: 154px;
+        height: 200px;
     }
   }
 
@@ -394,7 +393,7 @@
     }
 
     .post-cover-container {
-        height: 154px;
+        height: 200px;
     }
   }
 
@@ -3885,8 +3884,8 @@
 
   .container.is-fluid {
     max-width: none;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 5rem;
+    padding-right: 5rem;
     width: 100%;
   }
 
@@ -3902,22 +3901,30 @@
     }
   }
 
-  @media screen and (max-width: 1407px) {
-    .container.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
-      max-width: 1200px;
-    }
-  }
-
   @media screen and (min-width: 1216px) {
-    .container:not(.is-max-desktop) {
+    .container:not(.is-max-desktop):not(.is-max-widescreen):not(.is-fluid) {
       max-width: 1152px;
     }
   }
 
   @media screen and (min-width: 1408px) {
-    .container:not(.is-max-desktop):not(.is-max-widescreen) {
+    .container:not(.is-max-desktop):not(.is-max-widescreen):not(.is-fluid) {
       max-width: 1200px;
     }
+  }
+
+  @media screen and (max-width: 1023px) {
+    .container.is-fluid {
+        padding-left: 0rem;
+        padding-right: 0rem;
+      }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container.is-fluid {
+        padding-left: 0rem;
+        padding-right: 0rem;
+      }
   }
 
   .content li + li {
@@ -3992,10 +3999,14 @@
 
   blockquote {
     background-color: #2d2d2d;
-    border-left: 5px solid #003366;
+    border-left: 5px solid #007BEE;
     color: #CCCCCC;
     border-radius: 0px 15px 15px 0px;
     padding: 1.25em 1.5em;
+  }
+
+  blockquote a {
+    color: #007BEE
   }
 
   .content img{
@@ -7966,9 +7977,9 @@
   }
 
   .navbar.is-fixed-bottom, .navbar.is-fixed-top {
-    background-color: rgba(242, 242, 242, .7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(242, 242, 242, 1);
+    /*backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);*/
     left: 0;
     position: fixed;
     right: 0;
@@ -8103,7 +8114,7 @@
   }
 
   .navbar-item {
-    transition: background-color 0.3s;
+    transition: all 0.3s ease-in;
     background-color: none;
     display: block;
     flex-grow: 0;
@@ -8124,23 +8135,63 @@
   }
 
   .navbar-item.is-tab {
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     min-height: 5rem;
-    padding-bottom: calc(0.5rem - 1px);
+    padding-bottom: calc(0.5rem - 2px);
   }
 
+  /*
   .navbar-item.is-tab:focus, .navbar-item.is-tab:hover {
     background-color: transparent;
     border-bottom-color: #007BEE;
   }
+  */
+
+  .navbar-item.is-tab:not(.is-active):before {
+    display: block;
+    content: "";
+    margin-bottom: -2px;
+    border-bottom: 2px solid #007BEE;;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    transition: transform .3s ease-in-out;
+  }
+
+  .navbar-item.is-tab:hover:before {
+    transform: scaleX(1);
+    transform-origin: 0 50%;
+  }
+
+  .content a{
+    position:relative;
+  }
+  .content a::after{
+    content:"";
+    display:block;
+    width: 0;
+    height: 2px;
+    background-color: #007BEE;
+    position:absolute;
+    right: 0;
+    transition:.3s;
+  }
+  .content a:hover::after{
+    width: 100%;
+    left: 0;
+  }
 
   .navbar-item.is-tab.is-active {
+    transition: all 0.3s linear;
     background-color: transparent;
     border-bottom-color: #007BEE;
     border-bottom-style: solid;
-    border-bottom-width: 3px;
+    border-bottom-width: 2px;
     color: #007BEE;
-    padding-bottom: calc(0.5rem - 3px);
+    padding-bottom: calc(0.5rem - 2px);
   }
 
   .navbar-content {
@@ -8844,6 +8895,25 @@
   .tabs a:hover {
     border-bottom-color: #007BEE;
     color: #007BEE;
+  }
+
+  .tabs li:not(.is-active):before {
+    display: block;
+    content: "";
+    margin-bottom: -2px;
+    border-bottom: 2px solid #007BEE;;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    transition: transform .3s ease-in-out;
+  }
+
+  .tabs li:hover:before {
+    transform: scaleX(1);
+    transform-origin: 0 50%;
   }
 
   .tabs li {
