@@ -75,7 +75,7 @@ class UserController extends Controller
         if ($resp->isSuccess() || (env('APP_ENV', 'production') == 'local') ){
             $userData = UserController::getUserData($request->username);
             if(!isset($userData[0]->username))
-                return view('admin.login', ['webData'=> $this->webData, 'error'=>'使用者帳號不存在']);
+                return view('admin.login', ['webData'=> $this->webData, 'error'=>'使用者帳號不存在', 'siteKey' => env('SITE_KEY', '')]);
             elseif(password_verify($request->password, $userData[0]->pw)){
                 session(['username' => $userData[0]->username]);
                 //記錄使用者最後登入的ipAddress / Date

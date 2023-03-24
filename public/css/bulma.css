@@ -305,6 +305,7 @@
 
   .is-author-cover-container {
     overflow: hidden;
+    height: 350px;
     border-radius: 15px 0px 0px 15px;
   }
 
@@ -8354,10 +8355,13 @@
       flex-shrink: 0;
     }
     .navbar-start {
-      padding-left: 1rem;
+      padding-left: 0rem;
+      justify-content: center;
+      width: 100%;
     }
     .navbar-end {
       justify-content: flex-end;
+      min-width: 210px;
       margin-left: auto;
     }
     .navbar-dropdown {
@@ -8412,6 +8416,8 @@
     .navbar > .container .navbar-brand,
     .container > .navbar .navbar-brand {
       margin-left: -.75rem;
+      min-width: 210px;
+
     }
     .navbar > .container .navbar-menu,
     .container > .navbar .navbar-menu {

@@ -52,11 +52,10 @@
                                 <div class="g-recaptcha" data-sitekey="{{ $siteKey }}"></div>
                             </div>
                             <br>
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            @csrf
                             <button class="button is-outlined is-primary is-large is-fullwidth">登入<i class="fa fa-sign-in" aria-hidden="true"></i></button>
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>

@@ -35,9 +35,9 @@
     </head>
     <body class="has-navbar-fixed-top">
         <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
-            <div class="container">
+            <div class="container is-fluid">
                 <div class="navbar-brand">
-                    <a class="navbar-item" style="padding: 0.75rem 1.5rem;" href="{{$webData['webConfig'][13]->tittle}}">
+                    <a class="navbar-item" style="padding: 0.75rem 0rem;" href="{{$webData['webConfig'][13]->tittle}}">
                         <img alt="logo" style="max-height: 50px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                     </a>
                     <!--MibileNavbar-->
@@ -53,12 +53,12 @@
                     <!--Dynamic System Gen-->
                         @foreach($webData['allNav'] as $Nav)
                             @if(($webData['webConfig'][13]->tittle.$Nav->URL)==URL::current())
-                                <a class="navbar-item is-active">{{$Nav->NavigateName}}</a>
+                            <a class="navbar-item is-tab is-active">{{$Nav->NavigateName}}</a>
                             @else
                                 @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
-                                <a class="navbar-item" href="{{$Nav->URL}}">{{$Nav->NavigateName}}</a>
+                                <a class="navbar-item is-tab" href="{{$Nav->URL}}">{{$Nav->NavigateName}}</a>
                                 @else
-                                <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle.$Nav->URL}}">{{$Nav->NavigateName}}</a>
+                                <a class="navbar-item is-tab" href="{{$webData['webConfig'][13]->tittle.$Nav->URL}}">{{$Nav->NavigateName}}</a>
                                 @endif
                             @endif
                         @endforeach
@@ -74,41 +74,40 @@
                     <!-- END -->
                     </div>
                     <div class="navbar-end">
-                        <a class="navbar-item{{ (($webData['webConfig'][13]->tittle.'search') == URL::current()) ? ' is-active' : '' }}" href="{{$webData['webConfig'][13]->tittle.'search'}}">
+                        <a class="navbar-item is-tab {{ (($webData['webConfig'][13]->tittle.'search') == URL::current()) ? ' is-active' : '' }}" href="{{$webData['webConfig'][13]->tittle.'search'}}">
                             <i class="fas fa-search"></i>
                         </a>
                         @if($webData['userData'] == 0)
-                            <div class="navbar-item has-dropdown is-hoverable">
-                                <a class="navbar-link" href="#" style="margin-right: -1.125rem;"><i class="fas fa-user-alt"></i></a>
-                                <div class="navbar-dropdown">
-                                    <a class="navbar-item" href="/login">登入</a>
-                                </div>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" href="#" style="margin-right: -1.125rem;"><i class="fas fa-user-alt"></i></a>
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item" href="/login">登入</a>
                             </div>
+                        </div>
                         @else
-                            <div class="navbar-item has-dropdown is-hoverable">
-                                <a class="navbar-link" style="margin-right: -1.125rem;">
-                                    <figure class="image is-48x48 is-1by1" style="margin-left: auto; margin-right: auto;">
-                                        <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
-                                    </figure>
-                                    </a>
-                                    <div class="navbar-dropdown">
-                                        <a href="/admin" class="navbar-item"><i class="fas fa-cogs"></i>&nbsp創作中心</a>
-                                        <a href="/admin/editPost/new" class="navbar-item"><i class="fas fa-pen"></i>&nbsp寫新文章</a>
-                                        <a href="/admin/editNews/new" class="navbar-item"><i class="fas fa-newspaper"></i>&nbsp發新公告</a>
-                                        <a  href="/admin/mySetting"class="navbar-item"><i class="fas fa-user-cog"></i>&nbsp個人設定</a>
-                                        <hr class="navbar-divider">
-                                        <a href="/logout" class="navbar-item"><i class="fas fa-sign-out-alt"></i>&nbsp登出</a>
-                                    </div>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link" style="margin-right: -1.125rem;">
+                                <figure class="image is-48x48 is-1by1" style="margin-left: auto; margin-right: auto;">
+                                    <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
+                                </figure>
+                            </a>
+                            <div class="navbar-dropdown">
+                                <a href="/admin" class="navbar-item"><i class="fas fa-cogs"></i>&nbsp創作中心</a>
+                                <a href="/admin/editPost/new" class="navbar-item"><i class="fas fa-pen"></i>&nbsp寫新文章</a>
+                                <a href="/admin/editNews/new" class="navbar-item"><i class="fas fa-newspaper"></i>&nbsp發新公告</a>
+                                <a  href="/admin/mySetting"class="navbar-item"><i class="fas fa-user-cog"></i>&nbsp個人設定</a>
+                                <hr class="navbar-divider">
+                                <a href="/logout" class="navbar-item"><i class="fas fa-sign-out-alt"></i>&nbsp登出</a>
                             </div>
+                        </div>
                         @endif
                     </div>
-                </div>
                 </div>
             </div>
         </nav>
         <!-- Main -->
-        <main id="scroll-zone" style="perspective: 1px; min-height: 1000px;">
-            <!-- Breadcrumb -->
+        <main class="pt-4" id="scroll-zone" style="perspective: 1px; min-height: 1000px;">
+            <!-- Breadcrumb
             <div class="container mt-2" style="padding:0 0.75rem; 0 0.75rem" data-scroll-speed="2">
                 <nav class="breadcrumb is-hidden-mobile" aria-label="breadcrumbs">
                     <ul>
@@ -117,12 +116,14 @@
                     </ul>
                 </nav>
             </div>
-            <!-- END -->
-            <div class="container mt-0">
+            END -->
+            <div class="container" data-scroll-speed="2">
                 <div class="block ml-3 mr-3">
                     @section('content')
                     @show
                 </div>
+            </div>
+            <div class="container">
                 <footer class="footer">
                     <div class="columns is-gapless is-vcentered">
                         <div class="column is-4">
@@ -174,8 +175,6 @@
                                 @endif
                             </div>
                         </div>
-
-
                         <div class="column is-4">
                             <p class="has-text-centered">
                                 <img alt="footerLogo" width="320" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
