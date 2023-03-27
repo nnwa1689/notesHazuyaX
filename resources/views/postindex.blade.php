@@ -10,12 +10,12 @@
     <p class="is-size-3">所有文章<span class="has-text-link pl-2">Blog/Post</span></p>
     <p class="is-size-5">這裡，紀錄與收藏著小夥伴們的各種經驗與過程！</p>
 </div>
-<div class="box pb-6">
+<div class="block pb-6">
     <p class="title is-5"><i class="fas fa-tags mr-1"></i>找分類｜系列文章</p>
     <div class="field is-grouped is-grouped-multiline">
             <div class="tags are-medium">
             @foreach($webData['allCategory'] as $category)
-            <a class="tag button is-primary is-outlined" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
+            <a class="button is-outlined is-primary is-rounded tag" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
             @endforeach
             </div>
     </div>

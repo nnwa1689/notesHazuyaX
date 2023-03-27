@@ -15,7 +15,7 @@
             <nav class="level mt-2">
                 <div class="level-left">
                     <div class="level-item">
-                        <a class="button tag is-primary is-outlined is-medium" href="{{$CategoryUrl}}">{{$Category}}</a>
+                        <a class="button tag is-primary is-outlined is-medium is-rounded" href="{{$CategoryUrl}}">{{$Category}}</a>
                     </div>
                     <div class="level-item">
                         <i class="fas fa-calendar-alt"></i>&nbsp;{{$PostDate}}

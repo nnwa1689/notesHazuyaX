@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">
     <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
     <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-        <a class="tag button is-medium is-primary is-outlined" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>
+        <a class="tag button is-medium is-primary is-outlined is-rounded" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>
         <p class="is-size-2 mb-2">{{$postData[0]->PostTittle}}
             @if($webData['userData'] !== 0)
                 <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i>&nbsp;編輯</button>
@@ -67,35 +67,33 @@
         {!! $postData[0]->PostContant !!}
         </div>
     </div>
-    <div class="box p-0" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
-        <div class="columns is-gapless">
-            <div class="column is-3">
-                <div class="is-post-author-container" style="margin-right:auto; margin-left:auto;">
-                    <figure class="image is-1by1" style="margin-left: auto; margin-right: auto;">
-                        <img src="{{$autorData[0]->Avatar}}">
+    <div class="container is-max-desktop mt-6 mb-6">
+        <div class="columns is-variable is-5 p-0 is-align-content-center is-align-items-center" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+            <div class="column is-2">
+                <div class="image is-128x128" style="margin-left:auto; margin-right:auto;">
+                    <figure class="image is-1by1">
+                        <img class="is-rounded" src="{{$autorData[0]->Avatar}}">
                     </figure>
                 </div>
+                <div class="block has-text-centered mt-3">
+                    <a href="mailto:{{$autorData[0]->Email}}" class="mr-4"><i class="far fa-envelope-open"></i></ㄇ>
+                    <a href="/person/{{$autorData[0]->username}}/post/p/1" class="mr-0"><i class="fas fa-file"></i></a>
+                    @if(isset($autorData[0]->Url_Linked) && $autorData[0]->Url_Linked !== "")
+                    <a href="{{$autorData[0]->Url_Linked}}" target="_blank" class="ml-4"><i class="fab fa-linkedin"></i></a>
+                    @endif
+                    @if(isset($autorData[0]->Url_GitHub) && $autorData[0]->Url_GitHub !== "")
+                    <a href="{{$autorData[0]->Url_GitHub}}" target="_blank" class="ml-4 mr-0"><i class="fab fa-github"></i></a>
+                    @endif
+                </div>
             </div>
-            <div class="column is-9 has-text-left p-5">
-                <div class="block p-5 has-text-centered-mobile">
-                    <a class="is-size-3" href="/person/{{$autorData[0]->username}}">{{$autorData[0]->Yourname}}</a>
-                    <br>
-                    <p class="has-text-left limit4rows">
-                        {{$autorData[0]->Signature}}
-                    </p>
-                    <hr>
-                    <div class="buttons has-addons is-centered">
-                        <button class="button is-primary is-inverted is-medium" onclick="window.location.href='mailto:{{$autorData[0]->Email}}'"><i class="far fa-envelope-open"></i></button>
-                        <button class="button is-primary is-inverted is-medium" onclick="window.location.href='/person/{{$autorData[0]->username}}/post/p/1'"><i class="fas fa-file"></i></button>
-                        @if(isset($autorData[0]->Url_Linked) && $autorData[0]->Url_Linked !== "")
-                        <a href="{{$autorData[0]->Url_Linked}}" target="_blank" class="button is-primary is-inverted is-medium"><i class="fab fa-linkedin"></i></a>
-                        @endif
-                        @if(isset($autorData[0]->Url_GitHub) && $autorData[0]->Url_GitHub !== "")
-                        <a href="{{$autorData[0]->Url_GitHub}}" target="_blank" class="button is-primary is-inverted is-medium"><i class="fab fa-github"></i></a>
-                        @endif
-
+            <div class="column is-10">
+                <div class="box">
+                    <div class="block p-4">
+                        <!--<a class="is-size-3" href="/person/{{$autorData[0]->username}}">{{$autorData[0]->Yourname}}</a>-->
+                        <p class="has-text-centered limit3rows">
+                            {{$autorData[0]->Signature}}
+                        </p>
                     </div>
-
                 </div>
             </div>
         </div>
