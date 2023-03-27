@@ -296,7 +296,7 @@ class AdminController extends Controller
 
                 if(!empty($_POST['newName']) && !empty($_POST['newOrder'])){
 
-                    DB::insert("INSERT INTO BClasses (ClassName,SorH,OrderID) VALUES ( ?, 'show', ? )",[$_POST['newName'], $_POST['newOrder']]);
+                    DB::insert("INSERT INTO BClasses (ClassName, SorH, OrderID, Short_Intro, Long_Intro) VALUES ( ?, 'show', ?, '', '' )",[$_POST['newName'], $_POST['newOrder']]);
 
                 }
 
