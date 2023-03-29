@@ -6,15 +6,10 @@
 @endsection
 @section('content')
     <div class="columns is-gapless">
-        <div class="column is-9">
+        <div class="column is-9 mr-4">
             @if($webData['webConfig'][26]->tittle !== "")
             <div class="is-homeBanner mb-2">
                 <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][25]->tittle}}"><img alt="{{$webData['webConfig'][25]->tittle}}" class="is-homeBanner" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][26]->tittle}}"></a>
-            </div>
-            @endif
-            @if($webData['webConfig'][28]->tittle !== "")
-            <div class="is-homeBanner mb-2">
-                <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][27]->tittle}}"><img alt="{{$webData['webConfig'][27]->tittle}}" class="is-homeBanner" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][28]->tittle}}"></a>
             </div>
             @endif
         </div>
@@ -29,6 +24,13 @@
                 <button onclick="location.href='{{$webData['webConfig'][13]->tittle}}whatsnews'" class="button is-link is-outlined is-fullwidth">更多公告</button>
             </div>
         </div>
+    </div>
+    <div class="block">
+        @if($webData['webConfig'][28]->tittle !== "")
+        <div class="is-homeBanner mb-1">
+            <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][27]->tittle}}"><img alt="{{$webData['webConfig'][27]->tittle}}" class="is-homeBanner" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][28]->tittle}}"></a>
+        </div>
+        @endif
     </div>
     <div data-scroll data-scroll-speed="1" data-scroll-delay="1.5" style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-2">
         @foreach($allPosts as $post)

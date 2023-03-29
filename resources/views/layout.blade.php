@@ -126,7 +126,7 @@
             <div class="container is-fluid">
                 <footer class="footer ml-2 mr-2">
                     <div class="columns">
-                        <div class="column is-9 is-justify-content-center">
+                        <div class="column is-10">
                             <div class="block has-text-centered-mobile">
                                 <p class="is-size-3 mb-3">在社群平台找到我們不同樣貌：</p>
                                 @if(strlen($webData['webConfig'][22]->tittle) > 0)
@@ -186,16 +186,12 @@
                             </div>
                         </div>
                         <div class="column">
-                            <div class="block is-align-content-center">
-                                <p class="has-text-right has-text-centered-mobile">
-                                    <img alt="footerLogo" width="256" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                            <div class="block">
+                                <p class="has-text-centered">
+                                    <img alt="footerLogo" width="200" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                                 </p>
                                 <p class="has-text-centered">
-                                    <div class="rows has-text-right has-text-centered-mobile">
-                                        <p class="">
-                                            {!!$webData['webConfig'][3]->tittle!!}
-                                        </p>
-                                    </div>
+                                    {!!$webData['webConfig'][3]->tittle!!}
                                 </p>
                             </div>
                         </div>

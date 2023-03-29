@@ -10,11 +10,12 @@
 <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
     <p class="is-size-3">{{$WorkDetail[0]->WorksName}}</p>
     <p class="is-size-5">{{$WorkDetail[0]->Customer}}</p>
+    <hr/>
     <p class="is-size-5">{{$WorkDetail[0]->ShortIntro}}</p>
 </div>
     <div class="columns is-gapless">
-        <div class="column mt-2 mr-4 has-text-centered-mobile">
-            <a data-scroll data-scroll-speed="3" data-scroll-delay="1.5" href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded mr-0 mb-6">
+        <div class="column mb-5 mr-4 has-text-centered-mobile">
+            <a data-scroll data-scroll-speed="2" data-scroll-delay="1.5" href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded mr-0 mb-6 mt-3">
                 查看網站<br/><i class="fas fa-arrow-right"></i>
             </a>
             @foreach($WorkDetail as $value)

@@ -138,17 +138,18 @@
 
     @if($postData[0]->Reply=="Yes")
     <div class="block">
-
-    </div>
-
-    <div class="box">
         <script src="https://utteranc.es/client.js"
-            repo="https://github.com/nnwa1689/NoteshazuyaBlogComment.git"
+            repo="nnwa1689/NoteshazuyaBlogComment"
             issue-term="pathname"
             theme="github-light"
             crossorigin="anonymous"
             async>
         </script>
+    </div>
+
+    <!--
+        //如果下個月都沒問題就可以換掉了
+    <div class="box">
         <div id="disqus_thread"></div>
         <script>
         /**
@@ -167,6 +168,7 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
+    -->
     @endif
 
     <div class="box" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">

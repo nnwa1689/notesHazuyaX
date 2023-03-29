@@ -7,7 +7,7 @@
 @endsection
 @section('content')
 <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-    <p class="is-size-3">作品一覽<span class="has-text-link pl-2">Works</span></p>
+    <p class="is-size-3">作品集<span class="has-text-link pl-2">Works</span></p>
     <p class="is-size-5">午後的歡笑之中，大家突然回憶起了這段時間小夥伴們一起經歷了什麼！</p>
 </div>
 <div class="columns is-multiline is-mobile is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem; align-items: end;">

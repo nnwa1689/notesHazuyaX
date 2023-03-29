@@ -51,6 +51,11 @@
 
   /***********/
 
+  .utterances {
+    width: 100%;
+    max-width: 960px !important;
+}
+
   .limit3rows {
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -96,6 +101,8 @@
     transform: scale(1.0);
     padding: 0;
     border-radius: 15px;
+    width: 100%;
+    max-height: 320px;
   }
 
   .is-homeBanner:hover {

@@ -51,7 +51,7 @@ class PostController extends Controller
         if(!preg_match("/^([0-9]+)$/", $pageNumber) || $pageNumber < 0 || !isset($pageNumber)){
             $pageNumber=1;
         }
-        $title='所有文章 - ';
+        $title='讀文章 - ';
         $data = PostController::getAllPublicPost($pageNumber);
         $postnum = ceil(($this->getAllPublicPostNum()[0]->num)/10);
         return view("postindex", ['webData' => $this->webData,'allPosts'=>$data, 'nowpageNumber'=>$pageNumber, 'postNum' => $postnum, 'title'=>$title]);

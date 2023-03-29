@@ -7,7 +7,7 @@
 @endsection
 @section('content')
 <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-    <p class="is-size-3">所有文章<span class="has-text-link pl-2">Blog/Post</span></p>
+    <p class="is-size-3">讀文章<span class="has-text-link pl-2">Blog</span></p>
     <p class="is-size-5">這裡，紀錄與收藏著小夥伴們的各種經驗與過程！</p>
 </div>
 <div class="block pb-6">
