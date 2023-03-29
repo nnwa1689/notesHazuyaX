@@ -137,7 +137,18 @@
     </div>
 
     @if($postData[0]->Reply=="Yes")
+    <div class="block">
+
+    </div>
+
     <div class="box">
+        <script src="https://utteranc.es/client.js"
+            repo="https://github.com/nnwa1689/NoteshazuyaBlogComment.git"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+        </script>
         <div id="disqus_thread"></div>
         <script>
         /**
