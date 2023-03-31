@@ -97,43 +97,43 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="columns is-multiline is-gapless" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
-        <!--
-        <div class="column is-12">
-        @if(isset($leftPost[0]))
-        <div class="is-homeBanner">
-            <button style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$leftPost[0]->PostId}}'" class="button is-white is-fullwidth is-large">
-                <div class="columns">
-                    <div class="column">
-                        <p class="title is-4">
-                            <i class="fas fa-angle-left ml-1" aria-hidden="true"></i>上一篇
-                        </p>
-                        <p class="title is-4 limit1rows">
-                            {{$leftPost[0]->PostTittle}}
-                        </p>
-                    </div>
-                </div>
-            </button>
-        </div>
-        @endif
-        </div>
-        -->
-        @if(isset($rightPost[0]))
-        <div class="column is-12">
+        
+        <div class="columns is-multiline is-gapless" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+            <!--
+            <div class="column is-12">
+            @if(isset($leftPost[0]))
             <div class="is-homeBanner">
-                <button style="min-height: 130px; border-radius: 15px;" onclick="location.href='{{$rightPost[0]->PostId}}'" class="button is-white is-fullwidth is-multiline is-large pt-3 pb-3">
-                    <p class="subtitle is-4 mb-4">
-                        下一篇<i class="fas fa-angle-right ml-1" aria-hidden="true"></i>
-                    </p>
-                    <p class="subtitle is-4 limit1rows">
-                        {{$rightPost[0]->PostTittle}}
-                    </p>
+                <button style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$leftPost[0]->PostId}}'" class="button is-white is-fullwidth is-large">
+                    <div class="columns">
+                        <div class="column">
+                            <p class="title is-4">
+                                <i class="fas fa-angle-left ml-1" aria-hidden="true"></i>上一篇
+                            </p>
+                            <p class="title is-4 limit1rows">
+                                {{$leftPost[0]->PostTittle}}
+                            </p>
+                        </div>
+                    </div>
                 </button>
             </div>
+            @endif
+            </div>
+            -->
+            @if(isset($rightPost[0]))
+            <div class="column is-12">
+                <div class="is-homeBanner">
+                    <button style="min-height: 130px; border-radius: 15px;" onclick="location.href='{{$rightPost[0]->PostId}}'" class="button is-white is-fullwidth is-multiline is-large pt-3 pb-3">
+                        <p class="subtitle is-4 mb-4">
+                            下一篇<i class="fas fa-angle-right ml-1" aria-hidden="true"></i>
+                        </p>
+                        <p class="subtitle is-4 limit1rows">
+                            {{$rightPost[0]->PostTittle}}
+                        </p>
+                    </button>
+                </div>
+            </div>
+            @endif
         </div>
-        @endif
     </div>
 
     @if($postData[0]->Reply=="Yes")

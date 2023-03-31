@@ -187,21 +187,18 @@
   .is-works-button {
     transition: all 0.3s ;
     transform: scale(1.0);
-    height: 200px !important;
-    width: 200px !important;
+    height: 250px !important;
+    width: 250px !important;
     border-width: 2px !important;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     font-size: 18pt !important;
   }
 
   .is-works-button:hover {
     transition: all 0.3s ;
-    transform: scale(1.10);
+    transform: scale(1.20) !important;
     border-width: 5px !important;
-    border-color: #FFFFFF !important;
-    border-width: 10px;
   }
 
   .is-author-item {
@@ -7339,7 +7336,7 @@
 
   .navbar {
     border-top-style: solid;
-    border-top-width: 4px;
+    border-top-width: 2px;
     border-color: #007BEE;
     min-height: 5rem;
     position: relative;
@@ -7350,7 +7347,7 @@
     background-color: none;
     color: #0a0a0a;
     font-size: 18px;
-    box-shadow: 0px 1px 0px rgb(170 180 190 / 30%);
+    box-shadow: 0px 0px 0px rgb(170 180 190 / 30%);
   }
 
   .navbar.is-white .navbar-brand > .navbar-item,
