@@ -20,32 +20,34 @@
         {!! $WorkDetail[0] -> Intro !!}
     </div>
     <div class="block has-text-centered">
-        <a data-scroll data-scroll-speed="2" data-scroll-delay="1.5" href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded mr-0 mb-6 mt-3">
+        <a href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded mr-0 mb-6 mt-3">
             觀賞作品<br/><i class="fas fa-arrow-right"></i>
         </a>
-        <p class="title is-4 m-5">Presented by</p>
-        <div class="block">
-            @foreach($WorkDetail as $value)
-            @if($value -> StaffName !== "")
-            <div class="columns is-variable is-mobile is-5 p-0 is-align-content-center is-align-items-center" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
-                <div class="column is-3 has-text-right">
-                    <div class="image is-64x64">
-                        <figure class="image is-1by1">
-                            <img class="is-rounded" src="{{$value -> StaffImage}}">
-                        </figure>
+        <p class="title is-4 m-5" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">Presented by</p>
+        <div class="columns" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+            <div class="column is-5 is-justify-content-center" style="margin-left:auto; margin-right: auto;">
+                @foreach($WorkDetail as $value)
+                @if($value -> StaffName !== "")
+                <div class="columns is-variable is-mobile p-0">
+                    <div class="column is-4">
+                        <div class="image is-96x96">
+                            <figure class="image is-1by1">
+                                <img class="is-rounded" src="{{$value -> StaffImage}}">
+                            </figure>
+                        </div>
                     </div>
-                </div>
-                <div class="column is-9">
-                    <div class="box">
-                        <div class="block p-1 has-text-left">
-                            <a class="has-text-weight-bold is-size-6 m-0" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
-                            <p class="is-size-6 m-0">{{ $value -> StaffTitle }}</p>
+                    <div class="column is-8">
+                        <div class="box">
+                            <div class="block p-1 has-text-left">
+                                <a class="has-text-weight-bold is-size-6 m-0" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
+                                <p class="is-size-6 m-0">{{ $value -> StaffTitle }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                @endif
+                @endforeach
             </div>
-            @endif
-            @endforeach
         </div>
         <nav class="level mt-6">
             <div class="level-item has-text-centered">

@@ -90,14 +90,14 @@
                 <div class="box">
                     <div class="block p-4">
                         <!--<a class="is-size-3" href="/person/{{$autorData[0]->username}}">{{$autorData[0]->Yourname}}</a>-->
-                        <p class="has-text-centered limit3rows">
+                        <p class="has-text-left limit3rows">
                             {{$autorData[0]->Signature}}
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="columns is-multiline is-gapless" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
             <!--
             <div class="column is-12">
