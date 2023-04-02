@@ -34,7 +34,7 @@ class WorksController extends Controller
             abort(404);
             return;
         }
-        $title = "作品一覽 - ";
+        $title = "作品集 - ";
         return view('worksList',['WorksList'=>$WorksList, 'webData'=>$this->webData, 'title' => $title]);
     }
 

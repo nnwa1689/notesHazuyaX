@@ -12,16 +12,16 @@
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">
     <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
     <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-        <a class="tag button is-medium is-primary is-outlined is-rounded" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>
+        <div class="columns is-multiline is-justify-content-center is-align-content-center">
+            <p class="is-size-6 mr-3"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</p>
+            <p class="is-size-6 mr-3"><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</p>
+            <a class="tag button is-primary is-outlined is-rounded is-small" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>
+        </div>
         <p class="is-size-2 mb-2">{{$postData[0]->PostTittle}}
             @if($webData['userData'] !== 0)
-                <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i>&nbsp;編輯</button>
+                <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i></button>
             @endif
         </p>
-        <div class="columns is-multiline is-justify-content-center">
-            <p class="is-size-6 mr-2"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</p>
-            <p class="is-size-6"><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</p>
-        </div>
 
         <!--
         <nav class="level mb-2">
@@ -76,8 +76,8 @@
                     </figure>
                 </div>
                 <div class="block has-text-centered mt-3">
-                    <a href="mailto:{{$autorData[0]->Email}}" class="mr-4"><i class="far fa-envelope-open"></i></ㄇ>
-                    <a href="/person/{{$autorData[0]->username}}/post/p/1" class="mr-0"><i class="fas fa-file"></i></a>
+                    <a href="mailto:{{$autorData[0]->Email}}"><i class="far fa-envelope-open"></i></ㄇ>
+                    <a href="/person/{{$autorData[0]->username}}/post/p/1" class="ml-4"><i class="fas fa-file"></i></a>
                     @if(isset($autorData[0]->Url_Linked) && $autorData[0]->Url_Linked !== "")
                     <a href="{{$autorData[0]->Url_Linked}}" target="_blank" class="ml-4"><i class="fab fa-linkedin"></i></a>
                     @endif

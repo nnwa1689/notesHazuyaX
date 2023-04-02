@@ -17,6 +17,9 @@
     'PageType' => 'Intro',
     'Author' => $userData[0]->Yourname,
     'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$userData[0]->Avatar,
+    'Email' => $userData[0]->Email,
+    'Github' => $userData[0]->Url_GitHub,
+    'Linked' => $userData[0]->Url_Linked
     ])
 @endcomponent
     <div class="container is-max-desktop content" style="min-height: 300px;">

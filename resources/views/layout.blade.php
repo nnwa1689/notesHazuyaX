@@ -68,7 +68,7 @@
                             <a class="navbar-link" href="{{$webData['webConfig'][13]->tittle.'page/about'}}">關於</a>
                             <div class="navbar-dropdown">
                                 <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item">關於我們</a>
-                                <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">作者介紹</a>
+                                <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">小夥伴們</a>
                             </div>
                         </div>
                     <!-- END -->
@@ -92,10 +92,10 @@
                                 </figure>
                             </a>
                             <div class="navbar-dropdown">
-                                <a href="/admin" class="navbar-item"><i class="fas fa-cogs"></i>&nbsp創作中心</a>
-                                <a href="/admin/editPost/new" class="navbar-item"><i class="fas fa-pen"></i>&nbsp寫新文章</a>
-                                <a href="/admin/editNews/new" class="navbar-item"><i class="fas fa-newspaper"></i>&nbsp發新公告</a>
-                                <a  href="/admin/mySetting"class="navbar-item"><i class="fas fa-user-cog"></i>&nbsp個人設定</a>
+                                <a href="/admin" class="navbar-item"><i class="fas fa-cogs"></i>&nbsp創作</a>
+                                <a href="/admin/editPost/new" class="navbar-item"><i class="fas fa-pen"></i>&nbsp文章</a>
+                                <a href="/admin/editNews/new" class="navbar-item"><i class="fas fa-newspaper"></i>&nbsp公告</a>
+                                <a  href="/admin/mySetting"class="navbar-item"><i class="fas fa-user-cog"></i>&nbsp設定</a>
                                 <hr class="navbar-divider">
                                 <a href="/logout" class="navbar-item"><i class="fas fa-sign-out-alt"></i>&nbsp登出</a>
                             </div>

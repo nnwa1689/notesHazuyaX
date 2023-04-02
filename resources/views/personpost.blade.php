@@ -14,9 +14,12 @@
     'Signature' => $userData[0]->Signature,
     'AuthorIntroUrl' => $webData['webConfig'][13]->tittle.'person/'.$userData[0]->username,
     'AuthorPostUrl' => $webData['webConfig'][13]->tittle.'person/'.$userData[0]->username.'/post/p/1',
-    'PageType' => 'Post',
+    'PageType' => 'Intro',
     'Author' => $userData[0]->Yourname,
     'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$userData[0]->Avatar,
+    'Email' => $userData[0]->Email,
+    'Github' => $userData[0]->Url_GitHub,
+    'Linked' => $userData[0]->Url_Linked
     ])
 @endcomponent
 <div class="container">
