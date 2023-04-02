@@ -13,11 +13,11 @@
                 </div>
                 <div class="block has-text-centered mt-3">
                     <a href="mailto:{{$Email}}"><i class="far fa-envelope-open"></i></a>
-                    @if(isset($Url_Linked) && $Url_Linked !== "")
-                    <a href="{{$Url_Linked}}" target="_blank" class="ml-4"><i class="fab fa-linkedin"></i></a>
+                    @if(isset($Linked) && $Linked !== "")
+                    <a href="{{$Linked}}" target="_blank" class="ml-4"><i class="fab fa-linkedin"></i></a>
                     @endif
-                    @if(isset($Url_GitHub) && $Url_GitHub !== "")
-                    <a href="{{$Url_GitHub}}" target="_blank" class="ml-4 mr-0"><i class="fab fa-github"></i></a>
+                    @if(isset($Github) && $Github !== "")
+                    <a href="{{$Github}}" target="_blank" class="ml-4 mr-0"><i class="fab fa-github"></i></a>
                     @endif
                 </div>
             </div>
