@@ -27,6 +27,7 @@
     </from>
 </div>
 @if(!empty($data) && count($data) > 0 && strlen($_GET['search-text']) > 0)
+<div class="columns is-multiline is-mobile is-gapless is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
     @foreach($data as $post)
         @component('compoments.postitem',
             ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
@@ -43,8 +44,9 @@
             ])
         @endcomponent
     @endforeach
+</div>
     <br>
-    <div class="box">
+    <div class="block">
         {{ $data->links('vendor.pagination.pagSearch') }}
     </div>
     <p></p>

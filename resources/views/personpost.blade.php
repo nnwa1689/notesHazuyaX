@@ -23,23 +23,25 @@
     ])
 @endcomponent
 <div class="container">
-    @foreach($allPosts as $post)
-        @component('compoments.postitem',
-            ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
-            'CoverImage' => $post->CoverImage,
-            'PostTittle' => $post->PostTittle,
-            'PostContant' => $post->PostContant,
-            'Category' => $post->ClassName,
-            'CategoryUrl' => $webData['webConfig'][13]->tittle."category/".$post->ClassId,
-            'PostDate' => $post->PostDate,
-            'ReadTime' => $post->ReadTime,
-            'Author' => '',
-            'AuthorAvatarUrl' => '',
-            'AuthorUrl' => ''
-            ])
-        @endcomponent
-    @endforeach
-    <div class="box">
+    <div class="columns is-multiline is-mobile is-gapless is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
+        @foreach($allPosts as $post)
+            @component('compoments.postitem',
+                ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
+                'CoverImage' => $post->CoverImage,
+                'PostTittle' => $post->PostTittle,
+                'PostContant' => $post->PostContant,
+                'Category' => $post->ClassName,
+                'CategoryUrl' => $webData['webConfig'][13]->tittle."category/".$post->ClassId,
+                'PostDate' => $post->PostDate,
+                'ReadTime' => $post->ReadTime,
+                'Author' => '',
+                'AuthorAvatarUrl' => '',
+                'AuthorUrl' => ''
+                ])
+            @endcomponent
+        @endforeach
+    </div>
+    <div class="block">
         {{ $allPosts->links('vendor.pagination.default') }}
     </div>
     <p></p>

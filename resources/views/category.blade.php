@@ -28,6 +28,7 @@
         </li>
     </ul>
 </div>
+<div class="columns is-multiline is-mobile is-gapless is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
 @foreach($allPosts as $post)
     @component('compoments.postitem',
             ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
@@ -44,7 +45,8 @@
             ])
     @endcomponent
 @endforeach
-<div class="box">
+</div>
+<div class="block">
     {{ $allPosts->links('vendor.pagination.default') }}
 </div>
 <p></p>
