@@ -7,10 +7,11 @@
 @endsection
 @section('content')
 @parent
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-    <p class="is-size-3">搜尋文章</p>
+<div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6 mt-3">
+    <p class="title is-1 has-text-left">搜尋：{{ !empty($_GET['search-text']) == 1 ? $_GET['search-text'] : "" }}
+    </p>
 </div>
-<div class="box content">
+<div class="content">
     <form id="searchForm" class="field has-addons" action="/search/q" method="get">
         <input class="input" type="hidden" id="page" name="page" value="1">
         <div class="control is-expanded">
@@ -51,7 +52,7 @@
     </div>
     <p></p>
 @else
-<div class="box" style="min-height: 300px;">
+<div style="min-height: 300px;">
     <p class="has-text-centered is-size-4">尚無相關結果</p>
 </div>
 @endif

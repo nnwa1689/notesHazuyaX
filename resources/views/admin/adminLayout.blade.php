@@ -23,9 +23,9 @@
     </script>
 </head>
 
-<body class="has-navbar-fixed-top">
+<body class="">
     <!-- START NAV -->
-    <nav class="navbar is-white is-fixed-top">
+    <nav class="navbar is-white">
         <div class="container" style="padding: 0rem 0.5rem">
             <div class="navbar-brand">
                 <a class="navbar-item brand-text" href="/">

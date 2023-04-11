@@ -1,4 +1,4 @@
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" onclick="window.location.href='{{ $url }}'" class="is-post-item">
+<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" onclick="window.location.href='{{ $url }}'" class="is-post-item mb-3">
     @if(isset($CoverImage) && !empty($CoverImage))
     <img alt="{{$PostTittle}}" class="image" src="{{$CoverImage}}">
     @else
@@ -20,6 +20,6 @@
     @endif
     <br/>
     <a class="button post-image-tag is-primary is-outlined is-rounded is-medium">
-        <span>{{ strip_tags(Str::limit($PostTittle, 30)) }}</span>
+        <span>{{ strip_tags(Str::limit($PostTittle, 25)) }}</span>
     </a>
 </div>

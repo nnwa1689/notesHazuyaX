@@ -7,10 +7,10 @@
 @endsection
 @section('content')
 @parent
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-    <p class="is-size-3">{{$data[0]->PageName}}</p>
+<div data-scroll data-scroll-speed="1" class="has-text-left mb-6 mt-3">
+    <p data-scroll data-scroll-speed="-1" class="title is-1">{{$data[0]->PageName}}</p>
 </div>
-<div class="box content">
+<div class="block content">
     {!! $data[0]->PageContant !!}
 </div>
 <p></p>

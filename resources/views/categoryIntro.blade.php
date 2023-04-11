@@ -7,9 +7,8 @@
     <li class="is-active"><a href="#" aria-current="page">{{$detail[0]->ClassName}}</a></li>
 @endsection
 @section('content')
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-    <p class="is-size-3">{{$detail[0]->ClassName}}</p>
-    <p class="is-size-6"><i class="fas fa-book"></i>&nbsp;共 {{ $count }} 篇文章閱讀</p>
+<div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6 mt-3">
+    <p class="title is-1 has-text-left">{{$detail[0]->ClassName}}</p>
     <p class="is-size-5">{{$detail[0]->Short_Intro}}</p>
 </div>
 <div class="tabs is-centered is-medium is-fullwidth">

@@ -6,9 +6,9 @@
     <li class="is-active"><a href="#" aria-current="page">作者介紹</a></li>
 @endsection
 @section('content')
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-    <p class="is-size-3">小夥伴們<span class="has-text-link is-size-3 pl-3">Members</span></p>
-    <p class="is-size-5">感到孤單的時候，總是能在這裡找到屬於自己的地方</p>
+<div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-3">
+    <p class="title is-1 has-text-left">小夥伴<span class="has-text-link">MEMBERS</span></p>
+    <p class="is-size-5 has-text-left">這裡不會感到孤單，因為總是能在這裡找到屬於自己的地方</p>
 </div>
 <div style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-0 is-justify-content-center">
     @foreach($userData as $User)

@@ -50,63 +50,47 @@
                 </div>
                 <div id="MainNavbar" class="navbar-menu">
                     <div class="navbar-start">
-                    <!--Dynamic System Gen-->
-                        @foreach($webData['allNav'] as $Nav)
-                            @if(($webData['webConfig'][13]->tittle.$Nav->URL)==URL::current())
-                            <a class="navbar-item is-tab is-active">{{$Nav->NavigateName}}</a>
-                            @else
+                    </div>
+                    <div class="navbar-end">
+                        <div class="navbar-item has-dropdown is-hoverable dropdown is-right">
+                            <a class="navbar-link is-arrowless" href="#"><i class="fas fa-stream"></i></a>
+                            <div class="navbar-dropdown dropdown-menu">
+                            <!--Dynamic System Gen-->
+                            @foreach($webData['allNav'] as $Nav)
                                 @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
                                 <a class="navbar-item is-tab" href="{{$Nav->URL}}">{{$Nav->NavigateName}}</a>
                                 @else
                                 <a class="navbar-item is-tab" href="{{$webData['webConfig'][13]->tittle.$Nav->URL}}">{{$Nav->NavigateName}}</a>
                                 @endif
-                            @endif
-                        @endforeach
-                    <!--Dynamic END-->
-                    <!-- Flex -->
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="{{$webData['webConfig'][13]->tittle.'page/about'}}">關於</a>
-                            <div class="navbar-dropdown">
-                                <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item">關於我們</a>
-                                <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item">小夥伴們</a>
-                            </div>
-                        </div>
-                    <!-- END -->
-                    </div>
-                    <div class="navbar-end">
-                        <a class="navbar-item is-tab {{ (($webData['webConfig'][13]->tittle.'search') == URL::current()) ? ' is-active' : '' }}" href="{{$webData['webConfig'][13]->tittle.'search'}}">
-                            <i class="fas fa-search"></i>
-                        </a>
-                        @if($webData['userData'] == 0)
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="#" style="margin-right: -1.125rem;"><i class="fas fa-user-alt"></i></a>
-                            <div class="navbar-dropdown">
-                                <a class="navbar-item" href="/login">登入</a>
-                            </div>
-                        </div>
-                        @else
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" style="margin-right: -1.125rem;">
-                                <figure class="image is-48x48 is-1by1" style="margin-left: auto; margin-right: auto;">
-                                    <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
-                                </figure>
-                            </a>
-                            <div class="navbar-dropdown">
-                                <a href="/admin" class="navbar-item"><i class="fas fa-cogs"></i>&nbsp創作</a>
-                                <a href="/admin/editPost/new" class="navbar-item"><i class="fas fa-pen"></i>&nbsp文章</a>
-                                <a href="/admin/editNews/new" class="navbar-item"><i class="fas fa-newspaper"></i>&nbsp公告</a>
-                                <a  href="/admin/mySetting"class="navbar-item"><i class="fas fa-user-cog"></i>&nbsp設定</a>
+                            @endforeach
+                            <!--Dynamic END-->
+                            <!--Flex-->
+                                <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item is-tab">關於</a>
+                                <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item is-tab">小夥伴</a>
+                            <!-- END-->
                                 <hr class="navbar-divider">
-                                <a href="/logout" class="navbar-item"><i class="fas fa-sign-out-alt"></i>&nbsp登出</a>
+                            @if($webData['userData'] == 0)
+                                <a class="navbar-item is-tab" href="/login">登入</a>
+                            @else
+                                <a href="/admin" class="navbar-item is-tab"><i class="fas fa-cogs mr-1"></i>創作</a>
+                                <a href="/logout" class="navbar-item is-tab">
+                                    <div class="image is-32x32 mr-1">
+                                        <figure class="image is-1by1">
+                                            <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
+                                        </figure>
+                                    </div>登出
+                                </a>
+                            @endif
                             </div>
                         </div>
-                        @endif
                     </div>
                 </div>
             </div>
         </nav>
         <!-- Main -->
-        <main class="pt-4 pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;">
+        <main class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;">
+        @section('herocontent')
+        @show
             <!-- Breadcrumb
             <div class="container mt-2" style="padding:0 0.75rem; 0 0.75rem" data-scroll-speed="2">
                 <nav class="breadcrumb is-hidden-mobile" aria-label="breadcrumbs">
@@ -124,7 +108,7 @@
                 </div>
             </div>
             <div class="container is-fluid">
-                <footer class="footer ml-2 mr-2">
+                <footer class="footer">
                     <div class="columns">
                         <div class="column is-10">
                             <div class="block has-text-centered-mobile">

@@ -6,12 +6,11 @@
     <li class="is-active"><a href="#" aria-current="page">所有文章</a></li>
 @endsection
 @section('content')
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-    <p class="is-size-3">讀文章<span class="has-text-link pl-2">Blog</span></p>
-    <p class="is-size-5">這裡，紀錄與收藏著小夥伴們的各種經驗與過程！</p>
+<div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6 mt-3">
+    <p class="title is-1 has-text-left">雜記<span class="has-text-link pl-2">BLOG</span></p>
+    <p class="is-size-5 has-text-left">這裡，紀錄與收藏著小夥伴們的各種經驗與過程！</p>
 </div>
-<div class="block pb-6">
-    <p class="title is-5"><i class="fas fa-tags mr-1"></i>找分類｜系列文章</p>
+<div class="block pt-3 pb-3">
     <div class="field is-grouped is-grouped-multiline">
             <div class="tags are-medium">
             @foreach($webData['allCategory'] as $category)

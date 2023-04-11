@@ -6,9 +6,9 @@
     <li class="is-active"><a href="#" aria-current="page">作品一覽</a></li>
 @endsection
 @section('content')
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-    <p class="is-size-3">作品集<span class="has-text-link pl-2">Works</span></p>
-    <p class="is-size-5">午後的歡笑之中，大家突然回憶起了這段時間小夥伴們一起經歷了什麼！</p>
+<div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-3 mt-3">
+    <p class="title is-1 has-text-left">作品集<span class="has-text-link pl-2">Works</span></p>
+    <p class="is-size-5 has-text-left">午後的歡笑之中，大家突然回憶起了這段時間小夥伴們一起經歷了什麼！</p>
 </div>
 <div class="columns is-multiline is-mobile is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem; align-items: end;">
 @php($i = 1)
