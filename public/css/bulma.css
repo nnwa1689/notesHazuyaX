@@ -7523,19 +7523,57 @@
     -webkit-backdrop-filter: blur(10px);
   }
 
+  @keyframes shake {
+  0% {
+    transform: translateY(-100%);
+  }
+  10% {
+    transform: translateY(-90%);
+  }
+  20% {
+    transform: translateY(-80%);
+  }
+  30% {
+    transform: translateY(-70%);
+  }
+  40% {
+    transform: translateY(-60%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  60% {
+    transform: translateY(-40%);
+  }
+  70% {
+    transform: translateY(-30%);
+  }
+  80% {
+    transform: translateY(0%);
+  }
+  90% {
+    transform: translateY(-20%);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
   .fullMenu a{
     color: #F2E3DB;
   }
   
   .is-on { 
-    transition: all 0.3s ease-in-out;
+    animation: shake 0.3s ease-out;
+    animation-fill-mode: forwards;
     display: table !important;
     background-color: rgb(38 58 41 / 85%) !important;
   }
 
   .is-navbar-toggle-on {
-    transition: all 0.3s ease-in-out;
     transform: rotate(45deg);
+    transition: all 0.3s ease-in-out;
   }
   
 
