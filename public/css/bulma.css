@@ -7529,50 +7529,80 @@
     border-bottom-left-radius: 9999999999%;
     border-bottom-right-radius: 9999999999%;
   }
+  5% {
+    transform: translateY(-95%);
+  }
   10% {
     transform: translateY(-90%);
     border-bottom-left-radius: 999999999%;
     border-bottom-right-radius: 999999999%;
+  }
+  15% {
+    transform: translateY(-85%);
   }
   20% {
     transform: translateY(-80%);
     border-bottom-left-radius: 99999999%;
     border-bottom-right-radius: 99999999%;
   }
+  25% {
+    transform: translateY(-75%);
+  }
   30% {
     transform: translateY(-70%);
     border-bottom-left-radius: 9999999%;
     border-bottom-right-radius: 9999999%;
+  }
+  35% {
+    transform: translateY(-65%);
   }
   40% {
     transform: translateY(-60%);
     border-bottom-left-radius: 999999%;
     border-bottom-right-radius: 999999%;
   }
+  45% {
+    transform: translateY(-55%);
+  }
   50% {
     transform: translateY(-50%);
     border-bottom-left-radius: 99999%;
     border-bottom-right-radius: 99999%;
+  }
+  55% {
+    transform: translateY(-45%);
   }
   60% {
     transform: translateY(-40%);
     border-bottom-left-radius: 9999%;
     border-bottom-right-radius: 9999%;
   }
+  65% {
+    transform: translateY(-35%);
+  }
   70% {
     transform: translateY(-30%);
     border-bottom-left-radius: 999%;
     border-bottom-right-radius: 999%;
+  }
+  75% {
+    transform: translateY(-25%);
   }
   80% {
     transform: translateY(-20%);
     border-bottom-left-radius: 99%;
     border-bottom-right-radius: 99%;
   }
+  85% {
+    transform: translateY(-15%);
+  }
   90% {
     transform: translateY(-10%);
     border-bottom-left-radius: 9%;
     border-bottom-right-radius: 9%;
+  }
+  95% {
+    transform: translateY(-5%);
   }
   100% {
     transform: translateY(0%);
@@ -7585,7 +7615,7 @@
   }
   
   .is-on { 
-    animation: shake 0.5s ease-in-out;
+    animation: shake 0.3s ease-in-out;
     animation-fill-mode: forwards;
     display: table !important;
     background-color: rgb(38 58 41 / 85%) !important;
