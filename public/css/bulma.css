@@ -7526,33 +7526,53 @@
   @keyframes shake {
   0% {
     transform: translateY(-100%);
+    border-bottom-left-radius: 9999999999%;
+    border-bottom-right-radius: 9999999999%;
   }
   10% {
     transform: translateY(-90%);
+    border-bottom-left-radius: 999999999%;
+    border-bottom-right-radius: 999999999%;
   }
   20% {
     transform: translateY(-80%);
+    border-bottom-left-radius: 99999999%;
+    border-bottom-right-radius: 99999999%;
   }
   30% {
     transform: translateY(-70%);
+    border-bottom-left-radius: 9999999%;
+    border-bottom-right-radius: 9999999%;
   }
   40% {
     transform: translateY(-60%);
+    border-bottom-left-radius: 999999%;
+    border-bottom-right-radius: 999999%;
   }
   50% {
     transform: translateY(-50%);
+    border-bottom-left-radius: 99999%;
+    border-bottom-right-radius: 99999%;
   }
   60% {
     transform: translateY(-40%);
+    border-bottom-left-radius: 9999%;
+    border-bottom-right-radius: 9999%;
   }
   70% {
     transform: translateY(-30%);
+    border-bottom-left-radius: 999%;
+    border-bottom-right-radius: 999%;
   }
   80% {
-    transform: translateY(0%);
+    transform: translateY(-20%);
+    border-bottom-left-radius: 99%;
+    border-bottom-right-radius: 99%;
   }
   90% {
-    transform: translateY(-20%);
+    transform: translateY(-10%);
+    border-bottom-left-radius: 9%;
+    border-bottom-right-radius: 9%;
   }
   100% {
     transform: translateY(0%);
@@ -7565,7 +7585,7 @@
   }
   
   .is-on { 
-    animation: shake 0.3s ease-out;
+    animation: shake 0.5s ease-in-out;
     animation-fill-mode: forwards;
     display: table !important;
     background-color: rgb(38 58 41 / 85%) !important;
