@@ -23,6 +23,11 @@
             });*/
 
             $(document).ready(function() {
+                $('.navbar-toggle').click(function(){
+                    $('.fullMenu').toggleClass('is-on');
+                    $('.navbar').toggleClass('is-navbar-on');
+                    $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
+                });
                 // Check for click events on the navbar burger icon
                 $(".navbar-burger").click(function() {
                     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
@@ -34,59 +39,103 @@
         {!! $webData['webConfig'][4]->tittle !!}
     </head>
     <body class="has-navbar-fixed-top">
-        <nav class="navbar is-white is-fixed-top pl-1 pr-1" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="container is-fluid">
                 <div class="navbar-brand">
-                    <a class="navbar-item" style="padding: 0.75rem 0rem;" href="{{$webData['webConfig'][13]->tittle}}">
+                    <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle}}">
                         <img alt="logo" style="max-height: 50px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                     </a>
                     <!--MibileNavbar-->
-                    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    </a>
+                    <div class="navbar-item navbar-toggle is-mobile" style="margin-left: auto;">
+                        <a class="navbar-link is-arrowless" href="#"><i class="fas fa-stream"></i></a>
+                    </div>
                     <!-----END ----->
                 </div>
                 <div id="MainNavbar" class="navbar-menu">
                     <div class="navbar-start">
                     </div>
                     <div class="navbar-end">
-                        <div class="navbar-item has-dropdown is-hoverable dropdown is-right">
+                        <div class="navbar-item navbar-toggle">
                             <a class="navbar-link is-arrowless" href="#"><i class="fas fa-stream"></i></a>
-                            <div class="navbar-dropdown dropdown-menu">
-                            <!--Dynamic System Gen-->
-                            @foreach($webData['allNav'] as $Nav)
-                                @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
-                                <a class="navbar-item is-tab" href="{{$Nav->URL}}">{{$Nav->NavigateName}}</a>
-                                @else
-                                <a class="navbar-item is-tab" href="{{$webData['webConfig'][13]->tittle.$Nav->URL}}">{{$Nav->NavigateName}}</a>
-                                @endif
-                            @endforeach
-                            <!--Dynamic END-->
-                            <!--Flex-->
-                                <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item is-tab">關於</a>
-                                <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item is-tab">小夥伴</a>
-                            <!-- END-->
-                                <hr class="navbar-divider">
-                            @if($webData['userData'] == 0)
-                                <a class="navbar-item is-tab" href="/login">登入</a>
-                            @else
-                                <a href="/admin" class="navbar-item is-tab"><i class="fas fa-cogs mr-1"></i>創作</a>
-                                <a href="/logout" class="navbar-item is-tab">
-                                    <div class="image is-32x32 mr-1">
-                                        <figure class="image is-1by1">
-                                            <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
-                                        </figure>
-                                    </div>登出
-                                </a>
-                            @endif
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
+        <div class="fullMenu">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-half">
+                    <div class="block has-text-centered-mobile">
+                        @if(strlen($webData['webConfig'][22]->tittle) > 0)
+                            <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
+                                <button class="button is-twitter is-outlined is-large is-rounded m-2">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </a>
+                        @endif
+                        @if(strlen($webData['webConfig'][21]->tittle) > 0)
+                            <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
+                                <button class="button is-instagram is-large is-rounded m-2">
+                                    <i class="fab fa-instagram-square"></i>
+                                </button>
+                            </a>
+                        @endif
+                        @if(strlen($webData['webConfig'][20]->tittle) > 0)
+                            <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
+                                <button class="button is-facebook is-outlined is-large is-rounded m-2">
+                                    <i class="fab fa-facebook"></i>
+                                </button>
+                            </a>
+                        @endif
+                        @if(strlen($webData['webConfig'][23]->tittle) > 0)
+                            <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
+                                <button class="button is-applepodcast is-outlined is-large is-rounded m-2">
+                                    <i class="fab fa-apple"></i>
+                                </button>
+                            </a>
+                        @endif
+                        @if(strlen($webData['webConfig'][24]->tittle) > 0)
+                            <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
+                                <button class="button is-outlined is-large is-white is-rounded m-2">
+                                    <i class="fab fa-google"></i>
+                                </button>
+                            </a>
+                        @endif
+                    </div>
+                    </div>
+                    <div class="column is-half">
+                        <!--Dynamic System Gen-->
+                        @foreach($webData['allNav'] as $Nav)
+                        @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
+                        <a class="navbar-item is-tab" href="{{$Nav->URL}}">{{$Nav->NavigateName}}</a>
+                        @else
+                        <a class="navbar-item is-tab" href="{{$webData['webConfig'][13]->tittle.$Nav->URL}}">{{$Nav->NavigateName}}</a>
+                        @endif
+                        @endforeach
+                        <!--Dynamic END-->
+                        <!--Flex-->
+                            <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item is-tab">關於</a>
+                            <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item is-tab">小夥伴</a>
+                        <!-- END-->
+                            <hr class="navbar-divider">
+                        @if($webData['userData'] == 0)
+                            <a class="navbar-item is-tab" href="/login">登入</a>
+                        @else
+                            <a href="/admin" class="navbar-item is-tab"><i class="fas fa-cogs mr-1"></i>創作</a>
+                            <a href="/logout" class="navbar-item is-tab">
+                                <div class="image is-32x32 mr-1">
+                                    <figure class="image is-1by1">
+                                        <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
+                                    </figure>
+                                </div>登出
+                            </a>
+                        @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Main -->
         <main class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;">
         @section('herocontent')
