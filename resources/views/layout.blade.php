@@ -56,7 +56,7 @@
                     </div>
                     <div class="navbar-end">
                         <div class="navbar-item navbar-toggle">
-                            <a class="navbar-link is-arrowless" href="#"><i class="fas fa-stream"></i></a>
+                            <a class="navbar-link is-arrowless"><i class="fas fa-stream"></i></a>
                         </div>
                     </div>
                 </div>
@@ -203,13 +203,13 @@
                                 <p class="is-size-3 mb-3">或看看我們很在意但不好說的東西：</p>
                                 @foreach($webData['allButtonNav'] as $bn)
                                 @if(\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail')
-                                <a href="{{$bn->URL}}" target="_blank">
+                                <a href="{{$bn->URL}}">
                                     <button class="button is-white is-outlined is-large is-rounded m-2">
                                     {{$bn->NavigateName}}
                                     </button>
                                 </a>
                                 @else
-                                <a href="{{$webData['webConfig'][13]->tittle.$bn->URL}}" target="_blank">
+                                <a href="{{$webData['webConfig'][13]->tittle.$bn->URL}}">
                                     <button class="button is-white is-outlined is-large is-rounded m-2">
                                     {{$bn->NavigateName}}
                                     </button>

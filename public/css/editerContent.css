@@ -12,4 +12,31 @@
     unicode-range: U+00-024F;
   }
 
-  body { font-family: 'NotoSansTC-Medium'; color:#003366;  }
+body {
+    font-family: 'NotoSansTC-Medium';
+    color:#263A29;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+hr {
+    background-color: rgb(170 180 190 / 30%);
+    border: none;
+    display: block;
+    height: 2px;
+    margin: 1.5rem 0;
+}
+
+blockquote {
+    background-color: #41644A;
+    border-left: 5px solid #263A29;
+    color: #F2E3DB;
+    border-radius: 10px;
+    padding: 1.25em 1.5em;
+}
+
+blockquote a {
+    color: #F2E3DB
+}
+
