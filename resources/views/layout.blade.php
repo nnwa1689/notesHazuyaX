@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/bulma.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/locomotive-scroll.css">
+        <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/kursor.css">
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
         <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
         <!--TOP BUTTON-->
@@ -250,5 +251,14 @@
 
         </script>
         <!--Locomotive Scroll END-->
+        <!---Kursor---->
+        <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
+        <script>
+            new kursor({
+                type: 4,
+                color: "#E86A33"
+            })
+        </script>
+        <!--KursorEND-->
     </body>
 </html>
