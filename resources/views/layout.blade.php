@@ -12,17 +12,9 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/kursor.css">
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
         <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
-        <!--TOP BUTTON-->
-        <!--<div id="topbottom" href="#top"><i class="fas fa-chevron-up"></i></div>-->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <script>
             console.log("%c不要看啦，人家會害羞>__<", "color: blue; font-size: 30px;");
-
-            /*TOP BUTTON FUNCTION
-            $("#topbottom").click(function () {
-                $("html,body").animate({scrollTop: 0}, "slow");
-                return false;
-            });*/
-
             $(document).ready(function() {
                 $('.navbar-toggle').click(function(){
                     $('.fullMenu').toggleClass('is-on');
@@ -35,6 +27,10 @@
                     $(".navbar-burger").toggleClass("is-active");
                     $(".navbar-menu").toggleClass("is-active");
                 });
+                /* Loading */
+                setTimeout(() => {
+                    $(".pageloader").toggleClass("loading");
+                }, 1500);
             });
         </script>
         {!! $webData['webConfig'][4]->tittle !!}
@@ -139,8 +135,23 @@
         </div>
         <!-- Main -->
         <main class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;">
-        @section('herocontent')
-        @show
+            <section class="hero is-success is-align-items-center has-text-centered pageloader loading">
+                <div class="loader-body">
+                    <lottie-player
+                        class="is-align-items-center" 
+                        src="https://assets8.lottiefiles.com/packages/lf20_iYvSqSMKZB.json" 
+                        background="transparent" 
+                        speed="5" 
+                        style="width: 256px; height: 256px;" 
+                        loop  
+                        autoplay
+                    >
+                    </lottie-player>
+                    <p class="is-size-5">一筆一筆記下所有過程...</p>
+                </div>
+            </section>
+            @section('herocontent')
+            @show
             <!-- Breadcrumb
             <div class="container mt-2" style="padding:0 0.75rem; 0 0.75rem" data-scroll-speed="2">
                 <nav class="breadcrumb is-hidden-mobile" aria-label="breadcrumbs">
