@@ -8,9 +8,17 @@ use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
 use Kreait\Firebase\Database;
 use Carbon\Carbon;
+use App\Services\UserService;
 
 class FirebaseController extends Controller
 {
+    protected $userService;
+
+    public function __construct(UserService $userService) 
+    {
+        $this -> userService = $userService;
+    }
+
     public function initFirebase(){
         //
 
@@ -35,7 +43,7 @@ class FirebaseController extends Controller
             'userID' => session()->get('username'),
             'date'=> Carbon::now()->setTimezone("Asia/Taipei")->toDateTimeString(),
             'content' => $_POST['content'],
-            'avatar' => UserController::getUserData(session()->get('username'))[0]->Avatar,
+            'avatar' => $this -> userService -> GetUserData(session()->get('username'))[0]->Avatar,
             'datemark'=> Carbon::now()->timestamp
         ]);
         return redirect('/admin#mb');

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title')筆記長也創作中心</title>
+    <title>@yield('title')NotesCMSX</title>
     <!-- Bulma Version 0.8.x-->
     <link rel="stylesheet" href="{{asset('css/bulma.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('css/admin.css')}}">
@@ -55,14 +55,6 @@
                             <a class="navbar-item" href="/admin/editPost/new"><i class="fas fa-plus-circle"></i>&nbsp;新增文章</a>
                             <a class="navbar-item" href="/admin/editPost/p/1"><i class="fas fa-tools"></i>&nbsp;管理文章</a>
                             <a class="navbar-item" href="/admin/editCategory"><i class="fas fa-folder"></i>&nbsp;分類／系列管理</a>
-                        </div>
-                    </div>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"><i class="fas fa-bullhorn"></i>&nbsp;公告</a>
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item" href="/admin/editNews/new"><i class="fas fa-bullhorn"></i>&nbsp;發布公告</a>
-                            <a class="navbar-item" href="/admin/editNews"><i class="fas fa-tools"></i>&nbsp;管理公告</a>
                         </div>
                     </div>
 
@@ -123,10 +115,10 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
-            2023 Hi,HazuyaX#CMS
+            2023 NotesCMSX
             </p>
-            <p class="subtitle is-6">
-                Version:V230312.10
+            <p class="is-size-5">
+                Version:V230420.17
             </p>
         </div>
   </footer>

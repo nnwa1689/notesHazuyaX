@@ -7,162 +7,69 @@ PostController
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\Services\PostService;
+use App\Services\WorksService;
+use App\Services\BaseService;
 
 class PostController extends Controller
 {
-    private $webData;
+    private $webData;    
+    protected $postService;
+    protected $worksService;
+    protected $baseService;
+
+    public function __construct(PostService $postService, WorksService $worksService, BaseService $baseService) 
+    {
+        $this -> postService = $postService;
+        $this -> worksService = $worksService;
+        $this -> baseService = $baseService;
+    }
 
     //取得首頁
     public function getHomePage(){
-        $this -> webData = WebController::webInit();
-        $data = PostController::getTopPublicPost($this->webData['webConfig'][7]->tittle);
-        $worksData = WorksController::GetTopTwoWorksList();
+        $this -> webData = $this -> baseService ->WebInit();
+        $data = $this -> postService -> GetTopPublicPosts($this->webData['webConfig'][7]->tittle);
+        $worksData = $this -> worksService -> GetTopTwoWorks();
         return view("index", ['webData' => $this->webData,'allPosts'=>$data, 'worksData' => $worksData, 'title'=>""]);
-    }
-
-    public static function getAllPublicPost($pageNumber){
-        DB::connection('mysql');
-        //$start = ($pageNumber - 1) * 10;
-        $data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' ORDER BY Blog.PostDate DESC) as Post"))->paginate(10);
-        //$data = DB::select("SELECT * FROM Blog WHERE Blog.Competence=? OR Blog.Competence=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$start]);
-        return $data;
-    }
-
-    //取得最新四篇文章
-    public static function getTopPublicPost($limit = 5){
-        DB::connection('mysql');
-        //$start = ($pageNumber - 1) * 10;
-        $data = DB::select("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' ORDER BY Blog.PostDate DESC limit ?)", [$limit]);
-        //$data = DB::select("SELECT * FROM Blog WHERE Blog.Competence=? OR Blog.Competence=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$start]);
-        return $data;
-    }
-
-    public static function getAllPost($pageNumber){
-        DB::connection('mysql');
-        //$start = ($pageNumber - 1) * 10;
-        $data = DB::table(DB::raw("(SELECT * FROM Blog ORDER BY PostDate DESC) as Post"))->paginate(10);
-        return $data;
     }
 
     //所有文章頁面－帶有pagenum參數
     public function getPostList($pageNumber = null){
-        $this -> webData = WebController::webInit();
+        $this -> webData = $this -> baseService ->WebInit();
         if(!preg_match("/^([0-9]+)$/", $pageNumber) || $pageNumber < 0 || !isset($pageNumber)){
             $pageNumber=1;
         }
-        $title='讀文章 - ';
-        $data = PostController::getAllPublicPost($pageNumber);
-        $postnum = ceil(($this->getAllPublicPostNum()[0]->num)/10);
-        return view("postindex", ['webData' => $this->webData,'allPosts'=>$data, 'nowpageNumber'=>$pageNumber, 'postNum' => $postnum, 'title'=>$title]);
-    }
-
-    public static function getallCategory()
-    {
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM BClasses WHERE SorH=? ORDER BY OrderID ASC", ['show']);
-        return $data;
-    }
-
-    public static function getallCategoryHide()
-    {
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM BClasses ORDER BY OrderID ASC");
-        return $data;
-    }
-
-    public static function getCategoryName($classID)
-    {
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM BClasses WHERE SorH=? AND ClassId = ? ORDER BY OrderID ASC", ['show', $classID])[0]->ClassName;
-        return $data;
-    }
-
-    public static function getCategoryDetail($classID)
-    {
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM BClasses WHERE ClassId = ? ORDER BY OrderID ASC", [$classID]);
-        return $data;
-    }
-
-    public static function getCategoryPublicPostCount($classID)
-    {
-        DB::connection('mysql');
-        $data = DB::select("SELECT COUNT(PostId) as count FROM Blog WHERE ClassId = ? AND Competence = 'public'", [$classID]);
-        return $data[0] -> count;
+        $title='讀雜記 - ';
+        $data = $this -> postService -> GetAllPublicPosts($pageNumber);
+        return view("postindex", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>$title]);
     }
 
     public function getallCategorypost($classID, $pageNumber = null)
     {
-        $this -> webData = WebController::webInit();
-        DB::connection('mysql');
-        $data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, BClasses.Short_Intro, admin.Yourname, admin.Avatar FROM Blog LEFT JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' AND Blog.ClassId=".$classID." ORDER BY Blog.PostDate DESC) as Categorypost"))->paginate(10);
-        $countPost = PostController::getCategoryPublicPostCount($classID);
-        if($countPost  <= 0){
-            abort(404);
-            return;
-        }
+        $this -> webData = $this -> baseService ->WebInit();
+        $data = $this -> postService -> GetCategoryPublicPosts($classID, $pageNumber);
         $title=$data[0]->ClassName.' - ';
-        return view("category", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>$title, 'count' => $countPost]);
+        return view("category", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>$title]);
     }
 
     public function getCategoryDetailPage($classID)
     {
-        $this -> webData = WebController::webInit();
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM BClasses WHERE ClassId = ? ORDER BY OrderID ASC", [$classID]);
-        $countPost = PostController::getCategoryPublicPostCount($classID);
+        $this -> webData = $this -> baseService ->WebInit();
+        $data = $this -> postService -> GetCategoryDetail($classID);
         $title=$data[0]->ClassName.' - ';
-        return view("categoryIntro", ['webData' => $this->webData, 'detail'=>$data, 'title'=>$title, 'count' => $countPost]);
+        return view("categoryIntro", ['webData' => $this->webData, 'detail'=>$data, 'title'=>$title]);
     }
 
     public function getOnePost($postID)
     {
-        $this -> webData = WebController::webInit();
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM Blog join BClasses on Blog.ClassId = BClasses.ClassId WHERE (Blog.Competence=? OR Blog.Competence=?) AND PostId=? ", ['public', 'protect', $postID]);
+        $this -> webData = $this -> baseService ->WebInit();
+        $data = $this -> postService -> GetOnePost($postID);
         if(count($data) <= 0){
             abort(404);
             return;
         }
-        $autorData = UserController::getUserData($data[0]->UserID);
-        $leftPost = $this->getLeftPost($postID);
-        $rightPost = $this->getRightPost($postID);
-        return view("post", ['webData' => $this->webData, 'postData'=>$data, 'autorData'=>$autorData, 'leftPost'=>$leftPost, 'rightPost'=>$rightPost]);
+        $rightPost = $this -> postService -> GetNextPost($postID);
+        return view("post", ['webData' => $this->webData, 'postData'=>$data, 'rightPost'=>$rightPost]);
     }
 
-    public static function getAllPublicPostNum()
-    {
-        DB::connection('mysql');
-        $data = DB::select("SELECT COUNT(PostId) as num FROM Blog WHERE (Blog.Competence=? OR Blog.Competence=?) ORDER BY Blog.PostDate", ['public', 'protect']);
-        return $data;
-    }
-
-    public static function getAllPostNum()
-    {
-        DB::connection('mysql');
-        $data = DB::select("SELECT COUNT(PostId) as num FROM Blog ORDER BY Blog.PostDate");
-        return $data;
-    }
-
-    public static function getCategoryPostNum($classID)
-    {
-        DB::connection('mysql');
-        $data = DB::select("SELECT COUNT(PostId) as num FROM Blog WHERE (Blog.Competence=? OR Blog.Competence=?) AND ClassId=? ORDER BY Blog.PostDate DESC", ['public', 'protect', $classID]);
-        return $data;
-    }
-
-    public function getLeftPost($postID)
-    {
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM Blog WHERE PostId<? AND (Competence=? OR Competence=?) ORDER BY PostId DESC LIMIT 0,1", [$postID, 'public', 'protect']);
-        return $data;
-    }
-
-    public function getRightPost($postID)
-    {
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM Blog WHERE PostId>? AND (Competence=? OR Competence=?) ORDER BY PostId ASC LIMIT 0,1", [$postID, 'public', 'protect']);
-        return $data;
-    }
 }

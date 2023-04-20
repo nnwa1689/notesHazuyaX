@@ -3,26 +3,34 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\Services\BaseService;
+use App\Services\PostService;
 
 
 class SearchController extends Controller
 {
     private $webData;
+    protected $baseService;
+    protected $postService;
+
+    public function __construct(BaseService $baseService, PostService $postService) 
+    {
+        $this -> baseService = $baseService;
+        $this -> postService = $postService;
+    }
 
     public function searchPage()
     {
-        $this -> webData = WebController::webInit();
+        $this -> webData = $this -> baseService ->WebInit();
         return view('search', ['webData'=> $this->webData]);
     }
 
     public function search(Request $q)
     {
-        $this -> webData = WebController::webInit();
-        DB::connection('mysql');
+        $this -> webData = $this -> baseService ->WebInit();
         $q = "'%".htmlspecialchars($q->input()["search-text"])."%'";
-        $resultData = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog LEFT JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE (Blog.PostTittle LIKE ".$q." OR Blog.PostContant LIKE ".$q.") AND (Blog.Competence='public') ORDER BY Blog.PostId DESC) as search"))->paginate(10);
+        $resultData = $this -> postService -> SearchPost($q);
         return view('search', ['webData'=> $this->webData, 'data'=>$resultData, 'q'=>$q]);
-        }
+    }
 
 }

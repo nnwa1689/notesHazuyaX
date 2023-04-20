@@ -3,18 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\Services\BaseService;
+use App\Services\PageService;
 
 class PageController extends Controller
 {
 
     private $webData;
+    protected $baseService;
+    protected $pageService;
+
+    public function __construct(BaseService $baseService, PageService $pageService) 
+    {
+        $this -> baseService = $baseService;
+        $this -> pageService = $pageService;
+    }
 
     public function getPage($pageID)
     {
-        $this -> webData = WebController::webInit();
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM Page WHERE PageId=? AND Competence='public'", [$pageID]);
+        $this -> webData = $this -> baseService ->WebInit();
+        $data = $this -> pageService -> GetOnePage($pageID);
         if(count($data) <= 0){
             abort(404);
             return;

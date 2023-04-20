@@ -31,8 +31,9 @@ Route::get('/page/{pageID}','PageController@getPage')->where('pageID', '[0-9A-Za
 Route::get('/authors','UserController@getAllAuthorPage')->name('authors');
 
 //whatnews
+/*
 Route::get('/whatsnews/{postID}','WhatNewsController@getOnePost')->where('pageID', '[0-9]+');
-Route::get('/whatsnews','WhatNewsController@getHomePost');
+Route::get('/whatsnews','WhatNewsController@getHomePost');*/
 
 //Person
 Route::get('person/{userID}', 'UserController@getUserPage')->where('userID', '[0-9A-Za-z]+');
@@ -56,11 +57,11 @@ Route::post('login', 'UserController@login');
 Route::get('logout', 'UserController@logout');
 
 /*後台首頁*/
-Route::get('admin', 'AdminController@showAdminIndex');
+Route::get('admin', 'AdminController@showAdminIndex')->middleware('userAuth:other');
 Route::get('admin/webInfo', 'AdminController@showAdminWebInfo')->middleware('userAuth:webInfo');
 Route::post('admin/updateWebInfo','AdminController@updateWebInfo')->middleware('userAuth:webInfo');
 /*後台留言板*/
-Route::post('admin/updatemb','FirebaseController@newData')->middleware('userAuth:mb');
+//Route::post('admin/updatemb','FirebaseController@newData')->middleware('userAuth:mb');
 
 /*Files*/
 Route::get('admin/files/{pageNumber?}', 'AdminController@showAdminFiles') -> where('pageNumber', '[0-9]+')->middleware('userAuth:files');
@@ -81,12 +82,13 @@ Route::post('admin/updateCategory', 'AdminController@updateCategory')->middlewar
 Route::get('admin/editCategoryDetail/{classId}', 'AdminController@CategoryDetailEdit')->middleware('userAuth:category');
 Route::post('admin/updateCategoryDetail/{classId}', 'AdminController@UpdateCategoryDetail')->middleware('userAuth:category');
 
-/*公告相關*/
+/*公告相關
 Route::post('admin/updateNews/{postID}', 'AdminController@updateNews')->where('postID', '[0-9]+')->middleware('userAuth:news');
 Route::post('admin/delNews', 'AdminController@deleteNews')->middleware('userAuth:news');
 Route::post('admin/newNews', 'AdminController@newNews')->middleware('userAuth:news');
 Route::get('admin/editNews/{postID?}', 'AdminController@showEditNews')->where('postID', '[0-9A-Za-z]+')->middleware('userAuth:news');
 Route::get('admin/editNews/p/{pageNumber}', 'AdminController@showEditNewsList')->where('pageNumber', '[0-9]+')->middleware('userAuth:news');
+*/
 
 /*使用者*/
 Route::get('admin/editAccount/{username?}', 'AdminController@showEditAccount')->where('username', '[0-9A-Za-z]+')->middleware('userAuth:account');
@@ -105,13 +107,13 @@ Route::get('admin/editNav/{type?}', 'AdminController@showEditNav')->middleware('
 Route::post('admin/updateNav/{type}', 'AdminController@updateNav')->middleware('userAuth:nav');
 
 /*個人化設定*/
-Route::get('admin/mySetting', 'AdminController@showMysettingPage');
-Route::post('admin/updateMySetting', 'AdminController@updateMysetting');
+Route::get('admin/mySetting', 'AdminController@showMysettingPage')->middleware('userAuth:other');
+Route::post('admin/updateMySetting', 'AdminController@updateMysetting')->middleware('userAuth:other');
 
 /* Works 作品集 */
 Route::get('admin/works', 'AdminController@GetAllWorksListSetPage')->middleware('userAuth:Works');
-Route::get('admin/works/{WorksPID}', 'AdminController@GetWorksDetailSetPage')->middleware('userAuth:Works');;
-Route::post('admin/updateWorksDetail/{WorksPID}', 'AdminController@SetWorksDetailReturnPage')->middleware('userAuth:Works');;
-Route::post('admin/deleteWorks', 'AdminController@DeleteWorks')->middleware('userAuth:Works');;
+Route::get('admin/works/{WorksPID}', 'AdminController@GetWorksDetailSetPage')->middleware('userAuth:Works');
+Route::post('admin/updateWorksDetail/{WorksPID}', 'AdminController@SetWorksDetailReturnPage')->middleware('userAuth:Works');
+Route::post('admin/deleteWorks', 'AdminController@DeleteWorks')->middleware('userAuth:Works');
 
 //Auth::routes();

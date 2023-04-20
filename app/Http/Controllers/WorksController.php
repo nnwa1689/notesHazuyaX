@@ -3,19 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use DB;
+use App\Services\WorksService;
+use App\Services\BaseService;
 
 class WorksController extends Controller
 {
 
     private $webData;
+    protected $worksService;
+    protected $baseService;
+    
+
+    public function __construct(WorksService $worksService, BaseService $baseService) 
+    {
+        $this -> worksService = $worksService;
+        $this -> baseService = $baseService;
+    }
 
     public function GetWorksDetailPage($WorksID)
     {
-        $this -> webData = WebController::webInit();
-        DB::connection('mysql');
-        $WorkDetail = DB::select(
-            ('select Works.PID, Works.WorksID, Works.WorksName, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, Works.ShortIntro, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.WorksID = ?'), [$WorksID]);
+        $this -> webData = $this -> baseService ->WebInit();
+        $WorkDetail = $this -> worksService -> GetWorkDetail($WorksID);
         if(count($WorkDetail) <= 0){
             abort(404);
             return;
@@ -26,23 +34,9 @@ class WorksController extends Controller
 
     public function GetAllWorksPage()
     {
-        $this -> webData = WebController::webInit();
-        DB::connection('mysql');
-        $WorksList = DB::select(
-            ('select * from Works order by OrderID asc'));
-        if(count($WorksList) <= 0){
-            abort(404);
-            return;
-        }
+        $this -> webData = $this -> baseService ->WebInit();
+        $WorksList = $this -> worksService -> GetAllWorks();
         $title = "作品集 - ";
         return view('worksList',['WorksList'=>$WorksList, 'webData'=>$this->webData, 'title' => $title]);
-    }
-
-    public static function GetTopTwoWorksList()
-    {
-        DB::connection('mysql');
-        $WorksList = DB::select(
-            ('select * from Works order by OrderID asc limit 2'));
-        return $WorksList;
     }
 }
