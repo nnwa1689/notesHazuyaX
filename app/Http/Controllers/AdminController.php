@@ -266,7 +266,7 @@ class AdminController extends Controller
         return redirect('/admin/editAccount');
     }
 
-    public function deleteAccount()
+    public function deleteAccount(Request $req)
     {
         $this -> userService -> DeleteUsers($req);
         return redirect('/admin/editAccount');
