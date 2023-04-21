@@ -63,4 +63,80 @@ class UserService
         return $data;
     }
 
+    public function GetAllUser()
+    {
+        DB::connection('mysql');
+        $data = DB::select("select * from admin");
+        return $data;
+    }
+
+    public function CreateUser($req)
+    {
+        DB::connection('mysql');
+        if(count($this -> GetUserData($req->username)) <= 0)
+        {
+            $res = DB::insert
+            (
+                "INSERT INTO admin (username, pw, Email, Yourname, IntroductionSelf, Position, Law_WebInfo, Law_Files, Law_Post, Law_Category, Law_News, Law_Users, Law_Page, Law_Nav, Law_Works) VALUES (?, ?, ?, ?, '這個人太懶了，還沒有新增自介！', 'on', ?, ?, ?, ?, ?, ?, ?, ?, ?)", 
+                [
+                    $req->username, 
+                    password_hash($req->pw,  PASSWORD_DEFAULT), 
+                    $req->Email, 
+                    $req->Yourname, 
+                    $req->Law_webInfo, 
+                    $req->Law_files, 
+                    $req->Law_post, 
+                    $req->Law_Category, 
+                    $req->Law_News, 
+                    $req->Law_Account, 
+                    $req->Law_Page, 
+                    $req->Law_Nav,
+                    $req->Law_Works
+                ]
+            );
+            return $res;
+        }
+        else
+        {            
+            $res = 0;
+            return $res;
+        }
+    }
+
+    public function UpdateUser($req, $username)
+    {
+        DB::connection('mysql');
+        DB::update
+        (
+            "update admin set Law_WebInfo = ?, Law_Files = ?, Law_Post = ?, Law_Category = ?, Law_News = ?, Law_Users = ?, Law_Page = ?, Law_Nav = ?, Law_Works = ? where username = ?", 
+            [
+                $req->Law_webInfo, 
+                $req->Law_files, 
+                $req->Law_post, 
+                $req->Law_Category, 
+                $req->Law_News, 
+                $req->Law_Account, 
+                $req->Law_Page, 
+                $req->Law_Nav, 
+                $req->Law_Works,
+                $username
+        ]);
+        return 1;
+    }
+
+    public function DeleteUsers($req)
+    {
+        DB::connection('mysql');
+        if(!empty($req->username))
+        {
+            $delAccount = $req->username;
+            foreach($delAccount as $v)
+            {
+                //刪除使用者文章
+                DB::delete("delete from Blog where UserID=?", [$v]);
+                DB::delete("delete from admin where username=?", [$v]);
+            }
+        }
+    }
+
 }
