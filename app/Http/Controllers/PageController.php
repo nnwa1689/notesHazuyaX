@@ -13,7 +13,7 @@ class PageController extends Controller
     protected $baseService;
     protected $pageService;
 
-    public function __construct(BaseService $baseService, PageService $pageService) 
+    public function __construct(BaseService $baseService, PageService $pageService)
     {
         $this -> baseService = $baseService;
         $this -> pageService = $pageService;
@@ -29,4 +29,18 @@ class PageController extends Controller
         }
         return view('page',['data'=>$data, 'webData'=>$this->webData]);
     }
+
+    public function GetErrorPage($statuCode)
+    {
+        $this -> webData = $this -> baseService ->WebInit();
+        if($statuCode == "404")
+        {
+            return view('errors.' . '404', ['webData' => $this -> webData ]);
+        }
+        else
+        {
+            return view('errors.' . '500', ['webData' => $this -> webData ]);
+        }
+    }
+
 }

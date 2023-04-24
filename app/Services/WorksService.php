@@ -68,7 +68,7 @@ class WorksService
     public function InsertWork($req)
     {
         DB::connection('mysql');
-        DB::transaction(function()
+        DB::transaction(function($req)
         {
             /**找出下一筆的自動遞增PK */
             $NextPID = DB::select("SHOW TABLE STATUS LIKE 'Works'")[0] -> Auto_increment;
@@ -105,7 +105,7 @@ class WorksService
         });
         return 1;
     }
-       
+
     /**
      * 更新 WORKS
      *
@@ -114,7 +114,7 @@ class WorksService
     public function UpdateWork($req, $WorksPID)
     {
         DB::connection('mysql');
-        DB::transaction(function() use ($WorksPID)
+        DB::transaction(function() use ($req, $WorksPID)
         {
             DB::update(
                 "update Works set WorksID = ?, WorksName = ?, Customer = ?, Intro = ?, CoverImage = ?, Url = ?, OrderID = ?, ShortIntro = ? where Works.PID = ?",

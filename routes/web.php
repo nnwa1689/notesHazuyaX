@@ -48,6 +48,9 @@ Route::get('search/q', 'SearchController@search');
 Route::get('works/{WorksPID}', 'WorksController@GetWorksDetailPage')->where('WorksPID', '[0-9A-Za-z]+');
 Route::get('works', 'WorksController@GetAllWorksPage');
 
+//ErrorPage
+Route::get('error/{statuCode}', 'PageController@GetErrorPage')->where('statuCode', '[0-9A-Za-z]+');
+
 
 /*後台路由admin*/
 /*登入登出 */

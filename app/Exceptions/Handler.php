@@ -4,17 +4,9 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use App\Services\BaseService;
 
 class Handler extends ExceptionHandler
 {
-    protected $baseService;
-
-    public function __construct(BaseService $baseService) 
-    {
-        $this -> baseService = $baseService;
-    }
-
     /**
      * A list of the exception types that are not reported.
      *
@@ -58,20 +50,15 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-
         if ($this->isHttpException($exception)) {
             if ($exception->getStatusCode() == 404) {
-                $webData = $this -> baseService ->WebInit();
-                return response()->view('errors.' . '404', ['webData' => $webData ], 404);
+                return redirect('error/404');
             } else {
-                $webData = $this -> baseService ->WebInit();
-                return response()->view('errors.' . '500', ['webData' => $webData ], 500);
+                return redirect('error/500');
             }
         } else {
-            $webData = $this -> baseService ->WebInit();
-            return response()->view('errors.' . '500', ['webData' => $webData ], 500);
+            return redirect('error/500');
         }
-
         //return parent::render($request, $exception);
     }
 }
