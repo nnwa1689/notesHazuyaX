@@ -9,6 +9,9 @@ use App\Services\PostService;
 use App\Services\UserService;
 use App\Services\BaseService;
 use App\Services\FileService;
+use App\Services\PageService;
+use App\Services\NavbarService;
+use App\Services\WorksService;
 
 
 class AdminController extends Controller
@@ -17,18 +20,27 @@ class AdminController extends Controller
     protected $userService;
     protected $baseService;
     protected $fileService;
+    protected $pageService;
+    protected $navbarService;
+    protected $worksService;
 
     public function __construct(
         PostService $postService, 
         UserService $userService, 
         BaseService $baseService,
-        FileService $fileService
+        FileService $fileService,
+        PageService $pageService,
+        NavbarService $navbarService,
+        WorksService $worksService
         ) 
     {
         $this -> postService = $postService;
         $this -> userService = $userService;
         $this -> baseService = $baseService;
         $this -> fileService = $fileService;
+        $this -> pageService = $pageService;
+        $this -> navbarService = $navbarService;
+        $this -> worksService = $worksService;
     }
 
     public function showAdminIndex()
@@ -113,9 +125,12 @@ class AdminController extends Controller
     public function showEditPostList($pageNumber = 1)
     {
         $userData = $this -> userService -> GetUserData(session('username'));
-        if($userData[0]->Law_Post == 1){
+        if($userData[0]->Law_Post == 1)
+        {
             $listData = $this -> postService -> GetUserPostsEdit(session('username')); 
-        }else if($userData[0]->Law_Post == 2){
+        }
+        else if($userData[0]->Law_Post == 2)
+        {
             $listData = $this -> postService -> GetAllPost();
         }
         //判斷使用者權限，是否可以編輯他人的文章
@@ -125,8 +140,10 @@ class AdminController extends Controller
     public function updatePost(Request $req, $postID)
     {
         $postData = $this -> postService -> GetOnePostEdit($postID);
-        if($postData[0]->Law_Post == 1){
-            if($postData[0]->UserID !== session('username')){
+        if($postData[0]->Law_Post == 1)
+        {
+            if($postData[0]->UserID !== session('username'))
+            {
                 return redirect('/');
             }
         }
@@ -274,133 +291,91 @@ class AdminController extends Controller
 
     public function showEditPage($pageID = null)
     {
-        DB::connection('mysql');
-
-        if($pageID=="new"){
+        if($pageID=="new")
+        {
             return view('admin/editPage', ['username'=>session()->get('username')]);
 
-        }else if(isset($pageID)){
-            $pageData = DB::select("select * from Page where PageId=?", [$pageID]);
-            if(!(count($pageData) > 0)){
+        }
+        else if(isset($pageID))
+        {
+            $pageData = $this -> pageService -> GetOnePageEdit($pageID);
+            if(!(count($pageData) > 0))
+            {
                 return redirect('/admin/editPage');
             }
             return view('admin/editPage', ['username'=>session()->get('username'), 'pageData'=> $pageData]);
-        }else{
-            $allPage = DB::select("select * from Page");
+        }
+        else
+        {
+            $allPage = $this -> pageService -> GetAllPages();
             return view('admin/pages', ['username'=>session()->get('username'), 'allPage'=> $allPage]);
         }
     }
 
     public function newPage()
     {
-        DB::connection('mysql');
-        DB::insert("INSERT INTO Page (PageId, Competence, PageName, PageContant) VALUES (?, ?, ?, ?)", [$_POST['pageID'], $_POST['competance'], $_POST['pageTitle'], $_POST['cont']]);
+        $this -> pageService -> InsertNewPage();
         return redirect('/admin/editPage');
     }
 
-    public function updatePage($pageID)
+    public function updatePage(Request $req ,$pageID)
     {
-        DB::connection('mysql');
-        DB::update("update Page set PageId=?, Competence=?, PageName=?, PageContant=? where PageId=?", [$_POST['pageID'], $_POST['competance'], $_POST['pageTitle'], $_POST['cont'], $pageID]);
+        $this -> pageService -> UpdatePage($req, $pageID);
         return redirect('/admin/editPage');
     }
 
-    public function deletePage()
+    public function deletePage(Request $req)
     {
-        DB::connection('mysql');
-        if(!empty($_POST['pageID'])){
-            $delPage = $_POST['pageID'];
-            foreach($delPage as $v){
-                DB::delete("delete from Page where PageId=?", [$v]);
-            }
+        if(!empty($req -> pageID))
+        {
+            $this -> pageService -> DeletePages($req);
         }
-
         return redirect('/admin/editPage');
     }
 
     public function showEditNav($type = 'top')
     {
-        DB::connection('mysql');
-
-        if($type == 'top'){
-            $allNav = DB::select("select * from Navigate where type=0");
-        }else if($type == 'btn'){
-            $allNav = DB::select("select * from Navigate where type=1");
+        if($type == 'top')
+        {
+            $allNav = $this -> navbarService -> GetAllTopNavbarEdit();
+        }
+        else if($type == 'btn')
+        {
+            $allNav = $this -> navbarService -> GetAllBtnNavbarEdit();
         }
         return view('admin/navEdit', ['username'=>session()->get('username'), 'allNav'=> $allNav, 'type'=>$type]);
     }
 
-    public function updateNav($type)
+    public function updateNav(Request $req, $type = "top")
     {
         if($type=="top")
-            $typeNum = 0;
-        else
-            $typeNum = 1;
-
-        DB::connection('mysql');
-        if($_POST['action']=='new'){
-
-            if(!empty($_POST['newName']) && !empty($_POST['newOrder'])){
-
-                DB::insert("INSERT INTO Navigate (NavigateId,NavigateName,URL,Competence,type) VALUES ( ?, ?, ?, ?, ? )",[$_POST['newOrder'], $_POST['newName'], $_POST['newURL'], $_POST['newCompetence'], $typeNum]);
-
-            }
-
-        }else if($_POST['action']=='update' || $_POST['action']=='delete'){
-
-            $checkedItem = $_POST['navid'];
-            $checkedNavName = $_POST['NavName'];
-            $checkedOrder = $_POST['order'];
-            $checkedURL = $_POST['URL'];
-            $checkedCompetence = $_POST['Competence'];
-
-            if(!isset($checkedItem)){
-                return redirect('/admin/editNav/'.$type);
-
-            }else if($_POST['action']=='update'){
-
-                foreach($checkedItem as $value){
-
-                    DB::update("UPDATE Navigate SET NavigateId = ?, NavigateName = ?, URL = ?, Competence = ?, type = ? WHERE IndexId = ?", [$checkedOrder[$value], $checkedNavName[$value], $checkedURL[$value], $checkedCompetence[$value], $typeNum, $value]);
-
-                }
-
-            }else if($_POST['action']=='delete'){
-
-                foreach($checkedItem as $value){
-
-                    DB::delete("DELETE FROM Navigate WHERE IndexId = ?", [$value]);
-
-                }
-            }
+        {            
+            $this -> navbarService -> UpdateNavbars($req, 0);
+        }
+        else if($type == "btn")
+        {
+            $this -> navbarService -> UpdateNavbars($req, 1);
         }
         return redirect('/admin/editNav/'.$type);
     }
 
     public function showMySettingPage()
     {
-        DB::connection('mysql');
         $userData = $this -> userService -> GetUserData(session('username'));
         return view('admin/mySetting', ['username'=>session()->get('username'), 'userData' => $userData]);
     }
 
-    public function updateMySetting()
+    public function updateMySetting(Request $req)
     {
-        DB::connection('mysql');
+        $result = $this -> userService -> UpdateUserData($req);
         $userData = $this -> userService -> GetUserData(session('username'));
-        if(password_verify($_POST['oldPw'], $userData[0]->pw)){
-            if(!empty($_POST['newPw'])){
-                if($_POST['newPw'] == $_POST['reNewPw']){
-                    DB::update('update admin set pw=?, Email=?, Url_Linked = ?, Url_GitHub = ?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ password_hash($_POST['newPw'], PASSWORD_DEFAULT), $_POST['Email'], $_POST['Url_Linked'], $_POST['Url_GitHub'], $_POST['Yourname'], $_POST['avatar'], $_POST['IntroductionSelf'], $_POST['PersonBackground'], $_POST['Signature'], session('username') ]);
-                }else{
-                    $msg = "新密碼不正確！";
-                    return view('admin/mySetting', ['username'=>session()->get('username'), 'userData' => $userData, 'msg'=>$msg]);
-                }
-            }else{
-                DB::update('update admin set Email=?, Url_Linked = ?, Url_GitHub = ?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ $_POST['Email'], $_POST['Url_Linked'], $_POST['Url_GitHub'], $_POST['Yourname'], $_POST['avatar'], $_POST['IntroductionSelf'], $_POST['PersonBackground'], $_POST['Signature'], session('username') ]);
-            }
-
-        }else{
+        if($result == -1)
+        {
+            $msg = "新密碼不正確！";
+            return view('admin/mySetting', ['username'=>session()->get('username'), 'userData' => $userData, 'msg'=>$msg]);
+        }
+        else if($result == 0)
+        {
             $msg = "舊密碼錯誤！";
             return view('admin/mySetting', ['username'=>session()->get('username'), 'userData' => $userData, 'msg'=>$msg]);
         }
@@ -410,113 +385,52 @@ class AdminController extends Controller
     /* Works */
     public function GetAllWorksListSetPage()
     {
-        DB::connection('mysql');
-        $Works = DB::select(('select PID, WorksID, WorksName from Works'));
+        $Works = $this -> worksService -> GetAllWorks();
         return view('admin/works', ['username'=>session()->get('username'), 'Works' => $Works]);
     }
 
     public function GetWorksDetailSetPage($WorksPID = null)
     {
-        DB::connection('mysql');
-        if ($WorksPID == "new"){
+        if ($WorksPID == "new")
+        {
             return view('admin/editWorksDetail', ['username'=>session()->get('username')]);
-        } else if ( isset($WorksPID) ){
-            $WorkDetail = DB::select(
-                ('select Works.PID, Works.OrderID, Works.WorksID, Works.WorksName, Works.ShortIntro, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.PID = ?'), [$WorksPID]);
+        } 
+        else if ( isset($WorksPID) )
+        {
+            $WorkDetail = $this -> worksService -> GetWorkDetailByPID($WorksPID);
             return view('admin/editWorksDetail', ['username'=>session()->get('username'), 'WorkDetail' => $WorkDetail]);
-        } else {
+        } 
+        else
+        {
             return redirect('/admin');
         }
     }
 
-    public function SetWorksDetailReturnPage($WorksPID = null)
+    public function SetWorksDetailReturnPage(Request $req, $WorksPID = null)
     {
-        DB::connection('mysql');
-        if ($WorksPID == "new"){
-            DB::transaction(function()
-            {
-                $NextPID = DB::select("SHOW TABLE STATUS LIKE 'Works'")[0] -> Auto_increment;
-                DB::insert(
-                    "INSERT INTO Works (WorksID, WorksName, Customer, Intro, CoverImage, Url, OrderID, ShortIntro) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-                      [$_POST['WorksID'],
-                      $_POST['WorksName'],
-                      $_POST['Customer'],
-                      $_POST['Intro'],
-                      $_POST['CoverImage'],
-                      $_POST['Url'],
-                      $_POST['OrderID'],
-                      $_POST['ShortIntro']
-                      ]
-                    );
-                for ($i = 1; $i < 6; $i++){
-                    DB::insert(
-                        "INSERT INTO WorksStaff (WorksPID, StaffName, StaffTitle, StaffImage, StaffUrl) VALUE (?, ?, ?, ?, ?)",
-                    [
-                        $NextPID,
-                        $_POST['staff'.$i.'_name'],
-                        $_POST['staff'.$i.'_title'],
-                        $_POST['staff'.$i.'_Image'],
-                        $_POST['staff'.$i.'_Url']
-                    ]);
-                }
-            });
+        if ($WorksPID == "new")
+        {
+            $this -> worksService -> InsertWork($req);
             return redirect('/admin/works');
-        } else if (isset($WorksPID)) {
-            DB::transaction(function() use ($WorksPID)
-            {
-                DB::update(
-                    "update Works set WorksID = ?, WorksName = ?, Customer = ?, Intro = ?, CoverImage = ?, Url = ?, OrderID = ?, ShortIntro = ? where Works.PID = ?",
-                      [$_POST['WorksID'],
-                      $_POST['WorksName'],
-                      $_POST['Customer'],
-                      $_POST['Intro'],
-                      $_POST['CoverImage'],
-                      $_POST['Url'],
-                      $_POST['OrderID'],
-                      $_POST['ShortIntro'],
-                      $WorksPID
-                      ]
-                    );
-                for ($i = 1; $i < 6; $i++){
-                    DB::update(
-                        "update WorksStaff set StaffName = ?, StaffTitle = ?, StaffImage = ?, StaffUrl = ? where PID = ?",
-                    [
-                        $_POST['staff'.$i.'_name'],
-                        $_POST['staff'.$i.'_title'],
-                        $_POST['staff'.$i.'_Image'],
-                        $_POST['staff'.$i.'_Url'],
-                        $_POST['staff'.$i.'_StaffPID']
-                    ]
-                );
-                }
-            });
+        } 
+        else if (isset($WorksPID)) 
+        {
+            $this -> worksService -> UpdateWork($req, $WorksPID);
             return redirect('/admin/works/'.$WorksPID);
-        } else {
+        } 
+        else 
+        {
             return redirect('/admin');
         }
-        $Works = DB::select(('select PID, WorksID, WorksName from Works'));
+
+        $Works = $this -> worksService -> GetAllWorks();
         return view('admin/works', ['username'=>session()->get('username'), 'Works' => $Works]);
     }
 
-    public function DeleteWorks()
+    public function DeleteWorks(Request $req)
     {
-
-        DB::connection('mysql');
-        $delWorksPID = (isset($_POST['WorksID']) ? $_POST['WorksID'] : '');
-        if($delWorksPID == ''){
-
-        }else{
-            foreach($delWorksPID as $value){
-                DB::transaction(function() use ($value)
-                {
-                    DB::delete("DELETE FROM Works WHERE PID = ?", [$value]);
-                    DB::delete("DELETE FROM WorksStaff WHERE WorksPID = ?", [$value]);
-                });
-            }
-
-        }
+        $this -> worksService -> DeleteWork($req);
         return redirect('/admin/works');
-
     }
 
 

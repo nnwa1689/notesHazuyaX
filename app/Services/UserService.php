@@ -103,6 +103,9 @@ class UserService
         }
     }
 
+    /**
+     * 更新使用者權限，另有更新使用者資料的函數，這裡命名不太好
+     */
     public function UpdateUser($req, $username)
     {
         DB::connection('mysql');
@@ -137,6 +140,37 @@ class UserService
                 DB::delete("delete from admin where username=?", [$v]);
             }
         }
+    }
+
+    public function UpdateUserData($req)
+    {
+        DB::connection('mysql');
+        $userData = $this -> GetUserData(session('username'));
+
+        if(password_verify($req -> oldPw, $userData[0]->pw))
+        {
+            if(!empty($req -> newPw))
+            {
+                if($req -> newPw == $req -> reNewPw)
+                {
+                    DB::update('update admin set pw=?, Email=?, Url_Linked = ?, Url_GitHub = ?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ password_hash($req -> newPw, PASSWORD_DEFAULT), $req -> Email, $req -> Url_Linked, $req -> Url_GitHub, $req -> Yourname, $req -> avatar, $req -> IntroductionSelf, $req -> PersonBackground, $req -> Signature, session('username') ]);
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            else
+            {
+                DB::update('update admin set Email=?, Url_Linked = ?, Url_GitHub = ?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ $req -> Email, $req -> Url_Linked, $req -> Url_GitHub, $req -> Yourname, $req -> avatar, $req -> IntroductionSelf, $req -> PersonBackground, $req -> Signature, session('username') ]);
+            }
+
+        }
+        else
+        {
+            return 0;
+        }
+        return 1;
     }
 
 }
