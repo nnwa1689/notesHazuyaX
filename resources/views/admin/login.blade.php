@@ -14,8 +14,8 @@
 </head>
 
 <body>
-    <section class="hero is-success is-fullheight">
-        <div class="hero-body">
+    <section class="hero is-fullheight">
+        <div class="hero-body m-0 p-0">
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
                     <a href="{{$webData['webConfig'][13]->tittle}}">
@@ -61,5 +61,4 @@
         </div>
     </section>
 </body>
-
 </html>

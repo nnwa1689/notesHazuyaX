@@ -89,7 +89,7 @@ class WorksService
             {
                 $name = 'staff'.$i.'_name';
                 $title = 'staff'.$i.'_title';
-                $image = 'staff'.$i.'_title';
+                $image = 'staff'.$i.'_Image';
                 $url = 'staff'.$i.'_Url';
                 DB::insert(
                     "INSERT INTO WorksStaff (WorksPID, StaffName, StaffTitle, StaffImage, StaffUrl) VALUE (?, ?, ?, ?, ?)",
@@ -133,7 +133,7 @@ class WorksService
             for ($i = 1; $i < 6; $i++){
                 $name = 'staff'.$i.'_name';
                 $title = 'staff'.$i.'_title';
-                $image = 'staff'.$i.'_title';
+                $image = 'staff'.$i.'_Image';
                 $url = 'staff'.$i.'_Url';
                 $PID = 'staff'.$i.'_StaffPID';
                 DB::update(
