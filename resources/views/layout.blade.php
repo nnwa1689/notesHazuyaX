@@ -16,6 +16,7 @@
         <script>
             console.log("%c不要看啦，人家會害羞>__<", "color: blue; font-size: 30px;");
             $(document).ready(function() {
+                let player = document.querySelector("lottie-player");
                 $('.navbar-toggle').click(function(){
                     $('.fullMenu').toggleClass('is-on');
                     $('.navbar').toggleClass('is-navbar-on');
@@ -31,6 +32,9 @@
                 setTimeout(() => {
                     $(".pageloader").toggleClass("loading");
                 }, 1500);
+                setTimeout(() => {
+                    player.stop();
+                }, 2000);
             });
         </script>
         {!! $webData['webConfig'][4]->tittle !!}
@@ -141,7 +145,7 @@
                         class="is-align-items-center" 
                         src="https://assets8.lottiefiles.com/packages/lf20_iYvSqSMKZB.json" 
                         background="transparent" 
-                        speed="5" 
+                        speed="3" 
                         style="width: 256px; height: 256px;" 
                         loop  
                         autoplay
