@@ -5,12 +5,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>作者登入</title>
+    <title>登入筆記設計</title>
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/bulma.css">
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
     <!-- Bulma Version 0.8.x-->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/login.css') }}">
+    <!-- Recaptcha V3-->
     <script src='https://www.google.com/recaptcha/api.js?hl="zh-tw"'></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("login-form").submit();
+        }
+    </script>
 </head>
 
 <body>
@@ -22,7 +28,7 @@
                         <img width="128" height="128" src="{{$webData['webConfig'][13]->tittle}}images/NotesHZ_ICON_2023.png">
                     </a>
                     <div class="box">
-                        <form action="login" method="post">
+                        <form action="login" id="login-form" method="post">
                         @if(isset($error))
                         <div class="notification is-danger">
                             {{$error}}
@@ -36,9 +42,7 @@
                                     </span>
                                 </div>
                             </div>
-
                             <br>
-
                             <div class="field">
                                 <div class="control has-icons-left">
                                     <input name="password" class="input is-large" type="password" placeholder="密碼">
@@ -48,15 +52,19 @@
                                 </div>
                             </div>
                             <br>
-                            <div id="recaptcha">
-                                <div class="g-recaptcha" data-sitekey="{{ $siteKey }}"></div>
-                            </div>
-                            <br>
                             @csrf
-                            <button class="button is-outlined is-primary is-large is-fullwidth">登入<i class="fa fa-sign-in" aria-hidden="true"></i></button>
+                            <button 
+                                class="button is-outlined is-primary is-large is-fullwidth g-recaptcha"
+                                data-sitekey="{{ $siteKey }}" 
+                                data-callback='onSubmit' 
+                                data-action='submit'
+                                >
+                                登入！╰(*°▽°*)╯
+                            </button>
                         </form>
                     </div>
                 </div>
+                <p>Made with 💗 by notes-Design</p>
             </div>
         </div>
     </section>
