@@ -12126,6 +12126,7 @@
     .footer {
       margin-left:1rem;
       margin-right:1rem;
+      margin-bottom:-3rem;
     }
   }
 
@@ -12139,27 +12140,6 @@
   /*# sourceMappingURL=bulma.css.map */
 
   /*custom*/
-  /*gotop*/
-  #topbottom{
-      position: fixed;
-      border-radius: 60px;
-      right: 24px;
-      width: 60px;
-      height: 60px;
-      bottom: 95px;
-      padding: 5px 15px 10px 15px;
-      font-size: 36px;
-      transition: background 0.3s;
-      background: #263A29;
-      color: #FAFCFD;
-      cursor: pointer;
-      z-index: 1000;
-  }
-  #topbottom:hover{
-      transition: background 0.3s;
-      background: #3D73FF;
-
-  }
 
   .button.is-applepodcast {
     transition: background-color 0.3s;
