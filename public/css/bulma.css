@@ -7560,7 +7560,7 @@
     margin-top:  calc(10rem);
   }
 
-  .is-on {    
+  .is-on {
     opacity: 1;
     transition: all 0.5s ease-in-out;
     margin-left: 0%;
@@ -12119,7 +12119,7 @@
     margin-bottom: 4rem;
     /*margin-bottom: 8.5rem;*/
     padding: 4rem;
-    color: #FFFFFF;
+    color: #F2E3DB;
   }
 
   @media screen and (max-width: 768px) {
