@@ -98,7 +98,7 @@
                             @endif
                             @if(strlen($webData['webConfig'][24]->tittle) > 0)
                                 <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
-                                    <button class="button is-outlined is-large is-white is-medium ml-1 mr-1">
+                                    <button class="button is-outlined is-white is-medium is-rounded ml-1 mr-1">
                                         <i class="fab fa-google"></i>
                                     </button>
                                 </a>
@@ -109,7 +109,7 @@
                             @foreach($webData['allButtonNav'] as $bn)
                             <a href="
                                 {{ (\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail') ? $bn->URL : $webData['webConfig'][13]->tittle.$bn->URL}}"
-                                class="is-size-6 ml-1 mr-1"    
+                                class="is-size-6 ml-1 mr-1"
                             >
                                 {{$bn->NavigateName}}
                             </a>
@@ -152,12 +152,12 @@
             <section class="hero is-success is-align-items-center has-text-centered pageloader loading">
                 <div class="loader-body">
                     <lottie-player
-                        class="is-align-items-center" 
-                        src="https://assets8.lottiefiles.com/packages/lf20_iYvSqSMKZB.json" 
-                        background="transparent" 
-                        speed="3" 
-                        style="width: 256px; height: 256px;" 
-                        loop  
+                        class="is-align-items-center"
+                        src="https://assets8.lottiefiles.com/packages/lf20_iYvSqSMKZB.json"
+                        background="transparent"
+                        speed="3"
+                        style="width: 256px; height: 256px;"
+                        loop
                         autoplay
                     >
                     </lottie-player>
@@ -185,8 +185,8 @@
             <div class="container is-fluid">
                 <footer class="footer">
                     <div class="columns">
-                        <div class="column is-half has-text-left has-text-centered-mobile">   
-                            <a href="mailto:public.wuce@gmail.com"><i class="fas fa-envelope mr-1"></i>public.wuce@gmail.com</a>    
+                        <div class="column is-half has-text-left has-text-centered-mobile">
+                            <a href="mailto:public.wuce@gmail.com"><i class="fas fa-envelope mr-1"></i>public.wuce@gmail.com</a>
                         </div>
                         <div class="column">
                             <p class="has-text-right has-text-centered-mobile">
