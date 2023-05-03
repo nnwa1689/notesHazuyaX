@@ -17,7 +17,7 @@
             <p class="is-size-6 mr-3"><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</p>
             <a class="tag button is-primary is-outlined is-rounded is-small" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>
         </div>
-        <p class="is-size-2 mb-2">{{$postData[0]->PostTittle}}
+        <p class="title is-4 mb-2">{{$postData[0]->PostTittle}}
             @if($webData['userData'] !== 0)
                 <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i></button>
             @endif
@@ -89,15 +89,15 @@
     </div>
     @endif
 
-    <div class="block" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- 側邊欄廣告 -->
+    <div class="block is-justify-content-center" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
+            crossorigin="anonymous"></script>
         <ins class="adsbygoogle"
             style="display:block"
+            data-ad-format="fluid"
+            data-ad-layout-key="-gw-3+1f-3d+2z"
             data-ad-client="ca-pub-3826338280068687"
-            data-ad-slot="8823619760"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
+            data-ad-slot="3052782904"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
