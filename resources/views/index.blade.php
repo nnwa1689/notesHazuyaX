@@ -16,7 +16,14 @@
             <span class="has-text-success">技術</span>＆雜談
         </p>
         <p class="title is-1">
-            <i class="fas fa-arrow-down"></i>
+            <lottie-player
+                src="{{$webData['webConfig'][13]->tittle}}/lf20_wdcziokb.json"
+                background="transparent"
+                speed="1"
+                style="width: 256px; height: 256px; margin-right:auto; margin-left:auto;"
+                loop
+                autoplay
+                ></lottie-player>
         </p>
         </div>
     </div>
