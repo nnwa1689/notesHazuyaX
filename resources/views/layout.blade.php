@@ -12,7 +12,9 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/kursor.css">
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
         <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/lottie-player.js"></script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
+        crossorigin="anonymous"></script>
         <script>
             console.log("%c不要看啦，人家會害羞>__<", "color: blue; font-size: 30px;");
             $(document).ready(function() {
