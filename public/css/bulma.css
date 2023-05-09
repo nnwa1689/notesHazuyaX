@@ -7506,8 +7506,8 @@
   .is-navbar-on {
     transition: all 0.5s ease-in-out;
     background-color: rgb(38 58 41 / 85%);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) contrast(60%);
+    -webkit-backdrop-filter: blur(10px) contrast(60%);
   }
 
   .fullMenu {
@@ -7521,9 +7521,9 @@
     color: #F2E3DB;
     opacity: 0;
     margin-left: 0%;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-end-end-radius: 50px;
+    backdrop-filter: blur(10px) contrast(60%);
+    -webkit-backdrop-filter: blur(10px) contrast(60%);
   }
 
   .fullMenu a{
