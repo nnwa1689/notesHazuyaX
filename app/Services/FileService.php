@@ -16,7 +16,7 @@ class FileService
     protected $navbarService;
     protected $userService;
 
-    public function __construct(PostService $postService, NavbarService $navbarService, UserService $userService) 
+    public function __construct(PostService $postService, NavbarService $navbarService, UserService $userService)
     {
         $this -> postService = $postService;
         $this -> navbarService = $navbarService;
@@ -26,7 +26,7 @@ class FileService
     public function GetFiles()
     {
         DB::connection('mysql');
-        $data = DB::table(DB::raw("(SELECT * FROM media ORDER BY media.UploadDate DESC) as files")) -> paginate(12);;
+        $data = DB::table(DB::raw("(SELECT * FROM media) as files ORDER BY files.UploadDate DESC")) -> paginate(12);;
         return $data;
     }
 
@@ -38,7 +38,7 @@ class FileService
                 {
                     $fileinfo = DB::select("SELECT * FROM media WHERE ID=? ORDER BY media.UploadDate DESC", [$value]);
                     $delfile = $fileinfo[0]->URL;
-                    if (is_file("/".$delfile)) 
+                    if (is_file("/".$delfile))
                     {//判斷檔案是否存在
                         //如果存在進行檔案刪除，否則直接刪除資料庫
                         $delfilenum = unlink("/" . $delfile);
