@@ -16,7 +16,7 @@ class BaseService
     protected $navbarService;
     protected $userService;
 
-    public function __construct(PostService $postService, NavbarService $navbarService, UserService $userService) 
+    public function __construct(PostService $postService, NavbarService $navbarService, UserService $userService)
     {
         $this -> postService = $postService;
         $this -> navbarService = $navbarService;
@@ -64,10 +64,11 @@ class BaseService
             DB::update('update web set tittle = ? where ID = 22', [$req->TWITTER]);
             DB::update('update web set tittle = ? where ID = 23', [$req->APPLEPODCAST]);
             DB::update('update web set tittle = ? where ID = 24', [$req->GOOGLEPODCAST]);
-            DB::update('update web set tittle = ? where ID = 25', [$req->HomeAds1Url]);
-            DB::update('update web set tittle = ? where ID = 26', [$req->Home1AdsImg]);
-            DB::update('update web set tittle = ? where ID = 27', [$req->Home2AdsUrl]);
-            DB::update('update web set tittle = ? where ID = 28', [$req->Home2AdsImg]);
+            //DB::update('update web set tittle = ? where ID = 25', [$req->HomeAds1Url]);
+            //DB::update('update web set tittle = ? where ID = 26', [$req->Home1AdsImg]);
+            //DB::update('update web set tittle = ? where ID = 27', [$req->Home2AdsUrl]);
+            //DB::update('update web set tittle = ? where ID = 28', [$req->Home2AdsImg]);
+            DB::update('update web set tittle = ? where ID = 29', [$req->quote]);
         }
         catch(Exception $e)
         {

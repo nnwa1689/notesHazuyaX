@@ -70,20 +70,9 @@
                     <input name="GOOGLEPODCAST" class="input" type="text" value="{{$data[24]->tittle}}">
                 </div>
                 <br>
-                <label class="label"><i class="far fa-image"></i>首頁廣告1</label>
+                <label class="label">網站底部引言（以","隔開）</label>
                 <div class="control">
-                    <label class="label">網址（僅限內部網址）</label>
-                    <input name="HomeAds1Url" class="input" type="text" value="{{$data[25]->tittle}}">
-                    <label class="label">圖片網址（留空隱藏廣告）<a href="/admin/uploadFiles" target="_blank">上傳圖片</a></label>
-                    <input name="Home1AdsImg" class="input" type="text" value="{{$data[26]->tittle}}">
-                </div>
-                <br>
-                <label class="label"><i class="far fa-image"></i>首頁廣告2</label>
-                <div class="control">
-                    <label class="label">網址（僅限內部網址）</label>
-                    <input name="Home2AdsUrl" class="input" type="text" value="{{$data[27]->tittle}}">
-                    <label class="label">圖片網址（留空隱藏廣告）<a href="/admin/uploadFiles" target="_blank">上傳圖片</a></label>
-                    <input name="Home2AdsImg" class="input" type="text" value="{{$data[28]->tittle}}">
+                    <textarea name="quote" class="textarea" type="text">{{$data[29]->tittle}}</textarea>
                 </div>
                 <br>
                 <div class="control">

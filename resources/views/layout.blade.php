@@ -15,6 +15,7 @@
         <script src="{{$webData['webConfig'][13]->tittle}}js/lottie-player.js"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
         crossorigin="anonymous"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
         <script>
             console.log("%c不要看啦，人家會害羞>__<", "color: blue; font-size: 30px;");
             $(document).ready(function() {
@@ -117,6 +118,9 @@
                             </a>
                             @endforeach
                         </div>
+                        <p class="is-size-5">
+                            <span class="has-text-link"><i class="fas fa-quote-left"></i></span><span id="typed"></span><span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+                        </p>
                     </div>
                     <div class="column is-half">
                         <!--Dynamic System Gen-->
@@ -168,16 +172,6 @@
             </section>
             @section('herocontent')
             @show
-            <!-- Breadcrumb
-            <div class="container mt-2" style="padding:0 0.75rem; 0 0.75rem" data-scroll-speed="2">
-                <nav class="breadcrumb is-hidden-mobile" aria-label="breadcrumbs">
-                    <ul>
-                    @section('breadcrumb')
-                    @show
-                    </ul>
-                </nav>
-            </div>
-            END -->
             <div class="container" data-scroll-speed="2">
                 <div class="block ml-3 mr-3">
                     @section('content')
@@ -226,5 +220,18 @@
             })
         </script>
         <!--KursorEND-->
+        <!--TypedJS-->
+        <script>
+            var typed = new Typed("#typed", {
+                strings:[ {!! $webData['webConfig'][29]->tittle !!} ],
+                stringsElement: '#typed-strings',
+                typeSpeed: 70,
+                backSpeed: 60,
+                backDelay: 4000,
+                startDelay: 1000,
+                loop: true,
+            });
+        </script>
+        <!--TypeJSEND-->
     </body>
 </html>

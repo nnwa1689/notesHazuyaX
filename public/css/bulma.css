@@ -8398,7 +8398,7 @@
     display: block;
     content: "";
     margin-bottom: -2px;
-    border-bottom: 2px solid #E86A33;;
+    border-bottom: 4px solid #E86A33;;
     transform: scaleX(0);
     transform-origin: 0 50%;
     bottom: 0;
