@@ -68,7 +68,7 @@ class WorksService
     public function InsertWork($req)
     {
         DB::connection('mysql');
-        DB::transaction(function($req)
+        DB::transaction(function() use ($req)
         {
             /**找出下一筆的自動遞增PK */
             $NextPID = DB::select("SHOW TABLE STATUS LIKE 'Works'")[0] -> Auto_increment;

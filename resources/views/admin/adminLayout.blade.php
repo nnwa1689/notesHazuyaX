@@ -112,16 +112,18 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-            2023 NotesCMSX
-            </p>
-            <p class="is-size-5">
-                Version:V230420.17
-            </p>
-        </div>
-  </footer>
+    <div class="container is-fluid">
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                Notes X CMS Made with  <span class="has-text-danger">❤</span>  by 筆記設計
+                </p>
+                <p class="is-size-6">
+                    Version:V230517.17
+                </p>
+            </div>
+    </footer>
+    </div>
 </body>
 
 </html>
