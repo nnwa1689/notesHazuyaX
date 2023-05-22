@@ -51,7 +51,7 @@
                     </a>
                     <!--MibileNavbar-->
                     <div class="navbar-item navbar-toggle is-mobile" style="margin-left: auto;">
-                        <a class="navbar-link is-arrowless" href="#"><i class="fas fa-stream"></i></a>
+                        <a class="navbar-link is-arrowless"><i class="fas fa-stream"></i></a>
                     </div>
                     <!-----END ----->
                 </div>
@@ -67,10 +67,15 @@
             </div>
         </nav>
         <div class="fullMenu">
-            <div class="container">
-                <div class="columns">
-                    <div class="column is-half">
-                        <div class="block has-text-centered-mobile">
+            <div class="container is-widescreen">
+                <div class="columns is-variable is-8">
+                    <div class="column is-8">
+                        <div class="block">
+                            <p class="is-size-5 has-text-left has-text-centered-mobile">
+                                <span class="has-text-link"><i class="fas fa-quote-left"></i></span><span id="typed"></span><span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="block has-text-left has-text-centered-mobile">
                             @if(strlen($webData['webConfig'][22]->tittle) > 0)
                                 <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
                                     <button class="button is-twitter is-outlined is-medium is-rounded ml-1 mr-1">
@@ -108,7 +113,7 @@
                             @endif
                         </div>
                         <hr />
-                        <div class="block has-text-centered-mobile">
+                        <div class="block has-text-left has-text-centered-mobile">
                             @foreach($webData['allButtonNav'] as $bn)
                             <a href="
                                 {{ (\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail') ? $bn->URL : $webData['webConfig'][13]->tittle.$bn->URL}}"
@@ -118,11 +123,8 @@
                             </a>
                             @endforeach
                         </div>
-                        <p class="is-size-5">
-                            <span class="has-text-link"><i class="fas fa-quote-left"></i></span><span id="typed"></span><span class="has-text-link"><i class="fas fa-quote-right"></i></span>
-                        </p>
                     </div>
-                    <div class="column is-half">
+                    <div class="column">
                         <!--Dynamic System Gen-->
                         @foreach($webData['allNav'] as $Nav)
                         @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
@@ -132,14 +134,10 @@
                         @endif
                         @endforeach
                         <!--Dynamic END-->
-                        <!--Flex-->
-                            <a href="{{$webData['webConfig'][13]->tittle.'page/about'}}" class="navbar-item is-tab">關於</a>
-                            <a href="{{$webData['webConfig'][13]->tittle.'authors'}}" class="navbar-item is-tab">小夥伴</a>
-                        <!-- END-->
                         @if($webData['userData'] == 0)
                             <a class="navbar-item is-tab" href="/login">登入</a>
                         @else
-                            <a href="/admin" class="navbar-item is-tab"><i class="fas fa-cogs mr-1"></i>創作</a>
+                            <a href="/admin" class="navbar-item is-tab"><i class="fas fa-cogs mr-1"></i>管理</a>
                             <a href="/logout" class="navbar-item is-tab">
                                 <div class="image is-32x32 mr-1">
                                     <figure class="image is-1by1">

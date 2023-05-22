@@ -83,10 +83,10 @@
                     </div>
 
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link"><i class="fas fa-user-alt"></i>&nbsp;作者</a>
+                        <a class="navbar-link"><i class="fas fa-user-alt"></i>&nbsp;成員</a>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="/admin/editAccount/new"><i class="fas fa-user-plus"></i>&nbsp;新增作者</a>
-                            <a class="navbar-item" href="/admin/editAccount"><i class="far fa-user"></i>&nbsp;管理作者</a>
+                            <a class="navbar-item" href="/admin/editAccount/new"><i class="fas fa-user-plus"></i>&nbsp;新增成員</a>
+                            <a class="navbar-item" href="/admin/editAccount"><i class="far fa-user"></i>&nbsp;管理成員</a>
                         </div>
                     </div>
 
@@ -119,7 +119,7 @@
                 Notes X CMS Made with  <span class="has-text-danger">❤</span>  by 筆記設計
                 </p>
                 <p class="is-size-6">
-                    Version:V230517.17
+                    Version:V230522.20
                 </p>
             </div>
     </footer>

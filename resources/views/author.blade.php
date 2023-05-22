@@ -13,10 +13,12 @@
 <div style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-0 is-justify-content-center">
     @foreach($userData as $User)
 
-    <div data-scroll data-scroll-speed="3" data-scroll-delay="1.5" onclick="window.location.href='{{$webData['webConfig'][13]->tittle}}person/{{$User->username}}'" class="is-author-item">
+    <div data-scroll data-scroll-speed="3" data-scroll-delay="1.5" class="is-author-item">
         <img class="image" src="{{$User->Avatar}}">
-        <a class="button author-image-tag is-primary is-outlined is-rounded is-medium">
-            <span>{{$User->Yourname}}</span>
+        <a class="button author-yourname is-rounded is-medium">{{$User->Yourname}}</a>
+        <br/>
+        <a class="button author-image-tag is-primary is-outlined is-rounded is-normal">
+            <span>{{$User->Signature}}</span>
         </a>
     </div>
     @endforeach

@@ -153,7 +153,7 @@ class UserService
             {
                 if($req -> newPw == $req -> reNewPw)
                 {
-                    DB::update('update admin set pw=?, Email=?, Url_Linked = ?, Url_GitHub = ?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ password_hash($req -> newPw, PASSWORD_DEFAULT), $req -> Email, $req -> Url_Linked, $req -> Url_GitHub, $req -> Yourname, $req -> avatar, $req -> IntroductionSelf, $req -> PersonBackground, $req -> Signature, session('username') ]);
+                    DB::update('update admin set pw=?, Email=?, Url_Linked = ?, Url_GitHub = ?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ password_hash($req -> newPw, PASSWORD_DEFAULT), $req -> Email, $req -> Url_Linked, $req -> Url_GitHub, $req -> Yourname, $req -> avatar, '', '', $req -> Signature, session('username') ]);
                 }
                 else
                 {
@@ -162,7 +162,7 @@ class UserService
             }
             else
             {
-                DB::update('update admin set Email=?, Url_Linked = ?, Url_GitHub = ?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ $req -> Email, $req -> Url_Linked, $req -> Url_GitHub, $req -> Yourname, $req -> avatar, $req -> IntroductionSelf, $req -> PersonBackground, $req -> Signature, session('username') ]);
+                DB::update('update admin set Email=?, Url_Linked = ?, Url_GitHub = ?, Yourname=?, Avatar=?, IntroductionSelf=?,PersonBackground=?, Signature=? where username=?', [ $req -> Email, $req -> Url_Linked, $req -> Url_GitHub, $req -> Yourname, $req -> avatar, '', '', $req -> Signature, session('username') ]);
             }
 
         }

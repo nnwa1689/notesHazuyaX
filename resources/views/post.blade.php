@@ -38,7 +38,6 @@
                 </div>
                 <div class="block has-text-centered mt-3">
                     <a href="mailto:{{$postData[0]->Email}}"><i class="far fa-envelope-open"></i></ㄇ>
-                    <a href="/person/{{$postData[0]->username}}/post/p/1" class="ml-4"><i class="fas fa-file"></i></a>
                     @if(isset($postData[0]->Url_Linked) && $postData[0]->Url_Linked !== "")
                     <a href="{{$postData[0]->Url_Linked}}" target="_blank" class="ml-4"><i class="fab fa-linkedin"></i></a>
                     @endif

@@ -27,18 +27,20 @@ Route::get('/category/{classID}/intro', 'PostController@getCategoryDetailPage')-
 //page
 Route::get('/page/{pageID}','PageController@getPage')->where('pageID', '[0-9A-Za-z]+')->name('page/'.'{pageID}');
 
-//AllAuthorPage
+/*AllAuthorPage
 Route::get('/authors','UserController@getAllAuthorPage')->name('authors');
+*/
 
 //whatnews
 /*
 Route::get('/whatsnews/{postID}','WhatNewsController@getOnePost')->where('pageID', '[0-9]+');
 Route::get('/whatsnews','WhatNewsController@getHomePost');*/
 
-//Person
+/*Person
 Route::get('person/{userID}', 'UserController@getUserPage')->where('userID', '[0-9A-Za-z]+');
 Route::get('person/{userID}/post', 'UserController@getUserPage')->where('userID', '[0-9A-Za-z]+');
 Route::get('person/{userID}/post/p/{pageNumber}', 'UserController@getUserPagePost')->where('userID', '[0-9A-Za-z]+')->where('pageNumber', '[0-9]+');
+*/
 
 //Search
 Route::get('search', 'SearchController@searchPage');
@@ -47,6 +49,9 @@ Route::get('search/q', 'SearchController@search');
 //Works
 Route::get('works/{WorksPID}', 'WorksController@GetWorksDetailPage')->where('WorksPID', '[0-9A-Za-z]+');
 Route::get('works', 'WorksController@GetAllWorksPage');
+
+//About & Team
+Route::get('about', 'PageController@GetAboutPage');
 
 //ErrorPage
 Route::get('error/{statuCode}', 'PageController@GetErrorPage')->where('statuCode', '[0-9A-Za-z]+');

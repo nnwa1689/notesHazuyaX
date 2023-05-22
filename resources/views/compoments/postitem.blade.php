@@ -8,7 +8,7 @@
         <span>{{$Category}}</span>
     </a>
     @if(strlen($Author) > 0)
-    <a class="button post-image-tag-author is-primary is-outlined is-rounded is-medium" href="{{$AuthorUrl}}">
+    <a class="button post-image-tag-author is-primary is-outlined is-rounded is-medium">
         <span>
             <div class="image is-48x48">
                 <figure class="image is-1by1">
