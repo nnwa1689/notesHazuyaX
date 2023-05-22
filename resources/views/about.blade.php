@@ -6,7 +6,7 @@
 </div>
 <p class="title is-4 mt-6" data-scroll data-scroll-speed="-1" data-scroll-delay="0">&ldquo;每次用筆記下的事物，<br>都是讓我更靠近並認識自我的滋養。&ldquo;</p>
 <p class="is-size-5" data-scroll data-scroll-speed="-1" data-scroll-delay="0">取名「筆記」，是因為自上大學以來我就很習慣透過自己的資訊專業記錄自己的學習過程（過去的筆記長也網站）。我想技術是冷的，但每一個使用技術的心都是熱的，期待我們的風格能與您一同合作。</p>
-<section class="hero is-link is-halfheight" data-scroll="" data-scroll-speed="2">
+<section class="hero is-link is-halfheight mt-6" data-scroll data-scroll-speed="2">
     <div class="hero-body">
         <div class="container is-fluid has-text-left">
             <div class="columns">
@@ -29,10 +29,10 @@
     </div>
 </section>
 
-<p class="subtitle is-1 has-text-centered" data-scroll="" data-scroll-speed="2"><a href="/works">看看我們做過什麼～</a></p>       
+<p class="subtitle is-1 has-text-centered" data-scroll data-scroll-speed="2"><a href="/works">看看我們做過什麼～</a></p>       
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="/uploadfile/57a2f49b946ac192eaa1d833d99abb05.png" alt="" width="256" height="257"></p>
 
-<section class="hero is-success is-halfheight" data-scroll="" data-scroll-speed="4" data-scroll-delay="1.5">
+<section class="hero is-success is-halfheight mt-6" data-scroll data-scroll-speed="4" data-scroll-delay="1.5">
     <div class="hero-body">
         <div class="container is-fluid has-text-left">
             <div class="columns">
@@ -53,7 +53,7 @@
 
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-6">
     <p class="title is-1 has-text-left">成員<span class="has-text-link">TEAM</span></p>
-    <p class="title is-4">不斷嘗試各種不同可能</p>
+    <p class="title is-4 has-text-right">不斷嘗試各種可能</p>
 </div>
 <div style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-0 is-justify-content-center">
     @foreach($userData as $User)
@@ -100,5 +100,4 @@
         </div>
     </div>
 </section>
-
 @endsection

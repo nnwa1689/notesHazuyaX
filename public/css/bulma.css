@@ -7576,7 +7576,7 @@ a.list-item {
 }
 
 .is-navbar-toggle-on {
-  transition: transform 0.5s linear;
+  transition: all 0.5s linear;
   transform: rotate(45deg);
 }
 
@@ -8670,7 +8670,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
   .navbar > .container .navbar-menu,
   .container > .navbar .navbar-menu {
-    margin-right: -.75rem;
+    margin-right: calc(-12px - 0.75rem);
   }
   .navbar.is-fixed-bottom-desktop, .navbar.is-fixed-top-desktop {
     left: 0;
