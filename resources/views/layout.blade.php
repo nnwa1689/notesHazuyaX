@@ -67,7 +67,7 @@
             </div>
         </nav>
         <div class="fullMenu">
-            <div class="container is-widescreen">
+            <div class="container is-max-desktop">
                 <div class="columns is-variable is-8">
                     <div class="column is-8">
                         <div class="block">
