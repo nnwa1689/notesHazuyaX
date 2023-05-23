@@ -53,4 +53,10 @@ class PageController extends Controller
         return view('about', ['userData' => $userData, 'webData' => $this -> webData ]);
     }
 
+    public function GetContactPage()
+    {
+        $this -> webData = $this -> baseService ->WebInit();
+        return view('contact', ['webData' => $this -> webData ]);
+    }
+
 }

@@ -51,6 +51,9 @@ Route::get('works/{WorksPID}', 'WorksController@GetWorksDetailPage')->where('Wor
 Route::get('works', 'WorksController@GetAllWorksPage');
 
 //About & Team
+Route::get('contact', 'PageController@GetContactPage');
+
+//About & Team
 Route::get('about', 'PageController@GetAboutPage');
 
 //ErrorPage
