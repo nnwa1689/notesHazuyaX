@@ -71,7 +71,7 @@
         資料已經送出囉！請靜待我們的回覆～
         </div>
     </article>
-    <button type="button" onclick="submit()" class="button is-primary is-large is-fullwidth mt-3">送出吧！</button>
+    <button type="button" onclick="submit()" class="button is-primary is-large is-fullwidth mt-3">我說完了！</button>
 </div>
 <script>
     function submit() {
