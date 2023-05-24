@@ -75,7 +75,7 @@
             <p class="title is-4">對於技術、網站有想法或需求嗎？<br>歡迎來聊聊天！</p>
             <div class="columns">
                 <div class="column">
-                    <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}page/contact'" class="button is-white is-fullwidth is-large">
+                    <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}contact'" class="button is-white is-fullwidth is-large">
                         <div class="columns">
                             <div class="column">
                                 <p class="title is-6">

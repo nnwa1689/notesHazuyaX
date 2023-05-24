@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </button>
-            <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}page/contact'" class="button is-white is-fullwidth is-large">
+            <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}contact'" class="button is-white is-fullwidth is-large">
                 <div class="columns">
                     <div class="column">
                         <p class="title is-6">
@@ -142,7 +142,7 @@
         <p class="title is-3">
             有想法嗎？來聊聊天吧！
         </p>
-        <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}page/contact'" class="button is-white is-fullwidth is-large">
+        <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}contact'" class="button is-white is-fullwidth is-large">
             <div class="columns">
                 <div class="column">
                     <p class="title is-6">
