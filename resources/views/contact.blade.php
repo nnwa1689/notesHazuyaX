@@ -52,7 +52,7 @@
                     src="{{$webData['webConfig'][13]->tittle}}/lf30_t6fy5r4g.json"
                     background="transparent"
                     speed="1"
-                    style="width: 512px; height: 512px; margin-right:auto; margin-left:auto;"
+                    style="width: 100%; margin-right:auto; margin-left:auto;"
                     loop
                     autoplay
                     >
