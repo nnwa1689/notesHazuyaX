@@ -7520,8 +7520,6 @@ a.list-item {
   opacity: 0;
   margin-left: 0%;
   border-end-end-radius: 50px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   margin-top: -7rem;
 }
 
@@ -7567,7 +7565,9 @@ a.list-item {
   height: 120%;
   z-index: 3;
   /*display: table !important;*/
-  background-color: rgb(38 58 41 / 85%) !important;
+  background-color: rgba(38, 58, 41, 0.85) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-end-end-radius: 999999px;
 }
 
