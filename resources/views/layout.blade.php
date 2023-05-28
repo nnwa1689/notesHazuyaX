@@ -22,7 +22,6 @@
                 let player = document.querySelector("lottie-player");
                 $('.navbar-toggle').click(function(){
                     $('.fullMenu').toggleClass('is-on');
-                    $('.navbar').toggleClass('is-navbar-on');
                     $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
                 });
                 // Check for click events on the navbar burger icon
@@ -67,7 +66,7 @@
             </div>
         </nav>
         <div class="fullMenu">
-            <div class="container is-max-desktop">
+            <div class="container is-max-desktop" style="margin-top:7rem;">
                 <div class="columns is-variable is-8">
                     <div class="column is-8">
                         <div class="block">

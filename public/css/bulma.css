@@ -7508,12 +7508,6 @@ a.list-item {
   z-index: 30;
 }
 
-.is-navbar-on {
-  transition: all 0.5s ease-in-out;
-  background-color: rgb(38 58 41 / 85%);
-  backdrop-filter: blur(10px);
-}
-
 .fullMenu {
   transition: all 0.5s ease-in-out;
   background-color: none;
@@ -7527,6 +7521,8 @@ a.list-item {
   margin-left: 0%;
   border-end-end-radius: 50px;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-top: -7rem;
 }
 
 .fullMenu a{
