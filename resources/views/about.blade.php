@@ -14,15 +14,10 @@
                     <p class="title is-1" data-scroll="" data-scroll-speed="2"><span class="fas fa-code">&nbsp;</span></p>
                 </div>
                 <div class="column is-9">
-                    <p class="subtitle is-1">小型 / 無伺服器網站設計</p>
-                    <p>我們擅長、常用的技術，後端以 PHP 、.NET Core MVC 為主，並自行開發 CMS 後台。對於現今也非常熱門的雲端技術，我們使用 Firebase 、 Azure 建立 ServerLess 應用服務。前端技術則擅長 Vue 、 React ，並搭配 Firebase 或 Azure App Service 可以建立輕量雲端應用程式，維護技術門檻低、可依照使用情境縮放不同雲端方案，較無技術背景也能維護，非常適合用於個人、中小型機關或組織。</p>
-                    <br/>
-                    <p>您的需求如果是以下這些，希望能有機會打造新作品：</p>
-                    <ul>
-                        <li>＞個人一頁式網頁（簡歷、作品呈現）</li>
-                        <li>＞小型、無伺服器系統規劃、網站設計</li>
-                        <li>＞套版網頁調整</li>
-                    </ul>
+                    <p class="subtitle is-1">服務項目</p>
+                    <p class="subtitle is-3">#網頁設計, #Web前端開發(Vue/React)</p>
+                    <p class="subtitle is-3">#ServerLess系統開發(Firebase), #後端系統開發(PHP/DotNet)</p>
+                    <p class="subtitle is-3">#CMS內容管理系統(strapi)</p>
                 </div>
             </div>
         </div>
@@ -37,19 +32,18 @@
         <div class="container is-fluid has-text-left">
             <div class="columns">
                 <div class="column is-9">
-                    <p class="subtitle is-1">技術分享</p>
-                    <p>現今無論前端、後端甚至雲端服務技術十分多元，技術的學習已成為了永無止盡的事情！依據我們自己的經驗，技術的更迭十分的快速，從基本的文字編輯工具、後端框架到前端框架，幾乎是每半年到一年就會推出新版本與特性，更別說套件了，在開源社群的風氣之下更新速度更是快速。</p>
-                    <p>我們擅長以技術文章分享、系列教學文章以及未來打算推出的 Podcast 與更多系列文章，傳遞相關技術應用。「在練習中體驗，在專案中實現」一直是我們撰寫文章的核心想法，相信透過實際寫程式才能深刻體會每個技術的不同之處。</p>
+                    <p class="subtitle is-1">樂於技術分享</p>
+                    <p class="subtitle is-3">#在練習中體驗，在專案中實現</p>
+                    <p class="subtitle is-3">#實戰經驗文章分享</p>
                 </div>
                 <div class="column is-3">
-                    <p class="title is-1 has-text-centered" data-scroll="" data-scroll-speed="2"><span class="fas fa-book-reader">&nbsp;</span></p>
+                    <p class="title is-1 has-text-centered" data-scroll-speed="2"><span class="fas fa-book-reader">&nbsp;</span></p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <p class="subtitle is-1 has-text-centered" data-scroll="" data-scroll-speed="4"><a href="/post">技術雜記</a></p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://dev.n-d.tw/images/NotesDesign_ICON_2023_BORDER.png" alt="" width="256" height="255"></p>
 
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-6">
     <p class="title is-1 has-text-left">成員<span class="has-text-link">TEAM</span></p>
