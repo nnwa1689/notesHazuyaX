@@ -4,8 +4,9 @@
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-3">
     <p class="title is-1 has-text-left">關於<span class="has-text-link">ABOUT</span></p>
 </div>
-<p class="title is-4 mt-6" data-scroll data-scroll-speed="-1" data-scroll-delay="0">&ldquo;每次用筆記下的事物，<br>都是讓我更靠近並認識自我的滋養。&ldquo;</p>
-<p class="is-size-5" data-scroll data-scroll-speed="-1" data-scroll-delay="0">取名「筆記」，是因為自上大學以來我就很習慣透過自己的資訊專業記錄自己的學習過程（過去的筆記長也網站）。我想技術是冷的，但每一個使用技術的心都是熱的，期待我們的風格能與您一同合作。</p>
+<p class="title is-5 mt-6" data-scroll data-scroll-speed="-1" data-scroll-delay="0">&ldquo;每個設計，</p>
+<p class="title is-5" data-scroll data-scroll-speed="-1" data-scroll-delay="0">都是在有限邊界並由數個點串聯而來。&ldquo;</p>
+<p data-scroll data-scroll-speed="-1" data-scroll-delay="0">設計，就是要在有界限的範圍之中，才能突顯出美感。</p>
 <section class="hero is-link is-halfheight mt-6" data-scroll data-scroll-speed="2">
     <div class="hero-body">
         <div class="container is-fluid has-text-left">
@@ -15,17 +16,18 @@
                 </div>
                 <div class="column is-9">
                     <p class="subtitle is-1">服務項目</p>
-                    <p class="subtitle is-3">#網頁設計, #Web前端開發(Vue/React)</p>
-                    <p class="subtitle is-3">#ServerLess系統開發(Firebase), #後端系統開發(PHP/DotNet)</p>
-                    <p class="subtitle is-3">#CMS內容管理系統(strapi)</p>
+                    <p class="subtitle is-3"># 網頁設計, # Web前端開發(Vue/React)</p>
+                    <p class="subtitle is-3"># ServerLess系統開發(Firebase), # 後端系統開發(PHP/DotNet)</p>
+                    <p class="subtitle is-3"># CMS內容管理系統(strapi)</p>
+                    <p class="subtitle is-3 mt-6"><a href="/works"># 看看我們做過什麼～</a></p>       
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<p class="subtitle is-1 has-text-centered" data-scroll data-scroll-speed="2"><a href="/works">看看我們做過什麼～</a></p>       
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="/uploadfile/57a2f49b946ac192eaa1d833d99abb05.png" alt="" width="256" height="257"></p>
+
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="/uploadfile/cf3102b1cb2a21092f498bd3b2fe7248.png" alt="" width="256" height="257"></p>
 
 <section class="hero is-success is-halfheight mt-6" data-scroll data-scroll-speed="4" data-scroll-delay="1.5">
     <div class="hero-body">
@@ -33,8 +35,9 @@
             <div class="columns">
                 <div class="column is-9">
                     <p class="subtitle is-1">樂於技術分享</p>
-                    <p class="subtitle is-3">#在練習中體驗，在專案中實現</p>
-                    <p class="subtitle is-3">#實戰經驗文章分享</p>
+                    <p class="subtitle is-3"># 在練習中體驗，在專案中實現</p>
+                    <p class="subtitle is-3"># 實戰經驗文章分享</p>
+                    <p class="subtitle is-3"><a href="/post"># 看看我們的技術雜記</a></p>
                 </div>
                 <div class="column is-3">
                     <p class="title is-1 has-text-centered" data-scroll-speed="2"><span class="fas fa-book-reader">&nbsp;</span></p>
@@ -43,7 +46,6 @@
         </div>
     </div>
 </section>
-<p class="subtitle is-1 has-text-centered" data-scroll="" data-scroll-speed="4"><a href="/post">技術雜記</a></p>
 
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-6">
     <p class="title is-1 has-text-left">成員<span class="has-text-link">TEAM</span></p>

@@ -34,19 +34,19 @@
     }
 
   @font-face {
-      font-family: 'NotoSansTC-Regular';
-      font-style: normal;
-      src: url(/fonts/NotoSansTC-Regular.otf);
-      unicode-range: U+4E00-9FFF;
-      font-display: swap;
+    font-family: 'NotoSerifTC-Regular';
+    font-style: normal;
+    src: url(/fonts/NotoSerifTC-Regular.otf);
+    unicode-range: U+4E00-9FFF;
+    font-display: swap;
   }
 
   @font-face {
-      font-family: 'NotoSansTC-Regular';
-      font-style: normal;
-      src: url(/fonts/RedHatText-Regular.ttf);
-      unicode-range: U+00-024F;
-      font-display: swap;
+    font-family: 'NotoSerifTC-Regular';
+    font-style: normal;
+    src: url(/fonts/RedHatText-Regular.ttf);
+    unicode-range: U+00-024F;
+    font-display: swap;
   }
 
 /***********/

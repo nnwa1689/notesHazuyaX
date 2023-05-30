@@ -64,7 +64,7 @@
                         </form>
                     </div>
                 </div>
-                <p>Made with 💗 by notes-Design</p>
+                <p>Made with 💗 by NodeedgeDesign</p>
             </div>
         </div>
     </section>
