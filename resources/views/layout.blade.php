@@ -156,15 +156,15 @@
                 <div class="loader-body">
                     <lottie-player
                         class="is-align-items-center"
-                        src="https://assets8.lottiefiles.com/packages/lf20_iYvSqSMKZB.json"
+                        src="{{$webData['webConfig'][13]->tittle}}qGqy9BSkJ7LCT4.json"
                         background="transparent"
                         speed="3"
-                        style="width: 256px; height: 256px;"
+                        style="width: 350px; height: 256px;"
                         loop
                         autoplay
                     >
                     </lottie-player>
-                    <p class="is-size-5">一筆一筆記下所有過程...</p>
+                    <p class="is-size-5">因為有限，才突顯出美感...</p>
                 </div>
             </section>
             @section('herocontent')
