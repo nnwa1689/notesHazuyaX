@@ -82,7 +82,7 @@ Route::post('admin/uploadFiles','AdminController@uploadFiles')->middleware('user
 
 /*文章相關*/
 Route::post('admin/updatePost/{postID}', 'AdminController@updatePost')->where('postID', '[0-9]+')->middleware('userAuth:post');
-Route::post('admin/delPost', 'AdminController@deletePost')->middleware('userAuth:post');
+Route::post('admin/handlePost', 'AdminController@MultipleHandlePost')->middleware('userAuth:post');
 Route::post('admin/newPost', 'AdminController@newPost')->middleware('userAuth:post');
 Route::get('admin/editPost/{postID?}', 'AdminController@showEditPost')->where('postID', '[0-9A-Za-z]+')->middleware('userAuth:post');
 Route::get('admin/editPost/p/{pageNumber}', 'AdminController@showEditPostList')->where('pageNumber', '[0-9]+')->middleware('userAuth:post');

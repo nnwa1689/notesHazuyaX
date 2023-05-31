@@ -323,4 +323,56 @@ class PostService
         }
     }
 
+    /**
+     *批次隱藏文章
+     *
+     * @return List
+     */
+    public function SetPostsPrivate($req)
+    {
+        DB::connection('mysql');
+        $PostId = (isset($req->postid) ? $req->postid : '');
+
+        if($PostId !== '')
+        {
+            foreach($PostId as $value)
+            {
+                DB::update
+                (
+                    'UPDATE Blog SET Competence = ? WHERE `Blog`.`PostId` = ?',
+                    [
+                        "private",
+                        $value
+                    ]);
+            }
+
+        }
+    }
+
+    /**
+     *批次公開文章
+     *
+     * @return List
+     */
+    public function SetPostsPublic($req)
+    {
+        DB::connection('mysql');
+        $PostId = (isset($req->postid) ? $req->postid : '');
+
+        if($PostId !== '')
+        {
+            foreach($PostId as $value)
+            {
+                DB::update
+                (
+                    'UPDATE Blog SET Competence = ? WHERE `Blog`.`PostId` = ?',
+                    [
+                        "public",
+                        $value
+                    ]);
+            }
+
+        }
+    }
+
 }

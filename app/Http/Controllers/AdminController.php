@@ -157,9 +157,15 @@ class AdminController extends Controller
         return redirect('/admin/editPost');
     }
 
-    public function deletePost(Request $req)
+    public function MultipleHandlePost(Request $req)
     {
-        $this -> postService -> DeletePosts($req);
+        if ($req -> action == "delete") {
+            $this -> postService -> DeletePosts($req);
+        } else if ($req -> action == "public") {
+            $this -> postService -> SetPostsPublic($req);
+        } else if ($req -> action == "private") { 
+            $this -> postService -> SetPostsPrivate($req);
+        }
         return redirect('/admin/editPost');
     }
 
