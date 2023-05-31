@@ -16,15 +16,15 @@
     }
     </script>
     <div class="box">
-        <button class="button is-outlined" onclick="Sub()">批次操作</button>
-        <div class="select">
-            <select name="action">
-                <option value="private">設為私有</option>
-                <option value="public">設為公開</option>
-                <option value="delete">刪除</option>
-            </select>
-        </div>
         <form id="postForm" method="post" action="/admin/handlePost">
+            <button class="button is-primary is-outlined" onclick="Sub()">批次操作</button>
+            <div class="select">
+                <select name="action">
+                    <option value="private">設為私有</option>
+                    <option value="public">設為公開</option>
+                    <option value="delete">刪除</option>
+                </select>
+            </div>
             <table class="table is-striped is-fullwidth">
                 <thead>
                     <th>
