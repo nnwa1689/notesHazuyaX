@@ -8762,6 +8762,8 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   padding-left: 0.5em;
   padding-right: 0.5em;
   text-align: center;
+  width: 64px;
+  height: 64px;
 }
 
 .pagination-previous,
@@ -8775,6 +8777,8 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .pagination-previous:hover,
 .pagination-next:hover,
 .pagination-link:hover {
+  transition: all 0.3s;
+  background-color: #E86A33;
   border-color: #b5b5b5;
   color: #363636;
 }
