@@ -1,12 +1,5 @@
 @extends('layout')
 @section('title', $postData[0]->PostTittle.' - ')
-@section('breadcrumb')
-    @parent
-    <li><a href="{{$webData['webConfig'][13]->tittle}}"><i class="fas fa-home"></i>首頁</a></li>
-    <li><a href="{{$webData['webConfig'][13]->tittle}}post">所有文章</a></li>
-    <li><a href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a></li>
-    <li class="is-active"><a href="#" aria-current="page">{{$postData[0]->PostTittle}}</a></li>
-@endsection
 @section('content')
 @parent
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">

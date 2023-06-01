@@ -36,7 +36,7 @@
         </ul>
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
-            <a onclick="pageAction({{ isset($_GET['page']) ? $_GET['page']+1:1 }})" rel="next" aria-label="@lang('pagination.next')" class="pagination-next button is-primary is-medium"><i class="fas fa-chevron-right"></i></a>
+            <a onclick="pageAction({{ isset($_GET['page']) ? $_GET['page']+1:1 }})" rel="next" aria-label="@lang('pagination.next')" class="pagination-next button is-primary is-rounded is-medium"><i class="fas fa-chevron-right"></i></a>
         @else
         <a class="pagination-next button is-primary is-rounded is-medium" disabled><i class="fas fa-chevron-right"></i> </a>
         @endif

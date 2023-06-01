@@ -7,8 +7,17 @@
 @endsection
 @section('content')
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-3 mt-3">
-    <p class="title is-1 has-text-left">作品集<span class="has-text-link pl-2">Works</span></p>
+    <p class="title is-1 has-text-left"><span id="titleText"></span></p>
 </div>
+<script>
+    var typed = new Typed("#titleText", {
+        strings:["作品集<span class=\"has-text-link pl-2\">Works</span>",],
+        stringsElement: '#typed-strings',
+        typeSpeed: 70,
+        startDelay: 2000,
+        loop: false,
+    });
+</script>
 <div class="columns is-multiline is-mobile is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem; align-items: end;">
 @php($i = 1)
 @foreach($WorksList as $item)

@@ -1,18 +1,15 @@
 @extends('layout')
 @section('title', $title)
-@section('breadcrumb')
-    @parent
-    <li><a href="{{$webData['webConfig'][13]->tittle}}"><i class="fas fa-home"></i>首頁</a></li>
-    <li><a href="{{$webData['webConfig'][13]->tittle}}/post">所有文章</a></li>
-    <li class="is-active"><a href="#" aria-current="page">{{$allPosts[0]->ClassName}}</a></li>
-@endsection
 @section('content')
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6 mt-3">
-    <p class="title is-1 has-text-left">{{$allPosts[0]->ClassName}}</p>
+    <p class="title is-1 has-text-left">
+        <span id="titleText"></span>
+    </p>
     <p class="is-size-5">{{$allPosts[0]->Short_Intro}}</p>
 </div>
 
 <div class="tabs is-centered is-medium is-fullwidth">
+    <!--
     <ul>
         <li class="is-active">
         <a>
@@ -27,6 +24,7 @@
         </a>
         </li>
     </ul>
+    -->
 </div>
 <div class="columns is-multiline is-mobile is-gapless is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
 @foreach($allPosts as $post)
@@ -50,4 +48,13 @@
     {{ $allPosts->links('vendor.pagination.default') }}
 </div>
 <p></p>
+<script>
+    var typed = new Typed("#titleText", {
+        strings:["{{$allPosts[0]->ClassName}}",],
+        stringsElement: '#typed-strings',
+        typeSpeed: 70,
+        startDelay: 2000,
+        loop: false,
+    });
+</script>
 @endsection

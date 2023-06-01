@@ -9,22 +9,22 @@
     <section class="hero is-large">
     <div class="hero-body">
         <div class="container has-text-centered">
-        <p class="title is-1">
-            網頁・<span class="has-text-link">設計</span>
-        </p>
-        <p class="title is-1">
-            <span class="has-text-success">技術</span>＆雜談
-        </p>
-        <p class="title is-1">
-            <lottie-player
-                src="{{$webData['webConfig'][13]->tittle}}/lf20_wdcziokb.json"
-                background="transparent"
-                speed="1"
-                style="width: 256px; height: 256px; margin-right:auto; margin-left:auto;"
-                loop
-                autoplay
+            <p class="title is-1" id="Home">
+                網頁・<span class="has-text-link">設計</span>
+            </p>
+            <p class="title is-1">
+                <span class="has-text-success">技術</span>＆雜談
+            </p>
+            <p class="title is-1">
+                <lottie-player
+                    src="{{$webData['webConfig'][13]->tittle}}/lf20_wdcziokb.json"
+                    background="transparent"
+                    speed="1"
+                    style="width: 256px; height: 256px; margin-right:auto; margin-left:auto;"
+                    loop
+                    autoplay
                 ></lottie-player>
-        </p>
+            </p>
         </div>
     </div>
     </section>

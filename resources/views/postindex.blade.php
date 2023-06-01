@@ -8,8 +8,7 @@
 @section('content')
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6 mt-3">
     <p class="title is-1 has-text-left">
-        雜記<span class="has-text-link pl-2">BLOG</span>
-        <a class="ml-2" href="{{$webData['webConfig'][13]->tittle}}search"><i class="fas fa-search"></i></a>
+        <span id="titleText"></span>
     </p>
     <p class="is-size-5 has-text-left">這裡，紀錄與收藏著小夥伴們的各種經驗與過程！</p>
 </div>
@@ -40,8 +39,17 @@
         @endcomponent
     @endforeach
 </div>
-    <div class="block">
-        {{ $allPosts->links('vendor.pagination.default') }}
-    </div>
-    <p></p>
+<div class="block">
+    {{ $allPosts->links('vendor.pagination.default') }}
+</div>
+<p></p>
+<script>
+    var typed = new Typed("#titleText", {
+        strings:["雜記<span class=\"has-text-link pl-2\">BLOG</span><a class=\"ml-2\" href=\"{{$webData['webConfig'][13]->tittle}}search\"><i class=\"fas fa-search\"></i></a>",],
+        stringsElement: '#typed-strings',
+        typeSpeed: 70,
+        startDelay: 2000,
+        loop: false,
+    });
+</script>
 @endsection

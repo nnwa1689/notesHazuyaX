@@ -2,10 +2,13 @@
 @section('title', '關於 - ')
 @section('content')
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-3">
-    <p class="title is-1 has-text-left">關於<span class="has-text-link">ABOUT</span></p>
+    <p class="title is-1 has-text-left">
+        <span id="titleText"></span>
+    </p>
 </div>
-<p class="title is-5 mt-6" data-scroll data-scroll-speed="-1" data-scroll-delay="0">&ldquo;每個設計，</p>
-<p class="title is-5" data-scroll data-scroll-speed="-1" data-scroll-delay="0">都是在有限邊界並由數個點串聯而來。&ldquo;</p>
+<p class="title is-5 mt-6" data-scroll data-scroll-speed="-1" data-scroll-delay="0">
+    &ldquo;每個設計，都是在有限邊界並由數個點串聯而來。&ldquo;
+</p>
 <p data-scroll data-scroll-speed="-1" data-scroll-delay="0">設計，就是要在有界限的範圍之中，才能突顯出美感。</p>
 <section class="hero is-link is-halfheight mt-6" data-scroll data-scroll-speed="2">
     <div class="hero-body">
@@ -96,4 +99,13 @@
         </div>
     </div>
 </section>
+<script>
+    var typed = new Typed("#titleText", {
+        strings:["關於<span class=\"has-text-link\">ABOUT</span>",],
+        stringsElement: '#typed-strings',
+        typeSpeed: 70,
+        startDelay: 2000,
+        loop: false,
+    });
+</script>
 @endsection

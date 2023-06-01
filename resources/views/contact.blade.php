@@ -2,7 +2,9 @@
 @section('title', '聊聊天 - ')
 @section('content')
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-3">
-    <p class="title is-1 has-text-left">聊聊天<span class="has-text-link">CONTACT</span></p>
+    <p class="title is-1 has-text-left">
+        <span id="titleText"></span>
+    </p>
 </div>
 <div class="pt-4">
     <div class="columns">
@@ -113,5 +115,14 @@
             });
         }
     }
+</script>
+<script>
+    var typed = new Typed("#titleText", {
+        strings:["聊聊天<span class=\"has-text-link\">CONTACT</span>",],
+        stringsElement: '#typed-strings',
+        typeSpeed: 70,
+        startDelay: 2000,
+        loop: false,
+    });
 </script>
 @endsection

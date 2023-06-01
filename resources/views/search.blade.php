@@ -1,14 +1,10 @@
 @extends('layout')
 @section('title', '搜尋文章 - ')
-@section('breadcrumb')
-    @parent
-    <li><a href="{{$webData['webConfig'][13]->tittle}}"><i class="fas fa-home"></i>首頁</a></li>
-    <li class="is-active"><a href="#" aria-current="page">搜尋文章</a></li>
-@endsection
 @section('content')
 @parent
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6 mt-3">
-    <p class="title is-1 has-text-left">搜尋：{{ !empty($_GET['search-text']) == 1 ? $_GET['search-text'] : "" }}
+    <p class="title is-1 has-text-left">
+        <span id="titleText"></span>
     </p>
 </div>
 <div class="content">
@@ -56,7 +52,13 @@
     <p class="has-text-centered is-size-4">尚無相關結果</p>
 </div>
 @endif
-@endsection
-@section('sideBar')
-    @parent
+<script>
+    var typed = new Typed("#titleText", {
+        strings:["搜尋：{{ !empty($_GET['search-text']) == 1 ? $_GET['search-text'] : "" }}",],
+        stringsElement: '#typed-strings',
+        typeSpeed: 70,
+        startDelay: 2000,
+        loop: false,
+    });
+</script>
 @endsection
