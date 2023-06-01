@@ -49,7 +49,7 @@
                         <img alt="logo" style="max-height: 50px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                     </a>
                     <!--MibileNavbar-->
-                    <div class="navbar-item navbar-toggle is-mobile" style="margin-left: auto;">
+                    <div class="navbar-item navbar-toggle is-mobile" style="margin-left: auto; margin-right: -0.75rem">
                         <a class="navbar-link is-arrowless"><i class="fas fa-stream"></i></a>
                     </div>
                     <!-----END ----->
@@ -169,7 +169,7 @@
             </section>
             @section('herocontent')
             @show
-            <div class="container" data-scroll-speed="2">
+            <div class="container">
                 <div class="block ml-3 mr-3">
                     @section('content')
                     @show

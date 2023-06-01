@@ -12127,8 +12127,6 @@ label.panel-block:hover {
 
 @media screen and (max-width: 768px) {
   .footer {
-    margin-left:1rem;
-    margin-right:1rem;
     margin-bottom:-3rem;
   }
 }
