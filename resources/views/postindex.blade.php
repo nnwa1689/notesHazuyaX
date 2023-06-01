@@ -10,7 +10,6 @@
     <p class="title is-1 has-text-left">
         <span id="titleText"></span>
     </p>
-    <p class="is-size-5 has-text-left">這裡，紀錄與收藏著小夥伴們的各種經驗與過程！</p>
 </div>
 <div class="block pt-3 pb-3">
     <div class="field is-grouped is-grouped-multiline">
