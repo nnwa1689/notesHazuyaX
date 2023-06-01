@@ -153,9 +153,9 @@
 
 .is-WorksItem:hover img {
   transition: all 0.3s ease-in-out;
-  transform: scale(1.10);
+  transform: scale(1.20);
   background-color: #f2f2f2;
-  opacity: .8;
+  /*opacity: .8;*/
   cursor: pointer;
 }
 
@@ -181,7 +181,7 @@
   margin-top: 0rem;
   margin-bottom: 0rem;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .is-works-button {
@@ -227,7 +227,7 @@
 
 .is-author-item:hover img {
   transition: all 0.3s ease-in-out;
-  transform: scale(1.10);
+  transform: scale(1.20);
   background-color: #f2f2f2;
   opacity: .8;
 }
@@ -244,7 +244,7 @@
   margin-top: 0rem;
   margin-bottom: 0rem;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 15px;
   height:700px;
 }
 
@@ -294,7 +294,7 @@
 
 .is-post-index:hover .post-cover-index {
   transition: transform 0.3s;
-  transform: scale(1.10);
+  transform: scale(1.20);
 }
 
 .is-post-author-container {
@@ -411,9 +411,9 @@
 
 .is-post-item:hover img {
   transition: all 0.3s ease-in-out;
-  transform: scale(1.10);
+  transform: scale(1.20);
   background-color: #FFFFFF;
-  opacity: .7;
+  /*opacity: .7;*/
   cursor: pointer;
 }
 
@@ -439,7 +439,7 @@
   margin-top: 0rem;
   margin-bottom: 0rem;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 15px;
   height:550px;
   max-height:550px;
   width: calc(50% - 1.5rem);
