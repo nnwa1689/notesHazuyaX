@@ -169,8 +169,8 @@
             </section>
             @section('herocontent')
             @show
-            <div class="container">
-                <div class="block ml-3 mr-3">
+            <div class="container is-fluid">
+                <div class="block">
                     @section('content')
                     @show
                 </div>

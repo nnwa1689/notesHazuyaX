@@ -4,18 +4,21 @@
 @parent
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">
     <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
-    <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-3">
+    <div data-scroll class="section has-text-centered mb-2 mt-3">
         <div class="columns is-multiline is-justify-content-center is-align-content-center">
             <p class="is-size-6 mr-3"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</p>
             <p class="is-size-6 mr-3"><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</p>
             <a class="tag button is-primary is-outlined is-rounded is-small" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->ClassName}}</a>
         </div>
-        <p class="is-size-2 mb-2">{{$postData[0]->PostTittle}}
+        <p class="is-size-2">{{$postData[0]->PostTittle}}
             @if($webData['userData'] !== 0)
                 <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i></button>
             @endif
         </p>
     </div>
+    <section data-scroll data-scroll-speed="3" class="hero is-small p-0 mb-6 ml-0 mr-0" style="overflow: hidden;">
+        <img src="{{ $postData[0]->CoverImage }}" style="width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; transform: scale(1.50);" data-scroll data-scroll-speed="-3">
+    </section>
     <div class="container is-max-desktop mb-6">
         <div class="content line-numbers">
         {!! $postData[0]->PostContant !!}

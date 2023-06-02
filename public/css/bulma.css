@@ -599,6 +599,13 @@
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  .block {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+}
+
 .delete, .modal-close {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -8660,13 +8667,13 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
   .navbar > .container .navbar-brand,
   .container > .navbar .navbar-brand {
-    margin-left: -.75rem;
+    margin-left: -1rem;
     min-width: 210px;
 
   }
   .navbar > .container .navbar-menu,
   .container > .navbar .navbar-menu {
-    margin-right: calc(-12px - 0.75rem);
+    margin-right: calc(-16px - 1rem);
   }
   .navbar.is-fixed-bottom-desktop, .navbar.is-fixed-top-desktop {
     left: 0;
