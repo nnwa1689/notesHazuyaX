@@ -84,7 +84,7 @@
     </div>
     @endif
 
-    <div class="block is-justify-content-center" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+    <div class="container is-max-desktop" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
             crossorigin="anonymous"></script>
         <ins class="adsbygoogle"
