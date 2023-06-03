@@ -17,7 +17,7 @@
         </p>
     </div>
     <section data-scroll data-scroll-speed="3" class="hero is-small p-0 mb-6 ml-0 mr-0" style="overflow: hidden;">
-        <img src="{{ $postData[0]->CoverImage }}" style="width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; transform: scale(1.50);" data-scroll data-scroll-speed="-3">
+        <img class="ContentCoverImage" src="{{ $postData[0]->CoverImage }}" data-scroll data-scroll-speed="-3">
     </section>
     <div class="container is-max-desktop mb-6">
         <div class="content line-numbers">
