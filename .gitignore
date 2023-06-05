@@ -3,6 +3,7 @@
 /storage
 /storage/*.key
 /vendor
+/.well-known
 .env
 .env.backup
 .env-p
