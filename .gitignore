@@ -4,6 +4,7 @@
 /storage/*.key
 /vendor
 /.well-known
+composer.lock
 .env
 .env.backup
 .env-p

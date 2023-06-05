@@ -17,7 +17,7 @@
         crossorigin="anonymous"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
         <script>
-            console.log("%c不要看啦，人家會害羞>__<WWWWW", "color: blue; font-size: 30px;");
+            console.log("%c不要看啦，人家會害羞>__<W", "color: blue; font-size: 30px;");
             $(document).ready(function() {
                 let player = document.querySelector("lottie-player");
                 $('.navbar-toggle').click(function(){
