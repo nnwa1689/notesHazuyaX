@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title')NotesCMSX</title>
+    <title>@yield('title') | NotesX CMS</title>
     <!-- Bulma Version 0.8.x-->
     <link rel="stylesheet" href="{{asset('css/bulma.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('css/admin.css')}}">
@@ -116,7 +116,7 @@
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>
-                Notes X CMS Made with  <span class="has-text-danger">❤</span>  by NodeedgeDesign
+                NotesX CMS Made with  <span class="has-text-danger">❤</span>  by Nodedge Design
                 </p>
                 <p class="is-size-6">
                     Version:V230522.20
