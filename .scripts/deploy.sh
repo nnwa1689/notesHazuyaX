@@ -8,16 +8,20 @@ echo "Deployment started ..."
 # (php artisan down) || true
 
 # Pull the latest version of the app
-git pull origin production
+sudo git pull origin production
 
 # Install composer dependencies
-composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
+sudo composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
 
 # Clear the old cache
 php artisan clear-compiled
 
 # Recreate cache
 php artisan optimize
+
+php artisan cache:clear
+php artisan config:cache
+php artisan view:clear
 
 # Compile npm assets
 # npm run prod
