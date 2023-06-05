@@ -19,11 +19,6 @@ php artisan clear-compiled
 # Recreate cache
 php artisan optimize
 
-php artisan cache:clear
-php artisan config:clear
-php artisan config:cache
-php artisan view:clear
-
 # Compile npm assets
 # npm run prod
 
@@ -32,5 +27,11 @@ php artisan view:clear
 
 # Exit maintenance mode
 # php artisan up
+
+php artisan cache:clear
+php artisan config:cache
+php artisan view:clear
+
+php artisan config:clear
 
 echo "Deployment finished!"
