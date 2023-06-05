@@ -739,7 +739,7 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   align-items: center;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 4px;
   box-shadow: none;
   display: inline-flex;
@@ -5411,8 +5411,8 @@ a.tag:hover {
 }
 
 .input, .textarea, .select select {
-  background-color: white;
-  border-color: #dbdbdb;
+  background-color: transparent;
+  border-color: #263A29;
   border-radius: 4px;
   color: #263A29;
 }

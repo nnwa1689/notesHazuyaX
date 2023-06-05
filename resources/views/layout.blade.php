@@ -17,7 +17,7 @@
         crossorigin="anonymous"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
         <script>
-            console.log("%c不要看啦，人家會害羞>__<", "color: blue; font-size: 30px;");
+            console.log("%c不要看啦，人家會害羞>__<，studio-44s籌備中:))", "color: blue; font-size: 30px;");
             $(document).ready(function() {
                 let player = document.querySelector("lottie-player");
                 $('.navbar-toggle').click(function(){
@@ -152,7 +152,7 @@
         </div>
         <!-- Main -->
         <main class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;">
-            <section class="hero is-success is-align-items-center has-text-centered pageloader loading">
+            <section class="hero is-primary is-align-items-center has-text-centered pageloader loading">
                 <div class="loader-body">
                     <lottie-player
                         class="is-align-items-center"
@@ -164,7 +164,7 @@
                         autoplay
                     >
                     </lottie-player>
-                    <p class="is-size-5">因為有限，才突顯出美感...</p>
+                    <p class="is-size-5">Wait 44seconds⋯⋯</p>
                 </div>
             </section>
             @section('herocontent')
