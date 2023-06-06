@@ -2687,8 +2687,8 @@ a.box:active {
 
 .button:focus, .button.is-focused {
   transition: all 0.3s;
-  box-shadow: none;
-  transform: translate(0px, 0px);
+  box-shadow: none !important;
+  transform: translate(0px, 0px) !important;
   color: #363636;
 }
 
@@ -2698,8 +2698,8 @@ a.box:active {
 
 .button:active, .button.is-active {
   transition: all 0.3s;
-  box-shadow: none;
-  transform: translate(0px, 0px);
+  box-shadow: none !important;
+  transform: translate(0px, 0px) !important;
   color: #363636;
 }
 
@@ -3160,23 +3160,22 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
 }
 
 .button.is-primary:hover, .button.is-primary.is-hovered {
-  box-shadow: 5px 5px 0 0.125em #E86A33;
+  box-shadow: 5px 5px 0 0.125em #263A29;
   background-color: #E86A33;
-  border-color: #263A29;
   color: #fff;
 }
 
 .button.is-primary:focus, .button.is-primary.is-focused {
-  border-color: #263A29;
   color: #fff;
 }
 
 .button.is-primary:focus:not(:active), .button.is-primary.is-focused:not(:active) {
+  border-color: #E86A33;
   /*box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);*/
 }
 
 .button.is-primary:active, .button.is-primary.is-active {
-  border-color: #263A29;
+  border-color: #E86A33;
   color: #fff;
 }
 
@@ -3286,19 +3285,22 @@ fieldset[disabled] .button.is-primary.is-inverted.is-outlined {
   transition: all 0.3s;
   background-color: #263A29;
   border-color: #E86A33;
-  box-shadow: 5px 5px 0 0.125em #263A29;
+  box-shadow: 5px 5px 0 0.125em #E86A33;
   color: #fff;
 }
 
 .button.is-link:focus, .button.is-link.is-focused {
+  border-color: #263A29;
   color: #fff;
 }
 
 .button.is-link:focus:not(:active), .button.is-link.is-focused:not(:active) {
+  border-color: #263A29;
   /*box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);*/
 }
 
 .button.is-link:active, .button.is-link.is-active {
+  border-color: #263A29;
   color: #fff;
 }
 
@@ -7545,6 +7547,13 @@ a.list-item {
   margin-left: 0%;
   border-end-end-radius: 50px;
   margin-top: -7rem;
+  box-shadow: 5px 5px 0 0.25em #E86A33;
+}
+
+@media screen and (max-width: 1024px){
+  .fullMenu {
+    height: 130%;
+  }
 }
 
 .fullMenu a{
