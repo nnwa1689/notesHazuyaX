@@ -4090,6 +4090,10 @@ fieldset[disabled] .button {
   margin-top: 0.25em;
 }
 
+.content li {
+  font-size: 1.25em;
+}
+
 .content p:not(:last-child),
 .content dl:not(:last-child),
 .content ol:not(:last-child),
