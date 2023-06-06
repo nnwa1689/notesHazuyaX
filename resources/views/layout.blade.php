@@ -158,7 +158,7 @@
                         class="is-align-items-center"
                         src="{{$webData['webConfig'][13]->tittle}}lf30_zlkyyxof.json"
                         background="transparent"
-                        speed="3"
+                        speed="1.5"
                         style="width: 450px; height: 300px;"
                         loop
                         autoplay

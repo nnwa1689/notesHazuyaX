@@ -116,7 +116,7 @@
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>
-                NotesX CMS Made with  <span class="has-text-danger">❤</span>  by Nodedge Design
+                NotesX CMS Made with <span class="has-text-danger">❤</span>  by 44 Seconds Studio.
                 </p>
                 <p class="is-size-6">
                     Version:V230522.20

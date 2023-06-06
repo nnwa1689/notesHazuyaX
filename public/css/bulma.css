@@ -7538,23 +7538,19 @@ a.list-item {
 .fullMenu {
   transition: all 0.5s ease-in-out;
   background-color: none;
+  box-shadow: 5px 5px 0 0.5em #E86A33;
+  border-right: 10px solid #41644A;
+  border-bottom: 10px solid #41644A;
+  border-end-end-radius: 50px;
   position: fixed;
-  z-index: -3;
   width: 100%;
   height: 0%;
   text-align: center;
   color: #F2E3DB;
   opacity: 0;
   margin-left: 0%;
-  border-end-end-radius: 50px;
   margin-top: -7rem;
-  box-shadow: 5px 5px 0 0.25em #E86A33;
-}
-
-@media screen and (max-width: 1024px){
-  .fullMenu {
-    height: 130%;
-  }
+  z-index: -3;
 }
 
 .fullMenu a{
@@ -7595,14 +7591,20 @@ a.list-item {
   opacity: 1;
   transition: all 0.5s ease-in-out;
   margin-left: 0%;
-  width: 100%;
+  width: 90%;
   height: 90%;
   z-index: 3;
   /*display: table !important;*/
   background-color: rgba(38, 58, 41, 0.95) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-end-end-radius: 999999px;
+}
+
+@media screen and (max-width: 1024px){
+  .is-on {
+    height: 100% !important;
+    width: 100% !important;
+  }
 }
 
 .is-navbar-toggle-on {
@@ -11562,7 +11564,7 @@ label.panel-block:hover {
 
 .hero.is-primary {
   background-color: #263A29;
-  color: #fff;
+  color: #F2E3DB;
 }
 
 .hero.is-primary a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -12158,6 +12160,7 @@ label.panel-block:hover {
   /*margin-bottom: 8.5rem;*/
   padding: 4rem;
   color: #F2E3DB;
+  box-shadow: 5px -5px 0 0.125em #E86A33;
 }
 
 @media screen and (max-width: 768px) {
