@@ -8,9 +8,13 @@
         </p>
     </div>
     <p class="title is-5 mt-6" data-scroll data-scroll-speed="-1" data-scroll-delay="0">
-        &ldquo;每個設計，都是在有限邊界並由數個點串聯而來。&ldquo;
+        <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
+        如果只有 44 秒鐘，你會紀錄什麼東西呢？
+        <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
     </p>
-    <p data-scroll data-scroll-speed="-1" data-scroll-delay="0">設計，就是要在有界限的範圍之中，才能突顯出美感。</p>
+    <p class="is-size-5" data-scroll data-scroll-speed="-1" data-scroll-delay="0">
+        44 秒，來自我最愛的一首歌「44 Seconds Road Movie」，人生回頭望去就如同好多段 44 秒鐘的片段，
+    </p>
     <section class="hero is-link is-halfheight mt-6" data-scroll data-scroll-speed="2">
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
