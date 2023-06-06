@@ -17,7 +17,7 @@
         crossorigin="anonymous"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
         <script>
-            console.log("%c不要看啦，人家會害羞>__<，studio-44s籌備中:))", "color: blue; font-size: 30px;");
+            console.log("%c不要看啦，人家會害羞>__<，studio-44 Seconds 籌備中:))", "color: blue; font-size: 30px;");
             $(document).ready(function() {
                 let player = document.querySelector("lottie-player");
                 $('.navbar-toggle').click(function(){
@@ -156,15 +156,15 @@
                 <div class="loader-body">
                     <lottie-player
                         class="is-align-items-center"
-                        src="{{$webData['webConfig'][13]->tittle}}qGqy9BSkJ7LCT4.json"
+                        src="{{$webData['webConfig'][13]->tittle}}lf30_zlkyyxof.json"
                         background="transparent"
                         speed="3"
-                        style="width: 350px; height: 256px;"
+                        style="width: 450px; height: 300px;"
                         loop
                         autoplay
                     >
                     </lottie-player>
-                    <p class="is-size-5">Wait 44seconds⋯⋯</p>
+                    <p class="is-size-5">44 秒鐘後，將會展開什麼樣子的冒險呢⋯⋯？</p>
                 </div>
             </section>
             @section('herocontent')

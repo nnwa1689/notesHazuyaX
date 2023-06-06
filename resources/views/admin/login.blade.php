@@ -64,7 +64,7 @@
                         </form>
                     </div>
                 </div>
-                <p>Made with 💗 by Nodedge Design</p>
+                <p>Made with 💗 by 44 Seconds Studio.</p>
             </div>
         </div>
     </section>

@@ -3215,7 +3215,7 @@ fieldset[disabled] .button.is-primary.is-inverted {
 
 .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined.is-hovered, .button.is-primary.is-outlined:focus, .button.is-primary.is-outlined.is-focused {
   background-color: #E86A33;
-  border-color: #E86A33;
+  border-color: #263A29;
   color: #fff;
 }
 
@@ -3340,7 +3340,7 @@ fieldset[disabled] .button.is-link.is-inverted {
 
 .button.is-link.is-outlined:hover, .button.is-link.is-outlined.is-hovered, .button.is-link.is-outlined:focus, .button.is-link.is-outlined.is-focused {
   background-color: #E86A33;
-  border-color: #E86A33;
+  border-color: #263A29;
   color: #fff;
 }
 
@@ -8806,7 +8806,6 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .pagination-previous,
 .pagination-next,
 .pagination-link {
-  border-color: #dbdbdb;
   color: #363636;
   min-width: 2.5em;
 }
@@ -8816,7 +8815,6 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .pagination-link:hover {
   transition: all 0.3s;
   background-color: #E86A33;
-  border-color: #b5b5b5;
   color: #363636;
 }
 
