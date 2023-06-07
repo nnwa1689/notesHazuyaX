@@ -7,6 +7,7 @@ use DB;
 use App\Services\UserService;
 use App\Services\PostService;
 use App\Services\NavbarService;
+use App\Models\Web;
 
 
 class BaseService
@@ -25,9 +26,10 @@ class BaseService
 
     public function GetWebConfig()
     {
-       DB::connection('mysql');
-       $data = DB::select("SELECT * FROM web ORDER BY ID ASC");
-       return $data;
+        DB::connection('mysql');
+        $data = Web::all() -> orderBy('ID', 'asc');
+        //$data = DB::select("SELECT * FROM web ORDER BY ID ASC");
+        return $data;
     }
 
     public function WebInit(){
