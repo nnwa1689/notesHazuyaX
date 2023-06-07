@@ -29,7 +29,7 @@
                 'ReadTime' => $post->ReadTime,
                 'Author' => $post->User->Yourname,
                 'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$post->User->Avatar,
-                'AuthorUrl' => ''
+                'AuthorUrl' => 'X'
                 ])
             @endcomponent
         @endforeach
