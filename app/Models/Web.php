@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Web extends Model
 {
-    protected $table = 'Web';
+    protected $table = 'web';
     protected $primarykey = "ID";
     public $timestamps = false;
     protected $guarded = [];
