@@ -17,19 +17,17 @@
         </div>
     </div>
     <div class="columns is-multiline is-mobile is-gapless is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
-    {{ count($allPosts) }}
-    @foreach($allPosts as $post)
-            {{ $post }}
+        @foreach($allPosts as $post)
             @component('compoments.postitem',
                 ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
                 'CoverImage' => $post->CoverImage,
                 'PostTittle' => $post->PostTittle,
                 'PostContant' => $post->PostContant,
-                'Category' => $post->ClassName,
+                'Category' => $post->Category->ClassName,
                 'CategoryUrl' => $webData['webConfig'][13]->tittle."category/".$post->ClassId,
                 'PostDate' => $post->PostDate,
                 'ReadTime' => $post->ReadTime,
-                'Author' => $post->Yourname,
+                'Author' => $post->User->Yourname,
                 'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$post->Avatar,
                 'AuthorUrl' => $webData['webConfig'][13]->tittle."person/".$post->UserID
                 ])
