@@ -109,19 +109,19 @@
             <div class="columns">
                 <div class="column is-one-fifth has-text-centered">
                     作者{{$i}}
-                    <input hidden name="{{ 'staff'.$i.'_StaffPID' }}" type="text" value="{{ isset($WorkDetail[$i - 1] -> StaffPID) ? $WorkDetail[$i - 1] -> StaffPID : '' }}">
+                    <input hidden name="{{ 'staff'.$i.'_StaffPID' }}" type="text" value="{{ isset($WorkDetail[0] -> WorksStaff[$i - 1] -> StaffPID) ? $WorkDetail[0] -> WorksStaff[$i - 1] -> StaffPID : '' }}">
                 </div>
                 <div class="column is-one-fifth">
-                    <input class="input" name="{{ 'staff'.$i.'_name' }}" type="text" placeholder="作者名字" value="{{ isset($WorkDetail[$i - 1] -> StaffName) ? $WorkDetail[$i - 1] -> StaffName : '' }}">
+                    <input class="input" name="{{ 'staff'.$i.'_name' }}" type="text" placeholder="作者名字" value="{{ isset($WorkDetail[0] -> WorksStaff[$i - 1] -> StaffName) ? $WorkDetail[0] -> WorksStaff[$i - 1] -> StaffName : '' }}">
                 </div>
                 <div class="column is-one-fifth">
-                    <input class="input" name="{{ 'staff'.$i.'_title' }}" type="text" placeholder="作者職稱" value="{{ isset($WorkDetail[$i - 1] -> StaffTitle) ? $WorkDetail[$i - 1] -> StaffTitle : '' }}">
+                    <input class="input" name="{{ 'staff'.$i.'_title' }}" type="text" placeholder="作者職稱" value="{{ isset($WorkDetail[0] -> WorksStaff[$i - 1] -> StaffTitle) ? $WorkDetail[0] -> WorksStaff[$i - 1] -> StaffTitle : '' }}">
                 </div>
                 <div class="column is-one-fifth">
-                    <input class="input" name="{{ 'staff'.$i.'_Image' }}" type="text" placeholder="作者頭像" value="{{ isset($WorkDetail[$i - 1] -> StaffImage) ? $WorkDetail[$i - 1] -> StaffImage : '' }}">
+                    <input class="input" name="{{ 'staff'.$i.'_Image' }}" type="text" placeholder="作者頭像" value="{{ isset($WorkDetail[0] -> WorksStaff[$i - 1] -> StaffImage) ? $WorkDetail[0] -> WorksStaff[$i - 1] -> StaffImage : '' }}">
                 </div>
                 <div class="column is-one-fifth">
-                    <input class="input" name="{{ 'staff'.$i.'_Url' }}" type="text" placeholder="作者網站連結" value="{{ isset($WorkDetail[$i - 1] -> StaffUrl) ? $WorkDetail[$i - 1] -> StaffUrl : '' }}">
+                    <input class="input" name="{{ 'staff'.$i.'_Url' }}" type="text" placeholder="作者網站連結" value="{{ isset($WorkDetail[0] -> WorksStaff[$i - 1] -> StaffUrl) ? $WorkDetail[0] -> WorksStaff[$i - 1] -> StaffUrl : '' }}">
                 </div>
             </div>
             @endfor
