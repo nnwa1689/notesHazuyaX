@@ -27,8 +27,8 @@
                 'CategoryUrl' => $webData['webConfig'][13]->tittle."category/".$post->ClassId,
                 'PostDate' => $post->PostDate,
                 'ReadTime' => $post->ReadTime,
-                'Author' => $post->Yourname,
-                'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$post->Avatar,
+                'Author' => $post->User->Yourname,
+                'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$post->User->Avatar,
                 'AuthorUrl' => ''
                 ])
             @endcomponent
