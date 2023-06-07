@@ -17,9 +17,9 @@
         </div>
     </div>
     <div class="columns is-multiline is-mobile is-gapless is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
-        @foreach($allPosts as $post)
+    {{ count($allPosts) }}
+    @foreach($allPosts as $post)
             {{ $post }}
-            {{ count($allPosts) }}
             @component('compoments.postitem',
                 ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
                 'CoverImage' => $post->CoverImage,
