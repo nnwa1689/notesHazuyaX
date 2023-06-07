@@ -17,7 +17,8 @@
         </div>
     </div>
     <div class="columns is-multiline is-mobile is-gapless is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
-        @foreach($allPosts as $post)
+        @foreach($allPosts[0] as $post)
+            {{ $post }}
             @component('compoments.postitem',
                 ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
                 'CoverImage' => $post->CoverImage,
