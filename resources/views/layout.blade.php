@@ -140,7 +140,7 @@
                             <a href="/logout" class="navbar-item is-tab">
                                 <div class="image is-32x32 mr-1">
                                     <figure class="image is-1by1">
-                                        <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
+                                        <img alt="" class="is-rounded" src="{{$webData['userData']->Avatar}}">
                                     </figure>
                                 </div>登出
                             </a>

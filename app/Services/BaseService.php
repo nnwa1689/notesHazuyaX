@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use DB;
 use App\Services\UserService;
 use App\Services\PostService;
 use App\Services\NavbarService;
