@@ -131,8 +131,8 @@ class UserService
             {
                 //刪除使用者文章
                 //DB::delete("delete from Blog where UserID=?", [$v]);
-                Blog::where('UserID', $v) -> delete();
-                User::destroy($v);
+                Blog::where('UserID', strval($v)) -> delete();
+                User::where('username', strval($v)) -> delete();
             }
         }
     }
