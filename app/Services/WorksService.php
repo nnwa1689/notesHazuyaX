@@ -45,7 +45,7 @@ class WorksService
         //DB::connection('mysql');
         //$WorkDetail = DB::select(
         //    ('select Works.PID, Works.OrderID, Works.WorksID, Works.WorksName, Works.ShortIntro, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.PID = ?'), [$WorksPID]);
-        $WorkDetail = Works::where('WorksPID', $WorksPID) -> get();
+        $WorkDetail = Works::where('PID', $WorksPID) -> get();
         return $WorkDetail;
     }
 
