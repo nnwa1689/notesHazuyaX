@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Models\Blog;
 use App\Services\UserService;
 
 class PostService
@@ -24,7 +25,8 @@ class PostService
     {
         DB::connection('mysql');
         //$start = ($pageNumber - 1) * 10;
-        $data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public') as Post ORDER BY Post.PostDate DESC"))->paginate(10);
+        $data = Blog::where('Competence', 'on') -> orderBy('PostDate', 'desc') -> paginate(10);
+        //$data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public') as Post ORDER BY Post.PostDate DESC"))->paginate(10);
         //$data = DB::select("SELECT * FROM Blog WHERE Blog.Competence=? OR Blog.Competence=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$start]);
         return $data;
     }
