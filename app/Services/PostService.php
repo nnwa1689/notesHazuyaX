@@ -26,10 +26,10 @@ class PostService
         DB::connection('mysql');
         //$start = ($pageNumber - 1) * 10;
         $data = Blog::select(['PostId', 'Competence, PostTittle', 'PostDate', 'PostContent', 'ReadTime', 'CoverImage', 'ClassName', 'Yourname', 'Avatar']) 
-            -> where('Competence', 'on') -> orderBy('PostDate', 'desc');
+            -> where('Competence', 'on') -> orderBy('PostDate', 'desc') -> paginate(10);
         $data2 = Blog::select(['PostId', 'Competence, PostTittle', 'PostDate', 'PostContent', 'ReadTime', 'CoverImage', 'ClassName', 'Yourname', 'Avatar']) 
         -> where('Competence', 'on') -> orderBy('PostDate', 'desc');
-
+        print_r($data2[0]);
         //$data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public') as Post ORDER BY Post.PostDate DESC"))->paginate(10);
         //$data = DB::select("SELECT * FROM Blog WHERE Blog.Competence=? OR Blog.Competence=? ORDER BY Blog.PostDate DESC LIMIT ?, 10", ['public', 'protect',$start]);
         return $data;
