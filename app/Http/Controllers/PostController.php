@@ -41,7 +41,6 @@ class PostController extends Controller
         }
         $title='讀雜記 - ';
         $data = $this -> postService -> GetAllPublicPosts($pageNumber);
-        print_r($data);
         return view("postindex", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>$title]);
     }
 
