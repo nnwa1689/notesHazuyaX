@@ -13,11 +13,11 @@ class Blog extends Model
 
     public function User()
     {
-        return $this -> hasOne('App\User', 'username', 'UserID');
+        return $this -> hasOne('App\Models\User', 'username', 'UserID');
     }
 
     public function Category()
     {
-        return $this -> hasOne('App\Category', 'ClassId', 'ClassId');
+        return $this -> hasOne('App\Models\Category', 'ClassId', 'ClassId');
     }
 }

@@ -13,6 +13,6 @@ class Works extends Model
 
     public function WorksStaff()
     {
-        return $this -> hasMany('App\WorksStaff', 'WorksPID', 'PID');
+        return $this -> hasMany('App\Models\WorksStaff', 'WorksPID', 'PID');
     }
 }
