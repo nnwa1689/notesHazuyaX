@@ -26,7 +26,7 @@ class PostService
         DB::connection('mysql');
         //$start = ($pageNumber - 1) * 10;
         $data = Blog::select(['PostId', 'Competence, PostTittle', 'PostDate', 'PostContent', 'ReadTime', 'CoverImage', 'ClassName', 'Yourname', 'Avatar']) 
-            -> where('Competence', 'on') -> orderBy('PostDate', 'desc') -> paginate(10);
+            -> where('Competence', 'on') -> orderBy('PostDate', 'desc');
         $data2 = Blog::select(['PostId', 'Competence, PostTittle', 'PostDate', 'PostContent', 'ReadTime', 'CoverImage', 'ClassName', 'Yourname', 'Avatar']) 
         -> where('Competence', 'on') -> orderBy('PostDate', 'desc');
 
