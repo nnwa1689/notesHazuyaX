@@ -318,9 +318,9 @@ class AdminController extends Controller
         }
     }
 
-    public function newPage()
+    public function newPage(Request $req)
     {
-        $this -> pageService -> InsertNewPage();
+        $this -> pageService -> InsertNewPage($req);
         return redirect('/admin/editPage');
     }
 

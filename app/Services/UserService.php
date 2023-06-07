@@ -5,14 +5,13 @@ namespace App\Services;
 use App\Models\User;
 use App\Models\Blog;
 use Carbon\Carbon;
-use DB;
 
 class UserService
 {
 
     public function GetUserData($userID)
     {
-        $data = User::where('username', $userID) -> where('Position', 'on') -> get();
+        $data = User::where('username', strval($userID)) -> where('Position', 'on') -> get();
         return $data;
     }
 
@@ -58,14 +57,12 @@ class UserService
     public function GetActiveUser()
     {
         $data = User::where('Law_Post', '!=', 0) -> get();
-        //$data = DB::select("SELECT * FROM admin WHERE Law_Post != ?", [0]);
         return $data;
     }
 
     public function GetAllUser()
     {
         $data = User::all();
-        //$data = DB::select("select * from admin");
         return $data;
     }
 
