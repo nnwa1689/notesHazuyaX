@@ -109,7 +109,7 @@
             <div class="columns">
                 <div class="column is-one-fifth has-text-centered">
                     作者{{$i}}
-                    <input hidden name="{{ 'staff'.$i.'_StaffPID' }}" type="text" value="{{ isset($WorkDetail[0] -> WorksStaff[$i - 1] -> StaffPID) ? $WorkDetail[0] -> WorksStaff[$i - 1] -> StaffPID : '' }}">
+                    <input hidden name="{{ 'staff'.$i.'_StaffPID' }}" type="text" value="{{ isset($WorkDetail[0] -> WorksStaff[$i - 1] -> PID) ? $WorkDetail[0] -> WorksStaff[$i - 1] -> PID : '' }}">
                 </div>
                 <div class="column is-one-fifth">
                     <input class="input" name="{{ 'staff'.$i.'_name' }}" type="text" placeholder="作者名字" value="{{ isset($WorkDetail[0] -> WorksStaff[$i - 1] -> StaffName) ? $WorkDetail[0] -> WorksStaff[$i - 1] -> StaffName : '' }}">
