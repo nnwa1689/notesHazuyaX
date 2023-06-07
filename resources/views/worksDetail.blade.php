@@ -31,7 +31,7 @@
         <p class="title is-4 m-5" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">Presented by</p>
         <div class="columns" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
             <div class="column is-5 is-justify-content-center" style="margin-left:auto; margin-right: auto;">
-                @foreach($WorkDetail as $value)
+                @foreach($WorkDetail -> WorksStaff as $value)
                 @if($value -> StaffName !== "")
                 <div class="columns is-variable is-mobile p-0">
                     <div class="column is-4">
