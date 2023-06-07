@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use DB;
 use App\Services\UserService;
 use App\Services\PostService;
 use App\Services\NavbarService;
@@ -25,7 +24,6 @@ class BaseService
 
     public function GetWebConfig()
     {
-        DB::connection('mysql');
         $data = Web::orderBy('ID', 'asc') -> get();
         return $data;
     }
@@ -48,7 +46,6 @@ class BaseService
 
     public function UpdateWebConfig($req)
     {
-        DB::connection('mysql');
         try
         {
             Web::where('ID', 0) -> update(['tittle' => $req->webName]);
