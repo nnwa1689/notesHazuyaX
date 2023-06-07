@@ -28,8 +28,8 @@
                 'PostDate' => $post->PostDate,
                 'ReadTime' => $post->ReadTime,
                 'Author' => $post->User->Yourname,
-                'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$post->Avatar,
-                'AuthorUrl' => $webData['webConfig'][13]->tittle."person/".$post->UserID
+                'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$post->User->Avatar,
+                'AuthorUrl' => $webData['webConfig'][13]->tittle."person/".$post->User->UserID
                 ])
             @endcomponent
         @endforeach
