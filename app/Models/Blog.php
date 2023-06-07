@@ -11,7 +11,8 @@ class Blog extends Model
     public $timestamps = false;
     protected $guarded = [];
 
-    public function User()
+    //由於User 已被表使用，重複名稱會有問題，此處改用 Author
+    public function Author()
     {
         return $this -> hasOne('App\Models\User', 'username', 'UserID');
     }
