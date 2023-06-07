@@ -124,17 +124,15 @@ class UserService
 
     public function DeleteUsers($req)
     {
-        DB::connection('mysql');
         if(!empty($req->username))
         {
             $delAccount = $req->username;
             foreach($delAccount as $v)
             {
                 //刪除使用者文章
-                DB::delete("delete from Blog where UserID=?", [$v]);
-                //Blog::where('UserID', $v) -> delete();
-                //User::where('username', '$v') -> delete();
-                DB::delete("delete from admin where username=?", [$v]);
+                //DB::delete("delete from Blog where UserID=?", [$v]);
+                Blog::where('UserID', $v) -> delete();
+                User::destroy($v);
             }
         }
     }
