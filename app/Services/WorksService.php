@@ -186,7 +186,7 @@ class WorksService
                 $url = 'staff'.$i.'_Url';
                 $PID = 'staff'.$i.'_StaffPID';
 
-                WorksStaff::where('PID', intval($PID)) -> update(
+                WorksStaff::where('PID', $PID) -> update(
                     [
                         'StaffName' => $req -> $name,
                         'StaffTitle' => $req -> $title,
