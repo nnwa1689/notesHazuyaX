@@ -3,6 +3,8 @@
 namespace App\Services;
 
 use Illuminate\Http\Request;
+use App\Models\Works;
+use App\Models\WorksStaff;
 use DB;
 
 class WorksService
@@ -11,13 +13,11 @@ class WorksService
     /**
      * 拿到所有 Works
      *
-     * @return workList
+     * @return WorksList
      */
     public function GetAllWorks()
     {
-        DB::connection('mysql');
-        $WorksList = DB::select(
-            ('select * from Works order by OrderID asc'));
+        $WorksList = Works::orderBy('OrderID', 'asc') -> get();
         return $WorksList;
     }
 
@@ -28,9 +28,10 @@ class WorksService
      */
     public function GetWorkDetail($WorksID)
     {
-        DB::connection('mysql');
-        $WorkDetail = DB::select(
-            ('select Works.PID, Works.WorksID, Works.WorksName, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, Works.ShortIntro, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.WorksID = ?'), [$WorksID]);
+        $WorkDetail = Works::where('WorksID', $WorksID) -> get();
+        //DB::connection('mysql');
+        //$WorkDetail = DB::select(
+        //    ('select Works.PID, Works.WorksID, Works.WorksName, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, Works.ShortIntro, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.WorksID = ?'), [$WorksID]);
         return $WorkDetail;
     }
 
@@ -41,9 +42,10 @@ class WorksService
      */
     public function GetWorkDetailByPID($WorksPID)
     {
-        DB::connection('mysql');
-        $WorkDetail = DB::select(
-            ('select Works.PID, Works.OrderID, Works.WorksID, Works.WorksName, Works.ShortIntro, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.PID = ?'), [$WorksPID]);
+        //DB::connection('mysql');
+        //$WorkDetail = DB::select(
+        //    ('select Works.PID, Works.OrderID, Works.WorksID, Works.WorksName, Works.ShortIntro, Works.Intro, Works.CoverImage, Works.Customer, Works.Url, WorksStaff.PID as StaffPID, WorksStaff.StaffName, WorksStaff.StaffTitle, WorksStaff.StaffImage, WorksStaff.StaffUrl from Works right join WorksStaff on Works.PID = WorksStaff.WorksPID where Works.PID = ?'), [$WorksPID]);
+        $WorkDetail = Works::where('WorksPID', $WorksPID) -> get();
         return $WorkDetail;
     }
 
@@ -54,9 +56,10 @@ class WorksService
      */
     public function GetTopTwoWorks()
     {
-        DB::connection('mysql');
-        $WorksList = DB::select(
-            ('select * from Works order by OrderID asc limit 2'));
+        //DB::connection('mysql');
+        //$WorksList = DB::select(
+        //    ('select * from Works order by OrderID asc limit 2'));
+        $WorksList = Works::orderBy('OrderID', 'asc') -> limit(2) -> get();
         return $WorksList;
     }
 
@@ -70,8 +73,21 @@ class WorksService
         DB::connection('mysql');
         DB::transaction(function() use ($req)
         {
+            $NewWorks = [
+                'WorksID' => $req -> WorksID,
+                'WorksName' => $req -> WorksName,
+                'Customer' => $req -> Customer,
+                'Intro' => $req -> Intro,
+                'CoverImage' => $req -> CoverImage,
+                'Url' => $req -> Url,
+                'OrderID' => $req -> OrderID,
+                'ShortIntro' => $req -> ShortIntro
+            ];
+
             /**找出下一筆的自動遞增PK */
             $NextPID = DB::select("SHOW TABLE STATUS LIKE 'Works'")[0] -> Auto_increment;
+
+            /*
             DB::insert(
                 "INSERT INTO Works (WorksID, WorksName, Customer, Intro, CoverImage, Url, OrderID, ShortIntro) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
                   [
@@ -85,12 +101,28 @@ class WorksService
                     $req -> ShortIntro
                   ]
             );
+            */
+
+            Works::create($NewWorks);
+
             for ($i = 1; $i < 6; $i++)
             {
                 $name = 'staff'.$i.'_name';
                 $title = 'staff'.$i.'_title';
                 $image = 'staff'.$i.'_Image';
                 $url = 'staff'.$i.'_Url';
+
+                WorksStaff::create(
+                    [
+                        'WorksPID' => $NextPID,
+                        'StaffName' => $req -> $name,
+                        'StaffTitle' => $req -> $title,
+                        'StaffImage' => $req -> $image,
+                        'StaffUrl' => $req -> $url
+                    ]
+                );
+
+                /*
                 DB::insert(
                     "INSERT INTO WorksStaff (WorksPID, StaffName, StaffTitle, StaffImage, StaffUrl) VALUE (?, ?, ?, ?, ?)",
                     [
@@ -101,6 +133,8 @@ class WorksService
                         $req -> $url
                     ]
                 );
+                */
+
             }
         });
         return 1;
@@ -116,6 +150,20 @@ class WorksService
         DB::connection('mysql');
         DB::transaction(function() use ($req, $WorksPID)
         {
+            Works::where('PID', $WorksPID) -> update(
+                [
+                    'WorksID' => $req -> WorksID,
+                    'WorksName' => $req -> WorksName,
+                    'Customer' => $req -> Customer,
+                    'Intro' => $req -> Intro,
+                    'CoverImage' => $req -> CoverImage,
+                    'Url' => $req -> Url,
+                    'OrderID' => $req -> OrderID,
+                    'ShortIntro' => $req -> ShortIntro
+                ]
+            );
+
+            /*
             DB::update(
                 "update Works set WorksID = ?, WorksName = ?, Customer = ?, Intro = ?, CoverImage = ?, Url = ?, OrderID = ?, ShortIntro = ? where Works.PID = ?",
                   [
@@ -130,12 +178,24 @@ class WorksService
                     $WorksPID
                   ]
                 );
+            */
             for ($i = 1; $i < 6; $i++){
                 $name = 'staff'.$i.'_name';
                 $title = 'staff'.$i.'_title';
                 $image = 'staff'.$i.'_Image';
                 $url = 'staff'.$i.'_Url';
                 $PID = 'staff'.$i.'_StaffPID';
+
+                WorksStaff::where('PID', $PID) -> update(
+                    [
+                        'StaffName' => $req -> $name,
+                        'StaffTitle' => $req -> $title,
+                        'StaffImage' => $req -> $image,
+                        'StaffUrl' => $req -> $url
+                    ]
+                );
+
+                /*
                 DB::update(
                     "update WorksStaff set StaffName = ?, StaffTitle = ?, StaffImage = ?, StaffUrl = ? where PID = ?",
                 [
@@ -146,6 +206,7 @@ class WorksService
                     $req -> $PID
                 ]
             );
+            */
             }
         });
         return 1;
@@ -167,8 +228,10 @@ class WorksService
             {
                 DB::transaction(function() use ($value)
                 {
-                    DB::delete("DELETE FROM Works WHERE PID = ?", [$value]);
-                    DB::delete("DELETE FROM WorksStaff WHERE WorksPID = ?", [$value]);
+                    Works::where('PID', $value) -> delete();
+                    //DB::delete("DELETE FROM Works WHERE PID = ?", [$value]);
+                    WorksStaff::where('WorksPID', $value) -> delete();
+                    //DB::delete("DELETE FROM WorksStaff WHERE WorksPID = ?", [$value]);
                 });
             }
         }
