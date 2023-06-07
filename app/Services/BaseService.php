@@ -27,7 +27,7 @@ class BaseService
     public function GetWebConfig()
     {
         DB::connection('mysql');
-        $data = Web::orderBy('ID', 'ASC');
+        $data = Web::orderBy('ID', 'asc') -> get();
         //$data = DB::select("SELECT * FROM web ORDER BY ID ASC");
         return $data;
     }
