@@ -63,7 +63,7 @@ class UserService
 
     public function GetAllUser()
     {
-        $data = User::all() -> get();
+        $data = User::all();
         //$data = DB::select("select * from admin");
         return $data;
     }
