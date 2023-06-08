@@ -253,7 +253,7 @@ class PostService
      */
     public function SearchPost($q)
     {
-        $data = Blog::where('PostTittle', 'like', '%'.$q.'%') -> orderBy('PostId', 'desc') -> paginate(10);
+        $data = Blog::where('PostTittle', 'like', '%'.$q.'%') -> where('Competence', 'public') -> orderBy('PostId', 'desc') -> paginate(10);
         //$data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog LEFT JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE (Blog.PostTittle LIKE ".$q." OR Blog.PostContant LIKE ".$q.") AND (Blog.Competence='public')) as search ORDER BY search.PostId DESC"))->paginate(10);
         return $data;
     }

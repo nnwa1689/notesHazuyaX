@@ -28,8 +28,8 @@ class SearchController extends Controller
     public function search(Request $q)
     {
         $this -> webData = $this -> baseService ->WebInit();
-        $q = "'%".htmlspecialchars($q->input()["search-text"])."%'";
-        $resultData = $this -> postService -> SearchPost($q);
+        //$q = "'%".htmlspecialchars()."%'";
+        $resultData = $this -> postService -> SearchPost($q->input()["search-text"]);
         return view('search', ['webData'=> $this->webData, 'data'=>$resultData, 'q'=>$q]);
     }
 
