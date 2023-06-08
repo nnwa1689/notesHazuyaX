@@ -93,7 +93,7 @@
         } else {
             $.ajax({
                 type: "POST",
-                url: "https://strapi.n-d.tw/api/holas",
+                url: "https://strapi.studio-44s.tw/api/holas",
                 dataType: "json",
                 data: {
                     "data": {
