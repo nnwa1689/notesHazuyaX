@@ -12,9 +12,11 @@
         如果只有 44 秒鐘，你會記下什麼片段呢？
         <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
     </p>
+    <br/>
     <p class="is-size-5" data-scroll>
         44 秒，來自我最愛的一首歌「44 Seconds Road Movie」，人生回頭望去就如同好多段 44 秒鐘的片段，雖然不是什麼動人的故事，甚至平凡到讓人無聊，但都是我們走過世界的足跡。
     </p>
+    <br/>
     <p class="is-size-5" data-scroll>
         44 秒，透過合宜的展現方式，已經足夠向人們述說一段故事了！
     </p>
