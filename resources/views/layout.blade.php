@@ -164,7 +164,7 @@
                         autoplay
                     >
                     </lottie-player>
-                    <p class="is-size-5">44 秒鐘後，將會展開什麼樣子的冒險呢⋯⋯？</p>
+                    <p class="is-size-5">正在前往新旅途⋯</p>
                 </div>
             </section>
             @section('herocontent')
