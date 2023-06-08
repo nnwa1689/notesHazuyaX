@@ -48,7 +48,7 @@ class PostController extends Controller
     {
         $this -> webData = $this -> baseService ->WebInit();
         $data = $this -> postService -> GetCategoryPublicPosts($classID, $pageNumber);
-        $title=$data[0]->ClassName.' - ';
+        $title=$data[0]->Category->ClassName.' - ';
         return view("category", ['webData' => $this->webData,'allPosts'=>$data, 'title'=>$title]);
     }
 

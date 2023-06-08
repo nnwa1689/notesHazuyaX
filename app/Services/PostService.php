@@ -101,7 +101,7 @@ class PostService
             [
                 'ClassName' => $req->ClassName, 
                 'Short_Intro' => $req->shortIntro, 
-                'Logn_Intro' => $req->longIntro 
+                'Long_Intro' => $req->longIntro 
             ]
         );
         
@@ -398,7 +398,7 @@ class PostService
             foreach($PostId as $value)
             {
                 Blog::where('PostId', $value) -> update(
-                    ['Competence', 'private']
+                    ['Competence' => 'private']
                 );
 
                 /*
@@ -428,7 +428,7 @@ class PostService
             foreach($PostId as $value)
             {
                 Blog::where('PostId', $value) -> update(
-                    ['Competence', 'public']
+                    ['Competence' => 'public']
                 );
             }
 

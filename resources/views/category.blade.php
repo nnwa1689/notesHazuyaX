@@ -6,7 +6,7 @@
         <p class="title is-1 has-text-left">
             <span id="titleText"></span>
         </p>
-        <p class="is-size-5">{{$allPosts[0]->Short_Intro}}</p>
+        <p class="is-size-5">{{$allPosts[0]->Category->Short_Intro}}</p>
     </div>
 
     <div class="tabs is-centered is-medium is-fullwidth">
