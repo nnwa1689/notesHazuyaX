@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Models\Media;
 use App\Services\UserService;
 use App\Services\PostService;
 use App\Services\NavbarService;
@@ -25,8 +26,8 @@ class FileService
 
     public function GetFiles()
     {
-        DB::connection('mysql');
-        $data = DB::table(DB::raw("(SELECT * FROM media) as files ORDER BY files.UploadDate DESC")) -> paginate(12);;
+        $data = Media::orderBy('UploadDate', 'desc') -> paginate(12);
+        //$data = DB::table(DB::raw("(SELECT * FROM media) as files ORDER BY files.UploadDate DESC")) -> paginate(12);;
         return $data;
     }
 
@@ -36,7 +37,8 @@ class FileService
             foreach ($files as $value) {
                 try
                 {
-                    $fileinfo = DB::select("SELECT * FROM media WHERE ID=? ORDER BY media.UploadDate DESC", [$value]);
+                    $fileinfo = Media::where('ID', $value) -> orderBy('UploadDate', 'desc') -> get();
+                    //$fileinfo = DB::select("SELECT * FROM media WHERE ID=? ORDER BY media.UploadDate DESC", [$value]);
                     $delfile = $fileinfo[0]->URL;
                     if (is_file("/".$delfile))
                     {//判斷檔案是否存在
@@ -47,7 +49,8 @@ class FileService
                     {
                         $delfilenum=1;
                     }
-                    DB::delete('DELETE FROM media WHERE ID=?', [$value]);
+                    Media::where('ID', $value) -> delete();
+                    //DB::delete('DELETE FROM media WHERE ID=?', [$value]);
                 }
                 catch(Exception $e)
                 {
@@ -61,7 +64,7 @@ class FileService
     public function UploadFile($fileinfo)
     {
         /* 暫時用 PHP 原生，之後再改 laravel */
-        DB::connection('mysql');
+        //DB::connection('mysql');
         $filetype = array('jpeg', 'jpg', 'gif', 'png', 'PNG');
         $maxsize = 5097152;
         $ext = pathinfo($fileinfo['name'], PATHINFO_EXTENSION);
@@ -89,7 +92,15 @@ class FileService
         $filecap = $fileinfo['size'];
         try
         {
-            DB::insert("INSERT INTO media (Name,URL,UploadDate,Type,Cap) VALUES (?, ?, ?, ?, ?)",  [$filename,$fileURL,$fileUploadDate,$ext,$filecap]);
+            $NewFiles = [
+                'Name' => $filename,
+                'URL' => $fileURL,
+                'UploadDate' => $fileUploadDate,
+                'Type' => $ext,
+                'Cap' =>$filecap
+            ];
+            Media::Create($NewFiles);
+            //DB::insert("INSERT INTO media (Name,URL,UploadDate,Type,Cap) VALUES (?, ?, ?, ?, ?)",  [$filename,$fileURL,$fileUploadDate,$ext,$filecap]);
         }
         catch(Exception $e)
         {

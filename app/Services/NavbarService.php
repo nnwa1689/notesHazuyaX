@@ -4,6 +4,7 @@ namespace App\Services;
 
 use Illuminate\Http\Request;
 use DB;
+use App\Models\Navigate;
 
 
 class NavbarService
@@ -11,28 +12,26 @@ class NavbarService
 
     public function GetTopNavBar()
     {
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM Navigate WHERE type=? AND Competence=? ORDER BY Navigate.NavigateId",['0', 'public']);
+        $data = Navigate::where('type', '0') -> where('Competence', 'public') -> orderBy('NavigateId', 'asc') -> get();
+        //$data = DB::select("SELECT * FROM Navigate WHERE type=? AND Competence=? ORDER BY Navigate.NavigateId",['0', 'public']);
         return $data;
     }
 
     public function GetButtonNav()
     {
-        DB::connection('mysql');
-        $data = DB::select("SELECT * FROM Navigate WHERE type=? AND Competence=? ORDER BY Navigate.NavigateId",['1', 'public']);
+        $data = Navigate::where('type', '1') -> where('Competence', 'public') -> orderBy('NavigateId', 'asc') -> get();
+        //$data = DB::select("SELECT * FROM Navigate WHERE type=? AND Competence=? ORDER BY Navigate.NavigateId",['1', 'public']);
         return $data;
     }
 
     public function GetAllTopNavbarEdit()
-    {
-        DB::connection('mysql');
-        return DB::select("select * from Navigate where type=0");
+    {        
+        return Navigate::where('type', '0') -> get(); 
     }
 
     public function GetAllBtnNavbarEdit()
     {
-        DB::connection('mysql');
-        return DB::select("select * from Navigate where type=1");
+        return Navigate::where('type', '1') -> get(); 
     }
 
     /* 
