@@ -34,20 +34,21 @@
     }
 
   @font-face {
-    font-family: 'NotoSerifTC-Regular';
+    font-family: 'NotoSerifTC-Medium';
     font-style: normal;
-    src: url(/fonts/NotoSerifTC-Regular.otf);
-    unicode-range: U+4E00-9FFF;
+    src: url(/fonts/NotoSerifTC-Medium.otf);
+    /*unicode-range: U+4E00-9FFF;*/
     font-display: swap;
   }
 
+  /*
   @font-face {
-    font-family: 'NotoSerifTC-Regular';
+    font-family: 'NotoSerifTC-Medium';
     font-style: normal;
     src: url(/fonts/RedHatText-Regular.ttf);
     unicode-range: U+00-024F;
     font-display: swap;
-  }
+  }*/
 
 /***********/
 
@@ -4157,10 +4158,12 @@ fieldset[disabled] .button {
 }
 
 .content p{
-    font-size: 1.25em;
+  font-family: 'NotoSerifTC-Medium';
+  font-size: 1.25em;
 }
 
 blockquote {
+  font-family: 'NotoSerifTC-Medium';
   background-color: #41644A;
   border-left: 5px solid #263A29;
   color: #F2E3DB;
@@ -4178,6 +4181,7 @@ blockquote a {
 }
 
 .content ol {
+  font-family: 'NotoSerifTC-Medium';
   list-style-position: outside;
   margin-left: 2em;
   margin-top: 1em;
@@ -4204,6 +4208,7 @@ blockquote a {
 }
 
 .content ul {
+  font-family: 'NotoSerifTC-Medium';
   list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em;
