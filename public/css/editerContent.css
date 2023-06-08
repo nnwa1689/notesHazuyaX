@@ -12,6 +12,14 @@
     unicode-range: U+00-024F;
   }
 
+@font-face {
+    font-family: 'NotoSerifTC-Medium';
+    font-style: normal;
+    src: url(/fonts/NotoSerifTC-Medium.otf);
+    /*unicode-range: U+4E00-9FFF;*/
+    font-display: swap;
+}
+
 body {
     font-family: 'NotoSansTC-Medium';
     color:#263A29;
@@ -29,14 +37,20 @@ hr {
 }
 
 blockquote {
+    font-family: 'NotoSerifTC-Medium';
     background-color: #41644A;
     border-left: 5px solid #263A29;
     color: #F2E3DB;
     border-radius: 10px;
     padding: 1.25em 1.5em;
-}
-
-blockquote a {
+    box-shadow: 5px 5px 0 0.125em #E86A33;
+  }
+  
+  blockquote a {
     color: #F2E3DB
-}
+  }
 
+p {
+    font-family: 'NotoSerifTC-Medium';
+    font-size: 1.25em;
+}
