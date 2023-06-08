@@ -44,8 +44,8 @@
                             <td>{{$value->PostId}}</td>
                             <td><a href="/admin/editPost/{{$value->PostId}}">{{$value->PostTittle}}</a></td>
                             <td>{{$value->PostDate}}</td>
-                            <td>{{$value->Yourname}}</td>
-                            <td>{{$value->ClassName}}</td>
+                            <td>{{$value->Author->Yourname}}</td>
+                            <td>{{$value->Category->ClassName}}</td>
                             <td>{{$value->Competence}}</td>
                             <td>{{$value->Reply}}</td>
                         </tr>

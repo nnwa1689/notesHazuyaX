@@ -34,13 +34,13 @@
                 'CoverImage' => $post->CoverImage,
                 'PostTittle' => $post->PostTittle,
                 'PostContant' => $post->PostContant,
-                'Category' => $post->ClassName,
+                'Category' => $post->Category->ClassName,
                 'CategoryUrl' => $webData['webConfig'][13]->tittle."category/".$post->ClassId,
                 'PostDate' => $post->PostDate,
                 'ReadTime' => $post->ReadTime,
-                'Author' => $post->Yourname,
-                'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$post->Avatar,
-                'AuthorUrl' => $webData['webConfig'][13]->tittle."person/".$post->UserID
+                'Author' => $post->Author->Yourname,
+                'AuthorAvatarUrl' => $webData['webConfig'][13]->tittle.$post->Author->Avatar,
+                'AuthorUrl' => ''
                 ])
         @endcomponent
     @endforeach
