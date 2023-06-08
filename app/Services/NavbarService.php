@@ -61,7 +61,16 @@ class NavbarService
             {
                 foreach($checkedItem as $value)
                 {
-                    DB::update("UPDATE Navigate SET NavigateId = ?, NavigateName = ?, URL = ?, Competence = ?, type = ? WHERE IndexId = ?", [$checkedOrder[$value], $checkedNavName[$value], $checkedURL[$value], $checkedCompetence[$value], $typeId, $value]);
+                    Navigate::where('IndexId', $value) -> update(
+                        [
+                            'NavigateId' => $checkedOrder[$value], 
+                            'NavigateName' => $checkedNavName[$value], 
+                            'URL' => $checkedURL[$value], 
+                            'Competence' => $checkedCompetence[$value], 
+                            'type' => $typeId
+                        ]
+                    );
+                    //DB::update("UPDATE Navigate SET NavigateId = ?, NavigateName = ?, URL = ?, Competence = ?, type = ? WHERE IndexId = ?", [$checkedOrder[$value], $checkedNavName[$value], $checkedURL[$value], $checkedCompetence[$value], $typeId, $value]);
                 }
 
             }
@@ -75,10 +84,9 @@ class NavbarService
 
     public function DeleteNavbars($navbarItems)
     {
-        DB::connection('mysql');
         foreach($navbarItems as $value)
         {
-            DB::delete("DELETE FROM Navigate WHERE IndexId = ?", [$value]);
+            Navigate::where('IndexId', $value) -> delete();
         }
         return 1;
     }
@@ -87,7 +95,16 @@ class NavbarService
     {
         if(!empty($req -> newName) && !empty($req -> newOrder))
         {
-            DB::insert("INSERT INTO Navigate (NavigateId,NavigateName,URL,Competence,type) VALUES ( ?, ?, ?, ?, ? )",[$req -> newOrder, $req -> newName, $req -> newURL, $req -> newCompetence, $typeId]);
+            $NewNavItem = [
+                'NavigateId' => $req -> newOrder, 
+                'NavigateName' => $req -> newName, 
+                'URL' => $req -> newURL, 
+                'Competence' => $req -> newCompetence, 
+                'type' => $typeId
+            ];
+
+            Navigate::create($NewNavItem);
+            //DB::insert("INSERT INTO Navigate (NavigateId,NavigateName,URL,Competence,type) VALUES ( ?, ?, ?, ?, ? )",[$req -> newOrder, $req -> newName, $req -> newURL, $req -> newCompetence, $typeId]);
         }
         return 1;
     }
