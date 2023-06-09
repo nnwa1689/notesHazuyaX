@@ -34,21 +34,12 @@
     }
 
   @font-face {
-    font-family: 'NotoSerifTC-Medium';
+    font-family: 'NotoSerifTC-SemiBold';
     font-style: normal;
-    src: url(/fonts/NotoSerifTC-Medium.otf);
+    src: url(/fonts/NotoSerifTC-SemiBold.otf);
     /*unicode-range: U+4E00-9FFF;*/
     font-display: swap;
   }
-
-  /*
-  @font-face {
-    font-family: 'NotoSerifTC-Medium';
-    font-style: normal;
-    src: url(/fonts/RedHatText-Regular.ttf);
-    unicode-range: U+00-024F;
-    font-display: swap;
-  }*/
 
 /***********/
 
@@ -4134,7 +4125,7 @@ fieldset[disabled] .button {
 }
 
 .content h3 {
-  font-size: 2em;
+  font-size: 1.75em;
   margin-bottom: 1.5em;
 }
 
@@ -4143,27 +4134,27 @@ fieldset[disabled] .button {
 }
 
 .content h4 {
-  font-size: 1.75em;
-  margin-bottom: 1.5em;
-}
-
-.content h5 {
   font-size: 1.5em;
   margin-bottom: 1.5em;
 }
 
-.content h6 {
+.content h5 {
   font-size: 1.375em;
   margin-bottom: 1.5em;
 }
 
+.content h6 {
+  font-size: 1.25em;
+  margin-bottom: 1.5em;
+}
+
 .content p{
-  /*font-family: 'NotoSerifTC-Medium';*/
+  font-family: 'NotoSerifTC-SemiBold';
   font-size: 1.25em;
 }
 
 blockquote {
-  font-family: 'NotoSerifTC-Medium';
+  font-family: 'NotoSerifTC-SemiBold';
   background-color: #41644A;
   border-left: 5px solid #263A29;
   color: #F2E3DB;
@@ -4183,7 +4174,7 @@ blockquote a {
 }
 
 .content ol {
-  font-family: 'NotoSerifTC-Medium';
+  font-family: 'NotoSerifTC-SemiBold';
   list-style-position: outside;
   margin-left: 2em;
   margin-top: 1em;
@@ -4210,7 +4201,7 @@ blockquote a {
 }
 
 .content ul {
-  font-family: 'NotoSerifTC-Medium';
+  font-family: 'NotoSerifTC-SemiBold';
   list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em;
@@ -5275,7 +5266,7 @@ a.tag:hover {
 .title {
   color: #263A29;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.125;
 }
 
