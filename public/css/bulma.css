@@ -34,12 +34,21 @@
     }
 
   @font-face {
-    font-family: 'NotoSerifTC-SemiBold';
+    font-family: 'NotoSerifTC-Medium';
     font-style: normal;
-    src: url(/fonts/NotoSerifTC-SemiBold.otf);
+    src: url(/fonts/NotoSerifTC-Medium.otf);
     /*unicode-range: U+4E00-9FFF;*/
     font-display: swap;
   }
+
+  /*
+  @font-face {
+    font-family: 'NotoSerifTC-Medium';
+    font-style: normal;
+    src: url(/fonts/RedHatText-Regular.ttf);
+    unicode-range: U+00-024F;
+    font-display: swap;
+  }*/
 
 /***********/
 
@@ -4149,12 +4158,13 @@ fieldset[disabled] .button {
 }
 
 .content p{
-  font-family: 'NotoSerifTC-SemiBold';
+  font-family: 'NotoSerifTC-Medium';
   font-size: 1.25em;
+  line-height: 2em;;
 }
 
 blockquote {
-  font-family: 'NotoSerifTC-SemiBold';
+  font-family: 'NotoSerifTC-Medium';
   background-color: #41644A;
   border-left: 5px solid #263A29;
   color: #F2E3DB;
@@ -4174,7 +4184,7 @@ blockquote a {
 }
 
 .content ol {
-  font-family: 'NotoSerifTC-SemiBold';
+  font-family: 'NotoSerifTC-Medium';
   list-style-position: outside;
   margin-left: 2em;
   margin-top: 1em;
@@ -4201,7 +4211,7 @@ blockquote a {
 }
 
 .content ul {
-  font-family: 'NotoSerifTC-SemiBold';
+  font-family: 'NotoSerifTC-Medium';
   list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em;
@@ -5266,7 +5276,7 @@ a.tag:hover {
 .title {
   color: #263A29;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.125;
 }
 
