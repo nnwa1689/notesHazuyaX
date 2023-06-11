@@ -5249,6 +5249,7 @@ a.tag:hover {
 
 .title,
 .subtitle {
+  font-family: 'openhuninn';
   word-break: break-word;
 }
 
