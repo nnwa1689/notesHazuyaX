@@ -18,15 +18,15 @@
 
 /*SELF FONTS*/
   @font-face {
-    font-family: 'NotoSansTC-Regular';
+    font-family: 'NotoSansTC-Medium';
     font-style: normal;
-    src: url(/fonts/NotoSansTC-Regular.otf);
+    src: url(/fonts/NotoSansTC-Medium.otf);
     unicode-range: U+4E00-9FFF;
     font-display: swap;
   }
 
   @font-face {
-      font-family: 'NotoSansTC-Regular';
+      font-family: 'NotoSansTC-Medium';
       font-style: normal;
       src: url(/fonts/RedHatText-Medium.ttf);
       unicode-range: U+00-024F;
@@ -913,7 +913,7 @@ button,
 input,
 select,
 textarea {
-  font-family: NotoSansTC-Regular;
+  font-family: NotoSansTC-Medium;
 }
 
 code,
