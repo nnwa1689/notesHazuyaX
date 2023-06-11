@@ -18,15 +18,15 @@
 
 /*SELF FONTS*/
   @font-face {
-    font-family: 'NotoSansTC-Medium';
+    font-family: 'NotoSansTC-Regular';
     font-style: normal;
-    src: url(/fonts/NotoSansTC-Medium.otf);
+    src: url(/fonts/NotoSansTC-Regular.otf);
     unicode-range: U+4E00-9FFF;
     font-display: swap;
   }
 
   @font-face {
-      font-family: 'NotoSansTC-Medium';
+      font-family: 'NotoSansTC-Regular';
       font-style: normal;
       src: url(/fonts/RedHatText-Medium.ttf);
       unicode-range: U+00-024F;
@@ -34,16 +34,16 @@
     }
 
   @font-face {
-    font-family: 'NotoSerifTC-Medium';
+    font-family: 'openhuninn';
     font-style: normal;
-    src: url(/fonts/NotoSerifTC-Medium.otf);
+    src: url(/fonts/openhuninn.ttf);
     /*unicode-range: U+4E00-9FFF;*/
     font-display: swap;
   }
 
   /*
   @font-face {
-    font-family: 'NotoSerifTC-Medium';
+    /*font-family: 'NotoSerifTC-Medium';*/
     font-style: normal;
     src: url(/fonts/RedHatText-Regular.ttf);
     unicode-range: U+00-024F;
@@ -913,7 +913,7 @@ button,
 input,
 select,
 textarea {
-  font-family: NotoSansTC-Medium;
+  font-family: NotoSansTC-Regular;
 }
 
 code,
@@ -4111,7 +4111,8 @@ fieldset[disabled] .button {
 .content h4,
 .content h5,
 .content h6 {
-  font-weight: 300;
+  font-family: 'openhuninn';
+  font-weight: 500;
   line-height: 1.25;
 }
 
@@ -4158,13 +4159,13 @@ fieldset[disabled] .button {
 }
 
 .content p{
-  font-family: 'NotoSerifTC-Medium';
+  /*/*font-family: 'NotoSerifTC-Medium';*/*/
   font-size: 1.25em;
   line-height: 2em;;
 }
 
 blockquote {
-  font-family: 'NotoSerifTC-Medium';
+  /*font-family: 'NotoSerifTC-Medium';*/
   background-color: #41644A;
   border-left: 5px solid #263A29;
   color: #F2E3DB;
@@ -4184,7 +4185,7 @@ blockquote a {
 }
 
 .content ol {
-  font-family: 'NotoSerifTC-Medium';
+  /*font-family: 'NotoSerifTC-Medium';*/
   list-style-position: outside;
   margin-left: 2em;
   margin-top: 1em;
@@ -4211,7 +4212,7 @@ blockquote a {
 }
 
 .content ul {
-  font-family: 'NotoSerifTC-Medium';
+  /*font-family: 'NotoSerifTC-Medium';*/
   list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em;
