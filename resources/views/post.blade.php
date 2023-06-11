@@ -10,7 +10,7 @@
             <p class="is-size-6 mr-3"><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</p>
             <a class="tag button is-primary is-outlined is-rounded is-small" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Category->ClassName}}</a>
         </div>
-        <p class="is-size-2">{{$postData[0]->PostTittle}}
+        <p class="title is-2">{{$postData[0]->PostTittle}}
             @if($webData['userData'] !== 0)
                 <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i></button>
             @endif
