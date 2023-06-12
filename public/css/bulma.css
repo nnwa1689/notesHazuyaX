@@ -133,8 +133,8 @@
 }
 
 .works-image-tag:hover {
-  transition: all 0.3s ease-in-out;
-  box-shadow: 5px 5px 0 0.125em #E86A33;
+  transition: all 0.3s ease-in-out !important;
+  box-shadow: 5px 5px 0 0.125em #E86A33 !important;
 }
 
 .works-image-tag-customer {
@@ -374,8 +374,8 @@
 }
 
 .post-image-tag:hover {
-  transition: all 0.3s ease-in-out;
-  box-shadow: 5px 5px 0 0.125em #E86A33;
+  transition: all 0.3s ease-in-out !important;
+  box-shadow: 5px 5px 0 0.125em #E86A33 !important;
 }
 
 .post-image-tag-category {
