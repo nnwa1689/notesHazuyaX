@@ -125,7 +125,7 @@
             <div class="column is-9">
                 <p class="subtitle is-3"># 系統規劃設計</p>
                 <p class="is-size-5">
-                    再完成風格設計後，將規劃系統前台地圖與後台功能，並提供架構圖、採用之技術規格與您核對。確認後將實際進入系統架設、開發與資料轉入。
+                    完成風格設計後，將規劃系統前台地圖與後台功能，並提供架構圖、採用之技術規格與您核對。確認後將實際進入系統架設、開發與資料轉入。
                 </p>
             </div>
             <div class="column is-3">
@@ -163,10 +163,8 @@
     </div>
 
 
-    <div data-scroll data-scroll-speed="2" data-scroll-delay="0" class="mb-4 pt-6">
-        <p class="title is-1 has-text-left">成員<span class="has-text-link">TEAM</span></p>
-        <p class="title is-4 has-text-right">不斷嘗試各種可能</p>
-    </div>
+    <p class="title is-1 has-text-left mt-6">成員<span class="has-text-link">TEAM</span></p>
+    <p class="title is-4 has-text-right">不斷嘗試各種可能</p>
     <div style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-0 is-justify-content-center">
         @foreach($userData as $User)
 
