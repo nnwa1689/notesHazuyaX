@@ -34,16 +34,16 @@
     }
 
   @font-face {
-    font-family: 'NotoSerifTC-Medium';
+    font-family: 'openhuninn';
     font-style: normal;
-    src: url(/fonts/NotoSerifTC-Medium.otf);
+    src: url(/fonts/openhuninn.ttf);
     /*unicode-range: U+4E00-9FFF;*/
     font-display: swap;
   }
 
   /*
   @font-face {
-    font-family: 'NotoSerifTC-Medium';
+    /*font-family: 'NotoSerifTC-Medium';*/
     font-style: normal;
     src: url(/fonts/RedHatText-Regular.ttf);
     unicode-range: U+00-024F;
@@ -4102,7 +4102,7 @@ fieldset[disabled] .button {
 .content blockquote:not(:last-child),
 .content pre:not(:last-child),
 .content table:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .content h1,
@@ -4111,65 +4111,68 @@ fieldset[disabled] .button {
 .content h4,
 .content h5,
 .content h6 {
-  font-weight: 300;
-  line-height: 3.25;
+  font-family: 'openhuninn';
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 .content h1 {
   font-size: 2.5em;
-  /*margin-bottom: 0.5em;*/
+  margin-bottom: 1.5em
 }
 
 .content h1:not(:first-child) {
-  /*margin-top: 1em;*/
+  margin-top: 1.5em;
 }
 
 .content h2 {
   font-size: 2.125em;
-  /*margin-bottom: 0.5714em;*/
+  margin-bottom: 1.5em;
 }
 
 .content h2:not(:first-child) {
-  /*margin-top: 1.1428em;*/
+  margin-top: 1.5em;
 }
 
 .content h3 {
-  font-size: 2em;
-  /*margin-bottom: 0.6666em;*/
+  font-size: 1.75em;
+  margin-bottom: 1.5em;
 }
 
 .content h3:not(:first-child) {
-  /*margin-top: 1.3333em;*/
+  margin-top: 1.5em;
 }
 
 .content h4 {
-  font-size: 1.75em;
-  /*margin-bottom: 0.8em;*/
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .content h5 {
-  font-size: 1.5em;
-  /*margin-bottom: 0.8888em;*/
+  font-size: 1.375em;
+  margin-bottom: 1.5em;
 }
 
 .content h6 {
-  font-size: 1.375em;
-  /*margin-bottom: 1em;*/
+  font-size: 1.25em;
+  margin-bottom: 1.5em;
 }
 
 .content p{
-  font-family: 'NotoSerifTC-Medium';
+  /*font-family: 'NotoSerifTC-Medium';*/
   font-size: 1.25em;
+  line-height: 2em;;
 }
 
 blockquote {
-  font-family: 'NotoSerifTC-Medium';
+  /*font-family: 'NotoSerifTC-Medium';*/
   background-color: #41644A;
   border-left: 5px solid #263A29;
   color: #F2E3DB;
   border-radius: 10px;
   padding: 1.25em 1.5em;
   box-shadow: 5px 5px 0 0.125em #E86A33;
+  margin: 1.5em 0px;
 }
 
 blockquote a {
@@ -4177,11 +4180,12 @@ blockquote a {
 }
 
 .content img{
-  border-radius: 15px;;
+  border-radius: 15px;
+  margin: 1.5em 0;
 }
 
 .content ol {
-  font-family: 'NotoSerifTC-Medium';
+  /*font-family: 'NotoSerifTC-Medium';*/
   list-style-position: outside;
   margin-left: 2em;
   margin-top: 1em;
@@ -4208,7 +4212,7 @@ blockquote a {
 }
 
 .content ul {
-  font-family: 'NotoSerifTC-Medium';
+  /*font-family: 'NotoSerifTC-Medium';*/
   list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em;
@@ -5245,6 +5249,7 @@ a.tag:hover {
 
 .title,
 .subtitle {
+  font-family: 'openhuninn';
   word-break: break-word;
 }
 

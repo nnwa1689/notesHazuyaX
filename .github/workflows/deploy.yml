@@ -1,6 +1,6 @@
 name: Deploy
 
-# Trigger the workflow on push and 
+# Trigger the workflow on push and
 # pull request events on the production branch
 on:
   push:
@@ -10,8 +10,8 @@ on:
     branches:
       - production
 
-# Authenticate to the the server via ssh 
-# and run our deployment script 
+# Authenticate to the the server via ssh
+# and run our deployment script
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,4 +24,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSHKEY }}
-          script: "cd /var/www/n-d.tw/auto_dev_public/notesHazuyaX && ./.scripts/deploy.sh"
+          script: "cd /var/www/studio-44s.tw/auto_dev_public/notesHazuyaX && ./.scripts/deploy.sh"
