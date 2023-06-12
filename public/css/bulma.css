@@ -126,7 +126,7 @@
   transform: scale(1.0);
   position: absolute;
   background-color: #FFFFFF !important;
-  border-width: 0px !important;
+  border-color: transparent;
   border-style: solid;
   bottom: 4.25rem;
   left: 1.5rem;
@@ -135,7 +135,7 @@
 
 .works-image-tag:hover {
   transition: all 0.3s ease-in-out;
-  transform: scale(1.1);
+  border-color: #E86A33;
 }
 
 .works-image-tag-customer {
@@ -369,16 +369,15 @@
   transform: scale(1.0);
   position: absolute;
   background-color: #FFFFFF !important;
-  border-width: 0px !important;
+  border-color: transparent;
   border-style: solid;
   bottom: 8.25rem;
   left: 1.5rem;
-
 }
 
 .post-image-tag:hover {
   transition: all 0.3s ease-in-out;
-  transform: scale(1.1);
+  border-color: #E86A33;
 }
 
 .post-image-tag-category {
