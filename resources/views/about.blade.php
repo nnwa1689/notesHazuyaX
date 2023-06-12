@@ -14,7 +14,8 @@
     </p>
     <br/>
     <p class="is-size-5" data-scroll>
-        44 秒，來自我最愛的一首歌「44 Seconds Road Movie」，人生回頭望去就如同好多段 44 秒鐘的片段，雖然不是什麼動人的故事，甚至平凡到讓人無聊，但都是我們走過世界的足跡。
+        44 秒，來自我最愛的一首歌「44 Seconds Road Movie」，人生回頭望去就如同好多段 44 秒鐘的片段，每一個片段都十分獨特。
+        所以，讓我們與您一同創造下一個只屬於您的獨特的 44 秒，告別千篇一律的網頁設計。
     </p>
     
     <section class="hero is-link is-halfheight mt-6" data-scroll data-scroll-speed="2">
@@ -78,7 +79,7 @@
         </div>
     </section>
 
-    <div class="block mt-3 mb-3">
+    <div data-scroll class="block mt-3 mb-3">
         <div class="columns">
             <div class="column is-9">
                 <p class="subtitle is-1">服務流程</p>
@@ -162,7 +163,7 @@
     </div>
 
 
-    <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-6">
+    <div data-scroll data-scroll-speed="2" data-scroll-delay="0" class="mb-4 pt-6">
         <p class="title is-1 has-text-left">成員<span class="has-text-link">TEAM</span></p>
         <p class="title is-4 has-text-right">不斷嘗試各種可能</p>
     </div>
