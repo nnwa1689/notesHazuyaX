@@ -78,7 +78,7 @@
         </div>
     </section>
 
-    <div class="block">
+    <div class="block mt-3 mb-3">
         <div class="columns">
             <div class="column is-9">
                 <p class="subtitle is-1">服務流程</p>
@@ -86,7 +86,7 @@
                 <p class="is-size-5">了解您的網站需求、業務、功能與風格，並依您預算評估可行性與時程。評估若您我皆可接受製作方案與價格，就會與您收取50%訂金，並簽訂契約。</p>
             </div>
             <div class="column is-3">
-                <p class="title is-1 has-text-right"><i class="fas fa-comments-alt"></i></p>
+                <p class="title is-1 has-text-right"><i class="fas fa-comment"></i></p>
             </div>
         </div>
         <hr/>
