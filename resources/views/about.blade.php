@@ -79,51 +79,51 @@
     </section>
 
 
-    <div class="container is-fluid has-text-left">
-        <div class="columns">
-            <div class="column is-9">
-                <p class="subtitle is-1">服務流程</p>
-                <p class="subtitle is-3"># 需求調查與訪談</p>
-                <p class="is-size-5">了解您的網站需求、業務、功能與風格，並依您預算評估可行性與時程。評估若您我皆可接受製作方案與價格，就會與您收取50%訂金，並簽訂契約。</p>
-                <hr/>
-                <p class="subtitle is-3"># 風格設計、模板選擇</p>
-                <p class="is-size-5">
-                    依照需求階段決定之風格(配色、首頁設計、頁面版型)及您提供之資料(如關於我們之簡介、圖片)進行設計發想，並繪製草圖。
-                    <br/>
-                    # 此階段將提供設計草圖並與您確認，進行調整。(若您選定某個模板，會再次與您確認是否有需要調整之地方)
-                </p>
-                <hr/>
-                <p class="subtitle is-3"># 設計製作、資料套版</p>
-                <p class="is-size-5">
-                    依照討論好的設計草圖，製作出實際的網頁靜態模板。若選擇特定模板，也同樣會提供靜態模板預覽，並第二次確認設計內容、調整。
-                    <br/>
-                    # 此階段將提供實際的網頁預覽並與您確認，進行調整。
-                </p>
-                <hr/>
-                <p class="subtitle is-3"># 系統規劃設計</p>
-                <p class="is-size-5">
-                    再完成風格設計後，將規劃系統前台地圖與後台功能，並提供架構圖、採用之技術規格與您核對。確認後將實際進入系統架設、開發與資料轉入。
-                </p>
-                <hr/>
-                <p class="subtitle is-3"># 系統開發與測試</p>
-                <p class="is-size-5">
-                    依照確認之功能與技術進行實際開發，並依照模組功能或全部完工後進行測試(若採用依照功能模組測試可能會花費較長的時間，實際取決於您測試之時程)
-                    <br/>
-                    # 此階段將架設測試用系統提供您測試，每個模組可提供您進行一次的修改確認。
-                </p>
-                <hr/>
-                <p class="subtitle is-3"># 後期作業、結案</p>
-                <p class="is-size-5">
-                    依照選定規格協助申請空間、網址與 SSL(原則上若沒特殊需求，會提供免費的 OpenSSL)，並將您的系統部署至您的空間當中。同時，並收取您的尾款後，將會提供後台使用教育訓練、操作手冊，至此就完成了一次愉快的合作體驗！
-                    <br/>
-                    # 結案後，每案件提供 3 個月的保固期，若遇 Bug 修復不額外計價
-                </p>
-            </div>
-            <div class="column is-3">
-                <p class="title is-1 has-text-right" data-scroll data-scroll-speed="4"><i class="fas fa-route"></i></p>
-            </div>
+
+    <div class="columns">
+        <div class="column is-9">
+            <p class="subtitle is-1">服務流程</p>
+            <p class="subtitle is-3"># 需求調查與訪談</p>
+            <p class="is-size-5">了解您的網站需求、業務、功能與風格，並依您預算評估可行性與時程。評估若您我皆可接受製作方案與價格，就會與您收取50%訂金，並簽訂契約。</p>
+            <hr/>
+            <p class="subtitle is-3"># 風格設計、模板選擇</p>
+            <p class="is-size-5">
+                依照需求階段決定之風格(配色、首頁設計、頁面版型)及您提供之資料(如關於我們之簡介、圖片)進行設計發想，並繪製草圖。
+                <br/>
+                # 此階段將提供設計草圖並與您確認，進行調整。(若您選定某個模板，會再次與您確認是否有需要調整之地方)
+            </p>
+            <hr/>
+            <p class="subtitle is-3"># 設計製作、資料套版</p>
+            <p class="is-size-5">
+                依照討論好的設計草圖，製作出實際的網頁靜態模板。若選擇特定模板，也同樣會提供靜態模板預覽，並第二次確認設計內容、調整。
+                <br/>
+                # 此階段將提供實際的網頁預覽並與您確認，進行調整。
+            </p>
+            <hr/>
+            <p class="subtitle is-3"># 系統規劃設計</p>
+            <p class="is-size-5">
+                再完成風格設計後，將規劃系統前台地圖與後台功能，並提供架構圖、採用之技術規格與您核對。確認後將實際進入系統架設、開發與資料轉入。
+            </p>
+            <hr/>
+            <p class="subtitle is-3"># 系統開發與測試</p>
+            <p class="is-size-5">
+                依照確認之功能與技術進行實際開發，並依照模組功能或全部完工後進行測試(若採用依照功能模組測試可能會花費較長的時間，實際取決於您測試之時程)
+                <br/>
+                # 此階段將架設測試用系統提供您測試，每個模組可提供您進行一次的修改確認。
+            </p>
+            <hr/>
+            <p class="subtitle is-3"># 後期作業、結案</p>
+            <p class="is-size-5">
+                依照選定規格協助申請空間、網址與 SSL(原則上若沒特殊需求，會提供免費的 OpenSSL)，並將您的系統部署至您的空間當中。同時，並收取您的尾款後，將會提供後台使用教育訓練、操作手冊，至此就完成了一次愉快的合作體驗！
+                <br/>
+                # 結案後，每案件提供 3 個月的保固期，若遇 Bug 修復不額外計價
+            </p>
+        </div>
+        <div class="column is-3">
+            <p class="title is-1 has-text-right" data-scroll data-scroll-speed="4"><i class="fas fa-route"></i></p>
         </div>
     </div>
+
 
     <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-6">
         <p class="title is-1 has-text-left">成員<span class="has-text-link">TEAM</span></p>
