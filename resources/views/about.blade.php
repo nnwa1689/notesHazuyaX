@@ -162,7 +162,7 @@
         </div>
     </div>
 
-
+    <br/>
     <p class="title is-1 has-text-left mt-6">成員<span class="has-text-link">TEAM</span></p>
     <p class="title is-4 has-text-right">不斷嘗試各種可能</p>
     <div style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-0 is-justify-content-center">
