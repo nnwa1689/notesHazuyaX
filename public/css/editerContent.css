@@ -1,3 +1,5 @@
+@import url(/codes/styles/prism.css);
+
 @font-face {
     font-family: 'NotoSansTC-Medium';
     font-style: normal;
@@ -13,11 +15,22 @@
   }
 
 @font-face {
-    font-family: 'NotoSerifTC-Medium';
+    font-family: 'openhuninn';
     font-style: normal;
-    src: url(/fonts/NotoSerifTC-Medium.otf);
+    src: url(/fonts/openhuninn.ttf);
     /*unicode-range: U+4E00-9FFF;*/
     font-display: swap;
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-family: 'openhuninn';
+    font-weight: 600;
 }
 
 body {
@@ -37,7 +50,6 @@ hr {
 }
 
 blockquote {
-    font-family: 'NotoSerifTC-Medium';
     background-color: #41644A;
     border-left: 5px solid #263A29;
     color: #F2E3DB;
@@ -45,12 +57,9 @@ blockquote {
     padding: 1.25em 1.5em;
     box-shadow: 5px 5px 0 0.125em #E86A33;
   }
-  
+
   blockquote a {
     color: #F2E3DB
   }
 
-p {
-    font-family: 'NotoSerifTC-Medium';
-    font-size: 1.25em;
-}
+
