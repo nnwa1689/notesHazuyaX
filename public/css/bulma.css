@@ -4264,12 +4264,16 @@ blockquote a {
 }
 
 .content table {
+  border-color: #263A29;
+  border-width: 2px;
+  box-shadow: 5px 5px 0 0.125em #E86A33;
+  border-style: solid;
   width: 100%;
 }
 
 .content table td,
 .content table th {
-  border: 1px solid #dbdbdb;
+  border: 1px solid #263A29;
   border-width: 0 0 1px;
   padding: 0.5em 0.75em;
   vertical-align: top;
