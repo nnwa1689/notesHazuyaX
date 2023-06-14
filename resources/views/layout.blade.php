@@ -248,7 +248,7 @@
             barba.hooks.enter(
                 () => {
                     //scroll.scrollTo('top', { 'duration': 1 });
-                    console.log('scroll');
+                    console.log(scroll);
                 }
             )
 
