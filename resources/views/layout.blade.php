@@ -208,7 +208,7 @@
         <!--KursorEND-->
         <!--TypedJS-->
         <script>
-            var typed = new Typed("#typed", {
+            var typed_menu = new Typed("#typed", {
                 strings:[ {!! $webData['webConfig'][29]->tittle !!} ],
                 stringsElement: '#typed-strings',
                 typeSpeed: 70,
@@ -222,6 +222,11 @@
         <script>
             barba.hooks.after(() => {
                 scroll.update();
+                window.scrollTo(0, 0);
+            });
+
+            barba.hooks.before(() => {
+                typed.destroy();
             });
             
             barba.init({

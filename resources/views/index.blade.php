@@ -45,7 +45,7 @@
             <div class="columns is-multiline is-mobile is-justify-content-center" style="align-items: end;">
                 @php($i = 1)
                 @foreach($worksData as $item)
-                <div data-scroll data-scroll-speed="2.5" data-scroll-delay="1.5" onclick="window.location.href='works/{{$item -> WorksID}}'" class="is-WorksItem {{ ($i == 2) || $i == 3 ? 'is-works-item-min' : 'is-works-item-large' }}">
+                <div data-scroll data-scroll-speed="2.5" data-scroll-delay="1.5" onclick="Barba.Pjax.goTo('works/{{$item -> WorksID}}')" class="is-WorksItem {{ ($i == 2) || $i == 3 ? 'is-works-item-min' : 'is-works-item-large' }}">
                     <img class="image" src="{{$item -> CoverImage}}">
                     <a class="button works-image-tag is-primary is-outlined is-rounded is-medium">
                         <span>{{$item -> WorksName}}</span>
