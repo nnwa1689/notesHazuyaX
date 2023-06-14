@@ -70,6 +70,8 @@
         </div>
     </div>
 
+
+    <!--
     @if($postData[0]->Reply=="Yes")
     <script src="https://utteranc.es/client.js"
         repo="nnwa1689/NoteshazuyaBlogComment"
@@ -80,6 +82,8 @@
         >
     </script>
     @endif
+    -->
+    <!--
     <div class="container is-max-desktop" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
             crossorigin="anonymous"></script>
@@ -93,6 +97,7 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
     </div>
+    -->
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
