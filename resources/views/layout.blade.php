@@ -41,23 +41,6 @@
                 }, 2000);
             });
         </script>
-        <script>
-            barba.init({
-                transitions: [{
-                    name: 'opacity-transition',
-                    leave(data) {
-                        return gsap.to(data.current.container, {
-                            opacity: 0
-                        });
-                    },
-                    enter(data) {
-                        return gsap.from(data.next.container, {
-                            opacity: 0
-                        });
-                    }
-                }]
-            });
-        </script>
         {!! $webData['webConfig'][4]->tittle !!}
     </head>
     <body class="has-navbar-fixed-top" data-barba="wrapper">
@@ -249,5 +232,22 @@
             });
         </script>
         <!--TypeJSEND-->
+        <script>
+            barba.init({
+                transitions: [{
+                    name: 'opacity-transition',
+                    leave(data) {
+                        return gsap.to(data.current.container, {
+                            opacity: 0
+                        });
+                    },
+                    enter(data) {
+                        return gsap.from(data.next.container, {
+                            opacity: 0
+                        });
+                    }
+                }]
+            });
+        </script>
     </body>
 </html>
