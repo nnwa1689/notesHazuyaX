@@ -13,6 +13,7 @@
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
         <script src="https://unpkg.com/@barba/core"></script>
+        <script src="/js/locomotive-scroll.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/lottie-player.js"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
@@ -177,25 +178,23 @@
                     </div>
                 </footer>
             </div>
+            <!--Locomotive Scroll -->
+            <script>
+                (function () {
+                    var scroll = new LocomotiveScroll(
+                        {
+                            el: document.querySelector('#scroll-zone'),
+                            smooth: true,
+                            lerp: 0.2,
+                            repeat: true,
+                        }
+                    );
+                    new ResizeObserver(
+                    () => scroll.update()).observe(document.querySelector('#scroll-zone'));
+                })();
+            </script>
+            <!--Locomotive Scroll END-->
         </main>
-        <!--Locomotive Scroll -->
-        <script src="/js/locomotive-scroll.min.js"></script>
-        <script>
-            (function () {
-                var scroll = new LocomotiveScroll(
-                    {
-                        el: document.querySelector('#scroll-zone'),
-                        smooth: true,
-                        lerp: 0.2,
-                        repeat: true,
-                    }
-                );
-                new ResizeObserver(
-                () => scroll.update()).observe(document.querySelector('#scroll-zone'));
-            })();
-
-        </script>
-        <!--Locomotive Scroll END-->
         <!---Kursor---->
         <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
         <script>
