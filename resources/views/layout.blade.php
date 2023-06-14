@@ -220,6 +220,22 @@
         </script>
         <!--TypeJSEND-->
         <script>
+            barba.init({
+                transitions: [{
+                    name: 'opacity-transition',
+                    leave(data) {
+                        return gsap.to(data.current.container, {
+                            opacity: 0
+                        });
+                    },
+                    enter(data) {
+                        return gsap.from(data.next.container, {
+                            opacity: 0
+                        });
+                    }
+                }]
+            });
+
             barba.hooks.after((data) => {
                 //typed.destroy();
                 scroll.update();
@@ -242,21 +258,6 @@
                 window.scrollTo(0, 0);
             });
             
-            barba.init({
-                transitions: [{
-                    name: 'opacity-transition',
-                    leave(data) {
-                        return gsap.to(data.current.container, {
-                            opacity: 0
-                        });
-                    },
-                    enter(data) {
-                        return gsap.from(data.next.container, {
-                            opacity: 0
-                        });
-                    }
-                }]
-            });
         </script>
     </body>
 </html>
