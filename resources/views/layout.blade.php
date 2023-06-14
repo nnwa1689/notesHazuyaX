@@ -238,7 +238,7 @@
 
             barba.hooks.after((data) => {
                 //typed.destroy();
-                scroll.update();
+                //scroll.update();
 
                 console.log(data);
                 let js = data.next.container.querySelectorAll('#mainScript');
