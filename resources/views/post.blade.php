@@ -58,7 +58,7 @@
             @if(isset($rightPost[0]))
             <div class="column is-12">
                 <div class="is-homeBanner">
-                    <button style="min-height: 130px; border-radius: 15px;" onclick="location.href='{{$rightPost[0]->PostId}}'" class="button is-white is-fullwidth is-multiline is-large pt-3 pb-3">
+                    <button style="min-height: 130px; border-radius: 15px;" onclick="barba.go('{{$rightPost[0]->PostId}}')" class="button is-white is-fullwidth is-multiline is-large pt-3 pb-3">
                         <p class="subtitle is-4 mb-4">
                             下一篇<i class="fas fa-angle-right ml-1" aria-hidden="true"></i>
                         </p>
