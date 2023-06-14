@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </button>
-            <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}contact'" class="button is-white is-fullwidth is-large">
+            <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
                 <div class="columns">
                     <div class="column">
                         <p class="title is-6">
@@ -122,7 +122,7 @@
             <p data-scroll data-scroll-speed="2" class="subtitle is-2">
                     繼續閱讀更多雜紀
             </p>
-            <button class="button is-link mt-3 is-large" style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}post'">
+            <button class="button is-link mt-3 is-large" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}post')">
                 <div class="columns">
                     <div class="column">
                         <p class="title is-6">
@@ -142,7 +142,7 @@
         <p class="title is-3">
             有想法嗎？來聊聊天吧！
         </p>
-        <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}contact'" class="button is-white is-fullwidth is-large">
+        <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
             <div class="columns">
                 <div class="column">
                     <p class="title is-6">

@@ -163,7 +163,6 @@
         <!-- Main -->
         <div class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" >
             <main data-barba="container" data-barba-namespace="home">
-
                 @section('herocontent')
                 @show
                 <div class="container is-fluid">
