@@ -75,8 +75,7 @@
         repo="nnwa1689/NoteshazuyaBlogComment"
         issue-term="pathname"
         theme="github-light"
-        crossorigin="anonymous"
-        async>
+        crossorigin="anonymous">
     </script>
     @endif
     <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
