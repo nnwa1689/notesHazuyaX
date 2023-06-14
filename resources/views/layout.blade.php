@@ -203,7 +203,7 @@
                 ).observe(document.querySelector('#scroll-zone'));
             </script>
         </div>
-
+        <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
         <!---Kursor---->
         <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
         <script>
@@ -246,7 +246,7 @@
             barba.hooks.enter(
                 () => {
                     scroll.scrollTo('top', { 'duration': 1 });
-                    eval("<script src=\"{{$webData['webConfig'][13]->tittle}}codes\/prism.js\"><\/script>");
+                    Prism.highlightAll();
                 }
             )
 
