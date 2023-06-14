@@ -71,15 +71,13 @@
     </div>
 
     @if($postData[0]->Reply=="Yes")
-    <div class="block">
-        <script src="https://utteranc.es/client.js"
-            repo="nnwa1689/NoteshazuyaBlogComment"
-            issue-term="pathname"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-        </script>
-    </div>
+    <script src="https://utteranc.es/client.js"
+        repo="nnwa1689/NoteshazuyaBlogComment"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
     @endif
 
     <div class="container is-max-desktop" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
