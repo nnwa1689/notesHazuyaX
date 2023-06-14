@@ -71,7 +71,7 @@
     </div>
 
     @if($postData[0]->Reply=="Yes")
-    <script src="{{$webData['webConfig'][13]->tittle}}js/utteranc.es_client.js"
+    <script src="https://utteranc.es/client.js"
         repo="nnwa1689/NoteshazuyaBlogComment"
         issue-term="pathname"
         theme="github-light"
