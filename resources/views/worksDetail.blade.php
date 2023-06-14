@@ -44,7 +44,7 @@
                     <div class="column is-8">
                         <div class="box">
                             <div class="block p-1 has-text-left">
-                                <a class="has-text-weight-bold is-size-6 m-0" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
+                                <a class="has-text-weight-bold is-size-6 m-0" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
                                 <p class="is-size-6 m-0">{{ $value -> StaffTitle }}</p>
                             </div>
                         </div>

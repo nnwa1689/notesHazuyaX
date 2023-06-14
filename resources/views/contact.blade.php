@@ -63,13 +63,13 @@
                 </p>
             </div>
         </div>
-        <article class="message is-danger mt-5 mb-5 is-medium" id="error" style="display: none;">
+        <article class="notification is-danger mt-5 mb-5 is-medium" id="error" style="display: none;">
             <div class="message-body">
             資料填寫有誤，請重新檢查！
             </div>
         </article>
 
-        <article class="message is-success mt-5 mb-5 is-medium" id="suc" style="display: none;">
+        <article class="notification is-success mt-5 mb-5 is-medium" id="suc" style="display: none;">
             <div class="message-body">
             資料已經送出囉！請靜待我們的回覆～
             </div>

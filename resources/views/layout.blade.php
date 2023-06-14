@@ -199,7 +199,6 @@
                     );
                     new ResizeObserver(() => {
                         scroll.update();
-                        scroll.scrollTo('top', { 'duration': 1 });
                     }
                     ).observe(document.querySelector('#scroll-zone'));
                 })();
@@ -247,6 +246,7 @@
 
             barba.hooks.enter(
                 () => {
+                    scroll.scrollTo('top', { 'duration': 1 });
                     console.log('ENTER');
                 }
             )
