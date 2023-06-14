@@ -178,23 +178,23 @@
                         </div>
                     </footer>
                 </div>
-                <!--Locomotive Scroll -->
-                <script>
-                    (function () {
-                        var scroll = new LocomotiveScroll(
-                            {
-                                el: document.querySelector('#scroll-zone'),
-                                smooth: true,
-                                lerp: 0.2,
-                                repeat: true,
-                            }
-                        );
-                        new ResizeObserver(
-                        () => scroll.update()).observe(document.querySelector('#scroll-zone'));
-                    })();
-                </script>
-                <!--Locomotive Scroll END-->
             </maim>
+            <!--Locomotive Scroll -->
+            <script>
+                (function () {
+                    var scroll = new LocomotiveScroll(
+                        {
+                            el: document.querySelector('#scroll-zone'),
+                            smooth: true,
+                            lerp: 0.2,
+                            repeat: true,
+                        }
+                    );
+                    new ResizeObserver(
+                    () => scroll.update()).observe(document.querySelector('#scroll-zone'));
+                })();
+            </script>
+            <!--Locomotive Scroll END-->
         </main>
         <!---Kursor---->
         <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
