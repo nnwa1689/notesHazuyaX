@@ -144,7 +144,7 @@
                         @endforeach
                         <!--Dynamic END-->
                         @if(gettype($webData['userData']) == 'integer')
-                            <a class="navbar-item is-tab" href="/login">登入</a>
+                            <a class="navbar-item is-tab" target="_blank" href="/login">登入</a>
                         @else
                             <a href="/admin" class="navbar-item is-tab"><i class="fas fa-cogs mr-1"></i>管理</a>
                             <a href="/logout" class="navbar-item is-tab">
