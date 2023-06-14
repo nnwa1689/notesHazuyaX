@@ -221,21 +221,14 @@
         <!--TypeJSEND-->
         <script>
             barba.hooks.after(() => {
-                typed.destroy();
+                //typed.destroy();
                 scroll.update();
-                scroll.scrollTo( 'top', {
-                    'offset': 0,
-                    'callback': function() {
-                        // do something...
-                    },
-                    'duration': 600,
-                    'easing': [0.25, 0.00, 0.35, 1.00],
-                    'disableLerp': true
-                } );
+                scroll.scrollTo('top');
             });
 
             barba.hooks.before(() => {
                 typed.destroy();
+                scroll.scrollTo('top');
             });
             
             barba.init({
