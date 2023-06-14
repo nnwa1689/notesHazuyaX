@@ -247,8 +247,8 @@
 
             barba.hooks.enter(
                 () => {
-                    document.querySelector('#scroll-zone').scrollTo({ top: 0 });
-                    console.log('ENTER');
+                    //scroll.scrollTo('top', { 'duration': 1 });
+                    console.log('scroll');
                 }
             )
 
