@@ -8,6 +8,17 @@
         </p>
     </div>
     <div class="pt-4">
+        <article class="notification is-danger mt-5 mb-5 is-medium" id="error" style="display: none;">
+            <div class="content">
+            資料填寫有誤，請重新檢查！
+            </div>
+        </article>
+
+        <article class="notification is-success mt-5 mb-5 is-medium" id="suc" style="display: none;">
+            <div class="content">
+            資料已經送出囉！請靜待我們的回覆～
+            </div>
+        </article>
         <div class="columns">
             <div class="column is-8">
                 <p class="title is-4 mt-6"><span class="has-text-link">嗨</span>，我叫做</p>
@@ -63,17 +74,6 @@
                 </p>
             </div>
         </div>
-        <article class="notification is-danger mt-5 mb-5 is-medium" id="error" style="display: none;">
-            <div class="message-body">
-            資料填寫有誤，請重新檢查！
-            </div>
-        </article>
-
-        <article class="notification is-success mt-5 mb-5 is-medium" id="suc" style="display: none;">
-            <div class="message-body">
-            資料已經送出囉！請靜待我們的回覆～
-            </div>
-        </article>
         <button type="button" onclick="submit()" class="button is-primary is-large is-fullwidth mt-3">我說完了！</button>
     </div>
 </div>

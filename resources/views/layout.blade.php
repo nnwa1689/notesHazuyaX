@@ -199,6 +199,7 @@
                     );
                     new ResizeObserver(() => {
                         scroll.update();
+                        
                     }
                     ).observe(document.querySelector('#scroll-zone'));
                 })();
@@ -301,6 +302,7 @@
                         }
                     });
                 }
+                scroll.scrollTo('top', { 'duration': 1 });
             }
         </script>
     </body>
