@@ -70,14 +70,22 @@
         </div>
     </div>
 
-    @if($postData[0]->Reply=="Yes")
-    <script src="https://utteranc.es/client.js"
-        repo="nnwa1689/NoteshazuyaBlogComment"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+    <script>
+        barba.hooks.after((data) => {
+            eval(
+                <script src="https://utteranc.es/client.js"
+                    repo="nnwa1689/NoteshazuyaBlogComment"
+                    issue-term="pathname"
+                    theme="github-light"
+                    crossorigin="anonymous"
+                    async>
+                </script>
+            );
+        });
     </script>
+
+    @if($postData[0]->Reply=="Yes")
+
     @endif
 
     <div class="container is-max-desktop" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
