@@ -219,19 +219,7 @@
             });
         </script>
         <!--TypeJSEND-->
-        <script>
-            barba.hooks.after(() => {
-                //typed.destroy();
-                scroll.update();
-            });
-
-            barba.hooks.before(() => {
-                typed.destroy();
-                if ('scrollRestoration' in history) {
-                    history.scrollRestoration = 'manual';
-                }
-            });
-            
+        <script>            
             barba.init({
                 transitions: [{
                     name: 'opacity-transition',
@@ -244,6 +232,15 @@
                         return gsap.from(data.next.container, {
                             opacity: 0
                         });
+                    },
+                    beforeEnter() {
+                        scroll.scrollTo("top");
+                    },
+                    before() {
+                        typed.destroy();
+                    },
+                    after() {
+                        scroll.update();
                     }
                 }]
             });
