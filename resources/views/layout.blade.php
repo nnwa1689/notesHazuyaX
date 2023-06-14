@@ -45,118 +45,118 @@
         {!! $webData['webConfig'][4]->tittle !!}
     </head>
     <body class="has-navbar-fixed-top" data-barba="wrapper">
-        <!-- Main -->
-        <main data-barba="container" data-barba-namespace="home">
-            <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
-                <div class="container is-fluid">
-                    <div class="navbar-brand">
-                        <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle}}">
-                            <img alt="logo" style="max-height: 50px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
-                        </a>
-                        <!--MibileNavbar-->
-                        <div class="navbar-item navbar-toggle is-mobile" style="margin-left: auto; margin-right: -0.75rem">
-                            <a class="navbar-link is-arrowless"><i class="fas fa-stream"></i></a>
-                        </div>
-                        <!-----END ----->
+        <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
+            <div class="container is-fluid">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle}}">
+                        <img alt="logo" style="max-height: 50px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                    </a>
+                    <!--MibileNavbar-->
+                    <div class="navbar-item navbar-toggle is-mobile" style="margin-left: auto; margin-right: -0.75rem">
+                        <a class="navbar-link is-arrowless"><i class="fas fa-stream"></i></a>
                     </div>
-                    <div id="MainNavbar" class="navbar-menu">
-                        <div class="navbar-start">
-                        </div>
-                        <div class="navbar-end">
-                            <div class="navbar-item navbar-toggle">
-                                <a class="navbar-link is-arrowless"><i class="fas fa-stream"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    <!-----END ----->
                 </div>
-            </nav>
-            <div class="fullMenu">
-                <div class="container is-max-desktop" style="margin-top:7rem;">
-                    <div class="columns is-variable is-8">
-                        <div class="column is-8">
-                            <div class="block">
-                                <p class="is-size-5 has-text-left has-text-centered-mobile">
-                                    <span class="has-text-link"><i class="fas fa-quote-left"></i></span><span id="typed"></span><span class="has-text-link"><i class="fas fa-quote-right"></i></span>
-                                </p>
-                            </div>
-                            <div class="block has-text-left has-text-centered-mobile">
-                                @if(strlen($webData['webConfig'][22]->tittle) > 0)
-                                    <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
-                                        <button class="button is-twitter is-outlined is-medium is-rounded ml-1 mr-1">
-                                            <i class="fab fa-twitter"></i>
-                                        </button>
-                                    </a>
-                                @endif
-                                @if(strlen($webData['webConfig'][21]->tittle) > 0)
-                                    <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
-                                        <button class="button is-instagram is-medium is-rounded ml-1 mr-1">
-                                            <i class="fab fa-instagram-square"></i>
-                                        </button>
-                                    </a>
-                                @endif
-                                @if(strlen($webData['webConfig'][20]->tittle) > 0)
-                                    <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
-                                        <button class="button is-facebook is-outlined is-medium is-rounded ml-1 mr-1">
-                                            <i class="fab fa-facebook"></i>
-                                        </button>
-                                    </a>
-                                @endif
-                                @if(strlen($webData['webConfig'][23]->tittle) > 0)
-                                    <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
-                                        <button class="button is-applepodcast is-outlined is-medium is-rounded ml-1 mr-1">
-                                            <i class="fab fa-apple"></i>
-                                        </button>
-                                    </a>
-                                @endif
-                                @if(strlen($webData['webConfig'][24]->tittle) > 0)
-                                    <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
-                                        <button class="button is-outlined is-white is-medium is-rounded ml-1 mr-1">
-                                            <i class="fab fa-google"></i>
-                                        </button>
-                                    </a>
-                                @endif
-                            </div>
-                            <hr />
-                            <div class="block has-text-left has-text-centered-mobile">
-                                @foreach($webData['allButtonNav'] as $bn)
-                                <a href="
-                                    {{ (\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail') ? $bn->URL : $webData['webConfig'][13]->tittle.$bn->URL}}"
-                                    class="is-size-6 ml-1 mr-1"
-                                >
-                                    {{$bn->NavigateName}}
-                                </a>
-                                @endforeach
-                            </div>
-                        </div>
-                        <div class="column">
-                            <!--Dynamic System Gen-->
-                            @foreach($webData['allNav'] as $Nav)
-                            @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
-                            <a class="navbar-item is-tab" href="{{$Nav->URL}}">{{$Nav->NavigateName}}</a>
-                            @else
-                            <a class="navbar-item is-tab" href="{{$webData['webConfig'][13]->tittle.$Nav->URL}}">{{$Nav->NavigateName}}</a>
-                            @endif
-                            @endforeach
-                            <!--Dynamic END-->
-                            @if(gettype($webData['userData']) == 'integer')
-                                <a class="navbar-item is-tab" href="/login">登入</a>
-                            @else
-                                <a href="/admin" class="navbar-item is-tab"><i class="fas fa-cogs mr-1"></i>管理</a>
-                                <a href="/logout" class="navbar-item is-tab">
-                                    <div class="image is-32x32 mr-1">
-                                        <figure class="image is-1by1">
-                                            <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
-                                        </figure>
-                                    </div>登出
-                                </a>
-                            @endif
-                            </div>
+                <div id="MainNavbar" class="navbar-menu">
+                    <div class="navbar-start">
+                    </div>
+                    <div class="navbar-end">
+                        <div class="navbar-item navbar-toggle">
+                            <a class="navbar-link is-arrowless"><i class="fas fa-stream"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
+        </nav>
+        <div class="fullMenu">
+            <div class="container is-max-desktop" style="margin-top:7rem;">
+                <div class="columns is-variable is-8">
+                    <div class="column is-8">
+                        <div class="block">
+                            <p class="is-size-5 has-text-left has-text-centered-mobile">
+                                <span class="has-text-link"><i class="fas fa-quote-left"></i></span><span id="typed"></span><span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+                            </p>
+                        </div>
+                        <div class="block has-text-left has-text-centered-mobile">
+                            @if(strlen($webData['webConfig'][22]->tittle) > 0)
+                                <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
+                                    <button class="button is-twitter is-outlined is-medium is-rounded ml-1 mr-1">
+                                        <i class="fab fa-twitter"></i>
+                                    </button>
+                                </a>
+                            @endif
+                            @if(strlen($webData['webConfig'][21]->tittle) > 0)
+                                <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
+                                    <button class="button is-instagram is-medium is-rounded ml-1 mr-1">
+                                        <i class="fab fa-instagram-square"></i>
+                                    </button>
+                                </a>
+                            @endif
+                            @if(strlen($webData['webConfig'][20]->tittle) > 0)
+                                <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
+                                    <button class="button is-facebook is-outlined is-medium is-rounded ml-1 mr-1">
+                                        <i class="fab fa-facebook"></i>
+                                    </button>
+                                </a>
+                            @endif
+                            @if(strlen($webData['webConfig'][23]->tittle) > 0)
+                                <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
+                                    <button class="button is-applepodcast is-outlined is-medium is-rounded ml-1 mr-1">
+                                        <i class="fab fa-apple"></i>
+                                    </button>
+                                </a>
+                            @endif
+                            @if(strlen($webData['webConfig'][24]->tittle) > 0)
+                                <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
+                                    <button class="button is-outlined is-white is-medium is-rounded ml-1 mr-1">
+                                        <i class="fab fa-google"></i>
+                                    </button>
+                                </a>
+                            @endif
+                        </div>
+                        <hr />
+                        <div class="block has-text-left has-text-centered-mobile">
+                            @foreach($webData['allButtonNav'] as $bn)
+                            <a href="
+                                {{ (\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail') ? $bn->URL : $webData['webConfig'][13]->tittle.$bn->URL}}"
+                                class="is-size-6 ml-1 mr-1"
+                            >
+                                {{$bn->NavigateName}}
+                            </a>
+                            @endforeach
+                        </div>
+                    </div>
+                    <div class="column">
+                        <!--Dynamic System Gen-->
+                        @foreach($webData['allNav'] as $Nav)
+                        @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
+                        <a class="navbar-item is-tab" href="{{$Nav->URL}}">{{$Nav->NavigateName}}</a>
+                        @else
+                        <a class="navbar-item is-tab" href="{{$webData['webConfig'][13]->tittle.$Nav->URL}}">{{$Nav->NavigateName}}</a>
+                        @endif
+                        @endforeach
+                        <!--Dynamic END-->
+                        @if(gettype($webData['userData']) == 'integer')
+                            <a class="navbar-item is-tab" href="/login">登入</a>
+                        @else
+                            <a href="/admin" class="navbar-item is-tab"><i class="fas fa-cogs mr-1"></i>管理</a>
+                            <a href="/logout" class="navbar-item is-tab">
+                                <div class="image is-32x32 mr-1">
+                                    <figure class="image is-1by1">
+                                        <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
+                                    </figure>
+                                </div>登出
+                            </a>
+                        @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main -->
+        <div class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" >
+            <main data-barba="container" data-barba-namespace="home">
 
-            <div class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" >
                 @section('herocontent')
                 @show
                 <div class="container is-fluid">
@@ -179,7 +179,7 @@
                         </div>
                     </footer>
                 </div>
-            </div>
+            </main>
             <!--Locomotive Scroll -->
             <script>
                 (function () {
@@ -196,7 +196,7 @@
                 })();
             </script>
             <!--Locomotive Scroll END-->
-        </main>
+        </div>
         <!---Kursor---->
         <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
         <script>
@@ -220,6 +220,10 @@
         </script>
         <!--TypeJSEND-->
         <script>
+            barba.hooks.after(() => {
+                scroll.update();
+            });
+            
             barba.init({
                 transitions: [{
                     name: 'opacity-transition',
