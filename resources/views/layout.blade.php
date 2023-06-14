@@ -154,46 +154,47 @@
             </div>
         </div>
         <!-- Main -->
-        <main class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" data-barba="container" data-barba-namespace="home">
-
-            @section('herocontent')
-            @show
-            <div class="container is-fluid">
-                <div class="block">
-                    @section('content')
-                    @show
-                </div>
-            </div>
-            <div class="container is-fluid">
-                <footer class="footer">
-                    <div class="columns">
-                        <div class="column is-half has-text-left has-text-centered-mobile">
-                            <a href="mailto:public.wuce@gmail.com"><i class="fas fa-envelope mr-1"></i>public.wuce@gmail.com</a>
-                        </div>
-                        <div class="column">
-                            <p class="has-text-right has-text-centered-mobile">
-                                {!!$webData['webConfig'][3]->tittle!!}
-                            </p>
-                        </div>
+        <main data-barba="container" data-barba-namespace="home">
+            <main class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" >
+                @section('herocontent')
+                @show
+                <div class="container is-fluid">
+                    <div class="block">
+                        @section('content')
+                        @show
                     </div>
-                </footer>
-            </div>
-            <!--Locomotive Scroll -->
-            <script>
-                (function () {
-                    var scroll = new LocomotiveScroll(
-                        {
-                            el: document.querySelector('#scroll-zone'),
-                            smooth: true,
-                            lerp: 0.2,
-                            repeat: true,
-                        }
-                    );
-                    new ResizeObserver(
-                    () => scroll.update()).observe(document.querySelector('#scroll-zone'));
-                })();
-            </script>
-            <!--Locomotive Scroll END-->
+                </div>
+                <div class="container is-fluid">
+                    <footer class="footer">
+                        <div class="columns">
+                            <div class="column is-half has-text-left has-text-centered-mobile">
+                                <a href="mailto:public.wuce@gmail.com"><i class="fas fa-envelope mr-1"></i>public.wuce@gmail.com</a>
+                            </div>
+                            <div class="column">
+                                <p class="has-text-right has-text-centered-mobile">
+                                    {!!$webData['webConfig'][3]->tittle!!}
+                                </p>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+                <!--Locomotive Scroll -->
+                <script>
+                    (function () {
+                        var scroll = new LocomotiveScroll(
+                            {
+                                el: document.querySelector('#scroll-zone'),
+                                smooth: true,
+                                lerp: 0.2,
+                                repeat: true,
+                            }
+                        );
+                        new ResizeObserver(
+                        () => scroll.update()).observe(document.querySelector('#scroll-zone'));
+                    })();
+                </script>
+                <!--Locomotive Scroll END-->
+            </maim>
         </main>
         <!---Kursor---->
         <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
