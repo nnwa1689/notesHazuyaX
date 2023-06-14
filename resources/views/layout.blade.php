@@ -188,21 +188,7 @@
             </main>
             <!--Locomotive Scroll -->
             <script>
-                (function () {
-                    var scroll = new LocomotiveScroll(
-                        {
-                            el: document.querySelector('#scroll-zone'),
-                            smooth: true,
-                            lerp: 0.2,
-                            repeat: true,
-                        }
-                    );
-                    new ResizeObserver(() => {
-                        scroll.update();
-                        scroll.scrollTo('top', { 'duration': 1 });
-                    }
-                    ).observe(document.querySelector('#scroll-zone'));
-                })();
+
             </script>
             <!--Locomotive Scroll END-->
         </div>
@@ -227,8 +213,22 @@
                 loop: true,
             });
         </script>
-        <!--TypeJSEND-->
         <script>
+        (function () {
+                    var scroll = new LocomotiveScroll(
+                        {
+                            el: document.querySelector('#scroll-zone'),
+                            smooth: true,
+                            lerp: 0.2,
+                            repeat: true,
+                        }
+                    );
+                    new ResizeObserver(() => {
+                        scroll.update();
+                        
+                    }
+                    ).observe(document.querySelector('#scroll-zone'));
+                })();
             barba.init({
                 transitions: [{
                     name: 'opacity-transition',
@@ -246,7 +246,7 @@
             });
 
             barba.hooks.enter(() => {
-                window.scrollTo(0, 0);
+                scroll.scrollTo('top', { 'duration': 1 });
             });
 
             barba.hooks.after((data) => {
