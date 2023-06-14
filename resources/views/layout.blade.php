@@ -155,7 +155,7 @@
         </div>
         <!-- Main -->
         <main data-barba="container" data-barba-namespace="home">
-            <main class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" >
+            <div class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" >
                 @section('herocontent')
                 @show
                 <div class="container is-fluid">
@@ -178,7 +178,7 @@
                         </div>
                     </footer>
                 </div>
-            </maim>
+            </div>
             <!--Locomotive Scroll -->
             <script>
                 (function () {
@@ -190,8 +190,12 @@
                             repeat: true,
                         }
                     );
+                    /*
                     new ResizeObserver(
-                    () => scroll.update()).observe(document.querySelector('#scroll-zone'));
+                    () => scroll.update()).observe(document.querySelector('#scroll-zone'));*/
+                    barba.hooks.after(() => {
+                        scroll.update();
+                    });
                 })();
             </script>
             <!--Locomotive Scroll END-->
