@@ -236,12 +236,15 @@
                         });
                     },
                     enter(data) {
-                        window.scrollTo(0, 0);
                         return gsap.from(data.next.container, {
                             opacity: 0
                         });
                     }
                 }]
+            });
+
+            barba.hooks.enter(() => {
+                window.scrollTo(0, 0);
             });
 
             barba.hooks.after((data) => {
