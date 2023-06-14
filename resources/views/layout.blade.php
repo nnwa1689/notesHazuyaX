@@ -188,19 +188,33 @@
             </main>
             <!--Locomotive Scroll -->
             <script>
-
+                (function () {
+                    var scroll = new LocomotiveScroll(
+                        {
+                            el: document.querySelector('#scroll-zone'),
+                            smooth: true,
+                            lerp: 0.2,
+                            repeat: true,
+                        }
+                    );
+                    new ResizeObserver(() => {
+                        scroll.update();
+                        scroll.scrollTo('top', { 'duration': 1 });
+                    }
+                    ).observe(document.querySelector('#scroll-zone'));
+                })();
             </script>
-            <!--Locomotive Scroll END-->
         </div>
+        
         <!---Kursor---->
         <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
         <script>
             new kursor({
                 type: 4,
                 color: "#E86A33"
-            })
+            });
         </script>
-        <!--KursorEND-->
+
         <!--TypedJS-->
         <script>
             var typed_menu = new Typed("#typed", {
@@ -213,22 +227,8 @@
                 loop: true,
             });
         </script>
+
         <script>
-        (function () {
-                    var scroll = new LocomotiveScroll(
-                        {
-                            el: document.querySelector('#scroll-zone'),
-                            smooth: true,
-                            lerp: 0.2,
-                            repeat: true,
-                        }
-                    );
-                    new ResizeObserver(() => {
-                        scroll.update();
-                        
-                    }
-                    ).observe(document.querySelector('#scroll-zone'));
-                })();
             barba.init({
                 transitions: [{
                     name: 'opacity-transition',
@@ -245,14 +245,7 @@
                 }]
             });
 
-            barba.hooks.enter(() => {
-                scroll.scrollTo('top', { 'duration': 1 });
-            });
-
             barba.hooks.after((data) => {
-                //scroll.update();
-
-                console.log(data);
                 let js = data.next.container.querySelectorAll('main script');
                 if(js != null){
                     js.forEach((item) => {
