@@ -196,7 +196,7 @@
         </div>
     </section>
 </div>
-<script>
+<script id="mainScript">
 var typed = new Typed("#titleText", {
     strings:["關於<span class=\"has-text-link\">ABOUT</span>",],
     stringsElement: '#typed-strings',
