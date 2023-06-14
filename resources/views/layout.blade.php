@@ -33,13 +33,19 @@
                     $(".navbar-burger").toggleClass("is-active");
                     $(".navbar-menu").toggleClass("is-active");
                 });
-                /* Loading */
+
+                $(".fullMenu").click(function() {
+                    $('.fullMenu').toggleClass('is-on');
+                });
+
+                /* Loading 
                 setTimeout(() => {
                     $(".pageloader").toggleClass("loading");
                 }, 1500);
                 setTimeout(() => {
                     player.stop();
                 }, 2000);
+                */
             });
         </script>
         {!! $webData['webConfig'][4]->tittle !!}
@@ -240,7 +246,6 @@
                 //scroll.update();
 
                 console.log(data);
-                scroll.scrollTo(0);
                 let js = data.next.container.querySelectorAll('main script');
                 if(js != null){
                     js.forEach((item) => {
@@ -248,6 +253,8 @@
                         eval(item.innerHTML);
                     });
                 }
+
+                scroll.scrollTo(0);
             });
             
         </script>
