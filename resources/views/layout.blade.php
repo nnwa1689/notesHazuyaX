@@ -220,6 +220,13 @@
         </script>
         <!--TypeJSEND-->
         <script>
+            var typed = new Typed("#titleText", {
+                stringsElement: '#typed-strings',
+                typeSpeed: 70,
+                startDelay: 2000,
+                loop: false,
+            });
+
             barba.hooks.after(() => {
                 //typed.destroy();
                 scroll.update();
