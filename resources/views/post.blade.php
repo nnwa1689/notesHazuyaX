@@ -2,8 +2,6 @@
 @section('title', $postData[0]->PostTittle.' - ')
 @section('content')
 @parent
-    <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}/codes/styles/prism.css">
-    <script src="{{$webData['webConfig'][13]->tittle}}/codes/prism.js"></script>
     <div data-scroll class="section has-text-centered mb-2 mt-3">
         <div class="columns is-multiline is-justify-content-center is-align-content-center">
             <p class="is-size-6 mr-3"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</p>

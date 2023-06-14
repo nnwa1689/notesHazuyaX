@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/locomotive-scroll.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/kursor.css">
+        <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}codes/styles/prism.css"> 
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
         <script src="https://unpkg.com/@barba/core"></script>
@@ -19,6 +20,7 @@
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
         crossorigin="anonymous"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
         <script>
             console.log("%c不要看啦，人家會害羞>__<，studio-44 Seconds 籌備中:))", "color: blue; font-size: 30px;");
             $(document).ready(function() {
