@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/locomotive-scroll.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/kursor.css">
-        <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}codes/styles/prism.css"> 
+        <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}codes/styles/prism.css">
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
         <script src="https://unpkg.com/@barba/core"></script>
@@ -40,7 +40,7 @@
                     $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
                 });
 
-                /* Loading 
+                /* Loading
                 setTimeout(() => {
                     $(".pageloader").toggleClass("loading");
                 }, 1500);
@@ -203,7 +203,7 @@
                 ).observe(document.querySelector('#scroll-zone'));
             </script>
         </div>
-        
+
         <!---Kursor---->
         <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
         <script>
@@ -246,6 +246,7 @@
             barba.hooks.enter(
                 () => {
                     scroll.scrollTo('top', { 'duration': 1 });
+                    <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
                 }
             )
 
@@ -258,7 +259,7 @@
                     });
                 }
             });
-            
+
         </script>
         <script>
             function submit() {
