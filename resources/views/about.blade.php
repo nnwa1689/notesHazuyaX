@@ -197,12 +197,14 @@
     </section>
 </div>
 <script>
-    var typed = new Typed("#titleText", {
-        strings:["關於<span class=\"has-text-link\">ABOUT</span>",],
-        stringsElement: '#typed-strings',
-        typeSpeed: 70,
-        startDelay: 2000,
-        loop: false,
+    barba.hooks.after(() => {
+        new Typed("#titleText", {
+            strings:["關於<span class=\"has-text-link\">ABOUT</span>",],
+            stringsElement: '#typed-strings',
+            typeSpeed: 70,
+            startDelay: 2000,
+            loop: false,
+        });
     });
 </script>
 @endsection
