@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/locomotive-scroll.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/kursor.css">
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+        <script src="https://unpkg.com/@barba/core"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/lottie-player.js"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
@@ -39,9 +41,26 @@
                 }, 2000);
             });
         </script>
+        <script>
+            barba.init({
+                transitions: [{
+                    name: 'opacity-transition',
+                    leave(data) {
+                        return gsap.to(data.current.container, {
+                            opacity: 0
+                        });
+                    },
+                    enter(data) {
+                        return gsap.from(data.next.container, {
+                            opacity: 0
+                        });
+                    }
+                }]
+            });
+        </script>
         {!! $webData['webConfig'][4]->tittle !!}
     </head>
-    <body class="has-navbar-fixed-top">
+    <body class="has-navbar-fixed-top" data-barba="wrapper">
         <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
             <div class="container is-fluid">
                 <div class="navbar-brand">
@@ -151,7 +170,7 @@
             </div>
         </div>
         <!-- Main -->
-        <main class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;">
+        <main class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" data-barba="container" data-barba-namespace="home">
             <section class="hero is-primary is-align-items-center has-text-centered pageloader loading">
                 <div class="loader-body">
                     <lottie-player
