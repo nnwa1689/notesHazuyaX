@@ -198,8 +198,11 @@
                             repeat: true,
                         }
                     );
-                    new ResizeObserver(
-                    () => scroll.update()).observe(document.querySelector('#scroll-zone'));
+                    new ResizeObserver(() => {
+                        scroll.update();
+                        scroll.scrollTo('top');
+                    }
+                    ).observe(document.querySelector('#scroll-zone'));
                 })();
             </script>
             <!--Locomotive Scroll END-->
