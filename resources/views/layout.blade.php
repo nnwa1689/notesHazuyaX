@@ -226,7 +226,7 @@
             });
 
             barba.hooks.beforeLeave(() => {
-                typed.destroy();
+                var typed = null;
             });
 
             barba.hooks.beforeEnter(() => {
