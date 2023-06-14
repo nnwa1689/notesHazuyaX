@@ -51,14 +51,12 @@
 </div>
 <p></p>
 <script>
-    barba.hooks.after(() => {
-        var typed = new Typed("#titleText", {
-            strings:["{{$allPosts[0]->Category->ClassName}}",],
-            stringsElement: '#typed-strings',
-            typeSpeed: 70,
-            startDelay: 2000,
-            loop: false,
-        });
-    });
+var typed = new Typed("#titleText", {
+    strings:["{{$allPosts[0]->Category->ClassName}}",],
+    stringsElement: '#typed-strings',
+    typeSpeed: 70,
+    startDelay: 2000,
+    loop: false,
+});
 </script>
 @endsection

@@ -237,11 +237,10 @@
             });
 
             barba.hooks.after((data) => {
-                //typed.destroy();
                 //scroll.update();
 
                 console.log(data);
-                window.scrollTo(0, 0);
+                scroll.scrollTo(0);
                 let js = data.next.container.querySelectorAll('main script');
                 if(js != null){
                     js.forEach((item) => {
@@ -249,14 +248,6 @@
                         eval(item.innerHTML);
                     });
                 }
-            });
-
-            barba.hooks.beforeLeave(() => {
-                var typed = null;
-            });
-
-            barba.hooks.beforeEnter(() => {
-                window.scrollTo(0, 0);
             });
             
         </script>
