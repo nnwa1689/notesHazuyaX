@@ -222,10 +222,18 @@
         <script>
             barba.hooks.after(() => {
                 scroll.update();
-                window.scrollTo(0, 0);
             });
 
             barba.hooks.before(() => {
+                scroll.scrollTo( 'top', {
+                    'offset': 0,
+                    'callback': function() {
+                        // do something...
+                    },
+                    'duration': 600,
+                    'easing': [0.25, 0.00, 0.35, 1.00],
+                    'disableLerp': true
+                } );
                 typed.destroy();
             });
             

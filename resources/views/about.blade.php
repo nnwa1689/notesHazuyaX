@@ -198,7 +198,7 @@
 </div>
 <script>
     barba.hooks.after(() => {
-        new Typed("#titleText", {
+        var typed = new Typed("#titleText", {
             strings:["關於<span class=\"has-text-link\">ABOUT</span>",],
             stringsElement: '#typed-strings',
             typeSpeed: 70,

@@ -52,7 +52,7 @@
 <p></p>
 <script>
     barba.hooks.after(() => {
-        new Typed("#titleText", {
+        var typed = new Typed("#titleText", {
             strings:["{{$allPosts[0]->Category->ClassName}}",],
             stringsElement: '#typed-strings',
             typeSpeed: 70,
