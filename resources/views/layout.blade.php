@@ -200,7 +200,7 @@
                     );
                     new ResizeObserver(() => {
                         scroll.update();
-                        scroll.scrollTo('top');
+                        scroll.scrollTo('top', { 'duration': 1 });
                     }
                     ).observe(document.querySelector('#scroll-zone'));
                 })();
