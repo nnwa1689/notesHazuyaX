@@ -246,7 +246,7 @@
             barba.hooks.enter(
                 () => {
                     scroll.scrollTo('top', { 'duration': 1 });
-                    eval('<script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>');
+                    eval("<script src='{{$webData['webConfig'][13]->tittle}}codes/prism.js'></script>");
                 }
             )
 
