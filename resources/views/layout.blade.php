@@ -247,8 +247,7 @@
 
             barba.hooks.enter(
                 () => {
-                    document.querySelector('#scroll-zone').scrollTo(0);
-                    scroll.scrollTo('top', { 'duration': 1 });
+                    document.querySelector('#scroll-zone').scrollTo({ top: 0 });
                     console.log('ENTER');
                 }
             )
@@ -303,7 +302,6 @@
                         }
                     });
                 }
-                scroll.scrollTo('top', { 'duration': 1 });
             }
         </script>
     </body>
