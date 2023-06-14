@@ -223,12 +223,13 @@
             barba.hooks.after(() => {
                 //typed.destroy();
                 scroll.update();
-                scroll.scrollTo('top');
             });
 
             barba.hooks.before(() => {
                 typed.destroy();
-                scroll.scrollTo('top');
+                if ('scrollRestoration' in history) {
+                    history.scrollRestoration = 'manual';
+                }
             });
             
             barba.init({
