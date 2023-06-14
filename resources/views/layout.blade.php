@@ -20,7 +20,6 @@
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
         crossorigin="anonymous"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
-        <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
         <script>
             console.log("%c不要看啦，人家會害羞>__<，studio-44 Seconds 籌備中:))", "color: blue; font-size: 30px;");
             $(document).ready(function() {

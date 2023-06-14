@@ -70,24 +70,16 @@
         </div>
     </div>
 
-    <script>
-        barba.hooks.after((data) => {
-            eval(
-                <script src="https://utteranc.es/client.js"
-                    repo="nnwa1689/NoteshazuyaBlogComment"
-                    issue-term="pathname"
-                    theme="github-light"
-                    crossorigin="anonymous"
-                    async>
-                </script>
-            );
-        });
-    </script>
-
     @if($postData[0]->Reply=="Yes")
-
+    <script src="https://utteranc.es/client.js"
+        repo="nnwa1689/NoteshazuyaBlogComment"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
     @endif
-
+    <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
     <div class="container is-max-desktop" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
             crossorigin="anonymous"></script>
