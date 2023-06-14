@@ -221,10 +221,8 @@
         <!--TypeJSEND-->
         <script>
             barba.hooks.after(() => {
+                typed.destroy();
                 scroll.update();
-            });
-
-            barba.hooks.before(() => {
                 scroll.scrollTo( 'top', {
                     'offset': 0,
                     'callback': function() {
@@ -234,6 +232,9 @@
                     'easing': [0.25, 0.00, 0.35, 1.00],
                     'disableLerp': true
                 } );
+            });
+
+            barba.hooks.before(() => {
                 typed.destroy();
             });
             
