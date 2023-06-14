@@ -27,7 +27,7 @@
                     $('.fullMenu').toggleClass('is-on');
                     $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
                 });
-                // Check for click events on the navbar burger icon
+
                 $(".navbar-burger").click(function() {
                     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
                     $(".navbar-burger").toggleClass("is-active");
@@ -36,6 +36,7 @@
 
                 $(".fullMenu").click(function() {
                     $('.fullMenu').toggleClass('is-on');
+                    $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
                 });
 
                 /* Loading 
@@ -254,7 +255,11 @@
                     });
                 }
 
-                scroll.scrollTo(0);
+                window.scroll({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
             });
             
         </script>
