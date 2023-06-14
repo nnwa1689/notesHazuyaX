@@ -189,7 +189,7 @@
             <!--Locomotive Scroll -->
             <script>
                 (function () {
-                    var scroll2 = new LocomotiveScroll(
+                    var scroll = new LocomotiveScroll(
                         {
                             el: document.querySelector('#scroll-zone'),
                             smooth: true,
@@ -199,7 +199,7 @@
                     );
                     new ResizeObserver(() => {
                         scroll.update();
-                        
+                        console.log(scroll);
                     }
                     ).observe(document.querySelector('#scroll-zone'));
                 })();
@@ -248,7 +248,7 @@
             barba.hooks.enter(
                 () => {
                     //scroll.scrollTo('top', { 'duration': 1 });
-                    console.log(scroll2);
+                    console.log(scroll);
                 }
             )
 
