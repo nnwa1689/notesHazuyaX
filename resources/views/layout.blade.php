@@ -241,7 +241,8 @@
                 //scroll.update();
 
                 console.log(data);
-                let js = data.next.container.querySelectorAll('#mainScript');
+                window.scrollTo(0, 0);
+                let js = data.next.container.querySelectorAll('main script');
                 if(js != null){
                     js.forEach((item) => {
                         console.log(js)
