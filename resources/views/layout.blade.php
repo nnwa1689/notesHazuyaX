@@ -245,6 +245,12 @@
                 }]
             });
 
+            barba.hooks.enter(
+                () => {
+                    console.log('ENTER');
+                }
+            )
+
             barba.hooks.after((data) => {
                 let js = data.next.container.querySelectorAll('main script');
                 if(js != null){
