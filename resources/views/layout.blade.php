@@ -188,7 +188,7 @@
             </main>
             <!--Locomotive Scroll -->
             <script>
-                (function () {
+
                     var scroll = new LocomotiveScroll(
                         {
                             el: document.querySelector('#scroll-zone'),
@@ -202,7 +202,7 @@
                         console.log(scroll);
                     }
                     ).observe(document.querySelector('#scroll-zone'));
-                })();
+
             </script>
         </div>
         
