@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}codes/styles/prism.css">
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
-        <script src="https://unpkg.com/@barba/core"></script>
-        <script src="/js/locomotive-scroll.min.js"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/barba.umd.js"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/locomotive-scroll.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/lottie-player.js"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
@@ -212,7 +212,6 @@
                 color: "#E86A33"
             });
         </script>
-
         <!--TypedJS-->
         <script>
             var typed_menu = new Typed("#typed", {

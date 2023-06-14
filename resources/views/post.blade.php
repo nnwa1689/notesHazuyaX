@@ -71,11 +71,20 @@
     </div>
 
     @if($postData[0]->Reply=="Yes")
-    <script src="https://utteranc.es/client.js"
+    <script src="{{$webData['webConfig'][13]->tittle}}js/utteranc.es_client.js"
         repo="nnwa1689/NoteshazuyaBlogComment"
         issue-term="pathname"
         theme="github-light"
-        crossorigin="anonymous">
+        crossorigin="anonymous"
+        async
+        >
+    </script>
+    <script>
+        barba.hooks.enter(
+            () => {
+                utteranc();
+            }
+        )
     </script>
     @endif
     <div class="container is-max-desktop" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
