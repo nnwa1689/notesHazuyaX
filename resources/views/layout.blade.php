@@ -188,21 +188,18 @@
             </main>
             <!--Locomotive Scroll -->
             <script>
-
-                    var scroll = new LocomotiveScroll(
-                        {
-                            el: document.querySelector('#scroll-zone'),
-                            smooth: true,
-                            lerp: 0.2,
-                            repeat: true,
-                        }
-                    );
-                    new ResizeObserver(() => {
-                        scroll.update();
-                        console.log(scroll);
+                var scroll = new LocomotiveScroll(
+                    {
+                        el: document.querySelector('#scroll-zone'),
+                        smooth: true,
+                        lerp: 0.2,
+                        repeat: true,
                     }
-                    ).observe(document.querySelector('#scroll-zone'));
-
+                );
+                new ResizeObserver(() => {
+                    scroll.update();
+                }
+                ).observe(document.querySelector('#scroll-zone'));
             </script>
         </div>
         
@@ -247,8 +244,7 @@
 
             barba.hooks.enter(
                 () => {
-                    //scroll.scrollTo('top', { 'duration': 1 });
-                    console.log(scroll);
+                    scroll.scrollTo('top', { 'duration': 1 });
                 }
             )
 
