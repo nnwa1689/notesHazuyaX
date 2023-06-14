@@ -45,7 +45,7 @@
             <div class="columns is-multiline is-mobile is-justify-content-center" style="align-items: end;">
                 @php($i = 1)
                 @foreach($worksData as $item)
-                <div data-scroll data-scroll-speed="2.5" data-scroll-delay="1.5" onclick="barba.Pjax.goTo('works/{{$item -> WorksID}}')" class="is-WorksItem {{ ($i == 2) || $i == 3 ? 'is-works-item-min' : 'is-works-item-large' }}">
+                <div data-scroll data-scroll-speed="2.5" data-scroll-delay="1.5" onclick="barba.go('works/{{$item -> WorksID}}')" class="is-WorksItem {{ ($i == 2) || $i == 3 ? 'is-works-item-min' : 'is-works-item-large' }}">
                     <img class="image" src="{{$item -> CoverImage}}">
                     <a class="button works-image-tag is-primary is-outlined is-rounded is-medium">
                         <span>{{$item -> WorksName}}</span>
@@ -65,7 +65,7 @@
             <p  data-scroll data-scroll-speed="2" class="subtitle is-2">
                 看看不同作品，也可以找我們聊聊！
             </p>
-            <button class="button is-primary mt-6 mr-3" style="min-height: 100px; border-radius: 15px;" onclick="location.href='{{$webData['webConfig'][13]->tittle}}works'" class="button is-white is-fullwidth is-large">
+            <button class="button is-primary mt-6 mr-3" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
                 <div class="columns">
                     <div class="column">
                         <p class="title is-6">
