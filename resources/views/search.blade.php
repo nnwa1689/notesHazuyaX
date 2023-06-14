@@ -45,7 +45,7 @@
     </div>
         <br>
         <div class="block">
-            {{ $data->links('vendor.pagination.pagSearch') }}
+            {{ $data->links('vendor.pagination.pagSearch', ['baseUrl' => $webData['webConfig'][13]->tittle]) }}
         </div>
         <p></p>
     @else
