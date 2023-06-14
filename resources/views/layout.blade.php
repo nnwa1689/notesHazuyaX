@@ -225,8 +225,11 @@
                 scroll.update();
             });
 
-            barba.hooks.beforeEnter(() => {
+            barba.hooks.beforeLeave(() => {
                 typed.destroy();
+            });
+
+            barba.hooks.beforeEnter(() => {
                 window.scrollTo(0, 0);
             });
             
