@@ -154,21 +154,7 @@
         </div>
         <!-- Main -->
         <main class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" data-barba="container" data-barba-namespace="home">
-            <section class="hero is-primary is-align-items-center has-text-centered pageloader loading">
-                <div class="loader-body">
-                    <lottie-player
-                        class="is-align-items-center"
-                        src="{{$webData['webConfig'][13]->tittle}}lf30_zlkyyxof.json"
-                        background="transparent"
-                        speed="1.5"
-                        style="width: 450px; height: 300px;"
-                        loop
-                        autoplay
-                    >
-                    </lottie-player>
-                    <p class="is-size-5">正在前往新旅途⋯</p>
-                </div>
-            </section>
+
             @section('herocontent')
             @show
             <div class="container is-fluid">
