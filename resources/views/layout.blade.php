@@ -220,10 +220,10 @@
         </script>
         <!--TypeJSEND-->
         <script>
-            barba.hooks.after(() => {
+            barba.hooks.after((data) => {
                 //typed.destroy();
                 scroll.update();
-                
+
                 let js = data.next.container.querySelectorAll('main script');
                 if(js != null){
                     js.forEach((item) => {
