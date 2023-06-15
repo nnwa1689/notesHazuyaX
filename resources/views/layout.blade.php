@@ -163,7 +163,7 @@
         </div>
         <!-- Main -->
         <div class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" >
-            <section class="hero is-primary is-align-items-center has-text-centered pageloader loading">
+            <section class="hero is-primary is-align-items-center has-text-centered pageloader">
                 <div class="loader-body">
                     <lottie-player
                         class="is-align-items-center"
