@@ -7587,15 +7587,19 @@ a.list-item {
   transition: top 0.5s ease-in-out;
   position: fixed;
   width: 100%;
-  margin-top: -10rem;
+  margin-top: 0rem;
   margin-left: 0px !important;
-  z-index: 5;
+  z-index: 1000;
   border-radius: 0 !important;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   height: 110vh !important;
+}
+
+.pageloader:hover {
+    cursor: wait;
 }
 
 .loader-body {
@@ -8388,6 +8392,7 @@ body.has-navbar-fixed-bottom {
   line-height: 1.5;
   padding: 0.5rem 1rem;
   position: relative;
+  margin-bottom: 0.5rem;
 }
 
 .navbar-item .icon:only-child,

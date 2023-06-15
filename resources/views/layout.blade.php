@@ -40,6 +40,13 @@
                     $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
                 });
 
+                setTimeout(() => {
+                    gsap.to(".pageloader", {
+                        duration: 0.6,
+                        y: '-110vh',
+                        ease: "power1.out"
+                    });
+                }, 1000);
                 /* Loading
                 setTimeout(() => {
                     $(".pageloader").toggleClass("loading");
@@ -161,23 +168,23 @@
                 </div>
             </div>
         </div>
+        <section class="hero is-primary is-align-items-center has-text-centered pageloader">
+            <div class="loader-body">
+                <lottie-player
+                    class="is-align-items-center"
+                    src="{{$webData['webConfig'][13]->tittle}}lf30_zlkyyxof.json"
+                    background="transparent"
+                    speed="1.5"
+                    style="width: 450px; height: 300px;"
+                    loop
+                    autoplay
+                >
+                </lottie-player>
+                <p id="nextPageName" class="is-size-4">正在前往新旅途⋯</p>
+            </div>
+        </section>
         <!-- Main -->
         <div class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" >
-            <section class="hero is-primary is-align-items-center has-text-centered pageloader">
-                <div class="loader-body">
-                    <lottie-player
-                        class="is-align-items-center"
-                        src="{{$webData['webConfig'][13]->tittle}}lf30_zlkyyxof.json"
-                        background="transparent"
-                        speed="1.5"
-                        style="width: 450px; height: 300px;"
-                        loop
-                        autoplay
-                    >
-                    </lottie-player>
-                    <p class="is-size-5">正在前往新旅途⋯</p>
-                </div>
-            </section>
             <main data-barba="container" data-barba-namespace="home">
                 @section('herocontent')
                 @show
@@ -242,31 +249,31 @@
 
         <script>
             barba.init({
+                sync: true,
                 transitions: [{
                     leave(data) {
                         return gsap.to(".pageloader", {
                             duration: 1,
-                            y: 0
+                            y: 0,
+                            ease: "bounce.out",
                         });
                     },
-                    enter(data) {
+                    after(data) {
                         return gsap.to(".pageloader", {
-                            duration: 1,
-                            y: -1000
+                            duration: 0.6,
+                            y: '-110vh',
+                            ease: "power1.out",
+                            delay: 1
                         });
                     },
-                    beforeOnce() {
-                        return gsap.to(".pageloader", {
-                            duration: 1,
-                            y: -1000
-                        });
+                    beforeEnter() {
+                        scroll.scrollTo('top', { 'duration':0 });
                     }
                 }]
             });
 
             barba.hooks.enter(
                 () => {
-                    scroll.scrollTo('top', { 'duration':0 });
                     Prism.highlightAll();
                 }
             )
@@ -280,7 +287,6 @@
                     });
                 }
             });
-
         </script>
         <script>
             function submit() {
