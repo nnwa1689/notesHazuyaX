@@ -7591,7 +7591,7 @@ a.list-item {
   margin-left: 0px !important;
   z-index: -3;
   border-radius: 0 !important;
-  top: -99999;
+  top: 0;
   left: 0;
   bottom: 0;
   right: 0;

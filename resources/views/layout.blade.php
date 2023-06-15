@@ -245,13 +245,13 @@
                 sync: true,
                 transitions: [{
                     leave(data) {
-                        return gsap.to($(".pageloader"), {
+                        return gsap.to(".pageloader", {
                             y: 0
                         });
                     },
                     enter(data) {
-                        return gsap.to($(".pageloader"), {
-                            y: -99999
+                        return gsap.to(".pageloader", {
+                            y: -500
                         });
                     }
                 }]
