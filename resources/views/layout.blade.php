@@ -254,6 +254,12 @@
                             duration: 1,
                             y: -1000
                         });
+                    },
+                    beforeOnce() {
+                        return gsap.to(".pageloader", {
+                            duration: 1,
+                            y: -1000
+                        });
                     }
                 }]
             });
