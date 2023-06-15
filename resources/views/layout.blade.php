@@ -246,11 +246,13 @@
                 transitions: [{
                     leave(data) {
                         return gsap.to(".pageloader", {
+                            duration: 2,
                             y: 0
                         });
                     },
                     enter(data) {
                         return gsap.to(".pageloader", {
+                            duration: 2,
                             y: -1000
                         });
                     }
