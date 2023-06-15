@@ -1,4 +1,4 @@
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" onclick="window.location.href='{{ $url }}'" class="is-post-item mb-3">
+<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" onclick="barba.go('{{ $url }}')" class="is-post-item mb-3">
     @if(isset($CoverImage) && !empty($CoverImage))
     <img alt="{{$PostTittle}}" class="image" src="{{$CoverImage}}">
     @else
