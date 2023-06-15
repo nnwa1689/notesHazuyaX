@@ -247,16 +247,11 @@
                     leave(data) {
                         $(".pageloader").toggleClass("loading");
                         player.play();
-                        return gsap.to(data.current.container, {
-                            opacity: 0
-                        });
+
                     },
                     enter(data) {
                         $(".pageloader").toggleClass("loading");
                         player.stop();
-                        return gsap.from(data.next.container, {
-                            opacity: 0
-                        });
                     }
                 }]
             });
