@@ -242,16 +242,16 @@
 
         <script>
             barba.init({
+                sync: true,
                 transitions: [{
-                    name: 'opacity-transition',
                     leave(data) {
-                        return gsap.to(data.current.container, {
-                            opacity: 0
+                        return gsap.to($(".pageloader"), {
+                            y: 0
                         });
                     },
                     enter(data) {
-                        return gsap.to(data.next.container, {
-                            opacity: 1
+                        return gsap.to($(".pageloader"), {
+                            y: -99999
                         });
                     }
                 }]
