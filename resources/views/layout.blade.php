@@ -242,17 +242,16 @@
 
         <script>
             barba.init({
-                sync: true,
                 transitions: [{
                     leave(data) {
                         return gsap.to(".pageloader", {
-                            duration: 2,
+                            duration: 1,
                             y: 0
                         });
                     },
                     enter(data) {
                         return gsap.to(".pageloader", {
-                            duration: 2,
+                            duration: 1,
                             y: -1000
                         });
                     }
@@ -261,7 +260,7 @@
 
             barba.hooks.enter(
                 () => {
-                    scroll.scrollTo('top', { 'duration': 1 });
+                    scroll.scrollTo('top', { 'duration':0 });
                     Prism.highlightAll();
                 }
             )
