@@ -193,7 +193,7 @@
                     {
                         el: document.querySelector('#scroll-zone'),
                         smooth: true,
-                        lerp: 0.05,
+                        lerp: 0.1,
                         repeat: true,
                     }
                 );
