@@ -245,13 +245,14 @@
                 transitions: [{
                     name: 'opacity-transition',
                     leave(data) {
-                        $(".pageloader").toggleClass("loading");
-                        player.play();
-
+                        return gsap.to(data.current.container, {
+                            opacity: 0
+                        });
                     },
                     enter(data) {
-                        $(".pageloader").toggleClass("loading");
-                        player.stop();
+                        return gsap.to(data.next.container, {
+                            opacity: 1
+                        });
                     }
                 }]
             });
