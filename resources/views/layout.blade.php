@@ -251,7 +251,7 @@
                     },
                     enter(data) {
                         return gsap.to(".pageloader", {
-                            y: -500
+                            y: -1000
                         });
                     }
                 }]
