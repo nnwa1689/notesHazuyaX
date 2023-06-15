@@ -63,7 +63,7 @@
                     <div class="navbar-item navbar-toggle is-mobile" style="margin-left: auto; margin-right: -0.75rem">
                         <a class="navbar-link is-arrowless"><i class="fas fa-stream"></i></a>
                     </div>
-                    <!-----END ----->
+                    <!--END -->
                 </div>
                 <div id="MainNavbar" class="navbar-menu">
                     <div class="navbar-start">
@@ -163,6 +163,21 @@
         </div>
         <!-- Main -->
         <div class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" >
+            <section class="hero is-primary is-align-items-center has-text-centered pageloader loading">
+                <div class="loader-body">
+                    <lottie-player
+                        class="is-align-items-center"
+                        src="{{$webData['webConfig'][13]->tittle}}lf30_zlkyyxof.json"
+                        background="transparent"
+                        speed="1.5"
+                        style="width: 450px; height: 300px;"
+                        loop
+                        autoplay
+                    >
+                    </lottie-player>
+                    <p class="is-size-5">正在前往新旅途⋯</p>
+                </div>
+            </section>
             <main data-barba="container" data-barba-namespace="home">
                 @section('herocontent')
                 @show
@@ -230,11 +245,15 @@
                 transitions: [{
                     name: 'opacity-transition',
                     leave(data) {
+                        $(".pageloader").toggleClass("loading");
+                        player.play();
                         return gsap.to(data.current.container, {
                             opacity: 0
                         });
                     },
                     enter(data) {
+                        $(".pageloader").toggleClass("loading");
+                        player.stop();
                         return gsap.from(data.next.container, {
                             opacity: 0
                         });
