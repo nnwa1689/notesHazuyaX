@@ -7599,7 +7599,7 @@ a.list-item {
 }
 
 .pageloader:hover {
-    cursor: wait;
+    cursor: progress;
 }
 
 .loader-body {

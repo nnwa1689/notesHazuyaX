@@ -180,7 +180,7 @@
                                 </div>
                             </div>
                         </button>
-                        <button class="button is-primary mt-6" style="min-height: 100px; border-radius: 15px;" onclick="location.href='https\://dev.n-d.tw/'" class="button is-white is-fullwidth is-large">
+                        <button class="button is-primary mt-6" style="min-height: 100px; border-radius: 15px;" onclick="location.href='https\://dev.studio-44s.tw/'" class="button is-white is-fullwidth is-large">
                             <div class="columns">
                                 <div class="column">
                                     <p class="title is-6">
