@@ -8,25 +8,6 @@
         </p>
         <p class="is-size-5">{{$allPosts[0]->Category->Short_Intro}}</p>
     </div>
-
-    <div class="tabs is-centered is-medium is-fullwidth">
-        <!--
-        <ul>
-            <li class="is-active">
-            <a>
-                <span class="icon is-small"><i class="fas fa-list-alt"></i></span>
-                <span>文章列表</span>
-            </a>
-            </li>
-            <li>
-            <a href="/category/{{ $allPosts[0]->ClassId }}/intro">
-                <span class="icon is-small"><i class="fas fa-info"></i></span>
-                <span>系列介紹</span>
-            </a>
-            </li>
-        </ul>
-        -->
-    </div>
     <div class="columns is-multiline is-mobile is-gapless is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
     @foreach($allPosts as $post)
         @component('compoments.postitem',

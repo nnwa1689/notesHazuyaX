@@ -22,25 +22,16 @@ Route::get('/post/{postID}', 'PostController@getOnePost')->where('postID', '[0-9
 
 //category
 Route::get('/category/{classID}/', 'PostController@getallCategorypost')->where('classID', '[0-9]+')->name('{classID}');
-Route::get('/category/{classID}/intro', 'PostController@getCategoryDetailPage')->where('classID', '[0-9]+');
+// 移除文章介紹Route::get('/category/{classID}/intro', 'PostController@getCategoryDetailPage')->where('classID', '[0-9]+');
 
 //page
 Route::get('/page/{pageID}','PageController@getPage')->where('pageID', '[0-9A-Za-z]+')->name('page/'.'{pageID}');
 
-/*AllAuthorPage
-Route::get('/authors','UserController@getAllAuthorPage')->name('authors');
-*/
+/*AllAuthorPage 關於作者頁面移入關於*/
 
-//whatnews
-/*
-Route::get('/whatsnews/{postID}','WhatNewsController@getOnePost')->where('pageID', '[0-9]+');
-Route::get('/whatsnews','WhatNewsController@getHomePost');*/
+/*whatnews 模組移除/*
 
-/*Person
-Route::get('person/{userID}', 'UserController@getUserPage')->where('userID', '[0-9A-Za-z]+');
-Route::get('person/{userID}/post', 'UserController@getUserPage')->where('userID', '[0-9A-Za-z]+');
-Route::get('person/{userID}/post/p/{pageNumber}', 'UserController@getUserPagePost')->where('userID', '[0-9A-Za-z]+')->where('pageNumber', '[0-9]+');
-*/
+/*Person頁面模組移除*/
 
 //Search
 Route::get('search', 'SearchController@searchPage');
@@ -93,13 +84,7 @@ Route::post('admin/updateCategory', 'AdminController@updateCategory')->middlewar
 Route::get('admin/editCategoryDetail/{classId}', 'AdminController@CategoryDetailEdit')->middleware('userAuth:category');
 Route::post('admin/updateCategoryDetail/{classId}', 'AdminController@UpdateCategoryDetail')->middleware('userAuth:category');
 
-/*公告相關
-Route::post('admin/updateNews/{postID}', 'AdminController@updateNews')->where('postID', '[0-9]+')->middleware('userAuth:news');
-Route::post('admin/delNews', 'AdminController@deleteNews')->middleware('userAuth:news');
-Route::post('admin/newNews', 'AdminController@newNews')->middleware('userAuth:news');
-Route::get('admin/editNews/{postID?}', 'AdminController@showEditNews')->where('postID', '[0-9A-Za-z]+')->middleware('userAuth:news');
-Route::get('admin/editNews/p/{pageNumber}', 'AdminController@showEditNewsList')->where('pageNumber', '[0-9]+')->middleware('userAuth:news');
-*/
+/*公告相關模組移除*/
 
 /*使用者*/
 Route::get('admin/editAccount/{username?}', 'AdminController@showEditAccount')->where('username', '[0-9A-Za-z]+')->middleware('userAuth:account');
