@@ -2,10 +2,7 @@
 
 namespace App\Services;
 
-use Illuminate\Http\Request;
-use DB;
 use App\Models\Navigate;
-
 
 class NavbarService
 {
@@ -13,14 +10,12 @@ class NavbarService
     public function GetTopNavBar()
     {
         $data = Navigate::where('type', '0') -> where('Competence', 'public') -> orderBy('NavigateId', 'asc') -> get();
-        //$data = DB::select("SELECT * FROM Navigate WHERE type=? AND Competence=? ORDER BY Navigate.NavigateId",['0', 'public']);
         return $data;
     }
 
     public function GetButtonNav()
     {
         $data = Navigate::where('type', '1') -> where('Competence', 'public') -> orderBy('NavigateId', 'asc') -> get();
-        //$data = DB::select("SELECT * FROM Navigate WHERE type=? AND Competence=? ORDER BY Navigate.NavigateId",['1', 'public']);
         return $data;
     }
 
@@ -39,7 +34,6 @@ class NavbarService
     */
     public function UpdateNavbars($req, $typeId)
     {
-        DB::connection('mysql');
         if($req -> action=='new')
         {
             $this -> InsertNavbar($req, $typeId);
@@ -70,9 +64,7 @@ class NavbarService
                             'type' => $typeId
                         ]
                     );
-                    //DB::update("UPDATE Navigate SET NavigateId = ?, NavigateName = ?, URL = ?, Competence = ?, type = ? WHERE IndexId = ?", [$checkedOrder[$value], $checkedNavName[$value], $checkedURL[$value], $checkedCompetence[$value], $typeId, $value]);
                 }
-
             }
             else if($req -> action=='delete')
             {
@@ -104,9 +96,7 @@ class NavbarService
             ];
 
             Navigate::create($NewNavItem);
-            //DB::insert("INSERT INTO Navigate (NavigateId,NavigateName,URL,Competence,type) VALUES ( ?, ?, ?, ?, ? )",[$req -> newOrder, $req -> newName, $req -> newURL, $req -> newCompetence, $typeId]);
         }
         return 1;
     }
-
 }

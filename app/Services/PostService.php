@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use Illuminate\Http\Request;
 use DB;
 use App\Models\Blog;
 use App\Models\Category;
@@ -36,7 +35,6 @@ class PostService
     public function GetTopPublicPosts($limit = 5)
     {
         $data = Blog::where('Competence', 'public') -> offset(0) -> limit($limit) -> orderBy('PostDate', 'desc') -> get();
-        //$data = DB::select("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' ORDER BY Blog.PostDate DESC limit ?)", [$limit]);
         return $data;
     }
 
@@ -47,10 +45,7 @@ class PostService
      */
     public function GetAllPost()
     {
-        DB::connection('mysql');
-        //$start = ($pageNumber - 1) * 10;
         $data = Blog::orderBy('PostDate', 'desc') -> paginate(10);
-        //$data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId)) as Post ORDER BY Post.PostDate DESC"))->paginate(10);
         return $data;
     }
 
@@ -62,7 +57,6 @@ class PostService
     public function GetAllPublicCategory()
     {
         $data = Category::where('SorH', 'show') -> orderBy('OrderID', 'asc') -> get();
-        //$data = DB::select("SELECT * FROM BClasses WHERE SorH=? ORDER BY OrderID ASC", ['show']);
         return $data;
     }
 
@@ -74,7 +68,6 @@ class PostService
     public function GetAllCategory()
     {
         $data = Category::orderBy('OrderID', 'asc') -> get();
-        $data = DB::select("SELECT * FROM BClasses ORDER BY OrderID ASC");
         return $data;
     }
 
@@ -86,32 +79,24 @@ class PostService
     public function GetCategoryDetail($classID)
     {
         $data = Category::where('ClassId', $classID) -> get();
-        //$data = DB::select("SELECT * FROM BClasses WHERE ClassId = ? ORDER BY OrderID ASC", [$classID]);
         return $data;
     }
 
     /**
      *更新分類內容
      *
-     * @return List
+     * @return int
      */
     public function UpdateCategoryDetail($req, $classId)
     {
-        $result = Category::where('ClassId', $classId) -> update(
+        Category::where('ClassId', $classId) -> update(
             [
                 'ClassName' => $req->ClassName, 
                 'Short_Intro' => $req->shortIntro, 
                 'Long_Intro' => $req->longIntro 
             ]
         );
-        
-        /*
-        DB::update
-        (
-            "UPDATE BClasses SET ClassName = ?, Short_Intro = ?, Long_Intro = ?  WHERE ClassId = ?",
-            [$req->ClassName, $req->shortIntro, $req->longIntro, $classId]
-        );
-        */
+        return 1;
     }
 
     /**
@@ -135,7 +120,6 @@ class PostService
                     'Long_Intro' => ''
                 ];
                 Category::create($NewCategory);
-                //DB::insert("INSERT INTO BClasses (ClassName, SorH, OrderID, Short_Intro, Long_Intro) VALUES ( ?, 'show', ?, '', '' )",[$req->newName, $req->newOrder]);
             }
         }
         else if($req->action=='update' || $req->action=='setShow' || $req->action=='setHide' || $req->action=='delete')
@@ -160,9 +144,7 @@ class PostService
                             'OrderID' => $checkedOrder[$value]
                         ]
                     );
-                    //DB::update("UPDATE BClasses SET ClassName = ?, OrderID = ? WHERE `BClasses`.`ClassId` = ?", [$checkedClassName[$value], $checkedOrder[$value], $value]);
                 }
-
             }
             else if($req->action=='setShow')
             {
@@ -171,7 +153,6 @@ class PostService
                     Category::where('ClassId', $value) -> update(
                         ['SorH' => 'show']
                     );
-                    //DB::update("UPDATE BClasses SET SorH = 'show' WHERE `BClasses`.`ClassId` = ?", [$value]);
                 }
             }
             else if($req->action=='setHide')
@@ -181,7 +162,6 @@ class PostService
                     Category::where('ClassId', $value) -> update(
                         ['SorH' => 'hide']
                     );
-                    //DB::update("UPDATE BClasses SET SorH = 'hide' WHERE `BClasses`.`ClassId` = ?", [$value]);
                 }
             }
             else if($req->action=='delete')
@@ -191,8 +171,6 @@ class PostService
                     //刪除該分類下的文章
                     Blog::where('ClassId', $value) -> delete();
                     Category::where('ClassId', $value) -> delete();
-                    //DB::delete("DELETE FROM Blog WHERE ClassId = ?", [$value]);
-                    //DB::delete("DELETE FROM BClasses WHERE ClassId = ?", [$value]);
                 }
             }
         }
@@ -206,7 +184,6 @@ class PostService
     public function GetCategoryPublicPosts($classID, $pageNumber = null)
     {
         $data = Blog::where('ClassId', $classID) -> where('Competence', 'public') -> orderBy('PostDate', 'desc') -> paginate(10);
-        //$data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, BClasses.Short_Intro, admin.Yourname, admin.Avatar FROM Blog LEFT JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE Blog.Competence='public' AND Blog.ClassId=".$classID.") as Categorypost ORDER BY Categorypost.PostDate DESC"))->paginate(10);
         return $data;
     }
 
@@ -218,7 +195,6 @@ class PostService
     public function GetOnePost($postID)
     {
         $data = Blog::where('PostId', $postID) -> where('Competence', 'public') -> get();
-        //$data = DB::select("SELECT * FROM Blog join admin on Blog.UserID = admin.username join BClasses on Blog.ClassId = BClasses.ClassId WHERE (Blog.Competence=? OR Blog.Competence=?) AND PostId=? ", ['public', 'protect', $postID]);
         return $data;
     }
 
@@ -230,7 +206,6 @@ class PostService
     public function GetOnePostEdit($postID)
     {
         $data = Blog::where('PostId', $postID) -> get();
-        //$data = DB::select("SELECT * FROM Blog join admin on Blog.UserID = admin.username join BClasses on Blog.ClassId = BClasses.ClassId WHERE PostId=? ", [$postID]);
         return $data;
     }
 
@@ -242,7 +217,6 @@ class PostService
     public function GetNextPost($postID)
     {
         $data = Blog::where('PostId', '>', intval($postID)) -> where('Competence', 'public') -> offset(0) -> limit(1) -> orderBy('PostId', 'asc') -> get();
-        //$data = DB::select("SELECT * FROM Blog WHERE PostId>? AND (Competence=? OR Competence=?) ORDER BY PostId ASC LIMIT 0,1", [$postID, 'public', 'protect']);
         return $data;
     }
 
@@ -254,7 +228,6 @@ class PostService
     public function SearchPost($q)
     {
         $data = Blog::where('PostTittle', 'like', '%'.$q.'%') -> where('Competence', 'public') -> orderBy('PostId', 'desc') -> paginate(10);
-        //$data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName, admin.Yourname, admin.Avatar FROM Blog LEFT JOIN admin ON (Blog.UserID = admin.username) JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE (Blog.PostTittle LIKE ".$q." OR Blog.PostContant LIKE ".$q.") AND (Blog.Competence='public')) as search ORDER BY search.PostId DESC"))->paginate(10);
         return $data;
     }
 
@@ -278,7 +251,6 @@ class PostService
     public function GetUserPostsEdit($userID)
     {
         $data = Blog::where('UserID', $userID) -> orderBy('PostDate', 'desc') ->paginate(10);
-        //$data = DB::table(DB::raw("(SELECT Blog.*, BClasses.ClassName FROM Blog JOIN BClasses ON (Blog.ClassId = BClasses.ClassId) WHERE UserID='".$userID."') as Post ORDER BY Post.PostDate DESC"))->paginate(10);
         return $data;
     }
 
@@ -288,9 +260,7 @@ class PostService
      * @return List
      */
     public function UpdatePosts($req, $postID)
-    {
-        //DB::connection('mysql');
-        
+    {        
         Blog::where('PostId', $postID) -> update(
             [
                 'Competence' => $req->competance,
@@ -304,23 +274,6 @@ class PostService
                 'CoverImage' => $req->CoverImage
             ]
         );
-        
-        /*
-        DB::update
-        (
-            'UPDATE Blog SET Competence = ?,PostTittle = ?, PostDate = ?, PostContant = ?, Classes = ?, Reply = ?, ClassId = ?, ReadTime = ?, CoverImage = ? WHERE `Blog`.`PostId` = ?',
-            [
-                $req->competance,
-                $req->postTitle,
-                $req->date,
-                $req->cont,
-                "",
-                $req->reply,
-                $req->Classes,
-                $req->ReadTime,
-                $req->CoverImage,
-                $postID
-            ]);*/
     }
 
     /**
@@ -344,25 +297,6 @@ class PostService
             'CoverImage' => $req->CoverImage
         ];
         Blog::create($NewBlogData);
-
-        /*
-        DB::insert
-        (
-            "INSERT INTO Blog (Competence, PostTittle, PostDate, PostContant, Classes, User, Reply, UserID, ClassId, ReadTime, CoverImage) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )",
-            [
-                $req->competance,
-                $req->postTitle,
-                $req->date,
-                $req->cont,
-                "",
-                $this -> userService -> GetUserData(session('username'))[0]->Yourname,
-                $req->reply,
-                session('username'),
-                $req->Classes,
-                $req->ReadTime,
-                $req->CoverImage
-            ]
-        );*/
     }
 
     /**
@@ -378,7 +312,6 @@ class PostService
             foreach($delPostId as $value)
             {
                 Blog::where('PostId', $value) -> delete();
-                //DB::delete("DELETE FROM Blog WHERE PostId = ?", [$value]);
             }
 
         }
@@ -400,15 +333,6 @@ class PostService
                 Blog::where('PostId', $value) -> update(
                     ['Competence' => 'private']
                 );
-
-                /*
-                DB::update
-                (
-                    'UPDATE Blog SET Competence = ? WHERE `Blog`.`PostId` = ?',
-                    [
-                        "private",
-                        $value
-                    ]);*/
             }
 
         }
@@ -422,7 +346,6 @@ class PostService
     public function SetPostsPublic($req)
     {
         $PostId = (isset($req->postid) ? $req->postid : '');
-
         if($PostId !== '')
         {
             foreach($PostId as $value)
@@ -431,8 +354,6 @@ class PostService
                     ['Competence' => 'public']
                 );
             }
-
         }
     }
-
 }

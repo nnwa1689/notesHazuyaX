@@ -127,7 +127,6 @@ class UserService
             foreach($delAccount as $v)
             {
                 //刪除使用者文章
-                //DB::delete("delete from Blog where UserID=?", [$v]);
                 Blog::where('UserID', strval($v)) -> delete();
                 User::where('username', strval($v)) -> delete();
             }
@@ -185,5 +184,4 @@ class UserService
         }
         return 1;
     }
-
 }
