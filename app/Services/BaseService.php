@@ -30,9 +30,12 @@ class BaseService
 
     public function WebInit(){
 
-        if($this -> userService -> CheckLoginStatus()){
+        if($this -> userService -> CheckLoginStatus())
+        {
             $userData = $this -> userService -> GetUserData(session('username'));
-        }else{
+        }
+        else
+        {
             $userData = 0;
         }
 
@@ -40,7 +43,7 @@ class BaseService
         $NavData = $this -> navbarService -> GetTopNavBar();
         $WebData = $this -> GetWebConfig();
         $buttonNavData = $this -> navbarService -> GetButtonNav();
-        //$homePostdata = WhatNewsController::getFiveHomePost();
+
         return ['allCategory'=> $categoryData, 'allNav'=> $NavData, 'webConfig' => $WebData, 'allButtonNav' => $buttonNavData, 'userData'=>$userData];
     }
 
@@ -62,11 +65,6 @@ class BaseService
             Web::where('ID', 23) -> update(['tittle' => $req->APPLEPODCAST]);
             Web::where('ID', 24) -> update(['tittle' => $req->GOOGLEPODCAST]);
             Web::where('ID', 29) -> update(['tittle' => $req->quote]);
-
-            //DB::update('update web set tittle = ? where ID = 25', [$req->HomeAds1Url]);
-            //DB::update('update web set tittle = ? where ID = 26', [$req->Home1AdsImg]);
-            //DB::update('update web set tittle = ? where ID = 27', [$req->Home2AdsUrl]);
-            //DB::update('update web set tittle = ? where ID = 28', [$req->Home2AdsImg]);
         }
         catch(Exception $e)
         {
@@ -74,5 +72,4 @@ class BaseService
         }
         return 1;
     }
-
 }

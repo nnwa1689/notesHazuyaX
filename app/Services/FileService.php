@@ -2,13 +2,10 @@
 
 namespace App\Services;
 
-use Illuminate\Http\Request;
-use DB;
 use App\Models\Media;
-use App\Services\UserService;
-use App\Services\PostService;
 use App\Services\NavbarService;
-
+use App\Services\PostService;
+use App\Services\UserService;
 
 class FileService
 {
@@ -27,7 +24,6 @@ class FileService
     public function GetFiles()
     {
         $data = Media::orderBy('UploadDate', 'desc') -> paginate(12);
-        //$data = DB::table(DB::raw("(SELECT * FROM media) as files ORDER BY files.UploadDate DESC")) -> paginate(12);;
         return $data;
     }
 
@@ -41,7 +37,8 @@ class FileService
                     //$fileinfo = DB::select("SELECT * FROM media WHERE ID=? ORDER BY media.UploadDate DESC", [$value]);
                     $delfile = $fileinfo[0]->URL;
                     if (is_file("/".$delfile))
-                    {//判斷檔案是否存在
+                    {
+                        //判斷檔案是否存在
                         //如果存在進行檔案刪除，否則直接刪除資料庫
                         $delfilenum = unlink("/" . $delfile);
                     }
@@ -64,24 +61,23 @@ class FileService
     public function UploadFile($fileinfo)
     {
         /* 暫時用 PHP 原生，之後再改 laravel */
-        //DB::connection('mysql');
         $filetype = array('jpeg', 'jpg', 'gif', 'png', 'PNG');
         $maxsize = 5097152;
         $ext = pathinfo($fileinfo['name'], PATHINFO_EXTENSION);
         $uniName = md5(uniqid(microtime(true), true)) . "." . $ext;
         $des = "uploadfile/".$uniName;
 
-        if (!in_array($ext, $filetype)) {
-            //print("非法副檔名");
+        if (!in_array($ext, $filetype)) 
+        {
             return 0;
         }
 
-        if ($fileinfo['size'] > $maxsize) {
-            //print("檔案超過大小限制!");
+        if ($fileinfo['size'] > $maxsize) 
+        {
             return 0;
         }
-        if (!move_uploaded_file($fileinfo['tmp_name'], $des)) {
-            //print("檔案從暫存區移動至資料夾失敗");
+        if (!move_uploaded_file($fileinfo['tmp_name'], $des)) 
+        {
             return 0;
         }
 
@@ -100,7 +96,6 @@ class FileService
                 'Cap' =>$filecap
             ];
             Media::Create($NewFiles);
-            //DB::insert("INSERT INTO media (Name,URL,UploadDate,Type,Cap) VALUES (?, ?, ?, ?, ?)",  [$filename,$fileURL,$fileUploadDate,$ext,$filecap]);
         }
         catch(Exception $e)
         {
