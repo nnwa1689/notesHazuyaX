@@ -22,9 +22,9 @@
                 </p>
                 <p class="title is-1">
                     <span class="has-text-success has-text-shadow">技術</span><span class="has-text-primary has-text-shadow">＆雜談</span>
-                </p>
+                </p>logo_rotatelogo_rotatelogo_rotatelogo_rotatelogo_rotate
                 <p class="title is-1">
-                    <img class="logo_rotat" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
+                    <img class="logo_rotate" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
                 </p>
                 <p class="is-size-5">
                     <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
