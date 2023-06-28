@@ -1,6 +1,18 @@
 @extends('layout')
 @section('title', $title)
 @section('herocontent')
+<style>
+    @keyframes rotation {
+        0%{transform:rotate(0deg);}
+        100%{transform:rotate(359deg);}
+    }
+    .logo_rotate {
+        animation: rotation 2s infinite linear;
+        height: 256px; 
+        width: 256px; 
+        border-radius: 35565px;
+    }
+</style>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="container is-fluid mb-6">
     <section class="hero is-large">
         <div class="hero-body">
@@ -11,14 +23,14 @@
                 <p class="title is-1">
                     <span class="has-text-success has-text-shadow">技術</span><span class="has-text-primary has-text-shadow">＆雜談</span>
                 </p>
-                <p class="is-size-4">
+                <p class="title is-1">
+                    <img class="logo_rotat" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
+                </p>
+                <p class="is-size-5">
                     <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                    「44」樂於探索資訊不同的呈現方式，呈現不同的故事內容。目前還在努力長出需求、設計乃至開發的技能當中。
+                    「44」樂於探索資訊不同的呈現方式，呈現不同的故事內容。技能樹成長中:）。
                     <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
-                </p>
-                <p>
-                    <img style="height: 256px; width: 256; border-radius: 35565px;" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
-                </p>
+                </p> 
             </div>
         </div>
     </section>
