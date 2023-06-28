@@ -1995,7 +1995,7 @@ a.has-text-dark:hover, a.has-text-dark:focus {
   color: #263A29 !important;
 }
 
-.has-text-primary .has-text-shadow {
+.has-text-primary.has-text-shadow {
   text-shadow: 0.5rem 0.5rem #E86A33;
 }
 
@@ -2011,7 +2011,7 @@ a.has-text-primary:hover, a.has-text-primary:focus {
   color: #E86A33 !important;
 }
 
-.has-text-link .has-text-shadow {
+.has-text-link.has-text-shadow {
   text-shadow: 0.5rem 0.5rem #263A29;
 }
 
@@ -2039,7 +2039,7 @@ a.has-text-info:hover, a.has-text-info:focus {
   color: #41644A !important;
 }
 
-.has-text-success .has-text-shadow {
+.has-text-success.has-text-shadow {
   text-shadow: 0.5rem 0.5rem #E86A33;
 }
 
