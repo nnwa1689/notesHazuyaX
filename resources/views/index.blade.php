@@ -8,8 +8,8 @@
     }
     .logo_rotate {
         animation: rotation 2s infinite linear;
-        height: 300px; 
-        width: 300px; 
+        height: 256px; 
+        width: 256px; 
         border-radius: 35565px;
     }
 </style>
@@ -17,7 +17,7 @@
     <section class="hero is-large">
         <div class="hero-body has-text-centered">
             <div class="columns">
-                <div class="column is-7 hax-text-right has-text-centered-mobile">
+                <div class="column is-7 has-text-right has-text-centered-mobile">
                     <p class="title is-1">
                         <span class="has-text-primary has-text-shadow">網頁・</span><span class="has-text-link has-text-shadow">設計</span>
                     </p>
