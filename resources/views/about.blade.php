@@ -7,15 +7,13 @@
             <span id="titleText"></span>
         </p>
     </div>
-    <p class="title is-5 mt-6" data-scroll data-scroll-speed="-1" data-scroll-delay="0">
-        <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-        如果只有 44 秒鐘，你會記下什麼片段呢？
-        <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
-    </p>
     <br/>
-    <p class="is-size-5" data-scroll>
-        44 秒，來自我最愛的一首歌「44 Seconds Road Movie」，人生回頭望去就如同好多段 44 秒鐘的片段，每一個片段都十分獨特。
-        所以，讓我們與您一同創造下一個只屬於您的獨特的 44 秒，告別千篇一律的網頁設計。
+    <p class="is-size-5 mt-6" data-scroll>
+        <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
+        「44 秒工作室」取名靈感來自靈魂沙發的一首歌：44 seconds road movie，
+        而這首歌的 MV 使用「公路電影」的手法拍攝，於是我恰好覺得「逛網頁」跟在公路上行駛有那麼一點點相似，
+        於是就這樣命名了:DD。
+        <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
     </p>
 
     <section class="hero is-link is-halfheight mt-6" data-scroll data-scroll-speed="2">
@@ -44,23 +42,23 @@
             <div class="container is-fluid has-text-left">
                 <div class="columns">
                     <div class="column is-3">
-                        <p class="title is-1" data-scroll data-scroll-speed="2"><i class="fas fa-hands"></i></p>
+                        <p class="title is-1"><i class="fas fa-hands"></i></p>
                     </div>
                     <div class="column is-9">
-                        <p class="subtitle is-1">服務精神</p>
-                        <p class="subtitle is-4"># 樣式可客製化設計，不會每個都千篇一律</p>
-                        <p class="subtitle is-4"># 但也提供套版方式開發，比較快速</p>
-                        <p class="subtitle is-4"># 依照規模，提供合適的技術、託管平台</p>
-                        <p class="subtitle is-4"># 除了原有開發過的功能，也可以和您一起討論出新的模組</p>
-                        <p class="subtitle is-4"># 不要互相勉強，討論過後如果設計跟技術沒有適合的共同想法，就不會勉強接下您的需求</p>
+                        <p class="subtitle is-1">但，可能有些要注意的地方</p>
+                        <p class="subtitle is-4"># 樣式可客製化設計，不會大家都長得一樣</p>
+                        <p class="subtitle is-4"># 但也可以提供套版方式開發，如果專案很趕的話</p>
+                        <p class="subtitle is-4"># 我會依照規模需求，提供合適的技術、託管平台</p>
+                        <p class="subtitle is-4"># 對於過往我沒設計過的功能，可能需要再多討論</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <p><img style="display: block; margin-left: auto; margin-right: auto;" src="/uploadfile/7e9c1f909b7113d5f56a4b3191a5d520.png" alt="" width="256" height="257"></p>
+    <p>
+        <img style="display: block; margin-left: auto; margin-right: auto;" src="/uploadfile/7e9c1f909b7113d5f56a4b3191a5d520.png" alt="" width="256" height="257">
+    </p>
 
     <section class="hero is-success is-halfheight mt-6" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
         <div class="hero-body">

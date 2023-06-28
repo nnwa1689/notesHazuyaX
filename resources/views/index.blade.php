@@ -1,32 +1,28 @@
 @extends('layout')
 @section('title', $title)
-@section('breadcrumb')
-    @parent
-    <li class="is-active"><a href="#"><i class="fas fa-home"></i>首頁</a></li>
-@endsection
 @section('herocontent')
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="container is-fluid mb-6">
     <section class="hero is-large">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <p class="title is-1" id="Home">
-                網頁・<span class="has-text-link">設計</span>
-            </p>
-            <p class="title is-1">
-                <span class="has-text-success">技術</span>＆雜談
-            </p>
-            <p class="title is-1">
-                <lottie-player
-                    src="{{$webData['webConfig'][13]->tittle}}/lf20_wdcziokb.json"
-                    background="transparent"
-                    speed="1"
-                    style="width: 256px; height: 256px; margin-right:auto; margin-left:auto;"
-                    loop
-                    autoplay
-                ></lottie-player>
-            </p>
+        <div class="hero-body">
+            <div class="columns">
+                <div class="column is-half has-text-centered">
+                    <p class="title is-1" id="Home">
+                        <span class="has-text-primary has-text-shadow">網頁・</span><span class="has-text-link has-text-shadow">設計</span>
+                    </p>
+                    <p class="title is-1">
+                        <span class="has-text-success has-text-shadow">技術</span><span class="has-text-primary has-text-shadow">＆雜談</span>
+                    </p>
+                    <p class="is-size-5">
+                        <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
+                        正在逐漸讓死板的工程成為更有溫度的設計中
+                        <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+                    </p>
+                </div>
+                <div class="column is-half has-text-centered">
+                    <img style="height: 360; width: 360;" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
+                </div>
+            </div>
         </div>
-    </div>
     </section>
 </div>
 <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="container is-fluid mt-6">
