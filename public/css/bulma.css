@@ -1996,7 +1996,7 @@ a.has-text-dark:hover, a.has-text-dark:focus {
 }
 
 .has-text-primary.has-text-shadow {
-  text-shadow: 0.5rem 0.5rem #E86A33;
+  text-shadow: 0.25rem 0.25rem #E86A33;
 }
 
 a.has-text-primary:hover, a.has-text-primary:focus {
@@ -2012,7 +2012,7 @@ a.has-text-primary:hover, a.has-text-primary:focus {
 }
 
 .has-text-link.has-text-shadow {
-  text-shadow: 0.5rem 0.5rem #263A29;
+  text-shadow: 0.25rem 0.25rem #263A29;
 }
 
 a.has-text-link:hover, a.has-text-link:focus {
@@ -2040,7 +2040,7 @@ a.has-text-info:hover, a.has-text-info:focus {
 }
 
 .has-text-success.has-text-shadow {
-  text-shadow: 0.5rem 0.5rem #E86A33;
+  text-shadow: 0.25rem 0.25rem #E86A33;
 }
 
 a.has-text-success:hover, a.has-text-success:focus {
