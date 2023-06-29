@@ -16,7 +16,7 @@
             <p class="title is-1 has-text-centered-mobile">
                 <span class="has-text-primary has-text-shadow">Ｒｅｌａｘａｔｉｏｎ</span>
             </p>
-            <p class="is-size-3 has-text-right text_underline">
+            <p class="is-size-3 has-text-right">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
                 <span class="has-text-primary">嘗試探索、設計一種溫暖與輕鬆呈現資訊的方式與體驗。</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
