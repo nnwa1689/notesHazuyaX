@@ -159,7 +159,6 @@
 }
 
 .is-WorksItem:hover {
-  transition: background-color 0.3s linear;
   cursor: pointer;
   background-color: #263A29;
 }
@@ -177,14 +176,12 @@
 }
 
 .is-WorksItem {
-  transition: background-color 0.3s linear;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
   overflow: hidden;
   border-radius: 15px;
-  background-color: #263A29;
 }
 
 .is-works-button {
