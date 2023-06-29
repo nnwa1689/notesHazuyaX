@@ -10,13 +10,9 @@
         0%{transform:rotate(359deg);}
         100%{transform:rotate(0deg);}
     }
-    @keyframes road {
-        0%{left: 0;}
-        100%{left: 100;}
-    }
     .logo_home {
-        height: 360px; 
-        width: 360px; 
+        height: 400px; 
+        width: 400px; 
         border-radius: 35565px;
     }
     @media screen and (max-width: 768px) {
@@ -28,13 +24,9 @@
     }
     .logo_rotate_r {
         animation: rotation-right 2s infinite linear;
-
     }
     .logo_rotate_l {
         animation: rotation-left 2s infinite linear;
-    }
-    .logo_road {
-        animation: road 2s infinite linear;
     }
 </style>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="container is-fluid mb-6">
@@ -42,25 +34,10 @@
         <div class="hero-body has-text-centered">
             <p class="title is-1">
                 <img class="logo_home logo_rotate_r mr-3" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
-                <img class="logo_home logo_rotate_l" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
             </p>
-            <p>
-                <span class="logo_road is-size-4 mr-2">＝</span>
-                <span class="logo_road is-size-4 has-text-link mr-2">＝</span>
-                <span class="logo_road is-size-4 mr-2">＝</span>
-                <span class="logo_road is-size-4 has-text-link mr-2">＝</span>
-                <span class="logo_road is-size-4 mr-2">＝</span>
-                <span class="logo_road is-size-4 has-text-link mr-2">＝</span>
-                <span class="logo_road is-size-4 mr-2">＝</span>
-                <span class="logo_road is-size-4 has-text-link mr-2">＝</span>
-                <span class="logo_road is-size-4 mr-2">＝</span>
-                <span class="logo_road is-size-4 has-text-link mr-2">＝</span>
-                <span class="logo_road is-size-4 mr-2">＝</span>
-                <span class="logo_road is-size-4 has-text-link mr-2">＝</span>
-            </p>
-            <p class="is-size-5">
+            <p class="is-size-4">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                「44」樂於探索資訊不同的呈現方式，呈現不同的故事內容。
+                <span class="has-text-primary has-text-shadow">從設計到技術探索資訊不同的呈現方式、過程與體驗。</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
             </p> 
         </div>
