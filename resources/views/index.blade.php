@@ -2,22 +2,21 @@
 @section('title', $title)
 @section('herocontent')
 <style>
-    .text_underline:before {
-        content:"";
+    .text_underline {
         border-bottom: 0.25em solid #E86A33;
-        box-shadow: 5px 5px 0 0.05em #41644A;
+        box-shadow: 5px 5px 0 0.1em #41644A;
     }
 </style>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="container is-fluid mb-6">
     <section class="hero is-small">
         <div class="hero-body">
-            <p class="title is-1 has-text-left has-text-centered-mobile text_underline">
-                <span class="has-text-link has-text-shadow">Ｗａｒｍｔｈ</span><span class="has-text-primary has-text-shadow">＆</span>
+            <p class="title is-1 has-text-left has-text-centered-mobile">
+                <span class="has-text-link has-text-shadow text_underline">Ｗａｒｍｔｈ</span><span class="has-text-primary has-text-shadow">＆</span>
             </p>
-            <p class="title is-1 has-text-right has-text-centered-mobile">
+            <p class="title is-1 has-text-centered-mobile">
                 <span class="has-text-primary has-text-shadow">Ｒｅｌａｘａｔｉｏｎ</span>
             </p>
-            <p class="is-size-4 has-text-centered">
+            <p class="is-size-3 has-text-right ">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
                 <span class="has-text-primary">嘗試探索、設計一種溫暖與輕鬆呈現資訊的方式與體驗。</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
