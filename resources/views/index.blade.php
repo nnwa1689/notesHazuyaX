@@ -11,8 +11,8 @@
         100%{transform:rotate(0deg);}
     }
     .logo_home {
-        height: 400px; 
-        width: 400px; 
+        height: 360px; 
+        width: 360px; 
         border-radius: 35565px;
     }
     @media screen and (max-width: 768px) {
@@ -31,13 +31,20 @@
 </style>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="container is-fluid mb-6">
     <section class="hero is-small">
-        <div class="hero-body has-text-centered">
-            <p class="title is-1">
-                <img class="logo_home logo_rotate_r mr-3" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
-            </p>
+        <div class="hero-body">
+            <div class="columns">
+                <div class="column is-7 has-text-centered-mobile">
+                    <p class="title is-1 has-text-left ">
+                        <span class="has-text-link has-text-shadow">Ｗａｒｍｔｈ</span><span class="has-text-primary has-text-shadow">＆</span>
+                    </p>
+                    <p class="title is-1 has-text-right">
+                        <span class="has-text-primary has-text-shadow">Ｒｅｌａｘａｔｉｏｎ</span>
+                    </p>
+                </div>
+            </div>
             <p class="is-size-4">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                <span class="has-text-primary has-text-shadow">從設計到技術探索資訊不同的呈現方式、過程與體驗。</span>
+                <span class="has-text-primary has-text-shadow">探索、設計一種溫暖、輕鬆呈現資訊的方式與體驗。</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
             </p> 
         </div>
