@@ -176,12 +176,14 @@
 }
 
 .is-WorksItem {
+  transition: background-color 0.3s linear;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
   overflow: hidden;
   border-radius: 15px;
+  background-color: transparent;
 }
 
 .is-works-button {
