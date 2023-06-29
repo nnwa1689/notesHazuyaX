@@ -32,19 +32,15 @@
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="container is-fluid mb-6">
     <section class="hero is-small">
         <div class="hero-body">
-            <div class="columns">
-                <div class="column is-7 has-text-centered-mobile">
-                    <p class="title is-1 has-text-left ">
-                        <span class="has-text-link has-text-shadow">Ｗａｒｍｔｈ</span><span class="has-text-primary has-text-shadow">＆</span>
-                    </p>
-                    <p class="title is-1 has-text-right">
-                        <span class="has-text-primary has-text-shadow">Ｒｅｌａｘａｔｉｏｎ</span>
-                    </p>
-                </div>
-            </div>
+            <p class="title is-1 has-text-left has-text-centered-mobile">
+                <span class="has-text-link has-text-shadow">Ｗａｒｍｔｈ</span><span class="has-text-primary has-text-shadow">＆</span>
+            </p>
+            <p class="title is-1 has-text-right has-text-centered-mobile">
+                <span class="has-text-primary has-text-shadow">Ｒｅｌａｘａｔｉｏｎ</span>
+            </p>
             <p class="is-size-4">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                <span class="has-text-primary has-text-shadow">探索、設計一種溫暖、輕鬆呈現資訊的方式與體驗。</span>
+                <span class="has-text-primary">探索、設計一種溫暖、輕鬆呈現資訊的方式與體驗。</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
             </p> 
         </div>

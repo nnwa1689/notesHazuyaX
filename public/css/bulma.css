@@ -184,7 +184,7 @@
   margin-bottom: 0rem;
   overflow: hidden;
   border-radius: 15px;
-  background-color: none;
+  background-color: #263A29;
 }
 
 .is-works-button {
@@ -406,7 +406,6 @@
   border-style: solid;
   bottom: calc(550px - 2rem);
   float: right;
-
 }
 
 .is-post-item img {
@@ -415,14 +414,12 @@
   height: 100%;
   object-fit: cover;
   transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
-  background-color: #FFFFFF;
 }
 
 .is-post-item:hover img {
   transition: all 0.3s ease-in-out;
   transform: scale(1.20);
-  background-color: #FFFFFF;
-  /*opacity: .7;*/
+  opacity: .1;
   cursor: pointer;
 }
 
@@ -453,6 +450,7 @@
   max-height:550px;
   width: calc(50% - 1.5rem);
   position: relative;
+  background-color: #263A29;
 }
 
 
