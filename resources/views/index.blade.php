@@ -2,45 +2,24 @@
 @section('title', $title)
 @section('herocontent')
 <style>
-    @keyframes rotation-right {
-        0%{transform:rotate(0deg);}
-        100%{transform:rotate(359deg);}
-    }
-    @keyframes rotation-left {
-        0%{transform:rotate(359deg);}
-        100%{transform:rotate(0deg);}
-    }
-    .logo_home {
-        height: 360px; 
-        width: 360px; 
-        border-radius: 35565px;
-    }
-    @media screen and (max-width: 768px) {
-        .logo_home {
-            height: 128px; 
-            width: 128px; 
-            border-radius: 35565px;
-        }
-    }
-    .logo_rotate_r {
-        animation: rotation-right 2s infinite linear;
-    }
-    .logo_rotate_l {
-        animation: rotation-left 2s infinite linear;
+    .text_underline:before {
+        content:"";
+        border-bottom: 0.25em solid #E86A33;
+        box-shadow: 5px 5px 0 0.05em #41644A;
     }
 </style>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="container is-fluid mb-6">
     <section class="hero is-small">
         <div class="hero-body">
-            <p class="title is-1 has-text-left has-text-centered-mobile">
+            <p class="title is-1 has-text-left has-text-centered-mobile text_underline">
                 <span class="has-text-link has-text-shadow">Ｗａｒｍｔｈ</span><span class="has-text-primary has-text-shadow">＆</span>
             </p>
             <p class="title is-1 has-text-right has-text-centered-mobile">
                 <span class="has-text-primary has-text-shadow">Ｒｅｌａｘａｔｉｏｎ</span>
             </p>
-            <p class="is-size-4">
+            <p class="is-size-4 has-text-centered">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                <span class="has-text-primary">探索、設計一種溫暖、輕鬆呈現資訊的方式與體驗。</span>
+                <span class="has-text-primary">嘗試探索、設計一種溫暖與輕鬆呈現資訊的方式與體驗。</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
             </p> 
         </div>
