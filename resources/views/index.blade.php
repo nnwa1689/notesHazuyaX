@@ -2,35 +2,34 @@
 @section('title', $title)
 @section('herocontent')
 <style>
-    @keyframes rotation {
+    @keyframes rotation-right {
         0%{transform:rotate(0deg);}
         100%{transform:rotate(359deg);}
     }
-    .logo_rotate {
-        animation: rotation 2s infinite linear;
-        height: 256px; 
-        width: 256px; 
+    @keyframes rotation-left {
+        0%{transform:rotate(359deg);}
+        100%{transform:rotate(0deg);}
+    }
+    .logo_home {
+        height: 360px; 
+        width: 360px; 
         border-radius: 35565px;
+    }
+    .logo_rotate_r {
+        animation: rotation-right 2s infinite linear;
+
+    }
+    .logo_rotate_l {
+        animation: rotation-left 2s infinite linear;
     }
 </style>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="container is-fluid mb-6">
-    <section class="hero is-large">
+    <section class="hero is-small">
         <div class="hero-body has-text-centered">
-            <div class="columns">
-                <div class="column is-7 has-text-right has-text-centered-mobile">
-                    <p class="title is-1">
-                        <span class="has-text-primary has-text-shadow">網頁・</span><span class="has-text-link has-text-shadow">設計</span>
-                    </p>
-                    <p class="title is-1">
-                        <span class="has-text-success has-text-shadow">技術</span><span class="has-text-primary has-text-shadow">＆雜談</span>
-                    </p>
-                </div>
-                <div class="column has-text-left has-text-centered-mobile">
-                    <p class="title is-1">
-                        <img class="logo_rotate" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
-                    </p>
-                </div>
-            </div>
+            <p class="title is-1">
+                <img class="logo_home logo_rotate_r mr-3" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
+                <img class="logo_home logo_rotate_l" src="/uploadfile/e53db5daf5e4da5e19b91d214de5cc17.png">
+            </p>
             <p class="is-size-5">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
                 「44」樂於探索資訊不同的呈現方式，呈現不同的故事內容。
