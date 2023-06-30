@@ -25,7 +25,7 @@
         </from>
     </div>
     @if(!empty($data) && count($data) > 0 && strlen($_GET['search-text']) > 0)
-    <div class="columns is-multiline is-mobile is-gapless is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
+    <div class="columns is-multiline is-mobile is-justify-content-center">
         @foreach($data as $post)
             @component('compoments.postitem',
                 ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
