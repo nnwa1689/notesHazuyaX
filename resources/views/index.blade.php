@@ -1,6 +1,6 @@
 @extends('layout')
 @section('title', $title)
-@section('herocontent')
+@section('content')
 <style>
     .text_underline {
         border-bottom: 0.25em solid #E86A33;

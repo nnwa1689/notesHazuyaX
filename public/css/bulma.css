@@ -160,6 +160,7 @@
 
 .is-WorksItem:hover {
   cursor: pointer;
+  background-color: #263A29;
 }
 
 .is-WorksItem:hover .works-image-tag  {
@@ -175,13 +176,14 @@
 }
 
 .is-WorksItem {
+  transition: background-color 3s linear;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
   overflow: hidden;
   border-radius: 15px;
-  background-color: #263A29;
+  background-color: transparent;
 }
 
 .is-works-button {
@@ -422,6 +424,7 @@
 
 .is-post-item:hover {
   cursor: pointer;
+  background-color: #263A29;
 }
 
 .is-post-item:hover .post-image-tag  {
@@ -437,6 +440,7 @@
 }
 
 .is-post-item {
+  transition: background-color 3s linear;
   margin-left: 0.75rem;
   margin-right: 0.75rem;
   margin-top: 0rem;
@@ -447,7 +451,7 @@
   max-height:550px;
   width: calc(50% - 1.5rem);
   position: relative;
-  background-color: #263A29;
+  background-color: transparent;
 }
 
 
