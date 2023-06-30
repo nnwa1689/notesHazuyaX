@@ -6,7 +6,7 @@
         <p class="title is-1 has-text-left"><span id="titleText"></span></p>
     </div>
 
-    <div class="columns is-multiline is-mobile is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem; align-items: end;">
+    <div class="columns is-multiline is-mobile is-justify-content-center" style="align-items: end;">
     @php($i = 1)
     @foreach($WorksList as $item)
         <div data-scroll data-scroll-speed="{{($i == 2) || $i == 3 ? '3' : '5'}}" data-scroll-delay="1.5" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works/{{$item -> WorksID}}')" class="is-WorksItem {{ ($i == 2) || $i == 3 ? 'is-works-item-min' : 'is-works-item-large' }}">

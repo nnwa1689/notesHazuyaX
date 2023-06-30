@@ -3,12 +3,12 @@
 @section('content')
 <div class="container">
     <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6 mt-3">
-        <p class="title is-1 has-text-left">
+        <p class="title is-1 has-text-centered">
             <span id="titleText"></span>
         </p>
     </div>
     <div class="block pt-3 pb-3">
-        <div class="field is-grouped is-grouped-multiline">
+        <div class="field is-grouped is-grouped-multiline is-justify-content-center">
                 <div class="tags are-medium">
                 @foreach($webData['allCategory'] as $category)
                 <a class="button is-outlined is-primary is-rounded tag" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
@@ -16,7 +16,7 @@
                 </div>
         </div>
     </div>
-    <div class="columns is-multiline is-mobile is-gapless is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
+    <div class="columns is-multiline is-mobile is-justify-content-center" style="margin-left: -1rem; margin-right: -1rem;">
         @foreach($allPosts as $post)
             @component('compoments.postitem',
                 ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,

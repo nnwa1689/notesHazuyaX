@@ -7,7 +7,7 @@
         box-shadow: 10px 10px 0 0.05em #41644A;
     }
 </style>
-<div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="container is-fluid mb-6">
+<div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="block mb-6">
     <section class="hero is-small">
         <div class="hero-body">
             <p class="title is-1 has-text-left has-text-centered-mobile">
@@ -20,11 +20,11 @@
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
                 <span class="has-text-primary">嘗試探索、設計一種溫暖與輕鬆呈現資訊的方式與體驗。</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
-            </p> 
+            </p>
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="container is-fluid mt-6">
+<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="block mt-6">
     <section class="hero is-link is-halfheight">
         <div class="hero-body">
             <div class="">
@@ -83,7 +83,7 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="container is-fluid mt-6">
+<div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="block mt-6">
     <section class="hero is-success is-halfheight">
         <div class="hero-body">
             <div class="container is-fluid has-text-right">
