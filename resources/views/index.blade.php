@@ -130,7 +130,7 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="container is-fluid mb-6">
+<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="block mb-6">
     <section class="hero is-black is-medium">
     <div class="hero-body">
         <div class="container has-text-centered">
@@ -153,18 +153,4 @@
 </div>
 @endsection
 @section('content')
-    <div class="block">
-        @if($webData['webConfig'][26]->tittle == "")
-        <div class="is-homeBanner mb-2">
-            <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][25]->tittle}}"><img alt="{{$webData['webConfig'][25]->tittle}}" class="is-homeBanner" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][26]->tittle}}"></a>
-        </div>
-        @endif
-    </div>
-    <div class="block">
-        @if($webData['webConfig'][28]->tittle == "")
-        <div class="is-homeBanner mb-1">
-            <a href="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][27]->tittle}}"><img alt="{{$webData['webConfig'][27]->tittle}}" class="is-homeBanner" src="{{$webData['webConfig'][13]->tittle.$webData['webConfig'][28]->tittle}}"></a>
-        </div>
-        @endif
-    </div>
 @endsection
