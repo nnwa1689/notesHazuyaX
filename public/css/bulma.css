@@ -609,8 +609,8 @@
 
 @media screen and (max-width: 768px) {
   .block {
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
@@ -11308,8 +11308,8 @@ label.panel-block:hover {
   }
 
   .hero {
-      margin-left: 1rem;
-      margin-right: 1rem;;
+      margin-left: 0rem;
+      margin-right: 0rem;
   }
 }
 
