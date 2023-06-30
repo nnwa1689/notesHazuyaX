@@ -159,6 +159,7 @@
 }
 
 .is-WorksItem:hover {
+  transition: background-color 0s linear;
   cursor: pointer;
   background-color: #263A29;
 }
@@ -423,6 +424,7 @@
 }
 
 .is-post-item:hover {
+  transition: background-color 0s linear;
   cursor: pointer;
   background-color: #263A29;
 }
