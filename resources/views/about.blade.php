@@ -8,12 +8,11 @@
         </p>
     </div>
     <br/>
-    <p class="is-size-5 mt-6" data-scroll>
-        <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-        「44 秒工作室」取名靈感來自靈魂沙發的一首歌：44 seconds road movie，
-        而這首歌的 MV 使用「公路電影」的手法拍攝，於是我恰好覺得「逛網頁」跟在公路上行駛有那麼一點點相似，
-        於是就這樣命名了:DD。
-        <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+    <p class="is-size-4 mt-6" data-scroll>
+        <p class="has-text-link"><i class="fas fa-quote-left"></i></p>
+        在資訊樣貌多元的今天，相信您有很多想和大家說的，也許是一段故事、一首歌、一道菜或是一個理念，我們也是！
+        因此我們的使命就是讓您所訴說的內容更易於被受眾看見並且理解，在他們心中種下一顆小小的火種。
+        <p class="has-text-link"><i class="fas fa-quote-right"></i></p>
     </p>
 
     <section class="hero is-link is-halfheight mt-6" data-scroll data-scroll-speed="2">
