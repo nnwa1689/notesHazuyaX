@@ -10,10 +10,7 @@
     <br/>
     <div class="mt-6">
         <p class="has-text-link is-size-1 mb-6"><i class="fas fa-quote-left"></i></p>
-        <p class="is-size-3 has-text-centered"> 在資訊樣貌多元的今天，相信您有很多想和大家說的，</p>
-        <p class="is-size-3 has-text-centered"> 也許是一段故事、一首歌、一道菜或是一個理念，我們也是！</p>
-        <p class="is-size-3 has-text-centered">因此，我們的使命就是讓您所訴說的內容更易於被受眾看見並且理解，</p>
-        <p class="is-size-3 has-text-centered">在他們心中種下一顆小小的火種。</p>
+        <span id="aboutText"></span>
         <p class="has-text-link is-size-1 has-text-right mt-6"><i class="fas fa-quote-right"></i></p>
     </div>
     <section class="hero is-link is-halfheight" data-scroll data-scroll-speed="2">
@@ -45,11 +42,12 @@
                         <p class="title is-1"><i class="fas fa-hands"></i></p>
                     </div>
                     <div class="column is-9">
-                        <p class="subtitle is-1">但，可能有些要注意的地方</p>
+                        <p class="subtitle is-1">不過，我自身也是有些限制</p>
                         <p class="subtitle is-4"># 樣式可客製化設計，不會大家都長得一樣</p>
                         <p class="subtitle is-4"># 但也可以提供套版方式開發，如果專案很趕的話</p>
                         <p class="subtitle is-4"># 我會依照規模需求，提供合適的技術、託管平台</p>
                         <p class="subtitle is-4"># 對於過往我沒設計過的功能，可能需要再多討論</p>
+                        <p class="subtitle is-4"># 目前沒辦法協助串接金流 API，Sorry！</p>
                     </div>
                 </div>
             </div>
@@ -198,6 +196,16 @@
 <script id="mainScript">
 var typed = new Typed("#titleText", {
     strings:["關於<span class=\"has-text-link\">ABOUT</span>",],
+    stringsElement: '#typed-strings',
+    typeSpeed: 70,
+    startDelay: 2000,
+    loop: false,
+});
+
+var typedAbout = new Typed("#aboutText", {
+    strings:[
+        "<p class=\"is-size-3 has-text-centered\"> 在資訊樣貌多元的今天，相信您有很多想和大家說的，</p><p class=\"is-size-3 has-text-centered\"> 也許是一段故事、一首歌、一道菜或是一個理念，我們也是！</p><p class=\"is-size-3 has-text-centered\">因此，我們的使命就是讓您所訴說的內容更易於被受眾看見、理解，</p><p class=\"is-size-3 has-text-centered\">並在心中種下一顆小小的火種。</p>",
+    ],
     stringsElement: '#typed-strings',
     typeSpeed: 70,
     startDelay: 2000,
