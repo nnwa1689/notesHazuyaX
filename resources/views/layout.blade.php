@@ -282,7 +282,6 @@
                 let js = data.next.container.querySelectorAll('main script');
                 if(js != null){
                     js.forEach((item) => {
-                        console.log(js)
                         eval(item.innerHTML);
                     });
                 }
