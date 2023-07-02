@@ -10,7 +10,7 @@
     <br/>
     <div class="mt-6">
         <p class="has-text-link is-size-1 mb-6"><i class="fas fa-quote-left"></i></p>
-        <p class="is-size-3 has-text-centered">
+        <p class="is-size-4 has-text-centered">
             <span id="aboutText"></span>
         </p>
         <p class="has-text-link is-size-1 has-text-right mt-6"><i class="fas fa-quote-right"></i></p>
