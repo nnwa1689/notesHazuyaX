@@ -10,7 +10,9 @@
     <br/>
     <div class="mt-6">
         <p class="has-text-link is-size-1 mb-6"><i class="fas fa-quote-left"></i></p>
-        <span id="aboutText"></span>
+        <p class="is-size-3 has-text-centered">
+            <span id="aboutText"></span>
+        </p>
         <p class="has-text-link is-size-1 has-text-right mt-6"><i class="fas fa-quote-right"></i></p>
     </div>
     <section class="hero is-link is-halfheight" data-scroll data-scroll-speed="2">
@@ -204,7 +206,7 @@ var typed = new Typed("#titleText", {
 
 var typedAbout = new Typed("#aboutText", {
     strings:[
-        "<p class=\"is-size-3 has-text-centered\"> 在資訊樣貌多元的今天，相信您有很多想和大家說的，</p><p class=\"is-size-3 has-text-centered\"> 也許是一段故事、一首歌、一道菜或是一個理念，我們也是！</p><p class=\"is-size-3 has-text-centered\">因此，我們的使命就是讓您所訴說的內容更易於被受眾看見、理解，</p><p class=\"is-size-3 has-text-centered\">並在心中種下一顆小小的火種。</p>",
+        "<p> 在資訊樣貌多元的今天，相信您有很多想和大家說的，</p><p> 也許是一段故事、一首歌、一道菜或是一個理念，我們也是！</p><p>因此，我們的使命就是讓您所訴說的內容更易於被受眾看見、理解，</p><p>並在心中種下一顆小小的火種。</p>",
     ],
     stringsElement: '#typed-strings',
     typeSpeed: 70,
