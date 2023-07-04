@@ -96,7 +96,7 @@ class AdminController extends Controller
     public function showEditPost($postID = null)
     {
 
-        $allCategory =  $this -> postService -> GetAllPublicCategory();
+        $allCategory =  $this -> postService -> GetAllCategory();
 
         if($postID=="new")
         {
