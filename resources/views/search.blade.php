@@ -3,7 +3,7 @@
 @section('content')
 @parent
 <div class="container">
-    <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6 mt-3">
+    <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6">
         <p class="title is-1 has-text-left">
             <span id="titleText"></span>
         </p>
@@ -13,13 +13,13 @@
             <input class="input" type="hidden" id="page" name="page" value="1">
             <div class="control is-expanded">
                 @if(isset($_GET['search-text']) && !empty($_GET['search-text']))
-                <input class="input" type="text" name="search-text" value="{{$_GET['search-text']}}">
+                <input class="input is-large" type="text" name="search-text" value="{{$_GET['search-text']}}">
                 @else
-                <input class="input" type="text" name="search-text" placeholder="Search......">
+                <input class="input is-large" type="text" name="search-text" placeholder="Search......">
                 @endif
             </div>
             <div class="control">
-                <button class="button is-link is-outlined" type="submit" placeholder="search"><i class="fas fa-search"></i>搜尋</button>
+                <button class="button is-link is-large ml-3" type="submit" placeholder="search"><i class="fas fa-search"></i>搜尋</button>
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
         </from>

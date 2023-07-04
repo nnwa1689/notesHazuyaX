@@ -2,7 +2,7 @@
 @section('title', $title)
 @section('content')
 <div class="container">
-    <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-3 mt-3">
+    <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6">
         <p class="title is-1 has-text-left"><span id="titleText"></span></p>
     </div>
 

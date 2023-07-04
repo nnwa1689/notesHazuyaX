@@ -2,13 +2,13 @@
 @section('title', $title)
 @section('content')
 <div class="container">
-    <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6 mt-3">
+    <div data-scroll data-scroll-speed="-1" data-scroll-delay="0">
         <p class="title is-1 has-text-left">
             <span id="titleText"></span>
         </p>
         <p class="is-size-5">{{$allPosts[0]->Category->Short_Intro}}</p>
     </div>
-    <div class="columns is-multiline is-mobile is-justify-content-center">
+    <div class="columns is-multiline is-mobile is-justify-content-center mt-6">
     @foreach($allPosts as $post)
         @component('compoments.postitem',
                 ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
