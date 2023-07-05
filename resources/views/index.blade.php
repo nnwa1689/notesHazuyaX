@@ -8,7 +8,7 @@
     }
 </style>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="mb-6">
-    <section class="hero is-small">
+    <section class="hero is-medium">
         <div class="hero-body">
             <p class="title is-1 has-text-left has-text-centered-mobile">
                 <span class="has-text-link has-text-shadow">Ｗａｒｍｔｈ</span><span class="has-text-primary has-text-shadow">＆</span>
@@ -18,7 +18,7 @@
             </p>
             <p class="is-size-3 has-text-right">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                <span class="has-text-primary">探索、設計與創造溫暖、輕鬆的資訊閱覽體驗！！</span>
+                <span class="has-text-primary">設計讓人溫暖且感覺放鬆的資訊閱覽體驗！</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
             </p>
         </div>
