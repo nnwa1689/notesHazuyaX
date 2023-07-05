@@ -261,7 +261,7 @@
                     after(data) {
                         return gsap.to(".pageloader", {
                             duration: 0.6,
-                            y: '-110vh',
+                            y: '-120vh',
                             ease: "power1.out",
                             delay: 1
                         });
