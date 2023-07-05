@@ -131,17 +131,17 @@
     </section>
 </div>
 <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="mb-6">
-    <section class="hero is-black is-medium">
+    <section class="hero is-dark is-medium">
     <div class="hero-body">
         <div class="container has-text-centered">
-        <p class="title is-3">
-            有想法嗎？來聊聊天吧！
+        <p class="title is-4">
+            有想法嗎？來聊聊天吧，或許我們會很合拍！！
         </p>
         <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
             <div class="columns">
                 <div class="column">
                     <p class="title is-6">
-                        聊聊
+                        走阿，聊聊！
                         <i class="fas fa-arrow-right ml-1"></i>
                     </p>
                 </div>
