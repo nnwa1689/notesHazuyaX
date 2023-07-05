@@ -10,7 +10,7 @@
     <br/>
     <div class="mt-6">
         <p class="has-text-link is-size-1 mb-6"><i class="fas fa-quote-left"></i></p>
-        <p class="is-size-4 has-text-centered">
+        <p class="is-size-5 has-text-centered">
             <span id="aboutText"></span>
         </p>
         <p class="has-text-link is-size-1 has-text-right mt-6"><i class="fas fa-quote-right"></i></p>
@@ -206,10 +206,10 @@ var typed = new Typed("#titleText", {
 
 var typedAbout = new Typed("#aboutText", {
     strings:[
-        "在資訊樣貌多元的今天，相信您有很多想和大家說的，<br/> 也許是一段故事、一首歌、一道菜或是一個理念，我們也是！</br>因此，我們的使命就是讓您所訴說的內容更易於被受眾看見、理解，<br/>並在心中種下一顆小小的火種。",
+        "在資訊樣貌多元的今天，相信您有很多想和大家說的，<br/> 也許是一首歌曲、一段故事、一道料理、一個理念，我們也是！</br>我們的使命就是讓您所訴說的內容更易於被受眾看見、理解，<br/>並在他們的心中種下一顆小小的火種。",
     ],
     stringsElement: '#typed-strings',
-    typeSpeed: 70,
+    typeSpeed: 30,
     startDelay: 2000,
     loop: false,
 });

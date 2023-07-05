@@ -18,7 +18,7 @@
             </p>
             <p class="is-size-3 has-text-right">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                <span class="has-text-primary">嘗試探索、設計一種溫暖與輕鬆呈現資訊的方式與體驗。</span>
+                <span class="has-text-primary">探索、設計與創造溫暖、輕鬆的資訊閱覽體驗！！</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
             </p>
         </div>
