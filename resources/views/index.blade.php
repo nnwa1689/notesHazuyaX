@@ -8,7 +8,7 @@
     }
 </style>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="mb-6">
-    <section class="hero is-medium">
+    <section class="hero is-small">
         <div class="hero-body">
             <p class="title is-1 has-text-left has-text-centered-mobile">
                 <span class="has-text-link has-text-shadow">Ｗａｒｍｔｈ</span><span class="has-text-primary has-text-shadow">＆</span>
@@ -25,7 +25,7 @@
     </section>
 </div>
 <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="mt-6">
-    <section class="hero is-link is-halfheight">
+    <section class="hero is-link is-shadow is-halfheight">
         <div class="hero-body">
             <div class="">
                 <p class="title is-1">
@@ -84,7 +84,7 @@
     </section>
 </div>
 <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mt-6">
-    <section class="hero is-success is-halfheight">
+    <section class="hero is-success is-shadow is-halfheight">
         <div class="hero-body">
             <div class="container is-fluid has-text-right">
                 <p class="subtitle is-2">
@@ -131,7 +131,7 @@
     </section>
 </div>
 <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="mb-6">
-    <section class="hero is-dark is-medium">
+    <section class="hero is-dark is-shadow is-medium">
     <div class="hero-body">
         <div class="container has-text-centered">
         <p class="title is-4">
