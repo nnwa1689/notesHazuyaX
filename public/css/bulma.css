@@ -514,11 +514,6 @@
       width: calc(33.333% - 1.5rem);
   }
 
-  .is-post-item {
-      width: 100%;
-      margin-top: 1rem;
-  }
-
   .post-cover-container {
       height: 200px;
   }
@@ -566,9 +561,14 @@
   }
 
   .is-post-item-img {
-      width: calc(95% - 2rem);
+      width: 100%;
       margin-top: 1rem;
   }
+
+  .is-post-item {
+    width: 100%;
+    margin-top: 1rem;
+}
 
   .is-post-author-container {
       height: 360px;
