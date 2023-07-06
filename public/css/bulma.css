@@ -7648,7 +7648,8 @@ a.list-item {
 
 .loader-body {
   margin-top: -7rem;
-  align-items: center
+  align-items: center;
+  display: flex;
 }
 
 .is-on {
