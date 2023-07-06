@@ -184,8 +184,7 @@
                 >
                 </lottie-player>
                 -->
-                <img class="loading-logo mb-3" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
-                <p id="nextPageName" class="is-size-4">正在前往新旅途⋯</p>
+                <img class="loading-logo" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
             </div>
         </section>
         <!-- Main -->

@@ -1,4 +1,5 @@
 /*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */
+/* UPdate 070623 */
 @-webkit-keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -17,29 +18,21 @@
 }
 
 /*SELF FONTS*/
-  @font-face {
+@font-face {
     font-family: 'NotoSansTC-Regular';
     font-style: normal;
     src: url(/fonts/NotoSansTC-Regular.otf);
     unicode-range: U+4E00-9FFF;
     font-display: swap;
-  }
+}
 
-  @font-face {
-      font-family: 'NotoSansTC-Regular';
-      font-style: normal;
-      src: url(/fonts/RedHatText-Regular.ttf);
-      unicode-range: U+00-024F;
-      font-display: swap;
-    }
-
-  @font-face {
-    font-family: 'openhuninn';
+@font-face {
+    font-family: 'NotoSansTC-Regular';
     font-style: normal;
-    src: url(/fonts/openhuninn.ttf);
-    /*unicode-range: U+4E00-9FFF;*/
+    src: url(/fonts/RedHatText-Regular.ttf);
+    unicode-range: U+00-024F;
     font-display: swap;
-  }
+}
 
 /***********/
 
@@ -7623,6 +7616,15 @@ a.list-item {
  width: 256px;
  height: 256px;
  animation: spinAround 3s infinite ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+ .loading-logo {
+   border-radius: 25565px;
+   width: 128px;
+   height: 128px;
+   animation: spinAround 3s infinite ease-in-out;
+  }
 }
 
 .pageloader {

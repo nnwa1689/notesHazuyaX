@@ -1,25 +1,17 @@
 @import url(/codes/styles/prism.css);
 
 @font-face {
-    font-family: 'NotoSansTC-Medium';
+    font-family: 'NotoSansTC-Regular';
     font-style: normal;
-    src: url(/fonts/NotoSansTC-Medium.otf);
+    src: url(/fonts/NotoSansTC-Regular.otf);
     unicode-range: U+4E00-9FFF;
   }
 
 @font-face {
-    font-family: 'NotoSansTC-Medium';
+    font-family: 'NotoSansTC-Regular';
     font-style: normal;
     src: url(/fonts/RedHatText-Medium.ttf);
     unicode-range: U+00-024F;
-  }
-
-@font-face {
-    font-family: 'openhuninn';
-    font-style: normal;
-    src: url(/fonts/openhuninn.ttf);
-    /*unicode-range: U+4E00-9FFF;*/
-    font-display: swap;
   }
 
 h1,
@@ -29,12 +21,11 @@ h4,
 h5,
 h6
 {
-    font-family: 'openhuninn';
     font-weight: 600;
 }
 
 body {
-    font-family: 'NotoSansTC-Medium';
+    font-family: 'NotoSansTC-Regular';
     color:#263A29;
     font-size: 1em;
     font-weight: 400;
