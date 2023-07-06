@@ -15,11 +15,9 @@
                     <span>{{ strip_tags(Str::limit($PostTittle, 30)) }}</span>
                 </a>
             </div>
-        </div>
-        <div class="column">
-            <a class="title is-5">
+            <p class="title is-6">
                 <span>{{ strip_tags(Str::limit($PostTittle, 30)) }}</span>
-            </a>
+            </p>
         </div>
     </div>
 </div>
