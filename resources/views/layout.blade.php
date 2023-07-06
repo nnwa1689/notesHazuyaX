@@ -170,7 +170,7 @@
                 </div>
             </div>
         </div>
-        <section class="hero is-primary is-align-items-center has-text-centered pageloader">
+        <section class="hero is-fullheight is-primary is-align-items-center has-text-centered pageloader">
             <div class="loader-body">
                 <!--
                 <lottie-player
