@@ -9,8 +9,8 @@
             <span>{{$Category}}</span>
         </a>
         <br/>
-        <a class="button post-image-tag is-primary is-outlined is-rounded is-small">
-            <span>{{ strip_tags(Str::limit($PostTittle, 35)) }}</span>
+        <a class="button post-image-tag is-primary is-outlined is-rounded is-medium">
+            <span>{{ strip_tags(Str::limit($PostTittle, 30)) }}</span>
         </a>
     </div>
 </div>

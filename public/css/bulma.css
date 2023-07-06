@@ -449,8 +449,8 @@
   margin-top: 0rem;
   margin-bottom: 0rem;
   border-radius: 15px;
-  height:600;
-  max-height:600;
+  height:550;
+  max-height:550;
   width: calc(50% - 1.5rem);
   position: relative;
 }
