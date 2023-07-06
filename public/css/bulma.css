@@ -7650,6 +7650,8 @@ a.list-item {
   margin-top: -7rem;
   align-items: center;
   display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 
 .is-on {
