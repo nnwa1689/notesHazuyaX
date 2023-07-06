@@ -7620,9 +7620,9 @@ a.list-item {
 
 .loading-logo {
  border-radius: 25565px;
- width: 200px;
- height: 200px;
- animation: spinAround infinite ease-in-out;
+ width: 256px;
+ height: 256px;
+ animation: spinAround 3s infinite ease-in-out;
 }
 
 .pageloader {
