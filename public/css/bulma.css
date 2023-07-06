@@ -4141,14 +4141,13 @@ fieldset[disabled] .button {
 .content h4,
 .content h5,
 .content h6 {
-  font-family: 'openhuninn';
   font-weight: 600;
   line-height: 1.25;
 }
 
 .content h1 {
   font-size: 2.5em;
-  margin-bottom: 1.5em
+  margin-bottom: 1.125em
 }
 
 .content h1:not(:first-child) {
@@ -4157,7 +4156,7 @@ fieldset[disabled] .button {
 
 .content h2 {
   font-size: 2.125em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.125em;
 }
 
 .content h2:not(:first-child) {
@@ -4166,7 +4165,7 @@ fieldset[disabled] .button {
 
 .content h3 {
   font-size: 1.75em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.125em;
 }
 
 .content h3:not(:first-child) {
@@ -4175,17 +4174,17 @@ fieldset[disabled] .button {
 
 .content h4 {
   font-size: 1.5em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.125em;
 }
 
 .content h5 {
   font-size: 1.375em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.125em;
 }
 
 .content h6 {
   font-size: 1.25em;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.125em;
 }
 
 .content p{
@@ -5286,7 +5285,6 @@ a.tag:hover {
 
 .title,
 .subtitle {
-  font-family: 'openhuninn';
   word-break: break-word;
 }
 
@@ -7611,7 +7609,7 @@ a.list-item {
 }
 
 .fullMenu .navbar-item {
-  font-family: openhuninn;
+  font-weight: 600;
 }
 
 .loading {
