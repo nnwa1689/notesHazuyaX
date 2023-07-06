@@ -8,8 +8,10 @@
         <a class="button post-image-tag-category is-primary is-outlined is-rounded is-small" href="{{$CategoryUrl}}">
             <span>{{$Category}}</span>
         </a>
+        <br/>
+        <a class="button post-image-tag is-primary is-outlined is-rounded is-small">
+            <span>{{ strip_tags(Str::limit($PostTittle, 35)) }}</span>
+        </a>
     </div>
-    <br/>
-    <a class="is-size-4 has-text-weight-bold mt-5">{{ strip_tags(Str::limit($PostTittle, 30)) }}</p>
 </div>
 
