@@ -1,5 +1,5 @@
-<div class="is-post-item">
-    <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" onclick="barba.go('{{ $url }}')" class="is-post-item-img">
+<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" onclick="barba.go('{{ $url }}')" class="is-post-item">
+    <div class="is-post-item-img">
         @if(isset($CoverImage) && !empty($CoverImage))
         <img alt="{{$PostTittle}}" class="image" src="{{$CoverImage}}">
         @else
@@ -13,7 +13,7 @@
             <span>{{ strip_tags(Str::limit($PostTittle, 30)) }}</span>
         </a>
     </div>
-    <p class="title is-6">
+    <p class="title is-5">
         <span>{{ strip_tags(Str::limit($PostTittle, 30)) }}</span>
     </p>
 </div>

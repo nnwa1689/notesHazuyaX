@@ -455,6 +455,16 @@
   position: relative;
 }
 
+.is-post-item:hover a {
+  transition: all 0.3s linear;
+  color: #E86A33 !important;
+}
+
+.is-post-item a {
+  transition: all 0.3s linear;
+  color: #263A29 !important;
+}
+
 
 @media screen and (min-width: 1408px) {
   .is-works-item-large {
@@ -504,8 +514,8 @@
       width: calc(33.333% - 1.5rem);
   }
 
-  .is-post-item-img {
-      width: calc(100% - 1.5rem);
+  .is-post-item {
+      width: 100%;
       margin-top: 1rem;
   }
 
