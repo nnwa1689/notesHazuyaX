@@ -13,8 +13,6 @@
             <span>{{ strip_tags(Str::limit($PostTittle, 30)) }}</span>
         </a>
     </div>
-    <p class="title is-5">
-        <span>{{ strip_tags(Str::limit($PostTittle, 30)) }}</span>
-    </p>
+    <a class="is-size-5 mt-5">{{ strip_tags(Str::limit($PostTittle, 30)) }}</p>
 </div>
 
