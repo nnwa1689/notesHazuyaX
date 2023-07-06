@@ -7618,6 +7618,13 @@ a.list-item {
   top: 0 !important;
 }
 
+.loading-logo {
+ border-radius: 25565px;
+ width: 200px;
+ height: 200px;
+ animation: spinAround infinite ease-in-out;
+}
+
 .pageloader {
   transition: top 0.5s ease-in-out;
   position: fixed;

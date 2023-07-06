@@ -172,6 +172,7 @@
         </div>
         <section class="hero is-primary is-align-items-center has-text-centered pageloader">
             <div class="loader-body">
+                <!--
                 <lottie-player
                     class="is-align-items-center"
                     src="{{$webData['webConfig'][13]->tittle}}lf30_zlkyyxof.json"
@@ -182,6 +183,8 @@
                     autoplay
                 >
                 </lottie-player>
+                -->
+                <img class="loading-logo" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
                 <p id="nextPageName" class="is-size-4">正在前往新旅途⋯</p>
             </div>
         </section>
