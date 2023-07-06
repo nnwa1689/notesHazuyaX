@@ -7615,7 +7615,7 @@ a.list-item {
  border-radius: 25565px;
  width: 256px;
  height: 256px;
- animation: spinAround 3s infinite ease-in-out;
+ animation: spinAround 3s infinite linear;
 }
 
 @media screen and (max-width: 768px) {
@@ -7623,7 +7623,7 @@ a.list-item {
    border-radius: 25565px;
    width: 128px;
    height: 128px;
-   animation: spinAround 3s infinite ease-in-out;
+   animation: spinAround 3s infinite linear;
   }
 }
 
@@ -7647,7 +7647,8 @@ a.list-item {
 }
 
 .loader-body {
-  margin-top:  calc(10rem);
+  margin-top: -7rem;
+  align-items: center
 }
 
 .is-on {
