@@ -9,8 +9,7 @@
         <img alt="{{$PostTittle}}" class="image" src="/images/NotesHZ_ICON_2023.png">
         @endif
     </div>
-    <br/>
-    <a class="title is-5">
+    <a class="button post-image-tag is-outlined is-medium">
         <span>{{ strip_tags(Str::limit($PostTittle, 30)) }}</span>
     </a>
 </div>

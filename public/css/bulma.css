@@ -81,8 +81,8 @@
   text-overflow: ellipsis;
 }
 
-.is-WorksItem {
-
+.is-WorksItem:hover {
+  cursor: pointer;
 }
 
 .is-WorksItem-img img {
@@ -106,15 +106,14 @@
 .works-image-tag:hover {
   transition: all 0.3s ease-in-out !important;
   box-shadow: 5px 5px 0 0.125em #E86A33 !important;
-  border-top-left-radius: 15px !important;
-  border-top-right-radius: 15px !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
 }
 
 .is-WorksItem:hover img {
   transition: all 0.3s ease-in-out;
   transform: scale(1.20);
   opacity: .1;
-  cursor: pointer;
 }
 
 .is-WorksItem:hover .is-WorksItem-img {
@@ -340,8 +339,6 @@
   background-color: #FFFFFF !important;
   border-width: 0px !important;
   border-style: solid;
-  bottom: calc(550px - 2rem);
-  left: 1.5rem;
 }
 
 .post-image-tag-category:hover {
