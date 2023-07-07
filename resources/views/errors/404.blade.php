@@ -13,21 +13,15 @@
     <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-    <div style="margin: auto; maring-top: 300px; width:70%; height: 40%;">
-  <div class="hero-body">
-    <div class="container" style="text-align: center;">
-    <h1 class="title is-1"><i class="fas fa-exclamation-triangle"></i><br></a></h1>
-      <h1 class="title">抱歉！<br></h1>
-      <h1 class="title">找不到你要的網頁！</h1>
-    </div>
-    <hr>
-    <div class="control">
-    <a href="/"><button style="width: 100%;" class="button is-link">回首頁</button></a>
-  </div>
-  </div>
-
-    <p>
-    </p>
+    <div class="hero is-fullheight">
+      <div class="hero-body has-text-centered  is-justify-content-center">
+          <img class="loading-logo" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+          <p class="title is-1">
+            <span class="has-text-link has-text-shadow">４０４</span>
+          </p>
+          <p class="subtitle is-3">迷路惹QQ</p>
+          <a href="/"><button class="button is-link is-large">回到起點</button></a>
+      </div>
     </div>
 </body>
 </html>
