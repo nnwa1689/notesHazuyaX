@@ -1,5 +1,5 @@
 <div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" onclick="barba.go('{{ $url }}')" class="is-post-item">
-    <a class="button post-image-tag-category is-outlined is-small" href="{{$CategoryUrl}}">
+    <a class="button post-image-tag-category is-primary is-small" href="{{$CategoryUrl}}">
         <span>{{$Category}}</span>
     </a>
     <div class="is-post-item-img">

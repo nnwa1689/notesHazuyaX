@@ -354,14 +354,13 @@
   transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.is-post-item-img:hover img {
+.is-post-item:hover img {
   transition: all 0.3s ease-in-out;
   transform: scale(1.20);
   opacity: .1;
-  cursor: pointer;
 }
 
-.is-post-item-img:hover {
+.is-post-item:hover .is-post-item-img{
   transition: background-color 0s linear;
   cursor: pointer;
   background-color: #263A29;
@@ -398,11 +397,15 @@
   margin-top: 0rem;
   margin-bottom: 0rem;
   border-radius: 15px;
-  height:600px;
-  max-height:600px;
+  height:650px;
+  max-height:650px;
   overflow: hidden;
   width: calc(50% - 1.5rem);
   position: relative;
+}
+
+.is-post-item:hover {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1408px) {
