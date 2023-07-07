@@ -70,13 +70,11 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="5" data-scroll-delay="0" class="mt-3">
+<div data-scroll data-scroll-speed="0" data-scroll-delay="0" class="mt-3">
     <section class="hero is-success is-shadow is-halfheight">
         <div class="hero-body">
             <div class="container is-fluid has-text-right">
-                <p class="subtitle is-5">
-                    製作祕辛、技術分享
-                </p>
+                <p class="subtitle is-5">製作祕辛、技術分享</p>
                 <p class="title is-2">技術雜記</p>
             </div>
         </div>
@@ -112,7 +110,7 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="2" data-scroll-delay="0" class="mt-3 mb-6">
+<div data-scroll data-scroll-speed="2" data-scroll-delay="0" class="mt-6 mb-6">
     <section class="hero is-dark is-shadow is-medium">
     <div class="hero-body">
         <div class="container has-text-centered">
