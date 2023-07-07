@@ -81,7 +81,11 @@
   text-overflow: ellipsis;
 }
 
-.is-WorksItem img {
+.is-WorksItem {
+
+}
+
+.is-WorksItem-img img {
   transition: all 0.3s ease-in-out;
   width: 100%;
   height: 100%;
@@ -95,7 +99,8 @@
   position: absolute;
   background-color: #FFFFFF !important;
   border-width: 0px !important;
-  border-top-left-radius: 0px;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
 }
 
 .works-image-tag:hover {
@@ -110,7 +115,7 @@
   cursor: pointer;
 }
 
-.is-WorksItem:hover {
+.is-WorksItem:hover .is-WorksItem-img {
   transition: background-color 0s linear;
   cursor: pointer;
   background-color: #263A29;
@@ -122,10 +127,8 @@
   color: #FFFFFF !important;
 }
 
-.is-WorksItem {
+.is-WorksItem-img {
   transition: background-color 3s linear;
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
   margin-top: 0rem;
   margin-bottom: 0rem;
   overflow: hidden;

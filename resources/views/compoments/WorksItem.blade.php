@@ -2,7 +2,7 @@
     <div class="is-WorksItem-img">
         <img class="image" style="max-width:1000px; max-height:1000px;" src="{{$CoverImage}}">
     </div>
-    <a class="button works-image-tag is-primary is-medium">
+    <a class="button works-image-tag is-outlined is-medium">
         <span>{{$WorksName}}</span>
     </a>
 </div>
