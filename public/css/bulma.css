@@ -425,11 +425,13 @@
   .is-works-item-large {
       width: calc(100% - 33% - 4rem);
       height: 700px;
+      margin-right:0.75rem;
   }
 
   .is-works-item-min {
       width: 33%;
-      height: 500px;;
+      height: 500px;
+      margin-left: 0.75rem;
   }
 
   .is-post-index {
@@ -454,11 +456,13 @@
   .is-works-item-large {
       width: calc(100% - 33% - 4rem);
       height: 700px;
+      margin-right:0.75rem;
   }
 
   .is-works-item-min {
       width: 33%;
-      height: 500px;;
+      height: 500px;
+      margin-left:0.75rem;
   }
 
   .is-author-item {
@@ -478,11 +482,13 @@
   .is-works-item-large {
       width: calc(100% - 33% - 4rem);
       height: 700px;
+      margin-right:0.75rem;
   }
 
   .is-works-item-min {
       width: 33%;
-      height: 500px;;
+      height: 500px;
+      margin-left:0.75rem;
   }
 
   .is-post-index {
@@ -504,6 +510,8 @@
       height: 500px;
       margin-top: 1.5rem;
       margin-bottom: 1rem;
+      margin-right:0rem;
+      margin-left:0rem;
   }
 
   .is-post-index {
