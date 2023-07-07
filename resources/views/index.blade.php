@@ -70,7 +70,7 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mt-6">
+<div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mt-3">
     <section class="hero is-success is-shadow is-halfheight">
         <div class="hero-body">
             <div class="container is-fluid has-text-right">
@@ -112,7 +112,7 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="-2" data-scroll-delay="1" class="mt-3 mb-6">
+<div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mt-3 mb-6">
     <section class="hero is-dark is-shadow is-medium">
     <div class="hero-body">
         <div class="container has-text-centered">
