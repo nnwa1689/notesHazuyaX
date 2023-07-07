@@ -508,8 +508,8 @@
       height: 500px;
       margin-top: 1.5rem;
       margin-bottom: 1rem;
-      margin-right:0rem;
-      margin-left:0rem;
+      margin-right:0rem !important;
+      margin-left:0rem !important;
   }
 
   .is-post-index {

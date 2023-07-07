@@ -84,7 +84,7 @@
         <div class="container p-3">
             <div class="columns is-multiline">
                 @foreach($allPosts as $post)
-                    @component('compoments.IndexPostitem',
+                    @component('compoments.postitem',
                         ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
                         'CoverImage' => $post->CoverImage,
                         'PostTittle' => $post->PostTittle,
