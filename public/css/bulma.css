@@ -323,8 +323,7 @@
   position: absolute;
   background-color: #FFFFFF !important;
   border-width: 0px !important;
-  border-top-left-radius: 0px !important;
-  border-top-right-radius: 0px !important;
+  top: -1.5rem;
 }
 
 .post-image-tag:hover {
@@ -336,11 +335,10 @@
   transition: all 0.3s ease-in-out;
   transform: scale(1.0);
   position:absolute;
-  background-color: #FFFFFF !important;
   border-width: 0px !important;
   border-style: solid;
-  border-bottom-left-radius: 0px !important;
-  border-bottom-right-radius: 0px !important;
+  top: 1rem;
+  z-index: 5;
 }
 
 .post-image-tag-category:hover {
@@ -400,22 +398,12 @@
   margin-top: 0rem;
   margin-bottom: 0rem;
   border-radius: 15px;
-  height:550px;
-  max-height:550px;
+  height:600px;
+  max-height:600px;
+  overflow: hidden;
   width: calc(50% - 1.5rem);
   position: relative;
 }
-
-.is-post-item:hover a {
-  transition: all 0.3s linear;
-  color: #E86A33 !important;
-}
-
-.is-post-item a {
-  transition: all 0.3s linear;
-  color: #263A29 !important;
-}
-
 
 @media screen and (min-width: 1408px) {
   .is-works-item-large {
@@ -510,11 +498,6 @@
 
   .is-author-item {
       width: calc(100% - 1.5rem);
-      margin-top: 1rem;
-  }
-
-  .is-post-item-img {
-      width: 100%;
       margin-top: 1rem;
   }
 
