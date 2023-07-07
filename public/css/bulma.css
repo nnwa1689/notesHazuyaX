@@ -106,6 +106,8 @@
 .works-image-tag:hover {
   transition: all 0.3s ease-in-out !important;
   box-shadow: 5px 5px 0 0.125em #E86A33 !important;
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
 }
 
 .is-WorksItem:hover img {
@@ -128,7 +130,7 @@
 }
 
 .is-WorksItem-img {
-  transition: background-color 3s linear;
+  transition: background-color 1s linear;
   margin-top: 0rem;
   margin-bottom: 0rem;
   overflow: hidden;
@@ -529,6 +531,8 @@
   .is-post-item {
     width: 100%;
     margin-top: 1rem;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
   .is-post-author-container {
