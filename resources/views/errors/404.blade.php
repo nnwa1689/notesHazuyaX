@@ -13,23 +13,25 @@
       <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
   </head>
   <body>
-    <section class="hero is-fullheight">
-      <div class="hero-body has-text-centered is-justify-content-center">
-          <img class="loading-logo" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
-          <p class="title is-1">
-            <span id="errText" class="has-text-link has-text-shadow"></span>
-          </p>
-          <p class="subtitle is-3">迷路惹QQ</p>
-          <a href="/"><button class="button is-link is-large">回到起點</button></a>
+  <section class="hero is-fullheight">
+      <div class="hero-body">
+          <div class="container has-text-centered">
+            <img class="loading-logo" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+            <p class="title is-1">
+              <span id="errText" class="has-text-link has-text-shadow"></span>
+            </p>
+            <p class="subtitle is-3">迷路惹QQ</p>
+            <a href="/"><button class="button is-link is-large">回到起點</button></a>
+          </div>
       </div>
-    </section>
+  </section>
   </body>
   <script id="mainScript">
     var typed = new Typed("#errText", {
-        strings:["4 0 4",],
+        strings:["4  0  4",],
         stringsElement: '#typed-strings',
         typeSpeed: 30,
-        startDelay: 2000,
+        startDelay: 4000,
         loop: true,
     });
   </script>
