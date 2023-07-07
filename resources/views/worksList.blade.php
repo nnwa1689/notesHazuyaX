@@ -9,12 +9,13 @@
     <div class="columns is-multiline is-mobile is-justify-content-center" style="align-items: end;">
     @php($i = 1)
     @foreach($WorksList as $item)
-        <div data-scroll data-scroll-speed="{{($i == 2) || $i == 3 ? '3' : '5'}}" data-scroll-delay="1.5" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works/{{$item -> WorksID}}')" class="is-WorksItem {{ ($i == 2) || $i == 3 ? 'is-works-item-min' : 'is-works-item-large' }}">
-            <img class="image" style="max-width:1000px; max-height:1000px;" src="{{$item -> CoverImage}}">
-            <a class="button works-image-tag is-primary is-outlined is-rounded is-medium">
-                <span>{{$item -> WorksName}}</span>
-            </a>
-        </div>
+        @component('compoments.WorksItem',
+            ['url' => $webData['webConfig'][13]->tittle."works/".$item -> WorksID,
+            'CoverImage' => $item -> CoverImage,
+            'WorksName' => $item -> WorksName,
+            'i' => $i,
+            ])
+        @endcomponent
         @if($i == 0)
             @php($i++)
         @elseif($i == 1)

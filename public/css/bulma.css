@@ -81,22 +81,6 @@
   text-overflow: ellipsis;
 }
 
-.is-homeBanner {
-  transition: transform 0.3s;
-  transform: scale(1.0);
-  padding: 0;
-  border-radius: 15px;
-  width: 100%;
-  max-height: 320px;
-}
-
-.is-homeBanner:hover {
-  transition: transform 0.3s;
-  transform: scale(1.03);
-  cursor: pointer;
-  padding: 0;
-}
-
 .is-WorksItem img {
   transition: all 0.3s ease-in-out;
   width: 100%;
@@ -111,28 +95,12 @@
   position: absolute;
   background-color: #FFFFFF !important;
   border-width: 0px !important;
-  bottom: 4.25rem;
-  left: 1.5rem;
-  margin-bottom: -4.75rem;
+  border-top-left-radius: 0px;
 }
 
 .works-image-tag:hover {
   transition: all 0.3s ease-in-out !important;
   box-shadow: 5px 5px 0 0.125em #E86A33 !important;
-}
-
-.works-image-tag-customer {
-  transition: all 0.3s ease-in-out;
-  z-index: 1;
-  transform: scale(1.0);
-  position: absolute;
-  background-color: #263A29 !important;
-  color: #FFFFFF !important;
-  border-width: 0px !important;
-  border-style: solid;
-  top: 2.5rem;
-  left: 1.25rem;
-  margin-bottom: -4.75rem;
 }
 
 .is-WorksItem:hover img {
@@ -152,12 +120,6 @@
   transition: all 0.3s linear;
   background-color: #263A29 !important;
   color: #FFFFFF !important;
-}
-
-.is-WorksItem:hover .works-image-tag-customer  {
-  transition: all 0.3s linear;
-  background-color: #FFFFFF !important;
-  color: #263A29 !important;
 }
 
 .is-WorksItem {

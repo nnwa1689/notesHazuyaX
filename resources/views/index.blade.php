@@ -28,24 +28,23 @@
     <section class="hero is-link is-shadow is-halfheight">
         <div class="hero-body">
             <div class="">
-                <p class="title is-1">
-                    設計。作品
-                </p>
-                <p class="subtitle is-2">
-                    看看精選作品
-                </p>
+                <p class="title is-2">近期作品</p>
+                <p class="subtitle is-5">期待在每次的作品中呈現一種令人放鬆的體驗，</p>
+                <p class="subtitle is-5">溫和的顏色、簡單的拼貼，再加上一點動感，</p>
+                <p class="subtitle is-5">讓平凡的資訊加上一些點綴。</p>
             </div>
         </div>
         <div class="container p-3">
             <div class="columns is-multiline is-mobile is-justify-content-center" style="align-items: end;">
                 @php($i = 1)
                 @foreach($worksData as $item)
-                <div data-scroll data-scroll-speed="2.5" data-scroll-delay="1.5" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works/{{$item -> WorksID}}')" class="is-WorksItem {{ ($i == 2) || $i == 3 ? 'is-works-item-min' : 'is-works-item-large' }}">
-                    <img class="image" src="{{$item -> CoverImage}}">
-                    <a class="button works-image-tag is-primary is-outlined is-rounded is-medium">
-                        <span>{{$item -> WorksName}}</span>
-                    </a>
-                </div>
+                    @component('compoments.WorksItem',
+                        ['url' => $webData['webConfig'][13]->tittle."works/".$item -> WorksID,
+                        'CoverImage' => $item -> CoverImage,
+                        'WorksName' => $item -> WorksName,
+                        'i' => $i,
+                        ])
+                    @endcomponent
                 @if($i == 0)
                 @php($i++)
                 @elseif($i == 1)
@@ -57,29 +56,18 @@
                 @endif
                 @endforeach
             </div>
-            <p  data-scroll data-scroll-speed="2" class="subtitle is-2">
-                看看不同作品，也可以找我們聊聊！
+            <p class="has-text-right">
+                <button class="button is-primary mt-6 mb-6 mr-3" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
+                    <div class="columns">
+                        <div class="column">
+                            <p class="title is-6">
+                                更多作品
+                                <i class="fas fa-arrow-right ml-1"></i>
+                            </p>
+                        </div>
+                    </div>
+                </button>
             </p>
-            <button class="button is-primary mt-6 mr-3" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
-                <div class="columns">
-                    <div class="column">
-                        <p class="title is-6">
-                            更多作品
-                            <i class="fas fa-arrow-right ml-1"></i>
-                        </p>
-                    </div>
-                </div>
-            </button>
-            <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
-                <div class="columns">
-                    <div class="column">
-                        <p class="title is-6">
-                            聊聊
-                            <i class="fas fa-arrow-right ml-1"></i>
-                        </p>
-                    </div>
-                </div>
-            </button>
         </div>
     </section>
 </div>
@@ -87,12 +75,10 @@
     <section class="hero is-success is-shadow is-halfheight">
         <div class="hero-body">
             <div class="container is-fluid has-text-right">
-                <p class="subtitle is-2">
-                    為過程做一些紀錄
+                <p class="subtitle is-5">
+                    製作祕辛、技術分享
                 </p>
-                <p class="title is-1">
-                    技術雜記
-                </p>
+                <p class="title is-2">技術雜記</p>
             </div>
         </div>
         <div class="container p-3">
@@ -114,10 +100,7 @@
                     @endcomponent
                 @endforeach
             </div>
-            <p data-scroll data-scroll-speed="2" class="subtitle is-2">
-                    繼續閱讀更多雜紀
-            </p>
-            <button class="button is-link mt-3 is-large" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}post')">
+            <button class="button is-link mt-3 mb-3 is-large" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}post')">
                 <div class="columns">
                     <div class="column">
                         <p class="title is-6">
@@ -130,18 +113,17 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="mb-6">
+<div data-scroll data-scroll-speed="-2" data-scroll-delay="1" class="mt-3 mb-6">
     <section class="hero is-dark is-shadow is-medium">
     <div class="hero-body">
         <div class="container has-text-centered">
-        <p class="title is-4">
-            有想法嗎？來聊聊天吧，或許我們會很合拍！！
-        </p>
+        <p class="title is-4">有想法嗎？</p>
+        <p class="title is-5">來聊聊吧，也許能有更多不同的想法！</p>
         <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
             <div class="columns">
                 <div class="column">
                     <p class="title is-6">
-                        走阿，聊聊！
+                        走，聊聊！
                         <i class="fas fa-arrow-right ml-1"></i>
                     </p>
                 </div>
