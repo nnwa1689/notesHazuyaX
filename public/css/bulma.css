@@ -369,22 +369,24 @@
   background-color: #263A29;
 }
 
-.is-post-item-img:hover .post-image-tag  {
+.is-post-item:hover .post-image-tag  {
   transition: all 0.3s linear;
   background-color: #263A29 !important;
   color: #FFFFFF !important;
 }
 
-.is-post-item-img:hover .post-image-tag-category  {
+.is-post-item:hover .post-image-tag-category  {
   transition: all 0.3s linear;
   background-color: #E86A33 !important;
   color: #FFFFFF !important;
 }
 
 .is-post-item-img {
-  transition: background-color 3s linear;
+  transition: background-color 1s linear;
   overflow: hidden;
   border-radius: 15px;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
   height:550px;
   max-height:550px;
   width: 100%;
