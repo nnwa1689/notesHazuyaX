@@ -31,7 +31,9 @@
         strings:["4  0  4",],
         stringsElement: '#typed-strings',
         typeSpeed: 30,
-        startDelay: 4000,
+        startDelay: 1000,
+        backSpeed: 70,
+        backDelay: 2000,
         loop: true,
     });
   </script>
