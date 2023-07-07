@@ -30,8 +30,7 @@
             <div class="">
                 <p class="title is-2">近期作品</p>
                 <p class="subtitle is-5">期待在每次的作品中呈現一種令人放鬆的體驗，</p>
-                <p class="subtitle is-5">溫和的顏色、簡單的拼貼，再加上一點動感，</p>
-                <p class="subtitle is-5">讓平凡的資訊加上一些點綴。</p>
+                <p class="subtitle is-5">溫和的顏色、簡單的拼貼，再加上一點動感，讓平凡的資訊加上一些點綴。</p>
             </div>
         </div>
         <div class="container p-3">

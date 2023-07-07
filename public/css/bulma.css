@@ -323,8 +323,8 @@
   position: absolute;
   background-color: #FFFFFF !important;
   border-width: 0px !important;
-  bottom: 8.25rem;
-  left: 1.5rem;
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
 }
 
 .post-image-tag:hover {
@@ -339,22 +339,13 @@
   background-color: #FFFFFF !important;
   border-width: 0px !important;
   border-style: solid;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
 }
 
 .post-image-tag-category:hover {
   transition: all 0.3s ease-in-out;
   transform: scale(1.1);
-}
-
-.post-image-tag-author {
-  transition: all 0.3s ease-in-out;
-  transform: scale(1.0);
-  position:absolute;
-  background-color: transparent !important;
-  border-width: 0px !important;
-  border-style: solid;
-  bottom: calc(550px - 2rem);
-  float: right;
 }
 
 .is-post-item-img img {

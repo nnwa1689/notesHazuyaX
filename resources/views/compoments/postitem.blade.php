@@ -9,8 +9,8 @@
         <img alt="{{$PostTittle}}" class="image" src="/images/NotesHZ_ICON_2023.png">
         @endif
     </div>
-    <a class="button post-image-tag is-outlined is-medium">
-        <span>{{ strip_tags(Str::limit($PostTittle, 30)) }}</span>
+    <a class="button is-multiline post-image-tag is-primary is-outlined is-medium ">
+        <span>{{ strip_tags(Str::limit($PostTittle, 50)) }}</span>
     </a>
 </div>
 
