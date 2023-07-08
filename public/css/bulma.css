@@ -81,6 +81,11 @@
   text-overflow: ellipsis;
 }
 
+.is-WorksItem {
+    max-height: 700px;
+    position: relative;
+}
+
 .is-WorksItem:hover {
   cursor: pointer;
 }
