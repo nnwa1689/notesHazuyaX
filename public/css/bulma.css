@@ -486,7 +486,7 @@
 
 @media screen and (max-width: 768px) {
   .is-WorksItem {
-
+    max-height: 400px;
   }
 
   .is-post-index {
