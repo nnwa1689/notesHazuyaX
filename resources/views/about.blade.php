@@ -44,12 +44,13 @@
                         <p class="title is-1"><i class="fas fa-hands"></i></p>
                     </div>
                     <div class="column is-9">
-                        <p class="subtitle is-1">不過，我自身也是有些限制</p>
+                        <p class="subtitle is-1">擅長與限制</p>
                         <p class="subtitle is-4"># 樣式可客製化設計，不會大家都長得一樣</p>
                         <p class="subtitle is-4"># 但也可以提供套版方式開發，如果專案很趕的話</p>
                         <p class="subtitle is-4"># 我會依照規模需求，提供合適的技術、託管平台</p>
                         <p class="subtitle is-4"># 對於過往我沒設計過的功能，可能需要再多討論</p>
                         <p class="subtitle is-4"># 目前沒辦法協助串接金流 API，Sorry！</p>
+                        <p class="subtitle is-4"># 目前是接案小白，討論過程可能要費一點力氣oWo</p>
                     </div>
                 </div>
             </div>
