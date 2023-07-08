@@ -486,10 +486,7 @@
 
 @media screen and (max-width: 768px) {
   .is-WorksItem {
-      width: 100%;
-      height: 500px;
-      margin-right:0rem !important;
-      margin-left:0rem !important;
+
   }
 
   .is-post-index {
