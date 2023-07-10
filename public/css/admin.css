@@ -1,27 +1,13 @@
-@font-face {
-  font-family: 'NotoSansTC-Medium';
-  font-style: normal;
-  src: url(/fonts/NotoSansTC-Medium.otf);
-  unicode-range: U+4E00-9FFF;
-}
-
-@font-face {
-  font-family: 'NotoSansTC-Medium';
-  font-style: normal;
-  src: url(/fonts/RedHatText-Medium.ttf);
-  unicode-range: U+00-024F;
-}
 html, body {
-font-family: "NotoSansTC-Medium";
-font-size: 16px;
-line-height: 1.5;
-height: 100%;
-background: #F2E3DB;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 100%;
+  background: #F2E3DB;
 }
 nav.navbar {
-border-top: 4px solid #263A29;
-margin-bottom: 1rem;
-}
+  border-top: 4px solid #263A29;
+  margin-bottom: 1rem;
+  }
 
 .navbar.is-fixed-bottom, .navbar.is-fixed-top {
   background: #ECF0F3 !important;
