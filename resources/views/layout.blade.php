@@ -153,6 +153,7 @@
                         @endif
                         @endforeach
                         <!--Dynamic END-->
+                        <!--
                         @if(gettype($webData['userData']) == 'integer')
                             <a class="navbar-item is-tab" target="_blank" href="/login">登入</a>
                         @else
@@ -165,6 +166,7 @@
                                 </div>登出
                             </a>
                         @endif
+                        -->
                         </div>
                     </div>
                 </div>

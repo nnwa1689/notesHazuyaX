@@ -1,14 +1,14 @@
 @font-face {
-    font-family: 'NotoSansTC-Medium';
+    font-family: 'NotoSansTC-Regular';
     font-style: normal;
-    src: url(/fonts/NotoSansTC-Medium.otf);
+    src: url(/fonts/NotoSansTC-Regular.otf);
     unicode-range: U+4E00-9FFF;
   }
 
 @font-face {
-    font-family: 'NotoSansTC-Medium';
+    font-family: 'NotoSansTC-Regular';
     font-style: normal;
-    src: url(/fonts/RedHatText-Medium.ttf);
+    src: url(/fonts/RedHatText-Regular.ttf);
     unicode-range: U+00-024F;
   }
 
@@ -18,7 +18,7 @@
     width: 300px;
 }
 html,body {
-  font-family: "NotoSansTC-Medium";
+  font-family: "NotoSansTC-Regular";
   font-size: 14px;
   font-weight: 300;
 }
