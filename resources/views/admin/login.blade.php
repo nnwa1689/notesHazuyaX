@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>登入點界設計</title>
+    <title>登入</title>
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/bulma.css">
     <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
     <!-- Bulma Version 0.8.x-->
