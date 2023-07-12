@@ -18,7 +18,7 @@
             </p>
             <p class="is-size-3 has-text-right">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                <span class="has-text-primary">設計讓人溫暖且感覺放鬆的資訊閱覽體驗！</span>
+                <span class="has-text-primary">創造讓人溫暖且感覺放鬆的資訊閱覽體驗！</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
             </p>
         </div>
