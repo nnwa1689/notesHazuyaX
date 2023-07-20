@@ -785,6 +785,7 @@ p > li{
 
 ::selection {
   background-color: #E86A33;
+  color: whitesmoke;
 }
 
 h1,
