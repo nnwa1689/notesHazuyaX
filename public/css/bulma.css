@@ -885,14 +885,13 @@ pre {
 
 body {
   color: #263A29;
-  background-color: #F2E3DB;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
 }
 
 html {
-  background-color: #F2E3DB;
+  background-color: #F5EDDC;
 }
 
 a {
@@ -4087,6 +4086,18 @@ fieldset[disabled] .button {
   line-height: 1.25;
 }
 
+@media screen and (min-width: 768px) {
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
+
 .content h1 {
   font-size: 2.5em;
   margin-bottom: 1.125em
@@ -4135,6 +4146,13 @@ fieldset[disabled] .button {
   line-height: 2em;;
 }
 
+@media screen and (min-width: 768px) {
+  .content p {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+}
+
 blockquote {
   /*font-family: 'NotoSerifTC-Medium';*/
   background-color: #41644A;
@@ -4143,7 +4161,13 @@ blockquote {
   border-radius: 10px;
   padding: 1.25em 1.5em;
   box-shadow: 5px 5px 0 0.125em #E86A33;
-  margin: 1.5em 0px;
+  margin: 1.5em auto;
+}
+
+@media screen and (min-width: 768px) {
+  blockquote {
+    width: 700px;
+  }
 }
 
 blockquote a {
@@ -4160,6 +4184,12 @@ blockquote a {
   list-style-position: outside;
   margin-left: 2em;
   margin-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .content ol {
+    padding: 0 130px;
+  }
 }
 
 .content ol:not([type]) {
@@ -4187,6 +4217,12 @@ blockquote a {
   list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .content ul {
+    padding: 0 140px;
+  }
 }
 
 .content ul ul {
