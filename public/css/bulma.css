@@ -4073,7 +4073,7 @@ fieldset[disabled] .button {
 .content blockquote:not(:last-child),
 .content pre:not(:last-child),
 .content table:not(:last-child) {
-  margin-bottom: 2em;
+  margin-bottom: 2.5rem
 }
 
 .content h1,
@@ -4084,6 +4084,7 @@ fieldset[disabled] .button {
 .content h6 {
   font-weight: 600;
   line-height: 1.25;
+  margin-bottom: 2.5rem
 }
 
 @media screen and (min-width: 768px) {
@@ -4100,7 +4101,6 @@ fieldset[disabled] .button {
 
 .content h1 {
   font-size: 2.5em;
-  margin-bottom: 1.125em
 }
 
 .content h1:not(:first-child) {
@@ -4109,7 +4109,6 @@ fieldset[disabled] .button {
 
 .content h2 {
   font-size: 2.125em;
-  margin-bottom: 1.125em;
 }
 
 .content h2:not(:first-child) {
@@ -4118,7 +4117,6 @@ fieldset[disabled] .button {
 
 .content h3 {
   font-size: 1.75em;
-  margin-bottom: 1.125em;
 }
 
 .content h3:not(:first-child) {
@@ -4127,23 +4125,21 @@ fieldset[disabled] .button {
 
 .content h4 {
   font-size: 1.5em;
-  margin-bottom: 1.125em;
 }
 
 .content h5 {
   font-size: 1.375em;
-  margin-bottom: 1.125em;
 }
 
 .content h6 {
   font-size: 1.25em;
-  margin-bottom: 1.125em;
 }
 
 .content p{
   /*font-family: 'NotoSerifTC-Medium';*/
   font-size: 1.125em;
-  line-height: 2em;;
+  line-height: 2.11em;;
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -4180,7 +4176,7 @@ blockquote a {
 
 .content img{
   border-radius: 15px;
-  margin: 2.5em 0;
+  margin: 2.5rem 0;
 }
 
 .content ol {
@@ -4290,6 +4286,16 @@ blockquote a {
   box-shadow: 5px 5px 0 0.125em #E86A33;
   border-style: solid;
   width: 100%;
+}
+
+.content table > p {
+  padding: 0 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .content table {
+    max-width: 700px;
+  }
 }
 
 .content table td,
