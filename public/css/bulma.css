@@ -891,7 +891,7 @@ body {
 }
 
 html {
-  background-color: #FAF3E3;
+  background-color: #EDE4E0;
 }
 
 a {
@@ -4141,7 +4141,7 @@ fieldset[disabled] .button {
   line-height: 2.11em;;
 }
 
-.content.title {
+.content .title {
   margin-bottom: 2.5rem !important;
 }
 
