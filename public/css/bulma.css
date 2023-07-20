@@ -4292,7 +4292,7 @@ blockquote a {
   width: 100%;
 }
 
-.content table > p {
+.content td p {
   padding: 0 !important;
 }
 
