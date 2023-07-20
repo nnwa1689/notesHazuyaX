@@ -891,7 +891,7 @@ body {
 }
 
 html {
-  background-color: #F2E3DB;
+  background-color: #FAF3E3;
 }
 
 a {
@@ -4139,7 +4139,10 @@ fieldset[disabled] .button {
   /*font-family: 'NotoSerifTC-Medium';*/
   font-size: 1.125em;
   line-height: 2.11em;;
-  
+}
+
+.content.title {
+  margin-bottom: 2.5rem !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -4270,8 +4273,8 @@ blockquote a {
 
 @media screen and (min-width: 768px) {
   .content pre {
-    width: 700px;
-    margin: 0 auto;
+    width: 700px !important;
+    margin: 0 auto !important;
   }
 }
 
