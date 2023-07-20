@@ -891,7 +891,7 @@ body {
 }
 
 html {
-  background-color: #F5EDDC;
+  background-color: #F2E3DB;
 }
 
 a {
@@ -4164,6 +4164,10 @@ blockquote {
   margin: 1.5em auto;
 }
 
+blockquote p {
+  padding: 0px !important;
+}
+
 @media screen and (min-width: 768px) {
   blockquote {
     width: 700px;
@@ -4266,6 +4270,12 @@ blockquote a {
   padding: 1.25em 1.5em;
   white-space: pre;
   word-wrap: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .content pre {
+    width: 700px;
+  }
 }
 
 .content sup,
