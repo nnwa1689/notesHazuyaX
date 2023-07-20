@@ -4275,6 +4275,7 @@ blockquote a {
 @media screen and (min-width: 768px) {
   .content pre {
     width: 700px;
+    margin: 0 auto;
   }
 }
 

@@ -95,6 +95,7 @@
                         image_advtab: true,
                         relative_urls: false,
                         convert_urls: false,
+                        valid_children : '-p[img],h1[img],h2[img],h3[img],h4[img],+div[img],span[img]'
                         //automatic_uploads: true,
                         //image_uploadtab: true,
                         //images_upload_handler: example_image_upload_handler,
