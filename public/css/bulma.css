@@ -4108,7 +4108,7 @@ fieldset[disabled] .button {
 }
 
 .content h1 {
-  font-size: 2.5em;
+  font-size: 2.5rem;
 }
 
 .content h1:not(:first-child) {
@@ -4116,7 +4116,7 @@ fieldset[disabled] .button {
 }
 
 .content h2 {
-  font-size: 2.125em;
+  font-size: 2.125rem;
 }
 
 .content h2:not(:first-child) {
@@ -4124,7 +4124,7 @@ fieldset[disabled] .button {
 }
 
 .content h3 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
 }
 
 .content h3:not(:first-child) {
@@ -4132,20 +4132,20 @@ fieldset[disabled] .button {
 }
 
 .content h4 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 .content h5 {
-  font-size: 1.375em;
+  font-size: 1.375rem;
 }
 
 .content h6 {
-  font-size: 1.25em;
+  font-size: 1.25rem;
 }
 
 .content p{
   /*font-family: 'NotoSerifTC-Medium';*/
-  font-size: 1.125em;
+  font-size: 1.125rem;
   line-height: 2.11;;
 }
 
