@@ -4175,6 +4175,16 @@ blockquote p {
   padding: 0px !important;
 }
 
+blockquote h1,
+blockquote h2,
+blockquote h3,
+blockquote h4,
+blockquote h5,
+blockquote h6 {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
 @media screen and (min-width: 768px) {
   blockquote {
     width: 700px;
