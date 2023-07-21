@@ -104,15 +104,13 @@
   position: absolute;
   background-color: #FFFFFF !important;
   border-width: 0px !important;
-  border-top-left-radius: 0px !important;
-  border-top-right-radius: 0px !important;
+  border-radius: 0px 0px 15px 15px !important;
 }
 
 .works-image-tag:hover {
   transition: all 0.3s ease-in-out !important;
   box-shadow: 5px 5px 0 0.125em #E86A33 !important;
-  border-top-left-radius: 4px !important;
-  border-top-right-radius: 4px !important;
+  border-radius: 15px !important;
 }
 
 .is-WorksItem:hover img {
@@ -329,11 +327,13 @@
   background-color: #FFFFFF !important;
   border-width: 0px !important;
   top: -1.5rem;
+  border-radius: 0px 15px 15px 15px !important;
 }
 
 .post-image-tag:hover {
   transition: all 0.3s ease-in-out !important;
   box-shadow: 5px 5px 0 0.125em #E86A33 !important;
+  border-radius: 15px !important;
 }
 
 .post-image-tag-category {
@@ -344,11 +344,13 @@
   border-style: solid;
   top: 1rem;
   z-index: 5;
+  border-radius: 0px 15px 15px 15px !important;
 }
 
 .post-image-tag-category:hover {
   transition: all 0.3s ease-in-out;
   transform: scale(1.1);
+  border-radius: 15px !important;
 }
 
 .is-post-item-img img {
