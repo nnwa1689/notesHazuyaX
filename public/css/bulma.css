@@ -4073,11 +4073,14 @@ fieldset[disabled] .button {
 .content p:not(:last-child),
 .content dl:not(:last-child),
 .content ol:not(:last-child),
-.content ul:not(:last-child),
+.content ul:not(:last-child) {
+  margin-bottom: 2.5rem
+}
+
 .content blockquote:not(:last-child),
 .content pre:not(:last-child),
 .content table:not(:last-child) {
-  margin-bottom: 2.5rem
+  margin-bottom: 2.625rem
 }
 
 .content h1,
@@ -4086,9 +4089,10 @@ fieldset[disabled] .button {
 .content h4,
 .content h5,
 .content h6 {
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
-  margin-bottom: 2.5rem
+  margin-bottom: 2.5rem;
+  margin-top: 3.75rem;
 }
 
 @media screen and (min-width: 768px) {
