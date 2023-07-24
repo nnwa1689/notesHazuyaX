@@ -4108,7 +4108,7 @@ fieldset[disabled] .button {
 }
 
 .content h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 .content h1:not(:first-child) {
@@ -4116,7 +4116,7 @@ fieldset[disabled] .button {
 }
 
 .content h2 {
-  font-size: 2.125rem;
+  font-size: 1.875rem;
 }
 
 .content h2:not(:first-child) {
@@ -4124,7 +4124,7 @@ fieldset[disabled] .button {
 }
 
 .content h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .content h3:not(:first-child) {
@@ -4132,15 +4132,41 @@ fieldset[disabled] .button {
 }
 
 .content h4 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .content h5 {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
 }
 
 .content h6 {
   font-size: 1.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .content h1 {
+    font-size: 1.975rem;
+  }
+
+  .content h2 {
+    font-size: 1.6rem;
+  }
+
+  .content h3 {
+    font-size: 1.25rem;
+  }
+
+  .content h4 {
+    font-size: 1.25rem;
+  }
+
+  .content h5 {
+    font-size: 1.25rem;
+  }
+
+  .content h6 {
+    font-size: 1.25rem;
+  }
 }
 
 .content p{
@@ -5348,31 +5374,61 @@ a.tag:hover {
 }
 
 .title.is-1 {
-  font-size: 6rem;
+  font-size: 5.625rem;
 }
 
 .title.is-2 {
-  font-size: 5rem;
+  font-size: 3.625rem;
 }
 
 .title.is-3 {
-  font-size: 4rem;
+  font-size: 2.25rem;
 }
 
 .title.is-4 {
-  font-size: 3rem;
+  font-size: 1.875rem;
 }
 
 .title.is-5 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .title.is-6 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .title.is-7 {
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .title.is-1 {
+    font-size: 5.35rem;
+  }
+
+  .title.is-2 {
+    font-size: 3.35rem;
+  }
+
+  .title.is-3 {
+    font-size: 1.975rem;
+  }
+
+  .title.is-4 {
+    font-size: 1.7rem;
+  }
+
+  .title.is-5 {
+    font-size: 1.25rem;
+  }
+
+  .title.is-6 {
+    font-size: 1.25rem;
+  }
+
+  .title.is-7 {
+    font-size: 1.25rem;
+  }
 }
 
 .subtitle {
@@ -5407,45 +5463,45 @@ a.tag:hover {
 }
 
 .subtitle.is-5 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .subtitle.is-6 {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .subtitle.is-7 {
-  font-size: 0.75rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px) {
-  .title.is-1 {
-      font-size: 3rem;
-    }
+  .subtitle.is-1 {
+    font-size: 2.725rem;
+  }
 
-    .title.is-2 {
-      font-size: 2.5rem;
-    }
+  .subtitle.is-2 {
+    font-size: 2.225rem;
+  }
 
-    .title.is-3 {
-      font-size: 2rem;
-    }
+  .subtitle.is-3 {
+    font-size: 1.725rem;
+  }
 
-    .title.is-4 {
-      font-size: 1.5rem;
-    }
+  .subtitle.is-4 {
+    font-size: 1.25rem;
+  }
 
-    .title.is-5 {
-      font-size: 1.25rem;
-    }
+  .subtitle.is-5 {
+    font-size: 1.25rem;
+  }
 
-    .title.is-6 {
-      font-size: 1rem;
-    }
+  .subtitle.is-6 {
+    font-size: 1.25rem;
+  }
 
-    .title.is-7 {
-      font-size: 0.75rem;
-    }
+  .subtitle.is-7 {
+    font-size: 1.25rem;
+  }
 }
 
 .heading {
@@ -7602,8 +7658,7 @@ a.list-item {
 }
 
 .fullMenu {
-  transition: all 0.5s ease-in-out;
-  background-color: none;
+  transition: height 0.5s ease-in-out;
   position: fixed;
   width: 100%;
   height: 0%;
@@ -7613,6 +7668,10 @@ a.list-item {
   margin-left: 0%;
   margin-top: -7rem;
   z-index: -3;
+  overflow: hidden;
+  background-color: rgba(38, 58, 41, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .fullMenu a{
@@ -7677,13 +7736,10 @@ a.list-item {
 }
 
 .is-on {
+  transition: height 0.5s ease-in-out;
   opacity: 1;
-  transition: all 0.5s ease-in-out;
-  height: 70%;
+  height: 80%;
   z-index: 3;
-  background-color: rgba(38, 58, 41, 0.90) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 @media screen and (max-width: 1024px){

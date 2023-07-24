@@ -7,18 +7,11 @@
 <li class="is-active"><a href="#" aria-current="page">{{$WorkDetail[0]->WorksName}}</a></li>
 @endsection
 @section('content')
-<!--
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1.5" class="section has-text-centered mb-3 mt-6">
-    <p class="is-size-3">{{$WorkDetail[0]->WorksName}}</p>
-    <p class="is-size-5">{{$WorkDetail[0]->Customer}}</p>
-    <hr/>
-    <p class="is-size-5">{{$WorkDetail[0]->ShortIntro}}</p>
+<div class="container is-max-desktop">
+    <section data-scroll data-scroll-speed="3" class="hero is-small p-0 mb-6 mt-1 ml-0 mr-0" style="overflow: hidden;">
+        <img class="ContentCoverImage" src="{{ $WorkDetail[0]->CoverImage }}" data-scroll data-scroll-speed="-3">
+    </section>
 </div>
--->
-
-<section data-scroll data-scroll-speed="3" class="hero is-small p-0 mb-6 mt-1 ml-0 mr-0" style="overflow: hidden;">
-    <img class="ContentCoverImage" src="{{ $WorkDetail[0]->CoverImage }}" data-scroll data-scroll-speed="-3">
-</section>
 
 <div class="container is-max-desktop">
     <div class="content">
