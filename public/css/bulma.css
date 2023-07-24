@@ -7666,7 +7666,7 @@ a.list-item {
   color: #F2E3DB;
   margin-left: 0%;
   margin-top: -7rem;
-  z-index: -3;
+  z-index: 3;
   overflow: hidden;
   background-color: rgba(38, 58, 41, 0.95) !important;
   backdrop-filter: blur(10px);
@@ -7737,7 +7737,6 @@ a.list-item {
 .is-on {
   transition: height 0.5s ease-in-out;
   height: 80%;
-  z-index: 3;
 }
 
 @media screen and (max-width: 1024px){
