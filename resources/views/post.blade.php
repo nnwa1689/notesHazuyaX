@@ -14,7 +14,7 @@
             @endif
         </p>
     </div>
-    <div class="container is-max-desktop">
+    <div class="container">
         <section data-scroll data-scroll-speed="3" class="hero is-small p-0 mb-6 ml-0 mr-0" style="overflow: hidden;">
             <img class="ContentCoverImage" src="{{ $postData[0]->CoverImage }}" data-scroll data-scroll-speed="-3">
         </section>
