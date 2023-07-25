@@ -28,7 +28,6 @@
                 let player = document.querySelector("lottie-player");
                 $('.navbar-toggle').click(function(){
                     $('.fullMenu').toggleClass('is-on');
-                    $('.fullMenu').toggleClass('is-off-radius');
                     $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
                 });
 
@@ -45,7 +44,7 @@
 
                 setTimeout(() => {
                     gsap.to(".pageloader", {
-                        duration: 0.5,
+                        duration: 1,
                         y: '+120vh',
                         ease: "power2.inout"
                     });
@@ -86,7 +85,7 @@
                 </div>
             </div>
         </nav>
-        <div class="fullMenu is-off-radius">
+        <div class="fullMenu">
             <div class="container is-max-desktop" style="margin-top:7rem;">
                 <div class="columns is-variable is-8">
                     <div class="column is-8">
@@ -260,7 +259,7 @@
                 transitions: [{
                     leave(data) {
                         return gsap.to(".pageloader", {
-                            duration: 0.5,
+                            duration: 1,
                             y: 0,
                             ease: "power2.inout",
                         });
