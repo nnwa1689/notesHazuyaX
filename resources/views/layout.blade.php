@@ -27,7 +27,12 @@
             $(document).ready(function() {
                 let player = document.querySelector("lottie-player");
                 $('.navbar-toggle').click(function(){
-                    $('.fullMenu').toggleClass('is-on');
+                    //$('.fullMenu').toggleClass('is-on');
+                    gsap.to(".fullMenu", {
+                        duration: 1,
+                        height: "80%",
+                        ease: "power4.inOut"
+                    });
                     $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
                 });
 
@@ -44,7 +49,7 @@
 
                 setTimeout(() => {
                     gsap.to(".pageloader", {
-                        duration: 1.5,
+                        duration: 1,
                         y: '+120vh',
                         ease: "power4.inOut"
                     });
@@ -259,14 +264,14 @@
                 transitions: [{
                     leave(data) {
                         return gsap.to(".pageloader", {
-                            duration: 1.3,
+                            duration: 1,
                             y: 0,
                             ease: "power4.inOut",
                         });
                     },
                     after(data) {
                         return gsap.to(".pageloader", {
-                            duration: 1.3,
+                            duration: 1,
                             y: '+120vh',
                             ease: "power4.inOut",
                             delay: 1
