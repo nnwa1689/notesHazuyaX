@@ -28,6 +28,7 @@
                 let player = document.querySelector("lottie-player");
                 $('.navbar-toggle').click(function(){
                     $('.fullMenu').toggleClass('is-on');
+                    $('.fullMenu').toggleClass('is-off-radius');
                     $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
                 });
 
@@ -85,7 +86,7 @@
                 </div>
             </div>
         </nav>
-        <div class="fullMenu">
+        <div class="fullMenu is-off-radius">
             <div class="container is-max-desktop" style="margin-top:7rem;">
                 <div class="columns is-variable is-8">
                     <div class="column is-8">

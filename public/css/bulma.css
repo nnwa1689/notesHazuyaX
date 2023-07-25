@@ -7686,12 +7686,17 @@ a.list-item {
 }
 
 .is-on {
-  transition: height 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   height: 80%;
+  border-radius: 0px;
+}
+
+.is-off-radius {
+  transition: all 0.5s ease-in-out;
+  border-radius: 0px 0px 25535px 25535px;
 }
 
 .loading {
-  transition: opacity 0.5s ease-in-out;
   z-index: 5 !important;
   top: 0 !important;
 }
