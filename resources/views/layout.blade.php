@@ -259,14 +259,14 @@
                 transitions: [{
                     leave(data) {
                         return gsap.to(".pageloader", {
-                            duration: 1.5,
+                            duration: 1.3,
                             y: 0,
                             ease: "power4.inOut",
                         });
                     },
                     after(data) {
                         return gsap.to(".pageloader", {
-                            duration: 1.5,
+                            duration: 1.3,
                             y: '+120vh',
                             ease: "power4.inOut",
                             delay: 1
