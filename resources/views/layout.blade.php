@@ -25,7 +25,8 @@
                 gsap.to(".fullMenu", {
                         duration: 0.5,
                         height: "80%",
-                        ease: "power4.inOut"
+                        ease: "power4.inOut",
+                        toggleClass: "is-on"
                     });
             }
 
@@ -33,7 +34,8 @@
                 gsap.to(".fullMenu", {
                         duration: 0.5,
                         height: "0%",
-                        ease: "power4.inOut"
+                        ease: "power4.inOut",
+                        toggleClass: "is-on"
                     });
             }
 
