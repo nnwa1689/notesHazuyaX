@@ -49,8 +49,8 @@
             $(document).ready(function() {
                 let player = document.querySelector("lottie-player");
                 $('.navbar-toggle').click(function(){
-                    $('.fullMenu').toggleClass('is-on');
                     (isMenuOpen() ? closeMenu() : openMenu());
+                    $('.fullMenu').toggleClass('is-on');
                     $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
                 });
 
