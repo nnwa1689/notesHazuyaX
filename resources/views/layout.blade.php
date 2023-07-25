@@ -46,7 +46,7 @@
                     gsap.to(".pageloader", {
                         duration: 1.5,
                         y: '+120vh',
-                        ease: ""power4.inOut""
+                        ease: "power4.inOut"
                     });
                 }, 1000);
                 /* Loading
