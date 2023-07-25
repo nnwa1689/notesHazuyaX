@@ -44,7 +44,7 @@
 
                 setTimeout(() => {
                     gsap.to(".pageloader", {
-                        duration: 1,
+                        duration: 0.6,
                         y: '+120vh',
                         ease: "power4.easeinout"
                     });
@@ -259,14 +259,14 @@
                 transitions: [{
                     leave(data) {
                         return gsap.to(".pageloader", {
-                            duration: 1,
+                            duration: 0.6,
                             y: 0,
                             ease: "power4.easeinout",
                         });
                     },
                     after(data) {
                         return gsap.to(".pageloader", {
-                            duration: 1,
+                            duration: 0.6,
                             y: '+120vh',
                             ease: "power4.easeinout",
                             delay: 1
