@@ -44,9 +44,9 @@
 
                 setTimeout(() => {
                     gsap.to(".pageloader", {
-                        duration: 1,
+                        duration: 1.5,
                         y: '+120vh',
-                        ease: "power2.inout"
+                        ease: ""power4.inOut""
                     });
                 }, 1000);
                 /* Loading
@@ -259,16 +259,16 @@
                 transitions: [{
                     leave(data) {
                         return gsap.to(".pageloader", {
-                            duration: 1,
+                            duration: 1.5,
                             y: 0,
-                            ease: "power2.inout",
+                            ease: "power4.inOut",
                         });
                     },
                     after(data) {
                         return gsap.to(".pageloader", {
-                            duration: 0.5,
+                            duration: 1.5,
                             y: '+120vh',
-                            ease: "power2.inout",
+                            ease: "power4.inOut",
                             delay: 1
                         });
                     },
