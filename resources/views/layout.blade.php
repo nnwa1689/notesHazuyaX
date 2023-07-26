@@ -23,17 +23,17 @@
         <script>
             const openMenu = () => {
                 gsap.to(".fullMenu", {
-                        duration: 0.5,
+                        duration: 0.4,
                         height: "80%",
-                        ease: "power4.inOut"
+                        ease: "power3.inOut"
                     });
             }
 
             const closeMenu = () => {
                 gsap.to(".fullMenu", {
-                        duration: 0.5,
+                        duration: 0.4,
                         height: "0%",
-                        ease: "power4.inOut"
+                        ease: "power3.inOut"
                     });
             }
 

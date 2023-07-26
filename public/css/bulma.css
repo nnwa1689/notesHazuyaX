@@ -895,7 +895,7 @@ body {
 }
 
 html {
-  background-color: #EDE4E0;
+  background-color: #E2DCD5;
 }
 
 a {
@@ -5373,6 +5373,10 @@ a.tag:hover {
   margin-top: -1.25rem;
 }
 
+.title.is-home {
+  font-size: 12.625rem;
+}
+
 .title.is-1 {
   font-size: 5.625rem;
 }
@@ -5402,6 +5406,10 @@ a.tag:hover {
 }
 
 @media screen and (max-width: 768px) {
+  .title.is-home {
+    font-size: 5rem;
+  }
+
   .title.is-1 {
     font-size: 5.35rem;
   }

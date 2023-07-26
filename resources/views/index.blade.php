@@ -10,15 +10,16 @@
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="mb-6">
     <section class="hero is-small">
         <div class="hero-body">
-            <p class="title is-1 has-text-left has-text-centered-mobile">
-                <span class="has-text-link has-text-shadow">Ｗａｒｍｔｈ</span><span class="has-text-primary has-text-shadow">＆</span>
+            <p class="title is-home has-text-centered">
+                <span class="has-text-link has-text-shadow">Warmth</span>
             </p>
-            <p class="title is-1 has-text-centered-mobile">
-                <span class="has-text-primary has-text-shadow">Ｒｅｌａｘａｔｉｏｎ</span>
+            <p class="title is-home has-text-centered">
+                <span class="has-text-primary has-text-shadow">&</span>
+                <span class="has-text-primary has-text-shadow">Relaxation</span>
             </p>
-            <p class="is-size-3 has-text-right">
+            <p class="title is-3 has-text-centered">
                 <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                <span class="has-text-primary">創造讓人溫暖且感覺放鬆的資訊閱覽體驗！</span>
+                <span class="has-text-primary">創造溫暖且放鬆的資訊閱覽體驗！</span>
                 <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
             </p>
         </div>
