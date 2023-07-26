@@ -14,7 +14,7 @@
                 <span class="has-text-link has-text-shadow">Warmth</span>
             </p>
             <p class="title is-home has-text-centered">
-                <span class="has-text-primary has-text-shadow">&</span>
+                <span class="has-text-link has-text-shadow">&</span>
                 <span class="has-text-primary has-text-shadow">Relaxation</span>
             </p>
             <p class="title is-3 has-text-centered">
