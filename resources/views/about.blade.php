@@ -188,10 +188,10 @@
                     </div>
                     <div class="column is-9">
                         <div class="columns">
-                            <div class="column is-4">
+                            <div class="column is-3">
                                 <p class="title is-4">01.</p>
                             </div>
-                            <div class="column is-8">
+                            <div class="column is-9">
                                 <p class="title is-4 has-text-link">初期閒聊</p>
                                 <p>先了解您的網站需求，像是想要的功能、內容，藉此架構出網站地圖，並提供報價與合約。</p>
                             </div>
