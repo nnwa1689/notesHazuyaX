@@ -1,6 +1,12 @@
 @extends('layout')
 @section('title', '關於 - ')
 @section('content')
+<style>
+    .text_underline {
+        border-bottom: 0.25em solid #E86A33;
+        box-shadow: 10px 10px 0 0.05em #41644A;
+    }
+</style>
 <div class="container">
     <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6">
         <p class="title is-1 has-text-left">
@@ -10,22 +16,18 @@
 
     <section class="hero is-halfheight mt-6" data-scroll data-scroll-speed="4">
         <div class="hero-body">
-            <div class="container is-fluid">
-                <div class="columns">
-                    <div class="column is-4">
-                        <p class="title is-1">
-                            <img width="300" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
-                        </p>
-                    </div>
-                    <div class="column is-8">
-                        <p class="has-text-link is-size-1 has-text-left"><i class="fas fa-quote-left"></i></p>
-                        <p class="title is-4 has-text-centered">
-                            <span id="aboutText"></span>
-                        </p>
-                        <p class="has-text-link is-size-1 has-text-right"><i class="fas fa-quote-right"></i></p>
-                    </div>
-                </div>
-            </div>
+            <p class="title is-home has-text-centered">
+                <span class="has-text-link has-text-shadow">Belief</span>
+            </p>
+            <p class="title is-home has-text-centered">
+                <span class="has-text-link has-text-shadow">&</span>
+                <span class="has-text-primary has-text-shadow">Passion</span>
+            </p>
+            <p class="title is-3 has-text-left">
+                <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
+                <span class="has-text-primary">相信資訊會為生活帶來改變，促使我們保持熱忱並做出不同的嘗試。</span>
+                <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+            </p>
         </div>
     </section>
 
@@ -274,24 +276,6 @@
             </p>
         </button>
     </div>
-
-    <section class="hero is-dark is-halfheight mt-3" data-scroll data-scroll-speed="2">
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <p class="title is-4">對於技術、網站有想法或需求嗎？<br>歡迎來聊聊天！</p>
-                <div class="columns">
-                    <div class="column">
-                        <button class="button is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
-                            <p class="title is-6 p-6 m-6">
-                                Contact Us
-                                <i class="fas fa-arrow-right ml-2"></i>
-                            </p>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </div>
 <script id="mainScript">
 var typed = new Typed("#titleText", {
