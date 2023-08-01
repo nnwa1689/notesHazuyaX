@@ -45,7 +45,7 @@
                         <p class="subtitle is-3"># 無伺服器系統開發(Firebase, Aws Lightsail)</p>
                         <p class="subtitle is-3"># 後端系統開發(PHP)</p>
                         <p class="subtitle is-3"># 無頭內容管理系統(Strapi)</p>
-                        <button class="button is-primary mt-6 is-fullwidth is-arge" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
+                        <button class="button is-primary mt-6 is-fullwidth is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
                             <p class="title is-6 p-6 m-6">
                                 參考案例
                                 <i class="fas fa-arrow-right ml-2"></i>
@@ -71,17 +71,17 @@
                         <div class="columns">
                             <div class="column is-4">
                                 <p class="title is-5 has-text-link">
-                                    <i class="fas fa-bookmark mr-1"></i><span class="has-text-secondary">靜態主題網站</span>
+                                    <i class="fas fa-bookmark mr-2"></i><span class="has-text-light">靜態主題網站</span>
                                 </p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-5 has-text-link">
-                                    <i class="fas fa-bookmark mr-1"></i><span class="has-text-secondary">動態內容網站</span>
+                                    <i class="fas fa-bookmark mr-2"></i><span class="has-text-light">動態內容網站</span>
                                 </p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-5 has-text-link">
-                                    <i class="fas fa-bookmark mr-1"></i><span class="has-text-secondary">客製化系統網站</span>
+                                    <i class="fas fa-bookmark mr-2"></i><span class="has-text-light">客製化系統網站</span>
                                 </p>
                             </div>
                         </div>
@@ -264,8 +264,8 @@
         @endforeach
     </div>
 
-    <button class="button is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
-        <p class="title is-6 p-6 m-6">
+    <button class="button is-link mt-6 p-6 ml-auto mr-auto" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
+        <p class="title is-6 p-6 m-6 has-text-light">
             Contact Us
             <i class="fas fa-arrow-right ml-2"></i>
         </p>

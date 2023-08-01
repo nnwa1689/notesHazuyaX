@@ -1934,11 +1934,11 @@ a.has-text-black:hover, a.has-text-black:focus {
 }
 
 .has-text-light {
-  color: whitesmoke !important;
+  color: #F2E3DB !important;
 }
 
 a.has-text-light:hover, a.has-text-light:focus {
-  color: #dbdbdb !important;
+  color: #E86A33 !important;
 }
 
 .has-background-light {
