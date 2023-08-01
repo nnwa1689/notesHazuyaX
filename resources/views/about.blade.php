@@ -16,18 +16,20 @@
 
     <section class="hero is-halfheight mt-6" data-scroll data-scroll-speed="4">
         <div class="hero-body">
-            <p class="title is-home has-text-centered">
-                <span class="has-text-link has-text-shadow">Belief</span>
-            </p>
-            <p class="title is-home has-text-centered">
-                <span class="has-text-link has-text-shadow">&</span>
-                <span class="has-text-primary has-text-shadow">Passion</span>
-            </p>
-            <p class="title is-3 has-text-left">
-                <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                <span class="has-text-primary">相信資訊會為生活帶來改變，促使我們保持熱忱並做出不同的嘗試。</span>
-                <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
-            </p>
+            <div class="container is-fluid has-text-left">
+                <p class="title is-home has-text-centered">
+                    <span class="has-text-link has-text-shadow">Belief</span>
+                </p>
+                <p class="title is-home has-text-centered">
+                    <span class="has-text-link has-text-shadow">&</span>
+                    <span class="has-text-primary has-text-shadow">Passion</span>
+                </p>
+                <p class="title is-3 has-text-left">
+                    <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
+                    <span class="has-text-primary">相信資訊會為生活帶來改變，促使我們保持熱忱並做出不同的嘗試。</span>
+                    <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+                </p>
+            </div>
         </div>
     </section>
 
@@ -190,20 +192,17 @@
                     </div>
                     <div class="column is-9">
                         <div class="columns">
-                            <div class="column is-3">
+                            <div class="column is-2">
                                 <p class="title is-4">01.</p>
                             </div>
-                            <div class="column is-9">
+                            <div class="column is-4">
                                 <p class="title is-4 has-text-link">初期閒聊</p>
                                 <p>先了解您的網站需求，像是想要的功能、內容，藉此架構出網站地圖，並提供報價與合約。</p>
                             </div>
-                        </div>
-
-                        <div class="columns">
-                            <div class="column is-3">
+                            <div class="column is-2">
                                 <p class="title is-4">02.</p>
                             </div>
-                            <div class="column is-9">
+                            <div class="column is-4">
                                 <p class="title is-4 has-text-link">前期準備</p>
                                 <p>
                                     由素材、文案、網站地圖架構出網站資訊架構，並決定網站色彩計畫、字體及 UI。
@@ -212,22 +211,19 @@
                         </div>
 
                         <div class="columns">
-                            <div class="column is-3">
+                            <div class="column is-2">
                                 <p class="title is-4">03.</p>
                             </div>
-                            <div class="column is-9">
+                            <div class="column is-4">
                                 <p class="title is-4 has-text-link">設計工作</p>
                                 <p>
                                     依照前期準備的定案設計出網站初稿，並由您確認後，再產出 Mockup。
                                 </p>
                             </div>
-                        </div>
-
-                        <div class="columns">
-                            <div class="column is-3">
+                            <div class="column is-2">
                                 <p class="title is-4">04.</p>
                             </div>
-                            <div class="column is-9">
+                            <div class="column is-4">
                                 <p class="title is-4 has-text-link">網站系統開發</p>
                                 <p>
                                     此階段開始實際進行前端切版及前後端功能開發，同時進行測試與修改。
@@ -235,11 +231,12 @@
                             </div>
                         </div>
 
+
                         <div class="columns">
-                            <div class="column is-3">
+                            <div class="column is-2">
                                 <p class="title is-4">05.</p>
                             </div>
-                            <div class="column is-9">
+                            <div class="column is-10">
                                 <p class="title is-4 has-text-link">上線與結案</p>
                                 <p>
                                     將網站部署至線上、提供後台使用說明，並簽訂維護合約。

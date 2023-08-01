@@ -61,6 +61,14 @@
                 </div>
             </div>
         </nav>
+        <div class="container has-text-centered mt-3">
+            <button class="button is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
+                <p class="title is-6 p-6 m-6 has-text-light">
+                    Contact Us
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </p>
+            </button>
+        </div>
     </div>
 </div>
 @endsection
