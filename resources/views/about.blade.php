@@ -71,18 +71,21 @@
                         <div class="columns">
                             <div class="column is-4">
                                 <p class="title is-5 has-text-link">
-                                    <i class="fas fa-bookmark mr-2"></i><span class="has-text-light">靜態主題網站</span>
+                                    <i class="fas fa-bookmark mr-2"></i>
                                 </p>
+                                <p class="has-text-light">靜態主題網站</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-5 has-text-link">
-                                    <i class="fas fa-bookmark mr-2"></i><span class="has-text-light">動態內容網站</span>
+                                    <i class="fas fa-bookmark mr-2"></i>
                                 </p>
+                                <p class="has-text-light">動態內容網站</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-5 has-text-link">
-                                    <i class="fas fa-bookmark mr-2"></i><span class="has-text-light">客製化系統網站</span>
+                                    <i class="fas fa-bookmark mr-2"></i>
                                 </p>
+                                <p class="has-text-light">客製化系統網站</p>
                             </div>
                         </div>
                         <p class="title is-5">用途</p>
@@ -186,20 +189,20 @@
                     <div class="column is-9">
                         <div class="columns">
                             <div class="column is-4">
-                                <p class="title is-2">01.</p>
+                                <p class="title is-4">01.</p>
                             </div>
                             <div class="column is-8">
-                                <p class="title is-2 has-text-link">初期閒聊</p>
+                                <p class="title is-4 has-text-link">初期閒聊</p>
                                 <p>先了解您的網站需求，像是想要的功能、內容，藉此架構出網站地圖，並提供報價與合約。</p>
                             </div>
                         </div>
 
                         <div class="columns">
                             <div class="column is-3">
-                                <p class="title is-2">02.</p>
+                                <p class="title is-4">02.</p>
                             </div>
                             <div class="column is-9">
-                                <p class="title is-2 has-text-link">前期準備</p>
+                                <p class="title is-4 has-text-link">前期準備</p>
                                 <p>
                                     由素材、文案、網站地圖架構出網站資訊架構，並決定網站色彩計畫、字體及 UI。
                                 </p>
@@ -208,10 +211,10 @@
 
                         <div class="columns">
                             <div class="column is-3">
-                                <p class="title is-2">03.</p>
+                                <p class="title is-4">03.</p>
                             </div>
                             <div class="column is-9">
-                                <p class="title is-2 has-text-link">設計工作</p>
+                                <p class="title is-4 has-text-link">設計工作</p>
                                 <p>
                                     依照前期準備的定案設計出網站初稿，並由您確認後，再產出 Mockup。
                                 </p>
@@ -220,10 +223,10 @@
 
                         <div class="columns">
                             <div class="column is-3">
-                                <p class="title is-2">04.</p>
+                                <p class="title is-4">04.</p>
                             </div>
                             <div class="column is-9">
-                                <p class="title is-2 has-text-link">網站系統開發</p>
+                                <p class="title is-4 has-text-link">網站系統開發</p>
                                 <p>
                                     此階段開始實際進行前端切版及前後端功能開發，同時進行測試與修改。
                                 </p>
@@ -232,10 +235,10 @@
 
                         <div class="columns">
                             <div class="column is-3">
-                                <p class="title is-2">05.</p>
+                                <p class="title is-4">05.</p>
                             </div>
                             <div class="column is-9">
-                                <p class="title is-2 has-text-link">上線與結案</p>
+                                <p class="title is-4 has-text-link">上線與結案</p>
                                 <p>
                                     將網站部署至線上、提供後台使用說明，並簽訂維護合約。
                                 </p>
@@ -263,13 +266,14 @@
         </div>
         @endforeach
     </div>
-
-    <button class="button is-link mt-6 p-6 ml-auto mr-auto" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
-        <p class="title is-6 p-6 m-6 has-text-light">
-            Contact Us
-            <i class="fas fa-arrow-right ml-2"></i>
-        </p>
-    </button>
+    <div class="container has-text-centered">
+        <button class="button is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
+            <p class="title is-6 p-6 m-6 has-text-light">
+                Contact Us
+                <i class="fas fa-arrow-right ml-2"></i>
+            </p>
+        </button>
+    </div>
 
     <section class="hero is-dark is-halfheight mt-3" data-scroll data-scroll-speed="2">
         <div class="hero-body">
