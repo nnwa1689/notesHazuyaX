@@ -19,7 +19,7 @@
                     </div>
                     <div class="column is-8">
                         <p class="has-text-link is-size-1 has-text-left"><i class="fas fa-quote-left"></i></p>
-                        <p class="title is-4">
+                        <p class="title is-4 has-text-centered">
                             <span id="aboutText"></span>
                         </p>
                         <p class="has-text-link is-size-1 has-text-right"><i class="fas fa-quote-right"></i></p>
@@ -45,7 +45,7 @@
                         <p class="subtitle is-3"># 無伺服器系統開發(Firebase, Aws Lightsail)</p>
                         <p class="subtitle is-3"># 後端系統開發(PHP)</p>
                         <p class="subtitle is-3"># 無頭內容管理系統(Strapi)</p>
-                        <button class="button is-link mt-6 is-fullwidth" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
+                        <button class="button is-primary mt-6 is-fullwidth is-arge" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
                             <p class="title is-6 p-6 m-6">
                                 參考案例
                                 <i class="fas fa-arrow-right ml-2"></i>
@@ -63,7 +63,7 @@
                 <div class="columns">
                     <div class="column is-3">
                         <p>
-                            <img width="64" style="border-radius: 25535x;" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                            <img width="64" style="border-radius: 25535px;" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
                         </p>
                         <p class="title is-3">服務規格</p>
                     </div>
@@ -177,13 +177,13 @@
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
                 <div class="columns">
-                    <div class="column is-4">
+                    <div class="column is-3">
                         <p>
-                            <img width="64" style="border-radius: 25535x;" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                            <img width="64" style="border-radius: 25535px;" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
                         </p>
                         <p class="title is-3">服務流程</p>
                     </div>
-                    <div class="column is-8">
+                    <div class="column is-9">
                         <div class="columns">
                             <div class="column is-4">
                                 <p class="title is-2">01.</p>
@@ -195,10 +195,10 @@
                         </div>
 
                         <div class="columns">
-                            <div class="column is-4">
+                            <div class="column is-3">
                                 <p class="title is-2">02.</p>
                             </div>
-                            <div class="column is-8">
+                            <div class="column is-9">
                                 <p class="title is-2 has-text-link">前期準備</p>
                                 <p>
                                     由素材、文案、網站地圖架構出網站資訊架構，並決定網站色彩計畫、字體及 UI。
@@ -207,10 +207,10 @@
                         </div>
 
                         <div class="columns">
-                            <div class="column is-4">
+                            <div class="column is-3">
                                 <p class="title is-2">03.</p>
                             </div>
-                            <div class="column is-8">
+                            <div class="column is-9">
                                 <p class="title is-2 has-text-link">設計工作</p>
                                 <p>
                                     依照前期準備的定案設計出網站初稿，並由您確認後，再產出 Mockup。
@@ -219,10 +219,10 @@
                         </div>
 
                         <div class="columns">
-                            <div class="column is-4">
+                            <div class="column is-3">
                                 <p class="title is-2">04.</p>
                             </div>
-                            <div class="column is-8">
+                            <div class="column is-9">
                                 <p class="title is-2 has-text-link">網站系統開發</p>
                                 <p>
                                     此階段開始實際進行前端切版及前後端功能開發，同時進行測試與修改。
@@ -231,10 +231,10 @@
                         </div>
 
                         <div class="columns">
-                            <div class="column is-4">
+                            <div class="column is-3">
                                 <p class="title is-2">05.</p>
                             </div>
-                            <div class="column is-8">
+                            <div class="column is-9">
                                 <p class="title is-2 has-text-link">上線與結案</p>
                                 <p>
                                     將網站部署至線上、提供後台使用說明，並簽訂維護合約。
@@ -300,7 +300,7 @@ var typed = new Typed("#titleText", {
 
 var typedAbout = new Typed("#aboutText", {
     strings:[
-        "創造溫暖、輕鬆的資訊體驗，<br/>發揮資訊的最大價值。",
+        "創造溫暖、輕鬆的資訊體驗，<br/><br/>發揮資訊的最大價值。",
     ],
     stringsElement: '#typed-strings',
     typeSpeed: 30,
