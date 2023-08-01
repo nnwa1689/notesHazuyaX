@@ -44,7 +44,7 @@
         @endforeach
     </div>
         <br>
-        <div class="block">
+        <div class="block pt-6">
             {{ $data->links('vendor.pagination.pagSearch', ['baseUrl' => $webData['webConfig'][13]->tittle]) }}
         </div>
         <p></p>

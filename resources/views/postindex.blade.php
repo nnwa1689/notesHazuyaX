@@ -34,7 +34,7 @@
             @endcomponent
         @endforeach
     </div>
-    <div class="block">
+    <div class="block pt-6">
         {{ $allPosts->links('vendor.pagination.default') }}
     </div>
 </div>

@@ -7,31 +7,49 @@
             <span id="titleText"></span>
         </p>
     </div>
-    <br/>
-    <div class="mt-6">
-        <p class="has-text-link is-size-1 mb-6"><i class="fas fa-quote-left"></i></p>
-        <p class="is-size-5 has-text-centered">
-            <span id="aboutText"></span>
-        </p>
-        <p class="has-text-link is-size-1 has-text-right mt-6"><i class="fas fa-quote-right"></i></p>
-    </div>
+
+    <section class="hero is-halfheight mt-6" data-scroll data-scroll-speed="4">
+        <div class="hero-body">
+            <div class="container is-fluid has-text-centered">
+                <div class="columns">
+                    <div class="column is-6">
+                        <p class="title is-1">
+                            <img width="256" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                        </p>
+                    </div>
+                    <div class="column is-6">
+                        <p class="has-text-link is-size-1 mb-6"><i class="fas fa-quote-left"></i></p>
+                        <p class="is-size-4 has-text-left">
+                            <span id="aboutText"></span>
+                        </p>
+                        <p class="has-text-link is-size-1 has-text-right mt-6"><i class="fas fa-quote-right"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section class="hero is-link is-halfheight" data-scroll data-scroll-speed="2">
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
-                <p class="subtitle is-1">服務項目</p>
-                <p class="subtitle is-3"># 網頁設計, # Web前端開發(Vue/React)</p>
-                <p class="subtitle is-3"># 無伺服器系統開發(Firebase, Aws Lightsail)</p>
-                <p class="subtitle is-3"># 後端系統開發(PHP)</p>
-                <p class="subtitle is-3"># 無頭內容管理系統(Strapi)</p>
-                <p class="subtitle is-3 mt-6"><a href="/works"># 看看我們做過什麼～</a></p>
-                <hr/>
-                <p class="title is-1 has-text-centered" data-scroll>
-                    <span class="fas fa-code mr-2">&nbsp;</span>
-                    <span class="fab fa-react mr-2">&nbsp;</span>
-                    <span class="fab fa-vuejs mr-2">&nbsp;</span>
-                    <span class="fab fa-aws mr-2">&nbsp;</span>
-                    <span class="fab fa-php mr-2">&nbsp;</span>
-                </p>
+                <div class="columns">
+                    <div class="column is-4">
+                        <p>                            
+                            <img width="128" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                        </p>
+                        <p class="title is-3">服務項目</p>
+                    </div>
+                    <div class="column is-8">
+                        <p class="subtitle is-3"># 網頁設計, # Web前端開發(Vue/React)</p>
+                        <p class="subtitle is-3"># 無伺服器系統開發(Firebase, Aws Lightsail)</p>
+                        <p class="subtitle is-3"># 後端系統開發(PHP)</p>
+                        <p class="subtitle is-3"># 無頭內容管理系統(Strapi)</p>
+                        <p class="subtitle is-3"><a href="/works">
+                            <i class="fas fa-arrow-right mr-1"></i>看看我們做過什麼</a>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -40,26 +58,182 @@
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
                 <div class="columns">
-                    <div class="column is-3">
-                        <p class="title is-1"><i class="fas fa-hands"></i></p>
+                    <div class="column is-4">
+                        <p>                            
+                            <img width="128" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                        </p>
+                        <p class="title is-3">合作規格</p>
                     </div>
-                    <div class="column is-9">
-                        <p class="subtitle is-1">擅長與限制</p>
-                        <p class="subtitle is-4"># 樣式可客製化設計，不會大家都長得一樣</p>
-                        <p class="subtitle is-4"># 但也可以提供套版方式開發，如果專案很趕的話</p>
-                        <p class="subtitle is-4"># 我會依照規模需求，提供合適的技術、託管平台</p>
-                        <p class="subtitle is-4"># 對於過往我沒設計過的功能，可能需要再多討論</p>
-                        <p class="subtitle is-4"># 目前沒辦法協助串接金流 API，Sorry！</p>
-                        <p class="subtitle is-4"># 目前是接案小白，討論過程可能要費一點力氣oWo</p>
+                    <div class="column is-8">
+                        <div class="columns">
+                            <div class="column is-4">
+                                <p class="subtitle is-3 has-text-link">
+                                    <i class="fas fa-bookmark mr-1">靜態主題網站</i>
+                                </p>
+                            </div>
+                            <div class="column is-4">
+                                <p class="subtitle is-3 has-text-link">
+                                    <i class="fas fa-bookmark mr-1">動態內容網站</i>
+                                </p> 
+                            </div>
+                            <div class="column is-4">
+                                <p class="subtitle is-3 has-text-link">
+                                    <i class="fas fa-bookmark mr-1">客製化系統網站</i>
+                                </p> 
+                            </div>
+                        </div>
+                        <p class="subtitle is-4">用途</p>
+                        <hr/>
+                        <div class="columns">
+                            <div class="column is-4">
+                                <p>
+                                    用於一頁式主題、活動網站、個人介紹
+                                </p>
+                            </div>
+                            <div class="column is-4">
+                                <p>
+                                    適合工作室形象官網、部落格之動態網站
+                                </p> 
+                            </div>
+                            <div class="column is-4">
+                                <p>
+                                    依照系統目標訂製不同功能之系統
+                                </p> 
+                            </div>
+                        </div>
+                        <p class="subtitle is-4">預算</p>
+                        <hr/>
+                        <div class="columns">
+                            <div class="column is-4">
+                                <p>
+                                    $5,000 - $7,500
+                                </p>
+                            </div>
+                            <div class="column is-4">
+                                <p>
+                                    $10,000 - $50,000
+                                </p> 
+                            </div>
+                            <div class="column is-4">
+                            <p>
+                                    $10,000 - $?
+                                </p> 
+                            </div>
+                        </div>
+
+                        <p class="subtitle is-4">製作開發時程</p>
+                        <hr/>
+                        <div class="columns">
+                            <div class="column is-4">
+                                <p>
+                                    約 0.5 個月 - 1 個月
+                                </p>
+                            </div>
+                            <div class="column is-4">
+                                <p>
+                                    約 1 個月 - 3 個月
+                                </p> 
+                            </div>
+                            <div class="column is-4">
+                                <p>
+                                    依系統規模而不同
+                                </p> 
+                            </div>
+                        </div>
+
+                        <p class="subtitle is-4">參考案例</p>
+                        <hr/>
+                        <div class="columns">
+                            <div class="column is-4">
+                                <p>
+                                    <a href="https://studio-44s.tw/works/studio44s" target="_blank"><i class="fas fa-arrow-right mr-1"></i>Studio44s</a>
+                                </p>
+                            </div>
+                            <div class="column is-4">
+                                <p>
+                                    <a href="https://studio-44s.tw/works/studio44s" target="_blank"><i class="fas fa-arrow-right mr-1"></i>Studio44s</a>
+                                </p>
+                            </div>
+                            <div class="column is-4">
+                                <p>
+                                    <a href="https://studio-44s.tw/works/coemeeting" target="_blank"><i class="fas fa-arrow-right mr-1"></i>會議室預約系統</a>
+                                </p>
+                                <p>
+                                    <a href="https://studio-44s.tw/works/OneDay" target="_blank"><i class="fas fa-arrow-right mr-1"></i>一日記</a>
+                                </p>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <p>
-        <img style="display: block; margin-left: auto; margin-right: auto;" src="/uploadfile/7e9c1f909b7113d5f56a4b3191a5d520.png" alt="" width="256" height="257">
-    </p>
+    <section class="hero is-link is-halfheight" data-scroll data-scroll-speed="2">
+        <div class="hero-body">
+            <div class="container is-fluid has-text-left">
+                <div class="columns">
+                    <div class="column is-4">
+                        <p>                            
+                            <img width="128" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                        </p>
+                        <p class="title is-3">服務流程</p>
+                    </div>
+                    <div class="column is-8">
+                        <div class="columns">
+                            <div class="column is-4">
+                                <p class="title is-2">01.</p>
+                            </div>
+                            <div class="column is-8">
+                                <p class="title is-2 has-text-link">初期訪談</p>
+                                <p>了解您的網站需求、業務、功能與風格，並依您預算評估可行性與時程。評估若您我皆可接受製作方案與價格，就會與您收取50%訂金，並簽訂契約。</p>
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column is-4">
+                                <p class="title is-2">02.</p>
+                            </div>
+                            <div class="column is-8">
+                                <p class="title is-2 has-text-link">前期設計</p>
+                                <p>
+                                    依照需求階段決定之風格(配色、首頁設計、頁面版型)及您提供之資料(如關於我們之簡介、圖片)進行設計發想，並繪製草圖。
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column is-4">
+
+                            </div>
+                            <div class="column is-8">
+
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column is-4">
+
+                            </div>
+                            <div class="column is-8">
+
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column is-4">
+
+                            </div>
+                            <div class="column is-8">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="hero is-success is-halfheight mt-6" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
         <div class="hero-body">
@@ -197,7 +371,7 @@ var typed = new Typed("#titleText", {
 
 var typedAbout = new Typed("#aboutText", {
     strings:[
-        "在資訊樣貌多元的今天，相信您有很多想和大家說的，<br/> 也許是一首歌曲、一段故事、一道料理、一個理念，我們也是！</br>我們的使命就是讓您所訴說的內容更易於被受眾看見、理解，<br/>並在他們的心中種下一顆小小的火種。",
+        "創造溫暖、輕鬆的資訊體驗，<br/>發揮資訊的最大價值。",
     ],
     stringsElement: '#typed-strings',
     typeSpeed: 30,
