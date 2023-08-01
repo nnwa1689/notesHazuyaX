@@ -13,13 +13,13 @@
             <div class="container is-fluid">
                 <div class="columns">
                     <div class="column is-4">
-                        <p class="title is-1 has-text-centered">
+                        <p class="title is-1">
                             <img width="300" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                         </p>
                     </div>
                     <div class="column is-8">
                         <p class="has-text-link is-size-1 has-text-left"><i class="fas fa-quote-left"></i></p>
-                        <p class="is-size-4 has-text-centered">
+                        <p class="title is-4">
                             <span id="aboutText"></span>
                         </p>
                         <p class="has-text-link is-size-1 has-text-right"><i class="fas fa-quote-right"></i></p>
@@ -36,7 +36,7 @@
                 <div class="columns">
                     <div class="column is-3">
                         <p>
-                            <img width="128" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                            <img width="64" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
                         </p>
                         <p class="title is-3">服務項目</p>
                     </div>
@@ -45,9 +45,12 @@
                         <p class="subtitle is-3"># 無伺服器系統開發(Firebase, Aws Lightsail)</p>
                         <p class="subtitle is-3"># 後端系統開發(PHP)</p>
                         <p class="subtitle is-3"># 無頭內容管理系統(Strapi)</p>
-                        <p class="subtitle is-3"><a href="/works">
-                            <i class="fas fa-arrow-right mr-1"></i>看看我們做過什麼</a>
-                        </p>
+                        <button class="button is-link mt-6 is-fullwidth" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
+                            <p class="title is-6 p-6 m-6">
+                                參考案例
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </p>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -60,7 +63,7 @@
                 <div class="columns">
                     <div class="column is-3">
                         <p>
-                            <img width="128" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                            <img width="64" style="border-radius: 25535x;" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
                         </p>
                         <p class="title is-3">服務規格</p>
                     </div>
@@ -82,7 +85,7 @@
                                 </p>
                             </div>
                         </div>
-                        <p class="title is-4">用途</p>
+                        <p class="title is-5">用途</p>
                         <hr/>
                         <div class="columns">
                             <div class="column is-4">
@@ -101,7 +104,7 @@
                                 </p>
                             </div>
                         </div>
-                        <p class="title is-4">預算</p>
+                        <p class="title is-5">預算</p>
                         <hr/>
                         <div class="columns">
                             <div class="column is-4">
@@ -121,7 +124,7 @@
                             </div>
                         </div>
 
-                        <p class="title is-4">製作開發時程</p>
+                        <p class="title is-5">製作開發時程</p>
                         <hr/>
                         <div class="columns">
                             <div class="column is-4">
@@ -141,7 +144,7 @@
                             </div>
                         </div>
 
-                        <p class="title is-4">參考案例</p>
+                        <p class="title is-5">參考案例</p>
                         <hr/>
                         <div class="columns">
                             <div class="column is-4">
@@ -170,13 +173,13 @@
         </div>
     </section>
 
-    <section class="hero is-link is-halfheight" data-scroll data-scroll-speed="2">
+    <section class="hero is-black is-halfheight" data-scroll data-scroll-speed="2">
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
                 <div class="columns">
                     <div class="column is-4">
                         <p>
-                            <img width="128" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                            <img width="64" style="border-radius: 25535x;" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
                         </p>
                         <p class="title is-3">服務流程</p>
                     </div>
@@ -186,8 +189,8 @@
                                 <p class="title is-2">01.</p>
                             </div>
                             <div class="column is-8">
-                                <p class="title is-2 has-text-link">初期訪談</p>
-                                <p>了解您的網站需求、業務、功能與風格，並依您預算評估可行性與時程。評估若您我皆可接受製作方案與價格，就會與您收取50%訂金，並簽訂契約。</p>
+                                <p class="title is-2 has-text-link">初期閒聊</p>
+                                <p>先了解您的網站需求，像是想要的功能、內容，藉此架構出網站地圖，並提供報價與合約。</p>
                             </div>
                         </div>
 
@@ -196,134 +199,57 @@
                                 <p class="title is-2">02.</p>
                             </div>
                             <div class="column is-8">
-                                <p class="title is-2 has-text-link">前期設計</p>
+                                <p class="title is-2 has-text-link">前期準備</p>
                                 <p>
-                                    依照需求階段決定之風格(配色、首頁設計、頁面版型)及您提供之資料(如關於我們之簡介、圖片)進行設計發想，並繪製草圖。
+                                    由素材、文案、網站地圖架構出網站資訊架構，並決定網站色彩計畫、字體及 UI。
                                 </p>
                             </div>
                         </div>
 
                         <div class="columns">
                             <div class="column is-4">
-
+                                <p class="title is-2">03.</p>
                             </div>
                             <div class="column is-8">
-
+                                <p class="title is-2 has-text-link">設計工作</p>
+                                <p>
+                                    依照前期準備的定案設計出網站初稿，並由您確認後，再產出 Mockup。
+                                </p>
                             </div>
                         </div>
 
                         <div class="columns">
                             <div class="column is-4">
-
+                                <p class="title is-2">04.</p>
                             </div>
                             <div class="column is-8">
-
+                                <p class="title is-2 has-text-link">網站系統開發</p>
+                                <p>
+                                    此階段開始實際進行前端切版及前後端功能開發，同時進行測試與修改。
+                                </p>
                             </div>
                         </div>
 
                         <div class="columns">
                             <div class="column is-4">
-
+                                <p class="title is-2">05.</p>
                             </div>
                             <div class="column is-8">
-
+                                <p class="title is-2 has-text-link">上線與結案</p>
+                                <p>
+                                    將網站部署至線上、提供後台使用說明，並簽訂維護合約。
+                                </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="hero is-success is-halfheight mt-6" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
-        <div class="hero-body">
-            <div class="container is-fluid has-text-left">
-                <div class="columns">
-                    <div class="column is-9">
-                        <p class="subtitle is-1">服務流程</p>
-                        <p class="subtitle is-3"># 需求調查與訪談</p>
-                        <p class="is-size-5">了解您的網站需求、業務、功能與風格，並依您預算評估可行性與時程。評估若您我皆可接受製作方案與價格，就會與您收取50%訂金，並簽訂契約。</p>
-                    </div>
-                    <div class="column is-3">
-                        <p class="title is-1 has-text-right"><i class="fas fa-comment"></i></p>
-                    </div>
-                </div>
-                <hr/>
-                <div class="columns">
-                    <div class="column is-9">
-
-                        <p class="subtitle is-3"># 風格設計、模板選擇</p>
-                        <p class="is-size-5">
-                            依照需求階段決定之風格(配色、首頁設計、頁面版型)及您提供之資料(如關於我們之簡介、圖片)進行設計發想，並繪製草圖。
-                            <br/>
-                            # 此階段將提供設計草圖並與您確認，進行調整。(若您選定某個模板，會再次與您確認是否有需要調整之地方)
-                        </p>
-
-                    </div>
-                    <div class="column is-3">
-                        <p class="title is-1 has-text-right"><i class="fas fa-pencil-ruler"></i></p>
-                    </div>
-                </div>
-                <hr/>
-                <div class="columns">
-                    <div class="column is-9">
-                        <p class="subtitle is-3"># 設計製作、資料套版</p>
-                        <p class="is-size-5">
-                            依照討論好的設計草圖，製作出實際的網頁靜態模板。若選擇特定模板，也同樣會提供靜態模板預覽，並第二次確認設計內容、調整。
-                            <br/>
-                            # 此階段將提供實際的網頁預覽並與您確認，進行調整。
-                        </p>
-                    </div>
-                    <div class="column is-3">
-                        <p class="title is-1 has-text-right"><i class="fas fa-map"></i></p>
-                    </div>
-                </div>
-                <hr/>
-                <div class="columns">
-                    <div class="column is-9">
-                        <p class="subtitle is-3"># 系統規劃設計</p>
-                        <p class="is-size-5">
-                            完成風格設計後，將規劃系統前台地圖與後台功能，並提供架構圖、採用之技術規格與您核對。確認後將實際進入系統架設、開發與資料轉入。
-                        </p>
-                    </div>
-                    <div class="column is-3">
-                        <p class="title is-1 has-text-right"><i class="fas fa-route"></i></p>
-                    </div>
-                </div>
-                <hr/>
-                <div class="columns">
-                    <div class="column is-9">
-                        <p class="subtitle is-3"># 系統開發與測試</p>
-                        <p class="is-size-5">
-                            依照確認之功能與技術進行實際開發，並依照模組功能或全部完工後進行測試(若採用依照功能模組測試可能會花費較長的時間，實際取決於您測試之時程)
-                            <br/>
-                            # 此階段將架設測試用系統提供您測試，每個模組可提供您進行一次的修改確認。
-                        </p>
-                    </div>
-                    <div class="column is-3">
-                        <p class="title is-1 has-text-right"><i class="fas fa-terminal"></i></p>
-                    </div>
-                </div>
-                <hr/>
-                <div class="columns">
-                    <div class="column is-9">
-                        <p class="subtitle is-3"># 後期作業、結案</p>
-                        <p class="is-size-5">
-                            依照選定規格協助申請空間、網址與 SSL(原則上若沒特殊需求，會提供免費的 OpenSSL)，並將您的系統部署至您的空間當中。同時，並收取您的尾款後，將會提供後台使用教育訓練、操作手冊，至此就完成了一次愉快的合作體驗！
-                            <br/>
-                            # 結案後，每案件提供 3 個月的保固期，若遇 Bug 修復不額外計價(新需求另計)
-                        </p>
-                    </div>
-                    <div class="column is-3">
-                        <p class="title is-1 has-text-right"><i class="fas fa-check-double"></i></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <p class="title is-1 has-text-left mt-6">成員<span class="has-text-link">TEAM</span></p>
-    <p class="title is-4 has-text-right">不斷嘗試各種可能</p>
     <div style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-0 is-justify-content-center">
         @foreach($userData as $User)
 
@@ -338,21 +264,24 @@
         @endforeach
     </div>
 
-    <section class="hero is-dark is-halfheight mt-3" data-scrolldata-scroll-speed="2">
+    <button class="button is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
+        <p class="title is-6 p-6 m-6">
+            Contact Us
+            <i class="fas fa-arrow-right ml-2"></i>
+        </p>
+    </button>
+
+    <section class="hero is-dark is-halfheight mt-3" data-scroll data-scroll-speed="2">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <p class="title is-4">對於技術、網站有想法或需求嗎？<br>歡迎來聊聊天！</p>
                 <div class="columns">
                     <div class="column">
-                        <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
-                            <div class="columns">
-                                <div class="column">
-                                    <p class="title is-6">
-                                        聊聊吧
-                                        <i class="fas fa-arrow-right ml-1"></i>
-                                    </p>
-                                </div>
-                            </div>
+                        <button class="button is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
+                            <p class="title is-6 p-6 m-6">
+                                Contact Us
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </p>
                         </button>
                     </div>
                 </div>
@@ -371,7 +300,7 @@ var typed = new Typed("#titleText", {
 
 var typedAbout = new Typed("#aboutText", {
     strings:[
-        "創造溫暖、輕鬆的資訊體驗，發揮資訊的最大價值。",
+        "創造溫暖、輕鬆的資訊體驗，<br/>發揮資訊的最大價值。",
     ],
     stringsElement: '#typed-strings',
     typeSpeed: 30,
