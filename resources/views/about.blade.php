@@ -26,7 +26,7 @@
                 </p>
                 <p class="title is-3 has-text-left">
                     <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                    <span class="has-text-primary">相信資訊會為生活帶來改變，促使我們保持熱忱並做出不同的嘗試。</span>
+                    <span class="has-text-primary">相信資訊會改變生活，促使我們保持熱忱去做不同嘗試。</span>
                     <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
                 </p>
             </div>
@@ -193,14 +193,14 @@
                     <div class="column is-9">
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-4">01.</p>
+                                <p class="title is-4 has-text-centered">01.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">初期閒聊</p>
                                 <p>先了解您的網站需求，像是想要的功能、內容，藉此架構出網站地圖，並提供報價與合約。</p>
                             </div>
                             <div class="column is-2">
-                                <p class="title is-4">02.</p>
+                                <p class="title is-4 has-text-centered">02.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">前期準備</p>
@@ -212,7 +212,7 @@
 
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-4">03.</p>
+                                <p class="title is-4 has-text-centered">03.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">設計工作</p>
@@ -221,7 +221,7 @@
                                 </p>
                             </div>
                             <div class="column is-2">
-                                <p class="title is-4">04.</p>
+                                <p class="title is-4 has-text-centered">04.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">網站系統開發</p>
@@ -231,10 +231,9 @@
                             </div>
                         </div>
 
-
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-4">05.</p>
+                                <p class="title is-4 has-text-centered">05.</p>
                             </div>
                             <div class="column is-10">
                                 <p class="title is-4 has-text-link">上線與結案</p>
@@ -279,16 +278,6 @@ var typed = new Typed("#titleText", {
     strings:["關於<span class=\"has-text-link\">ABOUT</span>",],
     stringsElement: '#typed-strings',
     typeSpeed: 70,
-    startDelay: 2000,
-    loop: false,
-});
-
-var typedAbout = new Typed("#aboutText", {
-    strings:[
-        "創造溫暖、輕鬆的資訊體驗，<br/><br/>發揮資訊的最大價值。",
-    ],
-    stringsElement: '#typed-strings',
-    typeSpeed: 30,
     startDelay: 2000,
     loop: false,
 });
