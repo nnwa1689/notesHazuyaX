@@ -73,19 +73,19 @@
                                 <p class="title is-5 has-text-link">
                                     <i class="fas fa-bookmark mr-2"></i>
                                 </p>
-                                <p class="has-text-light">靜態主題網站</p>
+                                <p class="title is-5">靜態主題網站</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-5 has-text-link">
                                     <i class="fas fa-bookmark mr-2"></i>
                                 </p>
-                                <p class="has-text-light">動態內容網站</p>
+                                <p class="title is-5">動態內容網站</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-5 has-text-link">
                                     <i class="fas fa-bookmark mr-2"></i>
                                 </p>
-                                <p class="has-text-light">客製化系統網站</p>
+                                <p class="title is-5">客製化系統網站</p>
                             </div>
                         </div>
                         <p class="title is-5">用途</p>
