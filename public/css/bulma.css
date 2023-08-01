@@ -7709,6 +7709,12 @@ a.list-item {
  animation: spinAround 1.5s infinite linear;
 }
 
+.about-logo {
+  border-radius: 25565px;
+  width: 64px;
+  height: 64px;
+}
+
 @media screen and (max-width: 768px) {
  .loading-logo {
    border-radius: 25565px;

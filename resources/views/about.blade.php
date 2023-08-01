@@ -10,19 +10,19 @@
 
     <section class="hero is-halfheight mt-6" data-scroll data-scroll-speed="4">
         <div class="hero-body">
-            <div class="container is-fluid has-text-centered">
+            <div class="container is-fluid">
                 <div class="columns">
-                    <div class="column is-6">
-                        <p class="title is-1">
-                            <img width="256" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                    <div class="column is-4">
+                        <p class="title is-1 has-text-centered">
+                            <img width="300" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                         </p>
                     </div>
-                    <div class="column is-6">
-                        <p class="has-text-link is-size-1 mb-6"><i class="fas fa-quote-left"></i></p>
-                        <p class="is-size-4 has-text-left">
+                    <div class="column is-8">
+                        <p class="has-text-link is-size-1 has-text-left"><i class="fas fa-quote-left"></i></p>
+                        <p class="is-size-4 has-text-centered">
                             <span id="aboutText"></span>
                         </p>
-                        <p class="has-text-link is-size-1 has-text-right mt-6"><i class="fas fa-quote-right"></i></p>
+                        <p class="has-text-link is-size-1 has-text-right"><i class="fas fa-quote-right"></i></p>
                     </div>
                 </div>
             </div>
@@ -34,13 +34,13 @@
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
                 <div class="columns">
-                    <div class="column is-4">
-                        <p>                            
+                    <div class="column is-3">
+                        <p>
                             <img width="128" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
                         </p>
                         <p class="title is-3">服務項目</p>
                     </div>
-                    <div class="column is-8">
+                    <div class="column is-9">
                         <p class="subtitle is-3"># 網頁設計, # Web前端開發(Vue/React)</p>
                         <p class="subtitle is-3"># 無伺服器系統開發(Firebase, Aws Lightsail)</p>
                         <p class="subtitle is-3"># 後端系統開發(PHP)</p>
@@ -58,31 +58,31 @@
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
                 <div class="columns">
-                    <div class="column is-4">
-                        <p>                            
+                    <div class="column is-3">
+                        <p>
                             <img width="128" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
                         </p>
-                        <p class="title is-3">合作規格</p>
+                        <p class="title is-3">服務規格</p>
                     </div>
-                    <div class="column is-8">
+                    <div class="column is-9">
                         <div class="columns">
                             <div class="column is-4">
-                                <p class="subtitle is-3 has-text-link">
-                                    <i class="fas fa-bookmark mr-1">靜態主題網站</i>
+                                <p class="title is-5 has-text-link">
+                                    <i class="fas fa-bookmark mr-1"></i><span class="has-text-secondary">靜態主題網站</span>
                                 </p>
                             </div>
                             <div class="column is-4">
-                                <p class="subtitle is-3 has-text-link">
-                                    <i class="fas fa-bookmark mr-1">動態內容網站</i>
-                                </p> 
+                                <p class="title is-5 has-text-link">
+                                    <i class="fas fa-bookmark mr-1"></i><span class="has-text-secondary">動態內容網站</span>
+                                </p>
                             </div>
                             <div class="column is-4">
-                                <p class="subtitle is-3 has-text-link">
-                                    <i class="fas fa-bookmark mr-1">客製化系統網站</i>
-                                </p> 
+                                <p class="title is-5 has-text-link">
+                                    <i class="fas fa-bookmark mr-1"></i><span class="has-text-secondary">客製化系統網站</span>
+                                </p>
                             </div>
                         </div>
-                        <p class="subtitle is-4">用途</p>
+                        <p class="title is-4">用途</p>
                         <hr/>
                         <div class="columns">
                             <div class="column is-4">
@@ -93,15 +93,15 @@
                             <div class="column is-4">
                                 <p>
                                     適合工作室形象官網、部落格之動態網站
-                                </p> 
+                                </p>
                             </div>
                             <div class="column is-4">
                                 <p>
                                     依照系統目標訂製不同功能之系統
-                                </p> 
+                                </p>
                             </div>
                         </div>
-                        <p class="subtitle is-4">預算</p>
+                        <p class="title is-4">預算</p>
                         <hr/>
                         <div class="columns">
                             <div class="column is-4">
@@ -112,16 +112,16 @@
                             <div class="column is-4">
                                 <p>
                                     $10,000 - $50,000
-                                </p> 
+                                </p>
                             </div>
                             <div class="column is-4">
                             <p>
                                     $10,000 - $?
-                                </p> 
+                                </p>
                             </div>
                         </div>
 
-                        <p class="subtitle is-4">製作開發時程</p>
+                        <p class="title is-4">製作開發時程</p>
                         <hr/>
                         <div class="columns">
                             <div class="column is-4">
@@ -132,16 +132,16 @@
                             <div class="column is-4">
                                 <p>
                                     約 1 個月 - 3 個月
-                                </p> 
+                                </p>
                             </div>
                             <div class="column is-4">
                                 <p>
                                     依系統規模而不同
-                                </p> 
+                                </p>
                             </div>
                         </div>
 
-                        <p class="subtitle is-4">參考案例</p>
+                        <p class="title is-4">參考案例</p>
                         <hr/>
                         <div class="columns">
                             <div class="column is-4">
@@ -163,7 +163,7 @@
                                 </p>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@
             <div class="container is-fluid has-text-left">
                 <div class="columns">
                     <div class="column is-4">
-                        <p>                            
+                        <p>
                             <img width="128" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
                         </p>
                         <p class="title is-3">服務流程</p>
@@ -371,7 +371,7 @@ var typed = new Typed("#titleText", {
 
 var typedAbout = new Typed("#aboutText", {
     strings:[
-        "創造溫暖、輕鬆的資訊體驗，<br/>發揮資訊的最大價值。",
+        "創造溫暖、輕鬆的資訊體驗，發揮資訊的最大價值。",
     ],
     stringsElement: '#typed-strings',
     typeSpeed: 30,
