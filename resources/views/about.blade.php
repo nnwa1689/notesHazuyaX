@@ -25,9 +25,9 @@
                     <span class="has-text-primary has-text-shadow">Passion</span>
                 </p>
                 <p class="title is-3">
-                    <span class="has-text-link has-text-left"><i class="fas fa-quote-left"></i></span>
-                    <span class="has-text-primary has-text-centered">相信資訊會改變生活，促使我們保持熱忱去做不同嘗試。</span>
-                    <span class="has-text-link has-text-right"><i class="fas fa-quote-right"></i></span>
+                    <p class="has-text-link has-text-left"><i class="fas fa-quote-left"></i></p>
+                    <p class="has-text-primary has-text-centered">相信資訊會改變生活，促使我們保持熱忱去做不同嘗試。</p>
+                    <p class="has-text-link has-text-right"><i class="fas fa-quote-right"></i></p>
                 </p>
             </div>
         </div>
