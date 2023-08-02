@@ -24,11 +24,9 @@
                     <span class="has-text-link has-text-shadow">&</span>
                     <span class="has-text-primary has-text-shadow">Passion</span>
                 </p>
-                <p class="title is-3">
-                    <p class="has-text-link has-text-left"><i class="fas fa-quote-left"></i></p>
-                    <p class="has-text-primary has-text-centered">相信資訊會改變生活，促使我們保持熱忱去做不同嘗試。</p>
-                    <p class="has-text-link has-text-right"><i class="fas fa-quote-right"></i></p>
-                </p>
+                <p class="title is-3 has-text-link has-text-left"><i class="fas fa-quote-left"></i></p>
+                <p class="title is-3 has-text-primary has-text-centered">相信資訊會改變生活，促使我們保持熱忱去做不同嘗試。</p>
+                <p class="title is-3 has-text-link has-text-right"><i class="fas fa-quote-right"></i></p>
             </div>
         </div>
     </section>
@@ -193,14 +191,14 @@
                     <div class="column is-9">
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-4 has-text-centered">01.</p>
+                                <p class="title is-3 has-text-centered">01.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">初期閒聊</p>
                                 <p>先了解您的網站需求，像是想要的功能、內容，藉此架構出網站地圖，並提供報價與合約。</p>
                             </div>
                             <div class="column is-2">
-                                <p class="title is-4 has-text-centered">02.</p>
+                                <p class="title is-3 has-text-centered">02.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">前期準備</p>
@@ -212,7 +210,7 @@
 
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-4 has-text-centered">03.</p>
+                                <p class="title is-3 has-text-centered">03.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">設計工作</p>
@@ -221,7 +219,7 @@
                                 </p>
                             </div>
                             <div class="column is-2">
-                                <p class="title is-4 has-text-centered">04.</p>
+                                <p class="title is-3 has-text-centered">04.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">網站系統開發</p>
@@ -233,7 +231,7 @@
 
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-4 has-text-centered">05.</p>
+                                <p class="title is-3 has-text-centered">05.</p>
                             </div>
                             <div class="column is-10">
                                 <p class="title is-4 has-text-link">上線與結案</p>
