@@ -191,14 +191,14 @@
                     <div class="column is-9">
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-3 has-text-centered">01.</p>
+                                <p class="title is-2 has-text-centered">01.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">初期閒聊</p>
                                 <p>先了解您的網站需求，像是想要的功能、內容，藉此架構出網站地圖，並提供報價與合約。</p>
                             </div>
                             <div class="column is-2">
-                                <p class="title is-3 has-text-centered">02.</p>
+                                <p class="title is-2 has-text-centered">02.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">前期準備</p>
@@ -210,7 +210,7 @@
 
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-3 has-text-centered">03.</p>
+                                <p class="title is-2 has-text-centered">03.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">設計工作</p>
@@ -219,7 +219,7 @@
                                 </p>
                             </div>
                             <div class="column is-2">
-                                <p class="title is-3 has-text-centered">04.</p>
+                                <p class="title is-2 has-text-centered">04.</p>
                             </div>
                             <div class="column is-4">
                                 <p class="title is-4 has-text-link">網站系統開發</p>
@@ -231,7 +231,7 @@
 
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-3 has-text-centered">05.</p>
+                                <p class="title is-2 has-text-centered">05.</p>
                             </div>
                             <div class="column is-10">
                                 <p class="title is-4 has-text-link">上線與結案</p>
