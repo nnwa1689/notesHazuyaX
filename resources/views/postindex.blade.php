@@ -8,7 +8,7 @@
         </p>
     </div>
     <div class="block pt-3 pb-3">
-        <div class="field is-grouped is-grouped-multiline is-justify-content-center">
+        <div class="field is-grouped is-grouped-multiline">
                 <div class="tags are-medium">
                 @foreach($webData['allCategory'] as $category)
                 <a class="button is-outlined is-primary is-rounded tag" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
