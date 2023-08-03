@@ -5374,7 +5374,7 @@ a.tag:hover {
 }
 
 .title.is-home {
-  font-size: 11.625rem;
+  font-size: 10.625rem;
 }
 
 .title.is-1 {
@@ -5407,15 +5407,15 @@ a.tag:hover {
 
 @media screen and (max-width: 768px) {
   .title.is-home {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .title.is-1 {
-    font-size: 5.35rem;
+    font-size: 4.35rem;
   }
 
   .title.is-2 {
-    font-size: 3.35rem;
+    font-size: 2.35rem;
   }
 
   .title.is-3 {
