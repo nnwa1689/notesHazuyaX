@@ -110,25 +110,14 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="2" data-scroll-delay="1" class="mt-6 mb-6">
-    <section class="hero is-dark is-shadow is-medium">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-        <p class="title is-4">有想法嗎？</p>
-        <p class="title is-5">來聊聊吧，也許能有更多不同的想法！</p>
-        <button class="button is-link mt-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
-            <div class="columns">
-                <div class="column">
-                    <p class="title is-6">
-                        走，聊聊！
-                        <i class="fas fa-arrow-right ml-1"></i>
-                    </p>
-                </div>
-            </div>
-        </button>
-        </div>
-    </div>
-    </section>
+
+<div class="container has-text-centered">
+    <button class="button is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
+        <p class="title is-6 p-6 m-6 has-text-light">
+            Contact Us
+            <i class="fas fa-arrow-right ml-2"></i>
+        </p>
+    </button>
 </div>
 @endsection
 @section('content')
