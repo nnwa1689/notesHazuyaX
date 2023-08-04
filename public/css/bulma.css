@@ -5394,7 +5394,7 @@ a.tag:hover {
 
 .title.is-home {
   font-family: 'OverpassMono-SemiBold';
-  font-size: 10.625rem;
+  font-size: 8.625rem;
 }
 
 .title.is-1 {
@@ -5429,6 +5429,7 @@ a.tag:hover {
   background-color: #E86A33;
   color: #263A29;
   padding: 0.25rem 1rem;
+  margin: 0.5rem 0px;
   box-shadow: 0.25rem 0.25rem #263A29;
 }
 
@@ -5436,6 +5437,7 @@ a.tag:hover {
   background-color: #263A29;
   color: #E86A33;
   padding: 0.25rem 1rem;
+  margin: 0.5rem 0px;
   box-shadow: 0.25rem 0.25rem #E86A33;
 }
 
