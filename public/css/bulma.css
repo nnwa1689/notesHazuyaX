@@ -34,6 +34,13 @@
     font-display: swap;
 }
 
+@font-face {
+  font-family: 'OverpassMono-SemiBold';
+  font-style: normal;
+  src: url(/fonts/OverpassMono-SemiBold.ttf);
+  unicode-range: U+00-024F;
+  font-display: swap;
+}
 /***********/
 
 .utterances {
@@ -5386,6 +5393,7 @@ a.tag:hover {
 }
 
 .title.is-home {
+  font-family: 'OverpassMono-SemiBold';
   font-size: 10.625rem;
 }
 
@@ -5419,6 +5427,7 @@ a.tag:hover {
 
 @media screen and (max-width: 768px) {
   .title.is-home {
+    font-family: 'OverpassMono-SemiBold';
     font-size: 4rem;
   }
 
