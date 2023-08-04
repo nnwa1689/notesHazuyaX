@@ -2,8 +2,11 @@
 @section('title', $title)
 @section('content')
 <script>
+    var dtnow = new Date();
+    $("#hour").text(dtnow.getHours());
+    $("#min").text(dtnow.getMinutes());
     addEventListener("mousemove", (event) => {
-
+        
     });
 </script>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="mb-6">
@@ -24,10 +27,10 @@
                         <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
                     </p>
                 </div>
-                <div class="column">
-                    <p id="hour" class="title is-2">14</p>
+                <div class="column has-text-centered">
+                    <p id="hour" class="title is-home has-text-primary has-text-shadow">14</p>
                     <p class="title is-2"><span class="mr-3">．</span><span>．</span></p>
-                    <p id="min" class="title is-2">44</p>
+                    <p id="min" class="title is-home has-text-link has-text-shadow">44</p>
                 </div>
             </div>
 
