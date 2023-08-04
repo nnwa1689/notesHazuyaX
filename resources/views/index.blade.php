@@ -111,14 +111,12 @@
     </section>
 </div>
 
-<div class="container has-text-centered">
-    <button class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
-        <p class="title is-6 p-6 m-6 has-text-light">
-            Contact Us
-            <i class="fas fa-arrow-right ml-2"></i>
-        </p>
-    </button>
-</div>
+<button class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
+    <p class="title is-6 p-6 m-6 has-text-light">
+        Contact Us
+        <i class="fas fa-arrow-right ml-2"></i>
+    </p>
+</button>
 @endsection
 @section('content')
 @endsection
