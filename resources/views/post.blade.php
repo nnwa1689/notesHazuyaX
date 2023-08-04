@@ -7,9 +7,11 @@
             <div class="column is-8 has-text-left">
                 <a class="tag button is-primary is-outlined is-rounded is-medium" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Category->ClassName}}</a>
             </div>
-            <div class="column has-text-right">
-                <p class="is-size-6 mr-3"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</p>
-                <p class="is-size-6"><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</p>
+            <div class="column is-m has-text-right">
+                <p class="is-size-6 mr-3">
+                    <span class="mr-3"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</span>
+                    <span><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</span>
+                </p>
             </div>
         </div>
         <p class="title is-3">
