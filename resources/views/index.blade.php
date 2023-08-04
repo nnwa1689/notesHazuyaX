@@ -16,7 +16,7 @@
                     <p class="title is-3 has-text-centered-mobile">
                         <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
                         <span class="has-text-primary">
-                            創造<span class="has-text-background-link">溫暖</span>且<span class="has-text-background-primary">放鬆</span>的資訊閱覽體驗！</span>
+                            創造<span class="has-text-background-link ml-1 mr-2">溫暖</span>且<span class="has-text-background-primary ml-1 mr-2">放鬆</span>的資訊閱覽體驗！</span>
                         <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
                     </p>
                 </div>
