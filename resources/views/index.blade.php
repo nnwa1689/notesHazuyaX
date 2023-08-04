@@ -131,8 +131,8 @@
     }
 
     var dtnow = new Date();
-    $("#hour").text(dtnow.getHours());
-    $("#min").text(dtnow.getMinutes());
+    $("#hour").text(AmendZero(dtnow.getHours()));
+    $("#min").text(AmendZero(dtnow.getMinutes()));
     addEventListener("mousemove", (event) => {
         var hourtime = Math.floor(Math.random() * 24) + 1;
         var mintime = Math.floor(Math.random() * 60);
