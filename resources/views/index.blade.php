@@ -9,7 +9,7 @@
                     <p class="title is-home has-text-centered-mobile">
                         <span class="has-text-link has-text-shadow">Warmth</span>
                     </p>
-                    <p class="title is-home has-text-centered-mobile">
+                    <p class="title is-home has-text-right has-text-centered-mobile">
                         <span class="has-text-link has-text-shadow">&</span>
                         <span class="has-text-primary has-text-shadow">Relaxation</span>
                     </p>
