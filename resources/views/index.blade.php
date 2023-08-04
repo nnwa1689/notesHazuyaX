@@ -23,7 +23,7 @@
                     <p id="hour" class="title is-home has-text-primary has-text-shadow">14</p>
                     <p class="title is-2">
                         <span class="has-text-link has-text-shadow"><i class="fas fa-circle mr-3"></i></span>
-                        <span class="has-text-link has-text-shadow"><i class="fas fa-circle ml-4"></i></span>
+                        <span class="has-text-link has-text-shadow"><i class="fas fa-circle ml-3"></i></span>
                     </p>
                     <p id="min" class="title is-home has-text-primary has-text-shadow">44</p>
                 </div>
