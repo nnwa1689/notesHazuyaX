@@ -3,23 +3,27 @@
 @section('content')
 @parent
     <div data-scroll class="container is-max-desktop mb-5 mt-3">
-        <div class="columns is-mobile">
-            <div class="column is-8 has-text-left">
-                <a class="tag button is-primary is-outlined is-rounded is-medium" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Category->ClassName}}</a>
+        <div class="content">
+            <div class="columns is-mobile">
+                <div class="column is-4 has-text-left">
+                    <p>
+                        <a class="tag button is-primary is-outlined is-rounded is-medium" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Category->ClassName}}</a>
+                    </p>
+                </div>
+                <div class="column is-m has-text-right">
+                    <p class="is-size-6 mr-3">
+                        <span class="mr-3"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</span>
+                        <span><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</span>
+                    </p>
+                </div>
             </div>
-            <div class="column is-m has-text-right">
-                <p class="is-size-6 mr-3">
-                    <span class="mr-3"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</span>
-                    <span><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</span>
-                </p>
-            </div>
+            <p class="title is-3">
+                {{$postData[0]->PostTittle}}
+                @if($webData['userData'] !== 0)
+                    <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i></button>
+                @endif
+            </p>
         </div>
-        <p class="title is-3">
-            {{$postData[0]->PostTittle}}
-            @if($webData['userData'] !== 0)
-                <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i></button>
-            @endif
-        </p>
     </div>
     <div class="container">
         <section data-scroll data-scroll-speed="3" class="hero is-small p-0 mb-6 ml-0 mr-0" style="overflow: hidden;">
