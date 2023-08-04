@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use DB;
 use App\Models\Blog;
 use App\Models\Category;
 use App\Services\UserService;
@@ -195,6 +194,7 @@ class PostService
     public function GetOnePost($postID)
     {
         $data = Blog::where('PostId', $postID) -> where('Competence', 'public') -> get();
+        $data -> PostDate = explode(" ", $data -> PostDate)[0];
         return $data;
     }
 

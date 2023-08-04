@@ -64,10 +64,12 @@ class PostController extends Controller
     {
         $this -> webData = $this -> baseService ->WebInit();
         $data = $this -> postService -> GetOnePost($postID);
+
         if(count($data) <= 0){
             abort(404);
             return;
         }
+        
         $rightPost = $this -> postService -> GetNextPost($postID);
         return view("post", ['webData' => $this->webData, 'postData'=>$data, 'rightPost'=>$rightPost]);
     }
