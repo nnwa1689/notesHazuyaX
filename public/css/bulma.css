@@ -5428,15 +5428,15 @@ a.tag:hover {
 .has-text-background-link {
   background-color: #E86A33;
   color: #263A29;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0.25rem 1rem;
+  box-shadow: 0.25rem 0.25rem #263A29;
 }
 
 .has-text-background-primary {
   background-color: #263A29;
   color: #E86A33;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0.25rem 1rem;
+  box-shadow: 0.25rem 0.25rem #E86A33;
 }
 
 @media screen and (max-width: 768px) {
