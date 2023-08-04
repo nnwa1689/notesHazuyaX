@@ -4,7 +4,7 @@
 @parent
     <div data-scroll class="container is-max-desktop mb-5 mt-3">
         <div class="content">
-            <div class="columns is-mobile">
+            <div class="columns is-mobile is-gapless">
                 <div class="column is-4 has-text-left">
                     <p>
                         <a class="tag button is-primary is-outlined is-rounded is-medium" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Category->ClassName}}</a>
