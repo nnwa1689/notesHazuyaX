@@ -4108,14 +4108,14 @@ fieldset[disabled] .button {
 }
 
 .PostHeader {
-  padding-left: 130px;
-  padding-right: 130px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 @media screen and (min-width: 768px) {
   .PostHeader {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 130px;
+    padding-right: 130px;
   }
 }
 
