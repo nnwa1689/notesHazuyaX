@@ -5425,6 +5425,20 @@ a.tag:hover {
   font-size: 1.5rem;
 }
 
+.has-text-background-link {
+  background-color: #E86A33;
+  color: #263A29;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.has-text-background-primary {
+  background-color: #263A29;
+  color: #E86A33;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .title.is-home {
     font-family: 'OverpassMono-SemiBold';
