@@ -1,14 +1,6 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<script>
-    var dtnow = new Date();
-    $("#hour").text(dtnow.getHours());
-    $("#min").text(dtnow.getMinutes());
-    addEventListener("mousemove", (event) => {
-        
-    });
-</script>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="mb-6">
     <section class="hero is-small">
         <div class="hero-body">
@@ -29,7 +21,7 @@
                 </div>
                 <div class="column has-text-centered">
                     <p id="hour" class="title is-home has-text-primary has-text-shadow">14</p>
-                    <p class="title is-2"><span class="mr-3">．</span><span>．</span></p>
+                    <p class="title is-2"><i class="fas fa-circle mr-3"></i><i class="fas fa-circle"></i></p>
                     <p id="min" class="title is-home has-text-link has-text-shadow">44</p>
                 </div>
             </div>
@@ -129,6 +121,19 @@
         <i class="fas fa-arrow-right ml-2"></i>
     </p>
 </button>
+
+<script>
+    var dtnow = new Date();
+    $("#hour").text(dtnow.getHours());
+    $("#min").text(dtnow.getMinutes());
+    addEventListener("mousemove", (event) => {
+        var hourtime = Math.floor(Math.random() * 24) + 1;
+        var mintime = Math.floor(Math.random() * 60);
+        $("#hour").text(hourtime);
+        $("#min").text(mintime);
+    });
+</script>
+
 @endsection
 @section('content')
 @endsection
