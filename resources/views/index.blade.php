@@ -1,27 +1,36 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<style>
-    .text_underline {
-        border-bottom: 0.25em solid #E86A33;
-        box-shadow: 10px 10px 0 0.05em #41644A;
-    }
-</style>
+<script>
+    addEventListener("mousemove", (event) => {
+
+    });
+</script>
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="mb-6">
     <section class="hero is-small">
         <div class="hero-body">
-            <p class="title is-home has-text-centered">
-                <span class="has-text-link has-text-shadow">Warmth</span>
-            </p>
-            <p class="title is-home has-text-centered">
-                <span class="has-text-link has-text-shadow">&</span>
-                <span class="has-text-primary has-text-shadow">Relaxation</span>
-            </p>
-            <p class="title is-3 has-text-centered">
-                <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                <span class="has-text-primary">創造溫暖且放鬆的資訊閱覽體驗！</span>
-                <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
-            </p>
+            <div class="columns">
+                <div class="column is-8">
+                    <p class="title is-home has-text-centered-mobile">
+                        <span class="has-text-link has-text-shadow">Warmth</span>
+                    </p>
+                    <p class="title is-home has-text-centered-mobile">
+                        <span class="has-text-link has-text-shadow">&</span>
+                        <span class="has-text-primary has-text-shadow">Relaxation</span>
+                    </p>
+                    <p class="title is-3 has-text-centered-mobile">
+                        <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
+                        <span class="has-text-primary">創造溫暖且放鬆的資訊閱覽體驗！</span>
+                        <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+                    </p>
+                </div>
+                <div class="column">
+                    <p id="hour" class="title is-2">14</p>
+                    <p class="title is-2"><span class="mr-3">．</span><span>．</span></p>
+                    <p id="min" class="title is-2">44</p>
+                </div>
+            </div>
+
         </div>
     </section>
 </div>

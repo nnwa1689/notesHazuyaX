@@ -9,7 +9,7 @@
     </div>
     <div class="pt-4">
         <div class="columns">
-            <div class="column is-8">
+            <div class="column is-7">
                 <p class="title is-4 mt-6"><span class="has-text-link">嗨</span>，我叫做</p>
                 <input class="input is-large is-fullwidth" id="Name" type="text" name="Name" value="">
                 <p class="subtitle is-5 mt-3">我們該如何稱呼您？</p>
@@ -74,6 +74,27 @@
                         >
                     </lottie-player>
                 </p>
+                <p class="title is-3">常見問答</p>
+                <div class="container">
+                    <p class="has-text-weight-bold">Q1.提供什麼內容，可以加快我們需求評估的速度？</p>
+                    <p class="ml-2">A1.可提供初步的「網頁架構圖」、「時程與預算」、「類似風格的網站」</p>
+                </div>
+
+                <div class="container mt-3">
+                    <p class="has-text-weight-bold">Q2.資料須在何時提供？</p>
+                    <p class="ml-2">A2.在初步評估時就需要提供，由於網頁設計以資料呈現為主，資料內容的不同會影響最後呈現的方式！另外事前提供資料，也能讓我們評估內部是否有足夠的能力呈現，避免最終做出較不符合期待的作品。</p>
+                </div>
+
+                <div class="container mt-3">
+                    <p class="has-text-weight-bold">Q3.那素材須在何時提供？</p>
+                    <p class="ml-2">A3.由於目前沒辦法協助設計品牌識別，僅能提供網站配色的設計建議（若能提供品牌配色，就盡可能依照品牌配色來設計），因此有關品牌或議題等素材建議初步評估時就能大致上提供，以利找尋最好的呈現方式唷！</p>
+                </div>
+
+                <div class="container mt-3">
+                    <p class="has-text-weight-bold">Q4.正式簽約或開始製作前可以提供預覽嗎？</p>
+                    <p class="ml-2">A4.雖然無法提供高精度的設計草稿，但於初步規劃時就可以與您討論出粗略的呈現方式囉！</p>
+                </div>
+
             </div>
         </div>
     </div>
