@@ -77,7 +77,7 @@
                     </lottie-player>
                     -->
                 </p>
-                <p class="title is-4">常見問答</p>
+                <p class="title is-4 has-text-right has-text-link">常見問答</p>
                 <div class="container">
                     <p class="has-text-weight-bold">Q1.提供什麼內容，可以加快我們需求評估的速度？</p>
                     <p class="ml-5">A1.可提供初步的「網頁架構圖」、「時程與預算」、「類似風格的網站」</p>
