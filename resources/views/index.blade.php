@@ -5,7 +5,7 @@
     <section class="hero is-small">
         <div class="hero-body">
             <div class="columns">
-                <div class="column is-8">
+                <div class="column is-10">
                     <p class="title is-home has-text-centered-mobile">
                         <span class="has-text-link has-text-shadow">Warmth</span>
                     </p>
@@ -123,14 +123,18 @@
 </button>
 
 <script>
+    function AmendZero(str) {
+        return str.toString().length > 1 ? str.toString() : "0" + str.toString();
+    }
+
     var dtnow = new Date();
     $("#hour").text(dtnow.getHours());
     $("#min").text(dtnow.getMinutes());
     addEventListener("mousemove", (event) => {
         var hourtime = Math.floor(Math.random() * 24) + 1;
         var mintime = Math.floor(Math.random() * 60);
-        $("#hour").text(hourtime);
-        $("#min").text(mintime);
+        $("#hour").text(AmendZero(hourtime));
+        $("#min").text(AmendZero(mintime));
     });
 </script>
 
