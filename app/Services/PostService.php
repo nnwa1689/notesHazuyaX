@@ -194,7 +194,7 @@ class PostService
     public function GetOnePost($postID)
     {
         $data = Blog::where('PostId', $postID) -> where('Competence', 'public') -> get();
-        $data -> PostDate = explode(" ", $data -> PostDate)[0];
+        $data[0] -> PostDate = explode(" ", $data[0] -> PostDate)[0];
         return $data;
     }
 
