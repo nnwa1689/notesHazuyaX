@@ -19,7 +19,7 @@
                         <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
                     </p>
                 </div>
-                <div class="column has-text-centered">
+                <div class="column has-text-right has-text-centered-mobile">
                     <p id="hour" class="title is-home has-text-primary has-text-shadow">14</p>
                     <p class="title is-2"><i class="fas fa-circle mr-3"></i><i class="fas fa-circle"></i></p>
                     <p id="min" class="title is-home has-text-link has-text-shadow">44</p>
