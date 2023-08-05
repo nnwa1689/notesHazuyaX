@@ -17,77 +17,15 @@
         <script src="{{$webData['webConfig'][13]->tittle}}js/locomotive-scroll.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/lottie-player.js"></script>
-        <script src="{{$webData['webConfig'][13]->tittle}}js/contact.js"></script>
-        <script src="{{$webData['webConfig'][13]->tittle}}js/index.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
         crossorigin="anonymous"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
-        <script>
-            const openMenu = () => {
-                gsap.to(".fullMenu", {
-                        duration: 0.4,
-                        height: "80%",
-                        ease: "power3.inOut"
-                    });
-            }
-
-            const closeMenu = () => {
-                gsap.to(".fullMenu", {
-                        duration: 0.4,
-                        height: "0%",
-                        ease: "power3.inOut"
-                    });
-            }
-
-            const isMenuOpen = () => {
-                if ($('.fullMenu').hasClass('is-on'))
-                    return true;
-                return false;
-            }
-
-            console.log("%c*44 Seconds Studio* 嗨，很高興在這裡看到你！", "padding:5px 15px; color: #263A29; font-size: 14px; border: 2px solid #E86A33; background:#F2E3DB;border-radius:5px;");
-            console.log("%c來到這裡不太容易吧，歡迎來我們這裡喝喝茶聊聊天唷XD", "padding:5px 15px; color: #F2E3DB; font-size: 14px; border: 2px solid #000000; background:#E86A33;border-radius:5px;");
-            console.log("%chttps://studio-44s.tw/contact", "padding:5px 15px; color: #F2E3DB; font-size: 14px; border: 2px solid #000000; background:#E86A33;border-radius:5px;");
-            $(document).ready(function() {
-                let player = document.querySelector("lottie-player");
-                $('.navbar-toggle').click(function(){
-                    (isMenuOpen() ? closeMenu() : openMenu());
-                    $('.fullMenu').toggleClass('is-on');
-                    $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
-                });
-
-                $(".navbar-burger").click(function() {
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    (isMenuOpen() ? closeMenu() : openMenu());
-                    $(".navbar-burger").toggleClass("is-active");
-                    $(".navbar-menu").toggleClass("is-active");
-                });
-
-                $(".fullMenu").click(function() {
-                    $('.fullMenu').toggleClass('is-on');
-                    closeMenu();
-                    $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
-                });
-
-                setTimeout(() => {
-                    gsap.to(".pageloader", {
-                        duration: 1.2,
-                        y: '+120vh',
-                        ease: "power4.inOut"
-                    });
-                }, 1000);
-                /* Loading
-                setTimeout(() => {
-                    $(".pageloader").toggleClass("loading");
-                }, 1500);
-                setTimeout(() => {
-                    player.stop();
-                }, 2000);
-                */
-            });
-        </script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/contact.js"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/index.js"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/layout.js"></script>
+        <script>window.addEventListener('load', layoutInit);</script>
         {!! $webData['webConfig'][4]->tittle !!}
     </head>
     <body class="has-navbar-fixed-top" data-barba="wrapper">
@@ -219,28 +157,7 @@
                 </div>
             </main>
         </div>
-        <!--Locomotive Scroll -->
-        <script>
-            var scroll = new LocomotiveScroll(
-                {
-                    el: document.querySelector('#scroll-zone'),
-                    smooth: true,
-                    lerp: 0.1,
-                    repeat: true,
-                }
-            );
-            new ResizeObserver(() => {
-                scroll.update();
-            }
-            ).observe(document.querySelector('#scroll-zone'));
-        </script>
-        <script>
-            new kursor({
-                type: 4,
-                color: "#E86A33"
-            });
-        </script>
-        <!--TypedJS-->
+
         <script>
             var typed_menu = new Typed("#typed", {
                 strings:[ {!! $webData['webConfig'][29]->tittle !!} ],
@@ -250,47 +167,6 @@
                 backDelay: 4000,
                 startDelay: 1000,
                 loop: true,
-            });
-        </script>
-
-        <script>
-            barba.init({
-                sync: true,
-                transitions: [{
-                    leave(data) {
-                        return gsap.to(".pageloader", {
-                            duration: 1.2,
-                            y: 0,
-                            ease: "power4.inOut",
-                        });
-                    },
-                    after(data) {
-                        return gsap.to(".pageloader", {
-                            duration: 1.2,
-                            y: '+120vh',
-                            ease: "power4.inOut",
-                            delay: 1
-                        });
-                    },
-                    beforeEnter() {
-                        scroll.scrollTo('top', { 'duration':0 });
-                    }
-                }]
-            });
-
-            barba.hooks.enter(
-                () => {
-                    Prism.highlightAll();
-                }
-            )
-
-            barba.hooks.after((data) => {
-                let js = data.next.container.querySelectorAll('main script');
-                if(js != null){
-                    js.forEach((item) => {
-                        eval(item.innerHTML);
-                    });
-                }
             });
         </script>
     </body>
