@@ -21,9 +21,8 @@
                 </div>
                 <div class="column has-text-right has-text-centered-mobile">
                     <p id="hour" class="title is-home has-text-primary has-text-shadow">14</p>
-                    <p class="title is-2">
-                        <span class="has-text-link has-text-shadow"><i class="fas fa-circle mr-3"></i></span>
-                        <span class="has-text-link has-text-shadow"><i class="fas fa-circle ml-3"></i></span>
+                    <p id="dot" class="title is-2 has-text-link has-text-shadow">
+                        <i class="fas fa-circle mr-3"></i><i class="fas fa-circle ml-3"></i>
                     </p>
                     <p id="min" class="title is-home has-text-primary has-text-shadow">44</p>
                 </div>
@@ -125,22 +124,7 @@
     </p>
 </button>
 
-<script>
-    function AmendZero(str) {
-        return str.toString().length > 1 ? str.toString() : "0" + str.toString();
-    }
-
-    var dtnow = new Date();
-    $("#hour").text(AmendZero(dtnow.getHours()));
-    $("#min").text(AmendZero(dtnow.getMinutes()));
-    addEventListener("mousemove", (event) => {
-        var hourtime = Math.floor(Math.random() * 24) + 1;
-        var mintime = Math.floor(Math.random() * 60);
-        $("#hour").text(AmendZero(hourtime));
-        $("#min").text(AmendZero(mintime));
-    });
-</script>
-
+<script src="{{$webData['webConfig'][13]->tittle}}js/index.js"></script>
 @endsection
 @section('content')
 @endsection

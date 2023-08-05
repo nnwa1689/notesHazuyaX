@@ -1941,7 +1941,7 @@ a.has-text-black:hover, a.has-text-black:focus {
 }
 
 .has-text-light {
-  color: #F2E3DB !important;
+  color: #E2DCD5 !important;
 }
 
 a.has-text-light:hover, a.has-text-light:focus {
@@ -4209,7 +4209,7 @@ blockquote {
   /*font-family: 'NotoSerifTC-Medium';*/
   background-color: #41644A;
   border-left: 5px solid #263A29;
-  color: #F2E3DB;
+  color: #E2DCD5;
   border-radius: 10px;
   padding: 1.25em 1.5em;
   box-shadow: 5px 5px 0 0.125em #E86A33;
@@ -4237,7 +4237,7 @@ blockquote h6 {
 }
 
 blockquote a {
-  color: #F2E3DB
+  color: #E2DCD5
 }
 
 .content img{
@@ -7708,7 +7708,7 @@ a.list-item {
   width: 100%;
   height: 0%;
   text-align: center;
-  color: #F2E3DB;
+  color: #E2DCD5;
   margin-left: 0%;
   margin-top: -7rem;
   z-index: 3;
@@ -7719,7 +7719,7 @@ a.list-item {
 }
 
 .fullMenu a{
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .fullMenu a:hover{
@@ -8857,7 +8857,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
   .navbar-dropdown a.navbar-item {
     padding-right: 2rem;
-    color:#F2E3DB;
+    color:#E2DCD5;
   }
   .navbar-dropdown a.navbar-item:focus, .navbar-dropdown a.navbar-item:hover {
     background-color: #41644A;
@@ -11525,7 +11525,7 @@ label.panel-block:hover {
 
 .hero.is-black {
   background-color: #0a0a0a;
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-black a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -11534,16 +11534,16 @@ label.panel-block:hover {
 }
 
 .hero.is-black .title {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-black .subtitle {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-black .subtitle a:not(.button),
 .hero.is-black .subtitle strong {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 @media screen and (max-width: 1023px) {
@@ -11759,7 +11759,7 @@ label.panel-block:hover {
 
 .hero.is-primary {
   background-color: #263A29;
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-primary a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -11768,16 +11768,16 @@ label.panel-block:hover {
 }
 
 .hero.is-primary .title {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-primary .subtitle {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-primary .subtitle a:not(.button),
 .hero.is-primary .subtitle strong {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 @media screen and (max-width: 1023px) {
@@ -11837,7 +11837,7 @@ label.panel-block:hover {
 
 .hero.is-link {
   background-color: #E86A33;
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-link.is-light {
@@ -11846,29 +11846,29 @@ label.panel-block:hover {
 }
 
 .hero.is-link.is-light .title {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-link.is-light .subtitle{
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-link.is-dark {
   background-color: #263A29;
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-link .title {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-link .subtitle {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-link .subtitle a:not(.button),
 .hero.is-link .subtitle strong {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 @media screen and (max-width: 1023px) {
@@ -12006,7 +12006,7 @@ label.panel-block:hover {
 
 .hero.is-success {
   background-color: #41644A;
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-success a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
@@ -12015,16 +12015,16 @@ label.panel-block:hover {
 }
 
 .hero.is-success .title {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-success .subtitle {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .hero.is-success .subtitle a:not(.button),
 .hero.is-success .subtitle strong {
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 @media screen and (max-width: 1023px) {
@@ -12354,7 +12354,7 @@ label.panel-block:hover {
   margin-bottom: 4rem;
   /*margin-bottom: 8.5rem;*/
   padding: 4rem;
-  color: #F2E3DB;
+  color: #E2DCD5;
   box-shadow: 5px -5px 0 0.125em #E86A33;
   font-size: 1rem;
 }
@@ -12366,7 +12366,7 @@ label.panel-block:hover {
 }
 
 .footer a{
-  color: #F2E3DB;
+  color: #E2DCD5;
 }
 
 .footer a:hover{
