@@ -102,5 +102,5 @@
         </div>
     </div>
 </div>
-<script>window.addEventListener('load', contactInit);</script>
+<script>contactInit();</script>
 @endsection

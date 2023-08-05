@@ -124,7 +124,7 @@
     </p>
 </button>
 
-<script>window.addEventListener('load', indexInit);</script>
+<script>indexInit());</script>
 @endsection
 @section('content')
 @endsection
