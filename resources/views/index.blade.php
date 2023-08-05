@@ -124,7 +124,7 @@
     </p>
 </button>
 
-<script>indexInit());</script>
+<script>indexInit();</script>
 @endsection
 @section('content')
 @endsection
