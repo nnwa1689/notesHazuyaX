@@ -12,7 +12,7 @@ function indexInit(){
     setInterval(() => {
         $("#dot").toggleClass("has-text-link");
         $("#dot").toggleClass("has-text-light");
-    }, 1000);
+    }, 2000);
 
     var dtnow = new Date();
     $("#hour").text(AmendZero(dtnow.getHours()));
