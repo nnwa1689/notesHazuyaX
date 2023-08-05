@@ -178,20 +178,6 @@
                         @endif
                         @endforeach
                         <!--Dynamic END-->
-                        <!--
-                        @if(gettype($webData['userData']) == 'integer')
-                            <a class="navbar-item is-tab" target="_blank" href="/login">登入</a>
-                        @else
-                            <a target="_blank" href="/admin" class="navbar-item is-tab"><i class="fas fa-cogs mr-1"></i>管理</a>
-                            <a href="/logout" class="navbar-item is-tab">
-                                <div class="image is-32x32 mr-1">
-                                    <figure class="image is-1by1">
-                                        <img alt="" class="is-rounded" src="{{$webData['userData'][0]->Avatar}}">
-                                    </figure>
-                                </div>登出
-                            </a>
-                        @endif
-                        -->
                         </div>
                     </div>
                 </div>
@@ -199,18 +185,6 @@
         </div>
         <section class="hero is-fullheight is-primary is-align-items-center has-text-centered pageloader">
             <div class="loader-body">
-                <!--
-                <lottie-player
-                    class="is-align-items-center"
-                    src="{{$webData['webConfig'][13]->tittle}}lf30_zlkyyxof.json"
-                    background="transparent"
-                    speed="1.5"
-                    style="width: 450px; height: 300px;"
-                    loop
-                    autoplay
-                >
-                </lottie-player>
-                -->
                 <img class="loading-logo" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
             </div>
         </section>
@@ -317,47 +291,6 @@
                     });
                 }
             });
-        </script>
-        <script>
-            function submit() {
-                var name = $("#Name").val();
-                var email = $("#Email").val();
-                var type = $("#Type").val();
-                var budgetranges = $("#BudgetRanges").val();
-                var content = $("#Content").val();
-
-                $("#suc").css("display", "none");
-                $("#error").css("display", "none");
-
-                if (name.length < 1 || email.length < 1 || content.length < 5) {
-                    $("#error").css("display", "block");
-                } else {
-                    $.ajax({
-                        type: "POST",
-                        url: "https://strapi.studio-44s.tw/api/holas",
-                        dataType: "json",
-                        data: {
-                            "data": {
-                                "Name": name,
-                                "Email": email,
-                                "Content": content,
-                                "BudgetRanges": budgetranges,
-                                "Statu": "unsettled",
-                                "Type": type
-                            }
-                        },
-                        success: function (response) {
-                            $("#suc").css("display", "block");
-                            $("#Name").val("");
-                            $("#Email").val("");
-                            $("#Content").val("");
-                        },
-                        error: function (thrownError) {
-                            $("#error").css("display", "block");
-                        }
-                    });
-                }
-            }
         </script>
     </body>
 </html>

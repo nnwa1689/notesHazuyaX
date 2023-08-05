@@ -60,7 +60,7 @@
                 <p class="has-text-right">
                     <button type="button" onclick="submit()" class="button is-primary is-large mt-3">快！立即送出我的訊息！</button>
                 </p>
-                
+
             </div>
             <div class="column pl-5">
                 <p class="title is-1 has-text-right">
@@ -102,13 +102,5 @@
         </div>
     </div>
 </div>
-<script>
-    var typed = new Typed("#titleText", {
-        strings:["聊聊天<span class=\"has-text-link\">CONTACT</span>",],
-        stringsElement: '#typed-strings',
-        typeSpeed: 70,
-        startDelay: 2000,
-        loop: false,
-    });
-</script>
+<script src="{{$webData['webConfig'][13]->tittle}}js/contact.js"></script>
 @endsection

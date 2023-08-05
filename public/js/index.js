@@ -1,8 +1,14 @@
+/**
+ * index.blade.php Javascript
+ * By TedWu
+ * 20230805
+ */
+
 function AmendZero(str) {
     return str.toString().length > 1 ? str.toString() : "0" + str.toString();
 }
 
-setTimeout(() => {
+setInterval(() => {
     $("#dot").toggleClass("has-text-link");
     $("#dot").toggleClass("has-text-light");
 }, 3000);
