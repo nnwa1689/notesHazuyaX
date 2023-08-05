@@ -102,5 +102,4 @@
         </div>
     </div>
 </div>
-<script src="{{$webData['webConfig'][13]->tittle}}js/contact.js"></script>
 @endsection

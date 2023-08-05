@@ -214,25 +214,26 @@
                     </footer>
                 </div>
             </main>
-            <!--Locomotive Scroll -->
-            <script>
-                var scroll = new LocomotiveScroll(
-                    {
-                        el: document.querySelector('#scroll-zone'),
-                        smooth: true,
-                        lerp: 0.1,
-                        repeat: true,
-                    }
-                );
-                new ResizeObserver(() => {
-                    scroll.update();
-                }
-                ).observe(document.querySelector('#scroll-zone'));
-            </script>
         </div>
         <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
-        <!---Kursor---->
+        <script src="{{$webData['webConfig'][13]->tittle}}js/contact.js"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/index.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
+        <!--Locomotive Scroll -->
+        <script>
+            var scroll = new LocomotiveScroll(
+                {
+                    el: document.querySelector('#scroll-zone'),
+                    smooth: true,
+                    lerp: 0.1,
+                    repeat: true,
+                }
+            );
+            new ResizeObserver(() => {
+                scroll.update();
+            }
+            ).observe(document.querySelector('#scroll-zone'));
+        </script>
         <script>
             new kursor({
                 type: 4,
