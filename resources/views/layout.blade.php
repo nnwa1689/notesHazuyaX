@@ -216,8 +216,6 @@
             </main>
         </div>
         <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
-        <script src="{{$webData['webConfig'][13]->tittle}}js/contact.js"></script>
-        <script src="{{$webData['webConfig'][13]->tittle}}js/index.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
         <!--Locomotive Scroll -->
         <script>

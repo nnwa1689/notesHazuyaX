@@ -123,6 +123,7 @@
         <i class="fas fa-arrow-right ml-2"></i>
     </p>
 </button>
+<script src="{{$webData['webConfig'][13]->tittle}}js/index.js"></script>
 @endsection
 @section('content')
 @endsection

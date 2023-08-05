@@ -44,10 +44,14 @@ function submit() {
     }
 }
 
-var typed = new Typed("#titleText", {
-    strings:["聊聊天<span class=\"has-text-link\">CONTACT</span>",],
-    stringsElement: '#typed-strings',
-    typeSpeed: 70,
-    startDelay: 2000,
-    loop: false,
-});
+(
+    function () {
+        var typed = new Typed("#titleText", {
+            strings:["聊聊天<span class=\"has-text-link\">CONTACT</span>",],
+            stringsElement: '#typed-strings',
+            typeSpeed: 70,
+            startDelay: 2000,
+            loop: false,
+        });
+     }
+)
