@@ -46,6 +46,7 @@ const layoutInit = () => {
         $('.fullMenu').toggleClass('is-on');
         closeMenu();
         $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
+        $('.navbar-toggle').toggleClass('is-navbar-toggle-close');
     });
 
     setTimeout(() => {
