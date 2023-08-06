@@ -8617,7 +8617,13 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .navbar-item img {
-  max-height: 5rem;
+  max-height: 70px;
+}
+
+@media screen and (max-width:768px) {
+  .navbar-item img {
+    max-height: 50px;
+  }
 }
 
 .navbar-item.has-dropdown {
@@ -8911,7 +8917,6 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   .navbar > .container .navbar-brand,
   .container > .navbar .navbar-brand {
     margin-left: -1rem;
-    max-height: 70px;
   }
   .navbar > .container .navbar-menu,
   .container > .navbar .navbar-menu {
@@ -8958,14 +8963,6 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
   .navbar-item.has-dropdown:focus .navbar-link, .navbar-item.has-dropdown:hover .navbar-link, .navbar-item.has-dropdown.is-active .navbar-link {
     background-color: none;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .navbar > .container .navbar-brand,
-  .container > .navbar .navbar-brand {
-    margin-left: -1rem;
-    max-height: 50px;
   }
 }
 
