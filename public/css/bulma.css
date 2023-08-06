@@ -17,7 +17,7 @@
   }
 }
 
-@keyframes menuOpen {
+@keyframes openMenu {
   from {
     transform: rotate(0deg);
   }
@@ -26,7 +26,7 @@
   }
 }
 
-@keyframes menuClose {
+@keyframes closeMenu {
   from {
     transform: rotate(90deg);
   }
