@@ -30,14 +30,16 @@
     </head>
     <body class="has-navbar-fixed-top" data-barba="wrapper">
         <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
-            <div class="container is-fluid">
+            <div class="container is-fluid pt-5">
                 <div class="navbar-brand">
                     <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle}}">
-                        <img alt="logo" style="max-height: 50px;" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
+                        <img alt="logo" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                     </a>
                     <!--MibileNavbar-->
                     <div class="navbar-item navbar-toggle is-mobile" style="margin-left: auto; margin-right: -0.75rem">
-                        <a class="navbar-link is-arrowless"><i class="fas fa-stream"></i></a>
+                        <a class="navbar-link is-arrowless title is-2">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </a>
                     </div>
                     <!--END -->
                 </div>
@@ -46,7 +48,9 @@
                     </div>
                     <div class="navbar-end">
                         <div class="navbar-item navbar-toggle">
-                            <a class="navbar-link is-arrowless"><i class="fas fa-stream"></i></a>
+                            <a class="navbar-link is-arrowless title is-2">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
