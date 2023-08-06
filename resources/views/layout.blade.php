@@ -35,19 +35,19 @@
                     <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle}}">
                         <img alt="logo" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                     </a>
-                    <!--MibileNavbar>
-                    <div class="navbar-item navbar-toggle is-mobile" style="margin-left: auto; margin-right: -0.75rem">
+                    <!--MibileNavbar -->
+                    <div class="navbar-item navbar-toggle is-navbar-toggle-close is-mobile" style="margin-left: auto; margin-right: -0.75rem">
                         <a class="navbar-link is-arrowless title is-2">
                             <i class="fas fa-ellipsis-h"></i>
                         </a>
                     </div>
-                    <END -->
+                    <!-- END -->
                 </div>
                 <div id="MainNavbar" class="navbar-menu">
                     <div class="navbar-start">
                     </div>
                     <div class="navbar-end">
-                        <div class="navbar-item navbar-toggle">
+                        <div class="navbar-item navbar-toggle is-navbar-toggle-close">
                             <a class="navbar-link is-arrowless title is-2">
                                 <i class="fas fa-ellipsis-h"></i>
                             </a>

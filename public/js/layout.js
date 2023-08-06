@@ -32,6 +32,7 @@ const layoutInit = () => {
         (isMenuOpen() ? closeMenu() : openMenu());
         $('.fullMenu').toggleClass('is-on');
         $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
+        $('.navbar-toggle').toggleClass('is-navbar-toggle-close');
     });
 
     $(".navbar-burger").click(function() {

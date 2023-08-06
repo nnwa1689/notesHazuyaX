@@ -7815,8 +7815,16 @@ a.list-item {
 
 .is-navbar-toggle-on {
     animation-name: openMenu;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-iteration-count:initial;
+    animation-fill-mode: forwards;
+}
+
+.is-navbar-toggle-close {
+    animation-name: closeMenu;
+    animation-duration: 0.5s;
+    animation-iteration-count:initial;
+    animation-fill-mode: forwards;
 }
 
 .is-navbar-toggle-on a{
@@ -8568,6 +8576,10 @@ body.has-navbar-fixed-bottom {
 
 .navbar-burger.is-active span:nth-child(3) {
   transform: translateY(-5px) rotate(-45deg);
+}
+
+.navbar-menu {
+  display: none;
 }
 
 .navbar-item,
