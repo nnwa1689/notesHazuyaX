@@ -8570,10 +8570,6 @@ body.has-navbar-fixed-bottom {
   transform: translateY(-5px) rotate(-45deg);
 }
 
-.navbar-menu {
-  display: none;
-}
-
 .navbar-item,
 .navbar-link {
   color: #263A29;
