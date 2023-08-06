@@ -7814,7 +7814,9 @@ a.list-item {
 }
 
 .is-navbar-toggle-on {
-    animation: openMenu 0.5s ease-in-out;
+    animation-name: openMenu;
+    animation-duration: 1s;
+    animation-iteration-count:initial;
 }
 
 .is-navbar-toggle-on a{
@@ -8505,10 +8507,6 @@ body.has-navbar-fixed-bottom {
   max-width: 100vw;
   overflow-x: auto;
   overflow-y: hidden;
-}
-
-.navbar-item.navbar-toggle {
-  animation: closeMenu 0.5s ease-in-out;
 }
 
 .navbar-item.navbar-toggle.is-mobile {
