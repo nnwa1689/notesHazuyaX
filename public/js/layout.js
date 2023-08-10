@@ -82,7 +82,6 @@ const layoutInit = () => {
         sync: true,
         transitions: [{
             leave(data) {
-                clearInterval(indexDotInterval);
                 return gsap.to(".pageloader", {
                     duration: 1.2,
                     y: 0,
@@ -103,11 +102,17 @@ const layoutInit = () => {
         }]
     });
 
+    barba.hooks.beforeLeave(
+        () => {
+            clearInterval(indexDotInterval);
+        }
+    );
+
     barba.hooks.enter(
         () => {
             Prism.highlightAll();
         }
-    )
+    );
 
     barba.hooks.after((data) => {
         let js = data.next.container.querySelectorAll('main script');
