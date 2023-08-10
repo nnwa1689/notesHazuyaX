@@ -29,7 +29,7 @@
 </div>
 <script>
     var typed = new Typed("#titleText", {
-        strings:["作品集<span class=\"has-text-link pl-2\">WORKS</span>",],
+        strings:["作品集<span class=\"has-text-hollow-link pl-2\">WORKS</span>",],
         stringsElement: '#typed-strings',
         typeSpeed: 70,
         startDelay: 2000,

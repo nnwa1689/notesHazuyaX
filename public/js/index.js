@@ -4,12 +4,15 @@
  * 20230805
  */
 
+var indexDotInterval = 0;
+
 function AmendZero(str) {
     return str.toString().length > 1 ? str.toString() : "0" + str.toString();
 }
 
 function indexInit(){
-    setInterval(() => {
+
+    indexDotInterval = setInterval(() => {
         $("#dot").toggleClass("has-text-link");
         $("#dot").toggleClass("has-text-light");
     }, 2000);

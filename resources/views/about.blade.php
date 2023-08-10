@@ -273,7 +273,7 @@
 </div>
 <script id="mainScript">
 var typed = new Typed("#titleText", {
-    strings:["關於<span class=\"has-text-link\">ABOUT</span>",],
+    strings:["關於<span class=\"has-text-hollow-link\">ABOUT</span>",],
     stringsElement: '#typed-strings',
     typeSpeed: 70,
     startDelay: 2000,

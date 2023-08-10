@@ -5459,6 +5459,11 @@ a.tag:hover {
   box-shadow: 0.25rem 0.25rem #E86A33;
 }
 
+.has-text-hollow-link {
+  color: #E2DCD5;
+  text-shadow: -1px -1px 0 #E86A33, 0.25rem -1px 0 #E86A33, -1px 1px 0 #E86A33, 1px 1px 0 #E86A33;
+}
+
 @media screen and (max-width: 768px) {
   .title.is-home {
     font-family: 'OverpassMono-SemiBold';
