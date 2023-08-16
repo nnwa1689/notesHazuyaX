@@ -59,7 +59,7 @@
                 </article>
                 <p class="has-text-right">
                     <button type="button" onclick="submit()" class="button is-primary is-large is-rounded mt-5 p-6">
-                        <span class="is-size-1"><i class="fas fa-paper-plane mr-2"></i>傳送</p>
+                        <span class="is-size-2"><i class="fas fa-paper-plane mr-2"></i></p>
                     </button>
                 </p>
 
