@@ -48,7 +48,7 @@
 
                 <article class="notification is-danger mt-5 mb-5 is-medium" id="error" style="display: none;">
                     <div class="content">
-                    奧，有一些資料沒有填到，再檢查一下！
+                    奧，我們想知道得更多，請再多說一點！
                     </div>
                 </article>
 
@@ -57,9 +57,9 @@
                     嗨，我們已經收到您的訊息囉！請靜待我們的回覆～
                     </div>
                 </article>
-                <p class="has-text-centered">
-                    <button type="button" onclick="submit()" class="button is-primary is-large is-works-button is-rounded mt-3">
-                        <p class="title is-2"><i class="fas fa-paper-plane"></i></p>
+                <p class="has-text-right">
+                    <button type="button" onclick="submit()" class="button is-primary is-large is-rounded mt-5 p-6">
+                        <span class="is-size-1"><i class="fas fa-paper-plane mr-2"></i>傳送</p>
                     </button>
                 </p>
 
