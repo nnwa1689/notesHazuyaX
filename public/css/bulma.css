@@ -2681,8 +2681,8 @@ a.box:active {
 
 .button:hover, .button.is-hovered {
   transition: all 0.3s;
-  box-shadow: 5px 5px 0 0.125em #263A29;
-  transform: translate(-5px, -5px);
+  box-shadow: 0.25rem 0.25rem 0 0.025rem #263A29;
+  transform: translate(-0.25rem, -0.25rem);
   color: #363636;
 }
 

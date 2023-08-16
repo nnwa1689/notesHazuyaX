@@ -12,7 +12,7 @@
             <div class="column is-7">
                 <p class="title is-4 mt-6"><span class="has-text-link">嗨</span>，我叫做</p>
                 <input class="input is-large is-fullwidth" id="Name" type="text" name="Name" value="">
-                <p class="subtitle is-5 mt-3">我們該如何稱呼您？</p>
+                <p class="is-size-5 mt-3">我們該如何稱呼您？</p>
                 <p class="title is-4 mt-6">我<span class="has-text-link">需要．．．</span></p>
                 <div class="select is-large is-fullwidth">
                     <select name="Type" id="Type">
@@ -24,7 +24,7 @@
                         <option value="other">其他</option>
                     </select>
                 </div>
-                <p class="subtitle is-5 mt-3">您需要的服務項目是？</p>
+                <p class="is-size-5 mt-3">您需要的服務項目是？</p>
 
                 <p class="title is-4 mt-6">而我的<span class="has-text-link">預算</span>是</p>
                 <div class="select is-large is-fullwidth">
@@ -36,15 +36,15 @@
                         <option value="L6">NTD$50,001 - $100,000</option>
                     </select>
                 </div>
-                <p class="subtitle is-5 mt-3">請選取您可以接受的預算</p>
+                <p class="is-size-5 mt-3">請選取您可以接受的預算</p>
 
                 <p class="title is-4 mt-6">我想要對你們<span class="has-text-link">說</span></p>
                 <textarea class="textarea" name="Content" id="Content" cols="50" rows="20" value=""></textarea>
-                <p class="subtitle is-5 mt-3">請詳述您的需求，讓我們知道您的想法！若有附件可附上 Google 雲端硬碟連結</p>
+                <p class="is-size-5 mt-3">請詳述您的需求，讓我們知道您的想法！若有附件可附上 Google 雲端硬碟連結</p>
 
                 <p class="title is-4 mt-6">以下是我的<span class="has-text-link">Email</span></p>
                 <input class="input is-large is-fullwidth" type="text" name="Email" id="Email" value="">
-                <p class="subtitle is-5 mt-3">請提供一個可以聯繫的E-mail</p>
+                <p class="is-size-5 mt-3">請提供一個可以聯繫的E-mail</p>
 
                 <article class="notification is-danger mt-5 mb-5 is-medium" id="error" style="display: none;">
                     <div class="content">
@@ -57,25 +57,16 @@
                     嗨，我們已經收到您的訊息囉！請靜待我們的回覆～
                     </div>
                 </article>
-                <p class="has-text-right">
-                    <button type="button" onclick="submit()" class="button is-primary is-large mt-3">快！立即送出我的訊息！</button>
+                <p class="has-text-centered">
+                    <button type="button" onclick="submit()" class="button is-primary is-large is-works-button is-rounded mt-3">
+                        <p class="title is-2"><i class="fas fa-paper-plane"></i></p>
+                    </button>
                 </p>
 
             </div>
             <div class="column pl-5">
                 <p class="title is-1 has-text-right">
                     <i class="fas fa-comment-dots"></i>
-                    <!--
-                    <lottie-player
-                        src="{{$webData['webConfig'][13]->tittle}}/lf30_t6fy5r4g.json"
-                        background="transparent"
-                        speed="1"
-                        style="width: 100%; margin-right:auto; margin-left:auto;"
-                        loop
-                        autoplay
-                        >
-                    </lottie-player>
-                    -->
                 </p>
                 <p class="title is-4 has-text-right has-text-link">常見問答</p>
                 <div class="container">
