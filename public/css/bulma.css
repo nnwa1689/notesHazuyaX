@@ -3161,7 +3161,7 @@ fieldset[disabled] .button.is-dark.is-inverted.is-outlined {
 }
 
 .button.is-primary:hover, .button.is-primary.is-hovered {
-  box-shadow: 5px 5px 0 0.125em #263A29;
+  box-shadow: 0.25rem 0.25rem 0 0.1rem #263A29;
   background-color: #E86A33;
   color: #fff;
 }
@@ -3286,7 +3286,7 @@ fieldset[disabled] .button.is-primary.is-inverted.is-outlined {
   transition: all 0.3s;
   background-color: #263A29;
   border-color: #E86A33;
-  box-shadow: 5px 5px 0 0.125em #E86A33;
+  box-shadow: 0.25rem 0.25rem 0 0.1rem #E86A33;
   color: #fff;
 }
 
@@ -5634,13 +5634,13 @@ a.tag:hover {
 .input:hover, .textarea:hover, .select select:hover, .is-hovered.input, .is-hovered.textarea, .select select.is-hovered {
   transition: all 0.3s;
   border-color: #E86A33;
-  box-shadow: 5px 5px 0 0.125em #263A29;
+  box-shadow: 0.25rem 0.25rem 0 0.1rem #263A29;
 }
 
 .input:focus, .textarea:focus, .select select:focus, .is-focused.input, .is-focused.textarea, .select select.is-focused, .input:active, .textarea:active, .select select:active, .is-active.input, .is-active.textarea, .select select.is-active {
   transition: all 0.3s;
   border-color: #263A29;
-  box-shadow: 5px 5px 0 0.125em #E86A33;
+  box-shadow: 0.25rem 0.25rem 0 0.1rem #E86A33;
   /*box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);*/
 }
 

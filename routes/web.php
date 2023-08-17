@@ -16,9 +16,9 @@
 Route::get('/', 'PostController@getHomePage')->name('index');
 
 //post
-Route::get('/post', 'PostController@getPostList')->name('post');
-Route::get('/post/p/{pageNumber}', 'PostController@getPostList')->where('pageNumber', '[0-9]+')->name('post');
-Route::get('/post/{postID}', 'PostController@getOnePost')->where('postID', '[0-9]+')->name('post');
+Route::get('/blog', 'PostController@getPostList')->name('post');
+//Route::get('/post/p/{pageNumber}', 'PostController@getPostList')->where('pageNumber', '[0-9]+')->name('post');
+Route::get('/blog/{postID}', 'PostController@getOnePost')->where('postID', '[0-9]+')->name('post');
 
 //category
 Route::get('/category/{classID}/', 'PostController@getallCategorypost')->where('classID', '[0-9]+')->name('{classID}');
@@ -26,12 +26,6 @@ Route::get('/category/{classID}/', 'PostController@getallCategorypost')->where('
 
 //page
 Route::get('/page/{pageID}','PageController@getPage')->where('pageID', '[0-9A-Za-z]+')->name('page/'.'{pageID}');
-
-/*AllAuthorPage 關於作者頁面移入關於*/
-
-/*whatnews 模組移除/*
-
-/*Person頁面模組移除*/
 
 //Search
 Route::get('search', 'SearchController@searchPage');

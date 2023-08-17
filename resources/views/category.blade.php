@@ -11,7 +11,7 @@
     <div class="columns is-multiline is-mobile is-justify-content-center mt-6">
     @foreach($allPosts as $post)
         @component('compoments.postitem',
-                ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
+                ['url' => $webData['webConfig'][13]->tittle."blog/".$post->PostId,
                 'CoverImage' => $post->CoverImage,
                 'PostTittle' => $post->PostTittle,
                 'PostContant' => $post->PostContant,

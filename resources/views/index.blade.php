@@ -88,7 +88,7 @@
             <div class="columns is-multiline">
                 @foreach($allPosts as $post)
                     @component('compoments.postitem',
-                        ['url' => $webData['webConfig'][13]->tittle."post/".$post->PostId,
+                        ['url' => $webData['webConfig'][13]->tittle."blog/".$post->PostId,
                         'CoverImage' => $post->CoverImage,
                         'PostTittle' => $post->PostTittle,
                         'PostContant' => $post->PostContant,
@@ -103,7 +103,7 @@
                     @endcomponent
                 @endforeach
             </div>
-            <button class="button is-link mt-3 mb-3 is-large" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}post')">
+            <button class="button is-link mt-3 mb-3 is-large" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}blog')">
                 <div class="columns">
                     <div class="column">
                         <p class="title is-6">
