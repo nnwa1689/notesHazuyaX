@@ -47,7 +47,7 @@
 @font-face {
     font-family: 'NotoSansTC-Regular';
     font-style: normal;
-    src: url(/fonts/TenorSans-Regular.ttf);
+    src: url(/fonts/Rubik-Regular.ttf);
     unicode-range: U+00-024F;
     font-display: swap;
 }
@@ -5411,7 +5411,6 @@ a.tag:hover {
 }
 
 .title.is-home {
-  font-family: 'OverpassMono-SemiBold';
   font-size: 8.625rem;
 }
 
@@ -5466,7 +5465,6 @@ a.tag:hover {
 
 @media screen and (max-width: 768px) {
   .title.is-home {
-    font-family: 'OverpassMono-SemiBold';
     font-size: 4rem;
   }
 
