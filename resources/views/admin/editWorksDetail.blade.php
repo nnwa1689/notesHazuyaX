@@ -5,32 +5,32 @@
     <div class="box">
         <form method="post" action="/admin/updateWorksDetail/{{ isset($WorkDetail[0] -> PID) ? $WorkDetail[0] -> PID : 'new' }}">
             <div class="control">
-                <label class="subtitle is-5">作品識別碼（例如英文名稱）</label>
-                <input class="input is-medium" type="text" name="WorksID" value="{{ isset($WorkDetail[0] -> WorksID) ? $WorkDetail[0] -> WorksID : '' }}">
+                <label class="is-size-5">作品識別碼（例如英文名稱）</label>
+                <input class="input is-medium mb-3" type="text" name="WorksID" value="{{ isset($WorkDetail[0] -> WorksID) ? $WorkDetail[0] -> WorksID : '' }}">
             </div>
             <div class="control">
-                <label class="subtitle is-5">排列順序</label>
-                <input class="input is-medium" type="text" name="OrderID" value="{{ isset($WorkDetail[0] -> OrderID) ? $WorkDetail[0] -> OrderID : '' }}">
+                <label class="is-size-5">排列順序</label>
+                <input class="input is-medium mb-3" type="text" name="OrderID" value="{{ isset($WorkDetail[0] -> OrderID) ? $WorkDetail[0] -> OrderID : '' }}">
             </div>
             <div class="control">
-                <label class="subtitle is-5">作品名稱</label>
-                <input class="input is-medium" type="text" name="WorksName" value="{{ isset($WorkDetail[0] -> WorksName) ? $WorkDetail[0] -> WorksName : '' }}">
+                <label class="is-size-5">作品名稱</label>
+                <input class="input is-medium mb-3" type="text" name="WorksName" value="{{ isset($WorkDetail[0] -> WorksName) ? $WorkDetail[0] -> WorksName : '' }}">
             </div>
             <div class="control">
-                <label class="subtitle is-5">作品簡述</label>
-                <input class="input is-medium" type="text" name="ShortIntro" value="{{ isset($WorkDetail[0] -> ShortIntro) ? $WorkDetail[0] -> ShortIntro : '' }}">
+                <label class="is-size-5">作品簡述</label>
+                <input class="input is-medium mb-3" type="text" name="ShortIntro" value="{{ isset($WorkDetail[0] -> ShortIntro) ? $WorkDetail[0] -> ShortIntro : '' }}">
             </div>
             <div class="control">
-                <label class="subtitle is-5">客戶名稱</label>
-                <input class="input is-medium" type="text" name="Customer" value="{{ isset($WorkDetail[0] -> Customer) ? $WorkDetail[0] -> Customer : '' }}">
+                <label class="is-size-5">客戶名稱</label>
+                <input class="input is-medium mb-3" type="text" name="Customer" value="{{ isset($WorkDetail[0] -> Customer) ? $WorkDetail[0] -> Customer : '' }}">
             </div>
             <div class="control">
-                <label class="subtitle is-5">作品預覽圖</label>
-                <input class="input is-medium" type="text" name="CoverImage" value="{{ isset($WorkDetail[0] -> CoverImage) ? $WorkDetail[0] -> CoverImage : '' }}">
+                <label class="is-size-5">作品預覽圖</label>
+                <input class="input is-medium mb-3" type="text" name="CoverImage" value="{{ isset($WorkDetail[0] -> CoverImage) ? $WorkDetail[0] -> CoverImage : '' }}">
             </div>
             <div class="control">
-                <label class="subtitle is-5">作品連結（若無留空）</label>
-                <input class="input is-medium" type="text" name="Url" value="{{ isset($WorkDetail[0] -> Url) ? $WorkDetail[0] -> Url : '' }}">
+                <label class="is-size-5">作品連結（若無留空）</label>
+                <input class="input is-medium mb-3" type="text" name="Url" value="{{ isset($WorkDetail[0] -> Url) ? $WorkDetail[0] -> Url : '' }}">
             </div>
             <hr/>
             <div class="control">
@@ -105,7 +105,7 @@
                 <!--EditorEnd-->
                 <hr/>
             </div>
-            <label class="subtitle is-5">作品作者（最多5位，若沒有則留空）</label>
+            <label class="is-size-5">作品作者（最多5位，若沒有則留空）</label>
             @for ($i = 1; $i < 6; $i++)
             <div class="columns">
                 <div class="column is-one-fifth has-text-centered">
