@@ -53,9 +53,11 @@ const layoutInit = () => {
     $(".navbar-toggle").on("mouseenter", ()=>{
         for(i = 15; i > 4; i--){
             document.querySelector('#MenuIcon').querySelector('#mil2').setAttribute("x1", i)
+            console.log('fsf')
         }
 
         for(i = 41; i > 30; i--){
+            console.log('fsf')
             document.querySelector('#MenuIcon').querySelector('#mil1').setAttribute("y1", i)
          }
     })
