@@ -2,7 +2,7 @@
 @section('title', $title)
 @section('content')
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="mb-6">
-    <section class="hero is-small">
+    <section class="hero is-shadow is-small">
         <div class="hero-body">
             <div class="columns">
                 <div class="column is-10">
