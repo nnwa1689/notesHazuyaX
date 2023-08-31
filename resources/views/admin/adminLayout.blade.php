@@ -29,7 +29,7 @@
         <div class="container" style="padding: 0rem 0.5rem">
             <div class="navbar-brand">
                 <a class="navbar-item brand-text" href="/">
-                <img src="{{asset('/images/NotesHZ_ICON_2023.png')}}" width="64px" height="64px">
+                <img src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}" width="64px" height="64px">
         </a>
                 <div class="navbar-burger burger" data-target="navMenu">
                     <span></span>
@@ -114,12 +114,12 @@
     </div>
     <div class="container is-fluid">
         <footer class="footer">
-            <div class="content has-text-centered">
+            <div class="has-text-centered">
                 <p>
                 NotesX CMS Made with <span class="has-text-danger">❤</span>  by 44 Seconds Studio.
                 </p>
                 <p class="is-size-6">
-                    Version:V230522.20
+                    Version:V230831.11
                 </p>
             </div>
     </footer>

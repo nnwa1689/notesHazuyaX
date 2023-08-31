@@ -50,6 +50,26 @@ const layoutInit = () => {
         $('.navbar-toggle').toggleClass('is-navbar-toggle-close');
     });
 
+    $(".navbar-toggle").on("mouseenter", ()=>{
+        for(i = 15; i > 4; i--){
+           $("#mil2").attr("x1", i)
+        }
+
+        for(i = 41; i > 30; i--){
+            $("#mil1").attr("y1", i)
+         }
+    })
+
+    $(".navbar-toggle").on("mouseleave", ()=>{
+        for(i = 4; i < 16; i++){
+           $("#mil2").attr("x1", i)
+        }
+
+        for(i = 30; i < 41; i++){
+            $("#mil1").attr("y1", i)
+         }
+    })
+
     setTimeout(() => {
         gsap.to(".pageloader", {
             duration: 1.2,

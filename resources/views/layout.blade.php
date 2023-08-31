@@ -38,7 +38,15 @@
                     <!--MibileNavbar -->
                     <div class="navbar-item navbar-toggle is-navbar-toggle-close is-mobile" style="margin-left: auto; margin-right: -0.75rem">
                         <a class="navbar-link is-arrowless title is-2">
-                            <i class="fas fa-ellipsis-h"></i>
+                            <svg id="MenuIcon" width="69px" height="69px" viewBox="0 0 69 69" xmlns="http://www.w3.org/2000/svg" fill="" stroke="#263A29" stroke-width="1.2">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <line id="mil1" x1="15" y1="41" x2="69" y2="41"></line>
+                                    <line id="mil2" x1="15" y1="53" x2="69" y2="53"></line>
+                                    <line id="mil3" x1="15" y1="65" x2="69" y2="65"></line>
+                                </g>
+                            </svg>
                         </a>
                     </div>
                     <!-- END -->
@@ -49,7 +57,15 @@
                     <div class="navbar-end">
                         <div class="navbar-item navbar-toggle is-navbar-toggle-close">
                             <a class="navbar-link is-arrowless title is-2">
-                                <i class="fas fa-ellipsis-h"></i>
+                                <svg id="MenuIcon" width="69px" height="69px" viewBox="0 0 69 69" xmlns="http://www.w3.org/2000/svg" fill="" stroke="#263A29" stroke-width="1.2">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <line id="mil1" x1="15" y1="41" x2="69" y2="41"></line>
+                                        <line id="mil2" x1="15" y1="53" x2="69" y2="53"></line>
+                                        <line id="mil3" x1="15" y1="65" x2="69" y2="65"></line>
+                                    </g>
+                                </svg>
                             </a>
                         </div>
                     </div>

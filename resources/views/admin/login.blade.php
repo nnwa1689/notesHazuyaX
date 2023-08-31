@@ -25,7 +25,7 @@
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
                     <a href="{{$webData['webConfig'][13]->tittle}}">
-                        <img width="128" height="128" src="{{$webData['webConfig'][13]->tittle}}images/NotesHZ_ICON_2023.png">
+                        <img width="128" height="128" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
                     </a>
                     <div class="box">
                         <form action="login" id="login-form" method="post">
