@@ -61,12 +61,17 @@ const layoutInit = async() => {
     $(".navbar-toggle").on("mouseenter", async()=> {
         for(i = 15; i > 4; i--){
             line2.setAttribute('x1', i)
-            await sleep(2000);
+            await sleep(100);
+        }
+
+        for(i = 69; i > 58; i--){
+            line2.setAttribute('x1', i)
+            await sleep(100);
         }
 
         for(i = 41; i > 30; i--){
             line1.setAttribute('y1', i)
-            await sleep(2000);
+            await sleep(100);
          }
     })
 
