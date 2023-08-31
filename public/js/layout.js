@@ -52,11 +52,11 @@ const layoutInit = () => {
 
     $(".navbar-toggle").on("mouseenter", ()=>{
         for(i = 15; i > 4; i--){
-           $("#mil2").attr("x1", i)
+            document.querySelector('#MenuIcon').querySelector('#mil2').setAttribute("x1", i)
         }
 
         for(i = 41; i > 30; i--){
-            $("#mil1").attr("y1", i)
+            document.querySelector('#MenuIcon').querySelector('#mil1').setAttribute("y1", i)
          }
     })
 
