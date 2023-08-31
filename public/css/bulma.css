@@ -7808,23 +7808,6 @@ a.list-item {
   }
 }
 
-#MenuIcon:hover #mil1 {
-  transition: all 0.3s;
-  transform: rotate(5deg) !important;
-  stroke: #E86A33;
-}
-
-#MenuIcon:hover #mil2 {
-  transition: all 0.3s;
-  transform: translateX(-10px) !important;
-  stroke: #E86A33;
-}
-
-#MenuIcon:hover #mil3 {
-  transition: all 0.3s;
-  stroke: #E86A33;
-}
-
 #MenuIcon #mil1 {
   transition: all 0.3s;
   transform: rotate(0deg);
@@ -7879,10 +7862,26 @@ a.list-item {
   transform: translateX(0px);
 }
 
-
 .is-navbar-toggle-close #MenuIcon #mil3 {
   transition: all 0.3s;
   transform: translate3d(0px, 0px, 0px) rotate(0deg);
+}
+
+.is-navbar-toggle-close #MenuIcon:hover #mil1 {
+  transition: all 0.3s;
+  transform: rotate(5deg);
+  stroke: #E86A33;
+}
+
+.is-navbar-toggle-close #MenuIcon:hover #mil2 {
+  transition: all 0.3s;
+  transform: translateX(-10px);
+  stroke: #E86A33;
+}
+
+.is-navbar-toggle-close #MenuIcon:hover #mil3 {
+  transition: all 0.3s;
+  stroke: #E86A33;
 }
 
 .is-navbar-toggle-close {
