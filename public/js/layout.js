@@ -24,7 +24,11 @@ const isMenuOpen = () => {
     return false;
 }
 
-const layoutInit = () => {
+const sleep = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+const layoutInit = async() => {
     console.log("%c*44 Seconds Studio* 嗨，很高興在這裡看到你！", "padding:5px 15px; color: #263A29; font-size: 14px; border: 2px solid #E86A33; background:#F2E3DB;border-radius:5px;");
     console.log("%c來到這裡不太容易吧，歡迎來我們這裡喝喝茶聊聊天唷XD", "padding:5px 15px; color: #F2E3DB; font-size: 14px; border: 2px solid #000000; background:#E86A33;border-radius:5px;");
     console.log("%chttps://studio-44s.tw/contact", "padding:5px 15px; color: #F2E3DB; font-size: 14px; border: 2px solid #000000; background:#E86A33;border-radius:5px;");
@@ -54,13 +58,15 @@ const layoutInit = () => {
         line1 = svg.querySelector('#mil1'),
         line2 = svg.querySelector('#mil2')
 
-    $(".navbar-toggle").on("mouseenter", ()=> {
+    $(".navbar-toggle").on("mouseenter", async()=> {
         for(i = 15; i > 4; i--){
             line2.setAttribute('x1', i)
+            await sleep(2000);
         }
 
         for(i = 41; i > 30; i--){
             line1.setAttribute('y1', i)
+            await sleep(2000);
          }
     })
 
