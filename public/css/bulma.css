@@ -7808,6 +7808,23 @@ a.list-item {
   }
 }
 
+#MenuIcon:hover #mil1 {
+  transition: all 0.3s;
+  transform: rotate(10deg);
+  stroke: #E86A33;
+}
+
+#MenuIcon:hover #mil2 {
+  transition: all 0.3s;
+  transform: translateX(-5px);
+  stroke: #E86A33;
+}
+
+#MenuIcon:hover #mil3 {
+  transition: all 0.3s;
+  stroke: #E86A33;
+}
+
 .is-navbar-toggle-on {
     animation-name: openMenu;
     animation-duration: 0.5s;

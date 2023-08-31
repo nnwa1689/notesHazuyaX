@@ -54,37 +54,6 @@ const layoutInit = async() => {
         $('.navbar-toggle').toggleClass('is-navbar-toggle-close');
     });
 
-    let svg = document.querySelector('#MenuIcon'),
-        line1 = svg.querySelector('#mil1'),
-        line2 = svg.querySelector('#mil2')
-
-    $(".navbar-toggle").on("mouseenter", async()=> {
-        for(i = 15; i > 4; i--){
-            line2.setAttribute('x1', i)
-            await sleep(100);
-        }
-
-        for(i = 69; i > 58; i--){
-            line2.setAttribute('x1', i)
-            await sleep(100);
-        }
-
-        for(i = 41; i > 30; i--){
-            line1.setAttribute('y1', i)
-            await sleep(100);
-         }
-    })
-
-    $(".navbar-toggle").on("mouseleave", ()=>{
-        for(i = 4; i < 16; i++){
-            line2.setAttribute('x1', i)
-        }
-
-        for(i = 30; i < 41; i++){
-            line1.setAttribute('y1', i)
-         }
-    })
-
     setTimeout(() => {
         gsap.to(".pageloader", {
             duration: 1.2,
