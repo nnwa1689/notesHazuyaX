@@ -7825,6 +7825,26 @@ a.list-item {
   stroke: #E86A33;
 }
 
+#MenuIconover #mil1 {
+  transition: all 0.3s;
+  transform: rotate(0deg);
+  stroke: #263A29;
+  stroke-width: 3;
+}
+
+#MenuIcon #mil2 {
+  transition: all 0.3s;
+  transform: translateX(0px);
+  stroke: #263A29;
+  stroke-width: 3;
+}
+
+#MenuIcon #mil3 {
+  transition: all 0.3s;
+  stroke: #263A29;
+  stroke-width: 3;
+}
+
 .is-navbar-toggle-on {
     animation-name: openMenu;
     animation-duration: 0.5s;

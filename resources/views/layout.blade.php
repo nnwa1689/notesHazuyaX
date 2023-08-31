@@ -54,9 +54,9 @@
                         <div class="navbar-item navbar-toggle is-navbar-toggle-close">
                             <a class="navbar-link is-arrowless title is-2">
                                 <svg id="MenuIcon" width="69px" height="69px" viewBox="0 0 69 69" xmlns="http://www.w3.org/2000/svg">
-                                    <line id="mil1" x1="15" y1="41" x2="69" y2="41" stroke="#263A29" stroke-width="2"></line>
-                                    <line id="mil2" x1="15" y1="53" x2="69" y2="53" stroke="#263A29" stroke-width="2"></line>
-                                    <line id="mil3" x1="15" y1="65" x2="69" y2="65" stroke="#263A29" stroke-width="2"></line>
+                                    <line id="mil1" x1="15" y1="41" x2="69" y2="41"></line>
+                                    <line id="mil2" x1="15" y1="53" x2="69" y2="53"></line>
+                                    <line id="mil3" x1="15" y1="65" x2="69" y2="65"></line>
                                 </svg>
                             </a>
                         </div>
