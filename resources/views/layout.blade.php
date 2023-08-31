@@ -38,7 +38,7 @@
                     <!--MibileNavbar -->
                     <div class="navbar-item navbar-toggle is-navbar-toggle-close is-mobile" style="margin-left: auto; margin-right: -0.75rem">
                         <a class="navbar-link is-arrowless title is-2">
-                            <i class="fas fa-bars fa-lg"></i>
+                            <span class="material-icons-round">dehaze</span>
                         </a>
                     </div>
                     <!-- END -->
@@ -49,7 +49,7 @@
                     <div class="navbar-end">
                         <div class="navbar-item navbar-toggle is-navbar-toggle-close">
                             <a class="navbar-link is-arrowless title is-2">
-                                <i class="fas fa-bars fa-lg"></i>
+                                <span class="material-icons-round">dehaze</span>
                             </a>
                         </div>
                     </div>
