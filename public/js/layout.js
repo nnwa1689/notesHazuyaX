@@ -54,7 +54,8 @@ const layoutInit = () => {
         line1 = svg.querySelector('#mil1'),
         line2 = svg.querySelector('#mil2')
 
-    $(".navbar-toggle").on("mouseenter", ()=>{
+    $(".navbar-toggle").on("mouseenter", () => {
+        document.querySelector("#MenuIcon > line").setAttribute("stroke","#E86A33")
         for(i = 15; i > 4; i--){
             line2.setAttribute('x1', i)
         }
