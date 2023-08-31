@@ -7851,36 +7851,36 @@ a.list-item {
     animation-iteration-count:initial;
     animation-fill-mode: forwards;*/
 }
-.is-navbar-toggle-on #mil1 {
+.is-navbar-toggle-on #MenuIcon #mil1 {
   transition: all 0.3s;
   transform: translate3d(38px, -20px, 0px) rotate(45deg);
   stroke: #E86A33;
 }
 
-.is-navbar-toggle-on #mil2 {
+.is-navbar-toggle-on #MenuIcon #mil2 {
   transition: all 0.3s;
   transform: translateX(-100px);
 }
 
 
-.is-navbar-toggle-on #mil3 {
+.is-navbar-toggle-on #MenuIcon #mil3 {
   transition: all 0.3s;
   transform: translate3d(-38px, 20px, 0px) rotate(-45deg);
   stroke: #E86A33;
 }
 
-.is-navbar-toggle-close #mil1 {
+.is-navbar-toggle-close #MenuIcon #mil1 {
   transition: all 0.3s;
   transform: translate3d(0px, 0px, 0px) rotate(0deg);
 }
 
-.is-navbar-toggle-close #mil2 {
+.is-navbar-toggle-close #MenuIcon #mil2 {
   transition: all 0.3s;
   transform: translateX(0px);
 }
 
 
-.is-navbar-toggle-close #mil3 {
+.is-navbar-toggle-close #MenuIcon #mil3 {
   transition: all 0.3s;
   transform: translate3d(0px, 0px, 0px) rotate(0deg);
 }
