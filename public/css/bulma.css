@@ -7810,13 +7810,13 @@ a.list-item {
 
 #MenuIcon:hover #mil1 {
   transition: all 0.3s;
-  transform: rotate(10deg);
+  transform: rotate(5deg);
   stroke: #E86A33;
 }
 
 #MenuIcon:hover #mil2 {
   transition: all 0.3s;
-  transform: translateX(-5px);
+  transform: translateX(-10px);
   stroke: #E86A33;
 }
 
@@ -7846,17 +7846,50 @@ a.list-item {
 }
 
 .is-navbar-toggle-on {
-    animation-name: openMenu;
+    /*animation-name: openMenu;
     animation-duration: 0.5s;
     animation-iteration-count:initial;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;*/
+}
+.is-navbar-toggle-on #mil1 {
+  transition: all 0.3s;
+  transform: translate3d(38px, -20px, 0px) rotate(45deg);
+  stroke: #E86A33;
+}
+
+.is-navbar-toggle-on #mil2 {
+  transition: all 0.3s;
+  transform: translateX(-100px);
+}
+
+
+.is-navbar-toggle-on #mil3 {
+  transition: all 0.3s;
+  transform: translate3d(-38px, 20px, 0px) rotate(-45deg);
+  stroke: #E86A33;
+}
+
+.is-navbar-toggle-close #mil1 {
+  transition: all 0.3s;
+  transform: translate3d(0px, 0px, 0px) rotate(0deg);
+}
+
+.is-navbar-toggle-close #mil2 {
+  transition: all 0.3s;
+  transform: translateX(0px);
+}
+
+
+.is-navbar-toggle-close #mil3 {
+  transition: all 0.3s;
+  transform: translate3d(0px, 0px, 0px) rotate(0deg);
 }
 
 .is-navbar-toggle-close {
-    animation-name: closeMenu;
+    /*animation-name: closeMenu;
     animation-duration: 0.5s;
     animation-iteration-count:initial;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;*/
 }
 
 .is-navbar-toggle-on a{
