@@ -7810,13 +7810,13 @@ a.list-item {
 
 #MenuIcon:hover #mil1 {
   transition: all 0.3s;
-  transform: rotate(5deg);
+  transform: rotate(5deg) !important;
   stroke: #E86A33;
 }
 
 #MenuIcon:hover #mil2 {
   transition: all 0.3s;
-  transform: translateX(-10px);
+  transform: translateX(-10px) !important;
   stroke: #E86A33;
 }
 
