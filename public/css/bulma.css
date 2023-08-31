@@ -7825,7 +7825,7 @@ a.list-item {
   stroke: #E86A33;
 }
 
-#MenuIconover #mil1 {
+#MenuIcon #mil1 {
   transition: all 0.3s;
   transform: rotate(0deg);
   stroke: #263A29;
