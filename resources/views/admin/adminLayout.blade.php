@@ -29,7 +29,7 @@
         <div class="container" style="padding: 0rem 0.5rem">
             <div class="navbar-brand">
                 <a class="navbar-item brand-text" href="/">
-                <img src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}" width="64px" height="64px">
+                <img src="{{asset('/images/NotesHZ_ICON_2023.png')}}" width="64px" height="64px">
         </a>
                 <div class="navbar-burger burger" data-target="navMenu">
                     <span></span>
