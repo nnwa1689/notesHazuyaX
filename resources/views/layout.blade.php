@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/locomotive-scroll.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/kursor.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}codes/styles/prism.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,0,0" />
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/barba.umd.js"></script>
@@ -38,7 +39,9 @@
                     <!--MibileNavbar -->
                     <div class="navbar-item navbar-toggle is-navbar-toggle-close is-mobile" style="margin-left: auto; margin-right: -0.75rem">
                         <a class="navbar-link is-arrowless title is-2">
-                            <span class="material-icons-round">dehaze</span>
+                            <span class="material-symbols-rounded">
+                            menu
+                            </span>
                         </a>
                     </div>
                     <!-- END -->
@@ -49,7 +52,9 @@
                     <div class="navbar-end">
                         <div class="navbar-item navbar-toggle is-navbar-toggle-close">
                             <a class="navbar-link is-arrowless title is-2">
-                                <span class="material-icons-round">dehaze</span>
+                                <span class="material-symbols-rounded">
+                                menu
+                                </span>
                             </a>
                         </div>
                     </div>
