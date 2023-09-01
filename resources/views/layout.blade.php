@@ -65,14 +65,9 @@
             </div>
         </nav>
         <div class="fullMenu">
-            <div class="container is-max-desktop" style="margin-top:8.5rem;">
-                <div class="columns is-variable is-8">
-                    <div class="column is-8">
-                        <div class="block">
-                            <p class="is-size-5 has-text-left has-text-centered-mobile">
-                                <span class="has-text-link"><i class="fas fa-quote-left"></i></span><span id="typed"></span><span class="has-text-link"><i class="fas fa-quote-right"></i></span>
-                            </p>
-                        </div>
+            <div class="container is-max-desktop" style="margin-top:9rem;">
+                <div class="columns is-variable is-8 is-mobile">
+                    <div class="column is-8 is-align-self-flex-end">
                         <div class="block has-text-left has-text-centered-mobile">
                             @if(strlen($webData['webConfig'][22]->tittle) > 0)
                                 <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
@@ -134,6 +129,12 @@
                         <!--Dynamic END-->
                         </div>
                     </div>
+                </div>
+
+                <div class="block">
+                    <p class="is-size-5 has-text-left has-text-centered-mobile">
+                        <span class="has-text-link"><i class="fas fa-quote-left"></i></span><span id="typed"></span><span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+                    </p>
                 </div>
             </div>
         </div>
