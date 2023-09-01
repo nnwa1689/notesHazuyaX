@@ -105,7 +105,9 @@
                                 </a>
                             @endif
                         </div>
+                        
                         <hr />
+                        
                         <div class="block has-text-left has-text-centered-mobile">
                             @foreach($webData['allButtonNav'] as $bn)
                             <a href="
@@ -127,7 +129,7 @@
                         @endif
                         @endforeach
                         <!--Dynamic END-->
-                        </div>
+                    
                     </div>
                 </div>
 
