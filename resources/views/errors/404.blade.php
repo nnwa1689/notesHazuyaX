@@ -27,7 +27,7 @@
   </body>
   <script id="mainScript">
     var typed = new Typed("#errText", {
-        strings:["4 0 4 not found",],
+        strings:["4 0 4 <br/> Not found",],
         stringsElement: '#typed-strings',
         typeSpeed: 30,
         startDelay: 1000,
