@@ -17,21 +17,21 @@
     <div class="content">
         {!! $WorkDetail[0] -> Intro !!}
     </div>
-    <div class="columns mt-6">
-        <div class="column is-3 has-text-centered">
+    <div class="columns mt-6" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+        <div class="column is-5 has-text-centered">
             <a href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded mr-0 mb-6 mt-6">
                 作品鑑賞<br/><i class="fas fa-arrow-right"></i>
             </a>
         </div>
         <div class="column has-text-centered">
-            <p class="title is-4 m-5" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">Presented by</p>
-            <div class="columns" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
-                <div class="column is-5 is-justify-content-center" style="margin-left:auto; margin-right: auto;">
+            <p class="title is-4 m-5">Presented by</p>
+            <div class="columns">
+                <div class="column is-9 is-justify-content-center" style="margin-left:auto; margin-right: auto;">
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
                     @if($value -> StaffName !== "")
                     <div class="columns is-variable is-mobile p-0">
                         <div class="column is-4">
-                            <div class="image is-96x96">
+                            <div class="image is-128x128">
                                 <figure class="image is-1by1">
                                     <img class="is-rounded" src="{{$value -> StaffImage}}">
                                 </figure>
