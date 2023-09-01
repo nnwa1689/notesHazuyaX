@@ -66,7 +66,7 @@
         </nav>
         <div class="fullMenu">
             <div class="container is-max-desktop" style="margin-top:9rem;">
-                <div class="columns is-variable is-8 is-mobile">
+                <div class="columns is-variable is-8">
                     <div class="column is-8 is-align-self-flex-end">
                         <div class="block has-text-left has-text-centered-mobile">
                             @if(strlen($webData['webConfig'][22]->tittle) > 0)
