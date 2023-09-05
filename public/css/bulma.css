@@ -7707,12 +7707,18 @@ a.list-item {
 }
 
 .navbar {
-  border-top-style: solid;
-  border-top-width: 0px;
-  border-color: #E86A33;
   min-height: 7rem;
   position: relative;
   z-index: 30;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    min-height: 7rem;
+    position: relative;
+    z-index: 30;
+    margin: 0 1rem;
+  }
 }
 
 .fullMenu {
