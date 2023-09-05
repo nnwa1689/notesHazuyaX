@@ -7723,7 +7723,7 @@ a.list-item {
   text-align: center;
   color: #E2DCD5;
   margin-left: 0%;
-  margin-top: -7rem;
+  margin-top: -8rem;
   z-index: 3;
   overflow: hidden;
   background-color: rgba(38, 58, 41, 0.95) !important;
@@ -8555,7 +8555,7 @@ a.list-item {
 
 html.has-navbar-fixed-top,
 body.has-navbar-fixed-top {
-  padding-top: 7rem;
+  padding-top: 8rem;
 }
 
 html.has-navbar-fixed-bottom,
