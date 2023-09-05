@@ -20,13 +20,36 @@ class WorksService
     }
 
     /**
+     * 拿到所有公開 Works
+     *
+     * @return WorksList
+     */
+    public function GetAllWorksPublic()
+    {
+        $WorksList = Works::where('OrderID', '>', 0) -> orderBy('OrderID', 'asc') -> get();
+        return $WorksList;
+    }
+
+
+    /**
      * Works 詳細資料
      *
-     * @return void
+     * @return $WorkDetail
      */
     public function GetWorkDetail($WorksID)
     {
         $WorkDetail = Works::where('WorksID', $WorksID) -> get();
+        return $WorkDetail;
+    }
+
+    /**
+     * Works 詳細資料
+     *
+     * @return $WorkDetail
+     */
+    public function GetWorkDetailPublic($WorksID)
+    {
+        $WorkDetail = Works::where('WorksID', $WorksID) -> where('OrderID', '>', 0) -> get();
         return $WorkDetail;
     }
 
@@ -48,7 +71,7 @@ class WorksService
      */
     public function GetTopTwoWorks()
     {
-        $WorksList = Works::orderBy('OrderID', 'asc') -> limit(2) -> get();
+        $WorksList = Works::where('OrderID', '>', 0) -> orderBy('OrderID', 'asc') -> limit(2) -> get();
         return $WorksList;
     }
 

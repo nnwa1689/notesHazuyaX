@@ -4,32 +4,49 @@
     @parent
     <div class="box">
         <form method="post" action="/admin/updateWorksDetail/{{ isset($WorkDetail[0] -> PID) ? $WorkDetail[0] -> PID : 'new' }}">
+            <label class="label">
+                <i class="fas fa-square mr-2"></i>作品識別碼（例如英文名稱）
+            </label>    
             <div class="control">
-                <label class="is-size-5">作品識別碼（例如英文名稱）</label>
                 <input class="input is-medium mb-3" type="text" name="WorksID" value="{{ isset($WorkDetail[0] -> WorksID) ? $WorkDetail[0] -> WorksID : '' }}">
             </div>
+            <label class="label">
+                <i class="fas fa-sort-numeric-up mr-2"></i>排列順序
+            </label>   
             <div class="control">
-                <label class="is-size-5">排列順序</label>
                 <input class="input is-medium mb-3" type="text" name="OrderID" value="{{ isset($WorkDetail[0] -> OrderID) ? $WorkDetail[0] -> OrderID : '' }}">
             </div>
+            <div class="notification is-success mt-5 mb-5 is-small">
+                若將順序設定為 < 0 ，則不顯示本作品。
+            </div>
+            <label class="label">
+                <i class="fas fa-signature mr-2"></i>作品名稱
+            </label>   
             <div class="control">
-                <label class="is-size-5">作品名稱</label>
                 <input class="input is-medium mb-3" type="text" name="WorksName" value="{{ isset($WorkDetail[0] -> WorksName) ? $WorkDetail[0] -> WorksName : '' }}">
             </div>
+            <label class="label">
+                <i class="fas fa-bars mr-2"></i>作品簡述
+            </label>   
             <div class="control">
-                <label class="is-size-5">作品簡述</label>
                 <input class="input is-medium mb-3" type="text" name="ShortIntro" value="{{ isset($WorkDetail[0] -> ShortIntro) ? $WorkDetail[0] -> ShortIntro : '' }}">
             </div>
+            <label class="label">
+                <i class="fas fa-walking mr-2"></i>客戶名稱
+            </label>   
             <div class="control">
-                <label class="is-size-5">客戶名稱</label>
                 <input class="input is-medium mb-3" type="text" name="Customer" value="{{ isset($WorkDetail[0] -> Customer) ? $WorkDetail[0] -> Customer : '' }}">
             </div>
+            <label class="label">
+                <i class="fas fa-image mr-2"></i>預覽圖
+            </label>   
             <div class="control">
-                <label class="is-size-5">作品預覽圖</label>
                 <input class="input is-medium mb-3" type="text" name="CoverImage" value="{{ isset($WorkDetail[0] -> CoverImage) ? $WorkDetail[0] -> CoverImage : '' }}">
             </div>
+            <label class="label">
+                <i class="fas fa-link mr-2"></i>作品連結
+            </label>   
             <div class="control">
-                <label class="is-size-5">作品連結（若無留空）</label>
                 <input class="input is-medium mb-3" type="text" name="Url" value="{{ isset($WorkDetail[0] -> Url) ? $WorkDetail[0] -> Url : '' }}">
             </div>
             <hr/>
@@ -105,11 +122,13 @@
                 <!--EditorEnd-->
                 <hr/>
             </div>
-            <label class="is-size-5">作品作者（最多5位，若沒有則留空）</label>
+            <label class="is-size-5">
+                <i class="fas fa-user mr-2"></i>作品作者（最多5位，若沒有則留空）
+            </label>
             @for ($i = 1; $i < 6; $i++)
             <div class="columns">
                 <div class="column is-one-fifth has-text-centered">
-                    作者{{$i}}
+                    <i class="fas fa-user mr-2"></i>作者{{$i}}
                     <input hidden name="{{ 'staff'.$i.'_StaffPID' }}" type="text" value="{{ isset($WorkDetail[0] -> WorksStaff[$i - 1] -> PID) ? $WorkDetail[0] -> WorksStaff[$i - 1] -> PID : '' }}">
                 </div>
                 <div class="column is-one-fifth">

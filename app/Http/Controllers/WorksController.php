@@ -23,7 +23,7 @@ class WorksController extends Controller
     public function GetWorksDetailPage($WorksID)
     {
         $this -> webData = $this -> baseService ->WebInit();
-        $WorkDetail = $this -> worksService -> GetWorkDetail($WorksID);
+        $WorkDetail = $this -> worksService -> GetWorkDetailPublic($WorksID);
         if(count($WorkDetail) <= 0){
             abort(404);
             return;
