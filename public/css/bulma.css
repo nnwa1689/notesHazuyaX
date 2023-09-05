@@ -7717,7 +7717,8 @@ a.list-item {
     min-height: 7rem;
     position: relative;
     z-index: 30;
-    margin: 0 1rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
   }
 }
 
