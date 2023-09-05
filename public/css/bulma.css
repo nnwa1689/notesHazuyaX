@@ -4119,8 +4119,8 @@ fieldset[disabled] .button {
   .content h4,
   .content h5,
   .content h6 {
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 250px;
+    padding-right: 250px;
   }
 }
 
@@ -4131,8 +4131,8 @@ fieldset[disabled] .button {
 
 @media screen and (min-width: 768px) {
   .PostHeader {
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 250px;
+    padding-right: 250px;
   }
 }
 
@@ -4210,8 +4210,8 @@ fieldset[disabled] .button {
 
 @media screen and (min-width: 768px) {
   .content p {
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 250px;
+    padding-right: 250px;
   }
 }
 

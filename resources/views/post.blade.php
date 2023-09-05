@@ -2,7 +2,7 @@
 @section('title', $postData[0]->PostTittle.' - ')
 @section('content')
 @parent
-    <div data-scroll class="container PostHeader is-max-desktop mb-5 mt-5">
+    <div data-scroll class="container PostHeader mb-5 mt-5">
         <div class="columns is-mobile is-gapless">
             <div class="column is-4 has-text-left">
                 <p>
@@ -28,7 +28,7 @@
             <img class="ContentCoverImage" src="{{ $postData[0]->CoverImage }}" data-scroll data-scroll-speed="-3">
         </section>
     </div>
-    <div class="container is-max-desktop mb-6">
+    <div class="container mb-6">
         <div class="content line-numbers">
         {!! $postData[0]->PostContant !!}
         </div>

@@ -13,10 +13,13 @@
     </section>
 </div>
 
-<div class="container is-max-desktop">
+<div class="container">
     <div class="content">
         {!! $WorkDetail[0] -> Intro !!}
     </div>
+</div>
+
+<div class="container is-max-desktop">
     <div class="columns mt-6">
         <div class="column has-text-centered-mobile is-align-self-center">
             <p class="title is-4 m-5">Presented by</p>
