@@ -30,7 +30,7 @@
     </head>
     <body class="has-navbar-fixed-top" data-barba="wrapper">
         <nav class="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
-            <div class="container is-fluid pt-5">
+            <div class="container is-fluid pt-5 mt-5">
                 <div class="navbar-brand">
                     <a class="navbar-item" href="{{$webData['webConfig'][13]->tittle}}">
                         <img alt="logo" src="{{$webData['webConfig'][13]->tittle}}{{$webData['webConfig'][5]->tittle}}">
