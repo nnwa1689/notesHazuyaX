@@ -39,7 +39,7 @@
             </div>
             <div id="navMenu" class="navbar-menu">
                 <div class="navbar-start">
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item has-dropdown is-hoverable mr-3">
                         <a class="navbar-link"><i class="fas fa-cog"></i>&nbsp;通用</a>
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="/admin"><i class="fas fa-home"></i>&nbsp;首頁面板</a>
@@ -49,7 +49,7 @@
                         </div>
                     </div>
 
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item has-dropdown is-hoverable mr-3">
                         <a class="navbar-link"><i class="fas fa-newspaper"></i>&nbsp;文章</a>
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="/admin/editPost/new"><i class="fas fa-plus-circle"></i>&nbsp;新增文章</a>
@@ -58,7 +58,7 @@
                         </div>
                     </div>
 
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item has-dropdown is-hoverable mr-3">
                         <a class="navbar-link"><i class="fas fa-file"></i>&nbsp;頁面</a>
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="/admin/editPage/new"><i class="fas fa-file"></i>&nbsp;發布頁面</a>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
 
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item has-dropdown is-hoverable mr-3">
                         <a class="navbar-link"><i class="fas fa-bars"></i>&nbsp;導航</a>
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="/admin/editNav/top"><i class="fas fa-arrow-up"></i>&nbsp;頁首導航</a>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
 
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item has-dropdown is-hoverable mr-3">
                         <a class="navbar-link"><i class="fas fa-shapes"></i>&nbsp;作品集</a>
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="/admin/works/new"><i class="fas fa-plus-square"></i>&nbsp;新增作品</a>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
 
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div class="navbar-item has-dropdown is-hoverable mr-3">
                         <a class="navbar-link"><i class="fas fa-user-alt"></i>&nbsp;成員</a>
                         <div class="navbar-dropdown">
                             <a class="navbar-item" href="/admin/editAccount/new"><i class="fas fa-user-plus"></i>&nbsp;新增成員</a>

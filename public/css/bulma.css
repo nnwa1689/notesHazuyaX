@@ -8651,7 +8651,7 @@ body.has-navbar-fixed-bottom {
   color: #263A29;
   display: block;
   line-height: 1.5;
-  padding: 0.5rem 1rem;
+  /*padding: 0.5rem 1rem;*/
   position: relative;
   margin-bottom: 0.5rem;
 }
@@ -8986,11 +8986,11 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
   .navbar > .container .navbar-brand,
   .container > .navbar .navbar-brand {
-    margin-left: -1rem;
+    /*margin-left: -1rem;*/
   }
   .navbar > .container .navbar-menu,
   .container > .navbar .navbar-menu {
-    margin-right: calc(-16px - 1rem);
+    /*margin-right: calc(-16px - 1rem);*/
   }
   .navbar.is-fixed-bottom-desktop, .navbar.is-fixed-top-desktop {
     left: 0;
