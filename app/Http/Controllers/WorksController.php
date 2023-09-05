@@ -35,7 +35,7 @@ class WorksController extends Controller
     public function GetAllWorksPage()
     {
         $this -> webData = $this -> baseService ->WebInit();
-        $WorksList = $this -> worksService -> GetAllWorks();
+        $WorksList = $this -> worksService -> GetAllWorksPublic();
         $title = "作品集 - ";
         return view('worksList',['WorksList'=>$WorksList, 'webData'=>$this->webData, 'title' => $title]);
     }
