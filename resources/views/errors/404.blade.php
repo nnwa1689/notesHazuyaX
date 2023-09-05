@@ -17,17 +17,17 @@
       <div class="hero-body">
           <div class="container has-text-centered">
             <img class="loading-logo" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
-            <p class="title is-1 mt-2">
+            <p class="title is-3 mt-2">
               <span id="errText" class="has-text-link has-text-shadow"></span>
             </p>
-            <a href="/"><button class="button is-link is-large"><i class="fas fa-arrow-right"></i>回家~</button></a>
+            <a href="/"><button class="button is-link is-large">回家去<i class="fas fa-arrow-right ml-2"></i></button></a>
           </div>
       </div>
   </section>
   </body>
   <script id="mainScript">
     var typed = new Typed("#errText", {
-        strings:["4 0 4 <br/> Not found",],
+        strings:["4 0 4 Not found",],
         stringsElement: '#typed-strings',
         typeSpeed: 30,
         startDelay: 1000,

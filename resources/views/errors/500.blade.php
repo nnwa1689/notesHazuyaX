@@ -20,8 +20,8 @@
             <p class="title is-1">
               <span id="errText" class="has-text-link has-text-shadow"></span>
             </p>
-            <p class="subtitle is-3 mt-3 mb-3">好像發生了問題，可能回首頁或晚點再來~</p>
-            <a href="/"><button class="button is-link is-large">回到起點</button></a>
+            <p class="subtitle is-3 mt-3 mb-3">好像發生了問題，稍後再回來吧！</p>
+            <a href="/"><button class="button is-link is-large">回家去<i class="fas fa-arrow-right ml-2"></i></button></a>
           </div>
       </div>
   </section>

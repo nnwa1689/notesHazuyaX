@@ -16,7 +16,7 @@
             <div class="control">
                 <input class="input is-medium mb-3" type="text" name="OrderID" value="{{ isset($WorkDetail[0] -> OrderID) ? $WorkDetail[0] -> OrderID : '' }}">
             </div>
-            <div class="notification is-success mt-5 mb-5 is-small">
+            <div class="notification is-success mt-3 mb-3 is-small">
                 若將順序設定為 < 0 ，則不顯示本作品。
             </div>
             <label class="label">
