@@ -12,7 +12,7 @@
                     <p class="title is-home has-text-right has-text-centered-mobile">
                         <span class="has-text-link has-text-shadow">&</span><span class="has-text-primary has-text-shadow">Relaxation</span>
                     </p>
-                    <p class="title is-3 has-text-centered-mobile">
+                    <p class="title is-3 has-text-centered-mobile" style="line-height: 50px;">
                         <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
                         <span class="has-text-primary">
                             創造<span class="has-text-background-link ml-1 mr-2">溫暖</span>且<span class="has-text-background-primary ml-1 mr-2">放鬆</span>的資訊閱覽體驗！</span>
@@ -76,7 +76,7 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="-2" data-scroll-delay="0" class="mt-3">
+<div data-scroll data-scroll-speed="-2" data-scroll-delay="0" class="mt-6">
     <section class="hero is-success is-shadow is-halfheight">
         <div class="hero-body">
             <div class="container is-fluid has-text-right">

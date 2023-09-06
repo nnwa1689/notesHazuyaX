@@ -32,7 +32,7 @@
     </section>
 
 
-    <section class="hero is-shadow is-link is-halfheight" data-scroll data-scroll-speed="2">
+    <section class="hero is-shadow is-link is-halfheight mt-6" data-scroll data-scroll-speed="2">
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
                 <div class="columns">
@@ -178,7 +178,7 @@
         </div>
     </section>
 
-    <section class="hero is-shadow is-black is-halfheight" data-scroll data-scroll-speed="2">
+    <section class="hero is-shadow is-black is-halfheight mt-6" data-scroll data-scroll-speed="2">
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
                 <div class="columns">
