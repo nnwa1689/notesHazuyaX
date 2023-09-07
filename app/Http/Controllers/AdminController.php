@@ -90,26 +90,28 @@ class AdminController extends Controller
         $result = [];
         $error = "";
 
-        for( $i = 0; $i < count($_FILES['myFile']['name']); $i++ ) {
+        if ($_FILES['myFile']['name'][0] == 0) {
+            $error = "未選取任何檔案！";
+            $result = "false";
+        } else {
+            for( $i = 0; $i < count($_FILES['myFile']['name']); $i++ ) {
 
-            $result[$i] = $this->fileService->UploadFile(
-                $_FILES['myFile']['name'][$i], 
-                $_FILES['myFile']['size'][$i], 
-                $_FILES['myFile']['tmp_name'][$i]
-            );
-            
-            if ($result[$i] == 0) {
-                $error += $_FILES['myFile']['name'][$i] + ', ';
+                $result[$i] = $this->fileService->UploadFile(
+                    $_FILES['myFile']['name'][$i], 
+                    $_FILES['myFile']['size'][$i], 
+                    $_FILES['myFile']['tmp_name'][$i]
+                );
+                
+                if ($result[$i] == 0) {
+                    $error += $_FILES['myFile']['name'][$i] + ', ';
+                }
+    
             }
-
         }
 
         //例外處理
         if ($error !== "") {
             $error += "上傳失敗，請檢查格式、大小。";
-        } else if ($result[0] == 0) {
-            $error = "未選取任何檔案！";
-            $result = "false";
         }
         
         return view('admin/uploadFiles', ['username'=>session()->get('username'), 'data'=>$result, 'error' => $error]);
