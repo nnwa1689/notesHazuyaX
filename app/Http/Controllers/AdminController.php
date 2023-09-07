@@ -81,7 +81,7 @@ class AdminController extends Controller
 
     public function showUploadFiles()
     {
-        return view('admin/uploadFiles', ['username'=>session()->get('username'), 'data'=>'false']);
+        return view('admin/uploadFiles', ['username'=>session()->get('username'), 'data'=>'false', 'error' => ""]);
     }
 
     public function uploadFiles()
