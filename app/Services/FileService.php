@@ -47,7 +47,6 @@ class FileService
                         $delfilenum=1;
                     }
                     Media::where('ID', $value) -> delete();
-                    //DB::delete('DELETE FROM media WHERE ID=?', [$value]);
                 }
                 catch(Exception $e)
                 {
