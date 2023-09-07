@@ -75,6 +75,7 @@ class FileService
         {
             return 0;
         }
+        
         if (!move_uploaded_file($fileTmpname, $des)) 
         {
             return 0;
