@@ -86,7 +86,7 @@ class AdminController extends Controller
 
     public function uploadFiles()
     {
-        //改寫多重上傳
+
         $result = [];
         $error = "";
 
@@ -98,7 +98,7 @@ class AdminController extends Controller
                 $_FILES['myFile']['tmp_name'][$i]
             );
             
-            if ($result == 0) {
+            if ($result[$i] == 0) {
                 $error += $_FILES['myFile']['name'][$i] + ', ';
             }
 
@@ -107,7 +107,7 @@ class AdminController extends Controller
         //例外處理
         if ($error !== "") {
             $error += "上傳失敗，請檢查格式、大小。";
-        } else if ($result == 0) {
+        } else if ($result[0] == 0) {
             $error = "未選取任何檔案！";
             $result = "false";
         }
