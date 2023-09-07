@@ -5,7 +5,7 @@
 <div class="box">
     <div class="field is-grouped-center is-fullwidth">
         @if( $error !== "")
-        <article id="copyMsg" style="display: none;" class="message is-danger mt-3">
+        <article id="copyMsg" class="message is-danger mt-3">
             <div class="message-body"><i class="fas fa-times mr-2"></i>{{ $error }}</div>
         </article>
         @endif

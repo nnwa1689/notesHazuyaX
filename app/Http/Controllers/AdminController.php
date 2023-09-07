@@ -117,9 +117,7 @@ class AdminController extends Controller
                 
             }
         }
-
-
-        
+                
         return view('admin/uploadFiles', ['username'=>session()->get('username'), 'data'=>$result, 'error' => $error]);
     }
 
