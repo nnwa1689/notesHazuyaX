@@ -119,7 +119,7 @@
                 NotesX CMS Made with <span class="has-text-danger">❤</span>  by 44 Seconds Studio.
                 </p>
                 <p class="is-size-6">
-                    Version:V230831.11
+                    Version:V230907.14
                 </p>
             </div>
     </footer>

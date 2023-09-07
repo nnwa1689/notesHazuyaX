@@ -24,7 +24,7 @@
                     <span class="file-name has-text-centered p-3">請選擇要上傳的檔案</span>
                 </label>
             </div>
-            <div class="control mt-3">
+            <div class="control mt-5">
                 <button class="button is-link is-outlined is-large is-fullwidth" type="submit"><i class="fas fa-upload mr-2"></i>上傳</button>
             </div>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -77,7 +77,7 @@
             const fileName = document.querySelector('#filebtn .file-name');
             fileName.innerHTML = '';
             for(var i = 0; i < fileInput.files.length; i++) { 
-                fileName.innerHTML += fileInput.files[i].name + "\n";
+                fileName.innerHTML += fileInput.files[i].name + "<br/>";
             }
         }
     }

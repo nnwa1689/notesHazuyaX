@@ -26,9 +26,11 @@
         <div class="columns is-multiline">
             @foreach($data as $file)
             <div class="box is-file-index">
-                <div class="file-cover-index-container" onclick="window.location.href='{{$file->URL}}'">
-                    <img alt="" class="file-cover-index" src="{{$file->URL}}">
-                </div>
+                <a href="{{ $file->URL }}" target="_blank">
+                    <div class="file-cover-index-container">
+                        <img alt="" class="file-cover-index" src="{{$file->URL}}">
+                    </div>
+                </a>
                 <div class="m-4">
                     <span class="is-size-6">
                         <input class="mr-1" name="mediaid[]" type="checkbox" value="{{$file->ID}}">

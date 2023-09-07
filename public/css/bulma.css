@@ -7902,11 +7902,18 @@ a.list-item {
     color: #E86A33 !important;
 }
 
+/* For 後台使用*/
 .navbar.is-white {
   transition: all 0.5s ease-in-out;
   color: #0a0a0a;
   font-size: 18px;
   /*box-shadow: 0px 1px 0px rgb(170 180 190 / 30%);*/
+}
+
+@media screen and (mi-width: 768px) {
+  .navbar.is-white {
+    margin: 0;
+  }
 }
 
 .navbar.is-white .navbar-brand > .navbar-item,

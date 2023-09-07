@@ -109,7 +109,7 @@ class AdminController extends Controller
             $error += "上傳失敗，請檢查格式、大小。";
         } else if ($result == 0) {
             $error = "未選取任何檔案！";
-            $data = "false";
+            $result = "false";
         }
         
         return view('admin/uploadFiles', ['username'=>session()->get('username'), 'data'=>$result, 'error' => $error]);
