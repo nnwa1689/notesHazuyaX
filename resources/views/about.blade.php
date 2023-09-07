@@ -105,7 +105,7 @@
                             </div>
                             <div class="column is-4">
                                 <p>
-                                    依照系統目標訂製不同功能之系統
+                                    依照系統目標、流程訂製不同功能之系統
                                 </p>
                             </div>
                         </div>
@@ -123,8 +123,8 @@
                                 </p>
                             </div>
                             <div class="column is-4">
-                            <p>
-                                    $10,000 - $?
+                                <p>
+                                視系統需求、功能數而定
                                 </p>
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                             </div>
                             <div class="column is-4">
                                 <p>
-                                    依系統規模而不同
+                                    視系統需求、功能數而定
                                 </p>
                             </div>
                         </div>
@@ -191,17 +191,17 @@
                     <div class="column is-9">
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-2 has-text-centered">01.</p>
+                                <p class="title is-2">01.</p>
                             </div>
                             <div class="column is-4">
-                                <p class="title is-4 has-text-link">初期閒聊</p>
+                                <p class="title is-2 has-text-link">聊聊</p>
                                 <p>先了解您的網站需求，像是想要的功能、內容，藉此架構出網站地圖，並提供報價與合約。</p>
                             </div>
                             <div class="column is-2">
-                                <p class="title is-2 has-text-centered">02.</p>
+                                <p class="title is-2">02.</p>
                             </div>
                             <div class="column is-4">
-                                <p class="title is-4 has-text-link">前期準備</p>
+                                <p class="title is-2 has-text-link">準備</p>
                                 <p>
                                     由素材、文案、網站地圖架構出網站資訊架構，並決定網站色彩計畫、字體及 UI。
                                 </p>
@@ -210,19 +210,19 @@
 
                         <div class="columns">
                             <div class="column is-2">
-                                <p class="title is-2 has-text-centered">03.</p>
+                                <p class="title is-2">03.</p>
                             </div>
                             <div class="column is-4">
-                                <p class="title is-4 has-text-link">設計工作</p>
+                                <p class="title is-2 has-text-link">設計</p>
                                 <p>
                                     依照前期準備的定案設計出網站初稿，並由您確認後，再產出 Mockup。
                                 </p>
                             </div>
                             <div class="column is-2">
-                                <p class="title is-2 has-text-centered">04.</p>
+                                <p class="title is-2">04.</p>
                             </div>
                             <div class="column is-4">
-                                <p class="title is-4 has-text-link">網站系統開發</p>
+                                <p class="title is-2 has-text-link">開發</p>
                                 <p>
                                     此階段開始實際進行前端切版及前後端功能開發，同時進行測試與修改。
                                 </p>
@@ -234,9 +234,12 @@
                                 <p class="title is-2 has-text-centered">05.</p>
                             </div>
                             <div class="column is-10">
-                                <p class="title is-4 has-text-link">上線與結案</p>
+                                <p class="title is-2 has-text-link">上線</p>
                                 <p>
                                     將網站部署至線上、提供後台使用說明，並簽訂維護合約。
+                                </p>
+                                <p class="is-size-6">
+                                    （內容僅限軟體 Bug 修復、佈署環境設定，修改系統功能等皆視為新需求）。
                                 </p>
                             </div>
                         </div>
@@ -247,7 +250,7 @@
         </div>
     </section>
 
-
+    <!--
     <p class="title is-1 has-text-left mt-6">成員<span class="has-text-hollow-link">TEAM</span></p>
     <div style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline mt-0 is-justify-content-center">
         @foreach($userData as $User)
@@ -270,6 +273,8 @@
             </p>
         </button>
     </div>
+    -->
+
 </div>
 <script id="mainScript">
 var typed = new Typed("#titleText", {
