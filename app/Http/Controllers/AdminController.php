@@ -91,9 +91,12 @@ class AdminController extends Controller
         $error = "";
 
         if ($_FILES['myFile']['name'][0] == 0) {
+
             $error = "未選取任何檔案！";
             $result = "false";
+
         } else {
+
             for( $i = 0; $i < count($_FILES['myFile']['name']); $i++ ) {
 
                 $result[$i] = $this->fileService->UploadFile(
@@ -107,12 +110,15 @@ class AdminController extends Controller
                 }
     
             }
+            
+            if ($error !== "") {
+
+                $error += "上傳失敗，請檢查格式、大小。";
+                
+            }
         }
 
-        //例外處理
-        if ($error !== "") {
-            $error += "上傳失敗，請檢查格式、大小。";
-        }
+
         
         return view('admin/uploadFiles', ['username'=>session()->get('username'), 'data'=>$result, 'error' => $error]);
     }
