@@ -41,9 +41,8 @@
                 <p class="is-size-5 m-3"><a href="{{$item}}">{{$item}}</a></p>
             </div>
             <div class="column has-text-centered">
-                <button id="{{ $item }}" onclick="copyClick($item)" class="button is-primary is-outlined">
+                <button id="{{ $item }}" onclick="copyClick({{ $item }})" class="button is-primary is-outlined">
                     <i class="fas fa-copy"></i>
-                    <i class="fas fa-check-circle"></i>
                 </button>
             </div>
         </div>

@@ -23,9 +23,9 @@
         </button>
     </div>
     <form id="filesForm" method="post" action="/admin/deleteFiles">
-        <div style="margin-left:-0.75rem; margin-right:-0.75rem;" class="columns is-multiline">
+        <div class="columns is-multiline">
             @foreach($data as $file)
-            <div class="box is-file-index mr-3 ml-3">
+            <div class="box is-file-index">
                 <div class="file-cover-index-container" onclick="window.location.href='{{$file->URL}}'">
                     <img alt="" class="file-cover-index" src="{{$file->URL}}">
                 </div>
