@@ -98,7 +98,7 @@ class AdminController extends Controller
                 $_FILES['myFile']['tmp_name'][$i]
             );
             
-            if ($result) {
+            if ($result == 0) {
                 $error += $_FILES['myFile']['name'][$i] + ', ';
             }
 
