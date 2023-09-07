@@ -58,12 +58,12 @@ class FileService
         return 1;
     }
 
-    public function UploadFile($fileinfo)
+    public function UploadFile($filename, $filesize, $fileTmpname)
     {
         /* 暫時用 PHP 原生，之後再改 laravel */
         $filetype = array('jpeg', 'jpg', 'gif', 'png', 'PNG');
         $maxsize = 5097152;
-        $ext = pathinfo($fileinfo['name'], PATHINFO_EXTENSION);
+        $ext = pathinfo($filename, PATHINFO_EXTENSION);
         $uniName = md5(uniqid(microtime(true), true)) . "." . $ext;
         $des = "uploadfile/".$uniName;
 
@@ -72,11 +72,11 @@ class FileService
             return 0;
         }
 
-        if ($fileinfo['size'] > $maxsize) 
+        if ($filesize > $maxsize) 
         {
             return 0;
         }
-        if (!move_uploaded_file($fileinfo['tmp_name'], $des)) 
+        if (!move_uploaded_file($fileTmpname, $des)) 
         {
             return 0;
         }
@@ -85,7 +85,7 @@ class FileService
         $fileURL = '/'.$des;
         date_default_timezone_set('Asia/Taipei');
         $fileUploadDate = date("Y-m-d");
-        $filecap = $fileinfo['size'];
+        $filecap = $filesize;
         try
         {
             $NewFiles = [

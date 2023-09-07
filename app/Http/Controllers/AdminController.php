@@ -86,11 +86,31 @@ class AdminController extends Controller
 
     public function uploadFiles()
     {
-        $result = $this->fileService->UploadFile($_FILES['myFile']);
-        if($result)
-            return view('admin/uploadFiles', ['username'=>session()->get('username'), 'data'=>$result]);
-        else
-            return abort(500);
+        //改寫多重上傳
+        $result = [];
+        $error = "";
+
+        for( $i = 0; $i < count($_FILES['myFile']['name']); $i++ ) {
+
+            $result[$i] = $this->fileService->UploadFile(
+                $_FILES['myFile']['name'][$i], 
+                $_FILES['myFile']['size'][$i], 
+                $_FILES['myFile']['tmp_name'][$i]
+            );
+            
+            if ($result) {
+                $error += $_FILES['myFile']['name'][$i] + ', ';
+            }
+
+        }
+
+        if ($error !== "") {
+            $error += "上傳失敗，請檢查格式、大小。";
+        }
+
+        //$result = $this->fileService->UploadFile($_FILES['myFile']);
+        
+        return view('admin/uploadFiles', ['username'=>session()->get('username'), 'data'=>$result, 'error' => $error]);
     }
 
     public function showEditPost($postID = null)
