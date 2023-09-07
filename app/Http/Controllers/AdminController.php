@@ -106,7 +106,7 @@ class AdminController extends Controller
                 );
                 
                 if ($result[$i] == 0) {
-                    $error += $_FILES['myFile']['name'][$i] + ', ';
+                    $error += strval($_FILES['myFile']['name'][$i]) + ', ';
                 }
     
             }
@@ -117,7 +117,7 @@ class AdminController extends Controller
                 
             }
         }
-                
+
         return view('admin/uploadFiles', ['username'=>session()->get('username'), 'data'=>$result, 'error' => $error]);
     }
 
