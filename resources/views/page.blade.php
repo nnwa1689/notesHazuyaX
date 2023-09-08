@@ -4,7 +4,7 @@
 @parent
 <div class="container">
     <div data-scroll data-scroll-speed="1" class="has-text-left mb-6 mt-3">
-        <p data-scroll data-scroll-speed="-1" class="title is-1">
+        <p data-scroll data-scroll-speed="-1" class="title is-1 has-text-centered">
             <span id="titleText"></span>
         </p>
     </div>
