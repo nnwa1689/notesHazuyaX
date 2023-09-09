@@ -10,7 +10,7 @@
                 </p>
             </div>
             <div class="column is-m has-text-right">
-                <p class="is-size-6 mr-3">
+                <p class="is-size-6">
                     <span class="mr-3"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</span>
                     <span><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</span>
                 </p>
