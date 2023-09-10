@@ -8757,7 +8757,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .content a::before {
-    content: " → ";
+    content: " ↳ ";
 }
 
 .content a::after{
