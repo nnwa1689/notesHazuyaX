@@ -866,7 +866,7 @@ th:not([align]) {
 }
 
 html {
-  font-size: 18px;
+  font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -4200,7 +4200,7 @@ fieldset[disabled] .button {
 
 .content p{
   /*font-family: 'NotoSerifTC-Medium';*/
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 2.11;;
 }
 
