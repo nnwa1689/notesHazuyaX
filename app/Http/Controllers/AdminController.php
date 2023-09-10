@@ -25,14 +25,14 @@ class AdminController extends Controller
     protected $worksService;
 
     public function __construct(
-        PostService $postService, 
-        UserService $userService, 
+        PostService $postService,
+        UserService $userService,
         BaseService $baseService,
         FileService $fileService,
         PageService $pageService,
         NavbarService $navbarService,
         WorksService $worksService
-        ) 
+        )
     {
         $this -> postService = $postService;
         $this -> userService = $userService;
@@ -90,7 +90,7 @@ class AdminController extends Controller
         $result = [];
         $error = "";
 
-        if ($_FILES['myFile']['name'][0] == 0) {
+        if (false) {
 
             $error = "未選取任何檔案！";
             $result = "false";
@@ -100,21 +100,21 @@ class AdminController extends Controller
             for( $i = 0; $i < count($_FILES['myFile']['name']); $i++ ) {
 
                 $result[$i] = $this->fileService->UploadFile(
-                    $_FILES['myFile']['name'][$i], 
-                    $_FILES['myFile']['size'][$i], 
+                    $_FILES['myFile']['name'][$i],
+                    $_FILES['myFile']['size'][$i],
                     $_FILES['myFile']['tmp_name'][$i]
                 );
-                
+
                 if ($result[$i] === 0) {
                     $error += strval($_FILES['myFile']['name'][$i]) + ', ';
                 }
-    
+
             }
-            
+
             if ($error !== "") {
 
                 $error += "上傳失敗，請檢查格式、大小。";
-                
+
             }
         }
 
@@ -155,7 +155,7 @@ class AdminController extends Controller
         $userData = $this -> userService -> GetUserData(session('username'));
         if($userData[0]->Law_Post == 1)
         {
-            $listData = $this -> postService -> GetUserPostsEdit(session('username')); 
+            $listData = $this -> postService -> GetUserPostsEdit(session('username'));
         }
         else if($userData[0]->Law_Post == 2)
         {
@@ -191,7 +191,7 @@ class AdminController extends Controller
             $this -> postService -> DeletePosts($req);
         } else if ($req -> action == "public") {
             $this -> postService -> SetPostsPublic($req);
-        } else if ($req -> action == "private") { 
+        } else if ($req -> action == "private") {
             $this -> postService -> SetPostsPrivate($req);
         }
         return redirect('/admin/editPost');
@@ -383,7 +383,7 @@ class AdminController extends Controller
     public function updateNav(Request $req, $type = "top")
     {
         if($type=="top")
-        {            
+        {
             $this -> navbarService -> UpdateNavbars($req, 0);
         }
         else if($type == "btn")
@@ -428,12 +428,12 @@ class AdminController extends Controller
         if ($WorksPID == "new")
         {
             return view('admin/editWorksDetail', ['username'=>session()->get('username')]);
-        } 
+        }
         else if ( isset($WorksPID) )
         {
             $WorkDetail = $this -> worksService -> GetWorkDetailByPID($WorksPID);
             return view('admin/editWorksDetail', ['username'=>session()->get('username'), 'WorkDetail' => $WorkDetail]);
-        } 
+        }
         else
         {
             return redirect('/admin');
@@ -446,13 +446,13 @@ class AdminController extends Controller
         {
             $this -> worksService -> InsertWork($req);
             return redirect('/admin/works');
-        } 
-        else if (isset($WorksPID)) 
+        }
+        else if (isset($WorksPID))
         {
             $this -> worksService -> UpdateWork($req, $WorksPID);
             return redirect('/admin/works/'.$WorksPID);
-        } 
-        else 
+        }
+        else
         {
             return redirect('/admin');
         }
