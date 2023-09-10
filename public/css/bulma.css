@@ -8755,6 +8755,11 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .content a{
   position:relative;
 }
+
+.content a::before {
+    content: " → ";
+}
+
 .content a::after{
   content:"";
   display:block;
@@ -8763,6 +8768,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   background-color: #E86A33;
   position:absolute;
   right: 0;
+  top: 1.5rem;
   transition:.3s;
 }
 .content a:hover::after{
