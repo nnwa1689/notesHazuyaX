@@ -25,12 +25,11 @@
                     <span class="has-text-primary has-text-shadow">Passion</span>
                 </p>
                 <p class="title is-3 has-text-link has-text-left"><i class="fas fa-quote-left"></i></p>
-                <p class="title is-3 has-text-primary has-text-centered">相信資訊會改變生活，促使我們保持熱忱去做不同嘗試。</p>
+                <p class="title is-3 has-text-primary has-text-centered">相信資訊改變生活，保持熱忱持續嘗試新可能。</p>
                 <p class="title is-3 has-text-link has-text-right"><i class="fas fa-quote-right"></i></p>
             </div>
         </div>
     </section>
-
 
     <section class="hero is-shadow is-link is-halfheight mt-6" data-scroll data-scroll-speed="2">
         <div class="hero-body">
@@ -40,12 +39,12 @@
                         <p>
                             <img width="64" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
                         </p>
-                        <p class="title is-3">服務項目</p>
+                        <p class="title is-3">技能</p>
                     </div>
                     <div class="column is-9">
-                        <p class="subtitle is-3"># 網頁設計, # Web前端開發(Vue/React)</p>
-                        <p class="subtitle is-3"># 無伺服器系統開發(Firebase, Aws Lightsail)</p>
-                        <p class="subtitle is-3"># 後端系統開發(PHP)</p>
+                        <p class="subtitle is-3"># 後端系統開發(PHP、Asp.Net MVC)</p>
+                        <p class="subtitle is-3"># Web前端開發(VueJS/ReactJS)</p>
+                        <p class="subtitle is-3"># 無伺服器系統(Firebase, Aws Lightsail)</p>
                         <p class="subtitle is-3"># 無頭內容管理系統(Strapi)</p>
                         <button class="button is-primary mt-6 is-fullwidth is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
                             <p class="title is-6 p-6 m-6">
@@ -59,6 +58,7 @@
         </div>
     </section>
 
+    <!--
     <section class="hero is-shadow is-primary is-halfheight mt-6" data-scroll data-scroll-speed="4">
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
@@ -249,6 +249,16 @@
             </div>
         </div>
     </section>
+    -->
+
+    <div class="container has-text-centered mt-3" data-scroll data-scroll-speed="2">
+        <button class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
+            <p class="title is-6 p-6 m-6 has-text-light">
+                Contact Us
+                <i class="fas fa-arrow-right ml-2"></i>
+            </p>
+        </button>
+    </div>
 
     <!--
     <p class="title is-1 has-text-left mt-6">成員<span class="has-text-hollow-link">TEAM</span></p>

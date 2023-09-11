@@ -16,15 +16,14 @@
                 <p class="title is-4 mt-6">我<span class="has-text-link">需要．．．</span></p>
                 <div class="select is-large is-fullwidth">
                     <select name="Type" id="Type">
-                        <option value="web_design">網站設計與系統規劃</option>
-                        <option value="custom_service">網站保固與維護服務</option>
-                        <option value="post_service">文章或版權問題</option>
+                        <option value="post_service">文章問題</option>
+                        <option value="web_design">網站系統開發</option>
+                        <option value="custom_service">網站維護</option>
                         <option value="business">合作提案</option>
-                        <option value="devgallery_submit">44's Gallery網站提交</option>
+                        <option value="devgallery_submit">44's Gallery 相關</option>
                         <option value="other">其他</option>
                     </select>
                 </div>
-                <p class="is-size-5 mt-3">您需要的服務項目是？</p>
 
                 <p class="title is-4 mt-6">而我的<span class="has-text-link">預算</span>是</p>
                 <div class="select is-large is-fullwidth">
@@ -33,22 +32,23 @@
                         <option value="L3">NTD$7,501 - $10,000</option>
                         <option value="L4">NTD$10,001 - $30,000</option>
                         <option value="L5">NTD$30,001 - $50,000</option>
-                        <option value="L6">NTD$50,001 - $100,000</option>
+                        <option value="L6">NTD$50,001 UP!!!</option>
+                        <option value="L1">本次不用預算或細談</option>
                     </select>
                 </div>
-                <p class="is-size-5 mt-3">請選取您可以接受的預算</p>
+                <p class="is-size-5 mt-3">預計在這裡花多少 $$？</p>
 
                 <p class="title is-4 mt-6">我想要對你們<span class="has-text-link">說</span></p>
                 <textarea class="textarea" name="Content" id="Content" cols="50" rows="20" value=""></textarea>
-                <p class="is-size-5 mt-3">請詳述您的需求，讓我們知道您的想法！若有附件可附上 Google 雲端硬碟連結</p>
+                <p class="is-size-5 mt-3">詳述您的需要，讓我們知道您的想法！附件可附 Google 雲端連結</p>
 
                 <p class="title is-4 mt-6">以下是我的<span class="has-text-link">Email</span></p>
                 <input class="input is-large is-fullwidth" type="text" name="Email" id="Email" value="">
-                <p class="is-size-5 mt-3">請提供一個可以聯繫的E-mail</p>
+                <p class="is-size-5 mt-3">提供一個可以聯繫的E-mail</p>
 
                 <article class="notification is-danger mt-5 mb-5 is-medium" id="error" style="display: none;">
                     <div class="content">
-                    奧，我們想知道得更多，請再多說一點！
+                    歐，我們想知道得更多，請再多說一點！
                     </div>
                 </article>
 
@@ -69,6 +69,7 @@
                     <i class="fas fa-comment-dots"></i>
                 </p>
                 <p class="title is-4 has-text-right has-text-link">常見問答</p>
+                <!--
                 <div class="container">
                     <p class="has-text-weight-bold">Q1.提供什麼內容，可以加快我們需求評估的速度？</p>
                     <p class="ml-5">A1.可提供初步的「網頁架構圖」、「時程與預算」、「類似風格的網站」</p>
@@ -88,6 +89,7 @@
                     <p class="has-text-weight-bold">Q4.正式簽約或開始製作前可以提供預覽嗎？</p>
                     <p class="ml-5">A4.雖然無法提供高精度的設計草稿，但於初步規劃時就可以與您討論出粗略的呈現方式囉！</p>
                 </div>
+                -->
 
             </div>
         </div>
