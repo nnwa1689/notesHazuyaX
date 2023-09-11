@@ -68,6 +68,46 @@
                 <p class="title is-1 has-text-right">
                     <span id="titleText"></span>
                 </p>
+                <p class="title is-4 has-text-right">
+                    Follow Us
+                </p>
+                <div class="block has-text-right has-text-centered-mobile">
+                    @if(strlen($webData['webConfig'][22]->tittle) > 0)
+                        <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
+                            <button class="button is-twitter is-outlined is-medium is-rounded ml-1 mr-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                        </a>
+                    @endif
+                    @if(strlen($webData['webConfig'][21]->tittle) > 0)
+                        <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
+                            <button class="button is-instagram is-medium is-rounded ml-1 mr-1">
+                                <i class="fab fa-instagram-square"></i>
+                            </button>
+                        </a>
+                    @endif
+                    @if(strlen($webData['webConfig'][20]->tittle) > 0)
+                        <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
+                            <button class="button is-facebook is-outlined is-medium is-rounded ml-1 mr-1">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                        </a>
+                    @endif
+                    @if(strlen($webData['webConfig'][23]->tittle) > 0)
+                        <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
+                            <button class="button is-applepodcast is-outlined is-medium is-rounded ml-1 mr-1">
+                                <i class="fab fa-apple"></i>
+                            </button>
+                        </a>
+                    @endif
+                    @if(strlen($webData['webConfig'][24]->tittle) > 0)
+                        <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
+                            <button class="button is-outlined is-white is-medium is-rounded ml-1 mr-1">
+                                <i class="fab fa-google"></i>
+                            </button>
+                        </a>
+                    @endif
+                </div>
                 <!--
                 <p class="title is-1 has-text-right">
                     <i class="fas fa-comment-dots"></i>
