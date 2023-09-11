@@ -9,7 +9,7 @@
 </style>
 <div class="container">
     <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6">
-        <p class="title is-1 has-text-centered">
+        <p class="title is-1 has-text-left">
             <span id="titleText"></span>
         </p>
     </div>

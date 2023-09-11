@@ -3,14 +3,13 @@
 @section('content')
 <div class="container">
     <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-3">
-
+        <p class="title is-1 has-text-left">
+            <span id="titleText"></span>
+        </p>
     </div>
     <div class="pt-4">
         <div class="columns">
-        <div class="column pr-5">
-                <p class="title is-1 has-text-left">
-                    <span id="titleText"></span>
-                </p>
+            <div class="column pr-5">
                 <p class="title is-5 has-text-left has-text-centered-mobile">
                     Follow Us
                 </p>
@@ -83,7 +82,7 @@
                 -->
 
             </div>
-            <div class="column is-7">
+            <div class="column is-9">
                 <p class="title is-4 mt-6"><span class="has-text-link">嗨</span>，我叫做</p>
                 <input class="input is-large is-fullwidth" id="Name" type="text" name="Name" value="">
                 <p class="is-size-5 mt-3">我們該如何稱呼您？</p>
@@ -91,9 +90,9 @@
                 <p class="title is-4 mt-6">我<span class="has-text-link">需要．．．</span></p>
                 <div class="select is-large is-fullwidth">
                     <select name="Type" id="Type">
-                        <option value="post_service">文章問題</option>
                         <option value="web_design">網站系統開發</option>
                         <option value="custom_service">網站維護</option>
+                        <option value="post_service">文章問題</option>
                         <option value="business">合作提案</option>
                         <option value="devgallery_submit">44's Gallery 相關</option>
                         <option value="other">其他</option>
@@ -134,8 +133,8 @@
                     </div>
                 </article>
                 <p class="has-text-right">
-                    <button type="button" onclick="submit()" class="button is-primary is-medium is-fullwidth is-rounded mt-5 p-6">
-                        <span class="is-size-4"><i class="fas fa-paper-plane mr-2"></i> Send</p>
+                    <button type="button" onclick="submit()" class="button is-primary is-medium is-fullwidth is-rounded mt-5">
+                        <i class="fas fa-paper-plane mr-2"></i>SEND!!
                     </button>
                 </p>
 
