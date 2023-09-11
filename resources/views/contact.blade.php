@@ -7,10 +7,10 @@
             <span id="titleText"></span>
         </p>
     </div>
-    <div class="pt-4">
+    <div class="pt-6">
         <div class="columns">
             <div class="column pr-5">
-                <p class="title is-5 has-text-left has-text-centered-mobile">
+                <p class="has-text-left has-text-centered-mobile">
                     Follow Us
                 </p>
                 <div class="block has-text-left has-text-centered-mobile">
@@ -50,7 +50,7 @@
                         </a>
                     @endif
                 </div>
-                <p class="title is-5 has-text-left has-text-centered-mobile">
+                <p class="has-text-left has-text-centered-mobile">
                     <i class="fas fa-envelope"></i><br/>
                     <a href="mailto:public.wuce@gmail.com">public.wuce@gmail.com</a>
                 </p>
@@ -82,8 +82,8 @@
                 -->
 
             </div>
-            <div class="column is-9">
-                <p class="title is-4 mt-6"><span class="has-text-link">嗨</span>，我叫做</p>
+            <div class="column is-8">
+                <p class="title is-4"><span class="has-text-link">嗨</span>，我叫做</p>
                 <input class="input is-large is-fullwidth" id="Name" type="text" name="Name" value="">
                 <p class="is-size-5 mt-3">我們該如何稱呼您？</p>
 

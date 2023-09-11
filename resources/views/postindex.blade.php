@@ -9,11 +9,11 @@
     </div>
     <div class="block pt-3 pb-3">
         <div class="field is-grouped is-grouped-multiline">
-                <div class="tags are-medium ml-auto mr-auto">
+            <div class="tags are-medium">
                 @foreach($webData['allCategory'] as $category)
                 <a class="button is-outlined is-primary is-rounded tag" href="{{$webData['webConfig'][13]->tittle}}category/{{$category->ClassId}}">{{$category->ClassName}}</a>
                 @endforeach
-                </div>
+            </div>
         </div>
     </div>
     <div class="columns is-multiline is-mobile is-justify-content-center">
