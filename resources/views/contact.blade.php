@@ -10,7 +10,7 @@
     <div class="pt-6">
         <div class="columns">
             <div class="column pr-5">
-                <p class="has-text-left has-text-centered-mobile">
+                <p class="title is-5 has-text-left has-text-centered-mobile">
                     Follow Us
                 </p>
                 <div class="block has-text-left has-text-centered-mobile">
@@ -51,7 +51,7 @@
                     @endif
                 </div>
                 <p class="has-text-left has-text-centered-mobile">
-                    <a href="mailto:public.wuce@gmail.com"><i class="fas fa-envelope"></i>public.wuce@gmail.com</a>
+                    <a href="mailto:public.wuce@gmail.com"><i class="fas fa-envelope mr-2"></i>public.wuce@gmail.com</a>
                 </p>
                 <!--
                 <p class="title is-1 has-text-left">
