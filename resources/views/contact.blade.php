@@ -3,9 +3,7 @@
 @section('content')
 <div class="container">
     <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-4 mt-3">
-        <p class="title is-1 has-text-centered">
-            <span id="titleText"></span>
-        </p>
+
     </div>
     <div class="pt-4">
         <div class="columns">
@@ -13,6 +11,7 @@
                 <p class="title is-4 mt-6"><span class="has-text-link">嗨</span>，我叫做</p>
                 <input class="input is-large is-fullwidth" id="Name" type="text" name="Name" value="">
                 <p class="is-size-5 mt-3">我們該如何稱呼您？</p>
+
                 <p class="title is-4 mt-6">我<span class="has-text-link">需要．．．</span></p>
                 <div class="select is-large is-fullwidth">
                     <select name="Type" id="Type">
@@ -24,6 +23,7 @@
                         <option value="other">其他</option>
                     </select>
                 </div>
+                <p class="is-size-5 mt-3">本次洽詢的事項？</p>
 
                 <p class="title is-4 mt-6">而我的<span class="has-text-link">預算</span>是</p>
                 <div class="select is-large is-fullwidth">
@@ -33,7 +33,7 @@
                         <option value="L4">NTD$10,001 - $30,000</option>
                         <option value="L5">NTD$30,001 - $50,000</option>
                         <option value="L6">NTD$50,001 UP!!!</option>
-                        <option value="L1">本次不用預算或細談</option>
+                        <option value="L1">其他(於描述中說明)</option>
                     </select>
                 </div>
                 <p class="is-size-5 mt-3">預計在這裡花多少 $$？</p>
@@ -48,7 +48,7 @@
 
                 <article class="notification is-danger mt-5 mb-5 is-medium" id="error" style="display: none;">
                     <div class="content">
-                    歐，我們想知道得更多，請再多說一點！
+                    我們想知道得更多，請再多說一點！
                     </div>
                 </article>
 
@@ -66,10 +66,14 @@
             </div>
             <div class="column pl-5">
                 <p class="title is-1 has-text-right">
+                    <span id="titleText"></span>
+                </p>
+                <!--
+                <p class="title is-1 has-text-right">
                     <i class="fas fa-comment-dots"></i>
                 </p>
                 <p class="title is-4 has-text-right has-text-link">常見問答</p>
-                <!--
+                
                 <div class="container">
                     <p class="has-text-weight-bold">Q1.提供什麼內容，可以加快我們需求評估的速度？</p>
                     <p class="ml-5">A1.可提供初步的「網頁架構圖」、「時程與預算」、「類似風格的網站」</p>
