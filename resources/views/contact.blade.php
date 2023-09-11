@@ -16,43 +16,42 @@
                 <div class="block has-text-left has-text-centered-mobile">
                     @if(strlen($webData['webConfig'][22]->tittle) > 0)
                         <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
-                            <button class="button is-link is-medium is-rounded ml-1 mr-1">
+                            <button class="button is-link is-medium is-rounded mr-2">
                                 <i class="fab fa-twitter"></i>
                             </button>
                         </a>
                     @endif
                     @if(strlen($webData['webConfig'][21]->tittle) > 0)
                         <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
-                            <button class="button is-link is-medium is-rounded ml-1 mr-1">
+                            <button class="button is-link is-medium is-rounded mr-2">
                                 <i class="fab fa-instagram-square"></i>
                             </button>
                         </a>
                     @endif
                     @if(strlen($webData['webConfig'][20]->tittle) > 0)
                         <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
-                            <button class="button is-link is-medium is-rounded ml-1 mr-1">
+                            <button class="button is-link is-medium is-rounded mr-2">
                                 <i class="fab fa-facebook"></i>
                             </button>
                         </a>
                     @endif
                     @if(strlen($webData['webConfig'][23]->tittle) > 0)
                         <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
-                            <button class="button is-link is-medium is-rounded ml-1 mr-1">
+                            <button class="button is-link is-medium is-rounded mr-2">
                                 <i class="fab fa-apple"></i>
                             </button>
                         </a>
                     @endif
                     @if(strlen($webData['webConfig'][24]->tittle) > 0)
                         <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
-                            <button class="button is-link is-medium is-rounded ml-1 mr-1">
+                            <button class="button is-link is-medium is-rounded mr-2">
                                 <i class="fab fa-google"></i>
                             </button>
                         </a>
                     @endif
                 </div>
                 <p class="has-text-left has-text-centered-mobile">
-                    <i class="fas fa-envelope"></i><br/>
-                    <a href="mailto:public.wuce@gmail.com">public.wuce@gmail.com</a>
+                    <a href="mailto:public.wuce@gmail.com"><i class="fas fa-envelope"></i>public.wuce@gmail.com</a>
                 </p>
                 <!--
                 <p class="title is-1 has-text-left">
