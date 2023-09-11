@@ -11,7 +11,7 @@
                 <p class="title is-1 has-text-left">
                     <span id="titleText"></span>
                 </p>
-                <p class="title is-4 has-text-left has-text-centered-mobile">
+                <p class="title is-5 has-text-left has-text-centered-mobile">
                     Follow Us
                 </p>
                 <div class="block has-text-left has-text-centered-mobile">
@@ -31,30 +31,28 @@
                     @endif
                     @if(strlen($webData['webConfig'][20]->tittle) > 0)
                         <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
-                            <button class="button is-link is-outlined is-medium is-rounded ml-1 mr-1">
+                            <button class="button is-link is-medium is-rounded ml-1 mr-1">
                                 <i class="fab fa-facebook"></i>
                             </button>
                         </a>
                     @endif
                     @if(strlen($webData['webConfig'][23]->tittle) > 0)
                         <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
-                            <button class="button is-link is-outlined is-medium is-rounded ml-1 mr-1">
+                            <button class="button is-link is-medium is-rounded ml-1 mr-1">
                                 <i class="fab fa-apple"></i>
                             </button>
                         </a>
                     @endif
                     @if(strlen($webData['webConfig'][24]->tittle) > 0)
                         <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
-                            <button class="button is-link is-white is-medium is-rounded ml-1 mr-1">
+                            <button class="button is-link is-medium is-rounded ml-1 mr-1">
                                 <i class="fab fa-google"></i>
                             </button>
                         </a>
                     @endif
                 </div>
-                <p class="title is-4 has-text-left has-text-centered-mobile">
-                    <i class="fas fa-envelope"></i>
-                </p>
-                <p class="title is-4 has-text-left has-text-centered-mobile">
+                <p class="title is-5 has-text-left has-text-centered-mobile">
+                    <i class="fas fa-envelope"></i><br/>
                     <a href="mailto:public.wuce@gmail.com">public.wuce@gmail.com</a>
                 </p>
                 <!--
@@ -135,9 +133,9 @@
                     嗨，我們已經收到您的訊息囉！請靜待我們的回覆～
                     </div>
                 </article>
-                <p class="has-text-left">
-                    <button type="button" onclick="submit()" class="button is-primary is-large is-rounded mt-5 p-6">
-                        <span class="is-size-2"><i class="fas fa-paper-plane mr-2"></i></p>
+                <p class="has-text-right">
+                    <button type="button" onclick="submit()" class="button is-primary is-medium is-fullwidth is-rounded mt-5 p-6">
+                        <span class="is-size-4"><i class="fas fa-paper-plane mr-2"></i> Send</p>
                     </button>
                 </p>
 
