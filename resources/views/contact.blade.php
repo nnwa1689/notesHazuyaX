@@ -7,6 +7,84 @@
     </div>
     <div class="pt-4">
         <div class="columns">
+        <div class="column pr-5">
+                <p class="title is-1 has-text-left">
+                    <span id="titleText"></span>
+                </p>
+                <p class="title is-4 has-text-left has-text-centered-mobile">
+                    Follow Us
+                </p>
+                <div class="block has-text-left has-text-centered-mobile">
+                    @if(strlen($webData['webConfig'][22]->tittle) > 0)
+                        <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
+                            <button class="button is-link is-medium is-rounded ml-1 mr-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                        </a>
+                    @endif
+                    @if(strlen($webData['webConfig'][21]->tittle) > 0)
+                        <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
+                            <button class="button is-link is-medium is-rounded ml-1 mr-1">
+                                <i class="fab fa-instagram-square"></i>
+                            </button>
+                        </a>
+                    @endif
+                    @if(strlen($webData['webConfig'][20]->tittle) > 0)
+                        <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
+                            <button class="button is-link is-outlined is-medium is-rounded ml-1 mr-1">
+                                <i class="fab fa-facebook"></i>
+                            </button>
+                        </a>
+                    @endif
+                    @if(strlen($webData['webConfig'][23]->tittle) > 0)
+                        <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
+                            <button class="button is-link is-outlined is-medium is-rounded ml-1 mr-1">
+                                <i class="fab fa-apple"></i>
+                            </button>
+                        </a>
+                    @endif
+                    @if(strlen($webData['webConfig'][24]->tittle) > 0)
+                        <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
+                            <button class="button is-link is-white is-medium is-rounded ml-1 mr-1">
+                                <i class="fab fa-google"></i>
+                            </button>
+                        </a>
+                    @endif
+                </div>
+                <p class="title is-4 has-text-left has-text-centered-mobile">
+                    <i class="fas fa-envelope"></i>
+                </p>
+                <p class="title is-4 has-text-left has-text-centered-mobile">
+                    <a href="mailto:public.wuce@gmail.com">public.wuce@gmail.com</a>
+                </p>
+                <!--
+                <p class="title is-1 has-text-left">
+                    <i class="fas fa-comment-dots"></i>
+                </p>
+                <p class="title is-4 has-text-left has-text-link">常見問答</p>
+                
+                <div class="container">
+                    <p class="has-text-weight-bold">Q1.提供什麼內容，可以加快我們需求評估的速度？</p>
+                    <p class="ml-5">A1.可提供初步的「網頁架構圖」、「時程與預算」、「類似風格的網站」</p>
+                </div>
+
+                <div class="container mt-5">
+                    <p class="has-text-weight-bold">Q2.資料須在何時提供？</p>
+                    <p class="ml-5">A2.在初步評估時就需要提供，由於網頁設計以資料呈現為主，資料內容的不同會影響最後呈現的方式！另外事前提供資料，也能讓我們評估內部是否有足夠的能力呈現，避免最終做出較不符合期待的作品。</p>
+                </div>
+
+                <div class="container mt-5">
+                    <p class="has-text-weight-bold">Q3.那素材須在何時提供？</p>
+                    <p class="ml-5">A3.由於目前沒辦法協助設計品牌識別，僅能提供網站配色的設計建議（若能提供品牌配色，就盡可能依照品牌配色來設計），因此有關品牌或議題等素材建議初步評估時就能大致上提供，以利找尋最好的呈現方式唷！</p>
+                </div>
+
+                <div class="container mt-5">
+                    <p class="has-text-weight-bold">Q4.正式簽約或開始製作前可以提供預覽嗎？</p>
+                    <p class="ml-5">A4.雖然無法提供高精度的設計草稿，但於初步規劃時就可以與您討論出粗略的呈現方式囉！</p>
+                </div>
+                -->
+
+            </div>
             <div class="column is-7">
                 <p class="title is-4 mt-6"><span class="has-text-link">嗨</span>，我叫做</p>
                 <input class="input is-large is-fullwidth" id="Name" type="text" name="Name" value="">
@@ -57,83 +135,11 @@
                     嗨，我們已經收到您的訊息囉！請靜待我們的回覆～
                     </div>
                 </article>
-                <p class="has-text-right">
+                <p class="has-text-left">
                     <button type="button" onclick="submit()" class="button is-primary is-large is-rounded mt-5 p-6">
                         <span class="is-size-2"><i class="fas fa-paper-plane mr-2"></i></p>
                     </button>
                 </p>
-
-            </div>
-            <div class="column pl-5">
-                <p class="title is-1 has-text-right">
-                    <span id="titleText"></span>
-                </p>
-                <p class="title is-4 has-text-right">
-                    Follow Us
-                </p>
-                <div class="block has-text-right has-text-centered-mobile">
-                    @if(strlen($webData['webConfig'][22]->tittle) > 0)
-                        <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
-                            <button class="button is-twitter is-outlined is-medium is-rounded ml-1 mr-1">
-                                <i class="fab fa-twitter"></i>
-                            </button>
-                        </a>
-                    @endif
-                    @if(strlen($webData['webConfig'][21]->tittle) > 0)
-                        <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
-                            <button class="button is-instagram is-medium is-rounded ml-1 mr-1">
-                                <i class="fab fa-instagram-square"></i>
-                            </button>
-                        </a>
-                    @endif
-                    @if(strlen($webData['webConfig'][20]->tittle) > 0)
-                        <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
-                            <button class="button is-facebook is-outlined is-medium is-rounded ml-1 mr-1">
-                                <i class="fab fa-facebook"></i>
-                            </button>
-                        </a>
-                    @endif
-                    @if(strlen($webData['webConfig'][23]->tittle) > 0)
-                        <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
-                            <button class="button is-applepodcast is-outlined is-medium is-rounded ml-1 mr-1">
-                                <i class="fab fa-apple"></i>
-                            </button>
-                        </a>
-                    @endif
-                    @if(strlen($webData['webConfig'][24]->tittle) > 0)
-                        <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
-                            <button class="button is-outlined is-white is-medium is-rounded ml-1 mr-1">
-                                <i class="fab fa-google"></i>
-                            </button>
-                        </a>
-                    @endif
-                </div>
-                <!--
-                <p class="title is-1 has-text-right">
-                    <i class="fas fa-comment-dots"></i>
-                </p>
-                <p class="title is-4 has-text-right has-text-link">常見問答</p>
-                
-                <div class="container">
-                    <p class="has-text-weight-bold">Q1.提供什麼內容，可以加快我們需求評估的速度？</p>
-                    <p class="ml-5">A1.可提供初步的「網頁架構圖」、「時程與預算」、「類似風格的網站」</p>
-                </div>
-
-                <div class="container mt-5">
-                    <p class="has-text-weight-bold">Q2.資料須在何時提供？</p>
-                    <p class="ml-5">A2.在初步評估時就需要提供，由於網頁設計以資料呈現為主，資料內容的不同會影響最後呈現的方式！另外事前提供資料，也能讓我們評估內部是否有足夠的能力呈現，避免最終做出較不符合期待的作品。</p>
-                </div>
-
-                <div class="container mt-5">
-                    <p class="has-text-weight-bold">Q3.那素材須在何時提供？</p>
-                    <p class="ml-5">A3.由於目前沒辦法協助設計品牌識別，僅能提供網站配色的設計建議（若能提供品牌配色，就盡可能依照品牌配色來設計），因此有關品牌或議題等素材建議初步評估時就能大致上提供，以利找尋最好的呈現方式唷！</p>
-                </div>
-
-                <div class="container mt-5">
-                    <p class="has-text-weight-bold">Q4.正式簽約或開始製作前可以提供預覽嗎？</p>
-                    <p class="ml-5">A4.雖然無法提供高精度的設計草稿，但於初步規劃時就可以與您討論出粗略的呈現方式囉！</p>
-                </div>
-                -->
 
             </div>
         </div>
