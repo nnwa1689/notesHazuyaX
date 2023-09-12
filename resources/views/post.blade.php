@@ -3,18 +3,24 @@
 @section('content')
 @parent
     <div data-scroll class="container PostHeader mb-5 mt-5">
-        <p class="is-size-6">
-            <span class="mr-3"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</span>
-            <span><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</span>
-        </p>
+        <div class="columns is-mobile is-gapless">
+            <div class="column is-4 has-text-left">
+                <p>
+                    <a class="tag button is-primary is-outlined is-rounded is-medium" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Category->ClassName}}</a>
+                </p>
+            </div>
+            <div class="column is-m has-text-right">
+                <p class="is-size-6">
+                    <span class="mr-3"><i class="fas fa-clock mr-1"></i>{{$postData[0]->ReadTime}}分鐘</span>
+                    <span><i class="fas fa-calendar-alt mr-1"></i>{{$postData[0]->PostDate}}</span>
+                </p>
+            </div>
+        </div>
         <p class="title is-3">
             {{$postData[0]->PostTittle}}
             @if($webData['userData'] !== 0)
                 <button class="button is-link is-outlined is-small" onclick="window.location.href = '{{$webData['webConfig'][13]->tittle}}admin/editPost/{{$postData[0]->PostId}}';"><i class="far fa-edit"></i></button>
             @endif
-        </p>
-        <p>
-            <a class="tag button is-primary is-outlined is-rounded is-medium" href="{{$webData['webConfig'][13]->tittle}}category/{{$postData[0]->ClassId}}">{{$postData[0]->Category->ClassName}}</a>
         </p>
     </div>
     <div class="container">
