@@ -18,7 +18,7 @@
         <div class="column">
             <hr/>
             <div class="columns is-gapless">
-                <div class="column is-5">
+                <div class="column is-4">
                     <p class="subtitle is-4">Client</p>
                 </div> 
                 <div class="column">
@@ -27,7 +27,7 @@
             </div>
             <hr/>
             <div class="columns is-gapless">
-                <div class="column is-5">
+                <div class="column is-4">
                     <p class="subtitle is-4">Url</p>
                 </div> 
                 <div class="column">
@@ -40,14 +40,14 @@
             </div>
             <hr/>
             <div class="columns is-gapless">
-                <div class="column is-3">
+                <div class="column is-4">
                     <p class="subtitle is-4">Presented</p>
                 </div> 
                 <div class="column">
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
                     @if($value -> StaffName !== "")
                     <div class="columns is-mobile">
-                        <div class="column is-3 has-text-right">
+                        <div class="column is-2">
                             <div class="image is-32x32">
                                 <figure class="image is-1by1">
                                     <img class="is-rounded" src="{{$value -> StaffImage}}">
@@ -55,8 +55,7 @@
                             </div>
                         </div>
                         <div class="column has-text-left">
-                            <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
-                            ({{ $value -> StaffTitle }})
+                            <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}({{ $value -> StaffTitle }})</a>
                         </div>
                     </div>
                     @endif
