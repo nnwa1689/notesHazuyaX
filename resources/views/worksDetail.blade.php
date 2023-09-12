@@ -40,14 +40,14 @@
             </div>
             <hr/>
             <div class="columns is-gapless">
-                <div class="column is-5">
+                <div class="column is-3">
                     <p class="subtitle is-4">Presented by</p>
                 </div> 
                 <div class="column">
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
                     @if($value -> StaffName !== "")
                     <div class="columns is-mobile">
-                        <div class="column is-3">
+                        <div class="column is-4">
                             <p class="subtitle is-4">{{ $value -> StaffTitle }}：</p>
                         </div>
                         <div class="column">
