@@ -11,7 +11,7 @@
     <p class="title is-2 has-text-left">
         <span id="titleText"></span>
     </p>
-    <div class="columns is-gapless">
+    <div class="columns is-gapless is-mobile">
         <div class="column is-5">
             <p class="subtitle is-3">{{$WorkDetail[0]->WorksID}}</p>
         </div>
@@ -41,13 +41,13 @@
             <hr/>
             <div class="columns is-gapless">
                 <div class="column is-3">
-                    <p class="subtitle is-4">Presented by</p>
+                    <p class="subtitle is-4">Presented</p>
                 </div> 
                 <div class="column">
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
                     @if($value -> StaffName !== "")
                     <div class="columns is-mobile">
-                        <div class="column is-4">
+                        <div class="column is-6">
                             <p class="subtitle is-4">{{ $value -> StaffTitle }}：</p>
                         </div>
                         <div class="column">
