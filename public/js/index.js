@@ -42,7 +42,7 @@ function indexInit(){
         stringsElement: '#typed-strings',
         typeSpeed: 20,
         startDelay: 2000,
-        loop: false
+        loop: false,
         cursorChar: '',
     });
 }
