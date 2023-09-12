@@ -7,8 +7,10 @@
             <div class="columns">
                 <div class="column is-10">
                     <p id="title1" class="title is-home has-text-centered-mobile">
+                        &nbsp;
                     </p>
                     <p id="title2" class="title is-home has-text-centered-mobile">
+                        &nbsp;
                     </p>
                     <p class="title is-3 has-text-centered-mobile" style="line-height: 50px;">
                         <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
