@@ -46,7 +46,7 @@
                 <div class="column">
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
                     @if($value -> StaffName !== "")
-                    <div class="columns is-mobile">
+                    <div class="columns is-gapless is-mobile">
                         <div class="column is-2">
                             <div class="image is-32x32">
                                 <figure class="image is-1by1">
