@@ -16,6 +16,7 @@
             <p class="subtitle is-3">{{$WorkDetail[0]->WorksID}}</p>
         </div>
         <div class="column">
+            <hr/>
             <div class="columns is-gapless">
                 <div class="column is-5">
                     <p class="subtitle is-4">Client</p>
@@ -24,7 +25,7 @@
                     <p class="subtitle is-4">{{$WorkDetail[0]->Customer}}</p>
                 </div>
             </div>
-
+            <hr/>
             <div class="columns is-gapless">
                 <div class="column is-5">
                     <p class="subtitle is-4">Url</p>
@@ -41,21 +42,21 @@
             <p class="subtitle is-4">Staff</p>
             @foreach($WorkDetail[0] -> WorksStaff as $value)
             @if($value -> StaffName !== "")
-            <div class="columns is-variable is-mobile p-0">
+            <div class="columns is-variable is-gapless is-mobile">
                 <div class="column is-5">
                     <p class="subtitle is-4">{{ $value -> StaffTitle }}</p>
                 </div>
                 <div class="column">
-                    <div class="columns">
-                        <div class="column is-3 has-text-right">
+                    <div class="columns is-mobile">
+                        <div class="column is-2 has-text-right">
                             <div class="image is-32x32">
                                 <figure class="image is-1by1">
                                     <img class="is-rounded" src="{{$value -> StaffImage}}">
                                 </figure>
                             </div>
                         </div>
-                        <div class="column is-3 has-text-left">
-                            <a class="m-0" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
+                        <div class="column is-5 has-text-left">
+                            <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
                         </div>
                     </div>
                 </div>
