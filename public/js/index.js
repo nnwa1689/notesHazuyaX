@@ -41,7 +41,7 @@ function indexInit(){
         strings:['<span class="has-text-link has-text-shadow">＆</span><span class="has-text-primary has-text-shadow">Relaxation</span>',],
         stringsElement: '#typed-strings',
         typeSpeed: 20,
-        startDelay: 2000,
+        startDelay: 4000,
         loop: false,
         cursorChar: '',
     });
