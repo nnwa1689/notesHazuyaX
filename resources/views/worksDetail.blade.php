@@ -39,10 +39,10 @@
                 </div>
             </div>
             <hr/>
-            <p class="subtitle is-4">Staff</p>
+            <p class="subtitle is-4">Presented by</p>
             @foreach($WorkDetail[0] -> WorksStaff as $value)
             @if($value -> StaffName !== "")
-            <div class="columns is-variable is-gapless is-mobile">
+            <div class="columns is-variable is-mobile">
                 <div class="column is-5">
                     <p class="subtitle is-4">{{ $value -> StaffTitle }}</p>
                 </div>
@@ -61,9 +61,9 @@
                     </div>
                 </div>
             </div>
+            <hr/>
             @endif
             @endforeach
-
         </div>
     </div>
 </div>
@@ -81,42 +81,6 @@
 </div>
 
 <div class="container is-max-desktop">
-    <div class="columns mt-6">
-        <div class="column has-text-centered-mobile is-align-self-center">
-            <p class="title is-4 m-5">Presented by</p>
-            <div class="columns">
-                <div class="column is-12 is-justify-content-center" style="margin-left:0; margin-right: auto;">
-                    @foreach($WorkDetail[0] -> WorksStaff as $value)
-                    @if($value -> StaffName !== "")
-                    <div class="columns is-variable is-mobile p-0">
-                        <div class="column is-4">
-                            <div class="image is-128x128">
-                                <figure class="image is-1by1">
-                                    <img class="is-rounded" src="{{$value -> StaffImage}}">
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="column is-8">
-                            <div class="box">
-                                <div class="block p-1 has-text-left">
-                                    <a class="has-text-weight-bold is-size-6 m-0" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
-                                    <p class="is-size-6 m-0">{{ $value -> StaffTitle }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    @endif
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        <div class="column is-6 has-text-right has-text-centered-mobile">
-            <a href="{{ $WorkDetail[0] -> Url }}" target="_blank" class="button is-primary is-works-button is-multiline is-outlined is-rounded mr-0 mb-6 mt-6">
-                作品鑑賞<br/><i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </div>
-
     <div class="container has-text-centered mt-3">
         <button class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
             <p class="title is-6 p-6 m-6 has-text-light">
