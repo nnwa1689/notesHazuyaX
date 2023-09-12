@@ -12,7 +12,7 @@
         <span id="titleText"></span>
     </p>
     <div class="columns is-gapless is-mobile">
-        <div class="column is-5">
+        <div class="column is-4">
             <p class="subtitle is-3">{{$WorkDetail[0]->WorksID}}</p>
         </div>
         <div class="column">
@@ -47,22 +47,16 @@
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
                     @if($value -> StaffName !== "")
                     <div class="columns is-mobile">
-                        <div class="column is-6">
-                            <p class="subtitle is-4">{{ $value -> StaffTitle }}：</p>
-                        </div>
-                        <div class="column">
-                            <div class="columns is-mobile">
-                                <div class="column is-3 has-text-right">
-                                    <div class="image is-32x32">
-                                        <figure class="image is-1by1">
-                                            <img class="is-rounded" src="{{$value -> StaffImage}}">
-                                        </figure>
-                                    </div>
-                                </div>
-                                <div class="column has-text-left">
-                                    <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
-                                </div>
+                        <div class="column is-3 has-text-right">
+                            <div class="image is-32x32">
+                                <figure class="image is-1by1">
+                                    <img class="is-rounded" src="{{$value -> StaffImage}}">
+                                </figure>
                             </div>
+                        </div>
+                        <div class="column has-text-left">
+                            <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
+                            ({{ $value -> StaffTitle }})
                         </div>
                     </div>
                     @endif
