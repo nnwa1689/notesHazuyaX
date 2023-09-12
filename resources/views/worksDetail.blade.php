@@ -7,7 +7,7 @@
 <li class="is-active"><a href="#" aria-current="page">{{$WorkDetail[0]->WorksName}}</a></li>
 @endsection
 @section('content')
-<div class="container is-max-desktop" data-scroll data-scroll-speed="2">
+<div class="container is-max-desktop" data-scroll data-scroll-speed="-1">
     <p class="title is-2 has-text-left">
         <span id="titleText"></span>
     </p>
@@ -46,36 +46,36 @@
                 <div class="column">
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
                     @if($value -> StaffName !== "")
-                    <div class="columns is-variable is-mobile">
-                        <div class="column is-5">
-                            <p class="subtitle is-4">{{ $value -> StaffTitle }}</p>
+                    <div class="columns is-mobile">
+                        <div class="column is-3">
+                            <p class="subtitle is-4">{{ $value -> StaffTitle }}：</p>
                         </div>
                         <div class="column">
                             <div class="columns is-mobile">
-                                <div class="column is-2 has-text-right">
+                                <div class="column is-3 has-text-right">
                                     <div class="image is-32x32">
                                         <figure class="image is-1by1">
                                             <img class="is-rounded" src="{{$value -> StaffImage}}">
                                         </figure>
                                     </div>
                                 </div>
-                                <div class="column is-5 has-text-left">
+                                <div class="column has-text-left">
                                     <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <hr/>
                     @endif
                     @endforeach
                 </div>
             </div>
+            <hr/>
         </div>
     </div>
 </div>
 
 <div class="container">
-    <section data-scroll data-scroll-speed="3" class="hero is-small p-0 mb-6 mt-1 ml-0 mr-0" style="overflow: hidden;">
+    <section data-scroll data-scroll-speed="2" class="hero is-small p-0 mb-6 mt-1 ml-0 mr-0" style="overflow: hidden;">
         <img class="ContentCoverImage" src="{{ $WorkDetail[0]->CoverImage }}" data-scroll data-scroll-speed="-3">
     </section>
 </div>
@@ -87,7 +87,7 @@
 </div>
 
 <div class="container is-max-desktop">
-    <div class="container has-text-centered mt-6" data-scroll data-scroll-speed="3">
+    <div class="container has-text-centered mt-6 mb-6" data-scroll data-scroll-speed="3">
         <button class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
             <p class="title is-6 p-6 m-6 has-text-light">
                 Contact Us
