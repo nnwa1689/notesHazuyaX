@@ -8,6 +8,47 @@
 @endsection
 @section('content')
 <div class="container">
+    <p class="title is-2 has-text-left">
+        <span id="titleText"></span>
+    </p>
+    <div class="columns">
+        <div class="column is-5">
+            <p class="subtitle is-3">{{$WorkDetail[0]->WorksID}}</p>
+        </div>
+        <div class="column">
+            <p class="heading is-size-5">
+                <span class="mr-3">Client</span>
+                <span>{{$WorkDetail[0]->Customer}}</span>
+            </p>
+            <hr/>
+            <p class="heading is-size-5">
+                <span class="mr-3">Url</span>
+                <a href="{{ $WorkDetail[0] -> Url }}" target="_blank">
+                    {{ $WorkDetail[0] -> Url }}
+                </a>
+            </p>
+            <p class="heading is-size-5">Staff</p>
+            @foreach($WorkDetail[0] -> WorksStaff as $value)
+            @if($value -> StaffName !== "")
+            <hr/>
+            <p class="heading is-size-5">{{ $value -> StaffTitle }}</p>
+            <div class="columns is-variable is-mobile p-0">
+                <div class="column is-4">
+                    <div class="image is-32x32">
+                        <figure class="image is-1by1">
+                            <img class="is-rounded" src="{{$value -> StaffImage}}">
+                        </figure>
+                    </div>
+                </div>
+                <div class="column is-8">
+                    <a class="m-0" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
+                </div>
+            </div>
+            @endif
+            @endforeach
+
+        </div>
+    </div>
     <section data-scroll data-scroll-speed="3" class="hero is-small p-0 mb-6 mt-1 ml-0 mr-0" style="overflow: hidden;">
         <img class="ContentCoverImage" src="{{ $WorkDetail[0]->CoverImage }}" data-scroll data-scroll-speed="-3">
     </section>
@@ -56,21 +97,6 @@
         </div>
     </div>
 
-    <nav class="level mt-6">
-        <div class="level-item has-text-centered">
-            <div>
-            <p class="heading is-size-5">【Works】</p>
-            <p class="title is-4">{{$WorkDetail[0]->WorksName}}</p>
-            </div>
-        </div>
-        <div class="level-item has-text-centered">
-            <div>
-            <p class="heading is-size-5">【Client】</p>
-            <p class="title is-4">{{$WorkDetail[0]->Customer}}</p>
-            </div>
-        </div>
-    </nav>
-
     <div class="container has-text-centered mt-3">
         <button class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
             <p class="title is-6 p-6 m-6 has-text-light">
@@ -80,4 +106,14 @@
         </button>
     </div>
 </div>
+
+<script>
+var typed = new Typed("#titleText", {
+    strings:["{{$WorkDetail[0]->WorksName}}",],
+    stringsElement: '#typed-strings',
+    typeSpeed: 40,
+    startDelay: 2000,
+    loop: false,
+});
+</script>
 @endsection

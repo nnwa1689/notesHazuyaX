@@ -33,7 +33,7 @@
         {!! $postData[0]->PostContant !!}
         </div>
     </div>
-    <div class="container is-max-desktop mt-6">
+    <div class="container is-max-desktop">
         <div class="columns is-variable is-5 p-0 is-align-content-center is-align-items-center" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
             <div class="column is-2">
                 <div class="image is-128x128" style="margin-left:auto; margin-right:auto;">
