@@ -7,7 +7,7 @@
 <li class="is-active"><a href="#" aria-current="page">{{$WorkDetail[0]->WorksName}}</a></li>
 @endsection
 @section('content')
-<div class="container is-max-desktop">
+<div class="container is-max-desktop" data-scroll data-scroll-speed="2">
     <p class="title is-2 has-text-left">
         <span id="titleText"></span>
     </p>
@@ -39,31 +39,37 @@
                 </div>
             </div>
             <hr/>
-            <p class="subtitle is-4">Presented by</p>
-            @foreach($WorkDetail[0] -> WorksStaff as $value)
-            @if($value -> StaffName !== "")
-            <div class="columns is-variable is-mobile">
+            <div class="columns is-gapless">
                 <div class="column is-5">
-                    <p class="subtitle is-4">{{ $value -> StaffTitle }}</p>
-                </div>
+                    <p class="subtitle is-4">Presented by</p>
+                </div> 
                 <div class="column">
-                    <div class="columns is-mobile">
-                        <div class="column is-2 has-text-right">
-                            <div class="image is-32x32">
-                                <figure class="image is-1by1">
-                                    <img class="is-rounded" src="{{$value -> StaffImage}}">
-                                </figure>
+                    @foreach($WorkDetail[0] -> WorksStaff as $value)
+                    @if($value -> StaffName !== "")
+                    <div class="columns is-variable is-mobile">
+                        <div class="column is-5">
+                            <p class="subtitle is-4">{{ $value -> StaffTitle }}</p>
+                        </div>
+                        <div class="column">
+                            <div class="columns is-mobile">
+                                <div class="column is-2 has-text-right">
+                                    <div class="image is-32x32">
+                                        <figure class="image is-1by1">
+                                            <img class="is-rounded" src="{{$value -> StaffImage}}">
+                                        </figure>
+                                    </div>
+                                </div>
+                                <div class="column is-5 has-text-left">
+                                    <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="column is-5 has-text-left">
-                            <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}</a>
-                        </div>
                     </div>
+                    <hr/>
+                    @endif
+                    @endforeach
                 </div>
             </div>
-            <hr/>
-            @endif
-            @endforeach
         </div>
     </div>
 </div>
@@ -81,7 +87,7 @@
 </div>
 
 <div class="container is-max-desktop">
-    <div class="container has-text-centered mt-3">
+    <div class="container has-text-centered mt-6" data-scroll data-scroll-speed="3">
         <button class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
             <p class="title is-6 p-6 m-6 has-text-light">
                 Contact Us
@@ -95,7 +101,7 @@
 var typed = new Typed("#titleText", {
     strings:["{{$WorkDetail[0]->WorksName}}",],
     stringsElement: '#typed-strings',
-    typeSpeed: 10,
+    typeSpeed: 20,
     startDelay: 2000,
     loop: false,
 });
