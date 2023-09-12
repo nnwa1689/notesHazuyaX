@@ -6,12 +6,7 @@
         <div class="hero-body">
             <div class="columns">
                 <div class="column is-10">
-                    <p class="title is-home has-text-centered-mobile">
-                        <span class="has-text-link has-text-shadow">Warmth</span>
-                    </p>
-                    <p class="title is-home has-text-right has-text-centered-mobile">
-                        <span class="has-text-link has-text-shadow">&</span><span class="has-text-primary has-text-shadow">Relaxation</span>
-                    </p>
+                    <span id="titleText"></span>
                     <p class="title is-3 has-text-centered-mobile" style="line-height: 50px;">
                         <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
                         <span class="has-text-primary">
