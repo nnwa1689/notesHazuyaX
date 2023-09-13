@@ -24,8 +24,8 @@
             <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
         </div>
     </div>
-    <div class="is-align-items-center">
-        <p class="subtitle is-4 has-text-primary mt-5 has-text-right has-text-centered-mobile">
+    <div class="is-align-items-center has-text-right has-text-centered-mobile">
+        <p class="subtitle is-4 has-text-primary mt-5">
             <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發            
         </p>
         <button class="button is-primary is-rounded ml-3" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
