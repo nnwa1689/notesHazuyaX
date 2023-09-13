@@ -52,6 +52,7 @@
         <p class="title is-2">
             <span class="has-text-background-primary">Services, Skills.</span>
         </p>
+        <br/>
         <p class="subtitle is-3"># 後端系統開發(PHP、Asp.Net MVC)</p>
         <p class="subtitle is-3"># Web前端開發(VueJS/ReactJS)</p>
         <p class="subtitle is-3"># 無伺服器系統(Firebase, Aws Lightsail)</p>
@@ -256,7 +257,7 @@
     -->
 
     <div class="container has-text-centered" data-scroll data-scroll-speed="2">
-        <button class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
+        <button class="button is-fullwidth is-large is-link mt-3 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
             <p class="title is-6 p-6 m-6 has-text-light">
                 Contact Us
                 <i class="fas fa-arrow-right ml-2"></i>
