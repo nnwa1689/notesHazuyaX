@@ -9,17 +9,11 @@
                     <p class="title is-1 has-text-centered-mobile">
                         <span class="has-text-primary">Warmth.</span>
                     </p>
-                    <p class="title is-1 has-text-centered-mobile ml-4">
+                    <p class="title is-1 has-text-centered-mobile">
                         <span class="has-text-primary">Relaxation.</span>
                     </p>
                     <p class="title is-1 has-text-centered-mobile ml-4">
                         <span class="has-text-link">Original.</span>
-                    </p>
-                    <p class="title is-3 has-text-centered-mobile" style="line-height: 50px;">
-                        <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                        <span class="has-text-primary">
-                            創造<span class="has-text-background-link ml-1 mr-2">溫暖放鬆</span>且<span class="has-text-background-primary ml-1 mr-2">原始</span>的資訊閱覽體驗！</span>
-                        <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
                     </p>
                 </div>
                 <div class="column has-text-right has-text-centered-mobile">
@@ -28,6 +22,12 @@
                         <i class="fas fa-circle mr-4"></i><i class="fas fa-circle ml-4"></i>
                     </p>
                     <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
+                    <p class="title is-3 has-text-centered-mobile" style="line-height: 50px;">
+                        <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
+                        <span class="has-text-primary">
+                            享受<span class="has-text-background-link ml-1 mr-2">溫暖輕鬆</span>&<span class="has-text-background-primary ml-1 mr-2">原始</span>的資訊體驗！</span>
+                        <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+                    </p>
                 </div>
             </div>
 
