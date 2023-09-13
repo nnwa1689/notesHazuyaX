@@ -15,7 +15,7 @@ function indexInit(){
     indexDotInterval = setInterval(() => {
         $("#dot").toggleClass("has-text-link");
         $("#dot").toggleClass("has-text-light");
-    }, 2000);
+    }, 1500);
 
     var dtnow = new Date();
     $("#hour").text(AmendZero(dtnow.getHours()));
