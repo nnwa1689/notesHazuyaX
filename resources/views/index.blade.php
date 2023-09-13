@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div data-scroll data-scroll-speed="-3" class="container mt-3 mb-3">
+<div data-scroll class="container mb-3">
     <div class="columns is-gapless">
         <div class="column is-10">
             <p class="title is-1 has-text-centered-mobile">
@@ -15,25 +15,13 @@
             </p>
         </div>
         <div class="column has-text-centered">
-            <p id="hour" class="title is-1 has-text-primary has-text-shadow mt-3">14</p>
+            <p id="hour" class="title is-1 has-text-primary has-text-shadow mt-5">14</p>
             <p id="dot" class="title is-3 has-text-link has-text-shadow">
                 <i class="fas fa-circle mb-5"></i>
                 <br/>
                 <i class="fas fa-circle"></i>
             </p>
             <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
-            <p class="has-text-right mt-3">
-                <button class="button is-primary is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
-                    <div class="columns">
-                        <div class="column">
-                            <p class="title is-6">
-                                Trying with me!
-                                <i class="fas fa-arrow-right ml-1"></i>
-                            </p>
-                        </div>
-                    </div>
-                </button>
-            </p>
         </div>
     </div>
 </div>
@@ -68,15 +56,9 @@
                 @endforeach
             </div>
             <p class="has-text-right">
-                <button class="button is-primary mt-6 mb-6 mr-3" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
-                    <div class="columns">
-                        <div class="column">
-                            <p class="title is-6">
-                                更多作品
-                                <i class="fas fa-arrow-right ml-1"></i>
-                            </p>
-                        </div>
-                    </div>
+                <button class="button is-primary mt-6 mb-6 mr-3" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')">
+                    更多作品
+                    <i class="fas fa-arrow-right ml-1"></i>
                 </button>
             </p>
         </div>
@@ -84,7 +66,6 @@
 </div>
 
 <div data-scroll data-scroll-speed="1" class="mt-3 mb-3">
-    <hr/>
     <div class="container mt-5">
         <p class="title is-2">
             <span class="has-text-background-link">技術雜記</span>
@@ -113,14 +94,8 @@
                 @endforeach
             </div>
             <button class="button is-link mt-3 mb-3 is-large" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}blog')">
-                <div class="columns">
-                    <div class="column">
-                        <p class="title is-6">
-                            更多雜記
-                            <i class="fas fa-arrow-right ml-1"></i>
-                        </p>
-                    </div>
-                </div>
+                更多雜記
+                <i class="fas fa-arrow-right ml-1"></i>
             </button>
         </div>
     </section>
