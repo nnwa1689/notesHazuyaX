@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div data-scroll class="container mb-6 pt-6">
+<div data-scroll class="container mb-6 pt-6 pb-6">
     <div class="columns is-gapless">
         <div class="column is-10">
             <p class="title is-1 has-text-centered-mobile">
@@ -24,13 +24,16 @@
             <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
         </div>
     </div>
-    <p class="subtitle is-4 has-text-primary mt-5 has-text-right has-text-centered-mobile">
-        <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發            
+    <div class="is-align-items-center">
+        <p class="subtitle is-4 has-text-primary mt-5 has-text-right has-text-centered-mobile">
+            <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發            
+        </p>
         <button class="button is-primary is-rounded ml-3" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
             Contact Us
             <i class="fas fa-arrow-right ml-1"></i>
         </button>
-    </p>
+    </div>
+
 </div>
 <div data-scroll data-scroll-speed="1" class="mt-6 mb-3">
     <div class="container mt-6">
