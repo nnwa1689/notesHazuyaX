@@ -1,9 +1,9 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div data-scroll data-scroll-speed="-5" data-scroll-delay="0" class="container mt-6 mb-6">
+<div data-scroll data-scroll-speed="0" data-scroll-delay="0" class="container mt-6 mb-6">
     <div class="columns is-gapless">
-        <div class="column is-9">
+        <div class="column is-9 is-justify-content-end">
             <p class="title is-1 has-text-centered-mobile">
                 <span class="has-text-primary">Warmth.</span>
             </p>
@@ -14,7 +14,7 @@
                 <span class="has-text-background-primary">Original.</span>
             </p>
         </div>
-        <div class="column has-text-centered">
+        <div class="column has-text-centered is-justify-content-end">
             <p id="hour" class="title is-1 has-text-primary has-text-shadow">14</p>
             <p id="dot" class="title is-3 has-text-link has-text-shadow">
                 <i class="fas fa-circle mb-5"></i>
@@ -25,7 +25,7 @@
         </div>
     </div>
 </div>
-<div  data-scroll data-scroll-speed="3" data-scroll-delay="0" class="mt-6">
+<div  data-scroll data-scroll-speed="0" data-scroll-delay="0" class="mt-6">
     <hr/>
     <div class="container mb-3">
         <p class="title is-2">
@@ -72,7 +72,7 @@
     </section>
 </div>
 
-<div data-scroll data-scroll-speed="-5" data-scroll-delay="0" class="mt-6">
+<div data-scroll data-scroll-speed="0" data-scroll-delay="0" class="mt-6">
     <hr/>
     <div class="container mb-3">
         <p class="title is-2">
