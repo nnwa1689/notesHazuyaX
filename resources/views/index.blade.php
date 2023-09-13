@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div data-scroll class="container mb-3">
+<div data-scroll class="container mb-6">
     <div class="columns is-gapless">
         <div class="column is-10">
             <p class="title is-1 has-text-centered-mobile">
@@ -13,9 +13,6 @@
             <p class="title is-1 has-text-centered-mobile">
                 <span class="has-text-background-primary">Original.</span>
             </p>
-            <p class="subtitle is-4 has-text-primary mt-5">
-                <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發
-            </p>
         </div>
         <div class="column has-text-centered">
             <p id="hour" class="title is-1 has-text-primary has-text-shadow mt-5">14</p>
@@ -25,11 +22,14 @@
                 <i class="fas fa-circle"></i>
             </p>
             <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
+            <p class="subtitle is-4 has-text-primary mt-5">
+                <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發
+            </p>
         </div>
     </div>
 </div>
 <div data-scroll data-scroll-speed="1" class="mt-6 mb-3">
-    <div class="container mt-5">
+    <div class="container">
         <p class="title is-2">
             <span class="has-text-background-primary">近期作品</span>
         </p>
@@ -59,7 +59,7 @@
                 @endforeach
             </div>
             <p class="has-text-right">
-                <button class="button is-primary mt-6 mb-6 mr-3" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')">
+                <button class="button is-primary mt-6 mb-6 mr-3" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')">
                     更多作品
                     <i class="fas fa-arrow-right ml-1"></i>
                 </button>
@@ -68,7 +68,7 @@
     </section>
 </div>
 
-<div data-scroll data-scroll-speed="1" class="mt-3 mb-3">
+<div data-scroll data-scroll-speed="1" class="mb-3">
     <div class="container">
         <p class="title is-2">
             <span class="has-text-background-link">技術雜記</span>
