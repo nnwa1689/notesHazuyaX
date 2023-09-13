@@ -25,9 +25,9 @@
         </div>
     </div>
 </div>
-<div  data-scroll data-scroll-speed="0" data-scroll-delay="0" class="mt-6">
+<div  data-scroll data-scroll-speed="3" data-scroll-delay="0" class="mt-6">
     <hr/>
-    <div class="container mb-3">
+    <div class="container mb-3 mt-3">
         <p class="title is-2">
             <span class="has-text-background-primary">近期作品</span>
         </p>
@@ -72,9 +72,9 @@
     </section>
 </div>
 
-<div data-scroll data-scroll-speed="0" data-scroll-delay="0" class="mt-6">
+<div data-scroll data-scroll-speed="-3" data-scroll-delay="0" class="mt-6">
     <hr/>
-    <div class="container mb-3">
+    <div class="container mb-3 mt-3">
         <p class="title is-2">
             <span class="has-text-background-link">技術雜記</span>
         </p>
