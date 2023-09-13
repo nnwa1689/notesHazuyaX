@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div data-scroll class="container mb-6">
+<div data-scroll class="container mb-6 pt-3">
     <div class="columns is-gapless">
         <div class="column is-10">
             <p class="title is-1 has-text-centered-mobile">
@@ -29,11 +29,10 @@
     </p>
 </div>
 <div data-scroll data-scroll-speed="1" class="mt-6 mb-3">
-    <div class="container">
+    <div class="container mt-6">
         <p class="title is-2">
             <span class="has-text-background-primary">近期作品</span>
         </p>
-        <p class="has-text-right has-text-left-mobile">在網路上找回單純的互動方式。</p>
     </div>
     <div class="container p-3">
         <div class="columns is-multiline is-mobile is-justify-content-center" style="align-items: end;">
@@ -71,7 +70,6 @@
         <p class="title is-2">
             <span class="has-text-background-link">技術雜記</span>
         </p>
-        <p class="has-text-right has-text-left-mobile">看看技術及瑣碎的日常。</p> 
     </div>
     <div class="container p-3">
         <div class="columns is-multiline">
