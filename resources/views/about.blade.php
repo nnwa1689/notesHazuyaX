@@ -56,26 +56,16 @@
             <p class="is-size-4">我們比較擅長這些事情</p>
         </div>
         <div class="column is-5 is-offset-2">
-            <div class="columns">
-                <div class="column is-3">
-                    <p>
-                        <img width="64" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
-                    </p>
-                    <p class="title is-3">技能</p>
-                </div>
-                <div class="column is-9">
-                    <p class="subtitle is-3"># 後端系統開發(PHP、Asp.Net MVC)</p>
-                    <p class="subtitle is-3"># Web前端開發(VueJS/ReactJS)</p>
-                    <p class="subtitle is-3"># 無伺服器系統(Firebase, Aws Lightsail)</p>
-                    <p class="subtitle is-3"># 無頭內容管理系統(Strapi)</p>
-                    <button class="button is-primary mt-6 is-fullwidth is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
-                        <p class="title is-6 p-6 m-6">
-                            參考案例
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </p>
-                    </button>
-                </div>
-            </div>
+            <p class="subtitle is-4"># 後端系統開發(PHP、Asp.Net MVC)</p>
+            <p class="subtitle is-4"># Web前端開發(VueJS/ReactJS)</p>
+            <p class="subtitle is-4"># 無伺服器系統(Firebase, Aws Lightsail)</p>
+            <p class="subtitle is-4"># 無頭內容管理系統(Strapi)</p>
+            <button class="button is-primary mt-6 is-fullwidth is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')">
+                <p class="title is-6 p-6 m-6">
+                    參考案例
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </p>
+            </button>
         </div>
     </div>
 
