@@ -12,14 +12,8 @@
                     <p class="title is-1 has-text-centered-mobile">
                         <span class="has-text-primary">Relaxed.</span>
                     </p>
-                    <p class="title is-1 has-text-centered-mobile ml-4">
-                        <span class="has-text-link">Original.</span>
-                    </p>
-                    <p class="title is-3 has-text-centered-mobile" style="line-height: 50px;">
-                        <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
-                        <span class="has-text-primary">
-                            享受<span class="has-text-background-link ml-1 mr-2">溫暖輕鬆</span>&<span class="has-text-background-primary ml-1 mr-2">原始</span>的資訊體驗！</span>
-                        <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+                    <p class="title is-1 has-text-centered-mobile">
+                        <span class="has-text-background-primary">Original.</span>
                     </p>
                 </div>
                 <div class="column has-text-centered">
@@ -81,7 +75,7 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="-2" data-scroll-delay="0" class="mt-6">
+<div data-scroll data-scroll-speed="3" data-scroll-delay="0" class="mt-6">
     <section class="hero is-success is-shadow is-halfheight">
         <div class="hero-body">
             <div class="container is-fluid has-text-right">
