@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div class="container mt-6 mb-6 pt-6 pb-6">
+<div data-scroll data-scroll-speed="-1" class="container mt-6 mb-6 pt-6 pb-6">
     <div class="columns is-gapless">
         <div class="column is-10">
             <p class="title is-1 has-text-centered-mobile">
@@ -25,9 +25,9 @@
         </div>
     </div>
 </div>
-<div class="mt-6 mb-6 pt-6 pb-6">
+<div data-scroll data-scroll-speed="1" class="mt-6 mb-6 pt-6 pb-6">
     <div class="container">
-        <p class="title is-2 mt-3">
+        <p class="title is-2 mt-5">
             <span class="has-text-background-primary">近期作品</span>
         </p>
         <p>在每次的作品中呈現一種令人放鬆的體驗，<br/>溫和的顏色、簡單的拼貼，再加上一點動感，讓平凡的資訊加上一些點綴。</p>
@@ -71,10 +71,10 @@
     </section>
 </div>
 
-<div class="mt-6 mb-6 pt-6 pb-6">
+<div data-scroll data-scroll-speed="1" class="mt-6 mb-6 pt-6 pb-6">
     <hr/>
     <div class="container">
-        <p class="title is-2 mt-3">
+        <p class="title is-2 mt-5">
             <span class="has-text-background-link">技術雜記</span>
         </p>
         <p>製作祕辛、技術分享</p> 
@@ -114,7 +114,7 @@
     </section>
 </div>
 
-<button class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
+<button data-scroll data-scroll-speed="1" class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
     <p class="title is-6 p-6 m-6 has-text-light">
         Contact Us
         <i class="fas fa-arrow-right ml-2"></i>
