@@ -46,7 +46,7 @@ function submit() {
 
 function contactInit() {
     var typed = new Typed("#titleText", {
-        strings:["聊聊天<br/><span class=\"has-text-hollow-link is-size-4 ml-2\">Conact</span>",],
+        strings:["聊聊天<br/><span class=\"has-text-hollow-link ml-2\">Contact.</span>",],
         stringsElement: '#typed-strings',
         typeSpeed: 70,
         startDelay: 2000,

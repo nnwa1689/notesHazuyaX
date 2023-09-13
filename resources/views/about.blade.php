@@ -14,21 +14,25 @@
         </p>
     </div>
 
-    <p class="title is-1">
-        <span class="has-text-background-primary">Original.</span>
-    </p>
-    <div class="columns is-gapless">
-        <div class="column is-7 is-offset-5">
-            <p>展現最真實的一面，</p>
+    <div class="columns">
+        <div class="column is-6">
+            <p class="title is-1">
+                <span class="has-text-background-primary">Original.</span>
+            </p>
+        </div>
+        <div class="column">
+            <p class="is-size-3">原始：我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，兼具情感</p>
         </div>
     </div>
     <hr/>
-    <p class="title is-1">
-        <span class="has-text-background-primary">Original.</span>
-    </p>
-    <div class="columns is-gapless">
-        <div class="column is-7 is-offset-5">
-            <p>展現最真實的一面，</p>
+    <div class="columns">
+        <div class="column is-6">
+            <p class="title is-1">
+                <span class="has-text-background-primary">Original.</span>
+            </p>
+        </div>
+        <div class="column">
+            <p class="is-size-3">原始：我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，兼具情感</p>
         </div>
     </div>
 
@@ -306,7 +310,7 @@
 </div>
 <script id="mainScript">
 var typed = new Typed("#titleText", {
-    strings:["關於<span class=\"has-text-hollow-link is-size-4 ml-2\">About us.</span>",],
+    strings:["關於<span class=\"has-text-hollow-link ml-2\">About us.</span>",],
     stringsElement: '#typed-strings',
     typeSpeed: 70,
     startDelay: 2000,

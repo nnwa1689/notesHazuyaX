@@ -41,7 +41,7 @@
 <p></p>
 <script>
     var typed = new Typed("#titleText", {
-        strings:["雜記<span class=\"has-text-hollow-link is-size-4 ml-2\">Blogs</span><a class=\"ml-2\" href=\"{{$webData['webConfig'][13]->tittle}}search\"><i class=\"fas fa-search ml-2\"></i></a>",],
+        strings:["雜記<span class=\"has-text-hollow-link ml-2\">Blogs.</span><a class=\"ml-2\" href=\"{{$webData['webConfig'][13]->tittle}}search\"><i class=\"fas fa-search ml-2\"></i></a>",],
         stringsElement: '#typed-strings',
         typeSpeed: 70,
         startDelay: 2000,
