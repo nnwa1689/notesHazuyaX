@@ -942,11 +942,11 @@ code {
 */
 
 hr {
-  background-color: rgb(170 180 190 / 30%);
+  background-color: rgb(170 180 190 / 50%);
   border: none;
   display: block;
-  height: 2px;
-  margin: 1.5rem 0;
+  height: 1px;
+  margin: 2rem 0;
 }
 
 img {

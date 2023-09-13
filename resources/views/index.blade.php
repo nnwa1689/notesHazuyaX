@@ -1,9 +1,9 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div class="container mt-6 mb-6 pt-3 pb-3">
+<div class="container mt-6 mb-6 pt-6 pb-6">
     <div class="columns is-gapless">
-        <div class="column is-9 is-justify-content-end">
+        <div class="column is-10">
             <p class="title is-1 has-text-centered-mobile">
                 <span class="has-text-primary">Warmth.</span>
             </p>
@@ -14,7 +14,7 @@
                 <span class="has-text-background-primary">Original.</span>
             </p>
         </div>
-        <div class="column has-text-centered is-justify-content-end">
+        <div class="column has-text-centered">
             <p id="hour" class="title is-1 has-text-primary has-text-shadow mt-3">14</p>
             <p id="dot" class="title is-3 has-text-link has-text-shadow">
                 <i class="fas fa-circle mb-5"></i>
@@ -25,7 +25,7 @@
         </div>
     </div>
 </div>
-<div class="mt-6 mb-6">
+<div class="mt-6 mb-6 pt-6 pb-6">
     <div class="container">
         <p class="title is-2 mt-3">
             <span class="has-text-background-primary">近期作品</span>
@@ -71,7 +71,7 @@
     </section>
 </div>
 
-<div class="mt-6 mb-6">
+<div class="mt-6 mb-6 pt-6 pb-6">
     <hr/>
     <div class="container">
         <p class="title is-2 mt-3">
