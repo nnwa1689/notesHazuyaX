@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="mb-6">
+<div data-scroll data-scroll-speed="-5" data-scroll-delay="1" class="container mb-6">
     <section class="hero is-shadow is-small">
         <div class="hero-body">
             <div class="columns">
@@ -75,7 +75,7 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="3" data-scroll-delay="0" class="mt-6">
+<div data-scroll data-scroll-speed="3" data-scroll-delay="1" class="mt-3">
     <section class="hero is-success is-shadow is-halfheight">
         <div class="hero-body">
             <div class="container is-fluid has-text-right">
