@@ -14,6 +14,24 @@
         </p>
     </div>
 
+    <p class="title is-1">
+        <span class="has-text-background-primary">Original.</span>
+    </p>
+    <div class="columns is-gapless">
+        <div class="column is-7 is-offset-5">
+            <p>展現最真實的一面，</p>
+        </div>
+    </div>
+    <hr/>
+    <p class="title is-1">
+        <span class="has-text-background-primary">Original.</span>
+    </p>
+    <div class="columns is-gapless">
+        <div class="column is-7 is-offset-5">
+            <p>展現最真實的一面，</p>
+        </div>
+    </div>
+
     <section class="hero is-halfheight mt-6" data-scroll data-scroll-speed="4">
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
