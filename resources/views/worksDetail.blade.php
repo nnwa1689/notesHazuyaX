@@ -17,7 +17,7 @@
         </div>
         <div class="column">
             <hr/>
-            <div class="columns is-gapless">
+            <div class="columns is-gapless is-mobile">
                 <div class="column is-4">
                     <p class="subtitle is-4">Client</p>
                 </div> 
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <hr/>
-            <div class="columns is-gapless">
+            <div class="columns is-gapless is-mobile">
                 <div class="column is-4">
                     <p class="subtitle is-4">Url</p>
                 </div> 
@@ -39,14 +39,14 @@
                 </div>
             </div>
             <hr/>
-            <div class="columns is-gapless">
+            <div class="columns is-gapless is-mobile">
                 <div class="column is-4">
                     <p class="subtitle is-4">Presented</p>
                 </div> 
                 <div class="column">
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
                     @if($value -> StaffName !== "")
-                    <article class="media mt-4">
+                    <article class="media mt-6">
                         <div class="media-left">
                             <div class="image is-32x32">
                                 <figure class="image is-1by1">
