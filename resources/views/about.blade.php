@@ -14,10 +14,13 @@
         </p>
     </div>
 
-    <div class="columns pt-5">
-        <div class="column is-4">
-            <p class="title is-2">
-                <span class="has-text-background-primary">Original, The best!</span>
+    <div class="columns mt-3 pt-6">
+        <div class="column is-6">
+            <p class="title is-2 has-text-background-primary">
+                Original,
+            </p>
+            <p class="title is-2 has-text-background-link">
+                The best!
             </p>
             <p class="is-size-4">原始，就是最好的狀態！</p>
         </div>
@@ -26,7 +29,7 @@
         </div>
     </div>
     <hr/>
-    <div class="columns">
+    <div class="columns mt-3 pt-6">
         <div class="column is-6">
             <p class="title is-3">
                 <span class="has-text-background-primary">Original.</span>
