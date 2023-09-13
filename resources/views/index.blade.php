@@ -13,6 +13,9 @@
             <p class="title is-1 has-text-centered-mobile">
                 <span class="has-text-background-primary">Original.</span>
             </p>
+            <p class="subtitle is-4 has-text-primary mt-5">
+                <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發
+            </p>
         </div>
         <div class="column has-text-centered">
             <p id="hour" class="title is-1 has-text-primary has-text-shadow mt-5">14</p>
@@ -25,7 +28,7 @@
         </div>
     </div>
 </div>
-<div data-scroll data-scroll-speed="1" class="mt-3 mb-3">
+<div data-scroll data-scroll-speed="1" class="mt-6 mb-3">
     <div class="container mt-5">
         <p class="title is-2">
             <span class="has-text-background-primary">近期作品</span>
@@ -66,7 +69,7 @@
 </div>
 
 <div data-scroll data-scroll-speed="1" class="mt-3 mb-3">
-    <div class="container mt-5">
+    <div class="container">
         <p class="title is-2">
             <span class="has-text-background-link">技術雜記</span>
         </p>
@@ -93,7 +96,7 @@
                     @endcomponent
                 @endforeach
             </div>
-            <button class="button is-link mt-3 mb-3 is-large" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}blog')">
+            <button class="button is-link mt-3 mb-3 is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}blog')">
                 更多雜記
                 <i class="fas fa-arrow-right ml-1"></i>
             </button>

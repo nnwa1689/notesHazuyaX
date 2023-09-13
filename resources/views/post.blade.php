@@ -2,7 +2,7 @@
 @section('title', $postData[0]->PostTittle.' - ')
 @section('content')
 @parent
-    <div data-scroll class="container PostHeader mb-5 mt-5">
+    <div data-scroll class="container PostHeader mb-5">
         <div class="columns is-mobile is-gapless">
             <div class="column is-4 has-text-left">
                 <p>
