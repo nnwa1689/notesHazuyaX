@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div data-scroll data-scroll-speed="-1" class="container mt-6 mb-6 pt-6 pb-6">
+<div data-scroll data-scroll-speed="-1" class="container mt-6 mb-3">
     <div class="columns is-gapless">
         <div class="column is-10">
             <p class="title is-1 has-text-centered-mobile">
@@ -22,10 +22,22 @@
                 <i class="fas fa-circle"></i>
             </p>
             <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
+            <p class="has-text-right mt-3">
+                <button class="button is-primary is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')" class="button is-white is-fullwidth is-large">
+                    <div class="columns">
+                        <div class="column">
+                            <p class="title is-6">
+                                Trying with me!
+                                <i class="fas fa-arrow-right ml-1"></i>
+                            </p>
+                        </div>
+                    </div>
+                </button>
+            </p>
         </div>
     </div>
 </div>
-<div data-scroll data-scroll-speed="1" class="mt-6 mb-6 pt-6 pb-6">
+<div data-scroll data-scroll-speed="1" class="mt-6 mb-3">
     <div class="container mt-5">
         <p class="title is-2">
             <span class="has-text-background-primary">近期作品</span>
@@ -71,7 +83,7 @@
     </section>
 </div>
 
-<div data-scroll data-scroll-speed="1" class="mt-6 mb-6 pt-6 pb-6">
+<div data-scroll data-scroll-speed="1" class="mt-6 mb-3">
     <hr/>
     <div class="container mt-5">
         <p class="title is-2">
@@ -114,7 +126,7 @@
     </section>
 </div>
 
-<button data-scroll data-scroll-speed="1" class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
+<button data-scroll class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
     <p class="title is-6 p-6 m-6 has-text-light">
         Contact Us
         <i class="fas fa-arrow-right ml-2"></i>

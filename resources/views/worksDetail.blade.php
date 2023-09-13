@@ -56,7 +56,7 @@
                         </div>
                         <div class="media-content">
                             <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}
-                                <span class="heading is-size-6 ml-3">{{ $value -> StaffTitle }}</span>
+                                <span class="is-size-6 ml-2">{{ $value -> StaffTitle }}</span>
                             </a>
                         </div>
                     </article>
