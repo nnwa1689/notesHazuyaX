@@ -31,8 +31,12 @@
     </section>
 </div>
 <div data-scroll data-scroll-speed="2" data-scroll-delay="0" class="mt-3">
-    <p class="title is-2 has-text-background-primary has-text-centered">近期作品</p>
-    <p class="has-text-centered">在每次的作品中呈現一種令人放鬆的體驗，<br/>溫和的顏色、簡單的拼貼，再加上一點動感，讓平凡的資訊加上一些點綴。</p>
+    <div class="container mb-3">
+        <p class="title is-2 has-text-centered">
+            <span class="has-text-background-primary">近期作品</span>
+        </p>
+        <p class="has-text-centered">在每次的作品中呈現一種令人放鬆的體驗，<br/>溫和的顏色、簡單的拼貼，再加上一點動感，讓平凡的資訊加上一些點綴。</p>
+    </div>
     <section class="hero is-shadow is-halfheight">
         <div class="container p-3">
             <div class="columns is-multiline is-mobile is-justify-content-center" style="align-items: end;">
@@ -71,12 +75,15 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="5" data-scroll-delay="0" class="mt-3">
-    <p class="title is-2 has-text-background-link has-text-centered">技術雜記</p>
-    <p class="has-text-centered">製作祕辛、技術分享</p>
+<div data-scroll data-scroll-speed="2" data-scroll-delay="0" class="mt-3">
+    <div class="container mb-3">
+        <p class="title is-2 has-text-centered">
+            <span class="has-text-background-link">技術雜記</span>
+        </p>
+        <p class="has-text-centered">製作祕辛、技術分享</p> 
+    </div>
+
     <section class="hero is-shadow is-halfheight">
-        <div class="hero-body">
-        </div>
         <div class="container p-3">
             <div class="columns is-multiline">
                 @foreach($allPosts as $post)
