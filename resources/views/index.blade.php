@@ -5,29 +5,31 @@
     <section class="hero is-shadow is-small">
         <div class="hero-body">
             <div class="columns">
-                <div class="column is-10">
+                <div class="column is-11">
                     <p class="title is-1 has-text-centered-mobile">
                         <span class="has-text-primary">Warmth.</span>
                     </p>
                     <p class="title is-1 has-text-centered-mobile">
-                        <span class="has-text-primary">Relaxation.</span>
+                        <span class="has-text-primary">Relaxed.</span>
                     </p>
                     <p class="title is-1 has-text-centered-mobile ml-4">
                         <span class="has-text-link">Original.</span>
                     </p>
-                </div>
-                <div class="column has-text-right has-text-centered-mobile">
-                    <p id="hour" class="title is-1 has-text-primary has-text-shadow">14</p>
-                    <p id="dot" class="title is-3 has-text-link has-text-shadow">
-                        <i class="fas fa-circle mr-4"></i><i class="fas fa-circle ml-4"></i>
-                    </p>
-                    <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
                     <p class="title is-3 has-text-centered-mobile" style="line-height: 50px;">
                         <span class="has-text-link"><i class="fas fa-quote-left"></i></span>
                         <span class="has-text-primary">
                             享受<span class="has-text-background-link ml-1 mr-2">溫暖輕鬆</span>&<span class="has-text-background-primary ml-1 mr-2">原始</span>的資訊體驗！</span>
                         <span class="has-text-link"><i class="fas fa-quote-right"></i></span>
                     </p>
+                </div>
+                <div class="column has-text-centered">
+                    <p id="hour" class="title is-1 has-text-primary has-text-shadow">14</p>
+                    <p id="dot" class="title is-3 has-text-link has-text-shadow">
+                        <i class="fas fa-circle mb-3"></i>
+                        <br/>
+                        <i class="fas fa-circle"></i>
+                    </p>
+                    <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
                 </div>
             </div>
 
