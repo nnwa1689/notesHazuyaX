@@ -27,23 +27,5 @@ function indexInit(){
         $("#hour").text(AmendZero(hourtime));
         $("#min").text(AmendZero(mintime));
     });
-
-    var typed = new Typed("#title1", {
-        strings:['<span class="has-text-link has-text-shadow">Warmth</span>',],
-        stringsElement: '#typed-strings',
-        typeSpeed: 20,
-        startDelay: 2000,
-        loop: false,
-        cursorChar: '',
-    });
-
-    var typed2 = new Typed("#title2", {
-        strings:['<span class="has-text-link has-text-shadow">＆</span><span class="has-text-primary has-text-shadow">Relaxation</span>',],
-        stringsElement: '#typed-strings',
-        typeSpeed: 20,
-        startDelay: 3000,
-        loop: false,
-        cursorChar: '',
-    });
 }
 
