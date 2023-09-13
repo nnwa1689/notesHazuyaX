@@ -2,7 +2,7 @@
 @section('title', $title)
 @section('content')
 <div data-scroll data-scroll-speed="-5" data-scroll-delay="0" class="container mt-6 mb-6">
-    <div class="columns">
+    <div class="columns is-gapless">
         <div class="column is-9">
             <p class="title is-1 has-text-centered-mobile">
                 <span class="has-text-primary">Warmth.</span>
@@ -25,7 +25,7 @@
         </div>
     </div>
 </div>
-<div  data-scroll data-scroll-speed="5" data-scroll-delay="0" class="mt-6">
+<div  data-scroll data-scroll-speed="3" data-scroll-delay="0" class="mt-6">
     <hr/>
     <div class="container mb-3">
         <p class="title is-2">
