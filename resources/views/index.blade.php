@@ -26,8 +26,8 @@
     </div>
 </div>
 <div data-scroll data-scroll-speed="1" class="mt-6 mb-6 pt-6 pb-6">
-    <div class="container">
-        <p class="title is-2 mt-5">
+    <div class="container mt-5">
+        <p class="title is-2">
             <span class="has-text-background-primary">近期作品</span>
         </p>
         <p>在每次的作品中呈現一種令人放鬆的體驗，<br/>溫和的顏色、簡單的拼貼，再加上一點動感，讓平凡的資訊加上一些點綴。</p>
@@ -73,8 +73,8 @@
 
 <div data-scroll data-scroll-speed="1" class="mt-6 mb-6 pt-6 pb-6">
     <hr/>
-    <div class="container">
-        <p class="title is-2 mt-5">
+    <div class="container mt-5">
+        <p class="title is-2">
             <span class="has-text-background-link">技術雜記</span>
         </p>
         <p>製作祕辛、技術分享</p> 

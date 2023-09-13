@@ -46,7 +46,7 @@
                 <div class="column">
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
                     @if($value -> StaffName !== "")
-                    <article class="media mt-6">
+                    <article class="media mt-4">
                         <div class="media-left">
                             <div class="image is-32x32">
                                 <figure class="image is-1by1">
@@ -55,7 +55,9 @@
                             </div>
                         </div>
                         <div class="media-content">
-                            <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}({{ $value -> StaffTitle }})</a>
+                            <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}
+                                <span class="heading is-size-6 ml-3">{{ $value -> StaffTitle }}</span>
+                            </a>
                         </div>
                     </article>
                     @endif
