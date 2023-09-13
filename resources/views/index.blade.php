@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div data-scroll class="container mb-6 pt-3">
+<div data-scroll class="container mb-6 pt-6">
     <div class="columns is-gapless">
         <div class="column is-10">
             <p class="title is-1 has-text-centered-mobile">
@@ -25,7 +25,11 @@
         </div>
     </div>
     <p class="subtitle is-4 has-text-primary mt-5 has-text-right has-text-centered-mobile">
-        <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發
+        <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發            
+        <button class="button is-primary is-rounded ml-3" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
+            Contact Us
+            <i class="fas fa-arrow-right ml-1"></i>
+        </button>
     </p>
 </div>
 <div data-scroll data-scroll-speed="1" class="mt-6 mb-3">
@@ -97,13 +101,14 @@
     </div>
 </div>
 
-<button data-scroll class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
-    <p class="title is-6 p-6 m-6 has-text-light">
-        Contact Us
-        <i class="fas fa-arrow-right ml-2"></i>
-    </p>
-</button>
-
+<div class="container">
+    <button data-scroll class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
+        <p class="title is-6 p-6 m-6 has-text-light">
+            Contact Us
+            <i class="fas fa-arrow-right ml-2"></i>
+        </p>
+    </button>
+</div>
 <script>indexInit();</script>
 @endsection
 @section('content')
