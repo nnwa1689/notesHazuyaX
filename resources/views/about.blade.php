@@ -14,13 +14,13 @@
         </p>
     </div>
 
-    <section class="hero is-shadow is-halfheight mt-6" data-scroll data-scroll-speed="4">
+    <section class="hero is-halfheight mt-6" data-scroll data-scroll-speed="4">
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
-                <p class="title is-home has-text-centered">
+                <p class="title is-1">
                     <span class="has-text-link has-text-shadow">Belief</span>
                 </p>
-                <p class="title is-home has-text-centered">
+                <p class="title is-1 has-text-righy">
                     <span class="has-text-link has-text-shadow">&</span>
                     <span class="has-text-primary has-text-shadow">Passion</span>
                 </p>
@@ -31,7 +31,7 @@
         </div>
     </section>
 
-    <section class="hero is-shadow is-link is-halfheight mt-6" data-scroll data-scroll-speed="2">
+    <section class="hero is-halfheight mt-6" data-scroll data-scroll-speed="2">
         <div class="hero-body">
             <div class="container is-fluid has-text-left">
                 <div class="columns">
