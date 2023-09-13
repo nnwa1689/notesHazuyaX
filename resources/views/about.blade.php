@@ -19,70 +19,65 @@
             <p class="title is-2">
                 <span class="has-text-background-primary">Original,</span>
             </p>
-            <p class="title is-2">
+            <p class="title is-3">
                 <span class="has-text-background-link">The best!</span>
             </p>
             <p class="is-size-4">原始，就是最好的狀態！</p>
         </div>
         <div class="column is-5 is-offset-2">
-            <p class="is-size-4">我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，在富含情感的狀態下尋找</p>
+            <p class="is-size-4">我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，在富含情感的狀態下尋找眾多解決方案，並透過不斷測試找出最適合的。
+
+            </p>
         </div>
     </div>
     <hr/>
     <div class="columns mt-3 pt-6">
-        <div class="column is-6">
+        <div class="column is-5">
+            <p class="title is-2">
+                <span class="has-text-background-primary">Trying,</span>
+            </p>
             <p class="title is-3">
-                <span class="has-text-background-primary">Original.</span>
+                <span class="has-text-background-link">The must to be.</span>
+            </p>
+            <p class="is-size-4">試試看，是找出答案的必經之路！</p>
+        </div>
+        <div class="column is-5 is-offset-2">
+            <p class="is-size-4">
+                一個產出、一項成功計畫都經歷過很多考驗，透過原始狀態之後的產出要透過反覆嘗試才能成為真正的解決方案。
             </p>
         </div>
-        <div class="column">
-            <p class="is-size-4">原始：我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，兼具情感</p>
-        </div>
     </div>
-
-    <section class="hero is-halfheight mt-6" data-scroll data-scroll-speed="4">
-        <div class="hero-body">
-            <div class="container is-fluid has-text-left">
-                <p class="title is-1">
-                    <span class="has-text-link has-text-shadow">Belief</span>
-                </p>
-                <p class="title is-1 has-text-righy">
-                    <span class="has-text-link has-text-shadow">&</span>
-                    <span class="has-text-primary has-text-shadow">Passion</span>
-                </p>
-                <p class="title is-3 has-text-link has-text-left"><i class="fas fa-quote-left"></i></p>
-                <p class="title is-3 has-text-primary has-text-centered">相信資訊改變生活，保持熱忱持續嘗試新可能。</p>
-                <p class="title is-3 has-text-link has-text-right"><i class="fas fa-quote-right"></i></p>
-            </div>
+    <hr/>
+    <div class="columns mt-3 pt-6">
+        <div class="column is-5">
+            <p class="title is-2">
+                <span class="has-text-background-primary">Services.</span>
+            </p>
+            <p class="is-size-4">我們比較擅長這些事情</p>
         </div>
-    </section>
-
-    <section class="hero is-halfheight mt-6" data-scroll data-scroll-speed="2">
-        <div class="hero-body">
-            <div class="container is-fluid has-text-left">
-                <div class="columns">
-                    <div class="column is-3">
-                        <p>
-                            <img width="64" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+        <div class="column is-5 is-offset-2">
+            <div class="columns">
+                <div class="column is-3">
+                    <p>
+                        <img width="64" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
+                    </p>
+                    <p class="title is-3">技能</p>
+                </div>
+                <div class="column is-9">
+                    <p class="subtitle is-3"># 後端系統開發(PHP、Asp.Net MVC)</p>
+                    <p class="subtitle is-3"># Web前端開發(VueJS/ReactJS)</p>
+                    <p class="subtitle is-3"># 無伺服器系統(Firebase, Aws Lightsail)</p>
+                    <p class="subtitle is-3"># 無頭內容管理系統(Strapi)</p>
+                    <button class="button is-primary mt-6 is-fullwidth is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
+                        <p class="title is-6 p-6 m-6">
+                            參考案例
+                            <i class="fas fa-arrow-right ml-2"></i>
                         </p>
-                        <p class="title is-3">技能</p>
-                    </div>
-                    <div class="column is-9">
-                        <p class="subtitle is-3"># 後端系統開發(PHP、Asp.Net MVC)</p>
-                        <p class="subtitle is-3"># Web前端開發(VueJS/ReactJS)</p>
-                        <p class="subtitle is-3"># 無伺服器系統(Firebase, Aws Lightsail)</p>
-                        <p class="subtitle is-3"># 無頭內容管理系統(Strapi)</p>
-                        <button class="button is-primary mt-6 is-fullwidth is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')" class="button is-white is-fullwidth is-large">
-                            <p class="title is-6 p-6 m-6">
-                                參考案例
-                                <i class="fas fa-arrow-right ml-2"></i>
-                            </p>
-                        </button>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!--
     <section class="hero is-shadow is-primary is-halfheight mt-6" data-scroll data-scroll-speed="4">
