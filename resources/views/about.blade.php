@@ -8,31 +8,32 @@
     }
 </style>
 <div class="container">
-    <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6">
+    <div data-scroll data-scroll-speed="0">
         <p class="title is-1 has-text-left">
             <span id="titleText"></span>
         </p>
     </div>
 
-    <div class="columns">
-        <div class="column is-6">
-            <p class="title is-1">
-                <span class="has-text-background-primary">Original.</span>
+    <div class="columns pt-5">
+        <div class="column is-4">
+            <p class="title is-2">
+                <span class="has-text-background-primary">Original, The best!</span>
             </p>
+            <p class="is-size-4">原始，就是最好的狀態！</p>
         </div>
         <div class="column">
-            <p class="is-size-3">原始：我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，兼具情感</p>
+            <p class="is-size-4">我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，在富含情感的狀態下尋找</p>
         </div>
     </div>
     <hr/>
     <div class="columns">
         <div class="column is-6">
-            <p class="title is-1">
+            <p class="title is-3">
                 <span class="has-text-background-primary">Original.</span>
             </p>
         </div>
         <div class="column">
-            <p class="is-size-3">原始：我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，兼具情感</p>
+            <p class="is-size-4">原始：我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，兼具情感</p>
         </div>
     </div>
 
