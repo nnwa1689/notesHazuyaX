@@ -1,7 +1,7 @@
 @extends('layout')
 @section('title', $title)
 @section('content')
-<div data-scroll data-scroll-speed="2" data-scroll-delay="0" class="container mt-6 mb-6">
+<div data-scroll data-scroll-speed="-5" data-scroll-delay="0" class="container mt-6 mb-6">
     <div class="columns">
         <div class="column is-9">
             <p class="title is-1 has-text-centered-mobile">
@@ -25,14 +25,15 @@
         </div>
     </div>
 </div>
-<div data-scroll data-scroll-speed="3" data-scroll-delay="0" class="mt-6">
+<hr/>
+<div class="mt-6">
     <div class="container mb-3">
         <p class="title is-2">
             <span class="has-text-background-primary">近期作品</span>
         </p>
         <p>在每次的作品中呈現一種令人放鬆的體驗，<br/>溫和的顏色、簡單的拼貼，再加上一點動感，讓平凡的資訊加上一些點綴。</p>
     </div>
-    <section class="hero is-shadow is-halfheight">
+    <section class="hero is-halfheight">
         <div class="container p-3">
             <div class="columns is-multiline is-mobile is-justify-content-center" style="align-items: end;">
                 @php($i = 1)
@@ -70,8 +71,8 @@
         </div>
     </section>
 </div>
-
-<div class="mt-6">
+<hr/>
+<div data-scroll data-scroll-speed="1" data-scroll-delay="5" class="mt-6">
     <div class="container mb-3">
         <p class="title is-2">
             <span class="has-text-background-link">技術雜記</span>
@@ -79,7 +80,7 @@
         <p>製作祕辛、技術分享</p> 
     </div>
 
-    <section class="hero is-shadow is-halfheight">
+    <section class="hero is-halfheight">
         <div class="container p-3">
             <div class="columns is-multiline">
                 @foreach($allPosts as $post)
