@@ -2,40 +2,35 @@
 @section('title', $title)
 @section('content')
 <div data-scroll data-scroll-speed="2" data-scroll-delay="0" class="container mt-6 mb-6">
-    <section class="hero is-small">
-        <div class="hero-body">
-            <div class="columns">
-                <div class="column is-9">
-                    <p class="title is-1 has-text-centered-mobile">
-                        <span class="has-text-primary">Warmth.</span>
-                    </p>
-                    <p class="title is-1 has-text-centered-mobile">
-                        <span class="has-text-primary">Relaxed.</span>
-                    </p>
-                    <p class="title is-1 has-text-centered-mobile">
-                        <span class="has-text-background-primary">Original.</span>
-                    </p>
-                </div>
-                <div class="column has-text-centered">
-                    <p id="hour" class="title is-1 has-text-primary has-text-shadow">14</p>
-                    <p id="dot" class="title is-3 has-text-link has-text-shadow">
-                        <i class="fas fa-circle mb-5"></i>
-                        <br/>
-                        <i class="fas fa-circle"></i>
-                    </p>
-                    <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
-                </div>
-            </div>
-
+    <div class="columns">
+        <div class="column is-9">
+            <p class="title is-1 has-text-centered-mobile">
+                <span class="has-text-primary">Warmth.</span>
+            </p>
+            <p class="title is-1 has-text-centered-mobile">
+                <span class="has-text-primary">Relaxed.</span>
+            </p>
+            <p class="title is-1 has-text-centered-mobile">
+                <span class="has-text-background-primary">Original.</span>
+            </p>
         </div>
-    </section>
+        <div class="column has-text-centered">
+            <p id="hour" class="title is-1 has-text-primary has-text-shadow">14</p>
+            <p id="dot" class="title is-3 has-text-link has-text-shadow">
+                <i class="fas fa-circle mb-5"></i>
+                <br/>
+                <i class="fas fa-circle"></i>
+            </p>
+            <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
+        </div>
+    </div>
 </div>
 <div data-scroll data-scroll-speed="3" data-scroll-delay="0" class="mt-6">
     <div class="container mb-3">
         <p class="title is-2">
             <span class="has-text-background-primary">近期作品</span>
         </p>
-        <p class="has-text-centered">在每次的作品中呈現一種令人放鬆的體驗，<br/>溫和的顏色、簡單的拼貼，再加上一點動感，讓平凡的資訊加上一些點綴。</p>
+        <p>在每次的作品中呈現一種令人放鬆的體驗，<br/>溫和的顏色、簡單的拼貼，再加上一點動感，讓平凡的資訊加上一些點綴。</p>
     </div>
     <section class="hero is-shadow is-halfheight">
         <div class="container p-3">
@@ -75,12 +70,13 @@
         </div>
     </section>
 </div>
-<div data-scroll data-scroll-speed="4" data-scroll-delay="0" class="mt-6">
+
+<div class="mt-6">
     <div class="container mb-3">
         <p class="title is-2">
             <span class="has-text-background-link">技術雜記</span>
         </p>
-        <p class="has-text-centered">製作祕辛、技術分享</p> 
+        <p>製作祕辛、技術分享</p> 
     </div>
 
     <section class="hero is-shadow is-halfheight">
