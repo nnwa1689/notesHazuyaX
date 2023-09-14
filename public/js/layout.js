@@ -87,14 +87,14 @@ const layoutInit = async() => {
         transitions: [{
             leave(data) {
                 return gsap.to(".pageloader", {
-                    duration: 0.8,
+                    duration: 1,
                     y: 0,
                     ease: "power4.inOut",
                 });
             },
             after(data) {
                 return gsap.to(".pageloader", {
-                    duration: 0.8,
+                    duration: 1,
                     y: '+120vh',
                     ease: "power4.inOut",
                     delay: 1

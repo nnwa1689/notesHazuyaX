@@ -25,7 +25,7 @@
         </div>
     </div>
     <div class="is-align-items-center has-text-right has-text-centered-mobile">
-        <p class="subtitle is-4 has-text-primary mt-5">
+        <p class="subtitle is-4 mt-5">
             <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發            
         </p>
         <button class="button is-primary is-rounded ml-3" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
@@ -97,7 +97,7 @@
                 @endcomponent
             @endforeach
         </div>
-        <button class="button is-link mt-3 mb-3 is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}blog')">
+        <button class="button is-link mt-6 mb-6 is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}blog')">
             更多雜記
             <i class="fas fa-arrow-right ml-1"></i>
         </button>
