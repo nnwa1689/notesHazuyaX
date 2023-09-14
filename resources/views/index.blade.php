@@ -26,7 +26,7 @@
     </div>
     <div class="is-align-items-center has-text-right has-text-centered-mobile">
         <p class="subtitle is-4 mt-5">
-            <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發            
+            <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發
         </p>
         <button class="button is-primary is-rounded ml-3" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
             Contact Us
@@ -41,7 +41,7 @@
             <span class="has-text-background-primary">近期作品</span>
         </p>
     </div>
-    <div class="container p-3">
+    <div class="container p-3 mt-6">
         <div class="columns is-multiline is-mobile is-justify-content-center" style="align-items: end;">
             @php($i = 1)
             @foreach($worksData as $item)
@@ -72,13 +72,13 @@
     </div>
 </div>
 
-<div data-scroll data-scroll-speed="1" class="mb-3">
+<div data-scroll data-scroll-speed="1" class="mb-6">
     <div class="container">
         <p class="title is-2">
             <span class="has-text-background-link">技術雜記</span>
         </p>
     </div>
-    <div class="container p-3">
+    <div class="container p-3 mt-6">
         <div class="columns is-multiline">
             @foreach($allPosts as $post)
                 @component('compoments.postitem',
