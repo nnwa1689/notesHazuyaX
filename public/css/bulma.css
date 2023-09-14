@@ -5490,7 +5490,7 @@ a.tag:hover {
 }
 
 .subtitle {
-  color: #064ACB;
+  color: #262728;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.25;
@@ -7940,7 +7940,7 @@ a.list-item {
   .navbar.is-white .navbar-end > .navbar-item,
   .navbar.is-white .navbar-end .navbar-link {
     transition: color 0.3s;
-    color: #064ACB;
+    color: #262728;
   }
   .navbar.is-white .navbar-start > a.navbar-item:focus, .navbar.is-white .navbar-start > a.navbar-item:hover, .navbar.is-white .navbar-start > a.navbar-item.is-active,
   .navbar.is-white .navbar-start .navbar-link:focus,
@@ -7966,12 +7966,12 @@ a.list-item {
   .navbar.is-white .navbar-item.has-dropdown.is-active .navbar-link {
     transition: color 0.3s;
     background-color: none;
-    color: #FFD324;
+    color: #064ACB;
   }
   .navbar.is-white .navbar-dropdown a.navbar-item.is-active {
     transition: color 0.3s;
     background-color: none;
-    color: #FFD324;
+    color: #064ACB;
   }
 }
 
@@ -8951,11 +8951,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     margin-left: auto;
   }
   .navbar-dropdown {
-    background-color: rgb(38 58 41 / 90%);
-   backdrop-filter: blur(10px);
-   -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: #F2F3F3;
+    border-radius: 0px;
+    box-shadow: 5px 5px 0px #064ACB;
     display: none;
     font-size: 0.875rem;
     left: 0;
@@ -8967,16 +8965,16 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   .navbar-dropdown .navbar-item {
     padding: 1rem 2rem;
     white-space: nowrap;
-    font-size: 18px;
+    font-size: 16px;
 
   }
   .navbar-dropdown a.navbar-item {
     padding-right: 2rem;
-    color:#E2DCD5;
+    color:#262728;
   }
   .navbar-dropdown a.navbar-item:focus, .navbar-dropdown a.navbar-item:hover {
-    background-color: #41644A;
-    color: #FFD324;
+    background-color: #FFD324;
+    color: #262728;
 
   }
   .navbar-dropdown a.navbar-item.is-active {
