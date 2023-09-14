@@ -5,10 +5,10 @@
     <div class="columns is-gapless">
         <div class="column is-10">
             <p class="title is-1 has-text-centered-mobile">
-                <span class="has-text-primary">Warmth.</span>
+                <span>Warmth.</span>
             </p>
             <p class="title is-1 has-text-centered-mobile">
-                <span class="has-text-primary">Relaxed.</span>
+                <span>Relaxed.</span>
             </p>
             <p class="title is-1 has-text-centered-mobile">
                 <span class="has-text-background-primary">Original.</span>

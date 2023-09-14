@@ -1951,7 +1951,7 @@ a.has-text-black:hover, a.has-text-black:focus {
 }
 
 .has-text-light {
-  color: #E2DCD5 !important;
+  color: #F2F3F3 !important;
 }
 
 a.has-text-light:hover, a.has-text-light:focus {
@@ -3203,7 +3203,7 @@ fieldset[disabled] .button.is-primary.is-inverted {
 .button.is-primary.is-outlined {
   background-color: transparent;
   border-color: #064ACB;
-  color: #064ACB;
+  color: #262728;
 }
 
 .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined.is-hovered, .button.is-primary.is-outlined:focus, .button.is-primary.is-outlined.is-focused {
