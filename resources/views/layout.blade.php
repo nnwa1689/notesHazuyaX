@@ -65,61 +65,9 @@
             </div>
         </nav>
         <div class="fullMenu">
-            <div class="container is-max-desktop" style="margin-top:9rem;">
-                <div class="columns is-variable is-8">
-                    <div class="column is-8 is-align-self-flex-end">
-                        <div class="block has-text-left has-text-centered-mobile">
-                            @if(strlen($webData['webConfig'][22]->tittle) > 0)
-                                <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
-                                    <button class="button is-twitter is-outlined is-medium is-rounded ml-1 mr-1">
-                                        <i class="fab fa-twitter"></i>
-                                    </button>
-                                </a>
-                            @endif
-                            @if(strlen($webData['webConfig'][21]->tittle) > 0)
-                                <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
-                                    <button class="button is-instagram is-medium is-rounded ml-1 mr-1">
-                                        <i class="fab fa-instagram-square"></i>
-                                    </button>
-                                </a>
-                            @endif
-                            @if(strlen($webData['webConfig'][20]->tittle) > 0)
-                                <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
-                                    <button class="button is-facebook is-outlined is-medium is-rounded ml-1 mr-1">
-                                        <i class="fab fa-facebook"></i>
-                                    </button>
-                                </a>
-                            @endif
-                            @if(strlen($webData['webConfig'][23]->tittle) > 0)
-                                <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
-                                    <button class="button is-applepodcast is-outlined is-medium is-rounded ml-1 mr-1">
-                                        <i class="fab fa-apple"></i>
-                                    </button>
-                                </a>
-                            @endif
-                            @if(strlen($webData['webConfig'][24]->tittle) > 0)
-                                <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
-                                    <button class="button is-outlined is-white is-medium is-rounded ml-1 mr-1">
-                                        <i class="fab fa-google"></i>
-                                    </button>
-                                </a>
-                            @endif
-                        </div>
-                        
-                        <hr />
-                        
-                        <div class="block has-text-left has-text-centered-mobile">
-                            @foreach($webData['allButtonNav'] as $bn)
-                            <a href="
-                                {{ (\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail') ? $bn->URL : $webData['webConfig'][13]->tittle.$bn->URL}}"
-                                class="is-size-6 ml-1 mr-1"
-                            >
-                                {{$bn->NavigateName}}
-                            </a>
-                            @endforeach
-                        </div>
-                    </div>
-                    <div class="column">
+            <div class="container" style="margin-top:9rem;">
+                <div class="block p-5">
+                    <div class="block pb-3">
                         <!--Dynamic System Gen-->
                         @foreach($webData['allNav'] as $Nav)
                         @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
@@ -129,14 +77,60 @@
                         @endif
                         @endforeach
                         <!--Dynamic END-->
-                    
                     </div>
-                </div>
-
-                <div class="block">
-                    <p class="is-size-5 has-text-left has-text-centered-mobile">
-                        <span class="has-text-link"><i class="fas fa-quote-left"></i></span><span id="typed"></span><span class="has-text-link"><i class="fas fa-quote-right"></i></span>
-                    </p>
+                    <div class="block has-text-left has-text-centered-mobile">
+                        @if(strlen($webData['webConfig'][22]->tittle) > 0)
+                            <a href="{{$webData['webConfig'][22]->tittle}}" target="_blank">
+                                <button class="button is-twitter is-outlined is-medium is-rounded ml-1 mr-1">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </a>
+                        @endif
+                        @if(strlen($webData['webConfig'][21]->tittle) > 0)
+                            <a href="{{$webData['webConfig'][21]->tittle}}" target="_blank">
+                                <button class="button is-instagram is-medium is-rounded ml-1 mr-1">
+                                    <i class="fab fa-instagram-square"></i>
+                                </button>
+                            </a>
+                        @endif
+                        @if(strlen($webData['webConfig'][20]->tittle) > 0)
+                            <a href="{{$webData['webConfig'][20]->tittle}}" target="_blank">
+                                <button class="button is-facebook is-outlined is-medium is-rounded ml-1 mr-1">
+                                    <i class="fab fa-facebook"></i>
+                                </button>
+                            </a>
+                        @endif
+                        @if(strlen($webData['webConfig'][23]->tittle) > 0)
+                            <a href="{{$webData['webConfig'][23]->tittle}}" target="_blank">
+                                <button class="button is-applepodcast is-outlined is-medium is-rounded ml-1 mr-1">
+                                    <i class="fab fa-apple"></i>
+                                </button>
+                            </a>
+                        @endif
+                        @if(strlen($webData['webConfig'][24]->tittle) > 0)
+                            <a href="{{$webData['webConfig'][24]->tittle}}" target="_blank">
+                                <button class="button is-outlined is-white is-medium is-rounded ml-1 mr-1">
+                                    <i class="fab fa-google"></i>
+                                </button>
+                            </a>
+                        @endif
+                    </div>
+                    <hr />
+                    <div class="block has-text-left has-text-centered-mobile">
+                        @foreach($webData['allButtonNav'] as $bn)
+                        <a href="
+                            {{ (\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail') ? $bn->URL : $webData['webConfig'][13]->tittle.$bn->URL}}"
+                            class="is-size-6 ml-1 mr-1"
+                        >
+                            {{$bn->NavigateName}}
+                        </a>
+                        @endforeach
+                    </div>
+                    <div class="block mt-3">
+                        <p class="is-size-6 has-text-left has-text-centered-mobile">
+                            <span class="has-text-link"><i class="fas fa-quote-left"></i></span><span id="typed"></span><span class="has-text-link"><i class="fas fa-quote-right"></i></span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
