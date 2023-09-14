@@ -48,7 +48,7 @@
         </div>
     </div>
     <hr/>
-    <div class="block has-text-centered mt-3 pt-6">
+    <div class="block mt-3 pt-6">
         <div class="columns is-gapless">
             <div class="column is-4 pb-6">
                 <p class="title is-2">
@@ -60,7 +60,7 @@
                 <p class="subtitle is-3"># 無伺服器系統</p>
                 <p class="subtitle is-3"># 無頭內容管理系統</p>
             </div>
-            <div class="column is-4 pb-6">
+            <div class="column has-text-centered has-text-left-mobile is-4 pb-6">
                 <p class="title is-2">
                     <span class="has-text-background-link">Skills.</span>
                 </p>
@@ -70,7 +70,7 @@
                 <p class="subtitle is-3"># Firebase, Aws Lightsail</p>
                 <p class="subtitle is-3"># Strapi</p>
             </div>
-            <div class="column is-4">
+            <div class="column has-text-right has-text-left-mobile is-4">
                 <p class="title is-2">
                     <span class="has-text-background-primary">Works.</span>
                 </p>
