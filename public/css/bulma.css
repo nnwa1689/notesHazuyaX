@@ -7723,7 +7723,7 @@ a.list-item {
 }
 
 .fullMenu {
-  transition: width 0.8s ease-in-out;
+  transition: width 0.5s ease-in-out;
   position: fixed;
   width: 0%;
   max-width: 24rem;;
@@ -7810,7 +7810,6 @@ a.list-item {
 
 @media screen and (max-width: 1024px){
   .is-on {
-    height: 100% !important;
     width: 100% !important;
   }
 }
