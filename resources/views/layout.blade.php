@@ -140,7 +140,7 @@
                 </div>
             </div>
         </div>
-        <section class="hero is-fullheight is-primary is-align-items-center has-text-centered pageloader">
+        <section class="hero is-fullheight is-black is-align-items-center has-text-centered pageloader">
             <div class="loader-body">
                 <img class="loading-logo" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
             </div>

@@ -33,7 +33,7 @@ img {
 
 body {
     font-family: 'NotoSansTC-Regular';
-    color:#263A29;
+    color:#262728;
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
@@ -48,16 +48,17 @@ hr {
 }
 
 blockquote {
-    background-color: #41644A;
-    border-left: 5px solid #263A29;
-    color: #F2E3DB;
-    border-radius: 10px;
-    padding: 1.25em 1.5em;
-    box-shadow: 5px 5px 0 0.125em #E86A33;
-    margin-bottom: 2.5rem;
-  }
+  /*font-family: 'NotoSerifTC-Medium';*/
+  background-color: #262728;
+  border-left: 5px solid #064ACB;
+  color: #F2F3F3;
+  border-radius: 0px;
+  padding: 1.25em 1.5em;
+  box-shadow: 5px 5px 0 0.125em #FFD324;
+  margin: 1.5em auto;
+}
 
 blockquote a {
-  color: #F2E3DB
+  color: #F2F3F3
 }
 

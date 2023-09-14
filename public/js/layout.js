@@ -78,8 +78,8 @@ const layoutInit = async() => {
 
 
     new kursor({
-        type: 4,
-        color: "#E86A33"
+        type: 3,
+        color: "#064ACB"
     });
 
     barba.init({

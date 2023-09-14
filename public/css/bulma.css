@@ -119,14 +119,14 @@
   transition: all 0.3s ease-in-out;
   transform: scale(1.0);
   position: absolute;
-  background-color: #F2F3F3 !important;
+  background-color: #FFD324 !important;
   border-width: 0px !important;
   border-radius: 0px 0px 0px 0px !important;
 }
 
 .works-image-tag:hover {
   transition: all 0.3s ease-in-out !important;
-  box-shadow: 5px 5px 0 0.125em #FFD324 !important;
+  box-shadow: 5px 5px 0 0.125em #262728 !important;
   border-radius: 0px !important;
 }
 
@@ -139,12 +139,12 @@
 .is-WorksItem:hover .is-WorksItem-img {
   transition: background-color 0s linear;
   cursor: pointer;
-  background-color: #064ACB;
+  background-color: #262728;
 }
 
 .is-WorksItem:hover .works-image-tag  {
   transition: all 0.3s linear;
-  background-color: #064ACB !important;
+  background-color: #262728 !important;
   color: #F2F3F3 !important;
 }
 
@@ -341,7 +341,7 @@
   transition: all 0.3s ease-in-out;
   transform: scale(1.0);
   position: absolute;
-  background-color: #F2F3F3 !important;
+  background-color: #FFD324 !important;
   border-width: 0px !important;
   top: -1.5rem;
   border-radius: 0px !important;
@@ -349,7 +349,7 @@
 
 .post-image-tag:hover {
   transition: all 0.3s ease-in-out !important;
-  box-shadow: 5px 5px 0 0.125em #FFD324 !important;
+  box-shadow: 5px 5px 0 0.125em #262728 !important;
   border-radius: 0px !important;
 }
 
@@ -386,18 +386,18 @@
 .is-post-item:hover .is-post-item-img{
   transition: background-color 0s linear;
   cursor: pointer;
-  background-color: #064ACB;
+  background-color: #262728;
 }
 
 .is-post-item:hover .post-image-tag  {
   transition: all 0.3s linear;
-  background-color: #064ACB !important;
+  background-color: #262728 !important;
   color: #F2F3F3 !important;
 }
 
 .is-post-item:hover .post-image-tag-category  {
   transition: all 0.3s linear;
-  background-color: #FFD324 !important;
+  background-color: #262728 !important;
   color: #F2F3F3 !important;
 }
 
@@ -2610,7 +2610,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 .box {
   background-color: white;
   border-radius: 0px;
-  box-shadow: 5px -5px 0 0.125em #262728;
+  box-shadow: 5px 5px 0 0.125em #262728;
   color: #262728;
   display: block;
   padding: 1.25rem;
@@ -2629,7 +2629,7 @@ a.box:active {
   background-color: white;
   border-color: #dbdbdb;
   border-width: 2px;
-  color: #064ACB;
+  color: #262728;
   cursor: pointer;
   justify-content: center;
   padding-bottom: calc(0.5em - 1px);
@@ -3209,7 +3209,7 @@ fieldset[disabled] .button.is-primary.is-inverted {
 .button.is-primary.is-outlined:hover, .button.is-primary.is-outlined.is-hovered, .button.is-primary.is-outlined:focus, .button.is-primary.is-outlined.is-focused {
   background-color: #FFD324;
   border-color: #064ACB;
-  color: #F2F3F3;
+  color: #262728;
 }
 
 .button.is-primary.is-outlined.is-loading::after {
@@ -3328,13 +3328,13 @@ fieldset[disabled] .button.is-link.is-inverted {
 .button.is-link.is-outlined {
   background-color: transparent;
   border-color: #FFD324;
-  color: #FFD324;
+  color: #262728;
 }
 
 .button.is-link.is-outlined:hover, .button.is-link.is-outlined.is-hovered, .button.is-link.is-outlined:focus, .button.is-link.is-outlined.is-focused {
   background-color: #FFD324;
   border-color: #064ACB;
-  color: #F2F3F3;
+  color: #262728;
 }
 
 .button.is-link.is-outlined.is-loading::after {
@@ -5383,7 +5383,7 @@ a.tag:hover {
 }
 
 .title {
-  color: #064ACB;
+  color: #262728;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.125;
@@ -5436,23 +5436,23 @@ a.tag:hover {
 
 .has-text-background-link {
   background-color: #FFD324;
-  color: #064ACB;
+  color: #262728;
+  padding: 0.25rem 1rem;
+  margin: 0.5rem 0px;
+  box-shadow: 0.25rem 0.25rem #366ED8;
+}
+
+.has-text-background-primary {
+  background-color: #366ED8;
+  color: #F2F3F3;
   padding: 0.25rem 1rem;
   margin: 0.5rem 0px;
   box-shadow: 0.25rem 0.25rem #064ACB;
 }
 
-.has-text-background-primary {
-  background-color: #064ACB;
-  color: #FFD324;
-  padding: 0.25rem 1rem;
-  margin: 0.5rem 0px;
-  box-shadow: 0.25rem 0.25rem #FFD324;
-}
-
 .has-text-hollow-link {
-  color: #E2DCD5;
-  text-shadow: -1px -1px 0 #FFD324, 0.25rem -1px 0 #FFD324, -1px 1px 0 #FFD324, 1px 1px 0 #FFD324;
+  color: #FFD324;
+  text-shadow: -1px -1px 0 #366ED8, 0.25rem -1px 0 #366ED8, -1px 1px 0 #366ED8, 1px 1px 0 #366ED8;
 }
 
 @media screen and (max-width: 768px) {
@@ -7761,7 +7761,7 @@ a.list-item {
  border-radius: 25565px;
  width: 256px;
  height: 256px;
- animation: spinAround 3s infinite linear;
+ animation: spinAround 1s infinite linear;
 }
 
 .about-logo {
@@ -7775,7 +7775,7 @@ a.list-item {
    border-radius: 25565px;
    width: 128px;
    height: 128px;
-   animation: spinAround 1.5s infinite linear;
+   animation: spinAround 1s infinite linear;
   }
 }
 
@@ -7816,20 +7816,20 @@ a.list-item {
 #MenuIcon #mil1 {
   transition: all 0.3s;
   transform: rotate(0deg);
-  stroke: #064ACB;
+  stroke: #262728;
   stroke-width: 3;
 }
 
 #MenuIcon #mil2 {
   transition: all 0.3s;
   transform: translateX(0px);
-  stroke: #064ACB;
+  stroke: #262728;
   stroke-width: 3;
 }
 
 #MenuIcon #mil3 {
   transition: all 0.3s;
-  stroke: #064ACB;
+  stroke: #262728;
   stroke-width: 3;
 }
 
@@ -7842,7 +7842,7 @@ a.list-item {
 .is-navbar-toggle-on #MenuIcon #mil1 {
   transition: all 0.3s;
   transform: translate3d(38px, -20px, 0px) rotate(45deg);
-  stroke: #064ACB;
+  stroke: #F2F3F3;
 }
 
 .is-navbar-toggle-on #MenuIcon #mil2 {
@@ -7854,7 +7854,7 @@ a.list-item {
 .is-navbar-toggle-on #MenuIcon #mil3 {
   transition: all 0.3s;
   transform: translate3d(-38px, 20px, 0px) rotate(-45deg);
-  stroke: #064ACB;
+  stroke: #F2F3F3;
 }
 
 .is-navbar-toggle-close #MenuIcon #mil1 {
@@ -7875,18 +7875,18 @@ a.list-item {
 .is-navbar-toggle-close #MenuIcon:hover #mil1 {
   transition: all 0.3s;
   transform: rotate(5deg);
-  stroke: #262728;
+  stroke: #064ACB;
 }
 
 .is-navbar-toggle-close #MenuIcon:hover #mil2 {
   transition: all 0.3s;
   transform: translateX(-10px);
-  stroke: #262728;
+  stroke: #064ACB;
 }
 
 .is-navbar-toggle-close #MenuIcon:hover #mil3 {
   transition: all 0.3s;
-  stroke: #262728;
+  stroke: #064ACB;
 }
 
 .is-navbar-toggle-close {
@@ -8742,7 +8742,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   position: absolute;
   width: 100%;
   transition: all .3s ease-in-out;
-  box-shadow: 5px 5px 0 0.05em #41644A;
+  /*box-shadow: 5px 5px 0 0.05em #41644A;*/
 }
 
 .navbar-item.is-tab:hover:before {
