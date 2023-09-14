@@ -15,7 +15,7 @@
     </div>
 
     <div class="columns mt-3 pt-6">
-        <div class="column is-5">
+        <div class="column is-5 p-0">
             <p class="title is-2">
                 <span class="has-text-background-primary">Original,</span>
             </p>
@@ -24,7 +24,7 @@
             </p>
             <p class="is-size-4">保持原始，就是最好的工作狀態！</p>
         </div>
-        <div class="column is-5 is-offset-2">
+        <div class="column is-5 is-offset-2 p-0">
             <p class="is-size-4">我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，在富含情感的狀態下尋找眾多解決方案，並透過不斷測試找出最適合的答案。
 
             </p>
@@ -32,7 +32,7 @@
     </div>
     <hr/>
     <div class="columns mt-3 pt-5">
-        <div class="column is-5">
+        <div class="column is-5 p-0">
             <p class="title is-2">
                 <span class="has-text-background-primary">Trying,</span>
             </p>
@@ -41,7 +41,7 @@
             </p>
             <p class="is-size-4">持續試錯，是找出答案的必經之路！</p>
         </div>
-        <div class="column is-5 is-offset-2">
+        <div class="column is-5 is-offset-2 p-0">
             <p class="is-size-4">
                 一個產出、一項成功計畫都經歷過很多考驗，在透過原始狀態之後的產出都要透過反覆嘗試才能成為真正的解決方案。
             </p>
