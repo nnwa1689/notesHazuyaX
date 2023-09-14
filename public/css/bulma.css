@@ -126,7 +126,7 @@
 
 .works-image-tag:hover {
   transition: all 0.3s ease-in-out !important;
-  box-shadow: 5px 5px 0 0.125em #262728 !important;
+  box-shadow: 5px 5px 0 0.125em #064ACB !important;
   border-radius: 0px !important;
 }
 
@@ -349,7 +349,7 @@
 
 .post-image-tag:hover {
   transition: all 0.3s ease-in-out !important;
-  box-shadow: 5px 5px 0 0.125em #262728 !important;
+  box-shadow: 5px 5px 0 0.125em #064ACB !important;
   border-radius: 0px !important;
 }
 
@@ -3271,7 +3271,7 @@ fieldset[disabled] .button.is-primary.is-inverted.is-outlined {
 .button.is-link {
   background-color: #FFD324;
   border-color: #F3A953;
-  color: #F2F3F3;
+  color: #272829;
 }
 
 .button.is-link:hover, .button.is-link.is-hovered {
@@ -5436,18 +5436,18 @@ a.tag:hover {
 
 .has-text-background-link {
   background-color: #FFD324;
-  color: #262728;
-  padding: 0.25rem 1rem;
-  margin: 0.5rem 0px;
-  box-shadow: 0.25rem 0.25rem #366ED8;
-}
-
-.has-text-background-primary {
-  background-color: #366ED8;
-  color: #F2F3F3;
+  color: #064ACB;
   padding: 0.25rem 1rem;
   margin: 0.5rem 0px;
   box-shadow: 0.25rem 0.25rem #064ACB;
+}
+
+.has-text-background-primary {
+  background-color: #064ACB;
+  color: #FFD324;
+  padding: 0.25rem 1rem;
+  margin: 0.5rem 0px;
+  box-shadow: 0.25rem 0.25rem #FFD324;
 }
 
 .has-text-hollow-link {
@@ -9155,7 +9155,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .pagination-link.is-current {
   background-color: #FFD324;
   border-color: #FFD324;
-  color: #F2F3F3;
+  color: #262728;
 }
 
 .pagination-ellipsis {

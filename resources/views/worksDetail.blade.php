@@ -83,9 +83,9 @@
 
 <div class="container">
     <div class="container has-text-centered mt-6 mb-6" data-scroll data-scroll-speed="2">
-        <button class="button is-fullwidth is-large is-link p-6" style="min-height: 100px; border-radius: 15px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
-                Contact Us
-                <i class="fas fa-arrow-right ml-2"></i>
+        <button class="button is-fullwidth is-large is-link p-6" style="min-height: 100px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
+            Contact Us
+            <i class="fas fa-arrow-right ml-2"></i>
         </button>
     </div>
 </div>
