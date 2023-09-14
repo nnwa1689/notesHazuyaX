@@ -803,7 +803,7 @@ p > li{
 }
 
 ::selection {
-  background-color: #FFD324;
+  background-color: #262728;
   color: whitesmoke;
 }
 
@@ -8951,7 +8951,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     margin-left: auto;
   }
   .navbar-dropdown {
-    background-color: #F2F3F3;
+    background-color: #FFFFFF;
     border-radius: 0px;
     box-shadow: 5px 5px 0px #064ACB;
     display: none;
