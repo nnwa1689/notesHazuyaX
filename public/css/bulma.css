@@ -7723,7 +7723,7 @@ a.list-item {
 }
 
 .fullMenu {
-  transition: width 0.7s ease-in-out;
+  transition: width 0.6s ease-in-out;
   position: fixed;
   width: 0%;
   max-width: 24rem;;
