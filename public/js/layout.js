@@ -34,8 +34,8 @@ const layoutInit = async() => {
     console.log("%chttps://studio-44s.tw/contact", "padding:5px 15px; color: #064ACB; font-size: 14px; border: 2px solid #000000; background:#F2F3F3;border-radius:5px;");
 
     $('.navbar-toggle').click(function(){
-        $('.fullMenu').toggleClass('is-on');
         (isMenuOpen() ? closeMenu() : openMenu());
+        $('.fullMenu').toggleClass('is-on');
         $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
         $('.navbar-toggle').toggleClass('is-navbar-toggle-close');
     });
