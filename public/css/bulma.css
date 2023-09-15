@@ -10856,7 +10856,7 @@ label.panel-block:hover {
 
 .columns.is-gapless > .column {
   margin: 0;
-  padding: 0 !important;
+  padding: 0;
 }
 
 .columns.is-gapless:not(:last-child) {

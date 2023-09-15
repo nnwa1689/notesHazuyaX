@@ -12,7 +12,7 @@
         <span id="titleText"></span>
     </p>
     <div class="columns is-gapless mb-3">
-        <div class="column is-4">
+        <div class="column is-4 pr-5">
             <p class="subtitle is-3">{{$WorkDetail[0]->WorksID}}</p>
         </div>
         <div class="column">
