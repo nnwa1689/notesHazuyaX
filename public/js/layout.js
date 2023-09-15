@@ -4,17 +4,17 @@
 
 const openMenu = () => {
     gsap.to(".fullMenu", {
-            duration: 0.5,
+            duration: 0.6,
             width: "100%",
-            ease: "Expo.inOut"
+            ease: "Elastic.easeOut"
         });
 }
 
 const closeMenu = () => {
     gsap.to(".fullMenu", {
-            duration: 0.5,
+            duration: 0.6,
             width: "0%",
-            ease: "Expo.inOut"
+            ease: "Elastic.easeOut"
         });
 }
 
