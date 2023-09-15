@@ -6,7 +6,7 @@ const openMenu = () => {
     gsap.to(".fullMenu", {
             duration: 1,
             width: "100%",
-            ease: "Power2.easeInOut"
+            ease: "Circ.easeInOut"
         });
 }
 
@@ -14,7 +14,7 @@ const closeMenu = () => {
     gsap.to(".fullMenu", {
             duration: 1,
             width: "0%",
-            ease: "Power2.easeInOut"
+            ease: "Circ.easeInOut"
         });
 }
 
