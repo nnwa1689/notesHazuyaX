@@ -67,7 +67,7 @@
         <div class="fullMenu">
             <div class="container" style="margin-top:9rem;">
                 <div class="block p-5">
-                    <div class="block pb-3">
+                    <div class="block">
                         <!--Dynamic System Gen-->
                         @foreach($webData['allNav'] as $Nav)
                         @if(\Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($Nav->URL, 4, $end='')=='mail')
@@ -120,13 +120,13 @@
                         @foreach($webData['allButtonNav'] as $bn)
                         <a href="
                             {{ (\Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='http' || \Illuminate\Support\Str::limit($bn->URL, 4, $end='')=='mail') ? $bn->URL : $webData['webConfig'][13]->tittle.$bn->URL}}"
-                            class="is-size-6 ml-1 mr-1"
+                            class="is-size-6 mr-1"
                         >
                             {{$bn->NavigateName}}
                         </a>
                         @endforeach
                     </div>
-                    <div class="block mt-3">
+                    <div class="block">
                         <p class="is-size-6 has-text-left has-text-centered-mobile">
                             <span class="has-text-link"><i class="fas fa-quote-left"></i></span><span id="typed"></span><span class="has-text-link"><i class="fas fa-quote-right"></i></span>
                         </p>

@@ -78,7 +78,7 @@
             <span class="has-text-background-link">技術雜記</span>
         </p>
     </div>
-    <div class="container p-3 mt-6">
+    <div class="container p-3 mt-5">
         <div class="columns is-multiline">
             @foreach($allPosts as $post)
                 @component('compoments.postitem',
