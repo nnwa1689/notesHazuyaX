@@ -4,17 +4,17 @@
 
 const openMenu = () => {
     gsap.to(".fullMenu", {
-            duration: 1,
+            duration: 1.2,
             width: "100%",
-            ease: Elastic.easeInOut.config(11,0.4)
+            ease: "Circ.easeInOut"
         });
 }
 
 const closeMenu = () => {
     gsap.to(".fullMenu", {
-            duration: 1,
+            duration: 1.2,
             width: "0%",
-            ease: Elastic.easeInOut.config(11,0.4)
+            ease: "Circ.easeInOut"
         });
 }
 
@@ -34,8 +34,8 @@ const layoutInit = async() => {
     console.log("%chttps://studio-44s.tw/contact", "padding:5px 15px; color: #064ACB; font-size: 14px; border: 2px solid #000000; background:#F2F3F3;border-radius:5px;");
 
     $('.navbar-toggle').click(function(){
+        $('.fullMenu').toggleClass('is-on');
         (isMenuOpen() ? closeMenu() : openMenu());
-        //$('.fullMenu').toggleClass('is-on');
         $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
         $('.navbar-toggle').toggleClass('is-navbar-toggle-close');
     });
@@ -48,7 +48,7 @@ const layoutInit = async() => {
     });
 
     $(".fullMenu").click(function() {
-        //$('.fullMenu').toggleClass('is-on');
+        $('.fullMenu').toggleClass('is-on');
         closeMenu();
         $('.navbar-toggle').toggleClass('is-navbar-toggle-on');
         $('.navbar-toggle').toggleClass('is-navbar-toggle-close');

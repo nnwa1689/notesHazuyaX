@@ -7749,10 +7749,6 @@ a.list-item {
   font-weight: 600;
 }
 
-.is-on {
-  width: 100%;
-}
-
 .loading {
   z-index: 5 !important;
   top: 0 !important;
@@ -7805,12 +7801,6 @@ a.list-item {
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;
-}
-
-@media screen and (max-width: 1024px){
-  .is-on {
-    width: 100% !important;
-  }
 }
 
 #MenuIcon #mil1 {
