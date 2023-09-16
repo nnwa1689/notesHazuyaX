@@ -55,10 +55,16 @@ const layoutInit = async() => {
     });
 
     setTimeout(() => {
-        gsap.to(".pageloader", {
-            duration: 1.2,
-            y: '+120vh',
-            ease: "power4.inOut"
+        gsap.fromTo(".pageloader",
+        {
+            x: "0",
+        }
+        ,
+        {
+            duration: 1,
+            x: "+100vw",
+            ease: "power4.inOut",
+            delay: 1
         });
     }, 1000);
 
