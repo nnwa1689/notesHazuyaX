@@ -20,7 +20,7 @@
             <div class="columns is-gapless is-mobile">
                 <div class="column is-4">
                     <p class="subtitle is-4">Client</p>
-                </div> 
+                </div>
                 <div class="column">
                     <p class="subtitle is-4">{{$WorkDetail[0]->Customer}}</p>
                 </div>
@@ -29,7 +29,7 @@
             <div class="columns is-gapless is-mobile">
                 <div class="column is-4">
                     <p class="subtitle is-4">Url</p>
-                </div> 
+                </div>
                 <div class="column">
                     <p class="subtitle is-4">
                         <a href="{{ $WorkDetail[0] -> Url }}" target="_blank">
@@ -39,10 +39,10 @@
                 </div>
             </div>
             <hr/>
-            <div class="columns is-gapless is-mobile">
+            <div class="columns is-gapless">
                 <div class="column is-4">
                     <p class="subtitle is-4">Presented</p>
-                </div> 
+                </div>
                 <div class="column">
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
                     @if($value -> StaffName !== "")
