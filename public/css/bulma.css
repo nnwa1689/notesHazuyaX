@@ -7777,7 +7777,6 @@ a.list-item {
 }
 
 .pageloader {
-  transition: top 0.5s ease-in-out;
   position: fixed;
   width: 100%;
   margin-top: 0rem;

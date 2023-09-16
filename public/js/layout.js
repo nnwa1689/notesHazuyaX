@@ -86,16 +86,26 @@ const layoutInit = async() => {
         sync: true,
         transitions: [{
             leave(data) {
-                return gsap.to(".pageloader", {
-                    duration: 0.8,
-                    y: 0,
+                return gsap.fromTo(".pageloader",
+                {
+                    x: "-100vw",
+                }
+                ,
+                {
+                    duration: 1,
+                    x: 0,
                     ease: "power4.inOut",
                 });
             },
             after(data) {
-                return gsap.to(".pageloader", {
-                    duration: 0.8,
-                    y: '+120vh',
+                return gsap.fromTo(".pageloader",
+                {
+                    x: "0",
+                }
+                ,
+                {
+                    duration: 1,
+                    x: "+100vw",
                     ease: "power4.inOut",
                     delay: 1
                 });
