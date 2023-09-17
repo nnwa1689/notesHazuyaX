@@ -89,7 +89,7 @@
                         <p class="is-size-6 mt-1">我們該如何稱呼您？</p>
                     </div>
                     <div class="column">
-                        <p class="is-size-5 mb-2">以下是我的<span class="has-text-link">Email</span></p>
+                        <p class="is-size-5 mb-2">以下是我的<span class="has-text-background-primary">Email</span></p>
                         <input class="input is-large is-fullwidth" type="text" name="Email" id="Email" value="">
                         <p class="is-size-6 mt-1">提供一個可以聯繫的E-mail</p>
                     </div>
@@ -97,7 +97,7 @@
 
                 <div class="columns">
                     <div class="column is-6">
-                    <p class="is-size-5 mb-2">我<span class="has-text-link">需要．．．</span></p>
+                    <p class="is-size-5 mb-2">我<span class="has-text-background-primary">需要．．．</span></p>
                         <div class="select is-large is-fullwidth">
                             <select name="Type" id="Type">
                                 <option value="web_design">網站(頁)系統開發設計</option>
@@ -111,7 +111,7 @@
                         <p class="is-size-6 mt-1">請選取本次洽詢業務，若無請選其他後詳述。</p>
                     </div>
                     <div class="column">
-                        <p class="is-size-5 mb-2">而我的<span class="has-text-link">預算</span>是</p>
+                        <p class="is-size-5 mb-2">而我的<span class="has-text-background-primary">預算</span>是</p>
                         <div class="select is-large is-fullwidth">
                             <select name="BudgetRanges" id="BudgetRanges">
                                 <option value="L2">NTD$10,000 - $30,000</option>
@@ -122,13 +122,15 @@
                                 <option value="L1">其他(業務無預算問題、預算不在上面etc.)</option>
                             </select>
                         </div>
-                        <p class="is-size-6 mt-1">預計在這裡花多少 $$？</p>
+                        <p class="is-size-6 mt-1">想要在這裡花多少＄？</p>
                     </div>
                 </div>
 
-                <p class="is-size-5 mb-2">我想要對你們<span class="has-text-link">說</span></p>
-                <textarea class="textarea" name="Content" id="Content" cols="50" rows="20" value=""></textarea>
-                <p class="is-size-6 mt-1">詳述您的需要，讓我們知道您的想法！如：附件可附 Google 雲端連結</p>
+                <div class="block pl-3">
+                    <p class="is-size-5 mb-2">我想要對你們<span class="has-text-background-primary">說</span></p>
+                    <textarea class="textarea" name="Content" id="Content" cols="50" rows="20" value=""></textarea>
+                    <p class="is-size-6 mt-1">詳述您的需要，讓我們知道您的想法！如：附件可附 Google 雲端連結</p>
+                </div>
 
                 <article class="notification is-danger mt-5 mb-5 is-small" id="error" style="display: none;">
                     <div class="content">
