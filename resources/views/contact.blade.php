@@ -58,7 +58,7 @@
                     <i class="fas fa-comment-dots"></i>
                 </p>
                 <p class="title is-4 has-text-left has-text-link">常見問答</p>
-                
+
                 <div class="container">
                     <p class="has-text-weight-bold">Q1.提供什麼內容，可以加快我們需求評估的速度？</p>
                     <p class="ml-5">A1.可提供初步的「網頁架構圖」、「時程與預算」、「類似風格的網站」</p>
@@ -82,53 +82,63 @@
 
             </div>
             <div class="column is-8">
-                <p class="title is-4"><span class="has-text-link">嗨</span>，我叫做</p>
-                <input class="input is-large is-fullwidth" id="Name" type="text" name="Name" value="">
-                <p class="is-size-5 mt-3">我們該如何稱呼您？</p>
-
-                <p class="title is-4 mt-6">我<span class="has-text-link">需要．．．</span></p>
-                <div class="select is-large is-fullwidth">
-                    <select name="Type" id="Type">
-                        <option value="web_design">網站系統開發</option>
-                        <option value="custom_service">網站維護</option>
-                        <option value="post_service">文章問題</option>
-                        <option value="business">合作提案</option>
-                        <option value="devgallery_submit">44's Gallery 相關</option>
-                        <option value="other">其他</option>
-                    </select>
+                <div class="columns">
+                    <div class="column is-6">
+                        <p class="is-size-5 mb-2"><span class="has-text-background-primary">嗨</span>，我叫做</p>
+                        <input class="input is-large is-fullwidth" id="Name" type="text" name="Name" value="">
+                        <p class="is-size-6 mt-1">我們該如何稱呼您？</p>
+                    </div>
+                    <div class="column">
+                        <p class="is-size-5 mb-2">以下是我的<span class="has-text-link">Email</span></p>
+                        <input class="input is-large is-fullwidth" type="text" name="Email" id="Email" value="">
+                        <p class="is-size-6 mt-1">提供一個可以聯繫的E-mail</p>
+                    </div>
                 </div>
-                <p class="is-size-5 mt-3">本次洽詢的事項？</p>
 
-                <p class="title is-4 mt-6">而我的<span class="has-text-link">預算</span>是</p>
-                <div class="select is-large is-fullwidth">
-                    <select name="BudgetRanges" id="BudgetRanges">
-                        <option value="L2">NTD$5,000 - $7,500</option>
-                        <option value="L3">NTD$7,501 - $10,000</option>
-                        <option value="L4">NTD$10,001 - $30,000</option>
-                        <option value="L5">NTD$30,001 - $50,000</option>
-                        <option value="L6">NTD$50,001 UP!!!</option>
-                        <option value="L1">其他(於描述中說明)</option>
-                    </select>
+                <div class="columns">
+                    <div class="column is-6">
+                    <p class="is-size-5 mb-2">我<span class="has-text-link">需要．．．</span></p>
+                        <div class="select is-large is-fullwidth">
+                            <select name="Type" id="Type">
+                                <option value="web_design">網站(頁)系統開發設計</option>
+                                <option value="custom_service">舊有網站維護</option>
+                                <option value="post_service">雜記文章問題</option>
+                                <option value="business">合作提案</option>
+                                <option value="devgallery_submit">44's Gallery 相關</option>
+                                <option value="other">其他</option>
+                            </select>
+                        </div>
+                        <p class="is-size-6 mt-1">請選取本次洽詢業務，若無請選其他後詳述。</p>
+                    </div>
+                    <div class="column">
+                        <p class="is-size-5 mb-2">而我的<span class="has-text-link">預算</span>是</p>
+                        <div class="select is-large is-fullwidth">
+                            <select name="BudgetRanges" id="BudgetRanges">
+                                <option value="L2">NTD$10,000 - $30,000</option>
+                                <option value="L3">NTD$30,001 - $50,000</option>
+                                <option value="L4">NTD$50,001 - $70,000</option>
+                                <option value="L5">NTD$70,001 - $100,000</option>
+                                <option value="L6">NTD$100,001 UP</option>
+                                <option value="L1">其他(業務無預算問題、預算不在上面etc.)</option>
+                            </select>
+                        </div>
+                        <p class="is-size-6 mt-1">預計在這裡花多少 $$？</p>
+                    </div>
                 </div>
-                <p class="is-size-5 mt-3">預計在這裡花多少 $$？</p>
 
-                <p class="title is-4 mt-6">我想要對你們<span class="has-text-link">說</span></p>
+                <p class="is-size-5 mb-2">我想要對你們<span class="has-text-link">說</span></p>
                 <textarea class="textarea" name="Content" id="Content" cols="50" rows="20" value=""></textarea>
-                <p class="is-size-5 mt-3">詳述您的需要，讓我們知道您的想法！附件可附 Google 雲端連結</p>
+                <p class="is-size-6 mt-1">詳述您的需要，讓我們知道您的想法！如：附件可附 Google 雲端連結</p>
 
-                <p class="title is-4 mt-6">以下是我的<span class="has-text-link">Email</span></p>
-                <input class="input is-large is-fullwidth" type="text" name="Email" id="Email" value="">
-                <p class="is-size-5 mt-3">提供一個可以聯繫的E-mail</p>
-
-                <article class="notification is-danger mt-5 mb-5 is-medium" id="error" style="display: none;">
+                <article class="notification is-danger mt-5 mb-5 is-small" id="error" style="display: none;">
                     <div class="content">
-                    我們想知道得更多，請再多說一點！
+                    每個欄位都是必填，請再次檢查！
                     </div>
                 </article>
 
                 <article class="notification is-success mt-5 mb-5 is-medium" id="suc" style="display: none;">
                     <div class="content">
-                    嗨，我們已經收到您的訊息囉！請靜待我們的回覆～
+                    嗨，我們已經收到您的訊息囉！請靜待我們的回覆。
                     </div>
                 </article>
                 <p class="has-text-right">
