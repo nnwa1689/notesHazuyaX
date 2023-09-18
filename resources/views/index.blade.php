@@ -63,13 +63,13 @@
     </div>
 </div>
 
-<div data-scroll data-scroll-speed="1" class="mb-6">
+<div data-scroll data-scroll-speed="1" class="mb-4">
     <div class="container">
         <p class="title is-2">
             <span class="has-text-background-link">技術雜記</span>
         </p>
     </div>
-    <div class="container p-3 mt-5">
+    <div class="container mt-5">
         <div class="columns is-multiline is-gapless">
             @foreach($allPosts as $post)
                 @component('compoments.postitem',
@@ -88,7 +88,7 @@
                 @endcomponent
             @endforeach
         </div>
-        <button class="button is-link mt-6 mb-6 is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}blog')">
+        <button class="button is-link is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}blog')">
             更多雜記
             <i class="fas fa-arrow-right ml-1"></i>
         </button>
@@ -96,7 +96,7 @@
 </div>
 
 <div class="container">
-    <button data-scroll class="button is-fullwidth is-large is-link mt-6 p-6" style="min-height: 100px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
+    <button data-scroll class="button is-fullwidth is-large is-link p-6" style="min-height: 100px;" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
         Contact Us
         <i class="fas fa-arrow-right ml-2"></i>
     </button>
