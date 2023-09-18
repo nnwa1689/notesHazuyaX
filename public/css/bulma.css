@@ -4262,6 +4262,10 @@ blockquote a {
   margin-top: 1em;
 }
 
+blockquote ol {
+  padding: 0;
+}
+
 @media screen and (min-width: 768px) {
   .content ol {
     padding: 0 260px;
