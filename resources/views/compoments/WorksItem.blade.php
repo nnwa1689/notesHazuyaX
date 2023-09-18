@@ -1,4 +1,4 @@
-<div data-scroll class="is-WorksItem is-works-item-min mb-2 mt-2" onclick="barba.go('{{$url}}')">
+<div data-scroll class="is-WorksItem is-works-item-min mt-2" onclick="barba.go('{{$url}}')">
     <div class="is-WorksItem-img">
         <img alt="{{$WorksName}}" src="{{$CoverImage}}">
     </div>

@@ -5,7 +5,7 @@
     <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6">
         <p class="title is-1 has-text-left"><span id="titleText"></span></p>
     </div>
-    <div class="columns is-multiline is-gapless is-mobile is-justify-left pb-6" style="align-items: end;">
+    <div class="columns is-multiline is-gapless is-mobile is-justify-left" style="align-items: end;">
     @php($i = 1)
     @foreach($WorksList as $item)
         @component('compoments.WorksItem',
