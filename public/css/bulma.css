@@ -420,8 +420,8 @@
   margin-top: 0rem;
   margin-bottom: 0rem;
   border-radius: 0px;
-  height:600px;
-  max-height:600px;
+  height:650px;
+  max-height:650px;
   width: calc(50% - 1.5rem);
   position: relative;
 }
@@ -437,8 +437,9 @@
   }
 
   .is-works-item-min {
-      width: 33.33%;
-      height: 500px;
+      width: 32%;
+      height: 460px;
+      margin: 0 8px;
   }
 
   .is-post-index {
@@ -466,8 +467,9 @@
   }
 
   .is-works-item-min {
-      width: 33.33%;
-      height: 500px;
+      width: 32%;
+      height: 460px;
+      margin: 0 8px;
   }
 
   .is-author-item {
@@ -490,8 +492,9 @@
   }
 
   .is-works-item-min {
-      width: 33.33%;
-      height: 500px;
+      width: 32%;
+      height: 460px;
+      margin: 0 8px;
   }
 
   .is-post-index {
