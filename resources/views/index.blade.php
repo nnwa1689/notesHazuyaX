@@ -41,7 +41,7 @@
             <span class="has-text-background-primary">近期作品</span>
         </p>
     </div>
-    <div class="container p-3 mt-6">
+    <div class="container mt-6">
         <div class="columns is-multiline is-gapless is-mobile is-justify-content-left" style="align-items: end;">
             @php($i = 1)
             @foreach($worksData as $item)
@@ -55,7 +55,7 @@
             @endforeach
         </div>
         <p class="has-text-right">
-            <button class="button is-primary is-large mt-6 mb-6 mr-3" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')">
+            <button class="button is-primary is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')">
                 更多作品
                 <i class="fas fa-arrow-right ml-1"></i>
             </button>
@@ -70,7 +70,7 @@
         </p>
     </div>
     <div class="container p-3 mt-5">
-        <div class="columns is-multiline">
+        <div class="columns is-multiline is-gapless">
             @foreach($allPosts as $post)
                 @component('compoments.postitem',
                     ['url' => $webData['webConfig'][13]->tittle."blog/".$post->PostId,
