@@ -25,14 +25,6 @@ class PostController extends Controller
         $this -> baseService = $baseService;
     }
 
-    //取得首頁
-    public function getHomePage(){
-        $this -> webData = $this -> baseService ->WebInit();
-        $data = $this -> postService -> GetTopPublicPosts($this->webData['webConfig'][7]->tittle);
-        $worksData = $this -> worksService -> GetTopTwoWorks();
-        return view("index", ['webData' => $this->webData,'allPosts'=>$data, 'worksData' => $worksData, 'title'=>""]);
-    }
-
     //所有文章頁面－帶有pagenum參數
     public function getPostList($pageNumber = null){
         $this -> webData = $this -> baseService ->WebInit();

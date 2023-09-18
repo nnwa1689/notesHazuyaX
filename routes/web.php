@@ -13,7 +13,7 @@
 
 /*前台路由*/
 //root
-Route::get('/', 'PostController@getHomePage')->name('index');
+Route::get('/', 'PageController@GetHomePage')->name('index');
 
 //post
 Route::get('/blog', 'PostController@getPostList')->name('post');

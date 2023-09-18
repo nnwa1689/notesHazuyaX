@@ -69,9 +69,9 @@ class WorksService
      *
      * @return workList
      */
-    public function GetTopTwoWorks()
+    public function GetTopNumberWorks($num)
     {
-        $WorksList = Works::where('OrderID', '>', 0) -> orderBy('OrderID', 'asc') -> limit(2) -> get();
+        $WorksList = Works::where('OrderID', '>', 0) -> orderBy('OrderID', 'asc') -> limit($num) -> get();
         return $WorksList;
     }
 

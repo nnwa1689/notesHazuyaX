@@ -5,7 +5,7 @@
     <div data-scroll data-scroll-speed="-1" data-scroll-delay="0" class="mb-6">
         <p class="title is-1 has-text-left"><span id="titleText"></span></p>
     </div>
-    <div class="columns is-multiline is-mobile is-justify-content-center pb-6" style="align-items: end;">
+    <div class="columns is-multiline is-gapless is-mobile is-justify-left pb-6" style="align-items: end;">
     @php($i = 1)
     @foreach($WorksList as $item)
         @component('compoments.WorksItem',
@@ -15,15 +15,6 @@
             'i' => $i,
             ])
         @endcomponent
-        @if($i == 0)
-            @php($i++)
-        @elseif($i == 1)
-            @php($i++)
-        @elseif($i == 2)
-            @php($i++)
-        @elseif($i == 3)
-            @php($i = $i - 3)
-        @endif
     @endforeach
     </div>
 </div>

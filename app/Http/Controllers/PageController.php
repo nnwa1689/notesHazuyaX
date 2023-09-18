@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Services\BaseService;
 use App\Services\PageService;
 use App\Services\UserService;
+use App\Services\PostService;
+use App\Services\WorksService;
 
 class PageController extends Controller
 {
@@ -14,12 +16,22 @@ class PageController extends Controller
     protected $baseService;
     protected $pageService;
     protected $userService;
+    protected $postService;
+    protected $worksService;
 
-    public function __construct(BaseService $baseService, PageService $pageService, UserService $userService)
+    public function __construct(
+        BaseService $baseService, 
+        PageService $pageService, 
+        UserService $userService,
+        PostService $postService,
+        WorksService $worksService)
     {
         $this -> baseService = $baseService;
         $this -> pageService = $pageService;
         $this -> userService = $userService;
+        $this -> postService = $postService;
+        $this -> worksService = $worksService;
+        
     }
 
     public function getPage($pageID)
@@ -57,6 +69,14 @@ class PageController extends Controller
     {
         $this -> webData = $this -> baseService ->WebInit();
         return view('contact', ['webData' => $this -> webData ]);
+    }
+
+    //取得首頁
+    public function GetHomePage(){
+        $this -> webData = $this -> baseService ->WebInit();
+        $data = $this -> postService -> GetTopPublicPosts($this->webData['webConfig'][7]->tittle);
+        $worksData = $this -> worksService -> GetTopNumberWorks(3);
+        return view("index", ['webData' => $this->webData,'allPosts'=>$data, 'worksData' => $worksData, 'title'=>""]);
     }
 
 }

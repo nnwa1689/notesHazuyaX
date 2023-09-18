@@ -42,7 +42,7 @@
         </p>
     </div>
     <div class="container p-3 mt-6">
-        <div class="columns is-multiline is-mobile is-justify-content-center" style="align-items: end;">
+        <div class="columns is-multiline is-gapless is-mobile is-justify-content-left" style="align-items: end;">
             @php($i = 1)
             @foreach($worksData as $item)
                 @component('compoments.WorksItem',
@@ -52,15 +52,6 @@
                     'i' => $i,
                     ])
                 @endcomponent
-            @if($i == 0)
-            @php($i++)
-            @elseif($i == 1)
-            @php($i++)
-            @elseif($i == 2)
-            @php($i++)
-            @elseif($i == 3)
-            @php($i = $i - 3)
-            @endif
             @endforeach
         </div>
         <p class="has-text-right">
