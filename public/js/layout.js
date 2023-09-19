@@ -190,6 +190,7 @@ const layoutInit = async() => {
             duration: 0.25,
             x: "+100vw",
             ease: "Circ.easeInOut",
+            delay: 0.25
         });
     }
 
