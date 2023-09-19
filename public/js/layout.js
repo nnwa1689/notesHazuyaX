@@ -146,12 +146,8 @@ const layoutInit = async() => {
 
     //First Entry PageLoading
     setTimeout(() => {
-        EntryPageLoading();
-    }, 10);
-
-    setTimeout(() => {
         LeavePageLoading();
-    }, 1000);
+    }, 500);
 
     barba.init({
         sync: true,
