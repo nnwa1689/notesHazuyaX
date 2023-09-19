@@ -7791,9 +7791,9 @@ a.list-item {
   z-index: 1000;
   border-radius: 0 !important;
   top: 0;
-  left: 0;
+  left: -100vw;
   bottom: 0;
-  right: -100vw;
+  right: 0;
   height: 100vh !important;
 }
 
