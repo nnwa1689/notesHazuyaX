@@ -7797,19 +7797,19 @@ a.list-item {
   height: 100vh !important;
 }
 
-.pageloader .is-primary {
+.pageloader.is-primary {
   background-color: #064ACB;
 }
 
-.pageloader .is-link {
+.pageloader.is-link {
   background-color: #FFD324;
 }
 
-.pageloader .is-black {
+.pageloader.is-black {
   background-color: #262728;
 }
 
-.pageloader .is-secondary {
+.pageloader.is-secondary {
   background-color: #366ED8;
 }
 
