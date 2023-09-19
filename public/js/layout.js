@@ -146,6 +146,10 @@ const layoutInit = async() => {
 
     //First Entry PageLoading
     setTimeout(() => {
+        EntryPageLoading();
+    }, 10);
+
+    setTimeout(() => {
         LeavePageLoading();
     }, 1000);
 
