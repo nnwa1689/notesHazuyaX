@@ -128,7 +128,7 @@ const layoutInit = async() => {
                 delay: 0.25,
             })
         );
-        return tl;
+        tl.play();
     }, 1000);
 
     barba.init({
