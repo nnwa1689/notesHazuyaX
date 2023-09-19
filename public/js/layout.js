@@ -149,7 +149,6 @@ const layoutInit = async() => {
                 duration: 0.25,
                 x: 0,
                 ease: "Circ.easeInOut",
-                delay: 0.25,
             })
         );
 
@@ -163,7 +162,6 @@ const layoutInit = async() => {
                 duration: 0.25,
                 x: 0,
                 ease: "Circ.easeInOut",
-                delay: 0.25,
             })
         );
 
@@ -177,7 +175,6 @@ const layoutInit = async() => {
                 duration: 0.25,
                 x: 0,
                 ease: "Circ.easeInOut",
-                delay: 0.25,
             })
         );
         return tl;
@@ -193,7 +190,6 @@ const layoutInit = async() => {
             duration: 0.25,
             x: "+100vw",
             ease: "Circ.easeInOut",
-            delay: 0.25
         });
     }
 
