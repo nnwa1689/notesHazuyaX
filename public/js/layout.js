@@ -54,20 +54,6 @@ const layoutInit = async() => {
         $('.navbar-toggle').toggleClass('is-navbar-toggle-close');
     });
 
-    setTimeout(() => {
-        gsap.fromTo(".pageloader",
-        {
-            x: "0",
-        }
-        ,
-        {
-            duration: 1,
-            x: "+100vw",
-            ease: "power4.inOut",
-            delay: 1
-        });
-    }, 1000);
-
     var scroll = new LocomotiveScroll(
         {
             el: document.querySelector('#scroll-zone'),
@@ -79,29 +65,74 @@ const layoutInit = async() => {
 
     new ResizeObserver(() => {
         scroll.update();
-    }
-    ).observe(document.querySelector('#scroll-zone'));
-
+    }).observe(document.querySelector('#scroll-zone'));
 
     new kursor({
         type: 3,
         color: "#064ACB"
     });
 
+
+
     barba.init({
         sync: true,
         transitions: [{
             leave(data) {
-                return gsap.fromTo(".pageloader",
-                {
-                    x: "-100vw",
-                }
-                ,
-                {
-                    duration: 1,
-                    x: 0,
-                    ease: "power4.inOut",
-                });
+                var tl = gsap.timeline();
+                tl.add(
+                    gsap.fromTo("#pageloader1",
+                    {
+                        x: "-100vw",
+                    }
+                    ,
+                    {
+                        duration: 0.25,
+                        x: 0,
+                        ease: "Circ.easeInOut",
+                    })
+                );
+                tl.add(
+                    gsap.fromTo("#pageloader2",
+                    {
+                        x: "-100vw",
+                    }
+                    ,
+                    {
+                        duration: 0.25,
+                        x: 0,
+                        ease: "Circ.easeInOut",
+                        delay: 0.25,
+                    })
+                );
+
+                tl.add(
+                    gsap.fromTo("#pageloader3",
+                    {
+                        x: "-100vw",
+                    }
+                    ,
+                    {
+                        duration: 0.25,
+                        x: 0,
+                        ease: "Circ.easeInOut",
+                        delay: 0.25,
+                    })
+                );
+
+                tl.add(
+                    gsap.fromTo("#pageloader4",
+                    {
+                        x: "-100vw",
+                    }
+                    ,
+                    {
+                        duration: 0.25,
+                        x: 0,
+                        ease: "Circ.easeInOut",
+                        delay: 0.25,
+                    })
+                );
+                return tl;
             },
             after(data) {
                 return gsap.fromTo(".pageloader",
@@ -112,7 +143,7 @@ const layoutInit = async() => {
                 {
                     duration: 1,
                     x: "+100vw",
-                    ease: "power4.inOut",
+                    ease: "Circ.easeInOut",
                     delay: 1
                 });
             },

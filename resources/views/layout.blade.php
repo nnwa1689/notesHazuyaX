@@ -134,11 +134,12 @@
                 </div>
             </div>
         </div>
-        <section class="hero is-fullheight is-black is-align-items-center has-text-centered pageloader">
-            <div class="loader-body">
-                <img class="loading-logo" src="{{$webData['webConfig'][13]->tittle}}images/Logo_Loading.png">
-            </div>
-        </section>
+
+        <div id="pageloader1" class="pageloader is-primary"></div>
+        <div id="pageloader2" class="pageloader is-link"></div>
+        <div id="pageloader3" class="pageloader is-secondary"></div>
+        <div id="pageloader4" class="pageloader is-black"></div>
+
         <!-- Main -->
         <div class="pb-6" id="scroll-zone" style="perspective: 1px; min-height: 1000px;" >
             <main data-barba="container" data-barba-namespace="home">

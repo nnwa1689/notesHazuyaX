@@ -7794,7 +7794,23 @@ a.list-item {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 110vh !important;
+  height: 100vh !important;
+}
+
+.pageloader .is-primary {
+  background-color: #064ACB;
+}
+
+.pageloader .is-link {
+  background-color: #FFD324;
+}
+
+.pageloader .is-black {
+  background-color: #262728;
+}
+
+.pageloader .is-secondary {
+  background-color: #366ED8;
 }
 
 .pageloader:hover {
