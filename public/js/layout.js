@@ -72,7 +72,8 @@ const layoutInit = async() => {
         color: "#064ACB"
     });
 
-    const EntryLoadingPageAnimation = () => {
+    //First Entry PageLoading
+    setTimeout(() => {
         var tl = gsap.timeline();
         tl.add(
             gsap.fromTo("#pageloader1",
@@ -128,18 +129,67 @@ const layoutInit = async() => {
             })
         );
         return tl;
-    }
-
-    //First Entry PageLoading
-    setTimeout(() => {
-        EntryLoadingPageAnimation();
     }, 1000);
 
     barba.init({
         sync: true,
         transitions: [{
             leave(data) {
-                return EntryLoadingPageAnimation();
+                var tl = gsap.timeline();
+                tl.add(
+                    gsap.fromTo("#pageloader1",
+                    {
+                        x: "-100vw",
+                    }
+                    ,
+                    {
+                        duration: 0.25,
+                        x: 0,
+                        ease: "Circ.easeInOut",
+                    })
+                );
+                tl.add(
+                    gsap.fromTo("#pageloader2",
+                    {
+                        x: "-100vw",
+                    }
+                    ,
+                    {
+                        duration: 0.25,
+                        x: 0,
+                        ease: "Circ.easeInOut",
+                        delay: 0.25,
+                    })
+                );
+
+                tl.add(
+                    gsap.fromTo("#pageloader3",
+                    {
+                        x: "-100vw",
+                    }
+                    ,
+                    {
+                        duration: 0.25,
+                        x: 0,
+                        ease: "Circ.easeInOut",
+                        delay: 0.25,
+                    })
+                );
+
+                tl.add(
+                    gsap.fromTo("#pageloader4",
+                    {
+                        x: "-100vw",
+                    }
+                    ,
+                    {
+                        duration: 0.25,
+                        x: 0,
+                        ease: "Circ.easeInOut",
+                        delay: 0.25,
+                    })
+                );
+                return tl;
             },
             after(data) {
                 return gsap.fromTo(".pageloader",
