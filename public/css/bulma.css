@@ -7795,6 +7795,7 @@ a.list-item {
   bottom: 0;
   right: 0;
   height: 100vh !important;
+  cursor: progress;
 }
 
 .pageloader.is-primary {
@@ -7811,10 +7812,6 @@ a.list-item {
 
 .pageloader.is-secondary {
   background-color: #366ED8;
-}
-
-.pageloader:hover {
-    cursor: progress;
 }
 
 .loader-body {

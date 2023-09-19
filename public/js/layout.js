@@ -72,6 +72,59 @@ const layoutInit = async() => {
         color: "#064ACB"
     });
 
+    const FirstEntryPageLoading = () => {
+        var tl = gsap.timeline();
+        tl.add(
+            gsap.fromTo("#pageloader4",
+            {
+                x: 0,
+            }
+            ,
+            {
+                duration: 0.25,
+                x: "-100vw",
+                ease: "Circ.easeInOut",
+            })
+        );
+        tl.add(
+            gsap.fromTo("#pageloader3",
+            {
+                x: 0,
+            }
+            ,
+            {
+                duration: 0.25,
+                x: "-100vw",
+                ease: "Circ.easeInOut",
+            })
+        );
+        tl.add(
+            gsap.fromTo("#pageloader2",
+            {
+                x: 0,
+            }
+            ,
+            {
+                duration: 0.25,
+                x: "-100vw",
+                ease: "Circ.easeInOut",
+            })
+        );
+        tl.add(
+            gsap.fromTo("#pageloader1",
+            {
+                x: 0,
+            }
+            ,
+            {
+                duration: 0.25,
+                x: "-100vw",
+                ease: "Circ.easeInOut",
+            })
+        );
+        return tl;
+    }
+
     const EntryPageLoading = () => {
         var tl = gsap.timeline();
         tl.add(
@@ -146,8 +199,8 @@ const layoutInit = async() => {
 
     //First Entry PageLoading
     setTimeout(() => {
-        LeavePageLoading();
-    }, 500);
+        FirstEntryPageLoading();
+    }, 250);
 
     barba.init({
         sync: true,
