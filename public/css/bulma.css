@@ -2617,6 +2617,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   color: #262728;
   display: block;
   padding: 1.25rem;
+  border: 2px solid #FFD324;
 }
 
 a.box:hover, a.box:focus {
@@ -8962,6 +8963,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   .navbar-dropdown {
     background-color: #FFFFFF;
     border-radius: 0px;
+    border: 2px solid #262728;
     box-shadow: 5px 5px 0px #064ACB;
     display: none;
     font-size: 0.875rem;
