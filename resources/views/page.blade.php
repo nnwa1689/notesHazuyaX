@@ -16,8 +16,8 @@
     var typed = new Typed("#titleText", {
         strings:["{{$data[0]->PageName}}",],
         stringsElement: '#typed-strings',
-        typeSpeed: 70,
-        startDelay: 2000,
+        typeSpeed: 20,
+        startDelay: 1000,
         loop: false,
     });
 </script>

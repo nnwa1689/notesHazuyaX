@@ -58,8 +58,8 @@
     var typed = new Typed("#titleText", {
         strings:["搜尋：{{ !empty($_GET['search-text']) == 1 ? $_GET['search-text'] : "" }}",],
         stringsElement: '#typed-strings',
-        typeSpeed: 70,
-        startDelay: 2000,
+        typeSpeed: 20,
+        startDelay: 1000,
         loop: false,
     });
 </script>

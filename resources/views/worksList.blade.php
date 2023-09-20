@@ -22,8 +22,8 @@
     var typed = new Typed("#titleText", {
         strings:["作品集<span class=\"has-text-hollow-link ml-2\">Works.</span>",],
         stringsElement: '#typed-strings',
-        typeSpeed: 70,
-        startDelay: 2000,
+        typeSpeed: 20,
+        startDelay: 1000,
         loop: false,
     });
 </script>

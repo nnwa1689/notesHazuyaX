@@ -35,8 +35,8 @@
 var typed = new Typed("#titleText", {
     strings:["{{$allPosts[0]->Category->ClassName}}",],
     stringsElement: '#typed-strings',
-    typeSpeed: 70,
-    startDelay: 2000,
+    typeSpeed: 20,
+    startDelay: 1000,
     loop: false,
 });
 </script>

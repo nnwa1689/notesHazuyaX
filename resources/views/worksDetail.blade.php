@@ -95,7 +95,7 @@ var typed = new Typed("#titleText", {
     strings:["{{$WorkDetail[0]->WorksName}}",],
     stringsElement: '#typed-strings',
     typeSpeed: 20,
-    startDelay: 2000,
+    startDelay: 1000,
     loop: false,
 });
 </script>

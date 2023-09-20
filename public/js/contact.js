@@ -48,8 +48,8 @@ function contactInit() {
     var typed = new Typed("#titleText", {
         strings:["聊聊<span class=\"has-text-hollow-link ml-2\">Contact.</span>",],
         stringsElement: '#typed-strings',
-        typeSpeed: 70,
-        startDelay: 2000,
+        typeSpeed: 20,
+        startDelay: 1000,
         loop: false,
     });
 }
