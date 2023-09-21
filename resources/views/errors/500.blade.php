@@ -1,10 +1,10 @@
 @extends('layout')
 @section('title', "500,QQ - ")
 @section('content')
-<section class="hero is-fullheight">
+<section class="hero is-halfheight">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <p class="title is-1 mt-2">
+      <p class="title is-1">
         <span id="errText" class="has-text-link has-text-shadow"></span>
       </p>
   </div>
@@ -12,11 +12,11 @@
 </section>
 <script id="mainScript">
   var typed = new Typed("#errText", {
-      strings:["500", "水管工正在維修0.0"],
+      strings:["500", "努力維修..."],
       stringsElement: '#typed-strings',
-      typeSpeed: 30,
+      typeSpeed: 20,
       startDelay: 1000,
-      backSpeed: 70,
+      backSpeed: 90,
       backDelay: 2000,
       loop: true,
   });

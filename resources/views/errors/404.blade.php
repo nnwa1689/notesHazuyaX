@@ -1,10 +1,10 @@
 @extends('layout')
 @section('title', "404,QQ - ")
 @section('content')
-<section class="hero is-fullheight">
+<section class="hero is-halfheight">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <p class="title is-1 mt-2">
+      <p class="title is-1">
         <span id="errText" class="has-text-link has-text-shadow"></span>
       </p>
   </div>
@@ -12,11 +12,11 @@
 </section>
 <script id="mainScript">
   var typed = new Typed("#errText", {
-      strings:["404, Not Found",],
+      strings:['404', 'Not Found',],
       stringsElement: '#typed-strings',
-      typeSpeed: 30,
+      typeSpeed: 20,
       startDelay: 1000,
-      backSpeed: 70,
+      backSpeed: 90,
       backDelay: 2000,
       loop: true,
   });

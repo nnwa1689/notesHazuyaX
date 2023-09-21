@@ -1,5 +1,7 @@
 /**
- *
+ *  Name : LayoutJS
+ *  Desc : 共用模板JS
+ *  Author : 
  */
 
 const openMenu = () => {
@@ -27,6 +29,21 @@ const isMenuOpen = () => {
 const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
+
+/**
+ * 側邊選單引言
+ */
+    const SideQuote = (quoteArrayString) => {
+    var typed_menu = new Typed('#typed', {
+        strings:[ quoteArrayString ],
+        stringsElement: '#typed-strings',
+        typeSpeed: 20,
+        backSpeed: 40,
+        backDelay: 4000,
+        startDelay: 1000,
+        loop: true,
+    });
+}
 
 const layoutInit = async() => {
     console.log("%c*44 Seconds Studio* 嗨，很高興在這裡看到你！", "padding:5px 15px; color: #F2F3F3; font-size: 14px; border: 2px solid #366ED8; background:#064ACB;border-radius:5px;");
@@ -199,21 +216,6 @@ const layoutInit = async() => {
     setTimeout(() => {
         FirstEntryPageLoading();
     }, 250);
-
-    /**
-     * 側邊選單引言
-     */
-    const SideQuote = (quoteArrayString) => {
-        var typed_menu = new Typed('#typed', {
-            strings:[ quoteArrayString ],
-            stringsElement: '#typed-strings',
-            typeSpeed: 20,
-            backSpeed: 40,
-            backDelay: 4000,
-            startDelay: 1000,
-            loop: true,
-        });
-    }
 
     barba.init({
         sync: true,
