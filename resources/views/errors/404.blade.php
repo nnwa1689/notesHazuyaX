@@ -1,5 +1,5 @@
 @extends('layout')
-@section('title', $title)
+@section('title', "404,QQ - ")
 @section('content')
 <section class="hero is-fullheight">
   <div class="hero-body">
