@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/kursor.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}codes/styles/prism.css">
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/gsap.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/barba.umd.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/locomotive-scroll.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
@@ -167,17 +167,6 @@
                 </div>
             </main>
         </div>
-
-        <script>
-            var typed_menu = new Typed("#typed", {
-                strings:[ {!! $webData['webConfig'][29]->tittle !!} ],
-                stringsElement: '#typed-strings',
-                typeSpeed: 70,
-                backSpeed: 60,
-                backDelay: 4000,
-                startDelay: 1000,
-                loop: true,
-            });
-        </script>
+        <script>SideQuote({!! $webData['webConfig'][29]->tittle !! });</script>
     </body>
 </html>

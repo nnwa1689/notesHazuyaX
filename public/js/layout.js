@@ -200,6 +200,21 @@ const layoutInit = async() => {
         FirstEntryPageLoading();
     }, 250);
 
+    /**
+     * 側邊選單引言
+     */
+    const SideQuote = (quoteArrayString) => {
+        var typed_menu = new Typed('#typed', {
+            strings:[ quoteArrayString ],
+            stringsElement: '#typed-strings',
+            typeSpeed: 20,
+            backSpeed: 40,
+            backDelay: 4000,
+            startDelay: 1000,
+            loop: true,
+        });
+    }
+
     barba.init({
         sync: true,
         transitions: [{

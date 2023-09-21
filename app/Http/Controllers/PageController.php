@@ -38,7 +38,8 @@ class PageController extends Controller
     {
         $this -> webData = $this -> baseService ->WebInit();
         $data = $this -> pageService -> GetOnePage($pageID);
-        if(count($data) <= 0){
+        if(count($data) <= 0)
+        {
             abort(404);
             return;
         }
