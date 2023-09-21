@@ -167,6 +167,6 @@
                 </div>
             </main>
         </div>
-        <script>SideQuote({{$webData['webConfig'][29]->tittle}});</script>
+        <script>SideQuote({!!$webData['webConfig'][29]->tittle!!});</script>
     </body>
 </html>

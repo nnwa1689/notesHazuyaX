@@ -21,3 +21,4 @@
       loop: true,
   });
 </script>
+@endsection

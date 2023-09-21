@@ -103,5 +103,3 @@
 </div>
 <script>indexInit();</script>
 @endsection
-@section('content')
-@endsection
