@@ -35,7 +35,7 @@ const sleep = (ms) => {
  */
     const SideQuote = (quoteArray) => {
         var typed_menu = new Typed('#typed', {
-            strings: quoteArrayString,
+            strings: quoteArray,
             stringsElement: '#typed-strings',
             typeSpeed: 20,
             backSpeed: 40,
