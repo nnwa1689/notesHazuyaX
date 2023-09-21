@@ -38,7 +38,6 @@
         {{ $allPosts->links('vendor.pagination.default') }}
     </div>
 </div>
-<p></p>
 <script>
     var typed = new Typed("#titleText", {
         strings:["雜記<span class=\"has-text-hollow-link ml-2\">Blogs.</span><a class=\"ml-2\" href=\"{{$webData['webConfig'][13]->tittle}}search\"><i class=\"fas fa-search ml-2\"></i></a>",],

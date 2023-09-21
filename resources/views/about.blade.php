@@ -22,7 +22,7 @@
             <p class="title is-3">
                 <span class="has-text-background-link">The best!</span>
             </p>
-            <p class="is-size-4">保持原始，就是最好的工作狀態！</p>
+            <p class="is-size-4">保持原始，就是最好的狀態！</p>
         </div>
         <div class="column is-5 is-offset-2 p-0">
             <p class="is-size-4">我們在最原始、放鬆的狀態下創作、設計與開發。放鬆狀態下是我們發揮最好的時候，在富含情感的狀態下尋找眾多解決方案，並透過不斷測試找出最適合的答案。

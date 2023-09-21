@@ -4,7 +4,10 @@
  * 20230805
  */
 
-function submit() {
+/**
+ * 聯絡我們表單
+ */
+const submit = () => {
     var name = $("#Name").val();
     var email = $("#Email").val();
     var type = $("#Type").val();
@@ -44,7 +47,10 @@ function submit() {
     }
 }
 
-function contactInit() {
+/**
+ *  聯絡我們頁面初始化
+ */
+const contactInit = () => {
     var typed = new Typed("#titleText", {
         strings:["聊聊<span class=\"has-text-hollow-link ml-2\">Contact.</span>",],
         stringsElement: '#typed-strings',

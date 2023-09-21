@@ -4,6 +4,10 @@
  *  Author : 
  */
 
+
+/**
+ * 開啟網站選單
+ */
 const openMenu = () => {
     gsap.to(".fullMenu", {
             duration: 1.2,
@@ -12,6 +16,9 @@ const openMenu = () => {
         });
 }
 
+/**
+ * 關閉網站選單
+ */
 const closeMenu = () => {
     gsap.to(".fullMenu", {
             duration: 1.2,
@@ -20,12 +27,21 @@ const closeMenu = () => {
         });
 }
 
+/**
+ * 選單是否開啟
+ * @returns bool
+ */
 const isMenuOpen = () => {
     if ($('.fullMenu').hasClass('is-on'))
         return true;
     return false;
 }
 
+/**
+ * 
+ * @param {string} ms 
+ * @returns Promise
+ */
 const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -45,6 +61,9 @@ const sleep = (ms) => {
         });
 }
 
+/**
+ * 共用模板初始化(barba.js等)
+ */
 const layoutInit = async() => {
     console.log("%c*44 Seconds Studio* 嗨，很高興在這裡看到你！", "padding:5px 15px; color: #F2F3F3; font-size: 14px; border: 2px solid #366ED8; background:#064ACB;border-radius:5px;");
     console.log("%c來到這裡不太容易吧，歡迎來我們這裡喝喝茶聊聊天唷XD", "padding:5px 15px; color: #064ACB; font-size: 14px; border: 2px solid #000000; background:#F2F3F3;border-radius:5px;");

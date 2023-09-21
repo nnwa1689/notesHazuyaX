@@ -6,12 +6,21 @@
 
 var indexDotInterval = 0;
 
-function AmendZero(str) {
+/**
+ * 補足0
+ * @param {string} str 
+ * @returns 
+ */
+const AmendZero = (str) => {
     return str.toString().length > 1 ? str.toString() : "0" + str.toString();
 }
 
-function indexInit(){
+/**
+ * 初始化首頁
+ */
+const indexInit = () => {
 
+    /** 動態效果 */
     indexDotInterval = setInterval(() => {
         $("#dot").toggleClass("has-text-link");
         $("#dot").toggleClass("has-text-light");
