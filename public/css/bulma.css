@@ -4267,7 +4267,7 @@ blockquote a {
 }
 
 blockquote ol {
-  padding: 0;
+  padding: 0 !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -4301,6 +4301,10 @@ blockquote ol {
   list-style: disc outside;
   margin-left: 2em;
   margin-top: 1em;
+}
+
+blockquote ul {
+  padding: 0 !important;
 }
 
 @media screen and (min-width: 768px) {
