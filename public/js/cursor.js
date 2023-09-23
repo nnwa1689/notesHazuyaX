@@ -23,7 +23,7 @@ const cursorInit = () =>
     //滑鼠點下
     window.addEventListener("mousedown", onMouseDown);
     //滑鼠放開
-    windows.addEventListener("mouseup", onMouseUp);
+    window.addEventListener("mouseup", onMouseUp);
 }
 
 /**
@@ -62,14 +62,14 @@ const onMouseDown = (e) =>
     gsap.to(cursorBig,
         {
             scale: 0.5,
-            duration: 0.5,
+            duration: 0.1,
         }
     );
 
     gsap.to(cursorChild,
         {
-            scale: 1.5,
-            duration: 0.5,
+            scale: 2,
+            duration: 0.1,
         }
     );
 }
@@ -86,14 +86,14 @@ const onMouseUp = (e) =>
     gsap.to(cursorBig,
         {
             scale: 1,
-            duration: 0.5,
+            duration: 0.1,
         }
     );
 
     gsap.to(cursorChild,
         {
             scale: 1,
-            duration: 0.5,
+            duration: 0.1,
         }
     );
 }
