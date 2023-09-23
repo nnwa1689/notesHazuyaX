@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/bulma.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/locomotive-scroll.css">
-        <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/kursor.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}codes/styles/prism.css">
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
         <script src="{{$webData['webConfig'][13]->tittle}}js/gsap.min.js"></script>
@@ -18,7 +17,6 @@
         <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/lottie-player.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
-        <!--<script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>-->
         <script src="{{$webData['webConfig'][13]->tittle}}js/cursor.js"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
         crossorigin="anonymous"></script>
