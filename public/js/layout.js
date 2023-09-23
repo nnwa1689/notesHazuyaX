@@ -103,10 +103,12 @@ const layoutInit = async() => {
         scroll.update();
     }).observe(document.querySelector('#scroll-zone'));
 
+    /*
     new kursor({
         type: 3,
         color: "#064ACB"
     });
+    */
 
     const FirstEntryPageLoading = () => {
         var tl = gsap.timeline();

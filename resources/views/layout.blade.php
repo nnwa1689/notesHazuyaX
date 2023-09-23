@@ -18,7 +18,8 @@
         <script src="{{$webData['webConfig'][13]->tittle}}js/jquery-3.3.1.min.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/lottie-player.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}codes/prism.js"></script>
-        <script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>
+        <!--<script src="{{$webData['webConfig'][13]->tittle}}js/kursor.js"></script>-->
+        <script src="{{$webData['webConfig'][13]->tittle}}js/cursor.js"></script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
         crossorigin="anonymous"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
