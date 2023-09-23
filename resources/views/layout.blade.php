@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/bulma.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/fontawesome-all.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/locomotive-scroll.css">
+        <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}css/cursor.css">
         <link rel="stylesheet" href="{{$webData['webConfig'][13]->tittle}}codes/styles/prism.css">
         <link rel="icon" data-rh="true" href="{{asset('favicon.ico')}}">
         <script src="{{$webData['webConfig'][13]->tittle}}js/gsap.min.js"></script>

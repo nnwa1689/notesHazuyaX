@@ -37,7 +37,7 @@ const onMouseMove = (e) =>
     gsap.to(cursorBig,
         {
             x:e.x,
-            y:e.y + 109,
+            y:e.y,
             duration: 0.2,
         }
     );
@@ -45,7 +45,7 @@ const onMouseMove = (e) =>
     gsap.to(cursorChild,
         {
             x:e.x,
-            y:e.y + 109,
+            y:e.y - 128,
             duration: 0.1,
         }
     );
