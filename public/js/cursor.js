@@ -50,7 +50,7 @@ const onMouseMove = (e) =>
         }
     );
 
-    if(e.target.closest('a'))
+    if(e.target.closest('a') || e.target.closest('[class*="button"]'))
     {
         onMouseScale();
     }
