@@ -1,5 +1,12 @@
 /*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */
-/* UPdate 20230830 */
+/* Custom for studio-44s.tw */
+/*
+ * Name : bulmaCss(studio-44s.tw Custom Version)
+ * Author :  
+ * Update : 20230923
+ */
+
+ /* Custom Animation */
 @-webkit-keyframes spinAround {
   from {
     transform: rotate(0deg);
@@ -35,7 +42,7 @@
   }
 }
 
-/*SELF FONTS*/
+/* SELF FONTS */
 @font-face {
     font-family: 'NotoSansTC-Regular';
     font-style: normal;
@@ -51,13 +58,31 @@
     unicode-range: U+00-024F;
     font-display: swap;
 }
-/***********/
 
+/* Others Or Not Use */
 .utterances {
   width: 100%;
   max-width: 960px !important;
 }
 
+/* Custom Cursor */
+div[class*='kursor'].kursor--3 {
+  left: 0px;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(var(--k-color), 1);
+  /*transition: all 0.2s ease, top 0.05s ease-out, left 0.05s ease-out;*/
+}
+div[class*='kursor'].kursor--3 + .kursorChild {
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: rgba(var(--k-color), 1);
+  /*transition: all 0.2s ease, top 0.2s ease-out, left 0.2s ease-out;*/
+}
+
+/* Context Max Limit Rows */
 .limit3rows {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -98,6 +123,7 @@
   text-overflow: ellipsis;
 }
 
+/* Works Item Style */
 .is-WorksItem {
     max-height: 700px;
     position: relative;
@@ -175,6 +201,55 @@
   border-width: 5px !important;
 }
 
+@media screen and (min-width: 1408px) {
+  .is-works-item-large {
+      width: calc(100% - 33% - 4rem);
+      height: 700px;
+  }
+
+  .is-works-item-min {
+      width: 32%;
+      height: 460px;
+      margin: 0 8px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .is-works-item-large {
+      width: calc(100% - 33% - 4rem);
+      height: 700px;
+  }
+
+  .is-works-item-min {
+      width: 32%;
+      height: 460px;
+      margin: 0 8px;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .is-works-item-large {
+      width: calc(100% - 33% - 4rem);
+      height: 700px;
+  }
+
+  .is-works-item-min {
+      width: 32%;
+      height: 460px;
+      margin: 0 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .is-WorksItem {
+    height: auto;
+    max-height: 700px;
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* Blog Post Item Style */
 .ContentCoverImage {
     border-radius: 0px;
     width: 100%;
@@ -431,17 +506,6 @@
 }
 
 @media screen and (min-width: 1408px) {
-  .is-works-item-large {
-      width: calc(100% - 33% - 4rem);
-      height: 700px;
-  }
-
-  .is-works-item-min {
-      width: 32%;
-      height: 460px;
-      margin: 0 8px;
-  }
-
   .is-post-index {
       width: calc(33.333% - 1.5rem);
   }
@@ -457,21 +521,9 @@
   .post-cover-container {
       height: 200px;
   }
-
 }
 
 @media screen and (max-width: 1024px) {
-  .is-works-item-large {
-      width: calc(100% - 33% - 4rem);
-      height: 700px;
-  }
-
-  .is-works-item-min {
-      width: 32%;
-      height: 460px;
-      margin: 0 8px;
-  }
-
   .is-author-item {
       width: calc(50% - 4rem);
   }
@@ -486,17 +538,6 @@
 }
 
 @media screen and (min-width: 1023px) {
-  .is-works-item-large {
-      width: calc(100% - 33% - 4rem);
-      height: 700px;
-  }
-
-  .is-works-item-min {
-      width: 32%;
-      height: 460px;
-      margin: 0 8px;
-  }
-
   .is-post-index {
       width: calc(33.333% - 1.5rem);
   }
@@ -511,13 +552,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .is-WorksItem {
-    height: auto;
-    max-height: 700px;
-    width: 100%;
-    margin-bottom: 0.75rem;
-  }
-
   .is-post-index {
       width: calc(100% - 1.5rem);
   }
@@ -549,6 +583,7 @@
     }
 }
 
+/* Origin Bulma CSS */
 .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
 .pagination-next,
 .pagination-link,

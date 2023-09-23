@@ -1,9 +1,8 @@
 /**
  *  Name : LayoutJS
- *  Desc : 共用模板JS
+ *  共用模板JS
  *  Author : 
  */
-
 
 /**
  * 開啟網站選單
@@ -44,13 +43,13 @@ const isMenuOpen = () => {
  */
 const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
-  }
+}
 
 /**
  * 側邊選單引言
  */
     const SideQuote = (quoteArray) => {
-        var typed_menu = new Typed('#typed', {
+        new Typed('#typed', {
             strings: quoteArray,
             stringsElement: '#typed-strings',
             typeSpeed: 20,
@@ -102,13 +101,6 @@ const layoutInit = async() => {
     new ResizeObserver(() => {
         scroll.update();
     }).observe(document.querySelector('#scroll-zone'));
-
-    /*
-    new kursor({
-        type: 3,
-        color: "#064ACB"
-    });
-    */
 
     cursorInit();
 

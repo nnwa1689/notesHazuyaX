@@ -1,7 +1,8 @@
 /**
  * Name : cursorjs
- * 滑鼠
+ * 滑鼠JS
  * Author : 
+ * Update : 20230923
  */
 
 const cursorTag =  `
@@ -53,8 +54,10 @@ const onMouseMove = (e) =>
     {
         onMouseScale();
     }
-
-    onMouseDefault();
+    else
+    {
+        onMouseDefault();
+    }
 }
 
 /**
@@ -64,8 +67,6 @@ const onMouseMove = (e) =>
  */
 const onMouseDown = (e) =>
 {
-    //cursorBig.addClass('kursor--down');
-    //cursorChild.addClass('kursor--down');
     gsap.to(cursorBig,
         {
             scale: 0.5,
@@ -88,8 +89,6 @@ const onMouseDown = (e) =>
  */
 const onMouseDefault = (e) =>
 {
-    //cursorBig.removeClass('kursor--down');
-    //cursorChild.removeClass('kursor--down');
     gsap.to(cursorBig,
         {
             scale: 1,
@@ -112,14 +111,14 @@ const onMouseScale = () =>
 {
     gsap.to(cursorBig,
         {
-            scale: 10,
+            scale: 2.5,
             duration: 0.1,
         }
     );
 
     gsap.to(cursorChild,
         {
-            scale: 10,
+            scale: 2.5,
             duration: 0.1,
         }
     );
