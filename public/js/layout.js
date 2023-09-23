@@ -110,6 +110,8 @@ const layoutInit = async() => {
     });
     */
 
+    cursorInit();
+
     const FirstEntryPageLoading = () => {
         var tl = gsap.timeline();
         tl.add(

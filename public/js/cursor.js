@@ -9,14 +9,20 @@ const cursorTag =  `
     <div class="kursorChild" style="--k-color: 6,74,203;"></div>
 `;
 
-document.body.insertAdjacentHTML("afterbegin", cursorTag);
-const cursorBig = document.querySelector(".kursor");
-const cursorChild = document.querySelector(".kursorChild");
+let cursorBig = null;
+let cursorChild = null;
 
-// 滑鼠移動
-window.addEventListener("mousemove", onMouseMove);
-//滑鼠點下
-window.addEventListener("mousedown", onMouseDown);
+const cursorInit = () => 
+{
+    document.body.insertAdjacentHTML("afterbegin", cursorTag);
+    cursorBig = document.querySelector(".kursor");
+    cursorChild = document.querySelector(".kursorChild");
+
+    // 滑鼠移動
+    window.addEventListener("mousemove", onMouseMove);
+    //滑鼠點下
+    window.addEventListener("mousedown", onMouseDown);
+}
 
 /**
  * 
