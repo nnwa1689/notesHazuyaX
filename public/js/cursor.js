@@ -22,6 +22,8 @@ const cursorInit = () =>
     window.addEventListener("mousemove", onMouseMove);
     //滑鼠點下
     window.addEventListener("mousedown", onMouseDown);
+    //滑鼠放開
+    windows.addEventListener("mouseup", onMouseUp);
 }
 
 /**
@@ -42,7 +44,7 @@ const onMouseMove = (e) =>
     gsap.to(cursorChild,
         {
             x:e.x,
-            y:e.y,
+            y:e.y - 128,
             duration: 0.1,
         }
     );
@@ -55,5 +57,43 @@ const onMouseMove = (e) =>
  */
 const onMouseDown = (e) =>
 {
+    //cursorBig.addClass('kursor--down');
+    //cursorChild.addClass('kursor--down');
+    gsap.to(cursorBig,
+        {
+            scale: 0.5,
+            duration: 0.5,
+        }
+    );
 
+    gsap.to(cursorChild,
+        {
+            scale: 1.5,
+            duration: 0.5,
+        }
+    );
+}
+
+/**
+ * 
+ * @param {*} e
+ * 滑鼠放開函數 
+ */
+const onMouseUp = (e) =>
+{
+    //cursorBig.removeClass('kursor--down');
+    //cursorChild.removeClass('kursor--down');
+    gsap.to(cursorBig,
+        {
+            scale: 1,
+            duration: 0.5,
+        }
+    );
+
+    gsap.to(cursorChild,
+        {
+            scale: 1,
+            duration: 0.5,
+        }
+    );
 }
