@@ -23,7 +23,7 @@ const cursorInit = () =>
     //滑鼠點下
     window.addEventListener("mousedown", onMouseDown);
     //滑鼠放開
-    window.addEventListener("mouseup", onMouseUp);
+    window.addEventListener("mouseup", onMouseDefault);
 }
 
 /**
@@ -48,12 +48,19 @@ const onMouseMove = (e) =>
             duration: 0.1,
         }
     );
+
+    if(e.target.closest('a'))
+    {
+        onMouseScale();
+    }
+
+    onMouseDefault();
 }
 
 /**
  * 
  * @param {*} e 
- * 滑鼠按下函數
+ * 滑鼠按下動畫
  */
 const onMouseDown = (e) =>
 {
@@ -68,7 +75,7 @@ const onMouseDown = (e) =>
 
     gsap.to(cursorChild,
         {
-            scale: 2,
+            scale: 3,
             duration: 0.1,
         }
     );
@@ -77,9 +84,9 @@ const onMouseDown = (e) =>
 /**
  * 
  * @param {*} e
- * 滑鼠放開函數 
+ * 滑鼠恢復狀態動畫
  */
-const onMouseUp = (e) =>
+const onMouseDefault = (e) =>
 {
     //cursorBig.removeClass('kursor--down');
     //cursorChild.removeClass('kursor--down');
@@ -93,6 +100,26 @@ const onMouseUp = (e) =>
     gsap.to(cursorChild,
         {
             scale: 1,
+            duration: 0.1,
+        }
+    );
+}
+
+/**
+ * 滑鼠碰到連結後放大
+ */
+const onMouseScale = () =>
+{
+    gsap.to(cursorBig,
+        {
+            scale: 10,
+            duration: 0.1,
+        }
+    );
+
+    gsap.to(cursorChild,
+        {
+            scale: 10,
             duration: 0.1,
         }
     );
