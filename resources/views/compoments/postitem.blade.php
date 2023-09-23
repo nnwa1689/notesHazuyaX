@@ -1,4 +1,4 @@
-<div data-scroll onclick="barba.go('{{ $url }}')" class="is-post-item">
+<a data-scroll onclick="barba.go('{{ $url }}')" class="is-post-item">
     <a class="button post-image-tag-category is-primary is-small" onclick="barba.go('{{ $CategoryUrl }}')">
         <span>{{$Category}}</span>
     </a>
@@ -12,5 +12,5 @@
     <a class="button is-multiline post-image-tag is-primary is-outlined is-medium ">
         <span>{{ strip_tags(Str::limit($PostTittle, 50)) }}</span>
     </a>
-</div>
+</a>
 

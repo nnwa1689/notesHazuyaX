@@ -111,14 +111,14 @@ const onMouseScale = () =>
 {
     gsap.to(cursorBig,
         {
-            scale: 2.5,
+            scale: 2,
             duration: 0.1,
         }
     );
 
     gsap.to(cursorChild,
         {
-            scale: 2.5,
+            scale: 2,
             duration: 0.1,
         }
     );
