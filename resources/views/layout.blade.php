@@ -155,7 +155,7 @@
                     <footer class="footer">
                         <div class="columns">
                             <div class="column is-half has-text-left has-text-centered-mobile">
-                                <a href="mailto:public.wuce@gmail.com"><i class="fas fa-envelope mr-1"></i>public.wuce@gmail.com</a>
+                                <a href="mailto:studio44s.tw@gmail.com"><i class="fas fa-envelope mr-1"></i>studio44s.tw@gmail.com</a>
                             </div>
                             <div class="column">
                                 <p class="has-text-right has-text-centered-mobile">

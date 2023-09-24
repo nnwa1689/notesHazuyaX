@@ -51,7 +51,7 @@
                     @endif
                 </div>
                 <p class="has-text-left has-text-centered-mobile">
-                    <a href="mailto:public.wuce@gmail.com"><i class="fas fa-envelope mr-2"></i>public.wuce@gmail.com</a>
+                    <a href="mailto:studio44s.tw@gmail.com"><i class="fas fa-envelope mr-2"></i>studio44s.tw@gmail.com</a>
                 </p>
                 <!--
                 <p class="title is-1 has-text-left">
