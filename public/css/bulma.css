@@ -926,7 +926,7 @@ pre {
 }
 
 body {
-  color: #272829;
+  color: #262728;
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 2.11;
@@ -938,7 +938,7 @@ html {
 
 a {
   transition: color 0.3s;
-  color: #272829;
+  color: #262728;
   cursor: pointer;
   text-decoration: none;
 }
@@ -2636,6 +2636,7 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   display: block;
   padding: 1.25rem;
   border: 2px solid #FFD324;
+  width: calc(100% - 7px);
 }
 
 a.box:hover, a.box:focus {
@@ -3293,12 +3294,12 @@ fieldset[disabled] .button.is-primary.is-inverted.is-outlined {
 .button.is-link {
   background-color: #FFD324;
   border-color: #F3A953;
-  color: #272829;
+  color: #262728;
 }
 
 .button.is-link:hover, .button.is-link.is-hovered {
   transition: all 0.3s;
-  background-color: #272829;
+  background-color: #262728;
   border-color: #FFD324;
   box-shadow: 0.25rem 0.25rem 0 0.1rem #FFD324;
   color: #F2F3F3;
@@ -4246,6 +4247,7 @@ blockquote {
   padding: 1.25em 1.5em;
   box-shadow: 5px 5px 0 0.125em #FFD324;
   margin: 1.5em auto;
+  width: calc(100% - 5px);
 }
 
 blockquote p {
@@ -4264,7 +4266,7 @@ blockquote h6 {
 
 @media screen and (min-width: 768px) {
   blockquote {
-    width: 700px;
+    width: 695px;
   }
 }
 
@@ -4372,11 +4374,12 @@ blockquote ul {
   padding: 1.25em 1.5em;
   white-space: pre;
   word-wrap: normal;
+  width: calc(100% - 5px);
 }
 
 @media screen and (min-width: 768px) {
   .content pre {
-    width: 700px !important;
+    width: 695px !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -7764,7 +7767,7 @@ a.list-item {
   right:0;
   z-index: 3;
   overflow: hidden;
-  background-color: #272829;
+  background-color: #262728;
 }
 
 .fullMenu a{
