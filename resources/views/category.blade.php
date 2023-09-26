@@ -8,7 +8,7 @@
         </p>
         <!--<p class="is-size-5">{{$allPosts[0]->Category->Short_Intro}}</p>-->
     </div>
-    <div class="columns is-multiline is-mobile is-justify-content-center mt-6">
+    <div class="columns is-multiline is-mobile mt-6">
     @foreach($allPosts as $post)
         @component('compoments.postitem',
                 ['url' => $webData['webConfig'][13]->tittle."blog/".$post->PostId,
