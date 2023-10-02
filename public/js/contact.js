@@ -18,7 +18,7 @@ const submit = () => {
     $("#error").css("display", "none");
     $("#name_danger").css("display", "none");
     $("#email_danger").css("display", "none");
-    $("#Content_danger_danger").css("display", "none");
+    $("#Content_danger").css("display", "none");
 
     $("#Name").removeClass("is-danger");
     $("#Email").removeClass("is-danger");
@@ -44,7 +44,7 @@ const submit = () => {
 
     if (name.length < 1 || email.length < 1 || content.length < 5) 
     {
-        $("#error").css("display", "block");
+        $("#err").css("display", "block");
     } 
     else 
     {

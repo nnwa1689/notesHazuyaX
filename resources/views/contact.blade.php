@@ -139,7 +139,7 @@
 
                 <div class="columns">
                     <div class="column is-12">
-                        <article class="notification is-danger mt-5 mb-5" id="suc" style="display: none;">
+                        <article class="notification is-danger mt-5 mb-5" id="err" style="display: none;">
                             <div class="content">請檢查資料是否遺漏或 E-Mail 格式錯誤。</div>
                         </article>
                     </div>
