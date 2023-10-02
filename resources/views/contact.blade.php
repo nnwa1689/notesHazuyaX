@@ -83,14 +83,30 @@
             </div>
             <div class="column is-8">
                 <div class="columns">
+                    <div class="column is-12">
+                        <article class="notification is-danger mt-5 mb-5" id="suc" style="display: none;">
+                            <div class="content">請檢查資料是否遺漏或 E-Mail 格式錯誤。</div>
+                        </article>
+                    </div>
+
+                    <div class="column is-12">
+                        <article class="notification is-success mt-5 mb-5" id="suc" style="display: none;">
+                            <div class="content">嗨，我們已經收到您的訊息囉！請靜待我們的回覆。</div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="columns">
                     <div class="column is-6">
                         <p class="is-size-5 mb-2"><span class="has-text-background-primary">嗨</span>，我叫做</p>
                         <input class="input is-large is-fullwidth" id="Name" type="text" name="Name" value="">
+                        <p id="name_danger" class="help is-danger" style="display: none;">*這要填唷</p>
                         <p class="is-size-6 mt-1">我們該如何稱呼您？</p>
                     </div>
                     <div class="column">
                         <p class="is-size-5 mb-2">以下是我的<span class="has-text-background-primary">Email</span></p>
                         <input class="input is-large is-fullwidth" type="text" name="Email" id="Email" value="">
+                        <p id="email_danger" class="help is-danger" style="display: none;">*這要填唷</p>
                         <p class="is-size-6 mt-1">提供一個可以聯繫的E-mail</p>
                     </div>
                 </div>
@@ -130,23 +146,13 @@
                     <div class="column is-12">
                         <p class="is-size-5 mb-2">我想要對你們<span class="has-text-background-primary">說</span></p>
                         <textarea class="textarea" name="Content" id="Content" cols="50" rows="20" value=""></textarea>
+                        <p id="Content_danger" class="help is-danger" style="display: none;">*這要填唷</p>
                         <p class="is-size-6 mt-1">詳述您的需要，讓我們知道您的想法！如：想要的風格、文案、類似的網站、大致的網站地圖、圖片素材等，附件可附 Google 雲端連結</p>
                     </div>
                 </div>
 
-                <article class="notification is-danger mt-5 mb-5 is-small" id="error" style="display: none;">
-                    <div class="content">
-                    每個欄位都是必填，請再次檢查！
-                    </div>
-                </article>
-
-                <article class="notification is-success mt-5 mb-5 is-medium" id="suc" style="display: none;">
-                    <div class="content">
-                    嗨，我們已經收到您的訊息囉！請靜待我們的回覆。
-                    </div>
-                </article>
                 <p class="has-text-right">
-                    <button type="button" onclick="submit()" class="button is-primary is-medium is-fullwidth is-rounded mt-5">
+                    <button id="submit_btn" type="button" onclick="submit()" class="button is-primary is-medium is-fullwidth is-rounded mt-5">
                         <i class="fas fa-paper-plane mr-2"></i>SEND!!
                     </button>
                 </p>

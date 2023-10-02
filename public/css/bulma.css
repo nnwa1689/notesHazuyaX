@@ -5797,7 +5797,7 @@ fieldset[disabled] .select select:-ms-input-placeholder,
 }
 
 .is-danger.input:focus, .is-danger.textarea:focus, .is-danger.is-focused.input, .is-danger.is-focused.textarea, .is-danger.input:active, .is-danger.textarea:active, .is-danger.is-active.input, .is-danger.is-active.textarea {
-  box-shadow: 0 0 0 0.125em rgba(241, 70, 104, 0.25);
+  /*box-shadow: 0 0 0 0.125em rgba(241, 70, 104, 0.25);*/
 }
 
 .is-small.input, .is-small.textarea {

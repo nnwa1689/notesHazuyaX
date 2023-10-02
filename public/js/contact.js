@@ -8,6 +8,7 @@
  * 聯絡我們表單
  */
 const submit = () => {
+    scroll.scrollTo('top', { 'duration':2 });
     var name = $("#Name").val();
     var email = $("#Email").val();
     var type = $("#Type").val();
@@ -16,10 +17,38 @@ const submit = () => {
 
     $("#suc").css("display", "none");
     $("#error").css("display", "none");
+    $("#name_danger").css("display", "none");
+    $("#email_danger").css("display", "none");
+    $("#Content_danger_danger").css("display", "none");
 
-    if (name.length < 1 || email.length < 1 || content.length < 5) {
+    $("#Name").removeClass("is-danger");
+    $("#Email").removeClass("is-danger");
+    $("#Content").removeClass("is-danger");
+
+    if(name.length < 1)
+    {
+        $("#name_danger").css("display", "block");
+        $("#Name").toggleClass("is-danger");
+    }
+
+    if(email.length < 1)
+    {
+        $("#email_danger").css("display", "block");
+        $("#Email").toggleClass("is-danger");
+    }
+
+    if(content.length < 1)
+    {
+        $("#Content_danger_danger").css("display", "block");
+        $("#Content").toggleClass("is-danger");
+    }
+
+    if (name.length < 1 || email.length < 1 || content.length < 5) 
+    {
         $("#error").css("display", "block");
-    } else {
+    } 
+    else 
+    {
         $.ajax({
             type: "POST",
             url: "https://strapi.studio-44s.tw/api/holas",
@@ -39,6 +68,7 @@ const submit = () => {
                 $("#Name").val("");
                 $("#Email").val("");
                 $("#Content").val("");
+                $("#submit_btn").css("display", "none");
             },
             error: function (thrownError) {
                 $("#error").css("display", "block");
