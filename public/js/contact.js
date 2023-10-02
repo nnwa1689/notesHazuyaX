@@ -7,16 +7,16 @@
 /**
  * 聯絡我們表單
  */
+
+var scroll = new LocomotiveScroll(
+    {
+        el: document.querySelector('#scroll-zone'),
+        smooth: true,
+        lerp: 0.1,
+        repeat: true,
+    }
+);
 const submit = () => {
-    var scroll = new LocomotiveScroll(
-        {
-            el: document.querySelector('#scroll-zone'),
-            smooth: true,
-            lerp: 0.1,
-            repeat: true,
-        }
-    );
-    
     scroll.scrollTo('top', { 'duration':2 });
     var name = $("#Name").val();
     var email = $("#Email").val();
