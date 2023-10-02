@@ -7,17 +7,7 @@
 /**
  * 聯絡我們表單
  */
-
-var scroll = new LocomotiveScroll(
-    {
-        el: document.querySelector('#scroll-zone'),
-        smooth: true,
-        lerp: 0.1,
-        repeat: true,
-    }
-);
 const submit = () => {
-    scroll.scrollTo('top', { 'duration':2 });
     var name = $("#Name").val();
     var email = $("#Email").val();
     var type = $("#Type").val();
@@ -48,7 +38,7 @@ const submit = () => {
 
     if(content.length < 1)
     {
-        $("#Content_danger_danger").css("display", "block");
+        $("#Content_danger").css("display", "block");
         $("#Content").toggleClass("is-danger");
     }
 

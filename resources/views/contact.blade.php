@@ -83,20 +83,6 @@
             </div>
             <div class="column is-8">
                 <div class="columns">
-                    <div class="column is-12">
-                        <article class="notification is-danger mt-5 mb-5" id="suc" style="display: none;">
-                            <div class="content">請檢查資料是否遺漏或 E-Mail 格式錯誤。</div>
-                        </article>
-                    </div>
-
-                    <div class="column is-12">
-                        <article class="notification is-success mt-5 mb-5" id="suc" style="display: none;">
-                            <div class="content">嗨，我們已經收到您的訊息囉！請靜待我們的回覆。</div>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="columns">
                     <div class="column is-6">
                         <p class="is-size-5 mb-2"><span class="has-text-background-primary">嗨</span>，我叫做</p>
                         <input class="input is-large is-fullwidth" id="Name" type="text" name="Name" value="">
@@ -148,6 +134,20 @@
                         <textarea class="textarea" name="Content" id="Content" cols="50" rows="20" value=""></textarea>
                         <p id="Content_danger" class="help is-danger" style="display: none;">*這要填唷</p>
                         <p class="is-size-6 mt-1">詳述您的需要，讓我們知道您的想法！如：想要的風格、文案、類似的網站、大致的網站地圖、圖片素材等，附件可附 Google 雲端連結</p>
+                    </div>
+                </div>
+
+                <div class="columns">
+                    <div class="column is-12">
+                        <article class="notification is-danger mt-5 mb-5" id="suc" style="display: none;">
+                            <div class="content">請檢查資料是否遺漏或 E-Mail 格式錯誤。</div>
+                        </article>
+                    </div>
+
+                    <div class="column is-12">
+                        <article class="notification is-success mt-5 mb-5" id="suc" style="display: none;">
+                            <div class="content">嗨，我們已經收到您的訊息囉！請靜待我們的回覆。</div>
+                        </article>
                     </div>
                 </div>
 
