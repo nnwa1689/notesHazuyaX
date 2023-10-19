@@ -68,7 +68,6 @@ const submit = () => {
                 $("#Email").val("");
                 $("#Content").val("");
                 $("#submit_btn").css("display", "none");
-                $("#is-done-after").css("display", "block");
             },
             error: function (thrownError) {
                 $("#error").css("display", "block");

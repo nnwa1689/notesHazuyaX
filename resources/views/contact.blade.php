@@ -144,15 +144,13 @@
                         </article>
                         <article class="notification is-success mt-5 mb-5" id="suc" style="display: none;">
                             <div class="content">嗨，我們已經收到您的訊息囉！請靜待我們的回覆。<br/>歡迎先去其他地方看看唷！</div>
-                        </article>
-                        <div id="is-done-after" style="display:none;">
                             <a href="{{$webData['webConfig'][13]->tittle}}works" id="see_works_btn" class="button is-primary is-medium is-fullwidth mt-5">
                                 看作品<i class="fas fa-chevron-right"></i>
                             </a>
                             <a href="{{$webData['webConfig'][13]->tittle}}blog" id="see_blogs" class="button is-link is-medium is-fullwidth mt-5">
                                 看文章<i class="fas fa-chevron-right"></i>
                             </a>
-                        </div>
+                        </article>
                         <p>
                             <button id="submit_btn" type="button" onclick="submit()" class="button is-primary is-medium is-fullwidth is-rounded mt-5">
                                 <i class="fas fa-paper-plane mr-2"></i>SEND!!
