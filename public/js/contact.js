@@ -15,7 +15,7 @@ const submit = () => {
     var content = $("#Content").val();
 
     $("#suc").css("display", "none");
-    $("#error").css("display", "none");
+    $("#err").css("display", "none");
     $("#name_danger").css("display", "none");
     $("#email_danger").css("display", "none");
     $("#Content_danger").css("display", "none");
@@ -68,6 +68,7 @@ const submit = () => {
                 $("#Email").val("");
                 $("#Content").val("");
                 $("#submit_btn").css("display", "none");
+                $("#is-done-after").css("display", "block");
             },
             error: function (thrownError) {
                 $("#error").css("display", "block");

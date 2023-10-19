@@ -2040,7 +2040,7 @@ a.has-text-info:hover, a.has-text-info:focus {
 }
 
 .has-text-success {
-  color: #41644A !important;
+  color: #1F441E !important;
 }
 
 .has-text-success.has-text-shadow {
@@ -2702,10 +2702,10 @@ a.box:active {
 }
 
 .button:focus, .button.is-focused {
-  transition: all 0.3s;
+/*  transition: all 0.3s;
   box-shadow: none !important;
   transform: translate(0px, 0px) !important;
-  color: #363636;
+  color: #363636;*/
 }
 
 .button:focus:not(:active), .button.is-focused:not(:active) {
@@ -4691,7 +4691,7 @@ blockquote ul {
 }
 
 .notification.is-success {
-  background-color: #41644A;
+  background-color: #1F441E;
   color: #F2F3F3;
 }
 
@@ -8777,7 +8777,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   position: absolute;
   width: 100%;
   transition: all .3s ease-in-out;
-  /*box-shadow: 5px 5px 0 0.05em #41644A;*/
+  /*box-shadow: 5px 5px 0 0.05em #1F441E;*/
 }
 
 .navbar-item.is-tab:hover:before {
@@ -12152,7 +12152,7 @@ label.panel-block:hover {
 }
 
 .hero.is-success {
-  background-color: #41644A;
+  background-color: #1F441E;
   color: #E2DCD5;
 }
 
