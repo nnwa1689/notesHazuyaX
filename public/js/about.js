@@ -60,23 +60,12 @@ const aboutInit = () => {
     };
 
     const box2 = {
-        body: Matter.Bodies.rectangle(document.body.clientWidth - 150, 0, 145, 215),
+        body: Matter.Bodies.rectangle(canvas.width - 150, 0, 145, 215),
         elem: document.querySelector("#box2"),
         render() {
             const {x, y} = this.body.position;
             this.elem.style.top = `${y - 215 / 2}px`;
             this.elem.style.left = `${x - 145 / 2}px`;
-            this.elem.style.transform = `rotate(${this.body.angle}rad)`;
-        },
-    };
-
-    const box3 = {
-        body: Matter.Bodies.rectangle(canvas.width - 200 - 200, 100, 200, 100),
-        elem: document.querySelector("#box3"),
-        render() {
-            const {x, y} = this.body.position;
-            this.elem.style.top = `${y - 100 / 2}px`;
-            this.elem.style.left = `${x - 200 / 2}px`;
             this.elem.style.transform = `rotate(${this.body.angle}rad)`;
         },
     };
@@ -102,7 +91,6 @@ const aboutInit = () => {
     worldObj.push(groundright);
     worldObj.push(box.body);
     worldObj.push(box2.body);
-    worldObj.push(box3.body);
     worldObj.push(mouseConstraint);
 
     Matter.Composite.add(
@@ -112,7 +100,6 @@ const aboutInit = () => {
     (function rerender() {
         box.render();
         box2.render();
-        box3.render();
         for(var i = 0; i < t_obj.length; i++) {
             t_obj[i].render();
         }
