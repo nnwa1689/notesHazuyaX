@@ -7,7 +7,7 @@ const aboutInit = () => {
         loop: false,
     });
 
-    canvas = document.getElementById("canvas");
+    let canvas = document.getElementById("canvas");
     canvas.height = 300;
     canvas.width = document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24;
     const engine = Matter.Engine.create({
