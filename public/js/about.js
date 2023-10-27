@@ -8,7 +8,7 @@ const aboutInit = () => {
     });
 
     let canvas = document.getElementById("canvas");
-    canvas.height = 370;
+    canvas.height = 350;
     canvas.width = document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24;
     const engine = Matter.Engine.create({
         render: {
@@ -16,7 +16,7 @@ const aboutInit = () => {
             canvas: canvas,
             options: {
                 width: document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24,
-                height: 370
+                height: 350
             }
         }
     });
@@ -53,7 +53,7 @@ const aboutInit = () => {
         elem: document.querySelector("#box"),
         render() {
             const {x, y} = this.body.position;
-            this.elem.style.top = `${y + 183 / 4}px`;
+            this.elem.style.top = `${y + 183 / 5}px`;
             this.elem.style.left = `${x - 145 / 2}px`;
             this.elem.style.transform = `rotate(${this.body.angle}rad)`;
         },
@@ -64,7 +64,7 @@ const aboutInit = () => {
         elem: document.querySelector("#box2"),
         render() {
             const {x, y} = this.body.position;
-            this.elem.style.top = `${y + 215 / 4}px`;
+            this.elem.style.top = `${y + 215 / 5}px`;
             this.elem.style.left = `${x - 145 / 2}px`;
             this.elem.style.transform = `rotate(${this.body.angle}rad)`;
         },
