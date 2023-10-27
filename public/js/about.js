@@ -35,7 +35,7 @@ const aboutInit = () => {
         _p.appendChild(_text);
         document.getElementById("canv").appendChild(_div);
         const t = {
-            body: Matter.Bodies.rectangle( 250 + i * 150 > document.body.clientWidth ? document.body.clientWidth - i : 250 + i * 150, 0, 180, 55),
+            body: Matter.Bodies.rectangle( 250 + i * 150 > document.body.clientWidth ? document.body.clientWidth - i : 250 + i * 150, -150, 180, 55),
             elem: _div,
             render() {
                 const {x, y} = this.body.position;
@@ -60,7 +60,7 @@ const aboutInit = () => {
     };
 
     const box2 = {
-        body: Matter.Bodies.rectangle(canvas.width - 150, 0, 145, 215),
+        body: Matter.Bodies.rectangle(canvas.width - 150, -150, 145, 215),
         elem: document.querySelector("#box2"),
         render() {
             const {x, y} = this.body.position;
@@ -71,7 +71,7 @@ const aboutInit = () => {
     };
 
     const box4 = {
-        body: Matter.Bodies.rectangle(canvas.width - 205, 0, 150, 150),
+        body: Matter.Bodies.rectangle(canvas.width - 205, -100, 150, 150),
         elem: document.querySelector("#box4"),
         render() {
             const {x, y} = this.body.position;
@@ -82,7 +82,7 @@ const aboutInit = () => {
     };
 
     const box5 = {
-        body: Matter.Bodies.rectangle(canvas.width - 185, 0, 150, 150),
+        body: Matter.Bodies.rectangle(canvas.width - 185, -50, 150, 150),
         elem: document.querySelector("#box5"),
         render() {
             const {x, y} = this.body.position;
@@ -105,7 +105,7 @@ const aboutInit = () => {
     );
 
     const mouseConstraint = Matter.MouseConstraint.create(
-        engine,  {element: document.body}
+        engine,  {element: canvas}
     );
 
     // allow scroll through the canvas
