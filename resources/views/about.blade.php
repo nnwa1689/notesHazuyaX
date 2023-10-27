@@ -42,11 +42,9 @@
         </p>
     </div>
 
-    <div id="canv" class="block mt-3 mb-6" style="height: 300px;">
-        <div id="box"></div>
-        <div id="box2"></div>
-        <div id="box3"></div>
-        <canvas id="canvas">
+    <div id="canv" class="block mt-3 mb-6">
+
+        <canvas id="canvas" class="mb-6">
         </canvas>
     </div>
 
