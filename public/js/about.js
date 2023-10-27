@@ -39,7 +39,7 @@ const aboutInit = () => {
             elem: _div,
             render() {
                 const {x, y} = this.body.position;
-                this.elem.style.top = `${y + 70}px`;
+                this.elem.style.top = `${y + (101 + 55)/2}px`;
                 this.elem.style.left = `${x - 180 /2 }px`;
                 this.elem.style.transform = `rotate(${this.body.angle}rad)`;
             },
@@ -53,7 +53,7 @@ const aboutInit = () => {
         elem: document.querySelector("#box"),
         render() {
             const {x, y} = this.body.position;
-            this.elem.style.top = `${y - 183 / 2}px`;
+            this.elem.style.top = `${y - (101+ 183) / 2}px`;
             this.elem.style.left = `${x - 145 / 2}px`;
             this.elem.style.transform = `rotate(${this.body.angle}rad)`;
         },
@@ -64,7 +64,7 @@ const aboutInit = () => {
         elem: document.querySelector("#box2"),
         render() {
             const {x, y} = this.body.position;
-            this.elem.style.top = `${y - 215 / 2}px`;
+            this.elem.style.top = `${y - (101+215) / 2}px`;
             this.elem.style.left = `${x - 145 / 2}px`;
             this.elem.style.transform = `rotate(${this.body.angle}rad)`;
         },
@@ -75,7 +75,7 @@ const aboutInit = () => {
         elem: document.querySelector("#box4"),
         render() {
             const {x, y} = this.body.position;
-            this.elem.style.top = `${y - 150 / 2}px`;
+            this.elem.style.top = `${y - (101+150) / 2}px`;
             this.elem.style.left = `${x - 150 / 2}px`;
             this.elem.style.transform = `rotate(${this.body.angle}rad)`;
         },
@@ -86,7 +86,7 @@ const aboutInit = () => {
         elem: document.querySelector("#box5"),
         render() {
             const {x, y} = this.body.position;
-            this.elem.style.top = `${y - 150 / 2}px`;
+            this.elem.style.top = `${y - (101+150) / 2}px`;
             this.elem.style.left = `${x - 150 / 2}px`;
             this.elem.style.transform = `rotate(${this.body.angle}rad)`;
         },
