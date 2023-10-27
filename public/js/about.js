@@ -127,14 +127,6 @@ const aboutInit = () => {
     // run the engine
     Matter.Runner.run(runner, engine);
 
-    (function rerender() {
-        box.render();
-        box2.render();
-        for(var i = 0; i < t_obj.length; i++) {
-            t_obj[i].render();
-        }
-        Matter.Engine.update(engine);
-        requestAnimationFrame(rerender);
-    })();
+
 
 }
