@@ -86,6 +86,16 @@ const aboutInit = () => {
         engine,  {element: document.body}
     );
 
+    // allow scroll through the canvas
+    mouseConstraint.mouse.element.removeEventListener(
+        "mousewheel",
+        mouseConstraint.mouse.mousewheel
+    );
+    mouseConstraint.mouse.element.removeEventListener(
+        "DOMMouseScroll",
+        mouseConstraint.mouse.mousewheel
+    );
+
     worldObj.push(groundbtm);
     worldObj.push(groundleft);
     worldObj.push(groundright);
