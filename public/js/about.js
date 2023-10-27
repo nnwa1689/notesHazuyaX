@@ -109,5 +109,4 @@ const aboutInit = () => {
         requestAnimationFrame(rerender);
     })();
 
-    rerender.mouse = mouse;
 }
