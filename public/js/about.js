@@ -7,9 +7,11 @@ const aboutInit = () => {
         loop: false,
     });
 
+    canvas = document.getElementById("canvas");
     const engine = Matter.Engine.create({
         render: {
-            element: document.getElementById("canv")
+            element: document.getElementById("canv"),
+            canvas: canvas,
         }
     });
 

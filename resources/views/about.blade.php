@@ -42,7 +42,7 @@
         cursor: pointer;
         user-select: none; /* Standard syntax */
     }
-    
+
 </style>
 <div class="container">
     <div data-scroll data-scroll-speed="0">
@@ -51,7 +51,8 @@
         </p>
     </div>
 
-    <div id="canv" class="block mt-3 mb-6">
+    <div id="canv" class="block mt-3 mb-6" style="height: 300px;">
+        <canvas id="canvas"></canvas>
         <div id="box"></div>
         <div id="box2"></div>
         <div id="box3"></div>
