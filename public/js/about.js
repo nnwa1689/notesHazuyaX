@@ -104,8 +104,17 @@ const aboutInit = () => {
         canvas.width, 0, 10, 1000, {isStatic: true}
     );
 
+    const mouse = Matter.Mouse.create(canvas);
     const mouseConstraint = Matter.MouseConstraint.create(
-        engine,  {element: canvas}
+        engine,  {
+            mouse: mouse,
+            constraint: {
+                stiffness: 0.2,
+                render: {
+                  visible: false
+                }
+            }
+        }
     );
 
     // allow scroll through the canvas
@@ -116,6 +125,22 @@ const aboutInit = () => {
     mouseConstraint.mouse.element.removeEventListener(
         "DOMMouseScroll",
         mouseConstraint.mouse.mousewheel
+    );
+
+    mouseConstraint.mouse.element.removeEventListener(
+        'touchstart',
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (mouseConstraint.mouse.mousedown)
+      );
+    mouseConstraint.mouse.element.removeEventListener(
+        'touchmove',
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (mouseConstraint.mouse.mousemove)
+    );
+    mouseConstraint.mouse.element.removeEventListener(
+        'touchend',
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (mouseConstraint.mouse.mouseup)
     );
 
     worldObj.push(groundbtm);
