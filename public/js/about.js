@@ -12,7 +12,7 @@ const aboutInit = () => {
     canvas.width = document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24;
     const engine = Matter.Engine.create({
         render: {
-            element: document.getElementById("canv"),
+            element: document.getElementById("canvas"),
             canvas: canvas,
             options: {
                 width: document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24,
@@ -83,10 +83,9 @@ const aboutInit = () => {
     );
 
     const canvmouse = Matter.Mouse.create(document.getElementById("canvas"));
-    Matter.Mouse.setScale(canvmouse, {x:2, y:2});
 
     const mouseConstraint = Matter.MouseConstraint.create(
-        engine, {mouse: canvmouse}
+        engine, {mouse: canvmouse, element: document.getElementById("canvas")}
     );
 
     worldObj.push(groundbtm);
@@ -109,5 +108,6 @@ const aboutInit = () => {
         Matter.Engine.update(engine);
         requestAnimationFrame(rerender);
     })();
-    Matter.Engine.run(engine);
+
+    rerender.mouse = mouse;
 }
