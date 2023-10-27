@@ -22,6 +22,8 @@
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3826338280068687"
         crossorigin="anonymous"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/matter.js"></script>
+        
         <script src="{{$webData['webConfig'][13]->tittle}}js/contact.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/index.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/about.js"></script>
