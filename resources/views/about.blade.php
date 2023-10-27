@@ -27,16 +27,6 @@
         cursor: pointer;
     }
 
-    #box3 {
-        position: absolute;
-        background-image: url("/images/Frame\ 12\ \(1\).png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100px;
-        width: 200;
-        cursor: pointer;
-    }
-
     div[id^=t] {
         position: absolute;
         cursor: pointer;

@@ -10,19 +10,14 @@ const aboutInit = () => {
     canvas = document.getElementById("canvas");
     canvas.height = 300;
     canvas.width = document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24;
-    
-    const engine = Matter.Engine.create();
-
-    // create a renderer
-    var render = Matter.Render.create({
-        element: document.getElementById("canv"),
-        engine: engine,
-        options: {
-            width: document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24,
-            height: 300,
-            background: "transparent",
-            wireframes: false,
-            showAngleIndicator: false
+    const engine = Matter.Engine.create({
+        render: {
+            element: document.getElementById("canvas"),
+            canvas: canvas,
+            options: {
+                width: document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24,
+                height: 300
+            }
         }
     });
 
@@ -87,16 +82,9 @@ const aboutInit = () => {
         document.body.clientWidth, 0, 10, 1000, {isStatic: true}
     );
 
-    let mouse = Matter.Mouse.create(render.canvas);
-    let mouseConstraint = Matter.MouseConstraint.create(engine, {
-        mouse: mouse,
-        constraint: {
-            stiffness: 0.2,
-            render: {
-                visible: false
-            }
-        }
-    });
+    const mouseConstraint = Matter.MouseConstraint.create(
+        engine,  {element: document.body}
+    );
 
     // allow scroll through the canvas
     mouseConstraint.mouse.element.removeEventListener(
@@ -119,14 +107,14 @@ const aboutInit = () => {
         engine.world, worldObj
     );
 
-    Matter.Render.run(render);
-
-    // create runner
-    var runner = Matter.Runner.create();
-
-    // run the engine
-    Matter.Runner.run(runner, engine);
-
-
+    (function rerender() {
+        box.render();
+        box2.render();
+        for(var i = 0; i < t_obj.length; i++) {
+            t_obj[i].render();
+        }
+        Matter.Engine.update(engine);
+        requestAnimationFrame(rerender);
+    })();
 
 }

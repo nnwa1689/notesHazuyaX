@@ -102,7 +102,7 @@ const layoutInit = async() => {
         scroll.update();
     }).observe(document.querySelector('#scroll-zone'));
 
-    cursorInit();
+    //cursorInit();
 
     const FirstEntryPageLoading = () => {
         var tl = gsap.timeline();
