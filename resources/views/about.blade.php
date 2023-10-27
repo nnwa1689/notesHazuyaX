@@ -27,6 +27,26 @@
         cursor: pointer;
     }
 
+    #box4 {
+        position: absolute;
+        background-image: url("/images/osd.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 150px;
+        width: 150px;
+        cursor: pointer;
+    }
+
+    #box5 {
+        position: absolute;
+        background-image: url("/images/omc.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 150px;
+        width: 150px;
+        cursor: pointer;
+    }
+
     div[id^=t] {
         position: absolute;
         cursor: pointer;
@@ -46,7 +66,8 @@
         <canvas id="canvas" class="mb-6"></canvas>
         <div id="box"></div>
         <div id="box2"></div>
-        <div id="box3"></div>
+        <div id="box4"></div>
+        <div id="box5"></div>
     </div>
 
     <div class="columns mt-3 pt-6">
