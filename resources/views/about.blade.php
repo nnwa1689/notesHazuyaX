@@ -52,10 +52,11 @@
     </div>
 
     <div id="canv" class="block mt-3 mb-6" style="height: 300px;">
-        <canvas id="canvas"></canvas>
-        <div id="box"></div>
-        <div id="box2"></div>
-        <div id="box3"></div>
+        <canvas id="canvas">
+            <div id="box"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+        </canvas>
     </div>
 
     <div class="columns mt-3 pt-6">

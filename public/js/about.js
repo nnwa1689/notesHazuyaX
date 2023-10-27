@@ -8,10 +8,16 @@ const aboutInit = () => {
     });
 
     canvas = document.getElementById("canvas");
+    canvas.height = 300;
+    canvas.width = document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth;
     const engine = Matter.Engine.create({
         render: {
             element: document.getElementById("canv"),
             canvas: canvas,
+            options: {
+                width: document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth,
+                height: 300
+            }
         }
     });
 
@@ -27,7 +33,7 @@ const aboutInit = () => {
         _div.setAttribute("id", typed[i][0]);
         _div.appendChild(_p);
         _p.appendChild(_text);
-        document.getElementById("canv").appendChild(_div);
+        document.getElementById("canvas").appendChild(_div);
         const t = {
             body: Matter.Bodies.rectangle( 250 + i * 150 > document.body.clientWidth ? document.body.clientWidth - i : 250 + i * 150, 0, 180, 55),
             elem: _div,
