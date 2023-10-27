@@ -6,12 +6,55 @@
         border-bottom: 0.25em solid #E86A33;
         box-shadow: 10px 10px 0 0.05em #41644A;
     }
+
+    #box {
+        position: absolute;
+        background-image: url("/images/Warm.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 183px;
+        width: 145px;
+        cursor: pointer;
+    }
+
+    #box2 {
+        position: absolute;
+        background-image: url("/images/Infor.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 215px;
+        width: 145px;
+        cursor: pointer;
+    }
+
+    #box3 {
+        position: absolute;
+        background-image: url("/images/Frame\ 12\ \(1\).png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100px;
+        width: 200;
+        cursor: pointer;
+    }
+
+    div[id^=t] {
+        position: absolute;
+        cursor: pointer;
+        user-select: none; /* Standard syntax */
+    }
+    
 </style>
 <div class="container">
     <div data-scroll data-scroll-speed="0">
         <p class="title is-1 has-text-left">
             <span id="titleText"></span>
         </p>
+    </div>
+
+    <div id="canv" class="block mt-3 mb-6">
+        <div id="box"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
     </div>
 
     <div class="columns mt-3 pt-6">
@@ -316,13 +359,5 @@
     -->
 
 </div>
-<script id="mainScript">
-var typed = new Typed("#titleText", {
-    strings:["關於<span class=\"has-text-hollow-link ml-2\">About.</span>",],
-    stringsElement: '#typed-strings',
-    typeSpeed: 20,
-    startDelay: 1000,
-    loop: false,
-});
-</script>
+<script id="mainScript">aboutInit();</script>
 @endsection
