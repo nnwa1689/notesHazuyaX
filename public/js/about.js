@@ -116,6 +116,7 @@ const aboutInit = () => {
         for(var i = 0; i < t_obj.length; i++) {
             t_obj[i].render();
         }
+        engine.run(engine);
         Matter.Engine.update(engine);
         requestAnimationFrame(rerender);
     })();
