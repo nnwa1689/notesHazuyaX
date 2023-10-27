@@ -82,8 +82,11 @@ const aboutInit = () => {
         document.body.clientWidth, 0, 10, 1000, {isStatic: true}
     );
 
+    const canvmouse = Matter.Mouse.create(document.getElementById("canvas"));
+    Matter.Mouse.setScale(canvmouse, {x:2, y:2});
+
     const mouseConstraint = Matter.MouseConstraint.create(
-        engine, {element: document.body}
+        engine, {mouse: canvmouse}
     );
 
     worldObj.push(groundbtm);
