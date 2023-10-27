@@ -93,7 +93,7 @@ const aboutInit = () => {
     };
 
     const groundbtm = Matter.Bodies.rectangle(
-        0, 500, 5000, 50, {isStatic: true}
+        0, 400, 5000, 50, {isStatic: true}
     );
 
     const groundleft = Matter.Bodies.rectangle(
