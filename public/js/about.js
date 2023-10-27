@@ -104,7 +104,7 @@ const aboutInit = () => {
         canvas.width, 0, 10, 1000, {isStatic: true}
     );
 
-    const mouse = Matter.Mouse.create(canvas);
+    const mouse = Matter.Mouse.create(document.getElementById("canv"));
     const mouseConstraint = Matter.MouseConstraint.create(
         engine,  {
             mouse: mouse,
