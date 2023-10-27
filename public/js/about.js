@@ -75,7 +75,7 @@ const aboutInit = () => {
         elem: document.querySelector("#box4"),
         render() {
             const {x, y} = this.body.position;
-            this.elem.style.top = `${y + 150 / 3}px`;
+            this.elem.style.top = `${y + 150 / 3 + 20}px`;
             this.elem.style.left = `${x - 150 / 2}px`;
             this.elem.style.transform = `rotate(${this.body.angle}rad)`;
         },
@@ -86,7 +86,7 @@ const aboutInit = () => {
         elem: document.querySelector("#box5"),
         render() {
             const {x, y} = this.body.position;
-            this.elem.style.top = `${y + 150 / 3}px`;
+            this.elem.style.top = `${y + 150 / 3 +20}px`;
             this.elem.style.left = `${x - 150 / 2}px`;
             this.elem.style.transform = `rotate(${this.body.angle}rad)`;
         },
