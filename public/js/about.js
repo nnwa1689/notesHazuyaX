@@ -7,7 +7,11 @@ const aboutInit = () => {
         loop: false,
     });
 
-    const engine = Matter.Engine.create();
+    const engine = Matter.Engine.create({
+        render: {
+            element: document.getElementById("canv")
+        }
+    });
 
     const typed = [["t1", "Original", 0], ["t2", "Trying", 0], ["t3", "持續試錯", 1], ["t4", "保持單純", 1]];
     let t_obj = [];
