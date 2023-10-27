@@ -71,7 +71,7 @@ const aboutInit = () => {
     };
 
     const box3 = {
-        body: Matter.Bodies.rectangle(document.body.clientWidth - 200 - 200, 100, 200, 100),
+        body: Matter.Bodies.rectangle(canvas.width - 200 - 200, 100, 200, 100),
         elem: document.querySelector("#box3"),
         render() {
             const {x, y} = this.body.position;
@@ -109,8 +109,6 @@ const aboutInit = () => {
         engine.world, worldObj
     );
 
-    Matter.Engine.run(engine);
-
     (function rerender() {
         box.render();
         box2.render();
@@ -121,5 +119,5 @@ const aboutInit = () => {
         Matter.Engine.update(engine);
         requestAnimationFrame(rerender);
     })();
-
+    Matter.Engine.run(engine);
 }
