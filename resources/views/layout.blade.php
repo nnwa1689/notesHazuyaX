@@ -24,6 +24,7 @@
         <script src="{{$webData['webConfig'][13]->tittle}}js/typed.umd.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/contact.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/index.js"></script>
+        <script src="{{$webData['webConfig'][13]->tittle}}js/about.js"></script>
         <script src="{{$webData['webConfig'][13]->tittle}}js/layout.js"></script>
         <script>window.addEventListener('load', layoutInit);</script>
         {!! $webData['webConfig'][4]->tittle !!}
