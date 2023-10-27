@@ -35,11 +35,11 @@ const aboutInit = () => {
         _p.appendChild(_text);
         document.getElementById("canv").appendChild(_div);
         const t = {
-            body: Matter.Bodies.rectangle( 250 + i * 150 > document.body.clientWidth ? document.body.clientWidth - i : 250 + i * 150, -150, 180, 55),
+            body: Matter.Bodies.rectangle( 250 + i * 150 > document.body.clientWidth ? document.body.clientWidth - i : 250 + i * 150, 0, 180, 55),
             elem: _div,
             render() {
                 const {x, y} = this.body.position;
-                this.elem.style.top = `${y - 30}px`;
+                this.elem.style.top = `${y - 55/2}px`;
                 this.elem.style.left = `${x - 180 /2 }px`;
                 this.elem.style.transform = `rotate(${this.body.angle}rad)`;
             },
@@ -60,7 +60,7 @@ const aboutInit = () => {
     };
 
     const box2 = {
-        body: Matter.Bodies.rectangle(canvas.width - 150, -150, 145, 215),
+        body: Matter.Bodies.rectangle(canvas.width - 150, 0, 145, 215),
         elem: document.querySelector("#box2"),
         render() {
             const {x, y} = this.body.position;
@@ -71,7 +71,7 @@ const aboutInit = () => {
     };
 
     const box4 = {
-        body: Matter.Bodies.rectangle(canvas.width - 205, -100, 150, 150),
+        body: Matter.Bodies.rectangle(canvas.width - 205, 0, 150, 150),
         elem: document.querySelector("#box4"),
         render() {
             const {x, y} = this.body.position;
@@ -82,7 +82,7 @@ const aboutInit = () => {
     };
 
     const box5 = {
-        body: Matter.Bodies.rectangle(canvas.width - 185, -50, 150, 150),
+        body: Matter.Bodies.rectangle(canvas.width - 185, 0, 150, 150),
         elem: document.querySelector("#box5"),
         render() {
             const {x, y} = this.body.position;
