@@ -1,5 +1,5 @@
 const aboutInit = () => {
-    var typed = new Typed("#titleText", {
+    var titletype = new Typed("#titleText", {
         strings:["關於<span class=\"has-text-hollow-link ml-2\">About.</span>",],
         stringsElement: '#typed-strings',
         typeSpeed: 20,
