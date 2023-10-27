@@ -83,7 +83,7 @@ const aboutInit = () => {
     );
 
     const mouseConstraint = Matter.MouseConstraint.create(
-        engine, {element: document.getElementById("canv")}
+        engine, {element: canvas}
     );
 
     worldObj.push(groundbtm);
