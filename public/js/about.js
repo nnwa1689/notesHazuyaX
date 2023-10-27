@@ -39,7 +39,7 @@ const aboutInit = () => {
             elem: _div,
             render() {
                 const {x, y} = this.body.position;
-                this.elem.style.top = `${y - 200}px`;
+                this.elem.style.top = `${0}px`;
                 this.elem.style.left = `${x - 180 /2 }px`;
                 this.elem.style.transform = `rotate(${this.body.angle}rad)`;
             },
