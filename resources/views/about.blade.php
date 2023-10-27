@@ -43,9 +43,10 @@
     </div>
 
     <div id="canv" class="block mt-3 mb-6">
-
-        <canvas id="canvas" class="mb-6">
-        </canvas>
+        <canvas id="canvas" class="mb-6"></canvas>
+        <div id="box"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
     </div>
 
     <div class="columns mt-3 pt-6">
