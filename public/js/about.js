@@ -101,7 +101,7 @@ const aboutInit = () => {
     );
 
     const groundright = Matter.Bodies.rectangle(
-        document.body.clientWidth, 0, 10, 1000, {isStatic: true}
+        canvas.width, 0, 10, 1000, {isStatic: true}
     );
 
     const mouseConstraint = Matter.MouseConstraint.create(
