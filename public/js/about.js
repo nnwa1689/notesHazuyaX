@@ -35,7 +35,7 @@ const aboutInit = () => {
         _p.appendChild(_text);
         document.getElementById("canv").appendChild(_div);
         const t = {
-            body: Matter.Bodies.rectangle( 250 + i * 150 > document.body.clientWidth ? document.body.clientWidth - i : 250 + i * 150, 0, 180, 55),
+            body: Matter.Bodies.rectangle( 250 + i * 150 > canvas.width ? canvas.width - i : 250 + i * 150, 0, 180, 55),
             elem: _div,
             render() {
                 const {x, y} = this.body.position;
@@ -47,7 +47,7 @@ const aboutInit = () => {
         t_obj.push(t);
         worldObj.push(t.body);
     }
-    
+
     const box = {
         body: Matter.Bodies.rectangle(150, 0, 145, 183),
         elem: document.querySelector("#box"),
@@ -93,7 +93,7 @@ const aboutInit = () => {
     };
 
     const groundbtm = Matter.Bodies.rectangle(
-        0, 400, 5000, 50, {isStatic: true}
+        0, 400, canvas.width, 50, {isStatic: true}
     );
 
     const groundleft = Matter.Bodies.rectangle(
