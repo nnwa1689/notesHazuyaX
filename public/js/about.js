@@ -96,7 +96,7 @@ const aboutInit = () => {
     };
 
     const groundbtm = Matter.Bodies.rectangle(
-        0, 400, useMaxWidth(), 50, {isStatic: true}
+        0, 400, useMaxWidth() * 2, 50, {isStatic: true}
     );
 
     const groundleft = Matter.Bodies.rectangle(
