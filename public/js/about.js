@@ -9,7 +9,7 @@ const aboutInit = () => {
 
     let canvas = document.getElementById("canvas");
     canvas.height = 350;
-    canvas.width = document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24;
+    document.body.clientWidth = document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24;
     const engine = Matter.Engine.create({
         render: {
             element: document.getElementById("canvas"),
@@ -35,7 +35,7 @@ const aboutInit = () => {
         _p.appendChild(_text);
         document.getElementById("canv").appendChild(_div);
         const t = {
-            body: Matter.Bodies.rectangle( 250 + i * 150 > canvas.width ? canvas.width - i : 250 + i * 150, 0, 180, 55),
+            body: Matter.Bodies.rectangle( 250 + i * 150 > document.body.clientWidth ? document.body.clientWidth - i : 250 + i * 150, 0, 180, 55),
             elem: _div,
             render() {
                 const {x, y} = this.body.position;
@@ -60,7 +60,7 @@ const aboutInit = () => {
     };
 
     const box2 = {
-        body: Matter.Bodies.rectangle(canvas.width - 150, 0, 145, 215),
+        body: Matter.Bodies.rectangle(document.body.clientWidth - 150, 0, 145, 215),
         elem: document.querySelector("#box2"),
         render() {
             const {x, y} = this.body.position;
@@ -71,7 +71,7 @@ const aboutInit = () => {
     };
 
     const box4 = {
-        body: Matter.Bodies.rectangle(canvas.width - 205, 0, 150, 150),
+        body: Matter.Bodies.rectangle(document.body.clientWidth - 205, 0, 150, 150),
         elem: document.querySelector("#box4"),
         render() {
             const {x, y} = this.body.position;
@@ -82,7 +82,7 @@ const aboutInit = () => {
     };
 
     const box5 = {
-        body: Matter.Bodies.rectangle(canvas.width - 185, 0, 150, 150),
+        body: Matter.Bodies.rectangle(document.body.clientWidth - 185, 0, 150, 150),
         elem: document.querySelector("#box5"),
         render() {
             const {x, y} = this.body.position;
@@ -93,7 +93,7 @@ const aboutInit = () => {
     };
 
     const groundbtm = Matter.Bodies.rectangle(
-        0, 400, canvas.width, 50, {isStatic: true}
+        0, 400, document.body.clientWidth, 50, {isStatic: true}
     );
 
     const groundleft = Matter.Bodies.rectangle(
@@ -101,7 +101,7 @@ const aboutInit = () => {
     );
 
     const groundright = Matter.Bodies.rectangle(
-        canvas.width, 0, 10, 1000, {isStatic: true}
+        document.body.clientWidth, 0, 10, 1000, {isStatic: true}
     );
 
     const mouse = Matter.Mouse.create(document.getElementById("canv"));
