@@ -18,7 +18,7 @@ const aboutInit = () => {
             element: document.getElementById("canvas"),
             canvas: canvas,
             options: {
-                width: useMaxWidth,
+                width: useMaxWidth(),
                 height: 350
             }
         }
@@ -38,7 +38,7 @@ const aboutInit = () => {
         _p.appendChild(_text);
         document.getElementById("canv").appendChild(_div);
         const t = {
-            body: Matter.Bodies.rectangle( 250 + i * 150 > useMaxWidth ? useMaxWidth - i : 250 + i * 150, 0, 180, 55),
+            body: Matter.Bodies.rectangle( 250 + i * 150 > useMaxWidth() ? useMaxWidth() - i : 250 + i * 150, 0, 180, 55),
             elem: _div,
             render() {
                 const {x, y} = this.body.position;
@@ -63,7 +63,7 @@ const aboutInit = () => {
     };
 
     const box2 = {
-        body: Matter.Bodies.rectangle(useMaxWidth - 150, 0, 145, 215),
+        body: Matter.Bodies.rectangle(useMaxWidth() - 150, 0, 145, 215),
         elem: document.querySelector("#box2"),
         render() {
             const {x, y} = this.body.position;
@@ -74,7 +74,7 @@ const aboutInit = () => {
     };
 
     const box4 = {
-        body: Matter.Bodies.rectangle(useMaxWidth - 205, 0, 150, 150),
+        body: Matter.Bodies.rectangle(useMaxWidth() - 205, 0, 150, 150),
         elem: document.querySelector("#box4"),
         render() {
             const {x, y} = this.body.position;
@@ -85,7 +85,7 @@ const aboutInit = () => {
     };
 
     const box5 = {
-        body: Matter.Bodies.rectangle(useMaxWidth - 185, 0, 150, 150),
+        body: Matter.Bodies.rectangle(useMaxWidth() - 185, 0, 150, 150),
         elem: document.querySelector("#box5"),
         render() {
             const {x, y} = this.body.position;
@@ -96,7 +96,7 @@ const aboutInit = () => {
     };
 
     const groundbtm = Matter.Bodies.rectangle(
-        0, 400, useMaxWidth, 50, {isStatic: true}
+        0, 400, useMaxWidth(), 50, {isStatic: true}
     );
 
     const groundleft = Matter.Bodies.rectangle(
@@ -104,7 +104,7 @@ const aboutInit = () => {
     );
 
     const groundright = Matter.Bodies.rectangle(
-        useMaxWidth, 0, 10, 1000, {isStatic: true}
+        useMaxWidth(), 0, 10, 1000, {isStatic: true}
     );
 
     const mouse = Matter.Mouse.create(document.getElementById("canv"));
