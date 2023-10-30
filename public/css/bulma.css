@@ -191,7 +191,7 @@
   }
 
   .is-works-item-min {
-      width: 32%;
+      width: 33%;
       height: 460px;
   }
 }
@@ -203,20 +203,7 @@
   }
 
   .is-works-item-min {
-      width: 32%;
-      height: 460px;
-      margin: 0 8px;
-  }
-}
-
-@media screen and (min-width: 1023px) {
-  .is-works-item-large {
-      width: calc(100% - 33% - 4rem);
-      height: 700px;
-  }
-
-  .is-works-item-min {
-      width: 32%;
+      width: 33%;
       height: 460px;
   }
 }
@@ -474,8 +461,7 @@
   margin-top: 0rem;
   margin-bottom: 0rem;
   border-radius: 0px;
-  height:560px;
-  max-height:560px;
+  max-height:40rem;
   width: 50%;
   position: relative;
 }

@@ -92,7 +92,7 @@
                 @endcomponent
             @endforeach
         </div>
-        <button class="button is-link is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}blog')">
+        <button class="button is-link is-large mt-6" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}blog')">
             更多雜記
             <i class="fas fa-arrow-right ml-1"></i>
         </button>
