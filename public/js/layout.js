@@ -10,7 +10,7 @@
 const openMenu = () => {
     gsap.to(".fullMenu", {
             duration: 1,
-            width: "26rem",
+            width: "27rem",
             ease: "Circ.easeInOut"
         });
 }

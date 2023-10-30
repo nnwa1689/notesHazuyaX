@@ -1,14 +1,14 @@
 @import url(/codes/styles/prism.css);
 
 @font-face {
-    font-family: 'NotoSansTC-Regular';
+    font-family: 'NotoSansTC';
     font-style: normal;
-    src: url(/fonts/NotoSansTC-Regular.otf);
+    src: url(/fonts/NotoSansTC-Medium.ttf);
     unicode-range: U+4E00-9FFF;
   }
 
   @font-face {
-    font-family: 'NotoSansTC-Regular';
+    font-family: 'NotoSansTC';
     font-style: normal;
     src: url(/fonts/Rubik-Regular.ttf);
     unicode-range: U+00-024F;
@@ -32,7 +32,7 @@ img {
 }
 
 body {
-    font-family: 'NotoSansTC-Regular';
+    font-family: 'NotoSansTC';
     color:#262728;
     font-size: 1em;
     font-weight: 400;

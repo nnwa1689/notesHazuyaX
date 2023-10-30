@@ -474,8 +474,8 @@
   margin-top: 0rem;
   margin-bottom: 0rem;
   border-radius: 0px;
-  height:650px;
-  max-height:650px;
+  height:560px;
+  max-height:560px;
   width: 50%;
   position: relative;
 }
@@ -5396,19 +5396,19 @@ a.tag:hover {
 }
 
 .title.is-home {
-  font-size: 6rem;
-}
-
-.title.is-1 {
   font-size: 5rem;
 }
 
-.title.is-2 {
+.title.is-1 {
   font-size: 4rem;
 }
 
-.title.is-3 {
+.title.is-2 {
   font-size: 3rem;
+}
+
+.title.is-3 {
+  font-size: 2.5rem;
 }
 
 .title.is-4 {
