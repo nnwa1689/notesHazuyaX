@@ -13,25 +13,25 @@
     </p>
     <div class="columns is-gapless mb-3">
         <div class="column is-4 pr-5">
-            <p class="subtitle is-3">{{$WorkDetail[0]->WorksID}}</p>
+            <p class="subtitle is-2">{{$WorkDetail[0]->WorksID}}</p>
         </div>
         <div class="column">
             <hr/>
             <div class="columns is-gapless is-mobile">
                 <div class="column is-4">
-                    <p class="subtitle is-4">Client</p>
+                    <p class="subtitle is-2">Client</p>
                 </div>
                 <div class="column">
-                    <p class="subtitle is-4">{{$WorkDetail[0]->Customer}}</p>
+                    <p class="subtitle is-2">{{$WorkDetail[0]->Customer}}</p>
                 </div>
             </div>
             <hr/>
             <div class="columns is-gapless is-mobile">
                 <div class="column is-4">
-                    <p class="subtitle is-4">Url</p>
+                    <p class="subtitle is-2">Url</p>
                 </div>
                 <div class="column">
-                    <p class="subtitle is-4">
+                    <p class="subtitle is-2">
                         <a href="{{ $WorkDetail[0] -> Url }}" target="_blank">
                             {{ $WorkDetail[0] -> Url }}
                         </a>
@@ -41,7 +41,7 @@
             <hr/>
             <div class="columns is-gapless">
                 <div class="column is-4">
-                    <p class="subtitle is-4">Presented</p>
+                    <p class="subtitle is-2">Presented</p>
                 </div>
                 <div class="column">
                     @foreach($WorkDetail[0] -> WorksStaff as $value)
@@ -55,7 +55,7 @@
                             </div>
                         </div>
                         <div class="media-content">
-                            <a class="subtitle is-4" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}
+                            <a class="subtitle is-2" target="_blank" href="{{ $value -> StaffUrl }}">{{ $value -> StaffName }}
                                 <span class="is-size-6 ml-2">{{ $value -> StaffTitle }}</span>
                             </a>
                         </div>
