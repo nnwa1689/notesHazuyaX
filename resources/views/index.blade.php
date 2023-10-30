@@ -4,13 +4,13 @@
 <div data-scroll class="container mb-6 pt-6 pb-6">
     <div class="columns is-gapless">
         <div class="column is-10">
-            <p class="title is-1 has-text-centered-mobile">
+            <p class="title is-home has-text-centered-mobile">
                 <span>Warmth.</span>
             </p>
-            <p class="title is-1 has-text-centered-mobile">
+            <p class="title is-home has-text-centered-mobile">
                 <span>Relaxed.</span>
             </p>
-            <p class="title is-1 has-text-centered-mobile">
+            <p class="title is-home has-text-centered-mobile">
                 <span class="has-text-background-primary">Original.</span>
             </p>
         </div>
@@ -24,14 +24,18 @@
             <p id="min" class="title is-1 has-text-primary has-text-shadow">44</p>
         </div>
     </div>
-    <div class="is-align-items-center has-text-right has-text-centered-mobile">
-        <p class="subtitle is-4 mt-5">
-            <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發
-        </p>
-        <button class="button is-primary is-rounded ml-3" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
+    <div class="columns is-gapless is-align-items-center">
+        <div class="column is-6 has-text-centered-mobile">
+            <p class="subtitle is-3 mt-5">
+                <i class="fas fa-desktop mr-3"></i> 網站設計、前後端系統開發
+            </p>
+        </div>
+        <div class="column is-6 has-text-right has-text-centered-mobile">
+            <button class="button is-primary is-rounded ml-3" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}contact')">
             Contact Us
             <i class="fas fa-arrow-right ml-1"></i>
-        </button>
+            </button>
+        </div>
     </div>
 
 </div>
