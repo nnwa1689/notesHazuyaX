@@ -63,15 +63,15 @@
             </div>
         </div>
 
-        <div class="columns is-multiline is-gapless" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
+        <div class="columns is-multiline is-gapless mt-3" data-scroll data-scroll-speed="2" data-scroll-delay="1.5">
             @if(isset($rightPost[0]))
             <div class="column is-12">
                 <div class="is-homeBanner">
                     <button style="min-height: 130px;" onclick="barba.go('{{$rightPost[0]->PostId}}')" class="button is-white is-fullwidth is-multiline is-large pt-3 pb-3">
-                        <p class="subtitle is-4 mb-4">
+                        <p class="subtitle is-2 mb-4">
                             下一篇<i class="fas fa-angle-right ml-1" aria-hidden="true"></i>
                         </p>
-                        <p class="subtitle is-4 limit1rows">
+                        <p class="subtitle is-2 limit1rows">
                             {{$rightPost[0]->PostTittle}}
                         </p>
                     </button>
