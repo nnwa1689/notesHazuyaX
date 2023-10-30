@@ -134,6 +134,7 @@ const aboutInit = () => {
     mouseConstraint.mouse.element.removeEventListener('touchmove', mouseConstraint.mouse.mousemove);
     mouseConstraint.mouse.element.removeEventListener('touchend', mouseConstraint.mouse.mouseup);
 
+    /* 劫持  touch 事件取代成 mouse 事件 */
     mouseConstraint.mouse.element.addEventListener('touchstart', mouseConstraint.mouse.mousedown, { passive: true });
     mouseConstraint.mouse.element.addEventListener('touchmove', (e) => {
         if (mouseConstraint.body) {
