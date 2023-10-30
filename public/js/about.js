@@ -1,3 +1,7 @@
+const useMaxWidth = () => {
+    return document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth;
+}
+
 const aboutInit = () => {
     var titletype = new Typed("#titleText", {
         strings:["關於<span class=\"has-text-hollow-link ml-2\">About.</span>",],
@@ -9,13 +13,12 @@ const aboutInit = () => {
 
     let canvas = document.getElementById("canvas");
     canvas.height = 350;
-    canvas.width = document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24;
     const engine = Matter.Engine.create({
         render: {
             element: document.getElementById("canvas"),
             canvas: canvas,
             options: {
-                width: document.body.clientWidth > 1200 ? 1200 : document.body.clientWidth - 24,
+                width: useMaxWidth(),
                 height: 350
             }
         }
@@ -35,7 +38,7 @@ const aboutInit = () => {
         _p.appendChild(_text);
         document.getElementById("canv").appendChild(_div);
         const t = {
-            body: Matter.Bodies.rectangle( 250 + i * 150 > document.body.clientWidth ? document.body.clientWidth - i : 250 + i * 150, 0, 180, 55),
+            body: Matter.Bodies.rectangle( 250 + i * 150 > useMaxWidth() ? useMaxWidth() - i : 250 + i * 150, 0, 180, 55),
             elem: _div,
             render() {
                 const {x, y} = this.body.position;
@@ -47,7 +50,7 @@ const aboutInit = () => {
         t_obj.push(t);
         worldObj.push(t.body);
     }
-    
+
     const box = {
         body: Matter.Bodies.rectangle(150, 0, 145, 183),
         elem: document.querySelector("#box"),
@@ -60,7 +63,7 @@ const aboutInit = () => {
     };
 
     const box2 = {
-        body: Matter.Bodies.rectangle(canvas.width - 150, 0, 145, 215),
+        body: Matter.Bodies.rectangle(useMaxWidth() - 150, 0, 145, 215),
         elem: document.querySelector("#box2"),
         render() {
             const {x, y} = this.body.position;
@@ -71,7 +74,7 @@ const aboutInit = () => {
     };
 
     const box4 = {
-        body: Matter.Bodies.rectangle(canvas.width - 205, 0, 150, 150),
+        body: Matter.Bodies.rectangle(useMaxWidth() - 205, 0, 150, 150),
         elem: document.querySelector("#box4"),
         render() {
             const {x, y} = this.body.position;
@@ -82,7 +85,7 @@ const aboutInit = () => {
     };
 
     const box5 = {
-        body: Matter.Bodies.rectangle(canvas.width - 185, 0, 150, 150),
+        body: Matter.Bodies.rectangle(useMaxWidth() - 185, 0, 150, 150),
         elem: document.querySelector("#box5"),
         render() {
             const {x, y} = this.body.position;
@@ -93,7 +96,7 @@ const aboutInit = () => {
     };
 
     const groundbtm = Matter.Bodies.rectangle(
-        0, 400, 5000, 50, {isStatic: true}
+        0, 400, useMaxWidth() * 2, 50, {isStatic: true}
     );
 
     const groundleft = Matter.Bodies.rectangle(
@@ -101,7 +104,7 @@ const aboutInit = () => {
     );
 
     const groundright = Matter.Bodies.rectangle(
-        canvas.width, 0, 10, 1000, {isStatic: true}
+        useMaxWidth(), 0, 10, 1000, {isStatic: true}
     );
 
     const mouse = Matter.Mouse.create(document.getElementById("canv"));
