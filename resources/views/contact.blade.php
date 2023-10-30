@@ -8,7 +8,7 @@
         </p>
     </div>
     <div class="pt-6">
-        <div class="columns">
+        <div class="columns is-gapless">
             <div class="column pr-5">
                 <p class="title is-5 has-text-left has-text-centered-mobile">
                     Follow Us

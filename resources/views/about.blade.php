@@ -111,33 +111,33 @@
                 <span class="has-text-background-primary">Services.</span>
             </p>
             <br/>
-            <p class="subtitle is-3"># 後端系統開發</p>
-            <p class="subtitle is-3"># Web前端開發</p>
-            <p class="subtitle is-3"># 無伺服器系統</p>
-            <p class="subtitle is-3"># 無頭內容管理系統</p>
+            <p class="subtitle is-1"># 後端系統開發</p>
+            <p class="subtitle is-1"># Web前端開發</p>
+            <p class="subtitle is-1"># 無伺服器系統</p>
+            <p class="subtitle is-1"># 無頭內容管理系統</p>
         </div>
         <div class="column has-text-centered has-text-left-mobile is-4 mb-6">
             <p class="title is-2">
                 <span class="has-text-background-link">Skills.</span>
             </p>
             <br/>
-            <p class="subtitle is-3"># PHP, Asp.Net MVC</p>
-            <p class="subtitle is-3"># VueJS, ReactJS</p>
-            <p class="subtitle is-3"># Firebase, Aws Lightsail</p>
-            <p class="subtitle is-3"># Strapi</p>
+            <p class="subtitle is-1"># PHP, Asp.Net MVC</p>
+            <p class="subtitle is-1"># VueJS, ReactJS</p>
+            <p class="subtitle is-1"># Firebase, Aws Lightsail</p>
+            <p class="subtitle is-1"># Strapi</p>
         </div>
         <div class="column has-text-right has-text-left-mobile is-4">
             <p class="title is-2">
                 <span class="has-text-background-primary">Works.</span>
             </p>
             <br/>
-            <p class="subtitle is-3">
+            <p class="subtitle is-1">
                 <a href="https://studio-44s.tw/works/44SecondsOffical" target="_blank"><i class="fas fa-arrow-right mr-1"></i>Studio-44s Offical</a></p>
-            <p class="subtitle is-3">
+            <p class="subtitle is-1">
                 <a href="https://studio-44s.tw/works/OneSenDay" target="_blank"><i class="fas fa-arrow-right mr-1"></i>一筆日記</a></p>
-            <p class="subtitle is-3">
+            <p class="subtitle is-1">
                 <a href="https://studio-44s.tw/works/NkustCoeRoomBooking" target="_blank"><i class="fas fa-arrow-right mr-1"></i>會議室預約系統</a></p>
-            <p class="subtitle is-3">
+            <p class="subtitle is-1">
                 <a href="https://dev.studio-44s.tw/" target="_blank"><i class="fas fa-arrow-right mr-1"></i>44's Gallery</a></p>
             <button class="button is-primary mt-6 mr-auto ml-auto is-large" onclick="barba.go('{{$webData['webConfig'][13]->tittle}}works')">
                 See More Our Works.
