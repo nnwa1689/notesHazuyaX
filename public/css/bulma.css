@@ -927,9 +927,22 @@ pre {
 
 body {
   color: #262728;
-  font-size: 1.125rem;
+  font-size: 20px;
   font-weight: 400;
   line-height: 2.11;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    color: #262728;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.11;
+  }
+  html {
+    background-color: #F2F3F3;
+    font-size: 16px;
+  }
 }
 
 html {
@@ -4160,27 +4173,15 @@ fieldset[disabled] .button {
 }
 
 .content h1 {
-  font-size: 2.25rem;
-}
-
-.content h1:not(:first-child) {
-  /*margin-top: 1.5em;*/
-}
-
-.content h2 {
   font-size: 1.875rem;
 }
 
-.content h2:not(:first-child) {
-  /*margin-top: 1.5em;*/
+.content h2 {
+  font-size: 1.6rem;
 }
 
 .content h3 {
   font-size: 1.5rem;
-}
-
-.content h3:not(:first-child) {
-  /*margin-top: 1.5em;*/
 }
 
 .content h4 {
@@ -4195,36 +4196,9 @@ fieldset[disabled] .button {
   font-size: 1.25rem;
 }
 
-@media screen and (max-width: 768px) {
-  .content h1 {
-    font-size: 1.975rem;
-  }
-
-  .content h2 {
-    font-size: 1.6rem;
-  }
-
-  .content h3 {
-    font-size: 1.25rem;
-  }
-
-  .content h4 {
-    font-size: 1.25rem;
-  }
-
-  .content h5 {
-    font-size: 1.25rem;
-  }
-
-  .content h6 {
-    font-size: 1.25rem;
-  }
-}
-
 .content p{
-  /*font-family: 'NotoSerifTC-Medium';*/
-  font-size: 1.25rem;
-  line-height: 2.11;;
+  font-size: 1.1rem;
+  line-height: 2.11;
 }
 
 .content .title {

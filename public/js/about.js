@@ -127,21 +127,21 @@ const aboutInit = () => {
         mouseConstraint.mouse.mousewheel
     );
 
-    mouseConstraint.mouse.element.removeEventListener(
-        'touchstart',
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (mouseConstraint.mouse.mousedown)
-      );
-    mouseConstraint.mouse.element.removeEventListener(
-        'touchmove',
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (mouseConstraint.mouse.mousemove)
-    );
-    mouseConstraint.mouse.element.removeEventListener(
-        'touchend',
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (mouseConstraint.mouse.mouseup)
-    );
+    mouseConstraint.mouse.element.removeEventListener('touchstart', mouseConstraint.mouse.mousedown);
+    mouseConstraint.mouse.element.removeEventListener('touchmove', mouseConstraint.mouse.mousemove);
+    mouseConstraint.mouse.element.removeEventListener('touchend', mouseConstraint.mouse.mouseup);
+
+    mouseConstraint.mouse.element.addEventListener('touchstart', mouseConstraint.mouse.mousedown, { passive: true });
+    mouseConstraint.mouse.element.addEventListener('touchmove', (e) => {
+        if (mouseConstraint.body) {
+            mouseConstraint.mouse.mousemove(e);
+        }
+    });
+    mouseConstraint.mouse.element.addEventListener('touchend', (e) => {
+        if (mouseConstraint.body) {
+            mouseConstraint.mouse.mouseup(e);
+        }
+    });
 
     worldObj.push(groundbtm);
     worldObj.push(groundleft);
