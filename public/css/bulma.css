@@ -3,7 +3,7 @@
 /*
  * Name : bulmaCss(studio-44s.tw Custom Version)
  * Author :  
- * Update : 20231030
+ * Update : 20241128
  */
 
  /* Custom Animation */
@@ -184,7 +184,7 @@
   border-width: 5px !important;
 }
 
-@media screen and (min-width: 1408px) {
+@media screen and (min-width: 1200px) {
   .is-works-item-large {
       width: calc(100% - 33% - 4rem);
       height: 700px;
